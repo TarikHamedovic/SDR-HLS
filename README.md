@@ -33,13 +33,13 @@ The ULX3S board is available in various models, differentiated primarily by thei
 The Sigma-Delta (Σ-Δ) ADC is a cornerstone in modern electronic systems requiring high-resolution conversion technologies. Unlike traditional ADCs, this implementation samples at a frequency significantly higher than the Nyquist rate, using a feedback loop to minimize quantization noise and preserve the signal's fidelity.
 ### Key Concepts
 
-**Oversampling**: Increases the sampling rate to spread quantization noise across a wider frequency spectrum, enhancing signal-to-noise ratio (SNR).
+* **Oversampling**: Increases the sampling rate to spread quantization noise across a wider frequency spectrum, enhancing signal-to-noise ratio (SNR).
 
-**Noise Shaping**: Pushes quantization noise to higher frequencies, leaving the signal band relatively unaffected.
+* **Noise Shaping**: Pushes quantization noise to higher frequencies, leaving the signal band relatively unaffected.
 
-**Digital Filtering**: A subsequent digital low-pass filter removes out-of-band noise, allowing the signal to be downsampled to the Nyquist rate without loss of quality.
+* **Digital Filtering**: A subsequent digital low-pass filter removes out-of-band noise, allowing the signal to be downsampled to the Nyquist rate without loss of quality.
 
-**FPGA Implementation**: Utilizes an LVDS input as a comparator, minimizing external analog component requirements
+* **FPGA Implementation**: Utilizes an LVDS input as a comparator, minimizing external analog component requirements
 
 ![SDADC](Images/SDADC.png)
 
@@ -50,18 +50,19 @@ Cascaded integrator-comb (CIC) digital filters are computationally-efficient imp
 
 ### Characteristics
 
-**Rate Change**: CIC filters are used for sample rate decimation and interpolation. The rate change is achieved through the repetitive application of integration and differentiation, which simplifies the design by eliminating the need for coefficient storage.
+* **Rate Change**: CIC filters are used for sample rate decimation and interpolation. The rate change is achieved through the repetitive application of integration and differentiation, which simplifies the design by eliminating the need for coefficient storage.
 
-**Decimation and Interpolation**: For decimation, the CIC filter structure starts with integrator stages followed by comb stages. The reverse is true for interpolation.
-**Gain**: The overall gain of the filter can be adjusted post-filtration to normalize the output.
+* **Decimation and Interpolation**: For decimation, the CIC filter structure starts with integrator stages followed by comb stages. The reverse is true for interpolation.
+
+* **Gain**: The overall gain of the filter can be adjusted post-filtration to normalize the output.
 
 
 ![CICBlock](Images/CICBlock.png)
 
 ### Practical Considerations
 
-**Register Word Widths**: It's essential to carefully manage word widths to prevent overflow in the integrator stages while maintaining sufficient precision.
-**Compensation Filters**: Often, compensation or preconditioning FIR filters are employed alongside CIC filters to correct for the droop in the frequency response introduced by CIC filtering, ensuring a flat passband.
+* **Register Word Widths**: It's essential to carefully manage word widths to prevent overflow in the integrator stages while maintaining sufficient precision.
+* **Compensation Filters**: Often, compensation or preconditioning FIR filters are employed alongside CIC filters to correct for the droop in the frequency response introduced by CIC filtering, ensuring a flat passband.
 
 
 
