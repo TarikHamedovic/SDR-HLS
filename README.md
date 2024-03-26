@@ -48,13 +48,8 @@ The Sigma-Delta (Σ-Δ) ADC is a cornerstone in modern electronic systems requir
 ## Overview
 Cascaded integrator-comb (CIC) digital filters are computationally-efficient implementations of narrowband lowpass filters, and are often embedded in hardware implementations of decimation, interpolation, and delta-sigma converter filtering. Large rate changes require very narrow band filters,fast multipliers and very long filters. This can end up being the largest bottleneck in a DSP system. CIC filters are well-suited for anti-aliasing filtering prior to decimation (sample rate reduction) and for anti-imaging filtering for interpolated signals (sample rate increase). Both applications are associated with very high-data rate filtering such as hardware quadrature modulation and demodulation in modern wireless systems, and delta-sigma A/D and D/A converters. Implementing an FIR filter can consume quite a bit of FPGA resources that are often scarce. An important benefit of CIC filters is that it’s implementation does not use any multipliers.
 
-### Characteristics
-
-* **Rate Change**: CIC filters are used for sample rate decimation and interpolation. The rate change is achieved through the repetitive application of integration and differentiation, which simplifies the design by eliminating the need for coefficient storage.
-
-* **Decimation and Interpolation**: For decimation, the CIC filter structure starts with integrator stages followed by comb stages. The reverse is true for interpolation.
-
-* **Gain**: The overall gain of the filter can be adjusted post-filtration to normalize the output.
+CIC filters are used for sample rate decimation and interpolation. The rate change is achieved through the repetitive application of integration and differentiation, which simplifies the design by eliminating the need for coefficient storage.
+For decimation, the CIC filter structure starts with integrator stages followed by comb stages. The reverse is true for interpolation. The overall gain of the filter can be adjusted post-filtration to normalize the output.
 
 
 ![CICBlock](Images/CICBlock.png)
@@ -64,6 +59,18 @@ Cascaded integrator-comb (CIC) digital filters are computationally-efficient imp
 * **Register Word Widths**: It's essential to carefully manage word widths to prevent overflow in the integrator stages while maintaining sufficient precision.
 * **Compensation Filters**: Often, compensation or preconditioning FIR filters are employed alongside CIC filters to correct for the droop in the frequency response introduced by CIC filtering, ensuring a flat passband.
 
+# Numerically Controlled Oscillator(NCO) 
+
+The NCO plays a pivotal role in SDR systems, enabling precise frequency synthesis for signal generation and modulation. It is essential for creating the local oscillator (LO) signals in digital mixers and modulators, facilitating various wireless communication protocols within an FPGA. These digital circuits generate a wide range of frequencies with high precision and stability, leveraging digital computational power to produce analog waveforms. Unlike traditional analog oscillators, which rely on the physical properties of components like resistors, capacitors, and inductors to determine frequency, NCOs achieve frequency generation through digital means, offering superior accuracy, flexibility,
+reliablity and control. Implementing an NCO can be achieved through various methodologies, each with its unique advantages. The most prevalent techniques include the use of the Coordinate Rotation Digital Computer (CORDIC) algorithm and Sine-Lookup Tables.The CORDIC algorithm, renowned for its precision, operates through swift rotations in digital coordinates, employing only shift and add operations—thus, eliminating the need for multipliers. However, its precision comes at the cost of speed, as generating n-bit output requires n clock cycles. Consequently, CORDIC is most suited for applications demanding high precision at lower frequencies. On the other hand, Sine-Lookup Tables offer a straightforward and rapid solution at the expense of increased resource consumption and potential for higher spurious frequencies. This method is favored in scenarios requiring high-speed operation with ample hardware resources available. An NCO (Numerically Controlled Oscillator) is typically implemented utilizing a reference clock, a phase accumulator, and a lookup table (LUT) as can be seen below.
+
+![NCOBlock](Images/NCOBlock.png)
+
+At its core, the NCO operates by incrementally adding a phase value to a phase accumulator at a constant clock rate. The phase increment size determines the output frequency. The NCO's frequency resolution and stability are highly dependent on the phase accumulator's bit-width and the system clock frequency. Software configurability allows the NCO to easily switch frequencies, phases, and waveforms, making it highly versatile for multi-standard radios.
+
+### Practical Considerations
+* **LUT Size Reduction**: Techniques such as quarter-wave symmetry can significantly reduce the size of the sine LUT, conserving memory resources.
+* **Spurious Free Dynamic Range (SFDR)**: Careful design and implementation can minimize phase truncation and quantization errors, enhancing the SFDR of the generated signal.
 
 
 
