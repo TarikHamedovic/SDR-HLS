@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1711446431" />
+    <testcase name="test_mixer_behavior" classname="Mixer_tb" file="/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/TestBench/Mixer/Mixer_tb.py" lineno="8" time="0.0054051876068115234" sim_time_ns="4.001" ratio_time="740.2148252834018" />
+  </testsuite>
+</testsuites>
