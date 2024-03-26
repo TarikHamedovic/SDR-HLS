@@ -1,0 +1,160 @@
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Feb 28 16:18:37 2024
+
+
+Command Line:  /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/synthesis -f NCOAdder.synproj -sdc /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ldc -gui 
+
+Synthesis options:
+The -a option is ecp5u.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = NCOAdder.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = FALSE
+Use IO Reg = FALSE (implied)
+WARNING - synthesis: Cannot pack registers into I/Os because use_io_insertion is FALSE.
+WARNING - synthesis: Ignoring user setting of use_io_reg. Value is set to FALSE.
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+WARNING - synthesis: Searchpath /home/user/Master not found.
+WARNING - synthesis: Searchpath Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder not found.
+Verilog design file = /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/ecp5u.v
+Verilog design file = /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.v
+NGO file = /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ngo
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+-sdc option: SDC file input is /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ldc.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/ecp5u.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): NCOAdder
+INFO - synthesis: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.v(8): compiling module NCOAdder. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(119): compiling module FD1P3DX. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INIT0=16'b0110011010101010,INIT1=16'b0110011010101010,INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+WARNING - synthesis: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.v(376): input port CIN is not connected on this instance. VDB-1013
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+WARNING - synthesis: There are no design constraints in the file /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ldc
+Top-level module name = NCOAdder.
+WARNING - synthesis: There are no design constraints in the file /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ldc
+This ldc file was generated by Clarity Designer!
+
+######## Missing driver on net n167. Patching with GND.
+
+
+
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: There are no design constraints in the file NCOAdder_for_lpf.sdc
+Writing LPF file /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.lpf.
+Results of NGD DRC are available in NCOAdder_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.ngo.
+
+################### Begin Area Report (NCOAdder)######################
+Number of register bits => 64 of 84255 (0 % )
+CCU2C => 33
+FD1P3DX => 64
+GSR => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : tsum0, loads : 1
+  Net : tsum1, loads : 1
+  Net : tsum2, loads : 1
+  Net : co0, loads : 1
+  Net : tsum3, loads : 1
+  Net : tsum4, loads : 1
+  Net : co1, loads : 1
+  Net : tsum5, loads : 1
+  Net : tsum6, loads : 1
+  Net : co2, loads : 1
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets Clock]                 |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 257.270  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.847  secs
+--------------------------------------------------------------

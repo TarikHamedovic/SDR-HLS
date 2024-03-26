@@ -1,0 +1,10 @@
+----------------------------------------------------------------------
+Report for cell NCOAdder.TECH
+Register bits:  64 of 84255 (0.076%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        33          100.0
+                            FD1P3DX        64          100.0
+                                GSR         1          100.0
+                              TOTAL        98
