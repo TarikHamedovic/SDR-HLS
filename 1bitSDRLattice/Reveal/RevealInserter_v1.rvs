@@ -1,0 +1,73 @@
+<Project ModBy="Inserter" Name="/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/Reveal/RevealInserter_v1.rvl" Date="2024-03-19">
+    <Core Name="top_LA0">
+        <Setting>
+            <Capture SamplesPerTrig="1" NumTrigsCap=""/>
+            <Event EventCnt="" CntEnableRun=""/>
+            <TrigSetting PreTrgSamples="" AND_ALL="" PostTrgSamples="" TURadix="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Name="clk_80mhz"/>
+                <Sig Name="clk_25mhz"/>
+                <Sig Name="RFIn"/>
+                <Sig Name="i_Rx_Serial"/>
+                <Bus Name="MixerOutSin" Radix="0">
+                    <Sig Name="MixerOutSin:0"/>
+                    <Sig Name="MixerOutSin:1"/>
+                    <Sig Name="MixerOutSin:2"/>
+                    <Sig Name="MixerOutSin:3"/>
+                    <Sig Name="MixerOutSin:4"/>
+                    <Sig Name="MixerOutSin:5"/>
+                    <Sig Name="MixerOutSin:6"/>
+                    <Sig Name="MixerOutSin:7"/>
+                    <Sig Name="MixerOutSin:8"/>
+                    <Sig Name="MixerOutSin:9"/>
+                    <Sig Name="MixerOutSin:10"/>
+                    <Sig Name="MixerOutSin:11"/>
+                </Bus>
+                <Bus Name="DemodOut" Radix="0">
+                    <Sig Name="DemodOut:0"/>
+                    <Sig Name="DemodOut:1"/>
+                    <Sig Name="DemodOut:2"/>
+                    <Sig Name="DemodOut:3"/>
+                    <Sig Name="DemodOut:4"/>
+                    <Sig Name="DemodOut:5"/>
+                    <Sig Name="DemodOut:6"/>
+                    <Sig Name="DemodOut:7"/>
+                    <Sig Name="DemodOut:8"/>
+                    <Sig Name="DemodOut:9"/>
+                    <Sig Name="DemodOut:10"/>
+                    <Sig Name="DemodOut:11"/>
+                </Bus>
+                <Bus Name="CICGain" Radix="0">
+                    <Sig Name="CICGain:0"/>
+                    <Sig Name="CICGain:1"/>
+                    <Sig Name="CICGain:2"/>
+                    <Sig Name="CICGain:3"/>
+                    <Sig Name="CICGain:4"/>
+                    <Sig Name="CICGain:5"/>
+                    <Sig Name="CICGain:6"/>
+                    <Sig Name="CICGain:7"/>
+                </Bus>
+                <Bus Name="CIC1_outCos" Radix="0">
+                    <Sig Name="CIC1_outCos:0"/>
+                    <Sig Name="CIC1_outCos:1"/>
+                    <Sig Name="CIC1_outCos:2"/>
+                    <Sig Name="CIC1_outCos:3"/>
+                    <Sig Name="CIC1_outCos:4"/>
+                    <Sig Name="CIC1_outCos:5"/>
+                    <Sig Name="CIC1_outCos:6"/>
+                    <Sig Name="CIC1_outCos:7"/>
+                    <Sig Name="CIC1_outCos:8"/>
+                    <Sig Name="CIC1_outCos:9"/>
+                    <Sig Name="CIC1_outCos:10"/>
+                    <Sig Name="CIC1_outCos:11"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Operator="0" Name="TU1" ID="1" Value="00000011" Radix="0"/>
+                <TE Enable="1" Expression="" Name="TE1" ID="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

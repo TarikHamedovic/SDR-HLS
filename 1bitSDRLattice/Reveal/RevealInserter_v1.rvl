@@ -1,0 +1,78 @@
+<Project ModBy="Inserter" SigType="0" Name="/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/Reveal/RevealInserter_v1.rvl" Date="2024-03-19">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="ECP5U" DesignName="OneBitSDR"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="552039188" Name="top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="256"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="clk_80mhz"/>
+                <Sig Type="SIG" Name="clk_25mhz"/>
+                <Sig Type="SIG" Name="RFIn"/>
+                <Sig Type="SIG" Name="i_Rx_Serial"/>
+                <Bus Name="MixerOutSin">
+                    <Sig Type="SIG" Name="MixerOutSin:0"/>
+                    <Sig Type="SIG" Name="MixerOutSin:1"/>
+                    <Sig Type="SIG" Name="MixerOutSin:2"/>
+                    <Sig Type="SIG" Name="MixerOutSin:3"/>
+                    <Sig Type="SIG" Name="MixerOutSin:4"/>
+                    <Sig Type="SIG" Name="MixerOutSin:5"/>
+                    <Sig Type="SIG" Name="MixerOutSin:6"/>
+                    <Sig Type="SIG" Name="MixerOutSin:7"/>
+                    <Sig Type="SIG" Name="MixerOutSin:8"/>
+                    <Sig Type="SIG" Name="MixerOutSin:9"/>
+                    <Sig Type="SIG" Name="MixerOutSin:10"/>
+                    <Sig Type="SIG" Name="MixerOutSin:11"/>
+                </Bus>
+                <Bus Name="DemodOut">
+                    <Sig Type="SIG" Name="DemodOut:0"/>
+                    <Sig Type="SIG" Name="DemodOut:1"/>
+                    <Sig Type="SIG" Name="DemodOut:2"/>
+                    <Sig Type="SIG" Name="DemodOut:3"/>
+                    <Sig Type="SIG" Name="DemodOut:4"/>
+                    <Sig Type="SIG" Name="DemodOut:5"/>
+                    <Sig Type="SIG" Name="DemodOut:6"/>
+                    <Sig Type="SIG" Name="DemodOut:7"/>
+                    <Sig Type="SIG" Name="DemodOut:8"/>
+                    <Sig Type="SIG" Name="DemodOut:9"/>
+                    <Sig Type="SIG" Name="DemodOut:10"/>
+                    <Sig Type="SIG" Name="DemodOut:11"/>
+                </Bus>
+                <Bus Name="CICGain">
+                    <Sig Type="SIG" Name="CICGain:0"/>
+                    <Sig Type="SIG" Name="CICGain:1"/>
+                    <Sig Type="SIG" Name="CICGain:2"/>
+                    <Sig Type="SIG" Name="CICGain:3"/>
+                    <Sig Type="SIG" Name="CICGain:4"/>
+                    <Sig Type="SIG" Name="CICGain:5"/>
+                    <Sig Type="SIG" Name="CICGain:6"/>
+                    <Sig Type="SIG" Name="CICGain:7"/>
+                </Bus>
+                <Bus Name="CIC1_outCos">
+                    <Sig Type="SIG" Name="CIC1_outCos:0"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:1"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:2"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:3"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:4"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:5"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:6"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:7"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:8"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:9"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:10"/>
+                    <Sig Type="SIG" Name="CIC1_outCos:11"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="(BUS)CICGain[7:0],"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>
