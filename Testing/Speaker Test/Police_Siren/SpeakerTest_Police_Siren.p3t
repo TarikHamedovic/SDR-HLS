@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "SpeakerTest_Police_Siren.log"
+-o "SpeakerTest_Police_Siren.csv"
+-pr "SpeakerTest_Police_Siren.prf"

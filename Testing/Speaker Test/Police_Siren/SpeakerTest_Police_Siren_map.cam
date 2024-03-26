@@ -1,0 +1,237 @@
+[ START MERGED ]
+n3121 rst_c
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+swg/add_86_1/S1
+swg/add_86_1/S0
+swg/add_86_1/CI
+swg/add_86_7/CO
+swg/add_87_1/S0
+swg/add_87_1/CI
+swg/add_87_9/S1
+swg/add_87_9/CO
+swg/add_88_1/S1
+swg/add_88_1/S0
+swg/add_88_1/CI
+swg/add_88_9/CO
+swg/add_89_2/S0
+swg/add_89_2/CI
+swg/add_89_12/S1
+swg/add_89_12/CO
+swg/add_90_1/S1
+swg/add_90_1/S0
+swg/add_90_1/CI
+swg/add_90_11/CO
+swg/add_91_1/S1
+swg/add_91_1/S0
+swg/add_91_1/CI
+swg/add_91_13/S1
+swg/add_91_13/CO
+swg/add_92_1/S1
+swg/add_92_1/S0
+swg/add_92_1/CI
+swg/add_92_13/CO
+swg/add_93_1/S1
+swg/add_93_1/S0
+swg/add_93_1/CI
+swg/add_93_15/S1
+swg/add_93_15/CO
+swg/add_94_1/S0
+swg/add_94_1/CI
+swg/add_94_15/CO
+swg/add_95_1/S0
+swg/add_95_1/CI
+swg/add_95_17/S1
+swg/add_95_17/CO
+swg/add_96_2/S0
+swg/add_96_2/CI
+swg/add_96_18/CO
+swg/add_97_1/S0
+swg/add_97_1/CI
+swg/add_97_19/S1
+swg/add_97_19/CO
+swg/add_98_1/S1
+swg/add_98_1/S0
+swg/add_98_1/CI
+swg/add_98_19/CO
+swg/add_99_1/S0
+swg/add_99_1/CI
+swg/add_99_21/S1
+swg/add_99_21/CO
+swg/add_100_1/S0
+swg/add_100_1/CI
+swg/add_100_21/CO
+swg/freq_update_counter_34_add_4_1/S0
+swg/freq_update_counter_34_add_4_1/CI
+swg/freq_update_counter_34_add_4_33/S1
+swg/freq_update_counter_34_add_4_33/CO
+swg/counter_33_add_4_1/S0
+swg/counter_33_add_4_1/CI
+swg/counter_33_add_4_33/S1
+swg/counter_33_add_4_33/CO
+swg/add_85_1/S1
+swg/add_85_1/S0
+swg/add_85_1/CI
+swg/add_85_7/S1
+swg/add_85_7/CO
+add_1873_22/S1
+add_1873_22/S0
+add_1873_24/S1
+add_1873_24/S0
+add_1873_26/S1
+add_1873_26/S0
+_add_1_57_add_4_1/S0
+_add_1_57_add_4_1/CI
+_add_1_57_add_4_27/CO
+_add_1_45_add_4_1/S0
+_add_1_45_add_4_1/CI
+_add_1_45_add_4_31/S1
+_add_1_45_add_4_31/CO
+_add_1_54_add_4_1/S0
+_add_1_54_add_4_1/CI
+_add_1_54_add_4_31/S1
+_add_1_54_add_4_31/CO
+_add_1_48_add_4_2/S1
+_add_1_48_add_4_2/S0
+_add_1_48_add_4_2/CI
+_add_1_48_add_4_4/S1
+_add_1_48_add_4_4/S0
+_add_1_48_add_4_6/S1
+_add_1_48_add_4_6/S0
+_add_1_48_add_4_8/S1
+_add_1_48_add_4_8/S0
+_add_1_48_add_4_10/S1
+_add_1_48_add_4_10/S0
+_add_1_48_add_4_12/S1
+_add_1_48_add_4_12/S0
+_add_1_48_add_4_14/S1
+_add_1_48_add_4_14/S0
+_add_1_48_add_4_16/S1
+_add_1_48_add_4_16/S0
+_add_1_48_add_4_18/S1
+_add_1_48_add_4_18/S0
+_add_1_48_add_4_20/S1
+_add_1_48_add_4_20/S0
+_add_1_48_add_4_22/S1
+_add_1_48_add_4_22/S0
+_add_1_48_add_4_24/S1
+_add_1_48_add_4_24/S0
+_add_1_48_add_4_26/S1
+_add_1_48_add_4_26/S0
+_add_1_48_add_4_28/S1
+_add_1_48_add_4_28/S0
+add_1874_2/S1
+add_1874_2/S0
+add_1874_2/CI
+add_1874_4/S1
+add_1874_4/S0
+add_1874_6/S1
+add_1874_6/S0
+add_1874_8/S1
+add_1874_8/S0
+add_1874_10/S1
+add_1874_10/S0
+add_1874_12/S1
+add_1874_12/S0
+add_1874_14/S1
+add_1874_14/S0
+add_1874_16/S1
+add_1874_16/S0
+add_1874_18/S1
+add_1874_18/S0
+_add_1_48_add_4_30/S1
+_add_1_48_add_4_30/S0
+_add_1_48_add_4_32/S1
+_add_1_48_add_4_32/S0
+_add_1_48_add_4_34/S0
+_add_1_48_add_4_34/CO
+add_1874_20/S1
+add_1874_20/S0
+add_1874_22/S1
+add_1874_22/S0
+add_1874_24/S1
+add_1874_24/S0
+add_1874_26/S0
+add_1874_26/CO
+_add_1_add_4_1/S1
+_add_1_add_4_1/S0
+_add_1_add_4_1/CI
+_add_1_add_4_3/S1
+_add_1_add_4_3/S0
+_add_1_add_4_5/S1
+_add_1_add_4_5/S0
+_add_1_add_4_7/S1
+_add_1_add_4_7/S0
+_add_1_add_4_9/S1
+_add_1_add_4_9/S0
+_add_1_add_4_11/S1
+_add_1_add_4_11/S0
+_add_1_add_4_13/S1
+_add_1_add_4_13/S0
+_add_1_add_4_15/S1
+_add_1_add_4_15/S0
+_add_1_add_4_17/S1
+_add_1_add_4_17/S0
+_add_1_add_4_19/S1
+_add_1_add_4_19/S0
+_add_1_add_4_21/S1
+_add_1_add_4_21/S0
+_add_1_add_4_23/S1
+_add_1_add_4_23/S0
+_add_1_add_4_25/S1
+_add_1_add_4_25/S0
+add_1873_10/S1
+add_1873_10/S0
+add_1873_28/S1
+add_1873_28/S0
+_add_1_add_4_27/S1
+_add_1_add_4_27/S0
+_add_1_add_4_29/S1
+_add_1_add_4_29/S0
+_add_1_add_4_cout/S1
+_add_1_add_4_cout/CO
+add_1873_12/S1
+add_1873_12/S0
+add_1873_30/S1
+add_1873_30/S0
+add_1873_32/S0
+add_1873_32/CO
+add_1873_2/S1
+add_1873_2/S0
+add_1873_2/CI
+add_1873_4/S1
+add_1873_4/S0
+add_1873_14/S1
+add_1873_14/S0
+add_1873_16/S1
+add_1873_16/S0
+add_1873_18/S1
+add_1873_18/S0
+add_1873_6/S1
+add_1873_6/S0
+add_1873_8/S1
+add_1873_8/S0
+add_1873_20/S1
+add_1873_20/S0
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.13.0.56.2 -- WARNING: Map write only section -- Fri Mar 15 14:21:17 2024
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+LOCATE COMP "led[6]" SITE "E1" ;
+LOCATE COMP "led[7]" SITE "H3" ;
+LOCATE COMP "rst" SITE "R1" ;
+LOCATE COMP "clk_25mhz" SITE "G2" ;
+LOCATE COMP "wave_outN" SITE "A10" ;
+LOCATE COMP "wave_outP" SITE "B11" ;
+LOCATE COMP "led[0]" SITE "B2" ;
+LOCATE COMP "led[1]" SITE "C2" ;
+LOCATE COMP "led[2]" SITE "C1" ;
+LOCATE COMP "led[3]" SITE "D2" ;
+LOCATE COMP "led[4]" SITE "D1" ;
+LOCATE COMP "led[5]" SITE "E2" ;
+FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

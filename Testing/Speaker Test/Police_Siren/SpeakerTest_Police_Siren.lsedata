@@ -1,0 +1,3702 @@
+<top name = "top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "clk_25mhz"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "top">
+
+    <!--
+        Top Level Pins: 12
+    -->
+
+    <pins>
+        <pitem  name = "clk_25mhz"  direction = "in"  />
+        <pitem  name = "rst"  direction = "in"  />
+        <pitem  name = "led[7]"  direction = "out"  />
+        <pitem  name = "led[6]"  direction = "out"  />
+        <pitem  name = "led[5]"  direction = "out"  />
+        <pitem  name = "led[4]"  direction = "out"  />
+        <pitem  name = "led[3]"  direction = "out"  />
+        <pitem  name = "led[2]"  direction = "out"  />
+        <pitem  name = "led[1]"  direction = "out"  />
+        <pitem  name = "led[0]"  direction = "out"  />
+        <pitem  name = "wave_outP"  direction = "out"  />
+        <pitem  name = "wave_outN"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 34
+    -->
+
+    <instance  name = "swg/sub_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/half_period[31]"  />
+        <nitem  name = "swg/half_period[30]"  />
+        <nitem  name = "swg/half_period[29]"  />
+        <nitem  name = "swg/half_period[28]"  />
+        <nitem  name = "swg/half_period[27]"  />
+        <nitem  name = "swg/half_period[26]"  />
+        <nitem  name = "swg/half_period[25]"  />
+        <nitem  name = "swg/half_period[24]"  />
+        <nitem  name = "swg/half_period[23]"  />
+        <nitem  name = "swg/half_period[22]"  />
+        <nitem  name = "swg/half_period[21]"  />
+        <nitem  name = "swg/half_period[20]"  />
+        <nitem  name = "swg/half_period[19]"  />
+        <nitem  name = "swg/half_period[18]"  />
+        <nitem  name = "swg/half_period[17]"  />
+        <nitem  name = "swg/half_period[16]"  />
+        <nitem  name = "swg/half_period[15]"  />
+        <nitem  name = "swg/half_period[14]"  />
+        <nitem  name = "swg/half_period[13]"  />
+        <nitem  name = "swg/half_period[12]"  />
+        <nitem  name = "swg/half_period[11]"  />
+        <nitem  name = "swg/half_period[10]"  />
+        <nitem  name = "swg/half_period[9]"  />
+        <nitem  name = "swg/half_period[8]"  />
+        <nitem  name = "swg/half_period[7]"  />
+        <nitem  name = "swg/half_period[6]"  />
+        <nitem  name = "swg/half_period[5]"  />
+        <nitem  name = "swg/half_period[4]"  />
+        <nitem  name = "swg/half_period[3]"  />
+        <nitem  name = "swg/half_period[2]"  />
+        <nitem  name = "swg/half_period[1]"  />
+        <nitem  name = "swg/half_period[0]"  />
+        <nitem  name = "swg/counter_31__N_162[31]"  />
+        <nitem  name = "swg/counter_31__N_162[30]"  />
+        <nitem  name = "swg/counter_31__N_162[29]"  />
+        <nitem  name = "swg/counter_31__N_162[28]"  />
+        <nitem  name = "swg/counter_31__N_162[27]"  />
+        <nitem  name = "swg/counter_31__N_162[26]"  />
+        <nitem  name = "swg/counter_31__N_162[25]"  />
+        <nitem  name = "swg/counter_31__N_162[24]"  />
+        <nitem  name = "swg/counter_31__N_162[23]"  />
+        <nitem  name = "swg/counter_31__N_162[22]"  />
+        <nitem  name = "swg/counter_31__N_162[21]"  />
+        <nitem  name = "swg/counter_31__N_162[20]"  />
+        <nitem  name = "swg/counter_31__N_162[19]"  />
+        <nitem  name = "swg/counter_31__N_162[18]"  />
+        <nitem  name = "swg/counter_31__N_162[17]"  />
+        <nitem  name = "swg/counter_31__N_162[16]"  />
+        <nitem  name = "swg/counter_31__N_162[15]"  />
+        <nitem  name = "swg/counter_31__N_162[14]"  />
+        <nitem  name = "swg/counter_31__N_162[13]"  />
+        <nitem  name = "swg/counter_31__N_162[12]"  />
+        <nitem  name = "swg/counter_31__N_162[11]"  />
+        <nitem  name = "swg/counter_31__N_162[10]"  />
+        <nitem  name = "swg/counter_31__N_162[9]"  />
+        <nitem  name = "swg/counter_31__N_162[8]"  />
+        <nitem  name = "swg/counter_31__N_162[7]"  />
+        <nitem  name = "swg/counter_31__N_162[6]"  />
+        <nitem  name = "swg/counter_31__N_162[5]"  />
+        <nitem  name = "swg/counter_31__N_162[4]"  />
+        <nitem  name = "swg/counter_31__N_162[3]"  />
+        <nitem  name = "swg/counter_31__N_162[2]"  />
+        <nitem  name = "swg/counter_31__N_162[1]"  />
+        <nitem  name = "swg/counter_31__N_162[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/wave_outP_I_0_54"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wave_outP"  />
+        <nitem  name = "swg/counter_31__N_161"  />
+        <nitem  name = "swg/wave_outP_N_285"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/counter_31__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/counter[31]"  />
+        <nitem  name = "swg/counter[30]"  />
+        <nitem  name = "swg/counter[29]"  />
+        <nitem  name = "swg/counter[28]"  />
+        <nitem  name = "swg/counter[27]"  />
+        <nitem  name = "swg/counter[26]"  />
+        <nitem  name = "swg/counter[25]"  />
+        <nitem  name = "swg/counter[24]"  />
+        <nitem  name = "swg/counter[23]"  />
+        <nitem  name = "swg/counter[22]"  />
+        <nitem  name = "swg/counter[21]"  />
+        <nitem  name = "swg/counter[20]"  />
+        <nitem  name = "swg/counter[19]"  />
+        <nitem  name = "swg/counter[18]"  />
+        <nitem  name = "swg/counter[17]"  />
+        <nitem  name = "swg/counter[16]"  />
+        <nitem  name = "swg/counter[15]"  />
+        <nitem  name = "swg/counter[14]"  />
+        <nitem  name = "swg/counter[13]"  />
+        <nitem  name = "swg/counter[12]"  />
+        <nitem  name = "swg/counter[11]"  />
+        <nitem  name = "swg/counter[10]"  />
+        <nitem  name = "swg/counter[9]"  />
+        <nitem  name = "swg/counter[8]"  />
+        <nitem  name = "swg/counter[7]"  />
+        <nitem  name = "swg/counter[6]"  />
+        <nitem  name = "swg/counter[5]"  />
+        <nitem  name = "swg/counter[4]"  />
+        <nitem  name = "swg/counter[3]"  />
+        <nitem  name = "swg/counter[2]"  />
+        <nitem  name = "swg/counter[1]"  />
+        <nitem  name = "swg/counter[0]"  />
+        <nitem  name = "swg/counter_31__N_162[31]"  />
+        <nitem  name = "swg/counter_31__N_162[30]"  />
+        <nitem  name = "swg/counter_31__N_162[29]"  />
+        <nitem  name = "swg/counter_31__N_162[28]"  />
+        <nitem  name = "swg/counter_31__N_162[27]"  />
+        <nitem  name = "swg/counter_31__N_162[26]"  />
+        <nitem  name = "swg/counter_31__N_162[25]"  />
+        <nitem  name = "swg/counter_31__N_162[24]"  />
+        <nitem  name = "swg/counter_31__N_162[23]"  />
+        <nitem  name = "swg/counter_31__N_162[22]"  />
+        <nitem  name = "swg/counter_31__N_162[21]"  />
+        <nitem  name = "swg/counter_31__N_162[20]"  />
+        <nitem  name = "swg/counter_31__N_162[19]"  />
+        <nitem  name = "swg/counter_31__N_162[18]"  />
+        <nitem  name = "swg/counter_31__N_162[17]"  />
+        <nitem  name = "swg/counter_31__N_162[16]"  />
+        <nitem  name = "swg/counter_31__N_162[15]"  />
+        <nitem  name = "swg/counter_31__N_162[14]"  />
+        <nitem  name = "swg/counter_31__N_162[13]"  />
+        <nitem  name = "swg/counter_31__N_162[12]"  />
+        <nitem  name = "swg/counter_31__N_162[11]"  />
+        <nitem  name = "swg/counter_31__N_162[10]"  />
+        <nitem  name = "swg/counter_31__N_162[9]"  />
+        <nitem  name = "swg/counter_31__N_162[8]"  />
+        <nitem  name = "swg/counter_31__N_162[7]"  />
+        <nitem  name = "swg/counter_31__N_162[6]"  />
+        <nitem  name = "swg/counter_31__N_162[5]"  />
+        <nitem  name = "swg/counter_31__N_162[4]"  />
+        <nitem  name = "swg/counter_31__N_162[3]"  />
+        <nitem  name = "swg/counter_31__N_162[2]"  />
+        <nitem  name = "swg/counter_31__N_162[1]"  />
+        <nitem  name = "swg/counter_31__N_162[0]"  />
+        <nitem  name = "swg/counter_31__N_161"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/add_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/counter[31]"  />
+        <nitem  name = "swg/counter[30]"  />
+        <nitem  name = "swg/counter[29]"  />
+        <nitem  name = "swg/counter[28]"  />
+        <nitem  name = "swg/counter[27]"  />
+        <nitem  name = "swg/counter[26]"  />
+        <nitem  name = "swg/counter[25]"  />
+        <nitem  name = "swg/counter[24]"  />
+        <nitem  name = "swg/counter[23]"  />
+        <nitem  name = "swg/counter[22]"  />
+        <nitem  name = "swg/counter[21]"  />
+        <nitem  name = "swg/counter[20]"  />
+        <nitem  name = "swg/counter[19]"  />
+        <nitem  name = "swg/counter[18]"  />
+        <nitem  name = "swg/counter[17]"  />
+        <nitem  name = "swg/counter[16]"  />
+        <nitem  name = "swg/counter[15]"  />
+        <nitem  name = "swg/counter[14]"  />
+        <nitem  name = "swg/counter[13]"  />
+        <nitem  name = "swg/counter[12]"  />
+        <nitem  name = "swg/counter[11]"  />
+        <nitem  name = "swg/counter[10]"  />
+        <nitem  name = "swg/counter[9]"  />
+        <nitem  name = "swg/counter[8]"  />
+        <nitem  name = "swg/counter[7]"  />
+        <nitem  name = "swg/counter[6]"  />
+        <nitem  name = "swg/counter[5]"  />
+        <nitem  name = "swg/counter[4]"  />
+        <nitem  name = "swg/counter[3]"  />
+        <nitem  name = "swg/counter[2]"  />
+        <nitem  name = "swg/counter[1]"  />
+        <nitem  name = "swg/counter[0]"  />
+        <nitem  name = "swg/counter_31__N_129[31]"  />
+        <nitem  name = "swg/counter_31__N_129[30]"  />
+        <nitem  name = "swg/counter_31__N_129[29]"  />
+        <nitem  name = "swg/counter_31__N_129[28]"  />
+        <nitem  name = "swg/counter_31__N_129[27]"  />
+        <nitem  name = "swg/counter_31__N_129[26]"  />
+        <nitem  name = "swg/counter_31__N_129[25]"  />
+        <nitem  name = "swg/counter_31__N_129[24]"  />
+        <nitem  name = "swg/counter_31__N_129[23]"  />
+        <nitem  name = "swg/counter_31__N_129[22]"  />
+        <nitem  name = "swg/counter_31__N_129[21]"  />
+        <nitem  name = "swg/counter_31__N_129[20]"  />
+        <nitem  name = "swg/counter_31__N_129[19]"  />
+        <nitem  name = "swg/counter_31__N_129[18]"  />
+        <nitem  name = "swg/counter_31__N_129[17]"  />
+        <nitem  name = "swg/counter_31__N_129[16]"  />
+        <nitem  name = "swg/counter_31__N_129[15]"  />
+        <nitem  name = "swg/counter_31__N_129[14]"  />
+        <nitem  name = "swg/counter_31__N_129[13]"  />
+        <nitem  name = "swg/counter_31__N_129[12]"  />
+        <nitem  name = "swg/counter_31__N_129[11]"  />
+        <nitem  name = "swg/counter_31__N_129[10]"  />
+        <nitem  name = "swg/counter_31__N_129[9]"  />
+        <nitem  name = "swg/counter_31__N_129[8]"  />
+        <nitem  name = "swg/counter_31__N_129[7]"  />
+        <nitem  name = "swg/counter_31__N_129[6]"  />
+        <nitem  name = "swg/counter_31__N_129[5]"  />
+        <nitem  name = "swg/counter_31__N_129[4]"  />
+        <nitem  name = "swg/counter_31__N_129[3]"  />
+        <nitem  name = "swg/counter_31__N_129[2]"  />
+        <nitem  name = "swg/counter_31__N_129[1]"  />
+        <nitem  name = "swg/counter_31__N_129[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/counter_31__I_0_52"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/counter_31__N_161"  />
+        <nitem  name = "swg/counter_31__N_129[31]"  />
+        <nitem  name = "swg/counter_31__N_129[30]"  />
+        <nitem  name = "swg/counter_31__N_129[29]"  />
+        <nitem  name = "swg/counter_31__N_129[28]"  />
+        <nitem  name = "swg/counter_31__N_129[27]"  />
+        <nitem  name = "swg/counter_31__N_129[26]"  />
+        <nitem  name = "swg/counter_31__N_129[25]"  />
+        <nitem  name = "swg/counter_31__N_129[24]"  />
+        <nitem  name = "swg/counter_31__N_129[23]"  />
+        <nitem  name = "swg/counter_31__N_129[22]"  />
+        <nitem  name = "swg/counter_31__N_129[21]"  />
+        <nitem  name = "swg/counter_31__N_129[20]"  />
+        <nitem  name = "swg/counter_31__N_129[19]"  />
+        <nitem  name = "swg/counter_31__N_129[18]"  />
+        <nitem  name = "swg/counter_31__N_129[17]"  />
+        <nitem  name = "swg/counter_31__N_129[16]"  />
+        <nitem  name = "swg/counter_31__N_129[15]"  />
+        <nitem  name = "swg/counter_31__N_129[14]"  />
+        <nitem  name = "swg/counter_31__N_129[13]"  />
+        <nitem  name = "swg/counter_31__N_129[12]"  />
+        <nitem  name = "swg/counter_31__N_129[11]"  />
+        <nitem  name = "swg/counter_31__N_129[10]"  />
+        <nitem  name = "swg/counter_31__N_129[9]"  />
+        <nitem  name = "swg/counter_31__N_129[8]"  />
+        <nitem  name = "swg/counter_31__N_129[7]"  />
+        <nitem  name = "swg/counter_31__N_129[6]"  />
+        <nitem  name = "swg/counter_31__N_129[5]"  />
+        <nitem  name = "swg/counter_31__N_129[4]"  />
+        <nitem  name = "swg/counter_31__N_129[3]"  />
+        <nitem  name = "swg/counter_31__N_129[2]"  />
+        <nitem  name = "swg/counter_31__N_129[1]"  />
+        <nitem  name = "swg/counter_31__N_129[0]"  />
+        <nitem  name = "swg/counter_31__N_1[31]"  />
+        <nitem  name = "swg/counter_31__N_1[30]"  />
+        <nitem  name = "swg/counter_31__N_1[29]"  />
+        <nitem  name = "swg/counter_31__N_1[28]"  />
+        <nitem  name = "swg/counter_31__N_1[27]"  />
+        <nitem  name = "swg/counter_31__N_1[26]"  />
+        <nitem  name = "swg/counter_31__N_1[25]"  />
+        <nitem  name = "swg/counter_31__N_1[24]"  />
+        <nitem  name = "swg/counter_31__N_1[23]"  />
+        <nitem  name = "swg/counter_31__N_1[22]"  />
+        <nitem  name = "swg/counter_31__N_1[21]"  />
+        <nitem  name = "swg/counter_31__N_1[20]"  />
+        <nitem  name = "swg/counter_31__N_1[19]"  />
+        <nitem  name = "swg/counter_31__N_1[18]"  />
+        <nitem  name = "swg/counter_31__N_1[17]"  />
+        <nitem  name = "swg/counter_31__N_1[16]"  />
+        <nitem  name = "swg/counter_31__N_1[15]"  />
+        <nitem  name = "swg/counter_31__N_1[14]"  />
+        <nitem  name = "swg/counter_31__N_1[13]"  />
+        <nitem  name = "swg/counter_31__N_1[12]"  />
+        <nitem  name = "swg/counter_31__N_1[11]"  />
+        <nitem  name = "swg/counter_31__N_1[10]"  />
+        <nitem  name = "swg/counter_31__N_1[9]"  />
+        <nitem  name = "swg/counter_31__N_1[8]"  />
+        <nitem  name = "swg/counter_31__N_1[7]"  />
+        <nitem  name = "swg/counter_31__N_1[6]"  />
+        <nitem  name = "swg/counter_31__N_1[5]"  />
+        <nitem  name = "swg/counter_31__N_1[4]"  />
+        <nitem  name = "swg/counter_31__N_1[3]"  />
+        <nitem  name = "swg/counter_31__N_1[2]"  />
+        <nitem  name = "swg/counter_31__N_1[1]"  />
+        <nitem  name = "swg/counter_31__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/led_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "led[1]"  />
+        <nitem  name = "swg/counter_31__N_161"  />
+        <nitem  name = "swg/led_N_284"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/wave_outP_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wave_outP"  />
+        <nitem  name = "wave_outN"  />
+        <nitem  name = "swg/counter_31__N_161"  />
+        <nitem  name = "swg/wave_outN_N_286"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_0_56"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/increasing_freq_N_290"  />
+        <nitem  name = "swg/increasing_freq_N_289"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/freq_update_counter_31__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/freq_update_counter[31]"  />
+        <nitem  name = "swg/freq_update_counter[30]"  />
+        <nitem  name = "swg/freq_update_counter[29]"  />
+        <nitem  name = "swg/freq_update_counter[28]"  />
+        <nitem  name = "swg/freq_update_counter[27]"  />
+        <nitem  name = "swg/freq_update_counter[26]"  />
+        <nitem  name = "swg/freq_update_counter[25]"  />
+        <nitem  name = "swg/freq_update_counter[24]"  />
+        <nitem  name = "swg/freq_update_counter[23]"  />
+        <nitem  name = "swg/freq_update_counter[22]"  />
+        <nitem  name = "swg/freq_update_counter[21]"  />
+        <nitem  name = "swg/freq_update_counter[20]"  />
+        <nitem  name = "swg/freq_update_counter[19]"  />
+        <nitem  name = "swg/freq_update_counter[18]"  />
+        <nitem  name = "swg/freq_update_counter[17]"  />
+        <nitem  name = "swg/freq_update_counter[16]"  />
+        <nitem  name = "swg/freq_update_counter[15]"  />
+        <nitem  name = "swg/freq_update_counter[14]"  />
+        <nitem  name = "swg/freq_update_counter[13]"  />
+        <nitem  name = "swg/freq_update_counter[12]"  />
+        <nitem  name = "swg/freq_update_counter[11]"  />
+        <nitem  name = "swg/freq_update_counter[10]"  />
+        <nitem  name = "swg/freq_update_counter[9]"  />
+        <nitem  name = "swg/freq_update_counter[8]"  />
+        <nitem  name = "swg/freq_update_counter[7]"  />
+        <nitem  name = "swg/freq_update_counter[6]"  />
+        <nitem  name = "swg/freq_update_counter[5]"  />
+        <nitem  name = "swg/freq_update_counter[4]"  />
+        <nitem  name = "swg/freq_update_counter[3]"  />
+        <nitem  name = "swg/freq_update_counter[2]"  />
+        <nitem  name = "swg/freq_update_counter[1]"  />
+        <nitem  name = "swg/freq_update_counter[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_226"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/add_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/freq_update_counter[31]"  />
+        <nitem  name = "swg/freq_update_counter[30]"  />
+        <nitem  name = "swg/freq_update_counter[29]"  />
+        <nitem  name = "swg/freq_update_counter[28]"  />
+        <nitem  name = "swg/freq_update_counter[27]"  />
+        <nitem  name = "swg/freq_update_counter[26]"  />
+        <nitem  name = "swg/freq_update_counter[25]"  />
+        <nitem  name = "swg/freq_update_counter[24]"  />
+        <nitem  name = "swg/freq_update_counter[23]"  />
+        <nitem  name = "swg/freq_update_counter[22]"  />
+        <nitem  name = "swg/freq_update_counter[21]"  />
+        <nitem  name = "swg/freq_update_counter[20]"  />
+        <nitem  name = "swg/freq_update_counter[19]"  />
+        <nitem  name = "swg/freq_update_counter[18]"  />
+        <nitem  name = "swg/freq_update_counter[17]"  />
+        <nitem  name = "swg/freq_update_counter[16]"  />
+        <nitem  name = "swg/freq_update_counter[15]"  />
+        <nitem  name = "swg/freq_update_counter[14]"  />
+        <nitem  name = "swg/freq_update_counter[13]"  />
+        <nitem  name = "swg/freq_update_counter[12]"  />
+        <nitem  name = "swg/freq_update_counter[11]"  />
+        <nitem  name = "swg/freq_update_counter[10]"  />
+        <nitem  name = "swg/freq_update_counter[9]"  />
+        <nitem  name = "swg/freq_update_counter[8]"  />
+        <nitem  name = "swg/freq_update_counter[7]"  />
+        <nitem  name = "swg/freq_update_counter[6]"  />
+        <nitem  name = "swg/freq_update_counter[5]"  />
+        <nitem  name = "swg/freq_update_counter[4]"  />
+        <nitem  name = "swg/freq_update_counter[3]"  />
+        <nitem  name = "swg/freq_update_counter[2]"  />
+        <nitem  name = "swg/freq_update_counter[1]"  />
+        <nitem  name = "swg/freq_update_counter[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[31]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[30]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[29]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[28]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[27]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[26]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[25]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[24]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[23]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[22]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[21]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[20]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[19]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[18]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[17]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[16]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[15]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[14]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[13]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[12]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[11]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[10]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[9]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[8]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[7]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[6]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[5]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[4]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[3]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[2]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[1]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/current_wave_freq_31__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/increasing_freq_N_295"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/increasing_freq_N_295"  />
+        <nitem  name = "swg/increasing_freq_N_294"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/add_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/n147"  />
+        <nitem  name = "swg/n148"  />
+        <nitem  name = "swg/n149"  />
+        <nitem  name = "swg/n150"  />
+        <nitem  name = "swg/n151"  />
+        <nitem  name = "swg/n152"  />
+        <nitem  name = "swg/n153"  />
+        <nitem  name = "swg/n154"  />
+        <nitem  name = "swg/n155"  />
+        <nitem  name = "swg/n156"  />
+        <nitem  name = "swg/n157"  />
+        <nitem  name = "swg/n158"  />
+        <nitem  name = "swg/n159"  />
+        <nitem  name = "swg/n160"  />
+        <nitem  name = "swg/n161"  />
+        <nitem  name = "swg/n162"  />
+        <nitem  name = "swg/n163"  />
+        <nitem  name = "swg/n164"  />
+        <nitem  name = "swg/n165"  />
+        <nitem  name = "swg/n166"  />
+        <nitem  name = "swg/n167"  />
+        <nitem  name = "swg/n168"  />
+        <nitem  name = "swg/n169"  />
+        <nitem  name = "swg/n170"  />
+        <nitem  name = "swg/n171"  />
+        <nitem  name = "swg/n172"  />
+        <nitem  name = "swg/n173"  />
+        <nitem  name = "swg/n174"  />
+        <nitem  name = "swg/n175"  />
+        <nitem  name = "swg/n176"  />
+        <nitem  name = "swg/n177"  />
+        <nitem  name = "swg/n178"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_0_58"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/increasing_freq_N_292"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/current_wave_freq_31__I_0_59"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/increasing_freq_N_293"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq_N_292"  />
+        <nitem  name = "swg/increasing_freq_N_293"  />
+        <nitem  name = "swg/increasing_freq_N_290"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/sub_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/n183"  />
+        <nitem  name = "swg/n184"  />
+        <nitem  name = "swg/n185"  />
+        <nitem  name = "swg/n186"  />
+        <nitem  name = "swg/n187"  />
+        <nitem  name = "swg/n188"  />
+        <nitem  name = "swg/n189"  />
+        <nitem  name = "swg/n190"  />
+        <nitem  name = "swg/n191"  />
+        <nitem  name = "swg/n192"  />
+        <nitem  name = "swg/n193"  />
+        <nitem  name = "swg/n194"  />
+        <nitem  name = "swg/n195"  />
+        <nitem  name = "swg/n196"  />
+        <nitem  name = "swg/n197"  />
+        <nitem  name = "swg/n198"  />
+        <nitem  name = "swg/n199"  />
+        <nitem  name = "swg/n200"  />
+        <nitem  name = "swg/n201"  />
+        <nitem  name = "swg/n202"  />
+        <nitem  name = "swg/n203"  />
+        <nitem  name = "swg/n204"  />
+        <nitem  name = "swg/n205"  />
+        <nitem  name = "swg/n206"  />
+        <nitem  name = "swg/n207"  />
+        <nitem  name = "swg/n208"  />
+        <nitem  name = "swg/n209"  />
+        <nitem  name = "swg/n210"  />
+        <nitem  name = "swg/n211"  />
+        <nitem  name = "swg/n212"  />
+        <nitem  name = "swg/n213"  />
+        <nitem  name = "swg/n214"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/mux_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/increasing_freq_N_290"  />
+        <nitem  name = "swg/n183"  />
+        <nitem  name = "swg/n184"  />
+        <nitem  name = "swg/n185"  />
+        <nitem  name = "swg/n186"  />
+        <nitem  name = "swg/n187"  />
+        <nitem  name = "swg/n188"  />
+        <nitem  name = "swg/n189"  />
+        <nitem  name = "swg/n190"  />
+        <nitem  name = "swg/n191"  />
+        <nitem  name = "swg/n192"  />
+        <nitem  name = "swg/n193"  />
+        <nitem  name = "swg/n194"  />
+        <nitem  name = "swg/n195"  />
+        <nitem  name = "swg/n196"  />
+        <nitem  name = "swg/n197"  />
+        <nitem  name = "swg/n198"  />
+        <nitem  name = "swg/n199"  />
+        <nitem  name = "swg/n200"  />
+        <nitem  name = "swg/n201"  />
+        <nitem  name = "swg/n202"  />
+        <nitem  name = "swg/n203"  />
+        <nitem  name = "swg/n204"  />
+        <nitem  name = "swg/n205"  />
+        <nitem  name = "swg/n206"  />
+        <nitem  name = "swg/n207"  />
+        <nitem  name = "swg/n208"  />
+        <nitem  name = "swg/n209"  />
+        <nitem  name = "swg/n210"  />
+        <nitem  name = "swg/n211"  />
+        <nitem  name = "swg/n212"  />
+        <nitem  name = "swg/n213"  />
+        <nitem  name = "swg/n214"  />
+        <nitem  name = "swg/n217"  />
+        <nitem  name = "swg/n218"  />
+        <nitem  name = "swg/n219"  />
+        <nitem  name = "swg/n220"  />
+        <nitem  name = "swg/n221"  />
+        <nitem  name = "swg/n222"  />
+        <nitem  name = "swg/n223"  />
+        <nitem  name = "swg/n224"  />
+        <nitem  name = "swg/n225"  />
+        <nitem  name = "swg/n226"  />
+        <nitem  name = "swg/n227"  />
+        <nitem  name = "swg/n228"  />
+        <nitem  name = "swg/n229"  />
+        <nitem  name = "swg/n230"  />
+        <nitem  name = "swg/n231"  />
+        <nitem  name = "swg/n232"  />
+        <nitem  name = "swg/n233"  />
+        <nitem  name = "swg/n234"  />
+        <nitem  name = "swg/n235"  />
+        <nitem  name = "swg/n236"  />
+        <nitem  name = "swg/n237"  />
+        <nitem  name = "swg/n238"  />
+        <nitem  name = "swg/n239"  />
+        <nitem  name = "swg/n240"  />
+        <nitem  name = "swg/n241"  />
+        <nitem  name = "swg/n242"  />
+        <nitem  name = "swg/n243"  />
+        <nitem  name = "swg/n244"  />
+        <nitem  name = "swg/n245"  />
+        <nitem  name = "swg/n246"  />
+        <nitem  name = "swg/n247"  />
+        <nitem  name = "swg/n248"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/mux_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq_N_294"  />
+        <nitem  name = "swg/n147"  />
+        <nitem  name = "swg/n148"  />
+        <nitem  name = "swg/n149"  />
+        <nitem  name = "swg/n150"  />
+        <nitem  name = "swg/n151"  />
+        <nitem  name = "swg/n152"  />
+        <nitem  name = "swg/n153"  />
+        <nitem  name = "swg/n154"  />
+        <nitem  name = "swg/n155"  />
+        <nitem  name = "swg/n156"  />
+        <nitem  name = "swg/n157"  />
+        <nitem  name = "swg/n158"  />
+        <nitem  name = "swg/n159"  />
+        <nitem  name = "swg/n160"  />
+        <nitem  name = "swg/n161"  />
+        <nitem  name = "swg/n162"  />
+        <nitem  name = "swg/n163"  />
+        <nitem  name = "swg/n164"  />
+        <nitem  name = "swg/n165"  />
+        <nitem  name = "swg/n166"  />
+        <nitem  name = "swg/n167"  />
+        <nitem  name = "swg/n168"  />
+        <nitem  name = "swg/n169"  />
+        <nitem  name = "swg/n170"  />
+        <nitem  name = "swg/n171"  />
+        <nitem  name = "swg/n172"  />
+        <nitem  name = "swg/n173"  />
+        <nitem  name = "swg/n174"  />
+        <nitem  name = "swg/n175"  />
+        <nitem  name = "swg/n176"  />
+        <nitem  name = "swg/n177"  />
+        <nitem  name = "swg/n178"  />
+        <nitem  name = "swg/n217"  />
+        <nitem  name = "swg/n218"  />
+        <nitem  name = "swg/n219"  />
+        <nitem  name = "swg/n220"  />
+        <nitem  name = "swg/n221"  />
+        <nitem  name = "swg/n222"  />
+        <nitem  name = "swg/n223"  />
+        <nitem  name = "swg/n224"  />
+        <nitem  name = "swg/n225"  />
+        <nitem  name = "swg/n226"  />
+        <nitem  name = "swg/n227"  />
+        <nitem  name = "swg/n228"  />
+        <nitem  name = "swg/n229"  />
+        <nitem  name = "swg/n230"  />
+        <nitem  name = "swg/n231"  />
+        <nitem  name = "swg/n232"  />
+        <nitem  name = "swg/n233"  />
+        <nitem  name = "swg/n234"  />
+        <nitem  name = "swg/n235"  />
+        <nitem  name = "swg/n236"  />
+        <nitem  name = "swg/n237"  />
+        <nitem  name = "swg/n238"  />
+        <nitem  name = "swg/n239"  />
+        <nitem  name = "swg/n240"  />
+        <nitem  name = "swg/n241"  />
+        <nitem  name = "swg/n242"  />
+        <nitem  name = "swg/n243"  />
+        <nitem  name = "swg/n244"  />
+        <nitem  name = "swg/n245"  />
+        <nitem  name = "swg/n246"  />
+        <nitem  name = "swg/n247"  />
+        <nitem  name = "swg/n248"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[31]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[30]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[29]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[28]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[27]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[26]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[25]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[24]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[23]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[22]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[21]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[20]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[19]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[18]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[17]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[16]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[15]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[14]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[13]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[12]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[11]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[10]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[9]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[8]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[7]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[6]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[5]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[4]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[3]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[2]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[1]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/increasing_freq_N_294"  />
+        <nitem  name = "swg/increasing_freq_N_289"  />
+        <nitem  name = "swg/increasing_freq_N_288"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/div_26"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/pwr"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/half_period_31__N_259[24]"  />
+        <nitem  name = "swg/half_period_31__N_259[23]"  />
+        <nitem  name = "swg/half_period_31__N_259[22]"  />
+        <nitem  name = "swg/half_period_31__N_259[21]"  />
+        <nitem  name = "swg/half_period_31__N_259[20]"  />
+        <nitem  name = "swg/half_period_31__N_259[19]"  />
+        <nitem  name = "swg/half_period_31__N_259[18]"  />
+        <nitem  name = "swg/half_period_31__N_259[17]"  />
+        <nitem  name = "swg/half_period_31__N_259[16]"  />
+        <nitem  name = "swg/half_period_31__N_259[15]"  />
+        <nitem  name = "swg/half_period_31__N_259[14]"  />
+        <nitem  name = "swg/half_period_31__N_259[13]"  />
+        <nitem  name = "swg/half_period_31__N_259[12]"  />
+        <nitem  name = "swg/half_period_31__N_259[11]"  />
+        <nitem  name = "swg/half_period_31__N_259[10]"  />
+        <nitem  name = "swg/half_period_31__N_259[9]"  />
+        <nitem  name = "swg/half_period_31__N_259[8]"  />
+        <nitem  name = "swg/half_period_31__N_259[7]"  />
+        <nitem  name = "swg/half_period_31__N_259[6]"  />
+        <nitem  name = "swg/half_period_31__N_259[5]"  />
+        <nitem  name = "swg/half_period_31__N_259[4]"  />
+        <nitem  name = "swg/half_period_31__N_259[3]"  />
+        <nitem  name = "swg/half_period_31__N_259[2]"  />
+        <nitem  name = "swg/half_period_31__N_259[1]"  />
+        <nitem  name = "swg/half_period_31__N_259[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/freq_update_counter_31__I_0_53"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/freq_update_counter_31__N_226"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[31]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[30]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[29]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[28]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[27]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[26]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[25]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[24]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[23]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[22]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[21]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[20]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[19]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[18]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[17]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[16]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[15]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[14]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[13]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[12]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[11]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[10]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[9]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[8]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[7]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[6]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[5]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[4]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[3]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[2]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[1]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_194[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[31]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[30]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[29]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[28]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[27]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[26]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[25]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[24]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[23]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[22]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[21]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[20]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[19]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[18]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[17]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[16]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[15]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[14]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[13]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[12]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[11]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[10]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[9]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[8]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[7]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[6]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[5]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[4]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[3]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[2]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[1]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/current_wave_freq_31__I_0_57"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_226"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[31]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[30]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[29]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[28]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[27]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[26]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[25]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[24]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[23]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[22]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[21]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[20]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[19]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[18]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[17]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[16]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[15]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[14]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[13]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[12]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[11]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[10]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[9]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[8]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[7]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[6]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[5]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[4]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[3]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[2]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[1]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_227[0]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[31]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[30]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[29]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[28]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[27]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[26]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[25]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[24]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[23]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[22]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[21]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[20]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[19]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[18]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[17]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[16]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[15]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[14]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[13]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[12]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[11]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[10]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[9]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[8]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[7]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[6]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[5]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[4]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[3]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[2]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[1]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_I_0_55"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/freq_update_counter_31__N_226"  />
+        <nitem  name = "swg/increasing_freq_N_288"  />
+        <nitem  name = "swg/increasing_freq_N_287"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/half_period_31__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[31]"  direction = "in"  />
+        <pitem  name = "d0[30]"  direction = "in"  />
+        <pitem  name = "d0[29]"  direction = "in"  />
+        <pitem  name = "d0[28]"  direction = "in"  />
+        <pitem  name = "d0[27]"  direction = "in"  />
+        <pitem  name = "d0[26]"  direction = "in"  />
+        <pitem  name = "d0[25]"  direction = "in"  />
+        <pitem  name = "d1[31]"  direction = "in"  />
+        <pitem  name = "d1[30]"  direction = "in"  />
+        <pitem  name = "d1[29]"  direction = "in"  />
+        <pitem  name = "d1[28]"  direction = "in"  />
+        <pitem  name = "d1[27]"  direction = "in"  />
+        <pitem  name = "d1[26]"  direction = "in"  />
+        <pitem  name = "d1[25]"  direction = "in"  />
+        <pitem  name = "d1[24]"  direction = "in"  />
+        <pitem  name = "d1[23]"  direction = "in"  />
+        <pitem  name = "d1[22]"  direction = "in"  />
+        <pitem  name = "d1[21]"  direction = "in"  />
+        <pitem  name = "d1[20]"  direction = "in"  />
+        <pitem  name = "d1[19]"  direction = "in"  />
+        <pitem  name = "d1[18]"  direction = "in"  />
+        <pitem  name = "d1[17]"  direction = "in"  />
+        <pitem  name = "d1[16]"  direction = "in"  />
+        <pitem  name = "d1[15]"  direction = "in"  />
+        <pitem  name = "d1[14]"  direction = "in"  />
+        <pitem  name = "d1[13]"  direction = "in"  />
+        <pitem  name = "d1[12]"  direction = "in"  />
+        <pitem  name = "d1[11]"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[24]"  direction = "in"  />
+        <pitem  name = "d0[23]"  direction = "in"  />
+        <pitem  name = "d0[22]"  direction = "in"  />
+        <pitem  name = "d0[21]"  direction = "in"  />
+        <pitem  name = "d0[20]"  direction = "in"  />
+        <pitem  name = "d0[19]"  direction = "in"  />
+        <pitem  name = "d0[18]"  direction = "in"  />
+        <pitem  name = "d0[17]"  direction = "in"  />
+        <pitem  name = "d0[16]"  direction = "in"  />
+        <pitem  name = "d0[15]"  direction = "in"  />
+        <pitem  name = "d0[14]"  direction = "in"  />
+        <pitem  name = "d0[13]"  direction = "in"  />
+        <pitem  name = "d0[12]"  direction = "in"  />
+        <pitem  name = "d0[11]"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "swg/half_period[31]"  />
+        <nitem  name = "swg/half_period[30]"  />
+        <nitem  name = "swg/half_period[29]"  />
+        <nitem  name = "swg/half_period[28]"  />
+        <nitem  name = "swg/half_period[27]"  />
+        <nitem  name = "swg/half_period[26]"  />
+        <nitem  name = "swg/half_period[25]"  />
+        <nitem  name = "swg/half_period[24]"  />
+        <nitem  name = "swg/half_period[23]"  />
+        <nitem  name = "swg/half_period[22]"  />
+        <nitem  name = "swg/half_period[21]"  />
+        <nitem  name = "swg/half_period[20]"  />
+        <nitem  name = "swg/half_period[19]"  />
+        <nitem  name = "swg/half_period[18]"  />
+        <nitem  name = "swg/half_period[17]"  />
+        <nitem  name = "swg/half_period[16]"  />
+        <nitem  name = "swg/half_period[15]"  />
+        <nitem  name = "swg/half_period[14]"  />
+        <nitem  name = "swg/half_period[13]"  />
+        <nitem  name = "swg/half_period[12]"  />
+        <nitem  name = "swg/half_period[11]"  />
+        <nitem  name = "swg/half_period[10]"  />
+        <nitem  name = "swg/half_period[9]"  />
+        <nitem  name = "swg/half_period[8]"  />
+        <nitem  name = "swg/half_period[7]"  />
+        <nitem  name = "swg/half_period[6]"  />
+        <nitem  name = "swg/half_period[5]"  />
+        <nitem  name = "swg/half_period[4]"  />
+        <nitem  name = "swg/half_period[3]"  />
+        <nitem  name = "swg/half_period[2]"  />
+        <nitem  name = "swg/half_period[1]"  />
+        <nitem  name = "swg/half_period[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_226"  />
+        <nitem  name = "swg/half_period_31__N_259[24]"  />
+        <nitem  name = "swg/half_period_31__N_259[23]"  />
+        <nitem  name = "swg/half_period_31__N_259[22]"  />
+        <nitem  name = "swg/half_period_31__N_259[21]"  />
+        <nitem  name = "swg/half_period_31__N_259[20]"  />
+        <nitem  name = "swg/half_period_31__N_259[19]"  />
+        <nitem  name = "swg/half_period_31__N_259[18]"  />
+        <nitem  name = "swg/half_period_31__N_259[17]"  />
+        <nitem  name = "swg/half_period_31__N_259[16]"  />
+        <nitem  name = "swg/half_period_31__N_259[15]"  />
+        <nitem  name = "swg/half_period_31__N_259[14]"  />
+        <nitem  name = "swg/half_period_31__N_259[13]"  />
+        <nitem  name = "swg/half_period_31__N_259[12]"  />
+        <nitem  name = "swg/half_period_31__N_259[11]"  />
+        <nitem  name = "swg/half_period_31__N_259[10]"  />
+        <nitem  name = "swg/half_period_31__N_259[9]"  />
+        <nitem  name = "swg/half_period_31__N_259[8]"  />
+        <nitem  name = "swg/half_period_31__N_259[7]"  />
+        <nitem  name = "swg/half_period_31__N_259[6]"  />
+        <nitem  name = "swg/half_period_31__N_259[5]"  />
+        <nitem  name = "swg/half_period_31__N_259[4]"  />
+        <nitem  name = "swg/half_period_31__N_259[3]"  />
+        <nitem  name = "swg/half_period_31__N_259[2]"  />
+        <nitem  name = "swg/half_period_31__N_259[1]"  />
+        <nitem  name = "swg/half_period_31__N_259[0]"  />
+        <nitem  name = "swg/half_period_31__N_65[31]"  />
+        <nitem  name = "swg/half_period_31__N_65[30]"  />
+        <nitem  name = "swg/half_period_31__N_65[29]"  />
+        <nitem  name = "swg/half_period_31__N_65[28]"  />
+        <nitem  name = "swg/half_period_31__N_65[27]"  />
+        <nitem  name = "swg/half_period_31__N_65[26]"  />
+        <nitem  name = "swg/half_period_31__N_65[25]"  />
+        <nitem  name = "swg/half_period_31__N_65[24]"  />
+        <nitem  name = "swg/half_period_31__N_65[23]"  />
+        <nitem  name = "swg/half_period_31__N_65[22]"  />
+        <nitem  name = "swg/half_period_31__N_65[21]"  />
+        <nitem  name = "swg/half_period_31__N_65[20]"  />
+        <nitem  name = "swg/half_period_31__N_65[19]"  />
+        <nitem  name = "swg/half_period_31__N_65[18]"  />
+        <nitem  name = "swg/half_period_31__N_65[17]"  />
+        <nitem  name = "swg/half_period_31__N_65[16]"  />
+        <nitem  name = "swg/half_period_31__N_65[15]"  />
+        <nitem  name = "swg/half_period_31__N_65[14]"  />
+        <nitem  name = "swg/half_period_31__N_65[13]"  />
+        <nitem  name = "swg/half_period_31__N_65[12]"  />
+        <nitem  name = "swg/half_period_31__N_65[11]"  />
+        <nitem  name = "swg/half_period_31__N_65[10]"  />
+        <nitem  name = "swg/half_period_31__N_65[9]"  />
+        <nitem  name = "swg/half_period_31__N_65[8]"  />
+        <nitem  name = "swg/half_period_31__N_65[7]"  />
+        <nitem  name = "swg/half_period_31__N_65[6]"  />
+        <nitem  name = "swg/half_period_31__N_65[5]"  />
+        <nitem  name = "swg/half_period_31__N_65[4]"  />
+        <nitem  name = "swg/half_period_31__N_65[3]"  />
+        <nitem  name = "swg/half_period_31__N_65[2]"  />
+        <nitem  name = "swg/half_period_31__N_65[1]"  />
+        <nitem  name = "swg/half_period_31__N_65[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/freq_update_counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "set[24]"  direction = "in"  />
+        <pitem  name = "set[25]"  direction = "in"  />
+        <pitem  name = "set[26]"  direction = "in"  />
+        <pitem  name = "set[27]"  direction = "in"  />
+        <pitem  name = "set[28]"  direction = "in"  />
+        <pitem  name = "set[29]"  direction = "in"  />
+        <pitem  name = "set[30]"  direction = "in"  />
+        <pitem  name = "set[31]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[24]"  direction = "in"  />
+        <pitem  name = "reset[25]"  direction = "in"  />
+        <pitem  name = "reset[26]"  direction = "in"  />
+        <pitem  name = "reset[27]"  direction = "in"  />
+        <pitem  name = "reset[28]"  direction = "in"  />
+        <pitem  name = "reset[29]"  direction = "in"  />
+        <pitem  name = "reset[30]"  direction = "in"  />
+        <pitem  name = "reset[31]"  direction = "in"  />
+        <pitem  name = "q[31]"  direction = "out"  />
+        <pitem  name = "q[30]"  direction = "out"  />
+        <pitem  name = "q[29]"  direction = "out"  />
+        <pitem  name = "q[28]"  direction = "out"  />
+        <pitem  name = "q[27]"  direction = "out"  />
+        <pitem  name = "q[26]"  direction = "out"  />
+        <pitem  name = "q[25]"  direction = "out"  />
+        <pitem  name = "q[24]"  direction = "out"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[31]"  direction = "in"  />
+        <pitem  name = "d[30]"  direction = "in"  />
+        <pitem  name = "d[29]"  direction = "in"  />
+        <pitem  name = "d[28]"  direction = "in"  />
+        <pitem  name = "d[27]"  direction = "in"  />
+        <pitem  name = "d[26]"  direction = "in"  />
+        <pitem  name = "d[25]"  direction = "in"  />
+        <pitem  name = "d[24]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "swg/freq_update_counter[31]"  />
+        <nitem  name = "swg/freq_update_counter[30]"  />
+        <nitem  name = "swg/freq_update_counter[29]"  />
+        <nitem  name = "swg/freq_update_counter[28]"  />
+        <nitem  name = "swg/freq_update_counter[27]"  />
+        <nitem  name = "swg/freq_update_counter[26]"  />
+        <nitem  name = "swg/freq_update_counter[25]"  />
+        <nitem  name = "swg/freq_update_counter[24]"  />
+        <nitem  name = "swg/freq_update_counter[23]"  />
+        <nitem  name = "swg/freq_update_counter[22]"  />
+        <nitem  name = "swg/freq_update_counter[21]"  />
+        <nitem  name = "swg/freq_update_counter[20]"  />
+        <nitem  name = "swg/freq_update_counter[19]"  />
+        <nitem  name = "swg/freq_update_counter[18]"  />
+        <nitem  name = "swg/freq_update_counter[17]"  />
+        <nitem  name = "swg/freq_update_counter[16]"  />
+        <nitem  name = "swg/freq_update_counter[15]"  />
+        <nitem  name = "swg/freq_update_counter[14]"  />
+        <nitem  name = "swg/freq_update_counter[13]"  />
+        <nitem  name = "swg/freq_update_counter[12]"  />
+        <nitem  name = "swg/freq_update_counter[11]"  />
+        <nitem  name = "swg/freq_update_counter[10]"  />
+        <nitem  name = "swg/freq_update_counter[9]"  />
+        <nitem  name = "swg/freq_update_counter[8]"  />
+        <nitem  name = "swg/freq_update_counter[7]"  />
+        <nitem  name = "swg/freq_update_counter[6]"  />
+        <nitem  name = "swg/freq_update_counter[5]"  />
+        <nitem  name = "swg/freq_update_counter[4]"  />
+        <nitem  name = "swg/freq_update_counter[3]"  />
+        <nitem  name = "swg/freq_update_counter[2]"  />
+        <nitem  name = "swg/freq_update_counter[1]"  />
+        <nitem  name = "swg/freq_update_counter[0]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[31]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[30]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[29]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[28]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[27]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[26]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[25]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[24]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[23]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[22]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[21]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[20]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[19]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[18]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[17]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[16]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[15]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[14]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[13]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[12]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[11]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[10]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[9]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[8]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[7]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[6]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[5]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[4]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[3]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[2]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[1]"  />
+        <nitem  name = "swg/freq_update_counter_31__N_33[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/half_period"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "set[24]"  direction = "in"  />
+        <pitem  name = "set[25]"  direction = "in"  />
+        <pitem  name = "set[26]"  direction = "in"  />
+        <pitem  name = "set[27]"  direction = "in"  />
+        <pitem  name = "set[28]"  direction = "in"  />
+        <pitem  name = "set[29]"  direction = "in"  />
+        <pitem  name = "set[30]"  direction = "in"  />
+        <pitem  name = "set[31]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[24]"  direction = "in"  />
+        <pitem  name = "reset[25]"  direction = "in"  />
+        <pitem  name = "reset[26]"  direction = "in"  />
+        <pitem  name = "reset[27]"  direction = "in"  />
+        <pitem  name = "reset[28]"  direction = "in"  />
+        <pitem  name = "reset[29]"  direction = "in"  />
+        <pitem  name = "reset[30]"  direction = "in"  />
+        <pitem  name = "reset[31]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "q[31]"  direction = "out"  />
+        <pitem  name = "q[30]"  direction = "out"  />
+        <pitem  name = "q[29]"  direction = "out"  />
+        <pitem  name = "q[28]"  direction = "out"  />
+        <pitem  name = "q[27]"  direction = "out"  />
+        <pitem  name = "q[26]"  direction = "out"  />
+        <pitem  name = "q[25]"  direction = "out"  />
+        <pitem  name = "q[24]"  direction = "out"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[31]"  direction = "in"  />
+        <pitem  name = "d[30]"  direction = "in"  />
+        <pitem  name = "d[29]"  direction = "in"  />
+        <pitem  name = "d[28]"  direction = "in"  />
+        <pitem  name = "d[27]"  direction = "in"  />
+        <pitem  name = "d[26]"  direction = "in"  />
+        <pitem  name = "d[25]"  direction = "in"  />
+        <pitem  name = "d[24]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "swg/half_period[31]"  />
+        <nitem  name = "swg/half_period[30]"  />
+        <nitem  name = "swg/half_period[29]"  />
+        <nitem  name = "swg/half_period[28]"  />
+        <nitem  name = "swg/half_period[27]"  />
+        <nitem  name = "swg/half_period[26]"  />
+        <nitem  name = "swg/half_period[25]"  />
+        <nitem  name = "swg/half_period[24]"  />
+        <nitem  name = "swg/half_period[23]"  />
+        <nitem  name = "swg/half_period[22]"  />
+        <nitem  name = "swg/half_period[21]"  />
+        <nitem  name = "swg/half_period[20]"  />
+        <nitem  name = "swg/half_period[19]"  />
+        <nitem  name = "swg/half_period[18]"  />
+        <nitem  name = "swg/half_period[17]"  />
+        <nitem  name = "swg/half_period[16]"  />
+        <nitem  name = "swg/half_period[15]"  />
+        <nitem  name = "swg/half_period[14]"  />
+        <nitem  name = "swg/half_period[13]"  />
+        <nitem  name = "swg/half_period[12]"  />
+        <nitem  name = "swg/half_period[11]"  />
+        <nitem  name = "swg/half_period[10]"  />
+        <nitem  name = "swg/half_period[9]"  />
+        <nitem  name = "swg/half_period[8]"  />
+        <nitem  name = "swg/half_period[7]"  />
+        <nitem  name = "swg/half_period[6]"  />
+        <nitem  name = "swg/half_period[5]"  />
+        <nitem  name = "swg/half_period[4]"  />
+        <nitem  name = "swg/half_period[3]"  />
+        <nitem  name = "swg/half_period[2]"  />
+        <nitem  name = "swg/half_period[1]"  />
+        <nitem  name = "swg/half_period[0]"  />
+        <nitem  name = "swg/half_period_31__N_65[31]"  />
+        <nitem  name = "swg/half_period_31__N_65[30]"  />
+        <nitem  name = "swg/half_period_31__N_65[29]"  />
+        <nitem  name = "swg/half_period_31__N_65[28]"  />
+        <nitem  name = "swg/half_period_31__N_65[27]"  />
+        <nitem  name = "swg/half_period_31__N_65[26]"  />
+        <nitem  name = "swg/half_period_31__N_65[25]"  />
+        <nitem  name = "swg/half_period_31__N_65[24]"  />
+        <nitem  name = "swg/half_period_31__N_65[23]"  />
+        <nitem  name = "swg/half_period_31__N_65[22]"  />
+        <nitem  name = "swg/half_period_31__N_65[21]"  />
+        <nitem  name = "swg/half_period_31__N_65[20]"  />
+        <nitem  name = "swg/half_period_31__N_65[19]"  />
+        <nitem  name = "swg/half_period_31__N_65[18]"  />
+        <nitem  name = "swg/half_period_31__N_65[17]"  />
+        <nitem  name = "swg/half_period_31__N_65[16]"  />
+        <nitem  name = "swg/half_period_31__N_65[15]"  />
+        <nitem  name = "swg/half_period_31__N_65[14]"  />
+        <nitem  name = "swg/half_period_31__N_65[13]"  />
+        <nitem  name = "swg/half_period_31__N_65[12]"  />
+        <nitem  name = "swg/half_period_31__N_65[11]"  />
+        <nitem  name = "swg/half_period_31__N_65[10]"  />
+        <nitem  name = "swg/half_period_31__N_65[9]"  />
+        <nitem  name = "swg/half_period_31__N_65[8]"  />
+        <nitem  name = "swg/half_period_31__N_65[7]"  />
+        <nitem  name = "swg/half_period_31__N_65[6]"  />
+        <nitem  name = "swg/half_period_31__N_65[5]"  />
+        <nitem  name = "swg/half_period_31__N_65[4]"  />
+        <nitem  name = "swg/half_period_31__N_65[3]"  />
+        <nitem  name = "swg/half_period_31__N_65[2]"  />
+        <nitem  name = "swg/half_period_31__N_65[1]"  />
+        <nitem  name = "swg/half_period_31__N_65[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/wave_outP_45"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "wave_outP"  />
+        <nitem  name = "swg/wave_outP_N_285"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/wave_outN_46"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "wave_outN"  />
+        <nitem  name = "swg/wave_outN_N_286"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/led_47"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "led[1]"  />
+        <nitem  name = "swg/led_N_284"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/increasing_freq_48"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "swg/increasing_freq"  />
+        <nitem  name = "swg/increasing_freq_N_287"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[27]"  direction = "in"  />
+        <pitem  name = "set[28]"  direction = "in"  />
+        <pitem  name = "set[29]"  direction = "in"  />
+        <pitem  name = "set[30]"  direction = "in"  />
+        <pitem  name = "set[31]"  direction = "in"  />
+        <pitem  name = "set[26]"  direction = "in"  />
+        <pitem  name = "set[25]"  direction = "in"  />
+        <pitem  name = "set[24]"  direction = "in"  />
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "reset[31]"  direction = "in"  />
+        <pitem  name = "reset[30]"  direction = "in"  />
+        <pitem  name = "reset[29]"  direction = "in"  />
+        <pitem  name = "reset[28]"  direction = "in"  />
+        <pitem  name = "reset[27]"  direction = "in"  />
+        <pitem  name = "reset[26]"  direction = "in"  />
+        <pitem  name = "reset[25]"  direction = "in"  />
+        <pitem  name = "reset[24]"  direction = "in"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "q[31]"  direction = "out"  />
+        <pitem  name = "q[30]"  direction = "out"  />
+        <pitem  name = "q[29]"  direction = "out"  />
+        <pitem  name = "q[28]"  direction = "out"  />
+        <pitem  name = "q[27]"  direction = "out"  />
+        <pitem  name = "q[26]"  direction = "out"  />
+        <pitem  name = "q[25]"  direction = "out"  />
+        <pitem  name = "q[24]"  direction = "out"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[31]"  direction = "in"  />
+        <pitem  name = "d[30]"  direction = "in"  />
+        <pitem  name = "d[29]"  direction = "in"  />
+        <pitem  name = "d[28]"  direction = "in"  />
+        <pitem  name = "d[27]"  direction = "in"  />
+        <pitem  name = "d[26]"  direction = "in"  />
+        <pitem  name = "d[25]"  direction = "in"  />
+        <pitem  name = "d[24]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "swg/counter[31]"  />
+        <nitem  name = "swg/counter[30]"  />
+        <nitem  name = "swg/counter[29]"  />
+        <nitem  name = "swg/counter[28]"  />
+        <nitem  name = "swg/counter[27]"  />
+        <nitem  name = "swg/counter[26]"  />
+        <nitem  name = "swg/counter[25]"  />
+        <nitem  name = "swg/counter[24]"  />
+        <nitem  name = "swg/counter[23]"  />
+        <nitem  name = "swg/counter[22]"  />
+        <nitem  name = "swg/counter[21]"  />
+        <nitem  name = "swg/counter[20]"  />
+        <nitem  name = "swg/counter[19]"  />
+        <nitem  name = "swg/counter[18]"  />
+        <nitem  name = "swg/counter[17]"  />
+        <nitem  name = "swg/counter[16]"  />
+        <nitem  name = "swg/counter[15]"  />
+        <nitem  name = "swg/counter[14]"  />
+        <nitem  name = "swg/counter[13]"  />
+        <nitem  name = "swg/counter[12]"  />
+        <nitem  name = "swg/counter[11]"  />
+        <nitem  name = "swg/counter[10]"  />
+        <nitem  name = "swg/counter[9]"  />
+        <nitem  name = "swg/counter[8]"  />
+        <nitem  name = "swg/counter[7]"  />
+        <nitem  name = "swg/counter[6]"  />
+        <nitem  name = "swg/counter[5]"  />
+        <nitem  name = "swg/counter[4]"  />
+        <nitem  name = "swg/counter[3]"  />
+        <nitem  name = "swg/counter[2]"  />
+        <nitem  name = "swg/counter[1]"  />
+        <nitem  name = "swg/counter[0]"  />
+        <nitem  name = "swg/counter_31__N_1[31]"  />
+        <nitem  name = "swg/counter_31__N_1[30]"  />
+        <nitem  name = "swg/counter_31__N_1[29]"  />
+        <nitem  name = "swg/counter_31__N_1[28]"  />
+        <nitem  name = "swg/counter_31__N_1[27]"  />
+        <nitem  name = "swg/counter_31__N_1[26]"  />
+        <nitem  name = "swg/counter_31__N_1[25]"  />
+        <nitem  name = "swg/counter_31__N_1[24]"  />
+        <nitem  name = "swg/counter_31__N_1[23]"  />
+        <nitem  name = "swg/counter_31__N_1[22]"  />
+        <nitem  name = "swg/counter_31__N_1[21]"  />
+        <nitem  name = "swg/counter_31__N_1[20]"  />
+        <nitem  name = "swg/counter_31__N_1[19]"  />
+        <nitem  name = "swg/counter_31__N_1[18]"  />
+        <nitem  name = "swg/counter_31__N_1[17]"  />
+        <nitem  name = "swg/counter_31__N_1[16]"  />
+        <nitem  name = "swg/counter_31__N_1[15]"  />
+        <nitem  name = "swg/counter_31__N_1[14]"  />
+        <nitem  name = "swg/counter_31__N_1[13]"  />
+        <nitem  name = "swg/counter_31__N_1[12]"  />
+        <nitem  name = "swg/counter_31__N_1[11]"  />
+        <nitem  name = "swg/counter_31__N_1[10]"  />
+        <nitem  name = "swg/counter_31__N_1[9]"  />
+        <nitem  name = "swg/counter_31__N_1[8]"  />
+        <nitem  name = "swg/counter_31__N_1[7]"  />
+        <nitem  name = "swg/counter_31__N_1[6]"  />
+        <nitem  name = "swg/counter_31__N_1[5]"  />
+        <nitem  name = "swg/counter_31__N_1[4]"  />
+        <nitem  name = "swg/counter_31__N_1[3]"  />
+        <nitem  name = "swg/counter_31__N_1[2]"  />
+        <nitem  name = "swg/counter_31__N_1[1]"  />
+        <nitem  name = "swg/counter_31__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg/current_wave_freq"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[23]"  direction = "in"  />
+        <pitem  name = "set[24]"  direction = "in"  />
+        <pitem  name = "set[25]"  direction = "in"  />
+        <pitem  name = "set[26]"  direction = "in"  />
+        <pitem  name = "set[27]"  direction = "in"  />
+        <pitem  name = "set[28]"  direction = "in"  />
+        <pitem  name = "set[29]"  direction = "in"  />
+        <pitem  name = "set[30]"  direction = "in"  />
+        <pitem  name = "set[31]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[23]"  direction = "in"  />
+        <pitem  name = "reset[24]"  direction = "in"  />
+        <pitem  name = "reset[25]"  direction = "in"  />
+        <pitem  name = "reset[26]"  direction = "in"  />
+        <pitem  name = "reset[27]"  direction = "in"  />
+        <pitem  name = "reset[28]"  direction = "in"  />
+        <pitem  name = "reset[29]"  direction = "in"  />
+        <pitem  name = "reset[30]"  direction = "in"  />
+        <pitem  name = "reset[31]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "q[31]"  direction = "out"  />
+        <pitem  name = "q[30]"  direction = "out"  />
+        <pitem  name = "q[29]"  direction = "out"  />
+        <pitem  name = "q[28]"  direction = "out"  />
+        <pitem  name = "q[27]"  direction = "out"  />
+        <pitem  name = "q[26]"  direction = "out"  />
+        <pitem  name = "q[25]"  direction = "out"  />
+        <pitem  name = "q[24]"  direction = "out"  />
+        <pitem  name = "q[23]"  direction = "out"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[31]"  direction = "in"  />
+        <pitem  name = "d[30]"  direction = "in"  />
+        <pitem  name = "d[29]"  direction = "in"  />
+        <pitem  name = "d[28]"  direction = "in"  />
+        <pitem  name = "d[27]"  direction = "in"  />
+        <pitem  name = "d[26]"  direction = "in"  />
+        <pitem  name = "d[25]"  direction = "in"  />
+        <pitem  name = "d[24]"  direction = "in"  />
+        <pitem  name = "d[23]"  direction = "in"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "swg/n612"  />
+        <nitem  name = "clk_25mhz"  />
+        <nitem  name = "rst"  />
+        <nitem  name = "swg/current_wave_freq[31]"  />
+        <nitem  name = "swg/current_wave_freq[30]"  />
+        <nitem  name = "swg/current_wave_freq[29]"  />
+        <nitem  name = "swg/current_wave_freq[28]"  />
+        <nitem  name = "swg/current_wave_freq[27]"  />
+        <nitem  name = "swg/current_wave_freq[26]"  />
+        <nitem  name = "swg/current_wave_freq[25]"  />
+        <nitem  name = "swg/current_wave_freq[24]"  />
+        <nitem  name = "swg/current_wave_freq[23]"  />
+        <nitem  name = "swg/current_wave_freq[22]"  />
+        <nitem  name = "swg/current_wave_freq[21]"  />
+        <nitem  name = "swg/current_wave_freq[20]"  />
+        <nitem  name = "swg/current_wave_freq[19]"  />
+        <nitem  name = "swg/current_wave_freq[18]"  />
+        <nitem  name = "swg/current_wave_freq[17]"  />
+        <nitem  name = "swg/current_wave_freq[16]"  />
+        <nitem  name = "swg/current_wave_freq[15]"  />
+        <nitem  name = "swg/current_wave_freq[14]"  />
+        <nitem  name = "swg/current_wave_freq[13]"  />
+        <nitem  name = "swg/current_wave_freq[12]"  />
+        <nitem  name = "swg/current_wave_freq[11]"  />
+        <nitem  name = "swg/current_wave_freq[10]"  />
+        <nitem  name = "swg/current_wave_freq[9]"  />
+        <nitem  name = "swg/current_wave_freq[8]"  />
+        <nitem  name = "swg/current_wave_freq[7]"  />
+        <nitem  name = "swg/current_wave_freq[6]"  />
+        <nitem  name = "swg/current_wave_freq[5]"  />
+        <nitem  name = "swg/current_wave_freq[4]"  />
+        <nitem  name = "swg/current_wave_freq[3]"  />
+        <nitem  name = "swg/current_wave_freq[2]"  />
+        <nitem  name = "swg/current_wave_freq[1]"  />
+        <nitem  name = "swg/current_wave_freq[0]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[31]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[30]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[29]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[28]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[27]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[26]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[25]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[24]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[23]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[22]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[21]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[20]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[19]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[18]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[17]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[16]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[15]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[14]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[13]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[12]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[11]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[10]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[9]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[8]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[7]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[6]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[5]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[4]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[3]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[2]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[1]"  />
+        <nitem  name = "swg/current_wave_freq_31__N_97[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "swg"  />
+    <!--
+        REG instances in netlist: 8
+    -->
+
+    <regs>
+        <reg  name = "swg/freq_update_counter"  />
+        <reg  name = "swg/half_period"  />
+        <reg  name = "swg/wave_outP_45"  />
+        <reg  name = "swg/wave_outN_46"  />
+        <reg  name = "swg/led_47"  />
+        <reg  name = "swg/increasing_freq_48"  />
+        <reg  name = "swg/counter"  />
+        <reg  name = "swg/current_wave_freq"  />
+    </regs>
+
+    <!--
+        Views in design "top": 1
+    -->
+
+    <views>
+        <view  name = "square_wave_generator"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

@@ -1,0 +1,34 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  129 of 84255 (0.153%)
+I/O cells:      12
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       262          100.0
+                            FD1P3AX        49          100.0
+                            FD1P3AY        14          100.0
+                            FD1S3AX         2          100.0
+                            FD1S3IX        64          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            L6MUX21        11          100.0
+                               LUT4       833          100.0
+                                 OB        10          100.0
+                              PFUMX        38          100.0
+SUB MODULES
+              square_wave_generator         1
+                              TOTAL      1287
+----------------------------------------------------------------------
+Report for cell square_wave_generator.v1
+Instance Path : swg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C       154           58.8
+                            FD1P3AX        49          100.0
+                            FD1P3AY        14          100.0
+                            FD1S3AX         2          100.0
+                            FD1S3IX        64          100.0
+                            L6MUX21        11          100.0
+                               LUT4       832           99.9
+                              PFUMX        38          100.0
+                              TOTAL      1164

@@ -1,0 +1,600 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     SpeakerTest_Police_Siren.ngd -o SpeakerTest_Police_Siren_map.ncd -pr
+     SpeakerTest_Police_Siren.prf -mp SpeakerTest_Police_Siren.mrp -lpf
+     /home/user/Master Thesis/Speaker
+     Test/Police_Siren/SpeakerTest_Police_Siren.lpf -lpf /home/user/Master
+     Thesis/Speaker Test/SpeakerTest.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  03/15/24  14:21:14
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    129 out of 84255 (0%)
+      PFU registers:          129 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:       760 out of 41820 (2%)
+      SLICEs as Logic/ROM:    760 out of 41820 (2%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        262 out of 41820 (1%)
+   Number of LUT4s:        1356 out of 83640 (2%)
+      Number used as logic LUTs:        832
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      524
+      Number used as shift registers:     0
+   Number of PIO sites used: 12 out of 205 (6%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net clk_25mhz_c: 69 loads, 69 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  4
+     Net clk_25mhz_c_enable_23: 12 loads, 12 LSLICEs
+     Net clk_25mhz_c_enable_54: 1 loads, 1 LSLICEs
+     Net swg/clk_25mhz_c_enable_63: 19 loads, 19 LSLICEs
+     Net swg/clk_25mhz_c_enable_55: 1 loads, 1 LSLICEs
+   Number of LSRs:  2
+     Net clk_25mhz_c_enable_23: 17 loads, 17 LSLICEs
+     Net clk_25mhz_c_enable_54: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net current_wave_freq_12: 48 loads
+     Net current_wave_freq_2: 48 loads
+     Net swg/n3102: 48 loads
+     Net current_wave_freq_11: 47 loads
+     Net current_wave_freq_13: 46 loads
+     Net current_wave_freq_7: 45 loads
+     Net current_wave_freq_6: 44 loads
+     Net current_wave_freq_8: 43 loads
+     Net current_wave_freq_14: 40 loads
+     Net swg/n3096: 40 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| wave_outN           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wave_outP           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal n3121 was merged into signal rst_c
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal swg/add_86_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_86_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_86_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_86_7/CO undriven or does not drive anything - clipped.
+Signal swg/add_87_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_87_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_87_9/S1 undriven or does not drive anything - clipped.
+Signal swg/add_87_9/CO undriven or does not drive anything - clipped.
+Signal swg/add_88_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_88_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_88_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_88_9/CO undriven or does not drive anything - clipped.
+Signal swg/add_89_2/S0 undriven or does not drive anything - clipped.
+Signal swg/add_89_2/CI undriven or does not drive anything - clipped.
+Signal swg/add_89_12/S1 undriven or does not drive anything - clipped.
+Signal swg/add_89_12/CO undriven or does not drive anything - clipped.
+Signal swg/add_90_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_90_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_90_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_90_11/CO undriven or does not drive anything - clipped.
+Signal swg/add_91_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_91_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_91_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_91_13/S1 undriven or does not drive anything - clipped.
+Signal swg/add_91_13/CO undriven or does not drive anything - clipped.
+Signal swg/add_92_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_92_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_92_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_92_13/CO undriven or does not drive anything - clipped.
+Signal swg/add_93_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_93_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_93_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_93_15/S1 undriven or does not drive anything - clipped.
+
+Signal swg/add_93_15/CO undriven or does not drive anything - clipped.
+Signal swg/add_94_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_94_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_94_15/CO undriven or does not drive anything - clipped.
+Signal swg/add_95_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_95_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_95_17/S1 undriven or does not drive anything - clipped.
+Signal swg/add_95_17/CO undriven or does not drive anything - clipped.
+Signal swg/add_96_2/S0 undriven or does not drive anything - clipped.
+Signal swg/add_96_2/CI undriven or does not drive anything - clipped.
+Signal swg/add_96_18/CO undriven or does not drive anything - clipped.
+Signal swg/add_97_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_97_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_97_19/S1 undriven or does not drive anything - clipped.
+Signal swg/add_97_19/CO undriven or does not drive anything - clipped.
+Signal swg/add_98_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_98_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_98_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_98_19/CO undriven or does not drive anything - clipped.
+Signal swg/add_99_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_99_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_99_21/S1 undriven or does not drive anything - clipped.
+Signal swg/add_99_21/CO undriven or does not drive anything - clipped.
+Signal swg/add_100_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_100_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_100_21/CO undriven or does not drive anything - clipped.
+Signal swg/freq_update_counter_34_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal swg/freq_update_counter_34_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal swg/freq_update_counter_34_add_4_33/S1 undriven or does not drive
+     anything - clipped.
+Signal swg/freq_update_counter_34_add_4_33/CO undriven or does not drive
+     anything - clipped.
+Signal swg/counter_33_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal swg/counter_33_add_4_1/CI undriven or does not drive anything - clipped.
+Signal swg/counter_33_add_4_33/S1 undriven or does not drive anything - clipped.
+     
+Signal swg/counter_33_add_4_33/CO undriven or does not drive anything - clipped.
+     
+Signal swg/add_85_1/S1 undriven or does not drive anything - clipped.
+Signal swg/add_85_1/S0 undriven or does not drive anything - clipped.
+Signal swg/add_85_1/CI undriven or does not drive anything - clipped.
+Signal swg/add_85_7/S1 undriven or does not drive anything - clipped.
+Signal swg/add_85_7/CO undriven or does not drive anything - clipped.
+Signal add_1873_22/S1 undriven or does not drive anything - clipped.
+Signal add_1873_22/S0 undriven or does not drive anything - clipped.
+Signal add_1873_24/S1 undriven or does not drive anything - clipped.
+Signal add_1873_24/S0 undriven or does not drive anything - clipped.
+Signal add_1873_26/S1 undriven or does not drive anything - clipped.
+Signal add_1873_26/S0 undriven or does not drive anything - clipped.
+Signal _add_1_57_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_57_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_57_add_4_27/CO undriven or does not drive anything - clipped.
+Signal _add_1_45_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_45_add_4_1/CI undriven or does not drive anything - clipped.
+
+Signal _add_1_45_add_4_31/S1 undriven or does not drive anything - clipped.
+Signal _add_1_45_add_4_31/CO undriven or does not drive anything - clipped.
+Signal _add_1_54_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_54_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_54_add_4_31/S1 undriven or does not drive anything - clipped.
+Signal _add_1_54_add_4_31/CO undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_24/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_24/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_26/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_28/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_28/S0 undriven or does not drive anything - clipped.
+Signal add_1874_2/S1 undriven or does not drive anything - clipped.
+Signal add_1874_2/S0 undriven or does not drive anything - clipped.
+Signal add_1874_2/CI undriven or does not drive anything - clipped.
+Signal add_1874_4/S1 undriven or does not drive anything - clipped.
+Signal add_1874_4/S0 undriven or does not drive anything - clipped.
+Signal add_1874_6/S1 undriven or does not drive anything - clipped.
+Signal add_1874_6/S0 undriven or does not drive anything - clipped.
+Signal add_1874_8/S1 undriven or does not drive anything - clipped.
+Signal add_1874_8/S0 undriven or does not drive anything - clipped.
+Signal add_1874_10/S1 undriven or does not drive anything - clipped.
+Signal add_1874_10/S0 undriven or does not drive anything - clipped.
+Signal add_1874_12/S1 undriven or does not drive anything - clipped.
+Signal add_1874_12/S0 undriven or does not drive anything - clipped.
+Signal add_1874_14/S1 undriven or does not drive anything - clipped.
+Signal add_1874_14/S0 undriven or does not drive anything - clipped.
+Signal add_1874_16/S1 undriven or does not drive anything - clipped.
+Signal add_1874_16/S0 undriven or does not drive anything - clipped.
+Signal add_1874_18/S1 undriven or does not drive anything - clipped.
+Signal add_1874_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_30/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_30/S0 undriven or does not drive anything - clipped.
+
+Signal _add_1_48_add_4_32/S1 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_32/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_34/S0 undriven or does not drive anything - clipped.
+Signal _add_1_48_add_4_34/CO undriven or does not drive anything - clipped.
+Signal add_1874_20/S1 undriven or does not drive anything - clipped.
+Signal add_1874_20/S0 undriven or does not drive anything - clipped.
+Signal add_1874_22/S1 undriven or does not drive anything - clipped.
+Signal add_1874_22/S0 undriven or does not drive anything - clipped.
+Signal add_1874_24/S1 undriven or does not drive anything - clipped.
+Signal add_1874_24/S0 undriven or does not drive anything - clipped.
+Signal add_1874_26/S0 undriven or does not drive anything - clipped.
+Signal add_1874_26/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_3/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_3/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_5/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_5/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_7/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_7/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_9/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_11/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_13/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_13/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_15/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_17/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_23/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_23/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_25/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_25/S0 undriven or does not drive anything - clipped.
+Signal add_1873_10/S1 undriven or does not drive anything - clipped.
+Signal add_1873_10/S0 undriven or does not drive anything - clipped.
+Signal add_1873_28/S1 undriven or does not drive anything - clipped.
+Signal add_1873_28/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_27/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_27/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_29/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_29/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal add_1873_12/S1 undriven or does not drive anything - clipped.
+Signal add_1873_12/S0 undriven or does not drive anything - clipped.
+Signal add_1873_30/S1 undriven or does not drive anything - clipped.
+Signal add_1873_30/S0 undriven or does not drive anything - clipped.
+Signal add_1873_32/S0 undriven or does not drive anything - clipped.
+Signal add_1873_32/CO undriven or does not drive anything - clipped.
+Signal add_1873_2/S1 undriven or does not drive anything - clipped.
+
+Signal add_1873_2/S0 undriven or does not drive anything - clipped.
+Signal add_1873_2/CI undriven or does not drive anything - clipped.
+Signal add_1873_4/S1 undriven or does not drive anything - clipped.
+Signal add_1873_4/S0 undriven or does not drive anything - clipped.
+Signal add_1873_14/S1 undriven or does not drive anything - clipped.
+Signal add_1873_14/S0 undriven or does not drive anything - clipped.
+Signal add_1873_16/S1 undriven or does not drive anything - clipped.
+Signal add_1873_16/S0 undriven or does not drive anything - clipped.
+Signal add_1873_18/S1 undriven or does not drive anything - clipped.
+Signal add_1873_18/S0 undriven or does not drive anything - clipped.
+Signal add_1873_6/S1 undriven or does not drive anything - clipped.
+Signal add_1873_6/S0 undriven or does not drive anything - clipped.
+Signal add_1873_8/S1 undriven or does not drive anything - clipped.
+Signal add_1873_8/S0 undriven or does not drive anything - clipped.
+Signal add_1873_20/S1 undriven or does not drive anything - clipped.
+Signal add_1873_20/S0 undriven or does not drive anything - clipped.
+Block i1742_1_lut was optimized away.
+Block i5 was optimized away.
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 64 
+
+     Type and instance name of component: 
+   Register : swg/counter_33__i31
+   Register : swg/counter_33__i30
+   Register : swg/counter_33__i29
+   Register : swg/counter_33__i28
+   Register : swg/counter_33__i27
+   Register : swg/counter_33__i26
+   Register : swg/counter_33__i25
+   Register : swg/counter_33__i24
+   Register : swg/counter_33__i23
+
+   Register : swg/counter_33__i22
+   Register : swg/counter_33__i21
+   Register : swg/counter_33__i20
+   Register : swg/counter_33__i19
+   Register : swg/counter_33__i18
+   Register : swg/counter_33__i17
+   Register : swg/counter_33__i16
+   Register : swg/counter_33__i15
+   Register : swg/counter_33__i14
+   Register : swg/counter_33__i13
+   Register : swg/counter_33__i12
+   Register : swg/counter_33__i11
+   Register : swg/counter_33__i10
+   Register : swg/counter_33__i9
+   Register : swg/counter_33__i8
+   Register : swg/counter_33__i7
+   Register : swg/counter_33__i6
+   Register : swg/counter_33__i5
+   Register : swg/counter_33__i4
+   Register : swg/counter_33__i3
+   Register : swg/counter_33__i2
+   Register : swg/counter_33__i1
+   Register : swg/freq_update_counter_34__i31
+   Register : swg/freq_update_counter_34__i30
+   Register : swg/freq_update_counter_34__i29
+   Register : swg/freq_update_counter_34__i28
+   Register : swg/freq_update_counter_34__i27
+   Register : swg/freq_update_counter_34__i26
+   Register : swg/freq_update_counter_34__i25
+   Register : swg/freq_update_counter_34__i24
+   Register : swg/freq_update_counter_34__i23
+   Register : swg/freq_update_counter_34__i22
+   Register : swg/freq_update_counter_34__i21
+   Register : swg/freq_update_counter_34__i20
+   Register : swg/freq_update_counter_34__i19
+   Register : swg/freq_update_counter_34__i18
+   Register : swg/freq_update_counter_34__i17
+   Register : swg/freq_update_counter_34__i16
+   Register : swg/freq_update_counter_34__i15
+   Register : swg/freq_update_counter_34__i14
+   Register : swg/freq_update_counter_34__i13
+   Register : swg/freq_update_counter_34__i12
+   Register : swg/freq_update_counter_34__i11
+   Register : swg/freq_update_counter_34__i10
+   Register : swg/freq_update_counter_34__i9
+   Register : swg/freq_update_counter_34__i8
+   Register : swg/freq_update_counter_34__i7
+   Register : swg/freq_update_counter_34__i6
+   Register : swg/freq_update_counter_34__i5
+   Register : swg/freq_update_counter_34__i4
+   Register : swg/freq_update_counter_34__i3
+   Register : swg/freq_update_counter_34__i2
+   Register : swg/freq_update_counter_34__i1
+   Register : swg/freq_update_counter_34__i0
+   Register : swg/counter_33__i0
+
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 459 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

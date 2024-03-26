@@ -1,0 +1,848 @@
+
+synthesis -f "SpeakerTest_Police_Siren_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Mar 15 14:20:57 2024
+
+
+Command Line:  synthesis -f SpeakerTest_Police_Siren_lattice.synproj -gui 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/Master Thesis/Speaker Test (searchpath added)
+-p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
+-p /home/user/Master Thesis/Speaker Test/Police_Siren (searchpath added)
+-p /home/user/Master Thesis/Speaker Test (searchpath added)
+Verilog design file = /home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v
+Verilog design file = /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v
+NGD file = SpeakerTest_Police_Siren.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v(1): " arg1="top" arg2="/home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v(1): " arg1="square_wave_generator" arg2="/home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v" arg3="1"  />
+Last elaborated design is top()
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = top.
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[7]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[6]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[5]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[4]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[3]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[2]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="led[0]"  />
+######## Missing driver on net led[7]. Patching with GND.
+######## Missing driver on net led[6]. Patching with GND.
+######## Missing driver on net led[5]. Patching with GND.
+######## Missing driver on net led[4]. Patching with GND.
+######## Missing driver on net led[3]. Patching with GND.
+######## Missing driver on net led[2]. Patching with GND.
+######## Missing driver on net led[0]. Patching with GND.
+
+
+
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v(60): " arg1="\swg/half_period_i25" arg2="/home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v" arg3="60"  />
+GSR instance connected to net n3121.
+Duplicate register/latch removal. \swg/half_period_i22 is a one-to-one match with \swg/half_period_i23.
+Duplicate register/latch removal. \swg/half_period_i24 is a one-to-one match with \swg/half_period_i22.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+   1289 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file SpeakerTest_Police_Siren.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 129 of 84255 (0 % )
+CCU2C => 262
+FD1P3AX => 49
+FD1P3AY => 14
+FD1S3AX => 2
+FD1S3IX => 64
+GSR => 1
+IB => 2
+L6MUX21 => 11
+LUT4 => 833
+OB => 10
+PFUMX => 38
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_25mhz_c, loads : 129
+Clock Enable Nets
+Number of Clock Enables: 4
+Top 4 highest fanout Clock Enables:
+  Net : swg/clk_25mhz_c_enable_63, loads : 38
+  Net : clk_25mhz_c_enable_54, loads : 1
+  Net : clk_25mhz_c_enable_23, loads : 1
+  Net : swg/clk_25mhz_c_enable_55, loads : 1
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : clk_25mhz_c_enable_23, loads : 57
+  Net : swg/n3102, loads : 49
+  Net : swg/current_wave_freq_12, loads : 47
+  Net : swg/current_wave_freq_2, loads : 47
+  Net : swg/current_wave_freq_11, loads : 46
+  Net : swg/current_wave_freq_13, loads : 45
+  Net : swg/current_wave_freq_7, loads : 44
+  Net : swg/current_wave_freq_6, loads : 43
+  Net : swg/current_wave_freq_8, loads : 42
+  Net : swg/n3096, loads : 41
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|    5.653 MHz|   143 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 331.113  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 17.081  secs
+--------------------------------------------------------------
+
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "SpeakerTest_Police_Siren.ngd" -o "SpeakerTest_Police_Siren_map.ncd" -pr "SpeakerTest_Police_Siren.prf" -mp "SpeakerTest_Police_Siren.mrp" -lpf "/home/user/Master Thesis/Speaker Test/Police_Siren/SpeakerTest_Police_Siren.lpf" -lpf "/home/user/Master Thesis/Speaker Test/SpeakerTest.lpf"             
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: SpeakerTest_Police_Siren.ngd
+   Picdevice="LFE5U-85F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-85FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+728 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:    129 out of 84255 (0%)
+      PFU registers:          129 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:       760 out of 41820 (2%)
+      SLICEs as Logic/ROM:    760 out of 41820 (2%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        262 out of 41820 (1%)
+   Number of LUT4s:        1356 out of 83640 (2%)
+      Number used as logic LUTs:        832
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      524
+      Number used as shift registers:     0
+   Number of PIO sites used: 12 out of 205 (6%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net clk_25mhz_c: 69 loads, 69 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  4
+     Net clk_25mhz_c_enable_23: 12 loads, 12 LSLICEs
+     Net clk_25mhz_c_enable_54: 1 loads, 1 LSLICEs
+     Net swg/clk_25mhz_c_enable_63: 19 loads, 19 LSLICEs
+     Net swg/clk_25mhz_c_enable_55: 1 loads, 1 LSLICEs
+   Number of LSRs:  2
+     Net clk_25mhz_c_enable_23: 17 loads, 17 LSLICEs
+     Net clk_25mhz_c_enable_54: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net current_wave_freq_12: 48 loads
+     Net current_wave_freq_2: 48 loads
+     Net swg/n3102: 48 loads
+     Net current_wave_freq_11: 47 loads
+     Net current_wave_freq_13: 46 loads
+     Net current_wave_freq_7: 45 loads
+     Net current_wave_freq_6: 44 loads
+     Net current_wave_freq_8: 43 loads
+     Net current_wave_freq_14: 40 loads
+     Net swg/n3096: 40 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 2 secs  
+Total REAL Time: 3 secs  
+Peak Memory Usage: 459 MB
+
+Dumping design to file SpeakerTest_Police_Siren_map.ncd.
+
+ncd2vdb "SpeakerTest_Police_Siren_map.ncd" ".vdbs/SpeakerTest_Police_Siren_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+
+mpartrce -p "SpeakerTest_Police_Siren.p2t" -f "SpeakerTest_Police_Siren.p3t" -tf "SpeakerTest_Police_Siren.pt" "SpeakerTest_Police_Siren_map.ncd" "SpeakerTest_Police_Siren.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "SpeakerTest_Police_Siren_map.ncd"
+Fri Mar 15 14:21:20 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 SpeakerTest_Police_Siren_map.ncd SpeakerTest_Police_Siren.dir/5_1.ncd SpeakerTest_Police_Siren.prf
+Preference file: SpeakerTest_Police_Siren.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file SpeakerTest_Police_Siren_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      12/365           3% used
+                     12/205           5% bonded
+
+   SLICE            760/41820         1% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 1536
+Number of Connections: 4433
+
+Pin Constraint Summary:
+   12 out of 12 pins locked (100% locked).
+
+The following 4 signals are selected to use the primary clock routing resources:
+    clk_25mhz_c (driver: clk_25mhz, clk/ce/sr load #: 69/0/0)
+    clk_25mhz_c_enable_23 (driver: SLICE_8, clk/ce/sr load #: 0/12/17)
+    swg/clk_25mhz_c_enable_63 (driver: swg/SLICE_589, clk/ce/sr load #: 0/19/0)
+    clk_25mhz_c_enable_54 (driver: SLICE_33, clk/ce/sr load #: 0/1/17)
+
+
+Signal rst_c is selected as Global Set/Reset.
+Starting Placer Phase 0.
+...........
+Finished Placer Phase 0.  REAL time: 14 secs 
+
+Starting Placer Phase 1.
+..........
+Placer score = 23838449.
+Finished Placer Phase 1.  REAL time: 30 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  22704981
+Finished Placer Phase 2.  REAL time: 33 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 12 (8%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 4 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 41
+  PRIMARY "clk_25mhz_c_enable_23" from F1 on comp "SLICE_8" on site "R36C77D", CLK/CE/SR load = 22
+  PRIMARY "swg/clk_25mhz_c_enable_63" from F0 on comp "swg/SLICE_589" on site "R50C85A", CLK/CE/SR load = 19
+
+  PRIMARY  : 3 out of 16 (18%)
+
+Quadrant BL Clocks:
+  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 3
+  PRIMARY "clk_25mhz_c_enable_54" from F1 on comp "SLICE_33" on site "R54C84A", CLK/CE/SR load = 1
+
+  PRIMARY  : 2 out of 16 (12%)
+
+Quadrant BR Clocks:
+  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 25
+  PRIMARY "clk_25mhz_c_enable_23" from F1 on comp "SLICE_8" on site "R36C77D", CLK/CE/SR load = 7
+  PRIMARY "clk_25mhz_c_enable_54" from F1 on comp "SLICE_33" on site "R54C84A", CLK/CE/SR load = 17
+
+  PRIMARY  : 3 out of 16 (18%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   12 out of 365 (3.3%) PIO sites used.
+   12 out of 205 (5.9%) bonded PIO sites used.
+   Number of PIO comps: 12; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 2 / 27 (  7%) | 3.3V       | -          | -          |
+| 1        | 0 / 33 (  0%) | -          | -          | -          |
+| 2        | 0 / 34 (  0%) | -          | -          | -          |
+| 3        | 0 / 33 (  0%) | -          | -          | -          |
+| 6        | 1 / 33 (  3%) | 3.3V       | -          | -          |
+| 7        | 8 / 32 ( 25%) | 3.3V       | -          | -          |
+| 8        | 1 / 13 (  7%) | 2.5V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Total placer CPU time: 31 secs 
+
+Dumping design to file SpeakerTest_Police_Siren.dir/5_1.ncd.
+
+0 connections routed; 4433 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 1 mins 
+
+Start NBR router at Fri Mar 15 14:22:21 CET 2024
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at Fri Mar 15 14:22:22 CET 2024
+
+Start NBR section for initial routing at Fri Mar 15 14:22:23 CET 2024
+Level 1, iteration 1
+39(0.00%) conflicts; 3699(83.44%) untouched conns; 184094024 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.891ns/-184094.024ns; real time: 1 mins 5 secs 
+Level 2, iteration 1
+426(0.01%) conflicts; 2831(63.86%) untouched conns; 170408536 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.951ns/-170408.537ns; real time: 1 mins 8 secs 
+Level 3, iteration 1
+436(0.01%) conflicts; 1452(32.75%) untouched conns; 172754974 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.799ns/-172754.975ns; real time: 1 mins 11 secs 
+Level 4, iteration 1
+474(0.01%) conflicts; 0(0.00%) untouched conn; 174440066 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.307ns/-174440.066ns; real time: 1 mins 14 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Fri Mar 15 14:22:35 CET 2024
+Level 4, iteration 1
+469(0.01%) conflicts; 0(0.00%) untouched conn; 172208502 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.506ns/-172208.503ns; real time: 1 mins 18 secs 
+Level 4, iteration 2
+392(0.01%) conflicts; 0(0.00%) untouched conn; 172356477 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.536ns/-172356.478ns; real time: 1 mins 20 secs 
+Level 4, iteration 3
+345(0.01%) conflicts; 0(0.00%) untouched conn; 173012449 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.767ns/-173012.450ns; real time: 1 mins 22 secs 
+Level 4, iteration 4
+285(0.01%) conflicts; 0(0.00%) untouched conn; 173012449 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.767ns/-173012.450ns; real time: 1 mins 24 secs 
+Level 4, iteration 5
+237(0.01%) conflicts; 0(0.00%) untouched conn; 174017731 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.124ns/-174017.731ns; real time: 1 mins 26 secs 
+Level 4, iteration 6
+185(0.00%) conflicts; 0(0.00%) untouched conn; 174017731 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.124ns/-174017.731ns; real time: 1 mins 28 secs 
+Level 4, iteration 7
+148(0.00%) conflicts; 0(0.00%) untouched conn; 176415722 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.961ns/-176415.722ns; real time: 1 mins 30 secs 
+Level 4, iteration 8
+127(0.00%) conflicts; 0(0.00%) untouched conn; 176415722 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.961ns/-176415.722ns; real time: 1 mins 31 secs 
+Level 4, iteration 9
+108(0.00%) conflicts; 0(0.00%) untouched conn; 179771481 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.208ns/-179771.481ns; real time: 1 mins 33 secs 
+Level 4, iteration 10
+86(0.00%) conflicts; 0(0.00%) untouched conn; 179771481 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.208ns/-179771.481ns; real time: 1 mins 34 secs 
+Level 4, iteration 11
+81(0.00%) conflicts; 0(0.00%) untouched conn; 184861724 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.093ns/-184861.725ns; real time: 1 mins 36 secs 
+Level 4, iteration 12
+73(0.00%) conflicts; 0(0.00%) untouched conn; 184861724 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.093ns/-184861.725ns; real time: 1 mins 37 secs 
+Level 4, iteration 13
+58(0.00%) conflicts; 0(0.00%) untouched conn; 187395661 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.005ns/-187395.661ns; real time: 1 mins 39 secs 
+Level 4, iteration 14
+48(0.00%) conflicts; 0(0.00%) untouched conn; 187395661 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.005ns/-187395.661ns; real time: 1 mins 40 secs 
+Level 4, iteration 15
+41(0.00%) conflicts; 0(0.00%) untouched conn; 186875492 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.836ns/-186875.492ns; real time: 1 mins 42 secs 
+Level 4, iteration 16
+29(0.00%) conflicts; 0(0.00%) untouched conn; 186875492 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.836ns/-186875.492ns; real time: 1 mins 43 secs 
+Level 4, iteration 17
+25(0.00%) conflicts; 0(0.00%) untouched conn; 188951774 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.606ns/-188951.775ns; real time: 1 mins 44 secs 
+Level 4, iteration 18
+23(0.00%) conflicts; 0(0.00%) untouched conn; 188951774 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.606ns/-188951.775ns; real time: 1 mins 45 secs 
+Level 4, iteration 19
+21(0.00%) conflicts; 0(0.00%) untouched conn; 188460270 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.371ns/-188460.270ns; real time: 1 mins 46 secs 
+Level 4, iteration 20
+16(0.00%) conflicts; 0(0.00%) untouched conn; 188460270 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.371ns/-188460.270ns; real time: 1 mins 47 secs 
+Level 4, iteration 21
+10(0.00%) conflicts; 0(0.00%) untouched conn; 189415137 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.763ns/-189415.137ns; real time: 1 mins 48 secs 
+Level 4, iteration 22
+8(0.00%) conflicts; 0(0.00%) untouched conn; 189415137 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.763ns/-189415.137ns; real time: 1 mins 49 secs 
+Level 4, iteration 23
+5(0.00%) conflicts; 0(0.00%) untouched conn; 190003794 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.971ns/-190003.795ns; real time: 1 mins 50 secs 
+Level 4, iteration 24
+2(0.00%) conflicts; 0(0.00%) untouched conn; 190003794 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.971ns/-190003.795ns; real time: 1 mins 50 secs 
+Level 4, iteration 25
+1(0.00%) conflict; 0(0.00%) untouched conn; 190008302 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.971ns/-190008.303ns; real time: 1 mins 51 secs 
+Level 4, iteration 26
+1(0.00%) conflict; 0(0.00%) untouched conn; 190008302 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.971ns/-190008.303ns; real time: 1 mins 51 secs 
+Level 4, iteration 27
+0(0.00%) conflict; 0(0.00%) untouched conn; 190012062 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -71.971ns/-190012.063ns; real time: 1 mins 52 secs 
+
+Start NBR section for performance tuning (iteration 1) at Fri Mar 15 14:23:12 CET 2024
+Level 4, iteration 1
+33(0.00%) conflicts; 0(0.00%) untouched conn; 180469264 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.419ns/-180469.265ns; real time: 1 mins 54 secs 
+Level 4, iteration 2
+9(0.00%) conflicts; 0(0.00%) untouched conn; 183197096 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.430ns/-183197.097ns; real time: 1 mins 55 secs 
+Level 4, iteration 3
+8(0.00%) conflicts; 0(0.00%) untouched conn; 183125149 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.424ns/-183125.150ns; real time: 1 mins 55 secs 
+Level 4, iteration 4
+3(0.00%) conflicts; 0(0.00%) untouched conn; 183125149 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.424ns/-183125.150ns; real time: 1 mins 56 secs 
+Level 4, iteration 5
+3(0.00%) conflicts; 0(0.00%) untouched conn; 184256285 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.836ns/-184256.285ns; real time: 1 mins 57 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 184256285 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.836ns/-184256.285ns; real time: 1 mins 57 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 184151129 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.789ns/-184151.130ns; real time: 1 mins 58 secs 
+
+Start NBR section for performance tuning (iteration 2) at Fri Mar 15 14:23:18 CET 2024
+Level 4, iteration 1
+11(0.00%) conflicts; 0(0.00%) untouched conn; 183642855 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.605ns/-183642.855ns; real time: 1 mins 59 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 184366120 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.876ns/-184366.121ns; real time: 2 mins 
+
+Start NBR section for re-routing at Fri Mar 15 14:23:21 CET 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 184144643 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.789ns/-184144.644ns; real time: 2 mins 2 secs 
+
+Start NBR section for post-routing at Fri Mar 15 14:23:22 CET 2024
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 3125 (70.49%)
+  Estimated worst slack<setup> : -69.789ns
+  Timing score<setup> : 284887675
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 2 mins 7 secs 
+Total REAL time: 2 mins 11 secs 
+Completely routed.
+End of route.  4433 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 284887675 
+
+Dumping design to file SpeakerTest_Police_Siren.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -69.789
+PAR_SUMMARY::Timing score<setup/<ns>> = 284887.675
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.178
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 2 mins 10 secs 
+Total REAL time to completion: 2 mins 13 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "SpeakerTest_Police_Siren.pt" -o "SpeakerTest_Police_Siren.twr" "SpeakerTest_Police_Siren.ncd" "SpeakerTest_Police_Siren.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file SpeakerTest_Police_Siren.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Fri Mar 15 14:23:41 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o SpeakerTest_Police_Siren.twr -gui SpeakerTest_Police_Siren.ncd SpeakerTest_Police_Siren.prf 
+Design file:     SpeakerTest_Police_Siren.ncd
+Preference file: SpeakerTest_Police_Siren.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4096  Score: 284887675
+Cumulative negative slack: 284887675
+
+Constraints cover 3921438874 paths, 1 nets, and 4430 connections (99.93% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Fri Mar 15 14:23:43 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o SpeakerTest_Police_Siren.twr -gui SpeakerTest_Police_Siren.ncd SpeakerTest_Police_Siren.prf 
+Design file:     SpeakerTest_Police_Siren.ncd
+Preference file: SpeakerTest_Police_Siren.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3921438874 paths, 1 nets, and 4430 connections (99.93% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 284887675 (setup), 0 (hold)
+Cumulative negative slack: 284887675 (284887675+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 7 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 488 MB
+
+
+tmcheck -par "SpeakerTest_Police_Siren.par" 
+
+bitgen -w "SpeakerTest_Police_Siren.ncd" -f "SpeakerTest_Police_Siren.t2b" -e -s "/home/user/Master Thesis/Speaker Test/SpeakerTest.sec" -k "/home/user/Master Thesis/Speaker Test/SpeakerTest.bek" "SpeakerTest_Police_Siren.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file SpeakerTest_Police_Siren.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application Bitgen from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from SpeakerTest_Police_Siren.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        CfgMode  |                      Disable**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                          2.4**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                    CONFIG_MODE  |                         JTAG**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+|            SLAVE_PARALLEL_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PULL  |                           ON**  |
++---------------------------------+---------------------------------+
+|               CONFIG_IOVOLTAGE  |                          2.5**  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 10.27.
+ 
+Saving bit stream in "SpeakerTest_Police_Siren.bit".
+Total CPU Time: 26 secs 
+Total REAL Time: 27 secs 
+Peak Memory Usage: 804 MB

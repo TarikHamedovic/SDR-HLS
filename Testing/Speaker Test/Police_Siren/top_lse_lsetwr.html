@@ -1,0 +1,1380 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Mar 15 14:21:06 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_25mhz_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 171.889ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \swg/current_wave_freq_i17  (from clk_25mhz_c +)
+   Destination:    FD1P3AX    D              \swg/half_period_i0  (to clk_25mhz_c +)
+
+   Delay:                 177.064ns  (14.0% logic, 86.0% route), 143 logic levels.
+
+ Constraint Details:
+
+    177.064ns data_path \swg/current_wave_freq_i17 to \swg/half_period_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 171.889ns
+
+ Path Details: \swg/current_wave_freq_i17 to \swg/half_period_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \swg/current_wave_freq_i17 (from clk_25mhz_c)
+Route        30   e 1.800                                  current_wave_freq[17]
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_rep_564
+Route         7   e 1.409                                  \swg/n8127
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_rep_538_3_lut_4_lut
+Route         3   e 1.239                                  \swg/n8101
+LUT4        ---     0.166              C to Z              \swg/i5663_4_lut
+Route         4   e 1.297                                  \swg/half_period_31__N_259[21]
+LUT4        ---     0.166              A to Z              \swg/i1_4_lut_adj_43
+Route         7   e 1.409                                  \swg/n976
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_674_i50_4_lut
+Route         4   e 1.297                                  \swg/n50_adj_486
+LUT4        ---     0.166              A to Z              \swg/i5756_2_lut_rep_530
+Route         2   e 1.158                                  \swg/n8093
+LUT4        ---     0.166              B to Z              \swg/div_26_i755_4_lut
+Route         3   e 1.239                                  \swg/n5041
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_779_i50_3_lut_rep_528
+Route         6   e 1.378                                  \swg/n8091
+LUT4        ---     0.166              A to Z              \swg/div_26_i860_3_lut_4_lut
+Route         5   e 1.341                                  \swg/n1286_adj_296
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_882_i46_4_lut
+Route         1   e 0.020                                  \swg/n46
+MUXL5       ---     0.116           BLUT to Z              \swg/div_26_LessThan_882_i50
+Route         3   e 1.239                                  \swg/n50_adj_343
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_9
+Route         9   e 1.459                                  \swg/n3066
+LUT4        ---     0.166              A to Z              \swg/div_26_i960_3_lut_rep_519_3_lut
+Route         3   e 1.239                                  \swg/n8082
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_983_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_473
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_983_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_474
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_983_i50
+Route         7   e 1.409                                  \swg/n50_adj_344
+LUT4        ---     0.166              A to Z              \swg/i4608_2_lut
+Route         6   e 1.378                                  \swg/n6318
+LUT4        ---     0.166              A to Z              \swg/div_26_i1062_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n1585
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i42_4_lut
+Route         1   e 1.020                                  \swg/n42_adj_355
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_468
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1082_i50
+Route        10   e 1.480                                  \swg/n50_adj_340
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_15
+Route         2   e 1.158                                  \swg/n3072
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_86_3
+Route         1   e 0.020                                  \swg/n3516
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_86_5
+Route         1   e 0.020                                  \swg/n3517
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_86_7
+Route         6   e 1.478                                  \swg/n1726
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1179_i44_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n44_adj_458
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1179_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_455
+LUT4        ---     0.166              C to Z              \swg/i5568_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n48_adj_456
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1179_i50
+Route        10   e 1.480                                  \swg/n50_adj_345
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_11
+Route         6   e 1.378                                  \swg/n3075
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1274_i43_2_lut_rep_497_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n8060
+LUT4        ---     0.166              A to Z              \swg/i4688_4_lut
+Route         1   e 1.020                                  \swg/n6402
+LUT4        ---     0.166              D to Z              \swg/i5729_4_lut
+Route         1   e 0.020                                  \swg/n6413
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1274_i50
+Route        11   e 1.499                                  \swg/n50
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_14
+Route         3   e 1.239                                  \swg/n3078
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_88_3
+Route         1   e 0.020                                  \swg/n3527
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_88_5
+Route         1   e 0.020                                  \swg/n3528
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_88_7
+Route         6   e 1.478                                  \swg/n2007
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1367_i43_2_lut_rep_489
+Route         1   e 1.020                                  \swg/n8052
+LUT4        ---     0.166              A to Z              \swg/i4714_4_lut
+Route         1   e 1.020                                  \swg/n6428
+LUT4        ---     0.166              B to Z              \swg/i5718_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n6441
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1367_i50
+Route        12   e 1.516                                  \swg/n50_adj_351
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_69
+Route         9   e 1.459                                  \swg/n3081
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1458_i35_2_lut_4_lut
+Route         1   e 1.020                                  \swg/n35_adj_406
+LUT4        ---     0.166              D to Z              \swg/i4739_4_lut
+Route         1   e 1.020                                  \swg/n6453
+LUT4        ---     0.166              D to Z              \swg/i4752_4_lut
+Route         1   e 1.020                                  \swg/n6466
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_1458_i50_4_lut
+Route        13   e 1.532                                  \swg/n50_adj_339
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_rep_470_4_lut
+Route         2   e 1.158                                  \swg/n8033
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_90_3
+Route         1   e 0.020                                  \swg/n3540
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_90_5
+Route         2   e 1.258                                  \swg/n2277
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1547_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_364
+LUT4        ---     0.166              A to Z              \swg/i4764_4_lut
+Route         1   e 1.020                                  \swg/n6478
+LUT4        ---     0.166              D to Z              \swg/i4775_4_lut
+Route         1   e 1.020                                  \swg/n6489
+LUT4        ---     0.166              D to Z              \swg/i5694_4_lut
+Route         1   e 1.020                                  \swg/n6502
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1547_i50
+Route        15   e 1.561                                  \swg/n50_adj_338
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_66
+Route         2   e 1.158                                  \swg/n3087
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_91_3
+Route         1   e 0.020                                  \swg/n3549
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_91_5
+Route         1   e 0.020                                  \swg/n3550
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_91_7
+Route         4   e 1.397                                  \swg/n2406
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1634_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_354
+LUT4        ---     0.166              A to Z              \swg/i4802_4_lut
+Route         1   e 1.020                                  \swg/n6516
+LUT4        ---     0.166              D to Z              \swg/i4815_4_lut
+Route         1   e 1.020                                  \swg/n6529
+LUT4        ---     0.166              D to Z              \swg/i5686_4_lut
+Route         1   e 1.020                                  \swg/n6544
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1634_i50
+Route         2   e 1.158                                  \swg/n50_adj_382
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut
+Route        23   e 1.647                                  \swg/n3090
+LUT4        ---     0.166              A to Z              \swg/div_26_i1704_3_lut_rep_446_3_lut
+Route         3   e 1.239                                  \swg/n8009
+LUT4        ---     0.166              A to Z              \swg/i4838_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6552
+LUT4        ---     0.166              D to Z              \swg/i4847_4_lut
+Route         1   e 1.020                                  \swg/n6561
+LUT4        ---     0.166              D to Z              \swg/i4860_4_lut
+Route         1   e 1.020                                  \swg/n6574
+LUT4        ---     0.166              D to Z              \swg/i5769_4_lut
+Route         1   e 1.020                                  \swg/n6593
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1719_i50
+Route        16   e 1.574                                  \swg/n50_adj_337
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_22
+Route         2   e 1.158                                  \swg/n3093
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_93_3
+Route         1   e 0.020                                  \swg/n3565
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_93_5
+Route         5   e 1.441                                  \swg/n2659
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1802_i29_2_lut
+Route         2   e 1.158                                  \swg/n29_adj_420
+LUT4        ---     0.166              B to Z              \swg/i4893_4_lut
+Route         1   e 1.020                                  \swg/n6607
+LUT4        ---     0.166              D to Z              \swg/i4906_4_lut
+Route         1   e 1.020                                  \swg/n6620
+LUT4        ---     0.166              D to Z              \swg/i4921_4_lut
+Route         1   e 1.020                                  \swg/n6635
+LUT4        ---     0.166              D to Z              \swg/i5720_4_lut
+Route         1   e 1.020                                  \swg/n6652
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1802_i50
+Route         3   e 1.239                                  \swg/n50_adj_336
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_17
+Route        41   e 1.762                                  \swg/n3096
+LUT4        ---     0.166              A to Z              \swg/div_26_i1871_3_lut_rep_419_3_lut
+Route         5   e 1.341                                  \swg/n7982
+LUT4        ---     0.166              A to Z              \swg/i4944_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6658
+LUT4        ---     0.166              D to Z              \swg/i4953_4_lut
+Route         1   e 1.020                                  \swg/n6667
+LUT4        ---     0.166              D to Z              \swg/i4966_4_lut
+Route         1   e 1.020                                  \swg/n6680
+LUT4        ---     0.166              D to Z              \swg/i4985_4_lut
+Route         1   e 1.020                                  \swg/n6699
+LUT4        ---     0.166              D to Z              \swg/i5692_4_lut
+Route         1   e 1.020                                  \swg/n6714
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1883_i50
+Route        19   e 1.608                                  \swg/n50_adj_335
+LUT4        ---     0.166              A to Z              \swg/i4602_2_lut
+Route        29   e 1.693                                  \swg/n3099
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1962_i25_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n25_adj_405
+LUT4        ---     0.166              A to Z              \swg/i5011_4_lut
+Route         1   e 1.020                                  \swg/n6725
+LUT4        ---     0.166              D to Z              \swg/i5022_4_lut
+Route         1   e 1.020                                  \swg/n6736
+LUT4        ---     0.166              D to Z              \swg/i5035_4_lut
+Route         1   e 1.020                                  \swg/n6749
+LUT4        ---     0.166              D to Z              \swg/i5056_4_lut
+Route         1   e 1.020                                  \swg/n6770
+LUT4        ---     0.166              D to Z              \swg/i5669_4_lut
+Route         1   e 1.020                                  \swg/n6785
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1962_i50
+Route         3   e 1.239                                  \swg/n50_adj_334
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut_adj_28
+Route        49   e 1.798                                  \swg/n3102
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2039_i23_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n23_adj_379
+LUT4        ---     0.166              B to Z              \swg/i5087_4_lut
+Route         1   e 1.020                                  \swg/n6801
+LUT4        ---     0.166              D to Z              \swg/i5100_4_lut
+Route         1   e 1.020                                  \swg/n6814
+LUT4        ---     0.166              D to Z              \swg/i5115_4_lut
+Route         1   e 1.020                                  \swg/n6829
+LUT4        ---     0.166              D to Z              \swg/i5132_4_lut
+Route         1   e 1.020                                  \swg/n6846
+LUT4        ---     0.166              D to Z              \swg/i5763_4_lut
+Route         1   e 1.020                                  \swg/n6867
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2039_i50
+Route        20   e 1.619                                  \swg/n50_adj_341
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_3
+Route        17   e 1.586                                  \swg/n3105
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2114_i19_2_lut_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n19_adj_482
+LUT4        ---     0.166              D to Z              \swg/i5167_4_lut
+Route         1   e 1.020                                  \swg/n6881
+LUT4        ---     0.166              D to Z              \swg/i5180_4_lut
+Route         1   e 1.020                                  \swg/n6894
+LUT4        ---     0.166              D to Z              \swg/i5195_4_lut
+Route         1   e 1.020                                  \swg/n6909
+LUT4        ---     0.166              B to Z              \swg/i5212_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6926
+LUT4        ---     0.166              B to Z              \swg/i5753_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6947
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2114_i50
+Route        20   e 1.619                                  \swg/n50_adj_332
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_29
+Route         3   e 1.239                                  \swg/n3108
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_98_3
+Route         1   e 0.020                                  \swg/n3609
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_98_5
+Route         1   e 0.020                                  \swg/n3610
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_98_7
+Route         6   e 1.478                                  \swg/n3232
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2187_i23_2_lut_rep_309
+Route         2   e 1.158                                  \swg/n7872
+LUT4        ---     0.166              A to Z              \swg/i5250_4_lut
+Route         1   e 1.020                                  \swg/n6964
+LUT4        ---     0.166              D to Z              \swg/i5263_4_lut
+Route         1   e 1.020                                  \swg/n6977
+LUT4        ---     0.166              D to Z              \swg/i5282_4_lut
+Route         1   e 1.020                                  \swg/n6996
+LUT4        ---     0.166              D to Z              \swg/i5297_4_lut
+Route         1   e 1.020                                  \swg/n7011
+LUT4        ---     0.166              D to Z              \swg/i5320_4_lut
+Route         1   e 1.020                                  \swg/n7034
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2187_i50_4_lut
+Route        23   e 1.647                                  \swg/n50_adj_331
+LUT4        ---     0.166              A to Z              \swg/i4614_2_lut_rep_298
+Route        37   e 1.742                                  \swg/n7861
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2258_i17_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n17_adj_412
+LUT4        ---     0.166              A to Z              \swg/i5342_4_lut
+Route         1   e 1.020                                  \swg/n7056
+LUT4        ---     0.166              D to Z              \swg/i5353_4_lut
+Route         1   e 1.020                                  \swg/n7067
+LUT4        ---     0.166              D to Z              \swg/i5366_4_lut
+Route         1   e 1.020                                  \swg/n7080
+LUT4        ---     0.166              D to Z              \swg/i5387_4_lut
+Route         1   e 1.020                                  \swg/n7101
+LUT4        ---     0.166              D to Z              \swg/i5402_4_lut
+Route         1   e 1.020                                  \swg/n7116
+LUT4        ---     0.166              D to Z              \swg/i5427_4_lut
+Route         1   e 1.020                                  \swg/n7141
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2258_i50_4_lut
+Route         3   e 1.239                                  \swg/n50_adj_361
+LUT4        ---     0.166              C to Z              \swg/i5702_2_lut_rep_262_3_lut_4_lut
+Route        20   e 1.619                                  \swg/n7825
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2327_i13_4_lut
+Route         2   e 1.158                                  \swg/n13
+LUT4        ---     0.166              A to Z              \swg/i5446_3_lut
+Route         1   e 1.020                                  \swg/n7160
+LUT4        ---     0.166              D to Z              \swg/i5455_4_lut
+Route         1   e 1.020                                  \swg/n7169
+LUT4        ---     0.166              D to Z              \swg/i5468_4_lut
+Route         1   e 1.020                                  \swg/n7182
+LUT4        ---     0.166              D to Z              \swg/i5487_4_lut
+Route         1   e 1.020                                  \swg/n7201
+LUT4        ---     0.166              D to Z              \swg/i5502_4_lut
+Route         1   e 1.020                                  \swg/n7216
+LUT4        ---     0.166              D to Z              \swg/i5525_4_lut
+Route         1   e 1.020                                  \swg/n7239
+LUT4        ---     0.166              D to Z              \swg/i5552_4_lut
+Route         1   e 1.020                                  \swg/n7266
+LUT4        ---     0.166              D to Z              \swg/i5679_4_lut
+Route         1   e 1.020                                  \swg/half_period_31__N_259[0]
+                  --------
+                  177.064  (14.0% logic, 86.0% route), 143 logic levels.
+
+
+Error:  The following path violates requirements by 171.889ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \swg/current_wave_freq_i17  (from clk_25mhz_c +)
+   Destination:    FD1P3AX    D              \swg/half_period_i0  (to clk_25mhz_c +)
+
+   Delay:                 177.064ns  (14.0% logic, 86.0% route), 143 logic levels.
+
+ Constraint Details:
+
+    177.064ns data_path \swg/current_wave_freq_i17 to \swg/half_period_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 171.889ns
+
+ Path Details: \swg/current_wave_freq_i17 to \swg/half_period_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \swg/current_wave_freq_i17 (from clk_25mhz_c)
+Route        30   e 1.800                                  current_wave_freq[17]
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_rep_564
+Route         7   e 1.409                                  \swg/n8127
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_rep_538_3_lut_4_lut
+Route         3   e 1.239                                  \swg/n8101
+LUT4        ---     0.166              C to Z              \swg/i5663_4_lut
+Route         4   e 1.297                                  \swg/half_period_31__N_259[21]
+LUT4        ---     0.166              A to Z              \swg/i1_4_lut_adj_43
+Route         7   e 1.409                                  \swg/n976
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_674_i50_4_lut
+Route         4   e 1.297                                  \swg/n50_adj_486
+LUT4        ---     0.166              A to Z              \swg/i5756_2_lut_rep_530
+Route         2   e 1.158                                  \swg/n8093
+LUT4        ---     0.166              B to Z              \swg/div_26_i755_4_lut
+Route         3   e 1.239                                  \swg/n5041
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_779_i50_3_lut_rep_528
+Route         6   e 1.378                                  \swg/n8091
+LUT4        ---     0.166              A to Z              \swg/div_26_i860_3_lut_4_lut
+Route         5   e 1.341                                  \swg/n1286_adj_296
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_882_i46_4_lut
+Route         1   e 0.020                                  \swg/n46
+MUXL5       ---     0.116           BLUT to Z              \swg/div_26_LessThan_882_i50
+Route         3   e 1.239                                  \swg/n50_adj_343
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_9
+Route         9   e 1.459                                  \swg/n3066
+LUT4        ---     0.166              A to Z              \swg/div_26_i960_3_lut_rep_519_3_lut
+Route         3   e 1.239                                  \swg/n8082
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_983_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_473
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_983_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_474
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_983_i50
+Route         7   e 1.409                                  \swg/n50_adj_344
+LUT4        ---     0.166              A to Z              \swg/i4608_2_lut
+Route         6   e 1.378                                  \swg/n6318
+LUT4        ---     0.166              A to Z              \swg/div_26_i1062_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n1585
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i42_4_lut
+Route         1   e 1.020                                  \swg/n42_adj_355
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_468
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1082_i50
+Route        10   e 1.480                                  \swg/n50_adj_340
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_15
+Route         2   e 1.158                                  \swg/n3072
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_86_3
+Route         1   e 0.020                                  \swg/n3516
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_86_5
+Route         1   e 0.020                                  \swg/n3517
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_86_7
+Route         6   e 1.478                                  \swg/n1726
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1179_i44_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n44_adj_458
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1179_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_455
+LUT4        ---     0.166              C to Z              \swg/i5568_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n48_adj_456
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1179_i50
+Route        10   e 1.480                                  \swg/n50_adj_345
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_11
+Route         6   e 1.378                                  \swg/n3075
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1274_i41_2_lut_rep_496_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n8059
+LUT4        ---     0.166              B to Z              \swg/i4688_4_lut
+Route         1   e 1.020                                  \swg/n6402
+LUT4        ---     0.166              D to Z              \swg/i5729_4_lut
+Route         1   e 0.020                                  \swg/n6413
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1274_i50
+Route        11   e 1.499                                  \swg/n50
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_14
+Route         3   e 1.239                                  \swg/n3078
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_88_3
+Route         1   e 0.020                                  \swg/n3527
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_88_5
+Route         1   e 0.020                                  \swg/n3528
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_88_7
+Route         6   e 1.478                                  \swg/n2007
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1367_i43_2_lut_rep_489
+Route         1   e 1.020                                  \swg/n8052
+LUT4        ---     0.166              A to Z              \swg/i4714_4_lut
+Route         1   e 1.020                                  \swg/n6428
+LUT4        ---     0.166              B to Z              \swg/i5718_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n6441
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1367_i50
+Route        12   e 1.516                                  \swg/n50_adj_351
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_69
+Route         9   e 1.459                                  \swg/n3081
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1458_i35_2_lut_4_lut
+Route         1   e 1.020                                  \swg/n35_adj_406
+LUT4        ---     0.166              D to Z              \swg/i4739_4_lut
+Route         1   e 1.020                                  \swg/n6453
+LUT4        ---     0.166              D to Z              \swg/i4752_4_lut
+Route         1   e 1.020                                  \swg/n6466
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_1458_i50_4_lut
+Route        13   e 1.532                                  \swg/n50_adj_339
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_rep_470_4_lut
+Route         2   e 1.158                                  \swg/n8033
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_90_3
+Route         1   e 0.020                                  \swg/n3540
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_90_5
+Route         2   e 1.258                                  \swg/n2277
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1547_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_364
+LUT4        ---     0.166              A to Z              \swg/i4764_4_lut
+Route         1   e 1.020                                  \swg/n6478
+LUT4        ---     0.166              D to Z              \swg/i4775_4_lut
+Route         1   e 1.020                                  \swg/n6489
+LUT4        ---     0.166              D to Z              \swg/i5694_4_lut
+Route         1   e 1.020                                  \swg/n6502
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1547_i50
+Route        15   e 1.561                                  \swg/n50_adj_338
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_66
+Route         2   e 1.158                                  \swg/n3087
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_91_3
+Route         1   e 0.020                                  \swg/n3549
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_91_5
+Route         1   e 0.020                                  \swg/n3550
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_91_7
+Route         4   e 1.397                                  \swg/n2406
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1634_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_354
+LUT4        ---     0.166              A to Z              \swg/i4802_4_lut
+Route         1   e 1.020                                  \swg/n6516
+LUT4        ---     0.166              D to Z              \swg/i4815_4_lut
+Route         1   e 1.020                                  \swg/n6529
+LUT4        ---     0.166              D to Z              \swg/i5686_4_lut
+Route         1   e 1.020                                  \swg/n6544
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1634_i50
+Route         2   e 1.158                                  \swg/n50_adj_382
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut
+Route        23   e 1.647                                  \swg/n3090
+LUT4        ---     0.166              A to Z              \swg/div_26_i1704_3_lut_rep_446_3_lut
+Route         3   e 1.239                                  \swg/n8009
+LUT4        ---     0.166              A to Z              \swg/i4838_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6552
+LUT4        ---     0.166              D to Z              \swg/i4847_4_lut
+Route         1   e 1.020                                  \swg/n6561
+LUT4        ---     0.166              D to Z              \swg/i4860_4_lut
+Route         1   e 1.020                                  \swg/n6574
+LUT4        ---     0.166              D to Z              \swg/i5769_4_lut
+Route         1   e 1.020                                  \swg/n6593
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1719_i50
+Route        16   e 1.574                                  \swg/n50_adj_337
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_22
+Route         2   e 1.158                                  \swg/n3093
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_93_3
+Route         1   e 0.020                                  \swg/n3565
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_93_5
+Route         5   e 1.441                                  \swg/n2659
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1802_i29_2_lut
+Route         2   e 1.158                                  \swg/n29_adj_420
+LUT4        ---     0.166              B to Z              \swg/i4893_4_lut
+Route         1   e 1.020                                  \swg/n6607
+LUT4        ---     0.166              D to Z              \swg/i4906_4_lut
+Route         1   e 1.020                                  \swg/n6620
+LUT4        ---     0.166              D to Z              \swg/i4921_4_lut
+Route         1   e 1.020                                  \swg/n6635
+LUT4        ---     0.166              D to Z              \swg/i5720_4_lut
+Route         1   e 1.020                                  \swg/n6652
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1802_i50
+Route         3   e 1.239                                  \swg/n50_adj_336
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_17
+Route        41   e 1.762                                  \swg/n3096
+LUT4        ---     0.166              A to Z              \swg/div_26_i1871_3_lut_rep_419_3_lut
+Route         5   e 1.341                                  \swg/n7982
+LUT4        ---     0.166              A to Z              \swg/i4944_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6658
+LUT4        ---     0.166              D to Z              \swg/i4953_4_lut
+Route         1   e 1.020                                  \swg/n6667
+LUT4        ---     0.166              D to Z              \swg/i4966_4_lut
+Route         1   e 1.020                                  \swg/n6680
+LUT4        ---     0.166              D to Z              \swg/i4985_4_lut
+Route         1   e 1.020                                  \swg/n6699
+LUT4        ---     0.166              D to Z              \swg/i5692_4_lut
+Route         1   e 1.020                                  \swg/n6714
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1883_i50
+Route        19   e 1.608                                  \swg/n50_adj_335
+LUT4        ---     0.166              A to Z              \swg/i4602_2_lut
+Route        29   e 1.693                                  \swg/n3099
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1962_i25_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n25_adj_405
+LUT4        ---     0.166              A to Z              \swg/i5011_4_lut
+Route         1   e 1.020                                  \swg/n6725
+LUT4        ---     0.166              D to Z              \swg/i5022_4_lut
+Route         1   e 1.020                                  \swg/n6736
+LUT4        ---     0.166              D to Z              \swg/i5035_4_lut
+Route         1   e 1.020                                  \swg/n6749
+LUT4        ---     0.166              D to Z              \swg/i5056_4_lut
+Route         1   e 1.020                                  \swg/n6770
+LUT4        ---     0.166              D to Z              \swg/i5669_4_lut
+Route         1   e 1.020                                  \swg/n6785
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1962_i50
+Route         3   e 1.239                                  \swg/n50_adj_334
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut_adj_28
+Route        49   e 1.798                                  \swg/n3102
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2039_i23_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n23_adj_379
+LUT4        ---     0.166              B to Z              \swg/i5087_4_lut
+Route         1   e 1.020                                  \swg/n6801
+LUT4        ---     0.166              D to Z              \swg/i5100_4_lut
+Route         1   e 1.020                                  \swg/n6814
+LUT4        ---     0.166              D to Z              \swg/i5115_4_lut
+Route         1   e 1.020                                  \swg/n6829
+LUT4        ---     0.166              D to Z              \swg/i5132_4_lut
+Route         1   e 1.020                                  \swg/n6846
+LUT4        ---     0.166              D to Z              \swg/i5763_4_lut
+Route         1   e 1.020                                  \swg/n6867
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2039_i50
+Route        20   e 1.619                                  \swg/n50_adj_341
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_3
+Route        17   e 1.586                                  \swg/n3105
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2114_i23_2_lut_rep_312_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n7875
+LUT4        ---     0.166              B to Z              \swg/i5167_4_lut
+Route         1   e 1.020                                  \swg/n6881
+LUT4        ---     0.166              D to Z              \swg/i5180_4_lut
+Route         1   e 1.020                                  \swg/n6894
+LUT4        ---     0.166              D to Z              \swg/i5195_4_lut
+Route         1   e 1.020                                  \swg/n6909
+LUT4        ---     0.166              B to Z              \swg/i5212_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6926
+LUT4        ---     0.166              B to Z              \swg/i5753_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6947
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2114_i50
+Route        20   e 1.619                                  \swg/n50_adj_332
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_29
+Route         3   e 1.239                                  \swg/n3108
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_98_3
+Route         1   e 0.020                                  \swg/n3609
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_98_5
+Route         1   e 0.020                                  \swg/n3610
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_98_7
+Route         6   e 1.478                                  \swg/n3232
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2187_i23_2_lut_rep_309
+Route         2   e 1.158                                  \swg/n7872
+LUT4        ---     0.166              A to Z              \swg/i5250_4_lut
+Route         1   e 1.020                                  \swg/n6964
+LUT4        ---     0.166              D to Z              \swg/i5263_4_lut
+Route         1   e 1.020                                  \swg/n6977
+LUT4        ---     0.166              D to Z              \swg/i5282_4_lut
+Route         1   e 1.020                                  \swg/n6996
+LUT4        ---     0.166              D to Z              \swg/i5297_4_lut
+Route         1   e 1.020                                  \swg/n7011
+LUT4        ---     0.166              D to Z              \swg/i5320_4_lut
+Route         1   e 1.020                                  \swg/n7034
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2187_i50_4_lut
+Route        23   e 1.647                                  \swg/n50_adj_331
+LUT4        ---     0.166              A to Z              \swg/i4614_2_lut_rep_298
+Route        37   e 1.742                                  \swg/n7861
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2258_i17_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n17_adj_412
+LUT4        ---     0.166              A to Z              \swg/i5342_4_lut
+Route         1   e 1.020                                  \swg/n7056
+LUT4        ---     0.166              D to Z              \swg/i5353_4_lut
+Route         1   e 1.020                                  \swg/n7067
+LUT4        ---     0.166              D to Z              \swg/i5366_4_lut
+Route         1   e 1.020                                  \swg/n7080
+LUT4        ---     0.166              D to Z              \swg/i5387_4_lut
+Route         1   e 1.020                                  \swg/n7101
+LUT4        ---     0.166              D to Z              \swg/i5402_4_lut
+Route         1   e 1.020                                  \swg/n7116
+LUT4        ---     0.166              D to Z              \swg/i5427_4_lut
+Route         1   e 1.020                                  \swg/n7141
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2258_i50_4_lut
+Route         3   e 1.239                                  \swg/n50_adj_361
+LUT4        ---     0.166              C to Z              \swg/i5702_2_lut_rep_262_3_lut_4_lut
+Route        20   e 1.619                                  \swg/n7825
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2327_i13_4_lut
+Route         2   e 1.158                                  \swg/n13
+LUT4        ---     0.166              A to Z              \swg/i5446_3_lut
+Route         1   e 1.020                                  \swg/n7160
+LUT4        ---     0.166              D to Z              \swg/i5455_4_lut
+Route         1   e 1.020                                  \swg/n7169
+LUT4        ---     0.166              D to Z              \swg/i5468_4_lut
+Route         1   e 1.020                                  \swg/n7182
+LUT4        ---     0.166              D to Z              \swg/i5487_4_lut
+Route         1   e 1.020                                  \swg/n7201
+LUT4        ---     0.166              D to Z              \swg/i5502_4_lut
+Route         1   e 1.020                                  \swg/n7216
+LUT4        ---     0.166              D to Z              \swg/i5525_4_lut
+Route         1   e 1.020                                  \swg/n7239
+LUT4        ---     0.166              D to Z              \swg/i5552_4_lut
+Route         1   e 1.020                                  \swg/n7266
+LUT4        ---     0.166              D to Z              \swg/i5679_4_lut
+Route         1   e 1.020                                  \swg/half_period_31__N_259[0]
+                  --------
+                  177.064  (14.0% logic, 86.0% route), 143 logic levels.
+
+
+Error:  The following path violates requirements by 171.889ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \swg/current_wave_freq_i17  (from clk_25mhz_c +)
+   Destination:    FD1P3AX    D              \swg/half_period_i0  (to clk_25mhz_c +)
+
+   Delay:                 177.064ns  (14.0% logic, 86.0% route), 143 logic levels.
+
+ Constraint Details:
+
+    177.064ns data_path \swg/current_wave_freq_i17 to \swg/half_period_i0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 171.889ns
+
+ Path Details: \swg/current_wave_freq_i17 to \swg/half_period_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \swg/current_wave_freq_i17 (from clk_25mhz_c)
+Route        30   e 1.800                                  current_wave_freq[17]
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_rep_564
+Route         7   e 1.409                                  \swg/n8127
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_rep_538_3_lut_4_lut
+Route         3   e 1.239                                  \swg/n8101
+LUT4        ---     0.166              C to Z              \swg/i5663_4_lut
+Route         4   e 1.297                                  \swg/half_period_31__N_259[21]
+LUT4        ---     0.166              A to Z              \swg/i1_4_lut_adj_43
+Route         7   e 1.409                                  \swg/n976
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_674_i50_4_lut
+Route         4   e 1.297                                  \swg/n50_adj_486
+LUT4        ---     0.166              A to Z              \swg/i5756_2_lut_rep_530
+Route         2   e 1.158                                  \swg/n8093
+LUT4        ---     0.166              B to Z              \swg/div_26_i755_4_lut
+Route         3   e 1.239                                  \swg/n5041
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_779_i50_3_lut_rep_528
+Route         6   e 1.378                                  \swg/n8091
+LUT4        ---     0.166              A to Z              \swg/div_26_i860_3_lut_4_lut
+Route         5   e 1.341                                  \swg/n1286_adj_296
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_882_i46_4_lut
+Route         1   e 0.020                                  \swg/n46
+MUXL5       ---     0.116           BLUT to Z              \swg/div_26_LessThan_882_i50
+Route         3   e 1.239                                  \swg/n50_adj_343
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_9
+Route         9   e 1.459                                  \swg/n3066
+LUT4        ---     0.166              A to Z              \swg/div_26_i960_3_lut_rep_519_3_lut
+Route         3   e 1.239                                  \swg/n8082
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_983_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_473
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_983_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_474
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_983_i50
+Route         7   e 1.409                                  \swg/n50_adj_344
+LUT4        ---     0.166              A to Z              \swg/i4608_2_lut
+Route         6   e 1.378                                  \swg/n6318
+LUT4        ---     0.166              A to Z              \swg/div_26_i1062_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n1585
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i42_4_lut
+Route         1   e 1.020                                  \swg/n42_adj_355
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1082_i48_3_lut_3_lut
+Route         1   e 0.020                                  \swg/n48_adj_468
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1082_i50
+Route        10   e 1.480                                  \swg/n50_adj_340
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_15
+Route         2   e 1.158                                  \swg/n3072
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_86_3
+Route         1   e 0.020                                  \swg/n3516
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_86_5
+Route         1   e 0.020                                  \swg/n3517
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_86_7
+Route         6   e 1.478                                  \swg/n1726
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1179_i44_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n44_adj_458
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1179_i46_3_lut_3_lut
+Route         1   e 1.020                                  \swg/n46_adj_455
+LUT4        ---     0.166              C to Z              \swg/i5568_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n48_adj_456
+MUXL5       ---     0.116           ALUT to Z              \swg/div_26_LessThan_1179_i50
+Route        10   e 1.480                                  \swg/n50_adj_345
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_11
+Route         6   e 1.378                                  \swg/n3075
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1274_i41_2_lut_rep_496_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n8059
+LUT4        ---     0.166              B to Z              \swg/i4688_4_lut
+Route         1   e 1.020                                  \swg/n6402
+LUT4        ---     0.166              D to Z              \swg/i5729_4_lut
+Route         1   e 0.020                                  \swg/n6413
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1274_i50
+Route        11   e 1.499                                  \swg/n50
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_14
+Route         3   e 1.239                                  \swg/n3078
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_88_3
+Route         1   e 0.020                                  \swg/n3527
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_88_5
+Route         1   e 0.020                                  \swg/n3528
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_88_7
+Route         6   e 1.478                                  \swg/n2007
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1367_i43_2_lut_rep_489
+Route         1   e 1.020                                  \swg/n8052
+LUT4        ---     0.166              A to Z              \swg/i4714_4_lut
+Route         1   e 1.020                                  \swg/n6428
+LUT4        ---     0.166              B to Z              \swg/i5718_4_lut_4_lut
+Route         1   e 0.020                                  \swg/n6441
+MOFX0       ---     0.179             C0 to Z              \swg/div_26_LessThan_1367_i50
+Route        12   e 1.516                                  \swg/n50_adj_351
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_69
+Route         9   e 1.459                                  \swg/n3081
+LUT4        ---     0.166              C to Z              \swg/div_26_LessThan_1458_i41_2_lut_rep_473_4_lut
+Route         1   e 1.020                                  \swg/n8036
+LUT4        ---     0.166              A to Z              \swg/i4739_4_lut
+Route         1   e 1.020                                  \swg/n6453
+LUT4        ---     0.166              D to Z              \swg/i4752_4_lut
+Route         1   e 1.020                                  \swg/n6466
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_1458_i50_4_lut
+Route        13   e 1.532                                  \swg/n50_adj_339
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_rep_470_4_lut
+Route         2   e 1.158                                  \swg/n8033
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_90_3
+Route         1   e 0.020                                  \swg/n3540
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_90_5
+Route         2   e 1.258                                  \swg/n2277
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1547_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_364
+LUT4        ---     0.166              A to Z              \swg/i4764_4_lut
+Route         1   e 1.020                                  \swg/n6478
+LUT4        ---     0.166              D to Z              \swg/i4775_4_lut
+Route         1   e 1.020                                  \swg/n6489
+LUT4        ---     0.166              D to Z              \swg/i5694_4_lut
+Route         1   e 1.020                                  \swg/n6502
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1547_i50
+Route        15   e 1.561                                  \swg/n50_adj_338
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_66
+Route         2   e 1.158                                  \swg/n3087
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_91_3
+Route         1   e 0.020                                  \swg/n3549
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_91_5
+Route         1   e 0.020                                  \swg/n3550
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_91_7
+Route         4   e 1.397                                  \swg/n2406
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1634_i37_2_lut
+Route         2   e 1.158                                  \swg/n37_adj_354
+LUT4        ---     0.166              A to Z              \swg/i4802_4_lut
+Route         1   e 1.020                                  \swg/n6516
+LUT4        ---     0.166              D to Z              \swg/i4815_4_lut
+Route         1   e 1.020                                  \swg/n6529
+LUT4        ---     0.166              D to Z              \swg/i5686_4_lut
+Route         1   e 1.020                                  \swg/n6544
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1634_i50
+Route         2   e 1.158                                  \swg/n50_adj_382
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut
+Route        23   e 1.647                                  \swg/n3090
+LUT4        ---     0.166              A to Z              \swg/div_26_i1704_3_lut_rep_446_3_lut
+Route         3   e 1.239                                  \swg/n8009
+LUT4        ---     0.166              A to Z              \swg/i4838_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6552
+LUT4        ---     0.166              D to Z              \swg/i4847_4_lut
+Route         1   e 1.020                                  \swg/n6561
+LUT4        ---     0.166              D to Z              \swg/i4860_4_lut
+Route         1   e 1.020                                  \swg/n6574
+LUT4        ---     0.166              D to Z              \swg/i5769_4_lut
+Route         1   e 1.020                                  \swg/n6593
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1719_i50
+Route        16   e 1.574                                  \swg/n50_adj_337
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_22
+Route         2   e 1.158                                  \swg/n3093
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_93_3
+Route         1   e 0.020                                  \swg/n3565
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_93_5
+Route         5   e 1.441                                  \swg/n2659
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1802_i29_2_lut
+Route         2   e 1.158                                  \swg/n29_adj_420
+LUT4        ---     0.166              B to Z              \swg/i4893_4_lut
+Route         1   e 1.020                                  \swg/n6607
+LUT4        ---     0.166              D to Z              \swg/i4906_4_lut
+Route         1   e 1.020                                  \swg/n6620
+LUT4        ---     0.166              D to Z              \swg/i4921_4_lut
+Route         1   e 1.020                                  \swg/n6635
+LUT4        ---     0.166              D to Z              \swg/i5720_4_lut
+Route         1   e 1.020                                  \swg/n6652
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1802_i50
+Route         3   e 1.239                                  \swg/n50_adj_336
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_17
+Route        41   e 1.762                                  \swg/n3096
+LUT4        ---     0.166              A to Z              \swg/div_26_i1871_3_lut_rep_419_3_lut
+Route         5   e 1.341                                  \swg/n7982
+LUT4        ---     0.166              A to Z              \swg/i4944_3_lut_4_lut
+Route         1   e 1.020                                  \swg/n6658
+LUT4        ---     0.166              D to Z              \swg/i4953_4_lut
+Route         1   e 1.020                                  \swg/n6667
+LUT4        ---     0.166              D to Z              \swg/i4966_4_lut
+Route         1   e 1.020                                  \swg/n6680
+LUT4        ---     0.166              D to Z              \swg/i4985_4_lut
+Route         1   e 1.020                                  \swg/n6699
+LUT4        ---     0.166              D to Z              \swg/i5692_4_lut
+Route         1   e 1.020                                  \swg/n6714
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1883_i50
+Route        19   e 1.608                                  \swg/n50_adj_335
+LUT4        ---     0.166              A to Z              \swg/i4602_2_lut
+Route        29   e 1.693                                  \swg/n3099
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_1962_i25_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n25_adj_405
+LUT4        ---     0.166              A to Z              \swg/i5011_4_lut
+Route         1   e 1.020                                  \swg/n6725
+LUT4        ---     0.166              D to Z              \swg/i5022_4_lut
+Route         1   e 1.020                                  \swg/n6736
+LUT4        ---     0.166              D to Z              \swg/i5035_4_lut
+Route         1   e 1.020                                  \swg/n6749
+LUT4        ---     0.166              D to Z              \swg/i5056_4_lut
+Route         1   e 1.020                                  \swg/n6770
+LUT4        ---     0.166              D to Z              \swg/i5669_4_lut
+Route         1   e 1.020                                  \swg/n6785
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_1962_i50
+Route         3   e 1.239                                  \swg/n50_adj_334
+LUT4        ---     0.166              C to Z              \swg/i1_2_lut_3_lut_4_lut_adj_28
+Route        49   e 1.798                                  \swg/n3102
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2039_i23_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n23_adj_379
+LUT4        ---     0.166              B to Z              \swg/i5087_4_lut
+Route         1   e 1.020                                  \swg/n6801
+LUT4        ---     0.166              D to Z              \swg/i5100_4_lut
+Route         1   e 1.020                                  \swg/n6814
+LUT4        ---     0.166              D to Z              \swg/i5115_4_lut
+Route         1   e 1.020                                  \swg/n6829
+LUT4        ---     0.166              D to Z              \swg/i5132_4_lut
+Route         1   e 1.020                                  \swg/n6846
+LUT4        ---     0.166              D to Z              \swg/i5763_4_lut
+Route         1   e 1.020                                  \swg/n6867
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2039_i50
+Route        20   e 1.619                                  \swg/n50_adj_341
+LUT4        ---     0.166              A to Z              \swg/i1_2_lut_adj_3
+Route        17   e 1.586                                  \swg/n3105
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2114_i23_2_lut_rep_312_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n7875
+LUT4        ---     0.166              B to Z              \swg/i5167_4_lut
+Route         1   e 1.020                                  \swg/n6881
+LUT4        ---     0.166              D to Z              \swg/i5180_4_lut
+Route         1   e 1.020                                  \swg/n6894
+LUT4        ---     0.166              D to Z              \swg/i5195_4_lut
+Route         1   e 1.020                                  \swg/n6909
+LUT4        ---     0.166              B to Z              \swg/i5212_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6926
+LUT4        ---     0.166              B to Z              \swg/i5753_4_lut_4_lut
+Route         1   e 1.020                                  \swg/n6947
+MUXL5       ---     0.116             SD to Z              \swg/div_26_LessThan_2114_i50
+Route        20   e 1.619                                  \swg/n50_adj_332
+LUT4        ---     0.166              D to Z              \swg/i1_2_lut_4_lut_adj_29
+Route         3   e 1.239                                  \swg/n3108
+A1_TO_FCO   ---     0.329           A[2] to COUT           \swg/add_98_3
+Route         1   e 0.020                                  \swg/n3609
+FCI_TO_FCO  ---     0.051            CIN to COUT           \swg/add_98_5
+Route         1   e 0.020                                  \swg/n3610
+FCI_TO_F    ---     0.322            CIN to S[2]           \swg/add_98_7
+Route         6   e 1.478                                  \swg/n3232
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2187_i23_2_lut_rep_309
+Route         2   e 1.158                                  \swg/n7872
+LUT4        ---     0.166              A to Z              \swg/i5250_4_lut
+Route         1   e 1.020                                  \swg/n6964
+LUT4        ---     0.166              D to Z              \swg/i5263_4_lut
+Route         1   e 1.020                                  \swg/n6977
+LUT4        ---     0.166              D to Z              \swg/i5282_4_lut
+Route         1   e 1.020                                  \swg/n6996
+LUT4        ---     0.166              D to Z              \swg/i5297_4_lut
+Route         1   e 1.020                                  \swg/n7011
+LUT4        ---     0.166              D to Z              \swg/i5320_4_lut
+Route         1   e 1.020                                  \swg/n7034
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2187_i50_4_lut
+Route        23   e 1.647                                  \swg/n50_adj_331
+LUT4        ---     0.166              A to Z              \swg/i4614_2_lut_rep_298
+Route        37   e 1.742                                  \swg/n7861
+LUT4        ---     0.166              A to Z              \swg/div_26_LessThan_2258_i17_2_lut_4_lut_4_lut
+Route         2   e 1.158                                  \swg/n17_adj_412
+LUT4        ---     0.166              A to Z              \swg/i5342_4_lut
+Route         1   e 1.020                                  \swg/n7056
+LUT4        ---     0.166              D to Z              \swg/i5353_4_lut
+Route         1   e 1.020                                  \swg/n7067
+LUT4        ---     0.166              D to Z              \swg/i5366_4_lut
+Route         1   e 1.020                                  \swg/n7080
+LUT4        ---     0.166              D to Z              \swg/i5387_4_lut
+Route         1   e 1.020                                  \swg/n7101
+LUT4        ---     0.166              D to Z              \swg/i5402_4_lut
+Route         1   e 1.020                                  \swg/n7116
+LUT4        ---     0.166              D to Z              \swg/i5427_4_lut
+Route         1   e 1.020                                  \swg/n7141
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2258_i50_4_lut
+Route         3   e 1.239                                  \swg/n50_adj_361
+LUT4        ---     0.166              C to Z              \swg/i5702_2_lut_rep_262_3_lut_4_lut
+Route        20   e 1.619                                  \swg/n7825
+LUT4        ---     0.166              D to Z              \swg/div_26_LessThan_2327_i13_4_lut
+Route         2   e 1.158                                  \swg/n13
+LUT4        ---     0.166              A to Z              \swg/i5446_3_lut
+Route         1   e 1.020                                  \swg/n7160
+LUT4        ---     0.166              D to Z              \swg/i5455_4_lut
+Route         1   e 1.020                                  \swg/n7169
+LUT4        ---     0.166              D to Z              \swg/i5468_4_lut
+Route         1   e 1.020                                  \swg/n7182
+LUT4        ---     0.166              D to Z              \swg/i5487_4_lut
+Route         1   e 1.020                                  \swg/n7201
+LUT4        ---     0.166              D to Z              \swg/i5502_4_lut
+Route         1   e 1.020                                  \swg/n7216
+LUT4        ---     0.166              D to Z              \swg/i5525_4_lut
+Route         1   e 1.020                                  \swg/n7239
+LUT4        ---     0.166              D to Z              \swg/i5552_4_lut
+Route         1   e 1.020                                  \swg/n7266
+LUT4        ---     0.166              D to Z              \swg/i5679_4_lut
+Route         1   e 1.020                                  \swg/half_period_31__N_259[0]
+                  --------
+                  177.064  (14.0% logic, 86.0% route), 143 logic levels.
+
+Warning: 176.889 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_25mhz_c]             |     5.000 ns|   176.889 ns|   143 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\swg/half_period_31__N_259[0]           |       1|    4096|     99.00%
+                                        |        |        |
+\swg/half_period_31__N_259[21]          |       4|    4096|     99.00%
+                                        |        |        |
+\swg/n13                                |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n37_adj_354                        |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n42_adj_355                        |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n46_adj_473                        |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n48_adj_468                        |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n48_adj_474                        |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n50                                |      11|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_331                        |      23|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_332                        |      20|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_334                        |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_335                        |      19|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_336                        |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_337                        |      16|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_338                        |      15|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_339                        |      13|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_340                        |      10|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_341                        |      20|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_343                        |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_344                        |       7|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_345                        |      10|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_351                        |      12|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_361                        |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_382                        |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n50_adj_486                        |       4|    4096|     99.00%
+                                        |        |        |
+\swg/n976                               |       7|    4096|     99.00%
+                                        |        |        |
+\swg/n1585                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n2406                              |       4|    4096|     99.00%
+                                        |        |        |
+\swg/n3066                              |       9|    4096|     99.00%
+                                        |        |        |
+\swg/n3072                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n3075                              |       6|    4096|     99.00%
+                                        |        |        |
+\swg/n3078                              |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n3081                              |       9|    4096|     99.00%
+                                        |        |        |
+\swg/n3087                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n3090                              |      23|    4096|     99.00%
+                                        |        |        |
+\swg/n3093                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n3096                              |      41|    4096|     99.00%
+                                        |        |        |
+\swg/n3099                              |      29|    4096|     99.00%
+                                        |        |        |
+\swg/n3102                              |      49|    4096|     99.00%
+                                        |        |        |
+\swg/n3105                              |      17|    4096|     99.00%
+                                        |        |        |
+\swg/n3108                              |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n3516                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3527                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3540                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3549                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3550                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3565                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n3609                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n5041                              |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n6318                              |       6|    4096|     99.00%
+                                        |        |        |
+\swg/n6402                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6413                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6453                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6466                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6478                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6489                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6502                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6516                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6529                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6544                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6552                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6561                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6574                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6593                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6607                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6620                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6635                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6652                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6658                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6667                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6680                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6699                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6714                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6725                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6736                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6749                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6770                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6785                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6801                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6814                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6829                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6846                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6867                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6881                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6894                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6909                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6926                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6947                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6964                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6977                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n6996                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7011                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7034                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7056                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7067                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7080                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7101                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7116                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7141                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7160                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7169                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7182                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7201                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7216                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7239                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7266                              |       1|    4096|     99.00%
+                                        |        |        |
+\swg/n7825                              |      20|    4096|     99.00%
+                                        |        |        |
+\swg/n7861                              |      37|    4096|     99.00%
+                                        |        |        |
+\swg/n8033                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n8082                              |       3|    4096|     99.00%
+                                        |        |        |
+\swg/n8093                              |       2|    4096|     99.00%
+                                        |        |        |
+\swg/n17_adj_412                        |       2|    4032|     98.44%
+                                        |        |        |
+\swg/n25_adj_405                        |       2|    4032|     98.44%
+                                        |        |        |
+\swg/n8101                              |       3|    4000|     97.66%
+                                        |        |        |
+\swg/n2007                              |       6|    3960|     96.68%
+                                        |        |        |
+\swg/n3528                              |       1|    3960|     96.68%
+                                        |        |        |
+\swg/n23_adj_379                        |       2|    3904|     95.31%
+                                        |        |        |
+\swg/n3232                              |       6|    3848|     93.95%
+                                        |        |        |
+\swg/n3610                              |       1|    3848|     93.95%
+                                        |        |        |
+\swg/n7872                              |       2|    3848|     93.95%
+                                        |        |        |
+\swg/n29_adj_420                        |       2|    3776|     92.19%
+                                        |        |        |
+\swg/n2659                              |       5|    3776|     92.19%
+                                        |        |        |
+\swg/n8009                              |       3|    3616|     88.28%
+                                        |        |        |
+\swg/n8127                              |       7|    3520|     85.94%
+                                        |        |        |
+\swg/n6428                              |       1|    3456|     84.38%
+                                        |        |        |
+\swg/n6441                              |       1|    3456|     84.38%
+                                        |        |        |
+\swg/n8052                              |       1|    3320|     81.05%
+                                        |        |        |
+\swg/n37_adj_364                        |       2|    3264|     79.69%
+                                        |        |        |
+\swg/n2277                              |       2|    3264|     79.69%
+                                        |        |        |
+\swg/n44_adj_458                        |       1|    3200|     78.12%
+                                        |        |        |
+\swg/n46_adj_455                        |       1|    3200|     78.12%
+                                        |        |        |
+\swg/n48_adj_456                        |       1|    3200|     78.12%
+                                        |        |        |
+\swg/n1726                              |       6|    3200|     78.12%
+                                        |        |        |
+\swg/n3517                              |       1|    3200|     78.12%
+                                        |        |        |
+\swg/n7982                              |       5|    3008|     73.44%
+                                        |        |        |
+\swg/n46                                |       1|    2304|     56.25%
+                                        |        |        |
+\swg/n1286_adj_296                      |       5|    2304|     56.25%
+                                        |        |        |
+\swg/n8091                              |       6|    2304|     56.25%
+                                        |        |        |
+\swg/n8060                              |       1|    2052|     50.10%
+                                        |        |        |
+\swg/n8059                              |       1|    2044|     49.90%
+                                        |        |        |
+\swg/n8090                              |       3|    1792|     43.75%
+                                        |        |        |
+current_wave_freq[18]                   |      30|    1764|     43.07%
+                                        |        |        |
+current_wave_freq[17]                   |      30|    1756|     42.87%
+                                        |        |        |
+\swg/n6358                              |       1|    1664|     40.62%
+                                        |        |        |
+\swg/n2782                              |       4|    1088|     26.56%
+                                        |        |        |
+\swg/n7875                              |       1|    1032|     25.20%
+                                        |        |        |
+\swg/n8036                              |       1|    1032|     25.20%
+                                        |        |        |
+\swg/n19_adj_482                        |       1|    1022|     24.95%
+                                        |        |        |
+\swg/n8034                              |       1|    1022|     24.95%
+                                        |        |        |
+\swg/n35_adj_406                        |       1|    1021|     24.93%
+                                        |        |        |
+\swg/n7874                              |       1|    1021|     24.93%
+                                        |        |        |
+\swg/n7883                              |       1|    1021|     24.93%
+                                        |        |        |
+\swg/n8035                              |       1|    1021|     24.93%
+                                        |        |        |
+\swg/n5043                              |       6|     956|     23.34%
+                                        |        |        |
+\swg/n1728                              |       5|     896|     21.88%
+                                        |        |        |
+\swg/n6382                              |       1|     896|     21.88%
+                                        |        |        |
+\swg/n6393                              |       1|     896|     21.88%
+                                        |        |        |
+\swg/n8070                              |       1|     896|     21.88%
+                                        |        |        |
+\swg/n1285_adj_297                      |       6|     836|     20.41%
+                                        |        |        |
+\swg/n2278                              |       3|     832|     20.31%
+                                        |        |        |
+\swg/n8032                              |       1|     832|     20.31%
+                                        |        |        |
+\swg/n40_adj_425                        |       1|     640|     15.62%
+                                        |        |        |
+\swg/n42_adj_415                        |       1|     640|     15.62%
+                                        |        |        |
+\swg/n44_adj_416                        |       1|     640|     15.62%
+                                        |        |        |
+\swg/n2536                              |       2|     480|     11.72%
+                                        |        |        |
+\swg/n8115                              |       4|     480|     11.72%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 703601984
+
+Constraints cover >4294967295 paths, 1610 nets, and 4606 connections (99.9% coverage)
+
+
+Peak memory: 347197440 bytes, TRCE: 54894592 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 3 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

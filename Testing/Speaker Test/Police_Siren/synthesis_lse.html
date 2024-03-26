@@ -1,0 +1,249 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Mar 15 14:20:57 2024
+
+
+Command Line:  synthesis -f SpeakerTest_Police_Siren_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/Master Thesis/Speaker Test (searchpath added)
+-p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
+-p /home/user/Master Thesis/Speaker Test/Police_Siren (searchpath added)
+-p /home/user/Master Thesis/Speaker Test (searchpath added)
+Verilog design file = /home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v
+Verilog design file = /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v
+NGD file = SpeakerTest_Police_Siren.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top
+INFO - synthesis: /home/user/Master Thesis/Speaker Test/Police_Siren/source/top.v(1): compiling module top. VERI-1018
+INFO - synthesis: /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v(1): compiling module square_wave_generator. VERI-1018
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = top.
+WARNING - synthesis: I/O Port led[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[0] 's net has no driver and is unused.
+######## Missing driver on net led[7]. Patching with GND.
+######## Missing driver on net led[6]. Patching with GND.
+######## Missing driver on net led[5]. Patching with GND.
+######## Missing driver on net led[4]. Patching with GND.
+######## Missing driver on net led[3]. Patching with GND.
+######## Missing driver on net led[2]. Patching with GND.
+######## Missing driver on net led[0]. Patching with GND.
+
+
+
+WARNING - synthesis: /home/user/Master Thesis/Speaker Test/Police_Siren/source/square_wave_generator.v(60): Register \swg/half_period_i25 is stuck at Zero. VDB-5013
+GSR instance connected to net n3121.
+Duplicate register/latch removal. \swg/half_period_i22 is a one-to-one match with \swg/half_period_i23.
+Duplicate register/latch removal. \swg/half_period_i24 is a one-to-one match with \swg/half_period_i22.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file SpeakerTest_Police_Siren.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 129 of 84255 (0 % )
+CCU2C => 262
+FD1P3AX => 49
+FD1P3AY => 14
+FD1S3AX => 2
+FD1S3IX => 64
+GSR => 1
+IB => 2
+L6MUX21 => 11
+LUT4 => 833
+OB => 10
+PFUMX => 38
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_25mhz_c, loads : 129
+Clock Enable Nets
+Number of Clock Enables: 4
+Top 4 highest fanout Clock Enables:
+  Net : swg/clk_25mhz_c_enable_63, loads : 38
+  Net : clk_25mhz_c_enable_54, loads : 1
+  Net : clk_25mhz_c_enable_23, loads : 1
+  Net : swg/clk_25mhz_c_enable_55, loads : 1
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : clk_25mhz_c_enable_23, loads : 57
+  Net : swg/n3102, loads : 49
+  Net : swg/current_wave_freq_12, loads : 47
+  Net : swg/current_wave_freq_2, loads : 47
+  Net : swg/current_wave_freq_11, loads : 46
+  Net : swg/current_wave_freq_13, loads : 45
+  Net : swg/current_wave_freq_7, loads : 44
+  Net : swg/current_wave_freq_6, loads : 43
+  Net : swg/current_wave_freq_8, loads : 42
+  Net : swg/n3096, loads : 41
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|    5.653 MHz|   143 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 331.113  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 17.081  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

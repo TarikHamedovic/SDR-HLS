@@ -1,0 +1,22 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     760.00        100.0
+                                  LUT4	     832.00        100.0
+                                 IOBUF	         12        100.0
+                                PFUREG	        129        100.0
+                                RIPPLE	        262        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 square_wave_generator	          1        85.8
+---------------------------------------------------
+Report for cell square_wave_generator
+   Instance path: top/swg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     652.00        85.8
+                                  LUT4	     832.00        100.0
+                                PFUREG	        129        100.0
+                                RIPPLE	        154        58.8
