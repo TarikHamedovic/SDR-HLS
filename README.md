@@ -10,3 +10,10 @@ robust understanding of Digital Signal Processing (DSP) for successful implement
 HLS comes into play as an advantageous methodology for DSP applications, especially
 in algorithm-based designs, due to its efficiency in prototyping and testing compared to
 traditional Verilog-based development.
+
+In the forthcoming sections, we will go into the operational principles of
+the project, alongside potential enhancements, alterations, and comprehensive discussions
+on the DSP Modules integral to the SDR Receiver. Additionally, the project’s transition
+to a different platform, specifically the ULX3S board, will be outlined. Furthermore, the
+performance and functionality of the SDR Receiver will be evaluated through both Verilog
+and High-Level Synthesis (HLS) testing methodologies.
