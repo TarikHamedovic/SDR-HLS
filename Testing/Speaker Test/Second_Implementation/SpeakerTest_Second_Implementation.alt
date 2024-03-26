@@ -1,0 +1,20 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Fri Mar 15 12:48:56 2024 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS led[7] : H3 : out *
+NOTE PINS led[6] : E1 : out *
+NOTE PINS led[5] : E2 : out *
+NOTE PINS led[4] : D1 : out *
+NOTE PINS led[3] : D2 : out *
+NOTE PINS led[2] : C1 : out *
+NOTE PINS led[1] : C2 : out *
+NOTE PINS led[0] : B2 : out *
+NOTE PINS wave_outP : B11 : out *
+NOTE PINS wave_outN : A10 : out *
+NOTE PINS clk_25mhz : G2 : in *
+NOTE PINS rst : R1 : in *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

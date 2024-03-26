@@ -1,0 +1,36 @@
+#Start recording tcl command: 3/15/2024 11:51:41
+#Project Location: /home/user/Master Thesis/Speaker Test; Project name: SpeakerTest
+prj_project open "/home/user/Master Thesis/Speaker Test/SpeakerTest.ldf"
+prj_impl clone "Second_Implementation" -dir "Second_Implementation" -impl "First_Implementation"
+prj_impl active "Second_Implementation"
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_impl active "First_Implementation"
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_impl clone "Police_Siren" -dir "Police_Siren" -impl "Second_Implementation"
+prj_impl active "Second_Implementation"
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen
+prj_run Export -impl Second_Implementation -task Bitgen
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_run Export -impl Second_Implementation -task Bitgen -forceAll
+prj_impl active "Police_Siren"
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+prj_run Export -impl Police_Siren -task Bitgen -forceAll
+#Stop recording: 3/15/2024 14:26:09

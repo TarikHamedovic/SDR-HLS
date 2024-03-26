@@ -1,0 +1,43 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+## ULX3S v3.1.6 and v3.1.7
+# The clock "usb" and "gpdi" sheet
+LOCATE COMP "clk_25mhz" SITE "G2" ;
+IOBUF PORT "clk_25mhz" PULLMODE=NONE IO_TYPE=LVCMOS33 SLEWRATE=NA ;
+FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+## LED indicators "blinkey" and "gpio" sheet
+LOCATE COMP "led[7]" SITE "H3" ;
+LOCATE COMP "led[6]" SITE "E1" ;
+LOCATE COMP "led[5]" SITE "E2" ;
+LOCATE COMP "led[4]" SITE "D1" ;
+LOCATE COMP "led[3]" SITE "D2" ;
+LOCATE COMP "led[2]" SITE "C1" ;
+LOCATE COMP "led[1]" SITE "C2" ;
+LOCATE COMP "led[0]" SITE "B2" ;
+IOBUF PORT "led[0]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW ;
+IOBUF PORT "led[1]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[2]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[3]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[4]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[5]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[6]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+IOBUF PORT "led[7]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;
+## Pushbuttons "blinkey", "flash", "power", "gpdi" sheet
+LOCATE COMP "rst" SITE "R1" ;# FIRE1
+IOBUF PORT "rst" PULLMODE=DOWN IO_TYPE=LVCMOS33 DRIVE=NA ;
+# GPIO (default single-ended) "gpio", "ram", "gpdi" sheet
+# Pins enumerated gp[0-27], gn[0-27].
+# With differential mode enabled on Lattice,
+# gp[] (+) are used, gn[] (-) are ignored from design
+# as they handle inverted signal by default.
+# To enable differential, rename LVCMOS33->LVCMOS33D
+# FEMALE ANGLED (90 deg PMOD) on TOP or
+# MALE VERTICAL ( 0 deg pins) on BOTTOM and flat cable
+######################## 3.3V   ########################
+######################## BANK 0 ########################
+# PIN B11 From Bank 0 [Pin 0 ON BOARD]
+LOCATE COMP "wave_outP" SITE "B11" ;
+IOBUF PORT "wave_outP" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW ;
+# PIN A10 From Bank 0 [Pin 1 ON BOARD]
+LOCATE COMP "wave_outN" SITE "A10" ;
+IOBUF PORT "wave_outN" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE = SLOW;

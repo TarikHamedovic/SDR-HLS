@@ -1,0 +1,4 @@
+https://www.reddit.com/r/FPGA/comments/8czztn/beginner_simple_audio_implementation_on_fpga/
+https://www.fpga4fun.com/PWM_DAC_2.html
+http://zipcpu.com/dsp/2017/09/16/pwm-demo.html
+http://zipcpu.com/dsp/2017/09/04/pwm-reinvention.html

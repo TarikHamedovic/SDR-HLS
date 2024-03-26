@@ -1,0 +1,4 @@
+-- all messages logged in file hdlparser.log
+-- Analyzing Verilog file '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v' (VERI-1482)
+-- Analyzing Verilog file '/home/user/Master Thesis/Speaker Test/Second_Implementation/source/top.v' (VERI-1482)
+-- Analyzing Verilog file '/home/user/Master Thesis/Speaker Test/Second_Implementation/source/square_wave_generator.v' (VERI-1482)

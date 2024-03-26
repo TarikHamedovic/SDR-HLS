@@ -1,0 +1,336 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     SpeakerTest_Second_Implementation.ngd -o
+     SpeakerTest_Second_Implementation_map.ncd -pr
+     SpeakerTest_Second_Implementation.prf -mp
+     SpeakerTest_Second_Implementation.mrp -lpf /home/user/Master Thesis/Speaker
+     Test/Second_Implementation/SpeakerTest_Second_Implementation.lpf -lpf
+     /home/user/Master Thesis/Speaker Test/SpeakerTest.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  03/15/24  12:48:05
+
+Design Summary
+--------------
+
+   Number of registers:     35 out of 84255 (0%)
+      PFU registers:           35 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:        36 out of 41820 (0%)
+      SLICEs as Logic/ROM:     36 out of 41820 (0%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:         33 out of 41820 (0%)
+   Number of LUT4s:         68 out of 83640 (0%)
+      Number used as logic LUTs:          2
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       66
+      Number used as shift registers:     0
+   Number of PIO sites used: 12 out of 205 (6%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  03/15/24  12:48:05
+
+Design Summary (cont)
+---------------------
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net clk_25mhz_c: 20 loads, 20 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  1
+     Net clk_25mhz_c_enable_1: 1 loads, 1 LSLICEs
+   Number of LSRs:  1
+     Net clk_25mhz_c_enable_1: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net clk_25mhz_c_enable_1: 20 loads
+     Net wave_outP_c: 3 loads
+     Net counter_0: 2 loads
+     Net counter_25: 2 loads
+     Net counter_27: 2 loads
+     Net counter_28: 2 loads
+     Net counter_29: 2 loads
+     Net counter_30: 2 loads
+     Net counter_31: 2 loads
+     Net led_c_1: 2 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  03/15/24  12:48:05
+
+IO (PIO) Attributes (cont)
+--------------------------
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wave_outP           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wave_outN           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal n151 was merged into signal rst_c
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal add_23_2/S1 undriven or does not drive anything - clipped.
+Signal add_23_2/S0 undriven or does not drive anything - clipped.
+Signal add_23_2/CI undriven or does not drive anything - clipped.
+Signal add_23_4/S1 undriven or does not drive anything - clipped.
+Signal add_23_4/S0 undriven or does not drive anything - clipped.
+Signal add_23_6/S1 undriven or does not drive anything - clipped.
+Signal add_23_6/S0 undriven or does not drive anything - clipped.
+Signal add_23_8/S1 undriven or does not drive anything - clipped.
+Signal add_23_8/S0 undriven or does not drive anything - clipped.
+Signal add_23_10/S1 undriven or does not drive anything - clipped.
+Signal add_23_10/S0 undriven or does not drive anything - clipped.
+Signal add_23_12/S1 undriven or does not drive anything - clipped.
+Signal add_23_12/S0 undriven or does not drive anything - clipped.
+Signal add_23_14/S1 undriven or does not drive anything - clipped.
+Signal add_23_14/S0 undriven or does not drive anything - clipped.
+Signal add_23_16/S1 undriven or does not drive anything - clipped.
+Signal add_23_16/S0 undriven or does not drive anything - clipped.
+Signal add_23_18/S1 undriven or does not drive anything - clipped.
+Signal add_23_18/S0 undriven or does not drive anything - clipped.
+Signal add_23_20/S1 undriven or does not drive anything - clipped.
+Signal add_23_20/S0 undriven or does not drive anything - clipped.
+Signal add_23_22/S1 undriven or does not drive anything - clipped.
+Signal add_23_22/S0 undriven or does not drive anything - clipped.
+Signal add_23_24/S1 undriven or does not drive anything - clipped.
+Signal add_23_24/S0 undriven or does not drive anything - clipped.
+Signal add_23_26/S1 undriven or does not drive anything - clipped.
+Signal add_23_26/S0 undriven or does not drive anything - clipped.
+Signal add_23_28/S1 undriven or does not drive anything - clipped.
+Signal add_23_28/S0 undriven or does not drive anything - clipped.
+Signal swg/counter_9_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal swg/counter_9_add_4_33/CO undriven or does not drive anything - clipped.
+Signal swg/counter_9_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal swg/counter_9_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_23_30/S1 undriven or does not drive anything - clipped.
+Signal add_23_30/S0 undriven or does not drive anything - clipped.
+Signal add_23_32/S0 undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  03/15/24  12:48:05
+
+Removed logic (cont)
+--------------------
+Signal add_23_32/CO undriven or does not drive anything - clipped.
+Block i23_1_lut was optimized away.
+Block sub_7_i2 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 32 
+
+     Type and instance name of component: 
+   Register : swg/counter_9__i0
+   Register : swg/counter_9__i31
+   Register : swg/counter_9__i30
+   Register : swg/counter_9__i29
+   Register : swg/counter_9__i28
+   Register : swg/counter_9__i27
+   Register : swg/counter_9__i26
+   Register : swg/counter_9__i25
+   Register : swg/counter_9__i24
+   Register : swg/counter_9__i23
+   Register : swg/counter_9__i22
+   Register : swg/counter_9__i21
+   Register : swg/counter_9__i20
+   Register : swg/counter_9__i19
+   Register : swg/counter_9__i18
+   Register : swg/counter_9__i17
+   Register : swg/counter_9__i16
+   Register : swg/counter_9__i15
+   Register : swg/counter_9__i14
+   Register : swg/counter_9__i13
+   Register : swg/counter_9__i12
+   Register : swg/counter_9__i11
+   Register : swg/counter_9__i10
+   Register : swg/counter_9__i9
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  03/15/24  12:48:05
+
+GSR Usage (cont)
+----------------
+   Register : swg/counter_9__i8
+   Register : swg/counter_9__i7
+   Register : swg/counter_9__i6
+   Register : swg/counter_9__i5
+   Register : swg/counter_9__i4
+   Register : swg/counter_9__i3
+   Register : swg/counter_9__i2
+   Register : swg/counter_9__i1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 451 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 5
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
