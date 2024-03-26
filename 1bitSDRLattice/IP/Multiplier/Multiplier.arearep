@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Report for cell Multiplier.TECH
+Register bits:  100 of 84255 (0.119%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         6          100.0
+                              CCU2C        94          100.0
+                            FD1P3DX       100          100.0
+                                GSR         1          100.0
+                                ND2        22          100.0
+                              TOTAL       223

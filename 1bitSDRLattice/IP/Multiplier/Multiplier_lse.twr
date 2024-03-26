@@ -1,0 +1,223 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Feb 28 13:14:04 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Multiplier
+Constraint file: Multiplier_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk500 [get_nets Clock]
+            4096 items scored, 758 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 0.658ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             FF_76  (from Clock +)
+   Destination:    FD1P3DX    D              FF_0  (to Clock -)
+
+   Delay:                   5.833ns  (34.9% logic, 65.1% route), 10 logic levels.
+
+ Constraint Details:
+
+      5.833ns data_path FF_76 to FF_0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 0.658ns
+
+ Path Details: FF_76 to FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              FF_76 (from Clock)
+Route        12   e 1.616                                  regb_b_11
+LUT4        ---     0.166                to                ND2_t11
+Route         1   e 1.020                                  Multiplier_0_mult_10_0_n1
+A1_TO_FCO   ---     0.329           A[2] to COUT           Multiplier_0_mult_10_0
+Route         1   e 0.020                                  mco_25
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_1
+Route         1   e 0.020                                  mco_26
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_2
+Route         1   e 0.020                                  mco_27
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_mult_10_3
+Route         1   e 0.020                                  Multiplier_0_pp_5_18
+A1_TO_FCO   ---     0.329           B[2] to COUT           Multiplier_0_add_2_5
+Route         1   e 0.020                                  co_Multiplier_0_2_5
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_6
+Route         1   e 0.020                                  co_Multiplier_0_2_6
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_7
+Route         1   e 0.020                                  co_Multiplier_0_2_7
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_add_2_8
+Route         1   e 1.020                                  s_Multiplier_0_2_23
+                  --------
+                    5.833  (34.9% logic, 65.1% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 0.658ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             FF_76  (from Clock +)
+   Destination:    FD1P3DX    D              FF_0  (to Clock -)
+
+   Delay:                   5.833ns  (34.9% logic, 65.1% route), 10 logic levels.
+
+ Constraint Details:
+
+      5.833ns data_path FF_76 to FF_0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 0.658ns
+
+ Path Details: FF_76 to FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              FF_76 (from Clock)
+Route        12   e 1.616                                  regb_b_11
+LUT4        ---     0.166                to                ND2_t10
+Route         1   e 1.020                                  Multiplier_0_mult_10_0_n0
+A1_TO_FCO   ---     0.329           A[2] to COUT           Multiplier_0_mult_10_0
+Route         1   e 0.020                                  mco_25
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_1
+Route         1   e 0.020                                  mco_26
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_mult_10_2
+Route         1   e 0.020                                  Multiplier_0_pp_5_15
+A1_TO_FCO   ---     0.329           B[2] to COUT           Multiplier_0_add_2_4
+Route         1   e 0.020                                  co_Multiplier_0_2_4
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_5
+Route         1   e 0.020                                  co_Multiplier_0_2_5
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_6
+Route         1   e 0.020                                  co_Multiplier_0_2_6
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_7
+Route         1   e 0.020                                  co_Multiplier_0_2_7
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_add_2_8
+Route         1   e 1.020                                  s_Multiplier_0_2_23
+                  --------
+                    5.833  (34.9% logic, 65.1% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 0.658ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             FF_76  (from Clock +)
+   Destination:    FD1P3DX    D              FF_0  (to Clock -)
+
+   Delay:                   5.833ns  (34.9% logic, 65.1% route), 10 logic levels.
+
+ Constraint Details:
+
+      5.833ns data_path FF_76 to FF_0 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 0.658ns
+
+ Path Details: FF_76 to FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              FF_76 (from Clock)
+Route        12   e 1.616                                  regb_b_11
+LUT4        ---     0.166                to                ND2_t11
+Route         1   e 1.020                                  Multiplier_0_mult_10_0_n1
+A1_TO_FCO   ---     0.329           A[2] to COUT           Multiplier_0_mult_10_0
+Route         1   e 0.020                                  mco_25
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_1
+Route         1   e 0.020                                  mco_26
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_2
+Route         1   e 0.020                                  mco_27
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_mult_10_3
+Route         1   e 0.020                                  mco_28
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_mult_10_4
+Route         1   e 0.020                                  Multiplier_0_pp_5_20
+A1_TO_FCO   ---     0.329           B[2] to COUT           Multiplier_0_add_2_6
+Route         1   e 0.020                                  co_Multiplier_0_2_6
+FCI_TO_FCO  ---     0.051            CIN to COUT           Multiplier_0_add_2_7
+Route         1   e 0.020                                  co_Multiplier_0_2_7
+FCI_TO_F    ---     0.322            CIN to S[2]           Multiplier_0_add_2_8
+Route         1   e 1.020                                  s_Multiplier_0_2_23
+                  --------
+                    5.833  (34.9% logic, 65.1% route), 10 logic levels.
+
+Warning: 5.658 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets Clock]                 |     5.000 ns|     5.658 ns|    10 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+regb_b_11                               |      12|     680|     89.71%
+                                        |        |        |
+co_Multiplier_0_2_5                     |       1|     358|     47.23%
+                                        |        |        |
+mco_26                                  |       1|     344|     45.38%
+                                        |        |        |
+co_Multiplier_0_2_6                     |       1|     326|     43.01%
+                                        |        |        |
+mco_27                                  |       1|     324|     42.74%
+                                        |        |        |
+co_Multiplier_0_2_4                     |       1|     294|     38.79%
+                                        |        |        |
+mco_25                                  |       1|     252|     33.25%
+                                        |        |        |
+mco_28                                  |       1|     224|     29.55%
+                                        |        |        |
+co_Multiplier_0_2_3                     |       1|     174|     22.96%
+                                        |        |        |
+s_Multiplier_0_2_23                     |       1|     174|     22.96%
+                                        |        |        |
+co_Multiplier_0_2_7                     |       1|     158|     20.84%
+                                        |        |        |
+Multiplier_0_mult_10_0_n0               |       1|     154|     20.32%
+                                        |        |        |
+Multiplier_0_mult_10_0_n1               |       1|     154|     20.32%
+                                        |        |        |
+s_Multiplier_0_2_21                     |       1|     130|     17.15%
+                                        |        |        |
+s_Multiplier_0_2_22                     |       1|     130|     17.15%
+                                        |        |        |
+mco_29                                  |       1|     104|     13.72%
+                                        |        |        |
+Multiplier_0_mult_10_1_n0               |       1|     102|     13.46%
+                                        |        |        |
+Multiplier_0_mult_10_1_n1               |       1|     102|     13.46%
+                                        |        |        |
+s_Multiplier_0_2_19                     |       1|      80|     10.55%
+                                        |        |        |
+s_Multiplier_0_2_20                     |       1|      80|     10.55%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 758  Score: 255010
+
+Constraints cover  21146 paths, 342 nets, and 710 connections (99.2% coverage)
+
+
+Peak memory: 276312064 bytes, TRCE: 7192576 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 
