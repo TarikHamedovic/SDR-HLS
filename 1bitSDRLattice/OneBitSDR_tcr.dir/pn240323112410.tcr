@@ -1,0 +1,4 @@
+#Start recording tcl command: 3/22/2024 23:50:30
+#Project Location: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest; Project name: OneBitSDR
+prj_project open "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.ldf"
+#Stop recording: 3/23/2024 11:24:10

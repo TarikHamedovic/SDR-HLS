@@ -1,0 +1,22 @@
+#Start recording tcl command: 3/2/2024 20:05:33
+#Project Location: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest; Project name: OneBitSDR
+prj_project open "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.ldf"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Synthesis -impl First_Implementation -forceAll
+prj_run Synthesis -impl First_Implementation -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+rvl_project new
+rvl_core add top_LA1
+rvl_core delete top_LA1
+rvl_tu add -radix Bin 
+rvl_tu set -name TU1 -set_sig {{CIC1Cos/count[15:0]} }
+rvl_tu set -name TU1 -val {}
+rvl_project close -force
+#Stop recording: 3/3/2024 01:32:34

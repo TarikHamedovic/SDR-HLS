@@ -1,0 +1,15 @@
+#Start recording tcl command: 2/29/2024 19:33:14
+#Project Location: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest; Project name: OneBitSDR
+prj_project open "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.ldf"
+sbp_design open -dsgn "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/IP.sbx"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL"
+source "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL"
+source "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/generate_ngd.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+#Stop recording: 3/1/2024 00:01:10
