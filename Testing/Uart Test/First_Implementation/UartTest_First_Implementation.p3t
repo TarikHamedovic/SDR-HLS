@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "UartTest_First_Implementation.log"
+-o "UartTest_First_Implementation.csv"
+-pr "UartTest_First_Implementation.prf"

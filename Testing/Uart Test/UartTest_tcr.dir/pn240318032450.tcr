@@ -1,0 +1,18 @@
+#Start recording tcl command: 3/18/2024 01:55:34
+#Project Location: /home/user/Master Thesis/Uart Test; Project name: UartTest
+prj_project new -name "UartTest" -impl "First_Implementation" -dev LFE5U-85F-6BG381C -synthesis "lse"
+prj_project save
+prj_src add "/home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v"
+prj_src add "/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v"
+prj_src syn_sim -src "/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v" SynthesisOnly
+prj_src syn_sim -src "/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v" SynthesisAndSimulate
+prj_run Synthesis -impl First_Implementation
+prj_run Synthesis -impl First_Implementation
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_project save
+prj_project close
+#Stop recording: 3/18/2024 03:24:50

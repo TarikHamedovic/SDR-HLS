@@ -1,0 +1,1168 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file UartTest_First_Implementation.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Mon Mar 18 02:48:38 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
+Design file:     UartTest_First_Implementation.ncd
+Preference file: UartTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1090 items scored, 0 timing errors detected.
+Report:  167.504MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1090 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 34.030ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/o_Rx_Byte_i0  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        o_Rx_Byte_i1  (to clk_25mhz_c +)
+
+   Delay:               2.656ns  (19.8% logic, 80.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      2.656ns physical path delay uart_rx1/SLICE_15 to SLICE_11 meets
+     40.000ns delay constraint less
+      3.476ns skew and
+     -0.162ns M_SET requirement (totaling 36.686ns) by 34.030ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_15 to SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R41C35B.CLK to     R41C35B.Q0 uart_rx1/SLICE_15 (from uart_rx1/UartClk[2])
+ROUTE         1     2.131     R41C35B.Q0 to      R35C4C.M0 o_Rx_Byte1_0 (to clk_25mhz_c)
+                  --------
+                    2.656   (19.8% logic, 80.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to uart_rx1/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         7     2.781       G2.PADDI to    R59C67A.CLK clk_25mhz_c
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 uart_rx1/SLICE_19
+ROUTE        28     2.951     R59C67A.Q0 to    R41C35B.CLK uart_rx1/UartClk[2]
+                  --------
+                    7.397   (22.5% logic, 77.5% route), 2 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         7     2.781       G2.PADDI to     R35C4C.CLK clk_25mhz_c
+                  --------
+                    3.921   (29.1% logic, 70.9% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 34.140ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i6  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i5
+
+   Delay:               5.436ns  (22.7% logic, 77.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.436ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_7 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.140ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.824     R41C41B.F1 to    R44C41D.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.436   (22.7% logic, 77.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C41D.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.140ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i2  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i1
+
+   Delay:               5.436ns  (22.7% logic, 77.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.436ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_9 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.140ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.824     R41C41B.F1 to    R44C41B.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.436   (22.7% logic, 77.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C41B.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.140ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i4  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i3
+
+   Delay:               5.436ns  (22.7% logic, 77.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.436ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_8 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.140ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.824     R41C41B.F1 to    R44C41C.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.436   (22.7% logic, 77.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C41C.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.140ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i0  (to uart_rx1/UartClk[2] +)
+
+   Delay:               5.436ns  (22.7% logic, 77.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.436ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_10 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.140ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.824     R41C41B.F1 to    R44C41A.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.436   (22.7% logic, 77.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C41A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.164ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i14  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i13
+
+   Delay:               5.412ns  (22.8% logic, 77.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.412ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_5 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.164ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.800     R41C41B.F1 to    R44C42D.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.412   (22.8% logic, 77.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C42D.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.164ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i8  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i7
+
+   Delay:               5.412ns  (22.8% logic, 77.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.412ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_1 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.164ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.800     R41C41B.F1 to    R44C42A.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.412   (22.8% logic, 77.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C42A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.164ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i12  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i11
+
+   Delay:               5.412ns  (22.8% logic, 77.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.412ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_6 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.164ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.800     R41C41B.F1 to    R44C42C.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.412   (22.8% logic, 77.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C42C.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.164ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i15  (to uart_rx1/UartClk[2] +)
+
+   Delay:               5.412ns  (22.8% logic, 77.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.412ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_4 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.164ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.800     R41C41B.F1 to    R44C43A.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.412   (22.8% logic, 77.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 34.164ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i15  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i10  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i9
+
+   Delay:               5.412ns  (22.8% logic, 77.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.412ns physical path delay uart_rx1/SLICE_4 to uart_rx1/SLICE_0 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 34.164ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_4 to uart_rx1/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R44C43A.CLK to     R44C43A.Q0 uart_rx1/SLICE_4 (from uart_rx1/UartClk[2])
+ROUTE         8     1.276     R44C43A.Q0 to     R43C40D.A0 uart_rx1/r_Clock_Count_15
+CTOF_DEL    ---     0.236     R43C40D.A0 to     R43C40D.F0 uart_rx1/SLICE_64
+ROUTE         1     1.013     R43C40D.F0 to     R42C40C.B0 uart_rx1/n1052
+CTOF_DEL    ---     0.236     R42C40C.B0 to     R42C40C.F0 uart_rx1/SLICE_34
+ROUTE         6     1.090     R42C40C.F0 to     R41C41B.C1 uart_rx1/r_SM_Main_2_N_47_2
+CTOF_DEL    ---     0.236     R41C41B.C1 to     R41C41B.F1 uart_rx1/SLICE_40
+ROUTE         9     0.800     R41C41B.F1 to    R44C42B.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    5.412   (22.8% logic, 77.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C43A.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     2.951     R59C67A.Q0 to    R44C42B.CLK uart_rx1/UartClk[2]
+                  --------
+                    2.951   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  167.504MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |   25.000 MHz|  167.504 MHz|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0   Loads: 28
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 7
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 8
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1098 paths, 2 nets, and 360 connections (97.56% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Mon Mar 18 02:48:38 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
+Design file:     UartTest_First_Implementation.ncd
+Preference file: UartTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1090 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1090 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_R_61  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Data_62  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_31 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R43C37A.CLK to     R43C37A.Q0 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE         1     0.129     R43C37A.Q0 to     R43C37A.M1 uart_rx1/r_Rx_Data_R (to uart_rx1/UartClk[2])
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Bit_Index_i0  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Bit_Index_i0  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay uart_rx1/SLICE_20 to uart_rx1/SLICE_20 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_20 to uart_rx1/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R42C39B.CLK to     R42C39B.Q0 uart_rx1/SLICE_20 (from uart_rx1/UartClk[2])
+ROUTE         8     0.058     R42C39B.Q0 to     R42C39B.D0 uart_rx1/r_Bit_Index_0
+CTOF_DEL    ---     0.076     R42C39B.D0 to     R42C39B.F0 uart_rx1/SLICE_20
+ROUTE         1     0.000     R42C39B.F0 to    R42C39B.DI0 uart_rx1/n752 (to uart_rx1/UartClk[2])
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C39B.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C39B.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.257ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Byte_i5  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/o_Rx_Byte_i5  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.375ns  (43.7% logic, 56.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.375ns physical path delay uart_rx1/SLICE_27 to uart_rx1/SLICE_17 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.257ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_27 to uart_rx1/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R41C37D.CLK to     R41C37D.Q0 uart_rx1/SLICE_27 (from uart_rx1/UartClk[2])
+ROUTE         1     0.211     R41C37D.Q0 to     R41C35D.M1 uart_rx1/r_Rx_Byte_5 (to uart_rx1/UartClk[2])
+                  --------
+                    0.375   (43.7% logic, 56.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C37D.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C35D.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.270ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_SM_Main_i1  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_SM_Main_i1  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.389ns  (61.2% logic, 38.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.389ns physical path delay uart_rx1/SLICE_33 to uart_rx1/SLICE_33 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.270ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_33 to uart_rx1/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R41C41C.CLK to     R41C41C.Q0 uart_rx1/SLICE_33 (from uart_rx1/UartClk[2])
+ROUTE        17     0.151     R41C41C.Q0 to     R41C41C.M0 uart_rx1/r_SM_Main_1
+MTOF_DEL    ---     0.074     R41C41C.M0 to   R41C41C.OFX0 uart_rx1/SLICE_33
+ROUTE         1     0.000   R41C41C.OFX0 to    R41C41C.DI0 uart_rx1/n1250 (to uart_rx1/UartClk[2])
+                  --------
+                    0.389   (61.2% logic, 38.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C41C.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C41C.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i6  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_28 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R42C37B.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C37B.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i0  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_22 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R42C37A.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i3  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_25 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_25:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R42C37D.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_25:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C37D.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i1  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_23 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R42C37C.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R42C37C.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i7  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_29 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R41C37C.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C37C.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.272ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_62  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Byte_i5  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.390ns  (41.8% logic, 58.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_27 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.272ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R43C37A.CLK to     R43C37A.Q1 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE        12     0.227     R43C37A.Q1 to     R41C37D.M0 uart_rx1/r_Rx_Data (to uart_rx1/UartClk[2])
+                  --------
+                    0.390   (41.8% logic, 58.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R43C37A.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path uart_rx1/SLICE_19 to uart_rx1/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        28     1.015     R59C67A.Q0 to    R41C37D.CLK uart_rx1/UartClk[2]
+                  --------
+                    1.015   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0   Loads: 28
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 7
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 8
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1098 paths, 2 nets, and 360 connections (97.56% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

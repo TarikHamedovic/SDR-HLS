@@ -1,0 +1,310 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file UartTest_First_Implementation_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Mon Mar 18 02:48:01 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UartTest_First_Implementation.tw1 -gui UartTest_First_Implementation_map.ncd UartTest_First_Implementation.prf 
+Design file:     UartTest_First_Implementation_map.ncd
+Preference file: UartTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1090 items scored, 0 timing errors detected.
+Report:  200.000MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1090 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 35.000ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            clk_25mhz
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 35.607ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Clock_Count_105__i9  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Clock_Count_105__i4  (to uart_rx1/UartClk[2] +)
+                   FF                        uart_rx1/r_Clock_Count_105__i3
+
+   Delay:               3.969ns  (37.0% logic, 63.0% route), 5 logic levels.
+
+ Constraint Details:
+
+      3.969ns physical path delay uart_rx1/SLICE_0 to uart_rx1/SLICE_8 meets
+     40.000ns delay constraint less
+      0.424ns LSR_SET requirement (totaling 39.576ns) by 35.607ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_0 to uart_rx1/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525 *1/SLICE_0.CLK to *x1/SLICE_0.Q0 uart_rx1/SLICE_0 (from uart_rx1/UartClk[2])
+ROUTE         2   e 0.573 *x1/SLICE_0.Q0 to *1/SLICE_37.D0 uart_rx1/r_Clock_Count_9
+CTOF_DEL    ---     0.236 *1/SLICE_37.D0 to *1/SLICE_37.F0 uart_rx1/SLICE_37
+ROUTE         7   e 0.573 *1/SLICE_37.F0 to *1/SLICE_38.D0 uart_rx1/n19
+CTOF_DEL    ---     0.236 *1/SLICE_38.D0 to *1/SLICE_38.F0 uart_rx1/SLICE_38
+ROUTE         1   e 0.573 *1/SLICE_38.F0 to *1/SLICE_40.B0 uart_rx1/n912
+CTOF_DEL    ---     0.236 *1/SLICE_40.B0 to *1/SLICE_40.F0 uart_rx1/SLICE_40
+ROUTE         1   e 0.208 *1/SLICE_40.F0 to *1/SLICE_40.B1 uart_rx1/n789
+CTOF_DEL    ---     0.236 *1/SLICE_40.B1 to *1/SLICE_40.F1 uart_rx1/SLICE_40
+ROUTE         9   e 0.573 *1/SLICE_40.F1 to *1/SLICE_8.LSR uart_rx1/n585 (to uart_rx1/UartClk[2])
+                  --------
+                    3.969   (37.0% logic, 63.0% route), 5 logic levels.
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |   25.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0   Loads: 28
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 7
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 8
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1098 paths, 2 nets, and 360 connections (97.56% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Mon Mar 18 02:48:01 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UartTest_First_Implementation.tw1 -gui UartTest_First_Implementation_map.ncd UartTest_First_Implementation.prf 
+Design file:     UartTest_First_Implementation_map.ncd
+Preference file: UartTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1090 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1090 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.104ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx1/r_Rx_Data_R_61  (from uart_rx1/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx1/r_Rx_Data_62  (to uart_rx1/UartClk[2] +)
+
+   Delay:               0.222ns  (73.9% logic, 26.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.222ns physical path delay uart_rx1/SLICE_31 to uart_rx1/SLICE_31 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.104ns
+
+ Physical Path Details:
+
+      Data path uart_rx1/SLICE_31 to uart_rx1/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164 */SLICE_31.CLK to *1/SLICE_31.Q0 uart_rx1/SLICE_31 (from uart_rx1/UartClk[2])
+ROUTE         1   e 0.058 *1/SLICE_31.Q0 to *1/SLICE_31.M1 uart_rx1/r_Rx_Data_R (to uart_rx1/UartClk[2])
+                  --------
+                    0.222   (73.9% logic, 26.1% route), 1 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0   Loads: 28
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 7
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx1/UartClk[2]   Source: uart_rx1/SLICE_19.Q0
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 8
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1098 paths, 2 nets, and 360 connections (97.56% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      67.00        100.0
+                                  LUT4	      62.00        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         51        100.0
+                                RIPPLE	         11        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              uart_rx(CLKS_PER_BIT=27)	          1        94.0
+---------------------------------------------------
+Report for cell uart_rx(CLKS_PER_BIT=27)
+   Instance path: top/uart_rx1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      63.00        94.0
+                                  LUT4	      62.00        100.0
+                                PFUREG	         43        84.3
+                                RIPPLE	         11        100.0
