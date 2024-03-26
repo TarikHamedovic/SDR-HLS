@@ -14,3 +14,11 @@ The mixed signal, encoded with Binary Phase Shift Keying (BPSK), is filtered thr
 
 # ULX3S FPGA Board
 
+The board used for this project is the ULX3S FPGA Board. It is a fully open-source development board for LATTICE ECP5 FPGAs. The board has extensive documentation on its GitHub, with [manuals](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md), working [examples](https://github.com/emard/ulx3s-misc) and different [projects](https://ulx3s.github.io/).
+
+The [main github page](https://ulx3s.github.io/) for ULX3S serves as the central hub for all resources and information related to the ULX3S ecosystem.
+
+The ULX3S board is available in various models, differentiated primarily by their Look-Up Table (LUT) sizes, including 12F, 25F, 48F, and 85F variants, where the numbers indicate the LUT capacity, such as 85K LUTs, which will be used here. These boards can be synthesized, placed, and routed using either Lattice Diamond or open-source tools. However, for programming, the boards require open-source tools like fujprog or openFPGALoader. The design and layout of the board, along with its peripherals, are showcased in the illustrations below which show the front and back sides of the board, respectively.
+
+
+
