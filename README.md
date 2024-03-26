@@ -26,12 +26,12 @@ The ULX3S board is available in various models, differentiated primarily by thei
 
 # DSP Modules
 
-## Sigma-Delta (Σ-Δ) ADC Implementation for FPGA
+# Sigma-Delta (Σ-Δ) ADC Implementation for FPGA
 
-### Overview
+## Overview
 
 The Sigma-Delta (Σ-Δ) ADC is a cornerstone in modern electronic systems requiring high-resolution conversion technologies. Unlike traditional ADCs, this implementation samples at a frequency significantly higher than the Nyquist rate, using a feedback loop to minimize quantization noise and preserve the signal's fidelity.
-#### Key Concepts
+### Key Concepts
 
 **Oversampling**: Increases the sampling rate to spread quantization noise across a wider frequency spectrum, enhancing signal-to-noise ratio (SNR).
 
@@ -42,4 +42,27 @@ The Sigma-Delta (Σ-Δ) ADC is a cornerstone in modern electronic systems requir
 **FPGA Implementation**: Utilizes an LVDS input as a comparator, minimizing external analog component requirements
 
 ![SDADC](Images/SDADC.png)
+
+# Cascaded Integrator-Comb(CIC) Filters
+
+## Overview
+Cascaded integrator-comb (CIC) digital filters are computationally-efficient implementations of narrowband lowpass filters, and are often embedded in hardware implementations of decimation, interpolation, and delta-sigma converter filtering. Large rate changes require very narrow band filters,fast multipliers and very long filters. This can end up being the largest bottleneck in a DSP system. CIC filters are well-suited for anti-aliasing filtering prior to decimation (sample rate reduction) and for anti-imaging filtering for interpolated signals (sample rate increase). Both applications are associated with very high-data rate filtering such as hardware quadrature modulation and demodulation in modern wireless systems, and delta-sigma A/D and D/A converters. Implementing an FIR filter can consume quite a bit of FPGA resources that are often scarce. An important benefit of CIC filters is that it’s implementation does not use any multipliers.
+
+### Characteristics
+
+**Rate Change**: CIC filters are used for sample rate decimation and interpolation. The rate change is achieved through the repetitive application of integration and differentiation, which simplifies the design by eliminating the need for coefficient storage.
+
+**Decimation and Interpolation**: For decimation, the CIC filter structure starts with integrator stages followed by comb stages. The reverse is true for interpolation.
+**Gain**: The overall gain of the filter can be adjusted post-filtration to normalize the output.
+
+
+![CICBlock](Images/CICBlock.png)
+
+### Practical Considerations
+
+**Register Word Widths**: It's essential to carefully manage word widths to prevent overflow in the integrator stages while maintaining sufficient precision.
+**Compensation Filters**: Often, compensation or preconditioning FIR filters are employed alongside CIC filters to correct for the droop in the frequency response introduced by CIC filtering, ensuring a flat passband.
+
+
+
 
