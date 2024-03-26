@@ -1,0 +1,27 @@
+Logfile for Reveal Analyzer
+Version: Diamond 3.13.0.56.2
+Platform: Linux 64bit
+Filename: /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/reveal_debug.log
+First created: Tue Mar 19 23:13:57 2024
+[23:14:07] Detect USB port
+[23:14:07] Connecting cableserver to detect cable port....
+[23:14:12] @Connect
+[23:14:14] @QueryCable
+[23:14:14] @Read
+[23:14:14] cable[0]=FTUSB-0,USB2
+[23:14:14] @Disconnect
+[23:14:18] Scan Debug device
+[23:14:18] Connecting cableserver to scan device info....
+[23:14:18] @Connect
+[23:14:18] @SetSharableApplications,2,Reveal,Mico
+[23:14:19] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[23:14:19] ERROR: failed to set cable port (cable:USB2 port:FTUSB-0 error:-5). <a href='file:////home/user/FPGA/tools/diamond/usr/local/diamond/3.13/docs/manuals/troubleshoot.pdf#FailurePoints'>See Reveal Troubleshooting Guide for more details on Failure Points (2) and (5)</a>.
+[23:14:19] @Disconnect
+[23:46:09] Scan Debug device
+[23:46:09] Connecting cableserver to scan device info....
+[23:46:14] @Connect
+[23:46:14] @SetSharableApplications,2,Reveal,Mico
+[23:46:16] @SetCablePort,USB2,FTUSB-0,8,0,0,1,1,0,0,0,1
+[23:46:16] ERROR: failed to set cable port (cable:USB2 port:FTUSB-0 error:-1). <a href='file:////home/user/FPGA/tools/diamond/usr/local/diamond/3.13/docs/manuals/troubleshoot.pdf#FailurePoints'>See Reveal Troubleshooting Guide for more details on Failure Points (2) and (5)</a>.
+[23:46:16] @Disconnect
+Last closed: Wed Mar 20 00:48:10 2024

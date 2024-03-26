@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(123): Semantic error in &quot;LOCATE COMP &quot;SDFeedback&quot; SITE &quot;H17&quot; ;&quot;: </Dynamic>
+            <Dynamic>SDFeedback</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf</Navigation>
+            <Navigation>123</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(124): Semantic error in &quot;IOBUF PORT &quot;SDFeedback&quot; IO_TYPE=LVDS HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: </Dynamic>
+            <Dynamic>SDFeedback</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf</Navigation>
+            <Navigation>124</Navigation>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/top.v(45): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/top.v</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(693): </Dynamic>
+            <Dynamic>PUR</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>693</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/PLL.v(8): </Dynamic>
+            <Dynamic>PLL</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/PLL.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): </Dynamic>
+            <Dynamic>VHI</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>757</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): </Dynamic>
+            <Dynamic>VLO</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>761</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): </Dynamic>
+            <Dynamic>EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>1696</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(8): </Dynamic>
+            <Dynamic>SinCos</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(367): </Dynamic>
+            <Dynamic>INV</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>367</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(810): </Dynamic>
+            <Dynamic>XOR2</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>810</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(710): </Dynamic>
+            <Dynamic>ROM16X1A(initval=16'b1111111111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>710</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(25): </Dynamic>
+            <Dynamic>AND2</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(119): </Dynamic>
+            <Dynamic>FD1P3DX</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>119</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(458): </Dynamic>
+            <Dynamic>MUX21</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>458</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): </Dynamic>
+            <Dynamic>CCU2C(INIT0=16'b0110011010101010,INIT1=16'b0110011010101010,INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111111111111111111111111111111111111110000000000000000000000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111111111111111111111111100000000000001111111111100000000000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111111111111111100000000011111110000001111110000011111000000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111111111100000011111000011110001110001110001110011100111000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111111000011100011100110011001001101101101001001011010110100)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111111000110011011010010101010100101001001001101100110001100110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111100100101010110011000000000001110011011010110101010110101010)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1110010110011100010101001111111101101010110011100000000011110000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1101000010100011001111010111110011001100010101100000000011001100)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1111011011100010010110111011101001110011000000100111110010101010)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1000100101001010011001010111111001010010011110001001001001111000)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b01)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b01111111111111111111111111111111111111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b0111111111110000000000000111111111111111111111111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b011111000001111110000001111111000000000111111111111111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b011100111001110001110001110001111000011111000000111111111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b0101101011010010010110110110010011001100111000111000011111111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1100110001100110110010010010100101010101001011011001100011111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1010101101010101101011011001110000000000011001101010100100111110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b01111000000000111001101010110111111110010101000111001101001110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b0110011000000000110101000110011001111101011110011000101000010110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b1010101001111100100000011001110010111011101101001000111011011110)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): </Dynamic>
+            <Dynamic>ROM64X1A(initval=64'b011110010010010001111001001010011111101010011001010010100100010)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>742</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>704</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>868</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>938</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/NCO.v(13): </Dynamic>
+            <Dynamic>nco_sig</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/Mixer.v(2): </Dynamic>
+            <Dynamic>Mixer</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v(20): </Dynamic>
+            <Dynamic>CIC(width=72,decimation_ratio=4096)</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v(119): </Dynamic>
+            <Dynamic>72</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>119</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/PWM.v(1): </Dynamic>
+            <Dynamic>PWM</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/AMDemod.v(8): </Dynamic>
+            <Dynamic>AMDemodulator</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(8): </Dynamic>
+            <Dynamic>Multiplier</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(531): </Dynamic>
+            <Dynamic>ND2</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>531</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): </Dynamic>
+            <Dynamic>CCU2C(INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): </Dynamic>
+            <Dynamic>CCU2C(INIT0=16'b0111100010001000,INIT1=16'b0111100010001000,INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(790): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>790</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(806): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>806</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(823): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>823</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(840): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>840</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(857): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>857</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(874): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>874</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(892): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>892</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(973): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>973</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1054): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1054</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1126): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1126</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1224): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1224</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartRX.v(19): </Dynamic>
+            <Dynamic>uart_rx(CLKS_PER_BIT=87)</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartRX.v</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>704</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>868</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>938</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(790): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>790</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(806): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>806</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(823): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>823</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(840): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>840</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(857): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>857</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(874): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>874</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(892): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>892</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(973): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>973</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1054): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1054</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1126): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1126</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1224): </Dynamic>
+            <Dynamic>CIN</Dynamic>
+            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
+            <Navigation>1224</Navigation>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>o_Tx_Serial</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>XOut</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sin_out</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CIC_out_clkSin</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>CICGain</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+</BaliMessageLog>

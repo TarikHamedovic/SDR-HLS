@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE		ispXCF	SYSTEM	"IspXCF.dtd" >
+<ispXCF version="3.12">
+	<Comment></Comment>
+	<Chain>
+		<Comm>JTAG</Comm>
+		<Device>
+			<SelectedProg value="TRUE"/>
+			<Pos>1</Pos>
+			<Vendor>Lattice</Vendor>
+			<Family>ECP5U</Family>
+			<Name>LFE5U-85F</Name>
+			<IDCode>0x41113043</IDCode>
+			<Package>All</Package>
+			<PON>LFE5U-85F</PON>
+			<Bypass>
+				<InstrLen>8</InstrLen>
+				<InstrVal>11111111</InstrVal>
+				<BScanLen>1</BScanLen>
+				<BScanVal>0</BScanVal>
+			</Bypass>
+			<File>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/OneBitSDR_First_Implementation.bit</File>
+			<FileTime>03/19/24 23:10:22</FileTime>
+			<JedecChecksum>0x7422</JedecChecksum>
+			<Operation>Fast Program</Operation>
+			<Option>
+				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<IOState>HighZ</IOState>
+				<PreloadLength>750</PreloadLength>
+				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<SVFProcessor>SVF Processor</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
+				<AccessMode>JTAG</AccessMode>
+			</Option>
+		</Device>
+	</Chain>
+	<ProjectOptions>
+		<Program>SEQUENTIAL</Program>
+		<Process>ENTIRED CHAIN</Process>
+		<OperationOverride>No Override</OperationOverride>
+		<StartTAP>TLR</StartTAP>
+		<EndTAP>TLR</EndTAP>
+		<VerifyUsercode value="FALSE"/>
+		<TCKDelay>1</TCKDelay>
+	</ProjectOptions>
+	<CableOptions>
+		<CableName>USB2</CableName>
+		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>ULX3S FPGA 85K V3.0.8 Location 0000 Serial ULX3S FPGA 85K V3.0.8</USBID>
+	</CableOptions>
+</ispXCF>

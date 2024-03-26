@@ -1,0 +1,1229 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     OneBitSDR_First_Implementation.ngd -o
+     OneBitSDR_First_Implementation_map.ncd -pr
+     OneBitSDR_First_Implementation.prf -mp OneBitSDR_First_Implementation.mrp
+     -lpf /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementati
+     on/OneBitSDR_First_Implementation.lpf -lpf /home/user/Master
+     Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf -gui -msgset
+     /home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  03/19/24  23:07:45
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:   2902 out of 84255 (3%)
+      PFU registers:         2902 out of 83640 (3%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:      2963 out of 41820 (7%)
+      SLICEs as Logic/ROM:   2963 out of 41820 (7%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:       1651 out of 41820 (4%)
+   Number of LUT4s:        4199 out of 83640 (5%)
+      Number used as logic LUTs:        897
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      3302
+      Number used as shift registers:     0
+   Number of PIO sites used: 27 out of 205 (13%)
+      Number of PIO sites used for single ended IOs: 25
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
+     comps in NCD)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 4 (25%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  4
+     Net clk_80mhz: 1584 loads, 1584 rising, 0 falling (Driver: PLL1/PLLInst_0 )
+     
+     Net CIC1_out_clkSin: 153 loads, 153 rising, 0 falling (Driver:
+     CIC1Sin/d_clk_67 )
+     Net uart_rx1/UartClk[2]: 28 loads, 28 rising, 0 falling (Driver:
+     uart_rx1/UartClk_1007_1031__i2 )
+     Net clk_25mhz_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  50
+     Net PWM1/clk_80mhz_enable_1469: 6 loads, 6 LSLICEs
+     Net clk_80mhz_enable_1470: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_881: 25 loads, 25 LSLICEs
+     Net uart_rx1/UartClk_2_enable_30: 9 loads, 9 LSLICEs
+     Net uart_rx1/UartClk_2_enable_15: 4 loads, 4 LSLICEs
+     Net uart_rx1/UartClk_2_enable_2: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_32: 2 loads, 2 LSLICEs
+     Net uart_rx1/UartClk_2_enable_5: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_6: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_4: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_7: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_35: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_34: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_36: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_33: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_831: 2 loads, 2 LSLICEs
+     Net clk_80mhz_enable_891: 5 loads, 5 LSLICEs
+     Net clk_80mhz_enable_1471: 1 loads, 1 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_141: 24 loads, 24 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_64: 30 loads, 30 LSLICEs
+     Net CIC1Sin/v_comb: 19 loads, 19 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_161: 26 loads, 26 LSLICEs
+     Net CIC1Sin/d_clk_tmp_N_1831: 13 loads, 13 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_211: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_261: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_311: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_361: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_411: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_461: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_511: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_561: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_611: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_661: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_711: 26 loads, 26 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_758: 48 loads, 48 LSLICEs
+
+     Net CIC1Cos/clk_80mhz_enable_798: 50 loads, 50 LSLICEs
+     Net CIC1Cos/v_comb: 16 loads, 16 LSLICEs
+     Net CIC1Cos/count_15__N_1458: 24 loads, 24 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_910: 41 loads, 41 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_960: 26 loads, 26 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1010: 49 loads, 49 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1060: 37 loads, 37 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1110: 29 loads, 29 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1160: 50 loads, 50 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1210: 33 loads, 33 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1260: 32 loads, 32 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1310: 50 loads, 50 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1360: 29 loads, 29 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1410: 36 loads, 36 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1460: 50 loads, 50 LSLICEs
+   Number of LSRs:  10
+     Net uart_rx1/r_SM_Main_2: 2 loads, 2 LSLICEs
+     Net uart_rx1/r_Rx_DV: 1 loads, 1 LSLICEs
+     Net uart_rx1/n12631: 9 loads, 9 LSLICEs
+     Net uart_rx1/n17300: 1 loads, 1 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_141: 2 loads, 2 LSLICEs
+     Net CIC1Sin/d_clk_tmp_N_1831: 1 loads, 1 LSLICEs
+     Net CIC1Sin/n12618: 8 loads, 8 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_758: 1 loads, 1 LSLICEs
+     Net CIC1Cos/n12630: 8 loads, 8 LSLICEs
+     Net CIC1Cos/count_15__N_1458: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net MixerOutCos_11: 97 loads
+     Net MixerOutSin_11: 97 loads
+     Net SinCos1/rom_addr0_r_10: 86 loads
+     Net SinCos1/rom_addr0_r_8: 86 loads
+     Net SinCos1/rom_addr0_r_9: 86 loads
+     Net SinCos1/rom_addr0_r_7: 83 loads
+     Net n13099: 66 loads
+     Net CIC1Cos/clk_80mhz_enable_758: 63 loads
+     Net led_c_3: 56 loads
+     Net CICGain_0: 54 loads
+
+
+
+
+   Number of warnings:  2
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: /home/user/Master
+     Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(123): Semantic error in
+     "LOCATE COMP "SDFeedback" SITE "H17" ;": COMP "SDFeedback" cannot be found
+     in design. This preference has been disabled.
+WARNING - map: /home/user/Master
+     Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(124): Semantic error in
+     "IOBUF PORT "SDFeedback" IO_TYPE=LVDS HYSTERESIS=NA CLAMP=ON
+
+     DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;": Port "SDFeedback" does not
+     exist in the design. This preference has been disabled.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_Tx_Serial         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| XOut                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DiffOut             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| PWMOut              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutP1            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutP2            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutP3            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutP4            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutN1            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutN2            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutN3            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PWMOutN4            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sinGen              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sin_out             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CIC_out_clkSin      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+| i_Rx_Serial         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RFIn                | INPUT     | LVDS      |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_pp_0_0 was merged into signal
+     AMDemodulator1/Multiplier1/regb_b_0
+Signal AMDemodulator1/Multiplier2/Multiplier_0_pp_0_0 was merged into signal
+     AMDemodulator1/Multiplier2/regb_b_0
+Signal SinCos1/lx_ne0_inv was merged into signal SinCos1/lx_ne0
+Signal uart_rx1/n12615 was merged into signal uart_rx1/r_Rx_DV
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/t_Multiplier_0_add_4_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/t_Multiplier_0_add_4_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_t_Multiplier_0_4_1/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_t_Multiplier_0_4_1/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_3_11/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_3_11/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_3_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_3_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_add_2_8/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_add_2_8/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_2_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_2_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_1_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_1_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_1_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_1_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_0_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_0_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_0_1/S0 undriven or does not
+     drive anything - clipped.
+
+Signal AMDemodulator1/Multiplier1/Cadd_Multiplier_0_0_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_10_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_10_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_10/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_10/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_10/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_8_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_8_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_8/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_8/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_8/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_6_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_6_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_6/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_6/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_6/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_4_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_4_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_4/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_4/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_4/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_2_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_2_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_2/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_2/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_2/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_0_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_Cadd_0_6/CO undriven or does not
+     drive anything - clipped.
+
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_0/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_0/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier1/Multiplier_0_cin_lr_add_0/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/t_Multiplier_0_add_4_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/t_Multiplier_0_add_4_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_t_Multiplier_0_4_1/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_t_Multiplier_0_4_1/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_3_11/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_3_11/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_3_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_3_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_add_2_8/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_add_2_8/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_2_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_2_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_1_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_1_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_1_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_1_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_0_9/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_0_9/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_0_1/S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Cadd_Multiplier_0_0_1/CI undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_10_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_10_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_10/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_10/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_10/CI undriven or does
+     not drive anything - clipped.
+
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_8_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_8_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_8/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_8/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_8/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_6_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_6_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_6/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_6/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_6/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_4_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_4_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_4/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_4/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_4/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_2_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_2_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_2/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_2/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_2/CI undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_0_6/S1 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_Cadd_0_6/CO undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_0/S1 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_0/S0 undriven or does
+     not drive anything - clipped.
+Signal AMDemodulator1/Multiplier2/Multiplier_0_cin_lr_add_0/CI undriven or does
+     not drive anything - clipped.
+Signal _add_1_1637_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1562_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1562_add_4_38/CO undriven or does not drive anything - clipped.
+
+Signal _add_1_1478_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1478_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1478_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1463_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1463_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1463_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1478_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1460_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1460_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1460_add_4_13/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1460_add_4_13/CO undriven or does not drive anything - clipped.
+Signal _add_1_1565_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1565_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1565_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1565_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1463_add_4_37/CO undriven or does not drive anything - clipped.
+Signal SinCos1/neg_rom_dout_s_n_0/S1 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_s_n_0/S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_s_n_0/CI undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_c_n_6/CO undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_c_n_0/S1 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_c_n_0/S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_c_n_0/CI undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_dout_s_n_6/CO undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_addr0_r_n_3/S1 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_addr0_r_n_3/CO undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_addr0_r_n_0/S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos1/neg_rom_addr0_r_n_0/CI undriven or does not drive anything -
+     clipped.
+Signal _add_1_1517_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1517_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1517_add_4_1/CI undriven or does not drive anything - clipped.
+Signal phase_accum_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal phase_accum_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_4107_65/CO undriven or does not drive anything - clipped.
+Signal add_4106_1/S1 undriven or does not drive anything - clipped.
+Signal add_4106_1/S0 undriven or does not drive anything - clipped.
+Signal add_4106_1/CI undriven or does not drive anything - clipped.
+Signal add_4106_3/S0 undriven or does not drive anything - clipped.
+
+Signal _add_1_1562_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1562_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1490_add_4_37/CO undriven or does not drive anything - clipped.
+Signal add_4106_19/CO undriven or does not drive anything - clipped.
+Signal add_4111_1/S1 undriven or does not drive anything - clipped.
+Signal add_4111_1/S0 undriven or does not drive anything - clipped.
+Signal add_4111_1/CI undriven or does not drive anything - clipped.
+Signal add_4111_3/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_4111_13/CO undriven or does not drive anything - clipped.
+Signal add_4105_1/S1 undriven or does not drive anything - clipped.
+Signal add_4105_1/S0 undriven or does not drive anything - clipped.
+Signal add_4105_1/CI undriven or does not drive anything - clipped.
+Signal add_4105_3/S0 undriven or does not drive anything - clipped.
+Signal add_4105_11/CO undriven or does not drive anything - clipped.
+Signal _add_1_1568_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1568_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal phase_accum_add_4_64/CO undriven or does not drive anything - clipped.
+Signal _add_1_1457_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1457_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_24/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_24/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_26/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_28/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_28/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_30/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_30/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_32/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_32/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_34/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1619_add_4_34/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_36/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_36/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_38/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1619_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1613_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1613_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1613_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1454_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1454_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1454_add_4_13/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1454_add_4_13/CO undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1649_add_4_12/CO undriven or does not drive anything - clipped.
+Signal _add_1_1412_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1412_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1412_add_4_61/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1412_add_4_61/CO undriven or does not drive anything - clipped.
+Signal _add_1_1643_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1643_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1643_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1643_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1640_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1640_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1640_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1640_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1550_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1550_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1550_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1550_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1592_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1592_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_4110_1/S1 undriven or does not drive anything - clipped.
+Signal add_4110_1/S0 undriven or does not drive anything - clipped.
+Signal add_4110_1/CI undriven or does not drive anything - clipped.
+Signal add_4110_3/S0 undriven or does not drive anything - clipped.
+Signal add_4110_19/CO undriven or does not drive anything - clipped.
+Signal add_4100_1/S1 undriven or does not drive anything - clipped.
+Signal add_4100_1/S0 undriven or does not drive anything - clipped.
+Signal add_4100_1/CI undriven or does not drive anything - clipped.
+Signal add_4100_3/S0 undriven or does not drive anything - clipped.
+Signal add_4100_19/CO undriven or does not drive anything - clipped.
+Signal add_4109_1/S1 undriven or does not drive anything - clipped.
+Signal add_4109_1/S0 undriven or does not drive anything - clipped.
+Signal add_4109_1/CI undriven or does not drive anything - clipped.
+
+Signal add_4109_3/S1 undriven or does not drive anything - clipped.
+Signal add_4109_3/S0 undriven or does not drive anything - clipped.
+Signal add_4109_5/S1 undriven or does not drive anything - clipped.
+Signal add_4109_5/S0 undriven or does not drive anything - clipped.
+Signal add_4109_7/S1 undriven or does not drive anything - clipped.
+Signal add_4109_7/S0 undriven or does not drive anything - clipped.
+Signal add_4109_9/S1 undriven or does not drive anything - clipped.
+Signal add_4109_9/S0 undriven or does not drive anything - clipped.
+Signal add_4109_11/S1 undriven or does not drive anything - clipped.
+Signal add_4109_11/S0 undriven or does not drive anything - clipped.
+Signal add_4109_13/S1 undriven or does not drive anything - clipped.
+Signal add_4109_13/S0 undriven or does not drive anything - clipped.
+Signal add_4109_15/S1 undriven or does not drive anything - clipped.
+Signal add_4109_15/S0 undriven or does not drive anything - clipped.
+Signal add_4109_17/S0 undriven or does not drive anything - clipped.
+Signal add_4109_17/CO undriven or does not drive anything - clipped.
+Signal add_4108_1/S1 undriven or does not drive anything - clipped.
+Signal add_4108_1/S0 undriven or does not drive anything - clipped.
+Signal add_4108_1/CI undriven or does not drive anything - clipped.
+Signal add_4108_3/S0 undriven or does not drive anything - clipped.
+Signal add_4108_15/CO undriven or does not drive anything - clipped.
+Signal add_4104_1/S1 undriven or does not drive anything - clipped.
+Signal add_4104_1/S0 undriven or does not drive anything - clipped.
+Signal add_4104_1/CI undriven or does not drive anything - clipped.
+Signal add_4104_3/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1457_add_4_63/CO undriven or does not drive anything - clipped.
+Signal _add_1_1628_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1628_add_4_2/CI undriven or does not drive anything - clipped.
+Signal add_4104_17/CO undriven or does not drive anything - clipped.
+Signal add_4103_1/S1 undriven or does not drive anything - clipped.
+Signal add_4103_1/S0 undriven or does not drive anything - clipped.
+Signal add_4103_1/CI undriven or does not drive anything - clipped.
+Signal add_4103_3/S0 undriven or does not drive anything - clipped.
+Signal add_4103_19/CO undriven or does not drive anything - clipped.
+Signal add_4102_1/S1 undriven or does not drive anything - clipped.
+Signal add_4102_1/S0 undriven or does not drive anything - clipped.
+Signal add_4102_1/CI undriven or does not drive anything - clipped.
+Signal add_4102_3/S0 undriven or does not drive anything - clipped.
+Signal add_4102_19/CO undriven or does not drive anything - clipped.
+Signal add_4099_1/S1 undriven or does not drive anything - clipped.
+Signal add_4099_1/S0 undriven or does not drive anything - clipped.
+Signal add_4099_1/CI undriven or does not drive anything - clipped.
+Signal add_4099_3/S0 undriven or does not drive anything - clipped.
+Signal add_4099_19/CO undriven or does not drive anything - clipped.
+Signal _add_1_1517_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1433_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1433_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1433_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1433_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1583_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1583_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1583_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1583_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1634_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1634_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1634_add_4_38/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1634_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_3/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_3/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_5/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_5/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_7/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_7/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_9/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_11/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_13/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_13/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_15/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_17/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_37/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1469_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1574_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1574_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1574_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1574_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1406_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1406_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1406_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1406_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1472_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1472_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1472_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1472_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1580_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1580_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1580_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1580_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1418_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1418_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1418_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1418_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1652_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1652_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1652_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1415_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1415_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1415_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1415_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1553_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1553_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1553_add_4_38/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1553_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1430_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1430_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1430_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1430_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_1427_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1427_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1427_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1427_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1424_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1424_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1424_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1424_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1475_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1475_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1475_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1475_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1559_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1559_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1559_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1559_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1631_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1631_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1631_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1631_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1514_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1514_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1514_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1514_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1601_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1601_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1601_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_24/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1598_add_4_24/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_26/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_28/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_28/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_30/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_30/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_32/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_32/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_34/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_34/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_36/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_36/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_38/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1598_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1556_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1556_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1556_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1556_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1511_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1511_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1511_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1511_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1508_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1508_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1508_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1508_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1529_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1529_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1529_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1505_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1505_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1505_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1505_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1604_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1604_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1604_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1625_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1625_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1625_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1625_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1502_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1502_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1502_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1502_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1607_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1607_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1607_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1523_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1523_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1487_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1487_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1487_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1523_add_4_38/CO undriven or does not drive anything - clipped.
+
+Signal _add_1_1571_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1571_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1571_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1571_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1499_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1499_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1499_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1499_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1496_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1496_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1496_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1592_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1628_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1628_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1436_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1436_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1436_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1436_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1487_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1445_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1445_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1445_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1445_add_4_17/CO undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_3/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_3/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_5/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_5/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_7/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_7/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_9/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_11/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_11/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_13/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_13/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_15/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_17/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_19/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_21/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1577_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1577_add_4_38/CO undriven or does not drive anything - clipped.
+Signal ISquare_add_4_2/S0 undriven or does not drive anything - clipped.
+
+Signal ISquare_add_4_2/CI undriven or does not drive anything - clipped.
+Signal ISquare_add_4_26/S1 undriven or does not drive anything - clipped.
+Signal ISquare_add_4_26/CO undriven or does not drive anything - clipped.
+Signal _add_1_1493_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1493_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1493_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal uart_rx1/r_Clock_Count_1009_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal uart_rx1/r_Clock_Count_1009_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal uart_rx1/r_Clock_Count_1009_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal uart_rx1/r_Clock_Count_1009_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal uart_rx1/UartClk_1007_1031_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal uart_rx1/UartClk_1007_1031_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal uart_rx1/UartClk_1007_1031_add_4_3/CO undriven or does not drive anything
+     - clipped.
+Signal _add_1_1589_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1589_add_4_20/CO undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_2/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_4/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_4/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_6/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_6/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_8/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_8/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_10/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_10/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_16/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1586_add_4_16/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_18/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_18/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_20/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_20/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_22/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_22/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1496_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_12/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_12/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_14/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1637_add_4_14/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1448_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_38/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1586_add_4_38/CO undriven or does not drive anything - clipped.
+Signal _add_1_1577_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1577_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1421_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1421_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_37/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1484_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1466_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1466_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1466_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1481_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1493_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1466_add_4_37/CO undriven or does not drive anything - clipped.
+Signal _add_1_1421_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1421_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1568_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1568_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1442_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1442_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_1448_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1448_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1448_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_4107_1/S1 undriven or does not drive anything - clipped.
+Signal add_4107_1/S0 undriven or does not drive anything - clipped.
+Signal add_4107_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1490_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1490_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1490_add_4_1/CI undriven or does not drive anything - clipped.
+Signal PWM1/counter_1006_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal PWM1/counter_1006_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal PWM1/counter_1006_add_4_11/S1 undriven or does not drive anything -
+     clipped.
+Signal PWM1/counter_1006_add_4_11/CO undriven or does not drive anything -
+     clipped.
+Signal _add_1_1442_add_4_cout/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1442_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1481_add_4_1/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1481_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1481_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1439_add_4_cout/S1 undriven or does not drive anything - clipped.
+
+Signal _add_1_1439_add_4_cout/CO undriven or does not drive anything - clipped.
+Signal _add_1_1439_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1439_add_4_2/CI undriven or does not drive anything - clipped.
+Block AMDemodulator1/Multiplier1/AND2_t27 was optimized away.
+Block AMDemodulator1/Multiplier2/AND2_t27 was optimized away.
+Block SinCos1/INV_1 was optimized away.
+Block uart_rx1/i2878_1_lut was optimized away.
+Block i2 was optimized away.
+
+     
+
+
+
+<A name="mrp_pll"></A><B><U><big>PLL/DLL Summary</big></U></B>
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                PLL1/PLLInst_0
+  PLL Type:                                         EHXPLLL
+  Input Clock:                             PIN      clk_25mhz_c
+  Input Clock2:                                     NONE
+  Input Clock select:                               NONE
+  Output Clock(P):                         NODE     clk_80mhz
+  Feedback Signal:                         NODE     clk_80mhz
+  Reset Signal:                                     NONE
+  Standby Signal:                          NODE     GND_net
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  83.3333
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     3
+  CLKFB Divider:                                    10
+  CLKOP Divider:                                    7
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
+
+
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: PLL1/PLLInst_0
+         Type: EHXPLLL
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 4 secs  
+   Total REAL Time: 4 secs  
+   Peak Memory Usage: 485 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

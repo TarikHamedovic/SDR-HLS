@@ -1,0 +1,782 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Feb 28 13:22:23 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     AMDemodulator
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 32.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             ISquare_e3__i25  (from clk_c +)
+   Destination:    FD1S3AX    D              d_out_d_i1  (to clk_c +)
+
+   Delay:                  37.657ns  (23.8% logic, 76.2% route), 72 logic levels.
+
+ Constraint Details:
+
+     37.657ns data_path ISquare_e3__i25 to d_out_d_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 32.482ns
+
+ Path Details: ISquare_e3__i25 to d_out_d_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              ISquare_e3__i25 (from clk_c)
+Route        50   e 1.902                                  ISquare[31]
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_2_3_lut
+Route        13   e 1.532                                  n3836
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1229_9
+Route         1   e 0.020                                  n3733
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1229_11
+Route        22   e 1.738                                  d_out_d_11__N_4[17]
+LUT4        ---     0.166              A to Z              i312_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_3
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1232_13
+Route        23   e 1.747                                  d_out_d_11__N_6[17]
+LUT4        ---     0.166              A to Z              i332_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_5
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1233_15
+Route        24   e 1.755                                  d_out_d_11__N_8[17]
+LUT4        ---     0.166              A to Z              i352_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_7
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1228_17
+Route        25   e 1.763                                  d_out_d_11__N_10[17]
+LUT4        ---     0.166              A to Z              i372_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_9
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1227_19
+Route        24   e 1.755                                  d_out_d_11__N_12[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1230_1
+Route         1   e 0.020                                  n3775
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_3
+Route         1   e 0.020                                  n3776
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_5
+Route         1   e 0.020                                  n3777
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_7
+Route         1   e 0.020                                  n3778
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_9
+Route         1   e 0.020                                  n3779
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_11
+Route         1   e 0.020                                  n3780
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_13
+Route         1   e 0.020                                  n3781
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_15
+Route         1   e 0.020                                  n3782
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_17
+Route         1   e 0.020                                  n3783
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1230_19
+Route        23   e 1.747                                  d_out_d_11__N_14[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1231_1
+Route         1   e 0.020                                  n3673
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_3
+Route         1   e 0.020                                  n3674
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_5
+Route         1   e 0.020                                  n3675
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_7
+Route         1   e 0.020                                  n3676
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_9
+Route         1   e 0.020                                  n3677
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_11
+Route         1   e 0.020                                  n3678
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_13
+Route         1   e 0.020                                  n3679
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_15
+Route         1   e 0.020                                  n3680
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_17
+Route         1   e 0.020                                  n3681
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1231_19
+Route        22   e 1.738                                  d_out_d_11__N_16[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1223_1
+Route         1   e 0.020                                  n3701
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_3
+Route         1   e 0.020                                  n3702
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_5
+Route         1   e 0.020                                  n3703
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_7
+Route         1   e 0.020                                  n3704
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_9
+Route         1   e 0.020                                  n3705
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_11
+Route         1   e 0.020                                  n3706
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_13
+Route         1   e 0.020                                  n3707
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_15
+Route         1   e 0.020                                  n3708
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_17
+Route         1   e 0.020                                  n3709
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1223_19
+Route        21   e 1.728                                  d_out_d_11__N_18[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1226_1
+Route         1   e 0.020                                  n3802
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_3
+Route         1   e 0.020                                  n3803
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_5
+Route         1   e 0.020                                  n3804
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_7
+Route         1   e 0.020                                  n3805
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_9
+Route         1   e 0.020                                  n3806
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_11
+Route         1   e 0.020                                  n3807
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_13
+Route         1   e 0.020                                  n3808
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_15
+Route         1   e 0.020                                  n3809
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_17
+Route         1   e 0.020                                  n3810
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1226_19
+Route        20   e 1.719                                  d_out_d_11__N_20[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1225_1
+Route         1   e 0.020                                  n3687
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_3
+Route         1   e 0.020                                  n3688
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_5
+Route         1   e 0.020                                  n3689
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_7
+Route         1   e 0.020                                  n3690
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_9
+Route         1   e 0.020                                  n3691
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_11
+Route         1   e 0.020                                  n3692
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_13
+Route         1   e 0.020                                  n3693
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_15
+Route         1   e 0.020                                  n3694
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_17
+Route         1   e 0.020                                  n3695
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1225_19
+Route         6   e 1.478                                  d_out_d_11__N_22[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_881_add_4_4
+Route         1   e 0.020                                  n3813
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_6
+Route         1   e 0.020                                  n3814
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_8
+Route         1   e 0.020                                  n3815
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_10
+Route         1   e 0.020                                  n3816
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_12
+Route         1   e 0.020                                  n3817
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_14
+Route         1   e 0.020                                  n3818
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_16
+Route         1   e 0.020                                  n3819
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_18
+Route         1   e 0.020                                  n3820
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_881_add_4_20
+Route         1   e 1.020                                  d_out_d_11__N_465[17]
+LUT4        ---     0.166              A to Z              mux_126_i1_3_lut
+Route         1   e 1.020                                  d_out_d_11__N_24[17]
+                  --------
+                   37.657  (23.8% logic, 76.2% route), 72 logic levels.
+
+
+Error:  The following path violates requirements by 32.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             ISquare_e3__i25  (from clk_c +)
+   Destination:    FD1S3AX    D              d_out_d_i1  (to clk_c +)
+
+   Delay:                  37.657ns  (23.8% logic, 76.2% route), 72 logic levels.
+
+ Constraint Details:
+
+     37.657ns data_path ISquare_e3__i25 to d_out_d_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 32.482ns
+
+ Path Details: ISquare_e3__i25 to d_out_d_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              ISquare_e3__i25 (from clk_c)
+Route        50   e 1.902                                  ISquare[31]
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_2_3_lut
+Route        13   e 1.532                                  n3836
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1229_9
+Route         1   e 0.020                                  n3733
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1229_11
+Route        22   e 1.738                                  d_out_d_11__N_4[17]
+LUT4        ---     0.166              A to Z              i312_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_3
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1232_13
+Route        23   e 1.747                                  d_out_d_11__N_6[17]
+LUT4        ---     0.166              A to Z              i332_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_5
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1233_15
+Route        24   e 1.755                                  d_out_d_11__N_8[17]
+LUT4        ---     0.166              A to Z              i352_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_7
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1228_17
+Route        25   e 1.763                                  d_out_d_11__N_10[17]
+LUT4        ---     0.166              A to Z              i372_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_9
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1227_19
+Route        24   e 1.755                                  d_out_d_11__N_12[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1230_1
+Route         1   e 0.020                                  n3775
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_3
+Route         1   e 0.020                                  n3776
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_5
+Route         1   e 0.020                                  n3777
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_7
+Route         1   e 0.020                                  n3778
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_9
+Route         1   e 0.020                                  n3779
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_11
+Route         1   e 0.020                                  n3780
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_13
+Route         1   e 0.020                                  n3781
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_15
+Route         1   e 0.020                                  n3782
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_17
+Route         1   e 0.020                                  n3783
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1230_19
+Route        23   e 1.747                                  d_out_d_11__N_14[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1231_1
+Route         1   e 0.020                                  n3673
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_3
+Route         1   e 0.020                                  n3674
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_5
+Route         1   e 0.020                                  n3675
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_7
+Route         1   e 0.020                                  n3676
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_9
+Route         1   e 0.020                                  n3677
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_11
+Route         1   e 0.020                                  n3678
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_13
+Route         1   e 0.020                                  n3679
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_15
+Route         1   e 0.020                                  n3680
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_17
+Route         1   e 0.020                                  n3681
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1231_19
+Route        22   e 1.738                                  d_out_d_11__N_16[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1223_1
+Route         1   e 0.020                                  n3701
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_3
+Route         1   e 0.020                                  n3702
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_5
+Route         1   e 0.020                                  n3703
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_7
+Route         1   e 0.020                                  n3704
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_9
+Route         1   e 0.020                                  n3705
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_11
+Route         1   e 0.020                                  n3706
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_13
+Route         1   e 0.020                                  n3707
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_15
+Route         1   e 0.020                                  n3708
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_17
+Route         1   e 0.020                                  n3709
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1223_19
+Route        21   e 1.728                                  d_out_d_11__N_18[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1226_1
+Route         1   e 0.020                                  n3802
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_3
+Route         1   e 0.020                                  n3803
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_5
+Route         1   e 0.020                                  n3804
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_7
+Route         1   e 0.020                                  n3805
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_9
+Route         1   e 0.020                                  n3806
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_11
+Route         1   e 0.020                                  n3807
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_13
+Route         1   e 0.020                                  n3808
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_15
+Route         1   e 0.020                                  n3809
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_17
+Route         1   e 0.020                                  n3810
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1226_19
+Route        20   e 1.719                                  d_out_d_11__N_20[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1225_1
+Route         1   e 0.020                                  n3687
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_3
+Route         1   e 0.020                                  n3688
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_5
+Route         1   e 0.020                                  n3689
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_7
+Route         1   e 0.020                                  n3690
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_9
+Route         1   e 0.020                                  n3691
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_11
+Route         1   e 0.020                                  n3692
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_13
+Route         1   e 0.020                                  n3693
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_15
+Route         1   e 0.020                                  n3694
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_17
+Route         1   e 0.020                                  n3695
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1225_19
+Route         6   e 1.478                                  d_out_d_11__N_22[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_881_add_4_4
+Route         1   e 0.020                                  n3813
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_6
+Route         1   e 0.020                                  n3814
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_8
+Route         1   e 0.020                                  n3815
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_10
+Route         1   e 0.020                                  n3816
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_12
+Route         1   e 0.020                                  n3817
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_14
+Route         1   e 0.020                                  n3818
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_16
+Route         1   e 0.020                                  n3819
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_18
+Route         1   e 0.020                                  n3820
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_881_add_4_20
+Route         1   e 1.020                                  d_out_d_11__N_465[17]
+LUT4        ---     0.166              A to Z              mux_126_i1_3_lut
+Route         1   e 1.020                                  d_out_d_11__N_24[17]
+                  --------
+                   37.657  (23.8% logic, 76.2% route), 72 logic levels.
+
+
+Error:  The following path violates requirements by 32.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             ISquare_e3__i25  (from clk_c +)
+   Destination:    FD1S3AX    D              d_out_d_i1  (to clk_c +)
+
+   Delay:                  37.657ns  (23.8% logic, 76.2% route), 72 logic levels.
+
+ Constraint Details:
+
+     37.657ns data_path ISquare_e3__i25 to d_out_d_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 32.482ns
+
+ Path Details: ISquare_e3__i25 to d_out_d_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              ISquare_e3__i25 (from clk_c)
+Route        50   e 1.902                                  ISquare[31]
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_2_3_lut
+Route        13   e 1.532                                  n3836
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1229_9
+Route         1   e 0.020                                  n3733
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1229_11
+Route        22   e 1.738                                  d_out_d_11__N_4[17]
+LUT4        ---     0.166              A to Z              i312_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_3
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1232_13
+Route        23   e 1.747                                  d_out_d_11__N_6[17]
+LUT4        ---     0.166              A to Z              i332_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_5
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1233_15
+Route        24   e 1.755                                  d_out_d_11__N_8[17]
+LUT4        ---     0.166              A to Z              i352_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_7
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1228_17
+Route        25   e 1.763                                  d_out_d_11__N_10[17]
+LUT4        ---     0.166              A to Z              i372_1_lut
+Route         3   e 1.239                                  d_out_d_11__N_9
+A1_TO_F     ---     0.166           A[2] to S[2]           add_1227_19
+Route        24   e 1.755                                  d_out_d_11__N_12[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1230_1
+Route         1   e 0.020                                  n3775
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_3
+Route         1   e 0.020                                  n3776
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_5
+Route         1   e 0.020                                  n3777
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_7
+Route         1   e 0.020                                  n3778
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_9
+Route         1   e 0.020                                  n3779
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_11
+Route         1   e 0.020                                  n3780
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_13
+Route         1   e 0.020                                  n3781
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_15
+Route         1   e 0.020                                  n3782
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1230_17
+Route         1   e 0.020                                  n3783
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1230_19
+Route        23   e 1.747                                  d_out_d_11__N_14[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1231_1
+Route         1   e 0.020                                  n3673
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_3
+Route         1   e 0.020                                  n3674
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_5
+Route         1   e 0.020                                  n3675
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_7
+Route         1   e 0.020                                  n3676
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_9
+Route         1   e 0.020                                  n3677
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_11
+Route         1   e 0.020                                  n3678
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_13
+Route         1   e 0.020                                  n3679
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_15
+Route         1   e 0.020                                  n3680
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1231_17
+Route         1   e 0.020                                  n3681
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1231_19
+Route        22   e 1.738                                  d_out_d_11__N_16[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1223_1
+Route         1   e 0.020                                  n3701
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_3
+Route         1   e 0.020                                  n3702
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_5
+Route         1   e 0.020                                  n3703
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_7
+Route         1   e 0.020                                  n3704
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_9
+Route         1   e 0.020                                  n3705
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_11
+Route         1   e 0.020                                  n3706
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_13
+Route         1   e 0.020                                  n3707
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_15
+Route         1   e 0.020                                  n3708
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1223_17
+Route         1   e 0.020                                  n3709
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1223_19
+Route        21   e 1.728                                  d_out_d_11__N_18[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1226_1
+Route         1   e 0.020                                  n3802
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_3
+Route         1   e 0.020                                  n3803
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_5
+Route         1   e 0.020                                  n3804
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_7
+Route         1   e 0.020                                  n3805
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_9
+Route         1   e 0.020                                  n3806
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_11
+Route         1   e 0.020                                  n3807
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_13
+Route         1   e 0.020                                  n3808
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_15
+Route         1   e 0.020                                  n3809
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1226_17
+Route         1   e 0.020                                  n3810
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1226_19
+Route        20   e 1.719                                  d_out_d_11__N_20[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_1225_1
+Route         1   e 0.020                                  n3687
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_3
+Route         1   e 0.020                                  n3688
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_5
+Route         1   e 0.020                                  n3689
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_7
+Route         1   e 0.020                                  n3690
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_9
+Route         1   e 0.020                                  n3691
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_11
+Route         1   e 0.020                                  n3692
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_13
+Route         1   e 0.020                                  n3693
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_15
+Route         1   e 0.020                                  n3694
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_1225_17
+Route         1   e 0.020                                  n3695
+FCI_TO_F    ---     0.322            CIN to S[2]           add_1225_19
+Route         6   e 1.478                                  d_out_d_11__N_22[17]
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_881_add_4_4
+Route         1   e 0.020                                  n3813
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_6
+Route         1   e 0.020                                  n3814
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_8
+Route         1   e 0.020                                  n3815
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_10
+Route         1   e 0.020                                  n3816
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_12
+Route         1   e 0.020                                  n3817
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_14
+Route         1   e 0.020                                  n3818
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_16
+Route         1   e 0.020                                  n3819
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_881_add_4_18
+Route         1   e 0.020                                  n3820
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_881_add_4_20
+Route         1   e 1.020                                  d_out_d_11__N_465[17]
+LUT4        ---     0.166              A to Z              mux_126_i1_3_lut
+Route         1   e 1.020                                  d_out_d_11__N_24[17]
+                  --------
+                   37.657  (23.8% logic, 76.2% route), 72 logic levels.
+
+Warning: 37.482 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    37.482 ns|    72 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+d_out_d_11__N_3                         |       3|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_4[17]                     |      22|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_5                         |       3|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_6[17]                     |      23|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_7                         |       3|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_8[17]                     |      24|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_9                         |       3|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_10[17]                    |      25|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_12[17]                    |      24|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_14[17]                    |      23|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_16[17]                    |      22|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_18[17]                    |      21|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_20[17]                    |      20|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_22[17]                    |       6|    4096|     99.00%
+                                        |        |        |
+d_out_d_11__N_24[17]                    |       1|    4096|     99.00%
+                                        |        |        |
+n3677                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3678                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3679                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3680                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3681                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3691                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3692                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3693                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3694                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3695                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3705                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3706                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3707                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3708                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3709                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3733                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3779                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3780                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3781                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3782                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3783                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3806                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3807                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3808                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3809                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3810                                   |       1|    4096|     99.00%
+                                        |        |        |
+n3676                                   |       1|    4064|     99.22%
+                                        |        |        |
+n3690                                   |       1|    4064|     99.22%
+                                        |        |        |
+n3704                                   |       1|    4064|     99.22%
+                                        |        |        |
+n3778                                   |       1|    4064|     99.22%
+                                        |        |        |
+n3805                                   |       1|    4064|     99.22%
+                                        |        |        |
+ISquare[31]                             |      50|    4000|     97.66%
+                                        |        |        |
+n3777                                   |       1|    3968|     96.88%
+                                        |        |        |
+n3836                                   |      13|    3952|     96.48%
+                                        |        |        |
+n3675                                   |       1|    3936|     96.09%
+                                        |        |        |
+n3703                                   |       1|    3904|     95.31%
+                                        |        |        |
+n3804                                   |       1|    3872|     94.53%
+                                        |        |        |
+n3689                                   |       1|    3840|     93.75%
+                                        |        |        |
+n3776                                   |       1|    3648|     89.06%
+                                        |        |        |
+n3674                                   |       1|    3616|     88.28%
+                                        |        |        |
+n3702                                   |       1|    3579|     87.38%
+                                        |        |        |
+n3803                                   |       1|    3537|     86.35%
+                                        |        |        |
+n3688                                   |       1|    3492|     85.25%
+                                        |        |        |
+n3687                                   |       1|    2692|     65.72%
+                                        |        |        |
+n3802                                   |       1|    2692|     65.72%
+                                        |        |        |
+n3673                                   |       1|    2691|     65.70%
+                                        |        |        |
+n3701                                   |       1|    2691|     65.70%
+                                        |        |        |
+n3775                                   |       1|    2690|     65.67%
+                                        |        |        |
+d_out_d_11__N_465[17]                   |       1|    2048|     50.00%
+                                        |        |        |
+d_out_d_11__N_483[17]                   |       1|    2048|     50.00%
+                                        |        |        |
+n3813                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3814                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3815                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3816                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3817                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3818                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3819                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3820                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3822                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3823                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3824                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3825                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3826                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3827                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3828                                   |       1|    2048|     50.00%
+                                        |        |        |
+n3821                                   |       1|    1712|     41.80%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 132227632
+
+Constraints cover >4294967295 paths, 1093 nets, and 2243 connections (97.9% coverage)
+
+
+Peak memory: 308948992 bytes, TRCE: 30846976 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 1 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
