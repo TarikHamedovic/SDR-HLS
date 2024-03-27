@@ -5,6 +5,27 @@ of receiving AM broadcasts with minimal analog components. The project underscor
 
 In the forthcoming sections, we will go into the operational principles of the project, alongside potential enhancements, alterations, and comprehensive discussions on the DSP Modules integral to the SDR Receiver. Additionally, the project’s transition to a different platform, specifically the ULX3S board, will be outlined. Furthermore, the performance and functionality of the SDR Receiver will be evaluated through both Verilog and High-Level Synthesis (HLS) testing methodologies.
 
+## Zero-IF Recievers
+In this project a Zero-IF Reciever Architecture is implemented. The zero-IF (ZIF) or Direct-RF architecture presents an innovative alternative to the traditional superheterodyne receiver design, streamlining the frequency
+conversion process and reducing component complexity. In this architecture, the signal’s conversion to baseband is achieved through a singular frequency mixing stage, where the local oscillator (LO) is precisely tuned to the signal’s frequency band. This approach effectively translates the received signal directly to baseband, processing it in both phase (I) and quadrature (Q) components. This method significantly reduces the need for complex and expensive RF/IF filtering, as all necessary filtering is performed at the baseband level. Here, filters are simpler, more cost-effective, and easier to design.
+
+![ZeroIF](Images/ZeroIF.png)
+
+
+# Software Defined Radio(SDR)
+
+A Software-Defined Radio (SDR) system is a sophisticated device designed to enable efficient data transmission and reception. At its core, an SDR system transforms infor- mation—whether speech, music, or video—into a digital format, processes it, and then transmits it as an electromagnetic wave with specific characteristics like amplitude, frequency, and phase. This digital communication process involves converting analog signals
+into binary form through quantization for digital processing and transmission. On the receiving end, the SDR decodes the transmitted signals, navigating through noise and distortion, to reconstruct the original information.
+
+Despite the implication of the name, SDR is not confined to software or processor-based platforms alone. Its defining feature is its flexibility, enabling it to support various air interfaces and adapt the signal processing chain quickly and efficiently. This adaptability makes SDR a dynamic tool in modern telecommunications, capable of meeting the evolving demands of digital communication.
+
+![SDR General](Images/SDRGeneral.png)
+
+A typical Software-Defined Radio (SDR) transceiver is composed of four principal components: Signal Processing, Digital Front End, Analog RF Front End, and an Antenna[1].
+The schematic representation of a contemporary digital communication system, depicted above, demonstrates the dynamic nature of SDR technology, emphasizing its reconfigurable and programmable capabilities.
+
+
+
 # 1bit SDR Project
 ![1-bit SDR Block Diagram](Images/MyBlockDiagram.png)
 
@@ -22,6 +43,21 @@ The ULX3S board is available in various models, differentiated primarily by thei
 
 ![ULX3S Front](Images/ULX3SFront.png)
 ![ULX3S Back](Images/ULX3SBack.png)
+
+
+# High Level Synthesis(HLS)
+Field Programmable Gate Arrays (FPGAs) are versatile integrated circuits that can be reconfigured after manufacturing, allowing for custom circuit implementations. This re-
+configurability provides a unique advantage over fixed-architecture processors like CPUs and GPUs, making FPGAs suitable for a wide range of applications, from ASIC proto-
+typing to hardware acceleration. The evolution of FPGA technology has led to increased complexity and capabilities, including multi-die devices and system-level interconnects,
+encouraging both academic and industry investment. However, FPGA programming remains challenging due to its complex design process, historically reliant on Hardware
+Description Languages (HDLs) such as Verilog and VHDL.High-Level Synthesis (HLS) emerges as a solution to simplify FPGA design, allowing hardware functionality to be specified through software programs at a higher abstraction level. HLS tools automate the translation of behavioral descriptions into Register Transfer Level (RTL) designs, tailored to the target technology and optimizing interface and memory elements. This approach reduces time-to-market and addresses the complexity of modern systems, offering a balance between the flexibility of general-purpose processors and the efficiency of ASICs.
+
+## Amaranth
+The Software-Defined Radio (SDR) development embraces High-Level Synthesis (HLS) through the innovative use of Amaranth. Amaranth, previously known as nMigen, represents a modern approach to hardware description, allowing for a higher level of abstraction and expressivity compared to traditional Hardware Description Languages (HDLs).
+
+### Why Amaranth?
+
+Amaranth offers a unique combination of advantages for our SDR implementation. Its expressive syntax and compact code representation make the design process more intuitive and significantly more efficient. Built on Python, it benefits from easy integration with the vast Python ecosystem, enhancing our capabilities in simulation, testing, and deployment. Designs crafted in Amaranth are inherently portable, making it simpler to adapt and reconfigure the SDR architecture across different FPGA platforms. Additionally, the growing community around Amaranth provides extensive resources, documentation, and support, which is invaluable for our development efforts. The strategy with Amaranth involves a modular design approach, defining key SDR components such as the Mixer, NCO, and Filters as separate, self-contained modules.
 
 
 # DSP Modules
