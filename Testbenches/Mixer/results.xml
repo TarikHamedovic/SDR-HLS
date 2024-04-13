@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1711764989" />
+    <testcase name="test_mixer_behavior" classname="Mixer_tb" file="/home/user/Master Thesis/1bitSDR/1bitSDRLattice/Testbench/Mixer/Mixer_tb.py" lineno="32" time="0.0040149688720703125" sim_time_ns="3.001" ratio_time="747.452868408551">
+      <failure message="Test failed with RANDOM_SEED=1711764989" />
+    </testcase>
+  </testsuite>
+</testsuites>

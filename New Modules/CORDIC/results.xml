@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1712996208" />
+    <testcase name="test_cordic_sine_cosine" classname="cordic_tb" file="/home/user/Master Thesis/CORDIC/cordic_tb.py" lineno="14" time="127.53510308265686" sim_time_ns="237525.001" ratio_time="1862.4284236949063" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1711832567" />
+    <testcase name="PWM_test" classname="PWM_tb" file="/home/user/Master Thesis/1bitSDR/1bitSDRLattice/Testbench/PWM/PWM_tb.py" lineno="9" time="2.2161428928375244" sim_time_ns="66625.001" ratio_time="30063.495100126012" />
+  </testsuite>
+</testsuites>
