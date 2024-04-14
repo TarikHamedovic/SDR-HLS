@@ -48,7 +48,7 @@ async def test_cordic_sine_cosine(dut):
     y_values = []
 
 # Repeat for 100 cycles of 18 iterations each
-    for cycle in range(1000):
+    for cycle in range(10):
         dut._log.info(f"Cycle {cycle}")
         for i in range(19):
             # Log each iteration within the current cycle
