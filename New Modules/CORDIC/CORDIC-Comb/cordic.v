@@ -272,7 +272,7 @@ module	cordic#(
 		o_xval <= 0;
 		o_yval <= 0;
 		o_aux  <= 0;
-	end else if (i_ce)
+	end else
 	begin
 		o_xval <= pre_xval[(WW-1):(WW-OW)];
 		o_yval <= pre_yval[(WW-1):(WW-OW)];
