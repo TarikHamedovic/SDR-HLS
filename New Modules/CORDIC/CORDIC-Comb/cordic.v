@@ -71,6 +71,7 @@ module	cordic#(
 	reg	signed	[(WW-1):0]	yv	[0:(NSTAGES)];
 	reg		[(PW-1):0]	ph	[0:(NSTAGES)];
 	reg		[(NSTAGES):0]	ax;
+	reg 					comb;
 	// }}}
 
 	// Sign extend our inputs
@@ -117,7 +118,8 @@ module	cordic#(
 	begin
 		xv[0] = 0; yv[0] = 0; ph[0] = 0;
 	end else
-	begin
+	begin	
+		comb <= 1'b1;
 		// {{{
 		// Walk through all possible quick phase shifts necessary
 		// to constrain the input to within +/- 45 degrees.
@@ -224,28 +226,28 @@ module	cordic#(
 	// CORDIC rotations
 	// {{{
 	
-
-    genvar i;
+	genvar i;
     generate
         for (i = 0; i < NSTAGES; i = i + 1) begin : CORDICops
-            wire signed [(WW-1):0] next_xv, next_yv;
-            wire [(PW-1):0] next_ph;
 
-            assign next_xv = (ph[i][PW-1]) ?
+			initial begin
+				xv[i+1] = 0;
+				yv[i+1] = 0;
+				ph[i+1] = 0;
+			end
+
+            assign xv[i+1] = (ph[i][PW-1]) ?
                              (xv[i] + (yv[i] >>> (i+1))) :  // If phase is negative, rotate clockwise
                              (xv[i] - (yv[i] >>> (i+1)));   // If phase is positive, rotate counter-clockwise
 
-            assign next_yv = (ph[i][PW-1]) ?
+            assign yv[i+1] = (ph[i][PW-1]) ?
                              (yv[i] - (xv[i] >>> (i+1))) :
                              (yv[i] + (xv[i] >>> (i+1)));
 
-            assign next_ph = (ph[i][PW-1]) ?
+            assign ph[i+1] = (ph[i][PW-1]) ?
                              (ph[i] + cordic_angle[i]) :
                              (ph[i] - cordic_angle[i]);
 
-            assign xv[i+1] = next_xv;
-            assign yv[i+1] = next_yv;
-            assign ph[i+1] = next_ph;
         end
     endgenerate
 
