@@ -240,8 +240,7 @@ module	cordic#(
 		end
 
 		always @(posedge i_clk)
-	if (i_reset)
-		begin
+		if (i_reset) begin
 			// {{{
 			xv[i+1] <= 0;
 			yv[i+1] <= 0;

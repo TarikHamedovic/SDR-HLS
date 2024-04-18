@@ -67,11 +67,14 @@ module	cordic#(
 	// Declare variables for all of the separate stages
 	// {{{
 	wire	signed [(WW-1):0]	e_xval, e_yval;
-	reg	signed	[(WW-1):0]	xv	[0:(NSTAGES)];
-	reg	signed	[(WW-1):0]	yv	[0:(NSTAGES)];
-	reg		[(PW-1):0]	ph	[0:(NSTAGES)];
+	wire	signed	[(WW-1):0]	xv	[0:(NSTAGES)];
+	wire	signed	[(WW-1):0]	yv	[0:(NSTAGES)];
+	wire		[(PW-1):0]	ph	[0:(NSTAGES)];
 	reg		[(NSTAGES):0]	ax;
-	reg 					comb;
+
+	reg	signed	[(WW-1):0]	xv_reg	[0:(NSTAGES)];
+	reg	signed	[(WW-1):0]	yv_reg	[0:(NSTAGES)];
+	reg		[(PW-1):0]	ph_reg	[0:(NSTAGES)];
 	// }}}
 
 	// Sign extend our inputs
@@ -113,13 +116,8 @@ module	cordic#(
 	//		degrees but in units of normalized phase
 	// Initialize arrays
 
-	always @(posedge i_clk)
-	if (i_reset)
-	begin
-		xv[0] = 0; yv[0] = 0; ph[0] = 0;
-	end else
+	always @*
 	begin	
-		comb <= 1'b1;
 		// {{{
 		// Walk through all possible quick phase shifts necessary
 		// to constrain the input to within +/- 45 degrees.
@@ -128,63 +126,64 @@ module	cordic#(
 		case(i_phase[(PW-1):(PW-3)])
 		3'b000: begin	// 0 .. 45, No change
 		// {{{
-			xv[0] <= e_xval;
-			yv[0] <= e_yval;
-			ph[0] <= i_phase;
+			xv_reg[0] = e_xval;
+			yv_reg[0] = e_yval;
+			ph_reg[0] = i_phase;
 			end
 			// }}}
 		3'b001: begin	// 45 .. 90
 		// {{{
-			xv[0] <= -e_yval;
-			yv[0] <= e_xval;
-			ph[0] <= i_phase - 20'h40000;
+			xv_reg[0] = -e_yval;
+			yv_reg[0] = e_xval;
+			ph_reg[0] = i_phase - 20'h40000;
 			end
 			// }}}
 		3'b010: begin	// 90 .. 135
 		// {{{
-			xv[0] <= -e_yval;
-			yv[0] <= e_xval;
-			ph[0] <= i_phase - 20'h40000;
+			xv_reg[0] = -e_yval;
+			yv_reg[0] = e_xval;
+			ph_reg[0] = i_phase - 20'h40000;
 			end
 			// }}}
 		3'b011: begin	// 135 .. 180
 		// {{{
-			xv[0] <= -e_xval;
-			yv[0] <= -e_yval;
-			ph[0] <= i_phase - 20'h80000;
+			xv_reg[0] = -e_xval;
+			yv_reg[0] = -e_yval;
+			ph_reg[0] = i_phase - 20'h80000;
 			end
 			// }}}
 		3'b100: begin	// 180 .. 225
 		// {{{
-			xv[0] <= -e_xval;
-			yv[0] <= -e_yval;
-			ph[0] <= i_phase - 20'h80000;
+			xv_reg[0] = -e_xval;
+			yv_reg[0] = -e_yval;
+			ph_reg[0] = i_phase - 20'h80000;
 			end
 			// }}}
 		3'b101: begin	// 225 .. 270
 		// {{{
-			xv[0] <= e_yval;
-			yv[0] <= -e_xval;
-			ph[0] <= i_phase - 20'hc0000;
+			xv_reg[0] = e_yval;
+			yv_reg[0] = -e_xval;
+			ph_reg[0] = i_phase - 20'hc0000;
 			end
 			// }}}
 		3'b110: begin	// 270 .. 315
 		// {{{
-			xv[0] <= e_yval;
-			yv[0] <= -e_xval;
-			ph[0] <= i_phase - 20'hc0000;
+			xv_reg[0] = e_yval;
+			yv_reg[0] = -e_xval;
+			ph_reg[0] = i_phase - 20'hc0000;
 			end
 			// }}}
 		3'b111: begin	// 315 .. 360, No change
 		// {{{
-			xv[0] <= e_xval;
-			yv[0] <= e_yval;
-			ph[0] <= i_phase;
+			xv_reg[0] = e_xval;
+			yv_reg[0] = e_yval;
+			ph_reg[0] = i_phase;
 			end
 			// }}}
 		endcase
 		// }}}
 	end
+
 	// }}}
 	// Cordic angle table
 	// {{{
@@ -226,15 +225,9 @@ module	cordic#(
 	// CORDIC rotations
 	// {{{
 	
-	genvar i;
     generate
-        for (i = 0; i < NSTAGES; i = i + 1) begin : CORDICops
+        for (genvar i = 0; i < NSTAGES; i = i + 1) begin : CORDICops
 
-			initial begin
-				xv[i+1] = 0;
-				yv[i+1] = 0;
-				ph[i+1] = 0;
-			end
 
             assign xv[i+1] = (ph[i][PW-1]) ?
                              (xv[i] + (yv[i] >>> (i+1))) :  // If phase is negative, rotate clockwise
