@@ -43,4 +43,12 @@ module Mixer
         end
     end
 
+
+  //----------------------------- 
+  // For sim only
+  //----------------------------- 
+   initial begin
+      $dumpfile("mixer_waves.vcd");
+      $dumpvars;
+   end
 endmodule

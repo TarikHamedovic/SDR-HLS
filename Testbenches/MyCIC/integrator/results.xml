@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1713516641" />
+    <testcase name="integrator_test" classname="integrator_tb" file="/home/user/SDR-HLS/Testbenches/MyCIC/integrator/integrator_tb.py" lineno="11" time="0.07271027565002441" sim_time_ns="1267.501" ratio_time="17432.212829185915" />
+  </testsuite>
+</testsuites>

@@ -58,7 +58,7 @@ module AMDemodulator
           r = left + right;
         else    //subtract if r is positive
           r = left - right;
-        q = {q[14:0],!r[17]};       
+          q = {q[14:0],!r[17]};       
       end
       sqrt = q;   //final assignment of output.
     end
@@ -81,9 +81,12 @@ module AMDemodulator
   end
 
 
-initial begin
-	$dumpfile("AMDemod_waves.vcd");
-	$dumpvars;
-end
+ //----------------------------- 
+ // For sim only
+ //----------------------------- 
+    initial begin
+        $dumpfile("AMDemod_waves.vcd");
+        $dumpvars;
+    end
 
 endmodule

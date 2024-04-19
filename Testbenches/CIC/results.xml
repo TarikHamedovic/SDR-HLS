@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1713471697" />
+    <testcase name="test_CIC_behavior" classname="CIC_tb" file="/home/user/SDR-HLS/Testbenches/CIC/CIC_tb.py" lineno="10" time="0.04269886016845703" sim_time_ns="2487.501" ratio_time="58256.84784526389" />
+  </testsuite>
+</testsuites>

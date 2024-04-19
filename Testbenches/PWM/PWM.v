@@ -24,7 +24,7 @@ always @(posedge clk)
 	begin
 		counter <= counter + 1'b 1;
 		if (counter == 0)
-			DataInReg <= DataIn+  10'd 512;
+			DataInReg <= DataIn +  10'd 512;
 //			DataInNoSign <= DataIn +  12'd 2048;
 	
 //		if (counter > (DataInNoSign))  //DataIn is signed

@@ -3,6 +3,8 @@ from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge, FallingEdge, Timer
 import math
 import matplotlib.pyplot as plt
+import numpy as np
+from numpy.fft import fft, ifft
 
 
 def print_vars(dut):
@@ -35,8 +37,8 @@ async def test_cordic_sine_cosine(dut):
 
 
     dut._log.info("Input Values")
-    #phase_increment = 19661 #for 80 MHz
-    phase_increment = 16384 # for 1.25Mhz output frequency
+    phase_increment = 19661 #for 80 MHz
+    #phase_increment = 16384 # for 1.25Mhz output frequency
     #phase_increment = 31520 # for 50 MHz
     dut.i_xval.value = 4095
     dut.i_yval.value = 0
@@ -60,13 +62,30 @@ async def test_cordic_sine_cosine(dut):
         x_values.append(x_decimal)
         y_values.append(y_decimal)
     
-    dut._log.info(f"Monitor: x_values = {x_values}")
+    #dut._log.info(f"Monitor: x_values = {x_values}")
+    plt.figure();
     plt.plot(x_values)
     plt.plot(y_values)
     plt.show()
 
-        
-
-
-
-
+	
+    sr = 80e6
+    T = 1/sr
+    L = len(x_values)
+    t = np.linspace(0, L-1, L)*T  # Time vector
+    fft_values = np.fft.fft(x_values)
+    P2 = np.abs(fft_values/L)
+    P1 = P2[:L//2 + 1]
+    P1[1:-1] = 2 * P1[1:-1]
+    
+    P1_dB = 20 * np.log10(P1)
+    P1_dB[P1_dB == -np.inf] = np.min(P1_dB[np.isfinite(P1_dB)])  # Replace -inf with min non-infinite value
+    
+    frequencies = np.fft.fftfreq(L, T)[:L//2+1]  # One side frequency range
+    plt.figure()
+    plt.plot(frequencies, P1_dB, 'o')
+    plt.title('Single-Sided Amplitude Spectrum of the Signal')
+    plt.xlabel('Frequency (Hz)') 
+    plt.ylabel('Magnitude') 
+    plt.grid()
+    plt.show()
