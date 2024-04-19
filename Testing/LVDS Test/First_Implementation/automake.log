@@ -1,0 +1,492 @@
+
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "LVDS_First_Implementation.ngd" -o "LVDS_First_Implementation_map.ncd" -pr "LVDS_First_Implementation.prf" -mp "LVDS_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/Testing/LVDS Test/First_Implementation/LVDS_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf"             
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: LVDS_First_Implementation.ngd
+   Picdevice="LFE5U-85F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-85FCABGA381, Performance used: 6.
+
+    <postMsg mid="1100523" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(9): Semantic error in &quot;FREQUENCY PORT &quot;clk_25mhz&quot; 25.000000 MHz ;&quot;: " arg1="&quot;clk_25mhz&quot; matches no ports in the design. " arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="9"  />
+    <postMsg mid="1100641" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(46): Semantic error in &quot;IOBUF PORT &quot;i_LVDS_p&quot; IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: " arg1="Key IO_TYPE=LVDS25 is not supported for this device. Default value LVCMOS25 will be used. &#xA;" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="46"  />
+    <postMsg mid="1100641" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(49): Semantic error in &quot;IOBUF PORT &quot;i_LVDS_n&quot; IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: " arg1="Key IO_TYPE=LVDS25 is not supported for this device. Default value LVCMOS25 will be used. &#xA;" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="49"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(7): Semantic error in &quot;LOCATE COMP &quot;clk_25mhz&quot; SITE &quot;G2&quot; ;&quot;: " arg1="clk_25mhz" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="7"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(8): Semantic error in &quot;IOBUF PORT &quot;clk_25mhz&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: " arg1="clk_25mhz" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="8"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(23): Semantic error in &quot;LOCATE COMP &quot;led[7]&quot; SITE &quot;H3&quot; ;&quot;: " arg1="led[7]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="23"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(24): Semantic error in &quot;LOCATE COMP &quot;led[6]&quot; SITE &quot;E1&quot; ;&quot;: " arg1="led[6]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="24"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(25): Semantic error in &quot;LOCATE COMP &quot;led[5]&quot; SITE &quot;E2&quot; ;&quot;: " arg1="led[5]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="25"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(26): Semantic error in &quot;LOCATE COMP &quot;led[4]&quot; SITE &quot;D1&quot; ;&quot;: " arg1="led[4]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="26"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(27): Semantic error in &quot;LOCATE COMP &quot;led[3]&quot; SITE &quot;D2&quot; ;&quot;: " arg1="led[3]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="27"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(28): Semantic error in &quot;LOCATE COMP &quot;led[2]&quot; SITE &quot;C1&quot; ;&quot;: " arg1="led[2]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="28"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(29): Semantic error in &quot;LOCATE COMP &quot;led[1]&quot; SITE &quot;C2&quot; ;&quot;: " arg1="led[1]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="29"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(30): Semantic error in &quot;LOCATE COMP &quot;led[0]&quot; SITE &quot;B2&quot; ;&quot;: " arg1="led[0]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="30"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(31): Semantic error in &quot;IOBUF PORT &quot;led[0]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[0]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="31"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(32): Semantic error in &quot;IOBUF PORT &quot;led[1]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[1]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="32"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(33): Semantic error in &quot;IOBUF PORT &quot;led[2]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[2]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="33"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(34): Semantic error in &quot;IOBUF PORT &quot;led[3]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[3]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="34"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(35): Semantic error in &quot;IOBUF PORT &quot;led[4]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[4]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="35"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(36): Semantic error in &quot;IOBUF PORT &quot;led[5]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[5]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="36"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(37): Semantic error in &quot;IOBUF PORT &quot;led[6]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[6]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="37"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(38): Semantic error in &quot;IOBUF PORT &quot;led[7]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="led[7]" arg2="/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf" arg3="38"  />
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of registers:      1 out of 84255 (0%)
+      PFU registers:            1 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:         1 out of 41820 (0%)
+      SLICEs as Logic/ROM:      1 out of 41820 (0%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:          0 out of 41820 (0%)
+   Number of LUT4s:          1 out of 83640 (0%)
+      Number used as logic LUTs:          1
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        0
+      Number used as shift registers:     0
+   Number of PIO sites used: 6 out of 205 (3%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net i_clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO i_clk )
+   Number of Clock Enables:  0
+   Number of LSRs:  1
+     Net i_LVDS_p_c: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net i_LVDS_p_c: 2 loads
+     Net i_LVDS_n_c: 1 loads
+     Net i_reset_c: 1 loads
+     Net n1: 1 loads
+     Net o_LVDS_c: 1 loads
+ 
+
+   Number of warnings:  21
+   Number of errors:    0
+
+
+
+Total CPU Time: 2 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 451 MB
+
+Dumping design to file LVDS_First_Implementation_map.ncd.
+
+ncd2vdb "LVDS_First_Implementation_map.ncd" ".vdbs/LVDS_First_Implementation_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+
+mpartrce -p "LVDS_First_Implementation.p2t" -f "LVDS_First_Implementation.p3t" -tf "LVDS_First_Implementation.pt" "LVDS_First_Implementation_map.ncd" "LVDS_First_Implementation.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "LVDS_First_Implementation_map.ncd"
+Fri Apr 19 17:34:25 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 LVDS_First_Implementation_map.ncd LVDS_First_Implementation.dir/5_1.ncd LVDS_First_Implementation.prf
+Preference file: LVDS_First_Implementation.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file LVDS_First_Implementation_map.ncd.
+Design name: LVDS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)       6/365           1% used
+                      6/205           2% bonded
+
+   SLICE              1/41820        <1% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 6
+Number of Connections: 8
+
+Pin Constraint Summary:
+   4 out of 6 pins locked (66% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    i_clk_c (driver: i_clk, clk/ce/sr load #: 1/0/0)
+
+
+Signal i_reset_c is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+...........
+Finished Placer Phase 0.  REAL time: 6 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 3604.
+Finished Placer Phase 1.  REAL time: 13 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  3604
+Finished Placer Phase 2.  REAL time: 13 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 12 (8%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 4 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+  PRIMARY "i_clk_c" from comp "i_clk" on CLK_PIN site "B12 (PT71A)", CLK/CE/SR load = 1
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Quadrant BL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   6 out of 365 (1.6%) PIO sites used.
+   6 out of 205 (2.9%) bonded PIO sites used.
+   Number of PIO comps: 6; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 1 / 27 (  3%) | 3.3V       | -          | -          |
+| 1        | 1 / 33 (  3%) | 2.5V       | -          | -          |
+| 2        | 2 / 34 (  5%) | 2.5V       | -          | -          |
+| 3        | 1 / 33 (  3%) | 2.5V       | -          | -          |
+| 6        | 0 / 33 (  0%) | -          | -          | -          |
+| 7        | 0 / 32 (  0%) | -          | -          | -          |
+| 8        | 1 / 13 (  7%) | 3.3V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Total placer CPU time: 13 secs 
+
+Dumping design to file LVDS_First_Implementation.dir/5_1.ncd.
+
+
+-----------------------------------------------------------------
+INFO - par: ASE feature is off due to non timing-driven settings.  
+-----------------------------------------------------------------
+
+0 connections routed; 8 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 27 secs 
+
+Start NBR router at Fri Apr 19 17:34:52 CEST 2024
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at Fri Apr 19 17:34:52 CEST 2024
+
+Start NBR section for initial routing at Fri Apr 19 17:34:52 CEST 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 28 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Fri Apr 19 17:34:53 CEST 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 28 secs 
+
+Start NBR section for re-routing at Fri Apr 19 17:34:53 CEST 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 28 secs 
+
+Start NBR section for post-routing at Fri Apr 19 17:34:53 CEST 2024
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : <n/a>
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 28 secs 
+Total REAL time: 28 secs 
+Completely routed.
+End of route.  8 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file LVDS_First_Implementation.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 30 secs 
+Total REAL time to completion: 30 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "LVDS_First_Implementation.pt" -o "LVDS_First_Implementation.twr" "LVDS_First_Implementation.ncd" "LVDS_First_Implementation.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file LVDS_First_Implementation.ncd.
+Design name: LVDS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Fri Apr 19 17:35:00 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o LVDS_First_Implementation.twr -gui LVDS_First_Implementation.ncd LVDS_First_Implementation.prf 
+Design file:     LVDS_First_Implementation.ncd
+Preference file: LVDS_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 7 paths, 6 nets, and 8 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 483 MB
+
+
+tmcheck -par "LVDS_First_Implementation.par" 
+
+bitgen -w "LVDS_First_Implementation.ncd" -f "LVDS_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/Testing/LVDS Test/LVDS.sec" -k "/home/user/SDR-HLS/Testing/LVDS Test/LVDS.bek" "LVDS_First_Implementation.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file LVDS_First_Implementation.ncd.
+Design name: LVDS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application Bitgen from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from LVDS_First_Implementation.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        CfgMode  |                      Disable**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                             62  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                    CONFIG_MODE  |                         JTAG**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                             ON  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+|            SLAVE_PARALLEL_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PULL  |                           ON**  |
++---------------------------------+---------------------------------+
+|               CONFIG_IOVOLTAGE  |                            3.3  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 10.27.
+ 
+Saving bit stream in "LVDS_First_Implementation.bit".
+Total CPU Time: 14 secs 
+Total REAL Time: 15 secs 
+Peak Memory Usage: 798 MB

@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Report for cell LVDS.TECH
+Register bits:  1 of 84255 (0.001%)
+I/O cells:      6
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3IX         1          100.0
+                                GSR         1          100.0
+                                 IB         4          100.0
+                               LUT4         3          100.0
+                                 OB         2          100.0
+                              TOTAL        11

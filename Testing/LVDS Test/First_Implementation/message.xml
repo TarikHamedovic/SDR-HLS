@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>1100523</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(9): Semantic error in &quot;FREQUENCY PORT &quot;clk_25mhz&quot; 25.000000 MHz ;&quot;: </Dynamic>
+            <Dynamic>&quot;clk_25mhz&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(46): Semantic error in &quot;IOBUF PORT &quot;i_LVDS_p&quot; IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: </Dynamic>
+            <Dynamic>Key IO_TYPE=LVDS25 is not supported for this device. Default value LVCMOS25 will be used. 
+</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>46</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(49): Semantic error in &quot;IOBUF PORT &quot;i_LVDS_n&quot; IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: </Dynamic>
+            <Dynamic>Key IO_TYPE=LVDS25 is not supported for this device. Default value LVCMOS25 will be used. 
+</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>49</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(7): Semantic error in &quot;LOCATE COMP &quot;clk_25mhz&quot; SITE &quot;G2&quot; ;&quot;: </Dynamic>
+            <Dynamic>clk_25mhz</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(8): Semantic error in &quot;IOBUF PORT &quot;clk_25mhz&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>clk_25mhz</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(23): Semantic error in &quot;LOCATE COMP &quot;led[7]&quot; SITE &quot;H3&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[7]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>23</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(24): Semantic error in &quot;LOCATE COMP &quot;led[6]&quot; SITE &quot;E1&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[6]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>24</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(25): Semantic error in &quot;LOCATE COMP &quot;led[5]&quot; SITE &quot;E2&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[5]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(26): Semantic error in &quot;LOCATE COMP &quot;led[4]&quot; SITE &quot;D1&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[4]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>26</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(27): Semantic error in &quot;LOCATE COMP &quot;led[3]&quot; SITE &quot;D2&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[3]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>27</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(28): Semantic error in &quot;LOCATE COMP &quot;led[2]&quot; SITE &quot;C1&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[2]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>28</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(29): Semantic error in &quot;LOCATE COMP &quot;led[1]&quot; SITE &quot;C2&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[1]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>29</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(30): Semantic error in &quot;LOCATE COMP &quot;led[0]&quot; SITE &quot;B2&quot; ;&quot;: </Dynamic>
+            <Dynamic>led[0]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(31): Semantic error in &quot;IOBUF PORT &quot;led[0]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[0]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>31</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(32): Semantic error in &quot;IOBUF PORT &quot;led[1]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[1]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>32</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(33): Semantic error in &quot;IOBUF PORT &quot;led[2]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[2]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>33</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(34): Semantic error in &quot;IOBUF PORT &quot;led[3]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[3]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>34</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(35): Semantic error in &quot;IOBUF PORT &quot;led[4]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[4]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(36): Semantic error in &quot;IOBUF PORT &quot;led[5]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[5]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(37): Semantic error in &quot;IOBUF PORT &quot;led[6]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[6]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(38): Semantic error in &quot;IOBUF PORT &quot;led[7]&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: </Dynamic>
+            <Dynamic>led[7]</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
+            <Navigation>38</Navigation>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.v(1): </Dynamic>
+            <Dynamic>LVDS</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>GND_net</Dynamic>
+            <Navigation>GND_net</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

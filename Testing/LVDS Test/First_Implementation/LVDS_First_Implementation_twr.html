@@ -1,0 +1,248 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file LVDS_First_Implementation.ncd.
+Design name: LVDS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Fri Apr 19 17:35:00 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o LVDS_First_Implementation.twr -gui LVDS_First_Implementation.ncd LVDS_First_Implementation.prf 
+Design file:     LVDS_First_Implementation.ncd
+Preference file: LVDS_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>Default path enumeration(0 errors)</A></LI>            6 items scored, 0 timing errors detected.
+Report:  408.998MHz is the maximum frequency for this preference.
+
+<LI><A href='#par_twr_pref_0_1' Target='right'>Default net enumeration(0 errors)</A></LI>            6 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: Default path enumeration
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    7.382ns delay i_clk to o_clk
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        B12.PAD to      B12.PADDI i_clk
+ROUTE         2     3.703      B12.PADDI to      A10.PADDO i_clk_c
+DOPAD_DEL   ---     2.674      A10.PADDO to        A10.PAD o_clk
+                  --------
+                    7.382   (49.8% logic, 50.2% route), 2 logic levels.
+
+Report:    6.883ns delay SLICE_0 to o_LVDS
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525   R20C124B.CLK to    R20C124B.Q0 SLICE_0 (from i_clk_c)
+ROUTE         1     4.407    R20C124B.Q0 to      U18.PADDO o_LVDS_c
+DOPAD_DEL   ---     1.951      U18.PADDO to        U18.PAD o_LVDS
+                  --------
+                    6.883   (36.0% logic, 64.0% route), 2 logic levels.
+
+Report:    3.786ns delay i_clk to SLICE_0
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        B12.PAD to      B12.PADDI i_clk
+ROUTE         2     2.781      B12.PADDI to   R20C124B.CLK i_clk_c
+                  --------
+                    3.786   (26.5% logic, 73.5% route), 1 logic levels.
+
+Report:    2.445ns delay i_LVDS_p to SLICE_0 (2.021ns delay and 0.424ns setup)
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        H18.PAD to      H18.PADDI i_LVDS_p
+ROUTE         2     1.016      H18.PADDI to   R20C124B.LSR i_LVDS_p_c (to i_clk_c)
+                  --------
+                    2.021   (49.7% logic, 50.3% route), 1 logic levels.
+
+Report:    1.902ns delay i_LVDS_n to SLICE_0 (2.162ns delay and -0.260ns setup)
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        H17.PAD to      H17.PADDI i_LVDS_n
+ROUTE         1     0.921      H17.PADDI to    R20C124B.A0 i_LVDS_n_c
+CTOF_DEL    ---     0.236    R20C124B.A0 to    R20C124B.F0 SLICE_0
+ROUTE         1     0.000    R20C124B.F0 to   R20C124B.DI0 n1 (to i_clk_c)
+                  --------
+                    2.162   (57.4% logic, 42.6% route), 2 logic levels.
+
+Report:    1.744ns delay i_LVDS_p to SLICE_0 (2.004ns delay and -0.260ns setup)
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        H18.PAD to      H18.PADDI i_LVDS_p
+ROUTE         2     0.763      H18.PADDI to    R20C124B.C0 i_LVDS_p_c
+CTOF_DEL    ---     0.236    R20C124B.C0 to    R20C124B.F0 SLICE_0
+ROUTE         1     0.000    R20C124B.F0 to   R20C124B.DI0 n1 (to i_clk_c)
+                  --------
+                    2.004   (61.9% logic, 38.1% route), 2 logic levels.
+
+Report:  408.998MHz is the maximum frequency for this preference.
+
+Report:    7.382ns is the maximum delay for this preference.
+
+
+================================================================================
+<A name="par_twr_pref_0_1"></A>Preference: Default net enumeration
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    4.407ns maximum delay on o_LVDS_c
+
+           Delays             Connection(s)
+           4.407ns      R20C124B.Q0 to U18.PADDO       
+
+Report:    3.703ns maximum delay on i_clk_c
+
+           Delays             Connection(s)
+           3.703ns        B12.PADDI to A10.PADDO       
+           2.781ns        B12.PADDI to R20C124B.CLK    
+
+Report:    1.016ns maximum delay on i_LVDS_p_c
+
+           Delays             Connection(s)
+           1.016ns        H18.PADDI to R20C124B.LSR    
+           0.763ns        H18.PADDI to R20C124B.C0     
+
+Report:    0.921ns maximum delay on i_LVDS_n_c
+
+           Delays             Connection(s)
+           0.921ns        H17.PADDI to R20C124B.A0     
+
+Report:    0.738ns maximum delay on i_reset_c
+
+           Delays             Connection(s)
+           0.738ns         T1.PADDI to GSR.GSR         
+
+Report:    0.000ns maximum delay on n1
+
+           Delays             Connection(s)
+           0.000ns      R20C124B.F0 to R20C124B.DI0    
+
+Report:    4.407ns is the maximum delay for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|     7.382 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     4.407 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: i_clk_c   Source: i_clk.PAD   Loads: 2
+   No transfer within this clock domain is found
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 7 paths, 6 nets, and 8 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

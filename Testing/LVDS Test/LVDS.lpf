@@ -1,0 +1,62 @@
+BLOCK RESETPATHS;
+BLOCK ASYNCPATHS;
+# BLOCK JTAGPATHS; # Added from 1bitSDR Github
+## ULX3S v3.1.6 and v3.1.7
+
+# The clock "usb" and "gpdi" sheet
+LOCATE COMP "clk_25mhz" SITE "G2";
+IOBUF  PORT "clk_25mhz" PULLMODE=NONE IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk_25mhz" 25 MHZ; # FREQUENCY NET?
+#CLOCK_TO_OUT ALLPORTS 20.000000 ns CLKNET "clk_25mhz" ;
+
+# JTAG and SPI FLASH voltage 3.3V and options to boot from SPI flash
+# write to FLASH possible any time from JTAG:
+SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=ENABLE SLAVE_PARALLEL_PORT=DISABLE;
+# write to FLASH possible from user bitstream:
+# SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE;
+
+######################## 3.3V   ########################
+######################## BANK 6 ########################
+
+
+## LED indicators "blinkey" and "gpio" sheet
+LOCATE COMP "led[7]" SITE "H3";
+LOCATE COMP "led[6]" SITE "E1";
+LOCATE COMP "led[5]" SITE "E2";
+LOCATE COMP "led[4]" SITE "D1";
+LOCATE COMP "led[3]" SITE "D2";
+LOCATE COMP "led[2]" SITE "C1";
+LOCATE COMP "led[1]" SITE "C2";
+LOCATE COMP "led[0]" SITE "B2";
+IOBUF  PORT "led[0]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+IOBUF  PORT "led[1]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4;
+IOBUF  PORT "led[2]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+IOBUF  PORT "led[3]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+IOBUF  PORT "led[4]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+IOBUF  PORT "led[5]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+IOBUF  PORT "led[6]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4;
+IOBUF  PORT "led[7]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+
+	
+######################### LVDS  ########################
+######################## BANK 2 ########################
+# LVDS (Differential signal on +- Pins on Board)
+# PIN H18 From Bank 2 [Positive Pin 18 ON BOARD]
+LOCATE COMP "i_LVDS_p"  SITE "H18"; 
+IOBUF PORT "i_LVDS_p" IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF; 
+# PIN H17 From Bank 2 [Negative Pin 18 on Board] SigmaDelta ADC Feedback(1 bit DAC)
+LOCATE COMP "i_LVDS_n"  SITE "H17"; 
+IOBUF PORT "i_LVDS_n" IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF;
+
+######################## 2.5V   ########################
+######################## BANK 3 ########################
+# PIN U18 From BANK 3 [PIN 14 ON BOARD]
+LOCATE COMP "o_LVDS"  SITE "U18";  
+IOBUF PORT  "o_LVDS"  SLEWRATE=SLOW IO_TYPE=LVCMOS25; 
+OUTPUT PORT "o_LVDS" LOAD 0.000000 pF;
+
+######################## 3.3V   ########################
+######################## BANK 0 ########################
+# PIN A10 From Bank 0 [Pin 1 ON BOARD]
+LOCATE COMP "o_clk" SITE "A10";
+IOBUF PORT  "o_clk" PULLMODE=NONE IO_TYPE=LVCMOS33;

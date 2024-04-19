@@ -1,0 +1,91 @@
+<top name = "LVDS"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "i_clk"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "LVDS">
+
+    <!--
+        Top Level Pins: 6
+    -->
+
+    <pins>
+        <pitem  name = "i_clk"  direction = "in"  />
+        <pitem  name = "i_reset"  direction = "in"  />
+        <pitem  name = "i_LVDS_p"  direction = "in"  />
+        <pitem  name = "i_LVDS_n"  direction = "in"  />
+        <pitem  name = "o_clk"  direction = "out"  />
+        <pitem  name = "o_LVDS"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 2
+    -->
+
+    <instance  name = "i_LVDS_n_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "i_LVDS_n"  />
+        <nitem  name = "i_LVDS_p"  />
+        <nitem  name = "o_LVDS_N_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "o_LVDS_6"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "o_LVDS_N_1"  />
+        <nitem  name = "i_clk"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "i_reset"  />
+        <nitem  name = "o_LVDS"  />
+        </nets>
+    </instance>
+
+    <!--
+        REG instances in netlist: 1
+    -->
+
+    <regs>
+        <reg  name = "o_LVDS_6"  />
+    </regs>
+
+    <!--
+        Views in design "LVDS": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

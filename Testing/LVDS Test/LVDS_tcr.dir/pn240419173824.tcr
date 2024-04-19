@@ -1,0 +1,21 @@
+#Start recording tcl command: 4/19/2024 13:55:22
+#Project Location: /home/user/SDR-HLS/Testing/LVDS Test; Project name: LVDS
+prj_project new -name "LVDS" -impl "First_Implementation" -dev LFE5U-85F-6BG381C -synthesis "lse"
+prj_project save
+prj_src add "/home/user/SDR-HLS/Testing/LVDS Test/LVDS.v"
+prj_run Export -impl First_Implementation -task Bitgen -forceAll
+prj_run Synthesis -impl First_Implementation -task Lattice_Synthesis
+prj_run Synthesis -impl First_Implementation -task Lattice_Synthesis
+prj_run Synthesis -impl First_Implementation -task Lattice_Synthesis
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run PAR -impl First_Implementation
+prj_run PAR -impl First_Implementation
+prj_run Export -impl First_Implementation -task Bitgen
+#Stop recording: 4/19/2024 17:38:24

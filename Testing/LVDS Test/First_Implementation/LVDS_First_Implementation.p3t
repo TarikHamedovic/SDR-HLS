@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "LVDS_First_Implementation.log"
+-o "LVDS_First_Implementation.csv"
+-pr "LVDS_First_Implementation.prf"
