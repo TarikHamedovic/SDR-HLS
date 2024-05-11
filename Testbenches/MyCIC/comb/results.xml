@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1713568486" />
+    <testcase name="comb_test" classname="comb_tb" file="/home/user/SDR-HLS/Testbenches/MyCIC/comb/comb_tb.py" lineno="15" time="0.10440564155578613" sim_time_ns="1267.501" ratio_time="12140.158147706486" />
+  </testsuite>
+</testsuites>

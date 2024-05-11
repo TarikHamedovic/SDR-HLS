@@ -32,26 +32,10 @@
     </pins>
 
     <!--
-        Instances in netlist: 2
+        Instances in netlist: 1
     -->
 
-    <instance  name = "i_LVDS_n_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "gnd"  />
-        <nitem  name = "i_LVDS_n"  />
-        <nitem  name = "i_LVDS_p"  />
-        <nitem  name = "o_LVDS_N_1"  />
-        </nets>
-    </instance>
-
-    <instance  name = "o_LVDS_6"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "o_LVDS_5"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -61,7 +45,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "o_LVDS_N_1"  />
+        <nitem  name = "i_LVDS_p"  />
         <nitem  name = "i_clk"  />
         <nitem  name = "gnd"  />
         <nitem  name = "i_reset"  />
@@ -74,7 +58,7 @@
     -->
 
     <regs>
-        <reg  name = "o_LVDS_6"  />
+        <reg  name = "o_LVDS_5"  />
     </regs>
 
     <!--

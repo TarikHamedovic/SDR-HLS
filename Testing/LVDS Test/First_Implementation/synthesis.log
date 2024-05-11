@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 19 17:26:30 2024
+Thu May  9 15:54:50 2024
 
 
-Command Line:  synthesis -f LVDS_First_Implementation_lattice.synproj -gui 
+Command Line:  synthesis -f LVDS_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/Testing/LVDS Test/promote.xml 
 
 Synthesis options:
 The -a option is ECP5U.
@@ -87,10 +87,12 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 Top-level module name = LVDS.
+WARNING - synthesis: I/O Port i_LVDS_n 's net has no driver and is unused.
 
 
 
-GSR instance connected to net n6.
+WARNING - synthesis: I/O Port i_LVDS_n 's net has no driver and is unused.
+GSR instance connected to net n5.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -99,17 +101,19 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'i_LVDS_n' has no load.
+WARNING - synthesis: input pad net 'i_LVDS_n' has no legal load.
 WARNING - synthesis: logical net 'GND_net' has no load.
-WARNING - synthesis: DRC complete with 1 warnings.
+WARNING - synthesis: DRC complete with 3 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file LVDS_First_Implementation.ngd.
 
 ################### Begin Area Report (LVDS)######################
 Number of register bits => 1 of 84255 (0 % )
-FD1S3IX => 1
+FD1S3AX => 1
 GSR => 1
-IB => 4
-LUT4 => 3
+IB => 3
+LUT4 => 1
 OB => 2
 ################### End Area Report ##################
 
@@ -122,13 +126,10 @@ Number of Clock Enables: 0
 Top 0 highest fanout Clock Enables:
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : i_LVDS_p_c, loads : 2
   Net : i_reset_c, loads : 1
-  Net : i_LVDS_n_c, loads : 1
+  Net : i_LVDS_p_c, loads : 1
   Net : o_LVDS_c, loads : 1
-  Net : n1, loads : 1
-  Net : n6, loads : 1
-  Net : n7, loads : 1
+  Net : n5, loads : 1
   Net : o_clk, loads : 0
   Net : o_LVDS, loads : 0
 ################### End Clock Report ##################
@@ -148,8 +149,8 @@ clk0 [get_nets i_clk_c]                 |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 258.543  MB
+Peak Memory Usage: 258.531  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.109  secs
+Elapsed CPU time for LSE flow : 1.037  secs
 --------------------------------------------------------------

@@ -4,11 +4,12 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 19 17:34:25 2024
+Thu May  9 15:54:57 2024
 
 /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
 LVDS_First_Implementation.p2t LVDS_First_Implementation_map.ncd
-LVDS_First_Implementation.dir LVDS_First_Implementation.prf -gui
+LVDS_First_Implementation.dir LVDS_First_Implementation.prf -gui -msgset
+/home/user/SDR-HLS/Testing/LVDS Test/promote.xml
 
 
 Preference file: LVDS_First_Implementation.prf.
@@ -16,11 +17,11 @@ Preference file: LVDS_First_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -            -            -            -            30           Completed
+5_1   *      0            1073741.823  0            1073741.823  0            35           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 30 secs 
+Total (real) run time for 1-seed: 35 secs 
 
 par done!
 

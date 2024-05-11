@@ -6,16 +6,15 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Fri Apr 19 17:34:38 2024
+Thu May  9 15:55:09 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
-| i_LVDS_n  | H17/2    | LVCMOS25_IN  | PR20B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
 | i_LVDS_p  | H18/2    | LVCMOS25_IN  | PR20A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| i_clk     | B12/1    | LVCMOS25_IN  | PT71A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| i_reset   | T1/8     | LVCMOS25_IN  | PB4B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| i_clk     | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON            |
+| i_reset   | R1/8     | LVCMOS25_IN  | PB4A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
 | o_LVDS    | U18/3    | LVCMOS25_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | o_clk     | A10/0    | LVCMOS33_OUT | PT63A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
@@ -25,9 +24,9 @@ Vccio by Bank:
 | Bank | Vccio |
 +------+-------+
 | 0    | 3.3V  |
-| 1    | 2.5V  |
 | 2    | 2.5V  |
 | 3    | 2.5V  |
+| 6    | 3.3V  |
 | 8    | 3.3V  |
 +------+-------+
 
@@ -69,7 +68,7 @@ Pinout by Pin Number:
 | B9/0     |     unused, PULL:DOWN |            |               | PT58A  |                          |           |
 | B10/0    |     unused, PULL:DOWN |            |               | PT60B  | GR_PCLK0_0               |           |
 | B11/0    |     unused, PULL:DOWN |            |               | PT65A  | PCLKT0_0                 |           |
-| B12/1    | i_clk                 |            | LVCMOS25_IN   | PT71A  | PCLKT1_0                 |           |
+| B12/1    |     unused, PULL:DOWN |            |               | PT71A  | PCLKT1_0                 |           |
 | B13/1    |     unused, PULL:DOWN |            |               | PT78A  |                          |           |
 | B15/1    |     unused, PULL:DOWN |            |               | PT105A |                          |           |
 | B16/1    |     unused, PULL:DOWN |            |               | PT110B |                          |           |
@@ -147,7 +146,7 @@ Pinout by Pin Number:
 | F19/2    |     unused, PULL:DOWN |            |               | PR38B  | RDQ41                    |           |
 | F20/2    |     unused, PULL:DOWN |            |               | PR38C  | RDQ41                    |           |
 | G1/6     |     unused, PULL:DOWN |            |               | PL47D  | PCLKC6_0/LDQ53           |           |
-| G2/6     |     unused, PULL:DOWN |            |               | PL47A  | PCLKT6_1/LDQ53           |           |
+| G2/6     | i_clk                 | LOCATED    | LVCMOS33_IN   | PL47A  | PCLKT6_1/LDQ53           |           |
 | G3/7     |     unused, PULL:DOWN |            |               | PL44A  | PCLKT7_1/LDQ41           |           |
 | G5/7     |     unused, PULL:DOWN |            |               | PL41B  | LDQSN41                  |           |
 | G16/2    |     unused, PULL:DOWN |            |               | PR17C  | RDQ17                    |           |
@@ -160,7 +159,7 @@ Pinout by Pin Number:
 | H4/7     |     unused, PULL:DOWN |            |               | PL41A  | GR_PCLK7_1/LDQS41        |           |
 | H5/7     |     unused, PULL:DOWN |            |               | PL41C  | GR_PCLK7_0/LDQ41         |           |
 | H16/2    |     unused, PULL:DOWN |            |               | PR17D  | RDQ17                    |           |
-| H17/2    | i_LVDS_n              | LOCATED    | LVCMOS25_IN   | PR20B  | RDQ17                    |           |
+| H17/2    |     unused, PULL:DOWN |            |               | PR20B  | RDQ17                    |           |
 | H18/2    | i_LVDS_p              | LOCATED    | LVCMOS25_IN   | PR20A  | RDQ17                    |           |
 | H20/2    |     unused, PULL:DOWN |            |               | PR41B  | RDQSN41                  |           |
 | J1/6     |     unused, PULL:DOWN |            |               | PL53B  | LDQSN53                  |           |
@@ -380,14 +379,14 @@ Pinout by Pin Number:
 | PT101A/1 |     unused, PULL:DOWN |            |               | PT101A |                          |           |
 | PT101B/1 |     unused, PULL:DOWN |            |               | PT101B |                          |           |
 | PT103B/1 |     unused, PULL:DOWN |            |               | PT103B |                          |           |
-| R1/8     |     unused, PULL:DOWN |            |               | PB4A   | D7/IO7                   |           |
+| R1/8     | i_reset               |            | LVCMOS25_IN   | PB4A   | D7/IO7                   |           |
 | R2/8     | Reserved: sysCONFIG   |            | LVCMOS33_BIDI | PB15A  | HOLDN/DI/BUSY/CSSPIN/CEN |           |
 | R3/8     |     unused, PULL:DOWN |            |               | PB15B  | DOUT/CSON                |           |
 | R16/3    |     unused, PULL:DOWN |            |               | PR56C  | RDQ53                    |           |
 | R17/3    |     unused, PULL:DOWN |            |               | PR56D  | RDQ53                    |           |
 | R18/3    |     unused, PULL:DOWN |            |               | PR89B  | RDQSN89                  |           |
 | R20/3    |     unused, PULL:DOWN |            |               | PR86B  | RDQ89                    |           |
-| T1/8     | i_reset               |            | LVCMOS25_IN   | PB4B   | D6/IO6                   |           |
+| T1/8     |     unused, PULL:DOWN |            |               | PB4B   | D6/IO6                   |           |
 | T2/8     |     unused, PULL:DOWN |            |               | PB13A  | SN/CSN                   |           |
 | T3/8     |     unused, PULL:DOWN |            |               | PB18A  | WRITEN                   |           |
 | T16/3    |     unused, PULL:DOWN |            |               | PR77A  | RDQS77                   |           |
@@ -439,10 +438,9 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "i_LVDS_n"  SITE  "H17";
 LOCATE  COMP  "i_LVDS_p"  SITE  "H18";
-LOCATE  COMP  "i_clk"  SITE  "B12";
-LOCATE  COMP  "i_reset"  SITE  "T1";
+LOCATE  COMP  "i_clk"  SITE  "G2";
+LOCATE  COMP  "i_reset"  SITE  "R1";
 LOCATE  COMP  "o_LVDS"  SITE  "U18";
 LOCATE  COMP  "o_clk"  SITE  "A10";
 
@@ -456,5 +454,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 19 17:34:38 2024
+Thu May  9 15:55:09 2024
 

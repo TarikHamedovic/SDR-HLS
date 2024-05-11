@@ -7,11 +7,13 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 
 Running DRC...
 
+WARNING - synthesis: logical net 'i_LVDS_n' has no load.
+WARNING - synthesis: input pad net 'i_LVDS_n' has no legal load.
 WARNING - synthesis: logical net 'GND_net' has no load.
-WARNING - synthesis: DRC complete with 1 warnings.
+WARNING - synthesis: DRC complete with 3 warnings.
 
 Design Results:
-     14 blocks expanded
+     11 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file LVDS_First_Implementation.ngd.

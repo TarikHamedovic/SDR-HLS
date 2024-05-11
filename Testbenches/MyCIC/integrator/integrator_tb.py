@@ -6,13 +6,17 @@ import numpy as np
 import random
 import os
 
+"""
+Beware of number of bits for input and output of accumulator, if there are too many iterations it can result in a overflow and the test fails
+More iterations --> More output bits
+"""
 
 @cocotb.test()
 async def integrator_test(dut):
 	
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))	
     input_width = int(os.environ.get('INPUT_WIDTH', 5))
-    output_width = int(os.environ.get('OUTPUT_WIDTH', 8))
+    output_width = int(os.environ.get('OUTPUT_WIDTH', 10))
     number_of_iterations = int(os.environ.get("ITERATIONS", 100))
     
     # Wait a few ns with clock at 0 for nicer gtkwave signals at beggining #
@@ -43,10 +47,14 @@ async def integrator_test(dut):
     dut._log.info(f"o_data = {dut.o_data.value}")
     accumulator_test = int(dut.i_data.value)
     i_data_random_value_vector =[]
+    accum_test_vector =[]
+    accum_dut_vector =[]
 
     for i in range(number_of_iterations):
         
         dut._log.info("Test: Asserting")
+        accum_test_vector.append(accumulator_test)
+        accum_dut_vector.append(dut.accumulator.value.signed_integer)
         assert accumulator_test == dut.accumulator.value.signed_integer, f"Integrator output mismatch: expected {accumulator_test}, got {dut.accumulator.value}"
 
         dut._log.info("Test: Generating random input for i_data...")
@@ -59,3 +67,6 @@ async def integrator_test(dut):
         if i > 0:
             accumulator_test += i_data_random_value_vector[i-1]
         
+    dut._log.info(f"Check: accumulator_test={accum_test_vector}")    
+    dut._log.info(f"Check: accumulator_dut={accum_dut_vector}")
+    

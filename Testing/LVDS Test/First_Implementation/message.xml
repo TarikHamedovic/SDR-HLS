@@ -14,14 +14,6 @@
     </Task>
     <Task name="Map">
         <Message>
-            <ID>1100523</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(9): Semantic error in &quot;FREQUENCY PORT &quot;clk_25mhz&quot; 25.000000 MHz ;&quot;: </Dynamic>
-            <Dynamic>&quot;clk_25mhz&quot; matches no ports in the design. </Dynamic>
-            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
-            <Navigation>9</Navigation>
-        </Message>
-        <Message>
             <ID>1100641</ID>
             <Severity>Warning</Severity>
             <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(46): Semantic error in &quot;IOBUF PORT &quot;i_LVDS_p&quot; IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: </Dynamic>
@@ -38,22 +30,6 @@
 </Dynamic>
             <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
             <Navigation>49</Navigation>
-        </Message>
-        <Message>
-            <ID>1100679</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(7): Semantic error in &quot;LOCATE COMP &quot;clk_25mhz&quot; SITE &quot;G2&quot; ;&quot;: </Dynamic>
-            <Dynamic>clk_25mhz</Dynamic>
-            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
-            <Navigation>7</Navigation>
-        </Message>
-        <Message>
-            <ID>1100644</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(8): Semantic error in &quot;IOBUF PORT &quot;clk_25mhz&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
-            <Dynamic>clk_25mhz</Dynamic>
-            <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
-            <Navigation>8</Navigation>
         </Message>
         <Message>
             <ID>1100679</ID>
@@ -183,6 +159,17 @@
             <Navigation>/home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf</Navigation>
             <Navigation>38</Navigation>
         </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>i_LVDS_n</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>i_LVDS_n</Dynamic>
+        </Message>
     </Task>
     <Task name="Lattice_Synthesis">
         <Message>
@@ -202,8 +189,31 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>i_LVDS_n</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>i_LVDS_n</Dynamic>
+        </Message>
+        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>i_LVDS_n</Dynamic>
+            <Navigation>i_LVDS_n</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>i_LVDS_n</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>
@@ -215,7 +225,7 @@
         <Message>
             <ID>1163101</ID>
             <Severity>Warning</Severity>
-            <Dynamic>1</Dynamic>
+            <Dynamic>3</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>
