@@ -1,0 +1,91 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: unlimited (bytes)
+
+
+Implementation : First_Implementation
+Synopsys HDL compiler and linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+Modified Files: 7
+FID:  path (prevtimestamp, timestamp)
+0        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v (N/A, 2023-08-10 19:00:08)
+1        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v (N/A, 2023-08-10 19:00:09)
+2        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v (N/A, 2023-08-10 18:51:57)
+3        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v (N/A, 2023-08-10 18:51:57)
+4        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh (N/A, 2023-08-10 18:51:57)
+5        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32)
+6        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 17
+MID:  lib.cell.view
+0        work.\manta.interface.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+1        work.\manta.interface.bridge_rx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+2        work.\manta.interface.bridge_tx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+3        work.\manta.interface.uart_rx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+4        work.\manta.interface.uart_tx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+5        work.\manta.my_logic_analyzer.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+6        work.\manta.my_logic_analyzer.fsm.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+7        work.\manta.my_logic_analyzer.fsm.registers.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+8        work.\manta.my_logic_analyzer.sample_mem.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+9        work.\manta.my_logic_analyzer.trig_blk.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+10       work.\manta.my_logic_analyzer.trig_blk.probe0_trigger.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+11       work.\manta.my_logic_analyzer.trig_blk.probe1_trigger.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+12       work.\manta.my_logic_analyzer.trig_blk.probe2_trigger.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+13       work.\manta.my_logic_analyzer.trig_blk.probe3_trigger.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+14       work.\manta.my_logic_analyzer.trig_blk.registers.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+15       work.manta.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (module definition)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (may instantiate this module)
+16       work.top_level.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v (N/A, 2024-05-23 15:52:32) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv (N/A, 2024-05-23 15:51:34) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 0
+FID:  path (timestamp)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

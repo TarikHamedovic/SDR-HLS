@@ -6,16 +6,16 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Thu May  9 15:55:09 2024
+Mon May 20 16:10:15 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
-| i_LVDS_p  | H18/2    | LVCMOS25_IN  | PR20A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| i_LVDS_p  | H18/2    | LVDS_IN      | PR20A |           | CLAMP:ON                          |
 | i_clk     | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON            |
 | i_reset   | R1/8     | LVCMOS25_IN  | PB4A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| o_LVDS    | U18/3    | LVCMOS25_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| o_LVDS    | U18/3    | LVCMOS33_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 | o_clk     | A10/0    | LVCMOS33_OUT | PT63A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 +-----------+----------+--------------+-------+-----------+-----------------------------------+
 
@@ -24,8 +24,8 @@ Vccio by Bank:
 | Bank | Vccio |
 +------+-------+
 | 0    | 3.3V  |
-| 2    | 2.5V  |
-| 3    | 2.5V  |
+| 2    | 1.2V  |
+| 3    | 3.3V  |
 | 6    | 3.3V  |
 | 8    | 3.3V  |
 +------+-------+
@@ -159,8 +159,8 @@ Pinout by Pin Number:
 | H4/7     |     unused, PULL:DOWN |            |               | PL41A  | GR_PCLK7_1/LDQS41        |           |
 | H5/7     |     unused, PULL:DOWN |            |               | PL41C  | GR_PCLK7_0/LDQ41         |           |
 | H16/2    |     unused, PULL:DOWN |            |               | PR17D  | RDQ17                    |           |
-| H17/2    |     unused, PULL:DOWN |            |               | PR20B  | RDQ17                    |           |
-| H18/2    | i_LVDS_p              | LOCATED    | LVCMOS25_IN   | PR20A  | RDQ17                    |           |
+| H17/2    | i_LVDS_p-             |            | LVDS_IN       | PR20B  | RDQ17                    |           |
+| H18/2    | i_LVDS_p+             | LOCATED    | LVDS_IN       | PR20A  | RDQ17                    |           |
 | H20/2    |     unused, PULL:DOWN |            |               | PR41B  | RDQSN41                  |           |
 | J1/6     |     unused, PULL:DOWN |            |               | PL53B  | LDQSN53                  |           |
 | J3/6     |     unused, PULL:DOWN |            |               | PL50C  | GR_PCLK6_1/LDQ53         |           |
@@ -402,7 +402,7 @@ Pinout by Pin Number:
 | U2/8     |     unused, PULL:DOWN |            |               | PB13B  | CS1N                     |           |
 | U16/3    |     unused, PULL:DOWN |            |               | PR92C  | LRC_GPLL0T_IN/RDQ89      |           |
 | U17/3    |     unused, PULL:DOWN |            |               | PR92B  | RDQ89                    |           |
-| U18/3    | o_LVDS                | LOCATED    | LVCMOS25_OUT  | PR92A  | RDQ89                    |           |
+| U18/3    | o_LVDS                | LOCATED    | LVCMOS33_OUT  | PR92A  | RDQ89                    |           |
 | U19/3    |     unused, PULL:DOWN |            |               | PR89C  | RDQ89                    |           |
 | U20/3    |     unused, PULL:DOWN |            |               | PR86D  | RDQ89                    |           |
 | V1/8     |     unused, PULL:DOWN |            |               | PB6B   | D4/MOSI2/IO4             |           |
@@ -454,5 +454,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  9 15:55:09 2024
+Mon May 20 16:10:15 2024
 

@@ -1,0 +1,1 @@
+-link -encrypt -top cic -osyn "/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synwork/CIC_First_Implementation_comp.srs" "/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synwork/layer0.srs"  -jobname linker  

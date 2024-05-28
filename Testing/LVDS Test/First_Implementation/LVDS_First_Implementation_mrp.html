@@ -24,7 +24,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-85FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  05/09/24  15:54:51
+Mapped on:  05/20/24  16:09:55
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
@@ -40,7 +40,10 @@ Mapped on:  05/09/24  15:54:51
       Number used as distributed RAM:     0
       Number used as ripple logic:        0
       Number used as shift registers:     0
-   Number of PIO sites used: 5 out of 205 (2%)
+   Number of PIO sites used: 6 out of 205 (3%)
+      Number of PIO sites used for single ended IOs: 4
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
+     comps in NCD)
    Number of block RAMs:  0 out of 208 (0%)
    Number of GSRs:  1 out of 1 (100%)
    JTAG used :      No
@@ -64,10 +67,10 @@ Mapped on:  05/09/24  15:54:51
      ripple logic.
 
         Number Of Mapped DSP Components:
+
    --------------------------------
    MULT18X18D          0
    MULT9X9D            0
-
    ALU54B              0
    ALU24B              0
    PRADD18A            0
@@ -89,7 +92,7 @@ Mapped on:  05/09/24  15:54:51
 
 
 
-   Number of warnings:  20
+   Number of warnings:  16
    Number of errors:    0
      
 
@@ -98,16 +101,6 @@ Mapped on:  05/09/24  15:54:51
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(46): Semantic error
-     in "IOBUF PORT "i_LVDS_p" IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON
-     DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;": Key IO_TYPE=LVDS25 is not
-     supported for this device. Default value LVCMOS25 will be used. 
-      This preference has been disabled.
-WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(49): Semantic error
-     in "IOBUF PORT "i_LVDS_n" IO_TYPE=LVDS25 HYSTERESIS=NA CLAMP=ON
-     DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;": Key IO_TYPE=LVDS25 is not
-     supported for this device. Default value LVCMOS25 will be used. 
-      This preference has been disabled.
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(23): Semantic error
      in "LOCATE COMP "led[7]" SITE "H3" ;": COMP "led[7]" cannot be found in
      design. This preference has been disabled.
@@ -126,7 +119,6 @@ WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(27): Semantic error
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(28): Semantic error
      in "LOCATE COMP "led[2]" SITE "C1" ;": COMP "led[2]" cannot be found in
      design. This preference has been disabled.
-
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(29): Semantic error
      in "LOCATE COMP "led[1]" SITE "C2" ;": COMP "led[1]" cannot be found in
      design. This preference has been disabled.
@@ -134,6 +126,7 @@ WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(30): Semantic error
      in "LOCATE COMP "led[0]" SITE "B2" ;": COMP "led[0]" cannot be found in
      design. This preference has been disabled.
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(31): Semantic error
+
      in "IOBUF PORT "led[0]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;": Port
      "led[0]" does not exist in the design. This preference has been disabled.
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(32): Semantic error
@@ -157,9 +150,6 @@ WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(37): Semantic error
 WARNING - map: /home/user/SDR-HLS/Testing/LVDS Test/LVDS.lpf(38): Semantic error
      in "IOBUF PORT "led[7]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;": Port
      "led[7]" does not exist in the design. This preference has been disabled.
-WARNING - map: input pad net 'i_LVDS_n' has no legal load.
-WARNING - map: IO buffer missing for top level port i_LVDS_n...logic will be
-     discarded.
 
 
 
@@ -171,13 +161,13 @@ WARNING - map: IO buffer missing for top level port i_LVDS_n...logic will be
 +---------------------+-----------+-----------+------------+
 | o_clk               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| o_LVDS              | OUTPUT    | LVCMOS25  |            |
+| o_LVDS              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_clk               | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_reset             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| i_LVDS_p            | INPUT     | LVCMOS25  |            |
+| i_LVDS_p            | INPUT     | LVDS      |            |
 +---------------------+-----------+-----------+------------+
 
 
@@ -185,7 +175,6 @@ WARNING - map: IO buffer missing for top level port i_LVDS_n...logic will be
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block i27 undriven or does not drive anything - clipped.
-
 Block i24 undriven or does not drive anything - clipped.
 Signal n5 was merged into signal i_reset_c
 Signal VCC_net undriven or does not drive anything - clipped.
@@ -193,6 +182,9 @@ Signal GND_net undriven or does not drive anything - clipped.
 Block i15_1_lut was optimized away.
 
      
+
+
+
 
 
 
@@ -219,6 +211,16 @@ GSR Component:
    Total REAL Time: 2 secs  
    Peak Memory Usage: 451 MB
         
+
+
+
+
+
+
+
+
+
+
 
 
 

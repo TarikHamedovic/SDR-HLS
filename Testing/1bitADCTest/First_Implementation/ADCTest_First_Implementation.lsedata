@@ -1,0 +1,119 @@
+<top name = "top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "i_clk"  type = "port" />
+    <clockitem name = "clk_80mhz"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 2
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "top">
+
+    <!--
+        Top Level Pins: 3
+    -->
+
+    <pins>
+        <pitem  name = "i_clk"  direction = "in"  />
+        <pitem  name = "i_analog"  direction = "in"  />
+        <pitem  name = "o_digital"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 6
+    -->
+
+    <instance  name = "adctest/r_analog_d_5"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "adctest/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "i_analog"  />
+        <nitem  name = "o_digital"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/PLLInst_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "CLKI"  direction = "in"  />
+        <pitem  name = "CLKOP"  direction = "out"  />
+        <pitem  name = "CLKFB"  direction = "in"  />
+        <pitem  name = "PHASESEL1"  direction = "in"  />
+        <pitem  name = "PHASESEL0"  direction = "in"  />
+        <pitem  name = "PHASEDIR"  direction = "in"  />
+        <pitem  name = "PHASESTEP"  direction = "in"  />
+        <pitem  name = "PHASELOADREG"  direction = "in"  />
+        <pitem  name = "STDBY"  direction = "in"  />
+        <pitem  name = "PLLWAKESYNC"  direction = "in"  />
+        <pitem  name = "RST"  direction = "in"  />
+        <pitem  name = "ENCLKOP"  direction = "in"  />
+        <pitem  name = "ENCLKOS"  direction = "in"  />
+        <pitem  name = "ENCLKOS2"  direction = "in"  />
+        <pitem  name = "ENCLKOS3"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "i_clk"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "PLL1/scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PLL1/scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/scuba_vhi_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        </pins>
+
+        <nets>
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/PLL1"  />
+    <instance  name = "adctest"  />
+    <!--
+        REG instances in netlist: 1
+    -->
+
+    <regs>
+        <reg  name = "adctest/r_analog_d_5"  />
+    </regs>
+
+    <!--
+        Views in design "top": 1
+    -->
+
+    <views>
+        <view  name = "ADCTest"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

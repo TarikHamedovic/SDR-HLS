@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  9 15:55:41 2024
+Mon May 20 16:10:37 2024
 
 
 Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -g DisableUES:FALSE -g ES:No -e -s /home/user/SDR-HLS/Testing/LVDS Test/LVDS.sec -k /home/user/SDR-HLS/Testing/LVDS Test/LVDS.bek -gui -msgset /home/user/SDR-HLS/Testing/LVDS Test/promote.xml LVDS_First_Implementation.ncd LVDS_First_Implementation.prf 
@@ -77,6 +77,6 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "LVDS_First_Implementation.bit".
-Total CPU Time: 16 secs 
-Total REAL Time: 17 secs 
+Total CPU Time: 15 secs 
+Total REAL Time: 16 secs 
 Peak Memory Usage: 798 MB

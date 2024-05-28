@@ -1,0 +1,10 @@
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[1]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[2]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[3]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[4]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[5]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[6]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[7]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[8]
+@E: CG410 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":78:27:78:40|Only one assignment is legal on comb_ready[9]
+

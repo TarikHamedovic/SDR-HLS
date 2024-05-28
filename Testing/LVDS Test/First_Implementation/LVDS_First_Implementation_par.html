@@ -12,7 +12,7 @@ Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  9 15:54:57 2024
+Mon May 20 16:10:01 2024
 
 /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
 LVDS_First_Implementation.p2t LVDS_First_Implementation_map.ncd
@@ -26,17 +26,17 @@ Preference file: LVDS_First_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            1073741.823  0            1073741.823  0            35           Completed
+5_1   *      0            1073741.823  0            1073741.823  0            31           Completed
 * : Design saved.
 
-Total (real) run time for 1-seed: 35 secs 
+Total (real) run time for 1-seed: 31 secs 
 
 par done!
 
 Note: user must run &apos;Trace&apos; for timing closure signoff.
 
 Lattice Place and Route Report for Design &quot;LVDS_First_Implementation_map.ncd&quot;
-Thu May  9 15:54:57 2024
+Mon May 20 16:10:01 2024
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -63,8 +63,8 @@ Ignore Preference Error(s):  True
 
 <A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
 
-   PIO (prelim)       5/365           1% used
-                      5/205           2% bonded
+   PIO (prelim)       6/365           1% used
+                      6/205           2% bonded
 
    SLICE              1/41820        &lt;1% used
 
@@ -90,12 +90,12 @@ Finished Placer Phase 0.  REAL time: 6 secs
 Starting Placer Phase 1.
 .................
 Placer score = 3552.
-Finished Placer Phase 1.  REAL time: 12 secs 
+Finished Placer Phase 1.  REAL time: 14 secs 
 
 Starting Placer Phase 2.
 .
 Placer score =  3552
-Finished Placer Phase 2.  REAL time: 12 secs 
+Finished Placer Phase 2.  REAL time: 14 secs 
 
 
 
@@ -136,9 +136,9 @@ Edge Clocks:
 
 +
 I/O Usage Summary (final):
-   5 out of 365 (1.4%) PIO sites used.
-   5 out of 205 (2.4%) bonded PIO sites used.
-   Number of PIO comps: 5; differential: 0.
+   6 out of 365 (1.6%) PIO sites used.
+   6 out of 205 (2.9%) bonded PIO sites used.
+   Number of PIO comps: 5; differential: 1.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
@@ -147,23 +147,23 @@ I/O Bank Usage Summary:
 +----------+---------------+------------+------------+------------+
 | 0        | 1 / 27 (  3%) | 3.3V       | -          | -          |
 | 1        | 0 / 33 (  0%) | -          | -          | -          |
-| 2        | 1 / 34 (  2%) | 2.5V       | -          | -          |
-| 3        | 1 / 33 (  3%) | 2.5V       | -          | -          |
+| 2        | 2 / 34 (  5%) | 1.2V       | -          | -          |
+| 3        | 1 / 33 (  3%) | 3.3V       | -          | -          |
 | 6        | 1 / 33 (  3%) | 3.3V       | -          | -          |
 | 7        | 0 / 32 (  0%) | -          | -          | -          |
 | 8        | 1 / 13 (  7%) | 3.3V       | -          | -          |
 +----------+---------------+------------+------------+------------+
 
-Total placer CPU time: 12 secs 
+Total placer CPU time: 14 secs 
 
 Dumping design to file LVDS_First_Implementation.dir/5_1.ncd.
 
 0 connections routed; 5 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 32 secs 
+Completed router resource preassignment. Real time: 28 secs 
 
-Start NBR router at Thu May 09 15:55:29 CEST 2024
+Start NBR router at Mon May 20 16:10:29 CEST 2024
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -178,24 +178,24 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at Thu May 09 15:55:29 CEST 2024
+Start NBR special constraint process at Mon May 20 16:10:29 CEST 2024
 
-Start NBR section for initial routing at Thu May 09 15:55:29 CEST 2024
+Start NBR section for initial routing at Mon May 20 16:10:29 CEST 2024
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 33 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 29 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at Thu May 09 15:55:30 CEST 2024
+Start NBR section for normal routing at Mon May 20 16:10:30 CEST 2024
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 33 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 29 secs 
 
-Start NBR section for re-routing at Thu May 09 15:55:30 CEST 2024
+Start NBR section for re-routing at Mon May 20 16:10:30 CEST 2024
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 33 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 29 secs 
 
-Start NBR section for post-routing at Thu May 09 15:55:30 CEST 2024
+Start NBR section for post-routing at Mon May 20 16:10:30 CEST 2024
 
 End NBR router with 0 unrouted connection
 
@@ -210,8 +210,8 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
 
 
-Total CPU time 33 secs 
-Total REAL time: 34 secs 
+Total CPU time 30 secs 
+Total REAL time: 30 secs 
 Completely routed.
 End of route.  5 routed (100.00%); 0 unrouted.
 
@@ -233,8 +233,8 @@ PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 1073741.823
 PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 34 secs 
-Total REAL time to completion: 35 secs 
+Total CPU  time to completion: 31 secs 
+Total REAL time to completion: 31 secs 
 
 par done!
 

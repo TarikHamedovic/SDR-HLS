@@ -1,0 +1,4 @@
+#Start recording tcl command: 5/25/2024 11:30:12
+#Project Location: /home/user/SDR-HLS/Testing/Speaker Test; Project name: SpeakerTest
+prj_project open "/home/user/SDR-HLS/Testing/Speaker Test/SpeakerTest.ldf"
+#Stop recording: 5/25/2024 16:09:18

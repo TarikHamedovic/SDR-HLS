@@ -1,0 +1,107 @@
+Selecting top level module cic
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":1:7:1:15|Synthesizing module decimator in library work.
+
+	W=32'b00000000000000000000000000001010
+	R=32'b00000000000000000000000001100100
+	RW=32'b00000000000000000000000000100000
+   Generated name = decimator_10s_100s_32s
+Running optimization stage 1 on decimator_10s_100s_32s .......
+Finished optimization stage 1 on decimator_10s_100s_32s (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":1:7:1:9|Synthesizing module cic in library work.
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/integrator.sv":1:7:1:16|Synthesizing module integrator in library work.
+
+	IW=32'b00000000000000000000000000000101
+	OW=32'b00000000000000000000000000001010
+   Generated name = integrator_5s_10s
+@W: CG532 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/integrator.sv":33:0:33:6|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on integrator_5s_10s .......
+Finished optimization stage 1 on integrator_5s_10s (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":33:24:33:44|Port-width mismatch for port i_data. The port definition is 5 bits, but the actual port connection bit width is 10. Adjust either the definition or the instantiation of this port.
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":1:7:1:10|Synthesizing module comb in library work.
+
+	IW=32'b00000000000000000000000000001010
+	OW=32'b00000000000000000000000000001010
+	N=32'b00000000000000000000000000000001
+   Generated name = comb_10s_10s_1s
+@W: CG390 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":29:21:29:26|Repeat multiplier in concatenation evaluates to 0
+@W: CG390 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":29:57:29:62|Repeat multiplier in concatenation evaluates to 0
+@W: CG532 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":40:0:40:6|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on comb_10s_10s_1s .......
+@A: CL282 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":19:0:19:8|Feedback mux created for signal delay[0][9:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on comb_10s_10s_1s (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@W: CG532 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":89:4:89:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on cic .......
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":48:4:48:17|Removing instance decimator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[9].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[8].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[7].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[6].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[5].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[4].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[3].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[2].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":71:15:71:23|Removing instance genblk2[1].comb_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[9].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[8].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[7].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[6].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[5].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[4].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[3].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[2].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":29:12:29:26|Removing instance genblk1[1].integrator_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on cic (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+Running optimization stage 2 on comb_10s_10s_1s .......
+Finished optimization stage 2 on comb_10s_10s_1s (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+Running optimization stage 2 on integrator_5s_10s .......
+Finished optimization stage 2 on integrator_5s_10s (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+Running optimization stage 2 on cic .......
+@A: CL153 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":59:26:59:34|*Unassigned bits of o_data[9:0] are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":60:11:60:20|*Unassigned bits of o_ready are referenced and tied to 0 -- simulation mismatch possible.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":7:16:7:20|Input i_clk is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":8:16:8:22|Input i_reset is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":9:16:9:19|Input i_ce is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":10:32:10:37|Input i_data is unused.
+Finished optimization stage 2 on cic (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+Running optimization stage 2 on decimator_10s_100s_32s .......
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Optimizing register bit decimator_counter[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":17:4:17:12|Pruning register bits 31 to 7 of decimator_counter[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 2 on decimator_10s_100s_32s (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synwork/layer0.duruntime
+
+

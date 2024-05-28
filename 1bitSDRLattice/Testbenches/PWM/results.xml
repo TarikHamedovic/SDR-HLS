@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1716745818" />
+    <testcase name="PWM_test" classname="PWM_tb" file="/home/user/SDR-HLS/1bitSDRLattice/Testbenches/PWM/PWM_tb.py" lineno="36" time="268.63766145706177" sim_time_ns="110837.5" ratio_time="412.59106931928056">
+      <failure message="Test failed with RANDOM_SEED=1716745818" />
+    </testcase>
+  </testsuite>
+</testsuites>

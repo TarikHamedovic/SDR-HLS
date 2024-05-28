@@ -1,0 +1,319 @@
+----------------------------------------------------------------------
+Report for cell top_level.verilog
+
+Register bits: 426 of 83640 (1%)
+PIC Latch:       0
+I/O cells:       3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      118       100.0
+                           DPR16X4C        9       100.0
+                            FD1P3AX      257       100.0
+                            FD1P3AY        1       100.0
+                            FD1S3AX      162       100.0
+                            FD1S3AY        1       100.0
+                            FD1S3IX        3       100.0
+                                GSR        1       100.0
+                                 IB        2       100.0
+                           IFS1P3DX        1       100.0
+                                INV        4       100.0
+                            L6MUX21        2       100.0
+                                 OB        1       100.0
+                           OFS1P3BX        1       100.0
+                           ORCALUT4      495       100.0
+                           PDPW16KD        2       100.0
+                              PFUMX       27       100.0
+                                PUR        1       100.0
+                                VHI       17       100.0
+                                VLO       17       100.0
+SUB MODULES 
+                              manta        1       100.0
+                  \manta.interface         1       100.0
+          \manta.interface.bridge_rx         1       100.0
+          \manta.interface.bridge_tx         1       100.0
+          \manta.interface.uart_rx         1       100.0
+          \manta.interface.uart_tx         1       100.0
+          \manta.my_logic_analyzer         1       100.0
+          \manta.my_logic_analyzer.fsm         1       100.0
+          \manta.my_logic_analyzer.fsm.registers         1       100.0
+          \manta.my_logic_analyzer.sample_mem         1       100.0
+          \manta.my_logic_analyzer.trig_blk         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe0_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe1_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe2_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe3_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.registers         1       100.0
+                            
+                         TOTAL          1138           
+----------------------------------------------------------------------
+Report for cell manta.netlist
+     Instance path:  manta_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      104        88.1
+                           DPR16X4C        9       100.0
+                            FD1P3AX      257       100.0
+                            FD1P3AY        1       100.0
+                            FD1S3AX      133        82.1
+                            FD1S3AY        1       100.0
+                            FD1S3IX        3       100.0
+                                INV        2        50.0
+                            L6MUX21        2       100.0
+                           ORCALUT4      495       100.0
+                           PDPW16KD        2       100.0
+                              PFUMX       27       100.0
+                                VHI       16        94.1
+                                VLO       16        94.1
+SUB MODULES 
+                  \manta.interface         1       100.0
+          \manta.interface.bridge_rx         1       100.0
+          \manta.interface.bridge_tx         1       100.0
+          \manta.interface.uart_rx         1       100.0
+          \manta.interface.uart_tx         1       100.0
+          \manta.my_logic_analyzer         1       100.0
+          \manta.my_logic_analyzer.fsm         1       100.0
+          \manta.my_logic_analyzer.fsm.registers         1       100.0
+          \manta.my_logic_analyzer.sample_mem         1       100.0
+          \manta.my_logic_analyzer.trig_blk         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe0_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe1_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe2_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe3_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.registers         1       100.0
+                            
+                         TOTAL          1083           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer .netlist
+     Instance path:  manta_inst.my_logic_analyzer
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       95        80.5
+                           DPR16X4C        9       100.0
+                            FD1P3AX      168        65.4
+                            FD1S3AX      125        77.2
+                            FD1S3AY        1       100.0
+                                INV        2        50.0
+                            L6MUX21        2       100.0
+                           ORCALUT4      320        64.6
+                           PDPW16KD        2       100.0
+                              PFUMX       17        63.0
+                                VHI       10        58.8
+                                VLO       10        58.8
+SUB MODULES 
+          \manta.my_logic_analyzer.fsm         1       100.0
+          \manta.my_logic_analyzer.fsm.registers         1       100.0
+          \manta.my_logic_analyzer.sample_mem         1       100.0
+          \manta.my_logic_analyzer.trig_blk         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe0_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe1_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe2_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe3_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.registers         1       100.0
+                            
+                         TOTAL           770           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       72        61.0
+                            FD1P3AX       91        35.4
+                            FD1S3AX       63        38.9
+                                INV        1        25.0
+                            L6MUX21        2       100.0
+                           ORCALUT4      117        23.6
+                              PFUMX        5        18.5
+                                VHI        6        35.3
+                                VLO        6        35.3
+SUB MODULES 
+          \manta.my_logic_analyzer.trig_blk.probe0_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe1_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe2_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.probe3_trigger         1       100.0
+          \manta.my_logic_analyzer.trig_blk.registers         1       100.0
+                            
+                         TOTAL           368           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk.registers .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk.registers
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1P3AX       91        35.4
+                            FD1S3AX       34        21.0
+                                INV        1        25.0
+                           ORCALUT4       74        14.9
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL           202           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk.probe3_trigger .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk.probe3_trigger
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       46        39.0
+                            FD1S3AX       16         9.9
+                            L6MUX21        1        50.0
+                           ORCALUT4        6         1.2
+                              PFUMX        2         7.4
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            73           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk.probe2_trigger .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk.probe2_trigger
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       26        22.0
+                            FD1S3AX        8         4.9
+                            L6MUX21        1        50.0
+                           ORCALUT4        6         1.2
+                              PFUMX        2         7.4
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            45           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk.probe1_trigger .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk.probe1_trigger
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3AX        4         2.5
+                           ORCALUT4       20         4.0
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            26           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.trig_blk.probe0_trigger .netlist
+     Instance path:  manta_inst.my_logic_analyzer.trig_blk.probe0_trigger
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3AX        1         0.6
+                           ORCALUT4        9         1.8
+                              PFUMX        1         3.7
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            13           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.sample_mem .netlist
+     Instance path:  manta_inst.my_logic_analyzer.sample_mem
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       11         9.3
+                           DPR16X4C        9       100.0
+                            FD1P3AX       16         6.2
+                            FD1S3AX       22        13.6
+                                INV        1        25.0
+                           ORCALUT4       72        14.5
+                           PDPW16KD        2       100.0
+                              PFUMX       12        44.4
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL           147           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.fsm .netlist
+     Instance path:  manta_inst.my_logic_analyzer.fsm
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       12        10.2
+                            FD1P3AX       61        23.7
+                            FD1S3AX       40        24.7
+                            FD1S3AY        1       100.0
+                           ORCALUT4      131        26.5
+                                VHI        2        11.8
+                                VLO        2        11.8
+SUB MODULES 
+          \manta.my_logic_analyzer.fsm.registers         1       100.0
+                            
+                         TOTAL           250           
+----------------------------------------------------------------------
+Report for cell \manta.my_logic_analyzer.fsm.registers .netlist
+     Instance path:  manta_inst.my_logic_analyzer.fsm.registers
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1P3AX       44        17.1
+                            FD1S3AX       34        21.0
+                           ORCALUT4       70        14.1
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL           150           
+----------------------------------------------------------------------
+Report for cell \manta.interface .netlist
+     Instance path:  manta_inst.\interface
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        9         7.6
+                            FD1P3AX       89        34.6
+                            FD1P3AY        1       100.0
+                            FD1S3AX        8         4.9
+                            FD1S3IX        3       100.0
+                           ORCALUT4      175        35.4
+                              PFUMX       10        37.0
+                                VHI        5        29.4
+                                VLO        5        29.4
+SUB MODULES 
+          \manta.interface.bridge_rx         1       100.0
+          \manta.interface.bridge_tx         1       100.0
+          \manta.interface.uart_rx         1       100.0
+          \manta.interface.uart_tx         1       100.0
+                            
+                         TOTAL           309           
+----------------------------------------------------------------------
+Report for cell \manta.interface.uart_tx .netlist
+     Instance path:  manta_inst.\interface.uart_tx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        4         3.4
+                            FD1P3AX       17         6.6
+                            FD1P3AY        1       100.0
+                            FD1S3AX        1         0.6
+                           ORCALUT4       26         5.3
+                              PFUMX        2         7.4
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            53           
+----------------------------------------------------------------------
+Report for cell \manta.interface.uart_rx .netlist
+     Instance path:  manta_inst.\interface.uart_rx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        5         4.2
+                            FD1P3AX       20         7.8
+                            FD1S3AX        4         2.5
+                           ORCALUT4       23         4.6
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            54           
+----------------------------------------------------------------------
+Report for cell \manta.interface.bridge_tx .netlist
+     Instance path:  manta_inst.\interface.bridge_tx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1P3AX       16         6.2
+                            FD1S3AX        1         0.6
+                            FD1S3IX        3       100.0
+                           ORCALUT4       40         8.1
+                              PFUMX        8        29.6
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL            70           
+----------------------------------------------------------------------
+Report for cell \manta.interface.bridge_rx .netlist
+     Instance path:  manta_inst.\interface.bridge_rx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1P3AX       36        14.0
+                            FD1S3AX        2         1.2
+                           ORCALUT4       86        17.4
+                                VHI        1         5.9
+                                VLO        1         5.9
+                            
+                         TOTAL           126           

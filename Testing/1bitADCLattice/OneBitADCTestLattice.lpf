@@ -1,0 +1,61 @@
+BLOCK RESETPATHS;
+BLOCK ASYNCPATHS;
+
+# The clock "usb" and "gpdi" sheet
+LOCATE COMP "clk_in" SITE "G2";
+IOBUF  PORT "clk_in" PULLMODE=NONE IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk_in" 25 MHZ;
+
+# JTAG and SPI FLASH voltage 3.3V and options to boot from SPI flash
+# write to FLASH possible any time from JTAG:
+SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=ENABLE SLAVE_PARALLEL_PORT=DISABLE;
+# write to FLASH possible from user bitstream:
+# SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE;
+
+## LED indicators "blinkey" and "gpio" sheet
+#LOCATE COMP "led[7]" SITE "H3";
+#LOCATE COMP "led[6]" SITE "E1";
+#LOCATE COMP "led[5]" SITE "E2";
+#LOCATE COMP "led[4]" SITE "D1";
+#LOCATE COMP "led[3]" SITE "D2";
+#LOCATE COMP "led[2]" SITE "C1";
+#LOCATE COMP "led[1]" SITE "C2";
+#LOCATE COMP "led[0]" SITE "B2";
+#IOBUF  PORT "led[0]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[1]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[2]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[3]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[4]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[5]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[6]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+#IOBUF  PORT "led[7]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
+
+## Pushbuttons "blinkey", "flash", "power", "gpdi" sheet
+LOCATE COMP "rstn" SITE "R1";  # FIRE1
+IOBUF  PORT "rstn" PULLMODE=DOWN IO_TYPE=LVCMOS33 DRIVE=4;
+
+################ 3.3V   ################
+################ BANK 7 ################
+# PIN A4 From Bank 7 [Pin 8 ON BOARD]
+LOCATE COMP "pwm_out" SITE "A4";
+IOBUF PORT  "pwm_out" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE = 4; 
+
+# PIN G3 From Bank 7 [Pin 12 on BOARD]
+LOCATE COMP "sample_rdy"  SITE "G3";
+IOBUF PORT  "sample_rdy"  IO_TYPE=LVCMOS33;
+
+
+################  3,3V  ################
+################ BANK 3 ################
+# PIN U18 From BANK 3 [PIN 14 ON BOARD]
+LOCATE COMP "analog_out"  SITE "U18";  
+IOBUF PORT  "analog_out"  SLEWRATE=SLOW IO_TYPE=LVCMOS33; 
+OUTPUT PORT "analog_out" LOAD 0.000000 pF;
+
+	
+######################### LVDS  ########################
+######################## BANK 2 ########################
+# LVDS (Differential signal on +- Pins on Board)
+# PIN H18 From Bank 2 [Positive Pin 18 ON BOARD]
+LOCATE COMP "analog_cmp"  SITE "H18"; 
+IOBUF PORT "analog_cmp" IO_TYPE=LVDS HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF; # LVDS25 NOT SUPPORTED?

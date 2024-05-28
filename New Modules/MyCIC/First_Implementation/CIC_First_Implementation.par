@@ -1,0 +1,171 @@
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Sun May 26 11:45:16 2024
+
+/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
+CIC_First_Implementation.p2t CIC_First_Implementation_map.ncd
+CIC_First_Implementation.dir CIC_First_Implementation.prf -gui
+
+
+Preference file: CIC_First_Implementation.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            -            -            -            -            08           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 8 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Lattice Place and Route Report for Design "CIC_First_Implementation_map.ncd"
+Sun May 26 11:45:16 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 CIC_First_Implementation_map.ncd CIC_First_Implementation.dir/5_1.ncd CIC_First_Implementation.prf
+Preference file: CIC_First_Implementation.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file CIC_First_Implementation_map.ncd.
+Design name: cic
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      11/365           3% used
+                     11/205           5% bonded
+
+   SLICE              0/41820         0% used
+
+
+
+Number of Signals: 0
+Number of Connections: 0
+
+Pin Constraint Summary:
+   0 out of 11 pins locked (0% locked).
+
+
+No signal is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 7 secs 
+
+Starting Placer Phase 1.
+
+Placer score = 0.
+Finished Placer Phase 1.  REAL time: 7 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  0
+Finished Placer Phase 2.  REAL time: 7 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 12 (0%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 4 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   11 out of 365 (3.0%) PIO sites used.
+   11 out of 205 (5.4%) bonded PIO sites used.
+   Number of PIO comps: 11; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 1 / 27 (  3%) | 2.5V       | -          | -          |
+| 1        | 3 / 33 (  9%) | 2.5V       | -          | -          |
+| 2        | 1 / 34 (  2%) | 2.5V       | -          | -          |
+| 3        | 2 / 33 (  6%) | 2.5V       | -          | -          |
+| 6        | 2 / 33 (  6%) | 2.5V       | -          | -          |
+| 7        | 2 / 32 (  6%) | 2.5V       | -          | -          |
+| 8        | 0 / 13 (  0%) | -          | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Total placer CPU time: 7 secs 
+
+Dumping design to file CIC_First_Implementation.dir/5_1.ncd.
+
+INFO - par: The routing stage will be skipped since the design contains no signals and/or connections.
+Timing score: 0 
+
+Dumping design to file CIC_First_Implementation.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 7 secs 
+Total REAL time to completion: 8 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.

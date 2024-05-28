@@ -1,0 +1,6 @@
+---------------------------------------------------
+Report for cell cic
+   Instance path: cic
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	         11        100.0

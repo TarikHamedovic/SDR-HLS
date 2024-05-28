@@ -1,0 +1,14 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu May 23 16:01:47 2024 *
+NOTE DESIGN NAME: top_level *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS rs232_tx_ttl : L4 : out *
+NOTE PINS clk : G2 : in *
+NOTE PINS rs232_rx_ttl : M1 : in *
+NOTE PINS SYSCONFIG_PIN_D1 : V2 : inout *
+NOTE PINS SYSCONFIG_PIN_D0 : W2 : inout *
+NOTE PINS SYSCONFIG_PIN_HOLDN : R2 : inout *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: on *

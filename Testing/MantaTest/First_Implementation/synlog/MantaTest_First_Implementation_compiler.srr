@@ -1,0 +1,320 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v" (library work)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv" (library work)
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Previous declaration of module manta found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Duplicate module name manta (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Previous declaration of module \manta.interface  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Duplicate module name \manta.interface  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Previous declaration of module \manta.interface.bridge_rx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Duplicate module name \manta.interface.bridge_rx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Previous declaration of module \manta.interface.bridge_tx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Duplicate module name \manta.interface.bridge_tx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Previous declaration of module \manta.interface.uart_rx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Duplicate module name \manta.interface.uart_rx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Previous declaration of module \manta.interface.uart_tx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Duplicate module name \manta.interface.uart_tx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Previous declaration of module \manta.my_logic_analyzer  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Duplicate module name \manta.my_logic_analyzer  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Previous declaration of module \manta.my_logic_analyzer.fsm  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Duplicate module name \manta.my_logic_analyzer.fsm  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Previous declaration of module \manta.my_logic_analyzer.fsm.registers  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Duplicate module name \manta.my_logic_analyzer.fsm.registers  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Previous declaration of module \manta.my_logic_analyzer.sample_mem  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Duplicate module name \manta.my_logic_analyzer.sample_mem  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Previous declaration of module \manta.my_logic_analyzer.trig_blk  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Duplicate module name \manta.my_logic_analyzer.trig_blk  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe0_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe0_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe1_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe1_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe2_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe2_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe3_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe3_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Previous declaration of module \manta.my_logic_analyzer.trig_blk.registers  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Duplicate module name \manta.my_logic_analyzer.trig_blk.registers  (using last description encountered)!
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top_level
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Synthesizing module \manta.interface.bridge_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":403:4:403:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":414:4:414:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":425:4:425:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":434:4:434:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":445:4:445:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":456:4:456:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":467:4:467:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":485:10:485:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":494:10:494:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":518:8:518:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":528:8:528:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":548:10:548:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":574:10:574:11|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.bridge_rx  .......
+Finished optimization stage 1 on \manta.interface.bridge_rx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Synthesizing module \manta.interface.bridge_tx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":701:4:701:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":710:4:710:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":731:4:731:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":753:4:753:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":761:10:761:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":776:4:776:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":797:4:797:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.bridge_tx  .......
+Finished optimization stage 1 on \manta.interface.bridge_tx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Synthesizing module \manta.interface.uart_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":918:4:918:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":934:4:934:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":953:4:953:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":960:8:960:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":975:4:975:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":981:6:981:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":983:8:983:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1000:4:1000:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1004:8:1004:9|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.uart_rx  .......
+Finished optimization stage 1 on \manta.interface.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Synthesizing module \manta.interface.uart_tx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1107:8:1107:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1127:8:1127:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1149:8:1149:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1152:10:1152:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1171:8:1171:9|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.uart_tx  .......
+Finished optimization stage 1 on \manta.interface.uart_tx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Synthesizing module \manta.interface  in library work.
+Running optimization stage 1 on \manta.interface  .......
+Finished optimization stage 1 on \manta.interface  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Synthesizing module \manta.my_logic_analyzer.fsm.registers  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1890:6:1890:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1897:6:1897:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1904:6:1904:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1911:6:1911:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1918:6:1918:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1925:6:1925:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1932:6:1932:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1939:6:1939:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.fsm.registers  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.fsm.registers  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Synthesizing module \manta.my_logic_analyzer.fsm  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1564:4:1564:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1596:6:1596:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1598:8:1598:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1605:10:1605:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1625:8:1625:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1653:6:1653:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1680:10:1680:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1690:8:1690:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1703:6:1703:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.fsm  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.fsm  (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Synthesizing module \manta.my_logic_analyzer.sample_mem  in library work.
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2248:2:2248:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2516:2:2516:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2520:2:2520:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2788:2:2788:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on \manta.my_logic_analyzer.sample_mem  .......
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found RAM mem_1, depth=256, width=13
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found RAM mem_0, depth=256, width=16
+Finished optimization stage 1 on \manta.my_logic_analyzer.sample_mem  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe0_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3189:4:3189:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe1_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3302:4:3302:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe2_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3415:4:3415:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe3_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3528:4:3528:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Synthesizing module \manta.my_logic_analyzer.trig_blk.registers  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3771:6:3771:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3778:6:3778:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3785:6:3785:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3792:6:3792:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3799:6:3799:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3806:6:3806:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3813:6:3813:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3820:6:3820:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3827:6:3827:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.registers  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.registers  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Synthesizing module \manta.my_logic_analyzer.trig_blk  in library work.
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Synthesizing module \manta.my_logic_analyzer  in library work.
+Running optimization stage 1 on \manta.my_logic_analyzer  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Synthesizing module manta in library work.
+Running optimization stage 1 on manta .......
+Finished optimization stage 1 on manta (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":6:7:6:15|Synthesizing module top_level in library work.
+Running optimization stage 1 on top_level .......
+Finished optimization stage 1 on top_level (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on top_level .......
+Finished optimization stage 2 on top_level (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on manta .......
+Finished optimization stage 2 on manta (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.registers  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.registers  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.sample_mem  .......
+@N: CL135 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2819:2:2819:7|Found sequential shift \$signal$5 with address depth of 3 words and data bit width of 35.
+Finished optimization stage 2 on \manta.my_logic_analyzer.sample_mem  (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.fsm  .......
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 5 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Initial value is not supported on state machine state
+Finished optimization stage 2 on \manta.my_logic_analyzer.fsm  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.fsm.registers  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.fsm.registers  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface  .......
+@W: CL247 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bit 34 of bus_i[34:0] is unused
+
+@W: CL246 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bits 15 to 0 of bus_i[34:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on \manta.interface  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.uart_tx  .......
+Finished optimization stage 2 on \manta.interface.uart_tx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.uart_rx  .......
+Finished optimization stage 2 on \manta.interface.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.bridge_tx  .......
+@N: CL189 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Register bit _count[3] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Pruning register bit 3 of _count[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on \manta.interface.bridge_tx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.bridge_rx  .......
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Trying to extract state machine for register _state.
+Extracted state machine for register _state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Initial value is not supported on state machine _state
+Finished optimization stage 2 on \manta.interface.bridge_rx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 145MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/MantaTest_First_Implementation_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]

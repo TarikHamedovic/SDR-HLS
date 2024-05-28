@@ -1,0 +1,116 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "00000000000000000000000000000000" on instance _buffer[31:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance _buffer[15:0].
+@N: FX493 |Applying initial value "0" on instance start_o.
+@N: FX493 |Applying initial value "0" on instance _rx_d.
+@N: FX493 |Applying initial value "0" on instance _rx_q.
+@N: FX493 |Applying initial value "0" on instance _rx_q_prev.
+@N: FX493 |Applying initial value "00000000" on instance data_o[7:0].
+@N: FX493 |Applying initial value "0" on instance valid_o.
+@N: FX493 |Applying initial value "000000000" on instance _buffer[8:0].
+@N: FX493 |Applying initial value "1" on instance tx.
+@N: FX493 |Applying initial value "1" on instance done_o.
+@N: FX493 |Applying initial value "00000000" on instance trigger_location_buf[7:0].
+@N: FX493 |Applying initial value "00" on instance trigger_mode_buf[1:0].
+@N: FX493 |Applying initial value "0" on instance request_start_buf.
+@N: FX493 |Applying initial value "0" on instance request_stop_buf.
+@N: FX493 |Applying initial value "0" on instance _strobe.
+@N: FX493 |Applying initial value "00000000" on instance trigger_location[7:0].
+@N: FX493 |Applying initial value "00" on instance trigger_mode[1:0].
+@N: FX493 |Applying initial value "0" on instance request_start.
+@N: FX493 |Applying initial value "0" on instance request_stop.
+@N: FX493 |Applying initial value "000" on instance state_buf[2:0].
+@N: FX493 |Applying initial value "00000000" on instance read_pointer_buf[7:0].
+@N: FX493 |Applying initial value "00000000" on instance write_pointer_buf[7:0].
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+@N: FX493 |Applying initial value "0" on instance prev_request_start.
+@N: FX493 |Applying initial value "0" on instance prev_request_stop.
+@N: FX493 |Applying initial value "0" on instance write_enable.
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+@N: FX493 |Applying initial value "1" on instance G_1.
+@N: FX493 |Applying initial value "1" on instance G_2.
+@N: FX493 |Applying initial value "1" on instance G_3.
+@N: FX493 |Applying initial value "1" on instance G_4.
+@N: FX493 |Applying initial value "1" on instance G_5.
+@N: FX493 |Applying initial value "1" on instance G_6.
+@N: FX493 |Applying initial value "0" on instance prev.
+@N: FX493 |Applying initial value "0000" on instance prev[3:0].
+@N: FX493 |Applying initial value "00000000" on instance prev[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance prev[15:0].
+@N: FX493 |Applying initial value "0" on instance _strobe.
+@N: FX493 |Applying initial value "0000" on instance probe0_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe1_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe2_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe3_op_buf[3:0].
+@N: FX493 |Applying initial value "0" on instance probe0_arg_buf.
+@N: FX493 |Applying initial value "0000" on instance probe1_arg_buf[3:0].
+@N: FX493 |Applying initial value "00000000" on instance probe2_arg_buf[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance probe3_arg_buf[15:0].
+@N: FX493 |Applying initial value "0000" on instance probe0_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe1_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe2_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe3_op[3:0].
+@N: FX493 |Applying initial value "0" on instance probe0_arg.
+@N: FX493 |Applying initial value "0000" on instance probe1_arg[3:0].
+@N: FX493 |Applying initial value "00000000" on instance probe2_arg[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance probe3_arg[15:0].
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+@N: BN362 :|Removing sequential instance G_8 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_10 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_12 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_14 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_16 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_18 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_20 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_22 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_24 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_26 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_28 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_30 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_32 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_34 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_36 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_38 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_40 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_42 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_44 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_46 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_48 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_50 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_52 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_54 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_56 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_58 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_60 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_62 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_64 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_66 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_68 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_70 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_72 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_74 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[1] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[2] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[3] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[4] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[5] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[6] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[7] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[8] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[9] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[10] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[11] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[12] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[13] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[14] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[15] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FX493 |Applying initial value "1" on instance state[0].
+@N: FX493 |Applying initial value "0" on instance state[1].
+@N: FX493 |Applying initial value "0" on instance state[2].
+@N: FX493 |Applying initial value "0" on instance state[3].
+@N: FX493 |Applying initial value "0" on instance state[4].
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top_level 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

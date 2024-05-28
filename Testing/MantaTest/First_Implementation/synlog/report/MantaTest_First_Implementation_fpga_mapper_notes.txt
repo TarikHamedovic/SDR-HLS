@@ -1,0 +1,196 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":18:4:18:9|Found counter in view:work.top_level(verilog) instance probe3[15:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":18:4:18:9|Found counter in view:work.top_level(verilog) instance probe2[7:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":392:2:392:7|Found counter in view:work.\\manta\.interface\.bridge_rx\ (verilog) instance _byte_num[3:0] 
+@N: FX493 |Applying initial value "0" on instance _byte_num[0].
+@N: FX493 |Applying initial value "0" on instance _byte_num[1].
+@N: FX493 |Applying initial value "0" on instance _byte_num[2].
+@N: FX493 |Applying initial value "0" on instance _byte_num[3].
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":885:2:885:7|Found counter in view:work.\\manta\.interface\.uart_rx\ (verilog) instance _bit_index[3:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":888:2:888:7|Found counter in view:work.\\manta\.interface\.uart_rx\ (verilog) instance _baud_counter[7:0] 
+@N: FX493 |Applying initial value "0" on instance _bit_index[0].
+@N: FX493 |Applying initial value "0" on instance _bit_index[1].
+@N: FX493 |Applying initial value "0" on instance _bit_index[2].
+@N: FX493 |Applying initial value "0" on instance _bit_index[3].
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1076:2:1076:7|Found counter in view:work.\\manta\.interface\.uart_tx\ (verilog) instance _bit_index[3:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1070:2:1070:7|Found counter in view:work.\\manta\.interface\.uart_tx\ (verilog) instance _baud_counter[6:0] 
+@N: FX493 |Applying initial value "0" on instance _bit_index[0].
+@N: FX493 |Applying initial value "0" on instance _bit_index[1].
+@N: FX493 |Applying initial value "0" on instance _bit_index[2].
+@N: FX493 |Applying initial value "0" on instance _bit_index[3].
+@N: MF179 :|Found 8 by 8 bit equality operator ('==') \\\$21 (in view: work.\\manta\.my_logic_analyzer\.fsm\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1518:17:1518:132|Found 9 by 9 bit equality operator ('==') \\\$13 (in view: work.\\manta\.my_logic_analyzer\.fsm\ (verilog))
+@N: FX493 |Applying initial value "0000000000000000" on instance _0_[15:0].
+@N: FX493 |Applying initial value "0" on instance _0__ret[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret[15].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[15].
+@N: FX493 |Applying initial value "0" on instance _0__ret_31.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found startup values on RAM instance mem_0[15:0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)).
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_00 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_01 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_02 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_03 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_04 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_05 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_06 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_07 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_08 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_09 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_10 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_11 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_12 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_13 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_14 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_15 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_16 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_17 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_18 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_19 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found startup values on RAM instance mem_0[15:0]
+@N: FX493 |Applying initial value "0000000000000" on instance _1_[12:0].
+@N: FX493 |Applying initial value "0" on instance _1__ret[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret[8].
+@N: FX493 |Applying initial value "0" on instance _1__ret[9].
+@N: FX493 |Applying initial value "0" on instance _1__ret[10].
+@N: FX493 |Applying initial value "0" on instance _1__ret[11].
+@N: FX493 |Applying initial value "0" on instance _1__ret[12].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_24.
+@N: FX493 |Applying initial value "0" on instance _1__ret_25.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found startup values on RAM instance mem_1[12:0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)).
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_00 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_01 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_02 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_03 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_04 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_05 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_06 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_07 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_08 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_09 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_10 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_11 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_12 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_13 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_14 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_15 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_16 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_17 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_18 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_19 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found startup values on RAM instance mem_1[12:0]
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance _0_[0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FX493 |Applying initial value "0" on instance _0__ret_31.
+@N: FX493 |Applying initial value "0" on instance _1__ret_25.
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[0].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[15].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[0].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[8].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[9].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[10].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[11].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[12].
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2513:29:2513:58|Found 8 by 8 bit equality operator ('==') un1_user_addr (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2785:29:2785:60|Found 8 by 8 bit equality operator ('==') un1_user_addr_1 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3395:17:3395:134|Found 8 by 8 bit equality operator ('==') un1_\\\$13 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe2_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3400:17:3400:140|Found 8 by 8 bit equality operator ('==') \\\$18 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe2_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3508:17:3508:134|Found 16 by 16 bit equality operator ('==') un1_\\\$13 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe3_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3513:17:3513:140|Found 16 by 16 bit equality operator ('==') \\\$18 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe3_trigger\ (verilog))
+@N: MF794 |RAM \\\$signal\$5_CR34[33:0] required 2 registers during mapping 
+@N: MF794 |RAM mem_0[15:0] required 17 registers during mapping 
+@N: MF794 |RAM mem_1[12:0] required 14 registers during mapping 
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: FO126 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2819:2:2819:7|Generating RAM manta_inst.my_logic_analyzer.sample_mem.\\\$signal\$5_CR34[33:0]
+@N: FX1056 |Writing EDF file: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/MantaTest_First_Implementation.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

@@ -19,14 +19,13 @@
 <unit name = "LVDS">
 
     <!--
-        Top Level Pins: 6
+        Top Level Pins: 5
     -->
 
     <pins>
         <pitem  name = "i_clk"  direction = "in"  />
         <pitem  name = "i_reset"  direction = "in"  />
         <pitem  name = "i_LVDS_p"  direction = "in"  />
-        <pitem  name = "i_LVDS_n"  direction = "in"  />
         <pitem  name = "o_clk"  direction = "out"  />
         <pitem  name = "o_LVDS"  direction = "out"  />
     </pins>

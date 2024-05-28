@@ -1,12 +1,12 @@
 module LVDS(
 
-     input wire i_clk,
+  input wire i_clk,
 	 input wire i_reset,
 	 input wire i_LVDS_p,
-	 input wire i_LVDS_n, // NE TREBA
+	 //input wire i_LVDS_n, // NE TREBA
 	
 	 output wire o_clk,
-     output reg o_LVDS
+  output reg o_LVDS
 );
     assign o_clk = i_clk;
 

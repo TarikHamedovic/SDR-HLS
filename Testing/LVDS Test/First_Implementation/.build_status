@@ -5,38 +5,38 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="1715264110"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1716214253"/>
             <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1715264110">
-            <Task name="Map" build_result="0" update_result="2" update_time="1715264110"/>
+        <Milestone name="Map" build_result="2" build_time="1716214200">
+            <Task name="Map" build_result="2" update_result="0" update_time="1716214200"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1715264110">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1715264110"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1715264110"/>
+        <Milestone name="PAR" build_result="2" build_time="1716214234">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1716214234"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1716214237"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1715264101">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1715264101"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1715264101"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1716213576">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1716213576"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1716213630"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1715264101"/>
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1716213564"/>
             <Task name="BKM" build_result="0" update_result="3" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/LVDS_First_Implementation_map.vdb" last_build_time="1715262896" last_build_size="44843"/>
-        <Report name="LVDS_First_Implementation.bgn" last_build_time="1715262958" last_build_size="4591"/>
-        <Report name="LVDS_First_Implementation.bit" last_build_time="1715262958" last_build_size="280340"/>
-        <Report name="LVDS_First_Implementation.lsedata" last_build_time="1715262890" last_build_size="1743"/>
-        <Report name="LVDS_First_Implementation.ncd" last_build_time="1715262935" last_build_size="6664"/>
-        <Report name="LVDS_First_Implementation.ngd" last_build_time="1715262891" last_build_size="5092"/>
-        <Report name="LVDS_First_Implementation.twr" last_build_time="1715262941" last_build_size="5837"/>
-        <Report name="LVDS_First_Implementation_map.ncd" last_build_time="1715262893" last_build_size="4045"/>
+        <Report name=".vdbs/LVDS_First_Implementation_map.vdb" last_build_time="1716214200" last_build_size="44843"/>
+        <Report name="LVDS_First_Implementation.bgn" last_build_time="1716214253" last_build_size="4591"/>
+        <Report name="LVDS_First_Implementation.bit" last_build_time="1716214253" last_build_size="280342"/>
+        <Report name="LVDS_First_Implementation.lsedata" last_build_time="1716213575" last_build_size="1687"/>
+        <Report name="LVDS_First_Implementation.ncd" last_build_time="1716214234" last_build_size="6662"/>
+        <Report name="LVDS_First_Implementation.ngd" last_build_time="1716213576" last_build_size="4944"/>
+        <Report name="LVDS_First_Implementation.twr" last_build_time="1716214237" last_build_size="5837"/>
+        <Report name="LVDS_First_Implementation_map.ncd" last_build_time="1716214197" last_build_size="4068"/>
     </Strategy>
 </BuildStatus>

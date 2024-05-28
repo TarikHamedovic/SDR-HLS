@@ -1,0 +1,186 @@
+---------------------------------------------------
+Report for cell top_level
+   Instance path: top_level
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     530.00        100.0
+                                 IOLGC	       2.00        100.0
+                                  LUT4	     499.00        100.0
+                               DISTRAM	      27.00        100.0
+                                 IOREG	          2        100.0
+                                 IOBUF	          3        100.0
+                                PFUREG	        424        100.0
+                                RIPPLE	        118        100.0
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                 manta	          1        96.6
+---------------------------------------------------
+Report for cell manta
+   Instance path: top_level/manta_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     512.17        96.6
+                                  LUT4	     497.00        99.6
+                               DISTRAM	      26.00        96.3
+                                PFUREG	        395        93.2
+                                RIPPLE	        104        88.1
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+            Z_manta_my_logic_analyzer_	          1        74.0
+                    Z_manta_interface_	          1        22.6
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_
+   Instance path: top_level/manta_inst/my_logic_analyzer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     392.33        74.0
+                                  LUT4	     322.00        64.5
+                               DISTRAM	      26.00        96.3
+                                PFUREG	        294        69.3
+                                RIPPLE	         95        80.5
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+ Z_manta_my_logic_analyzer_sample_mem_	          1        16.7
+   Z_manta_my_logic_analyzer_trig_blk_	          1        38.2
+        Z_manta_my_logic_analyzer_fsm_	          1        19.1
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     202.50        38.2
+                                  LUT4	     118.00        23.6
+                                PFUREG	        154        36.3
+                                RIPPLE	         72        61.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+Z_manta_my_logic_analyzer_trig_blk_probe2_trigger_	          1         6.4
+Z_manta_my_logic_analyzer_trig_blk_registers_	          1        17.3
+Z_manta_my_logic_analyzer_trig_blk_probe3_trigger_	          1        10.9
+Z_manta_my_logic_analyzer_trig_blk_probe0_trigger_	          1         1.0
+Z_manta_my_logic_analyzer_trig_blk_probe1_trigger_	          1         2.3
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_registers_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk/registers
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      91.83        17.3
+                                  LUT4	      75.00        15.0
+                                PFUREG	        125        29.5
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_probe3_trigger_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk/probe3_trigger
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      58.00        10.9
+                                  LUT4	       6.00         1.2
+                                PFUREG	         16         3.8
+                                RIPPLE	         46        39.0
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_probe2_trigger_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk/probe2_trigger
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.00         6.4
+                                  LUT4	       6.00         1.2
+                                PFUREG	          8         1.9
+                                RIPPLE	         26        22.0
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_probe1_trigger_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk/probe1_trigger
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      12.33         2.3
+                                  LUT4	      20.00         4.0
+                                PFUREG	          4         0.9
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_trig_blk_probe0_trigger_
+   Instance path: top_level/manta_inst/my_logic_analyzer/trig_blk/probe0_trigger
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.33         1.0
+                                  LUT4	       9.00         1.8
+                                PFUREG	          1         0.2
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_sample_mem_
+   Instance path: top_level/manta_inst/my_logic_analyzer/sample_mem
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      88.67        16.7
+                                  LUT4	      73.00        14.6
+                               DISTRAM	      26.00        96.3
+                                PFUREG	         38         9.0
+                                RIPPLE	         11         9.3
+                                   EBR	          2        100.0
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_fsm_
+   Instance path: top_level/manta_inst/my_logic_analyzer/fsm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     101.17        19.1
+                                  LUT4	     131.00        26.3
+                                PFUREG	        102        24.1
+                                RIPPLE	         12        10.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+Z_manta_my_logic_analyzer_fsm_registers_	          1        10.0
+---------------------------------------------------
+Report for cell Z_manta_my_logic_analyzer_fsm_registers_
+   Instance path: top_level/manta_inst/my_logic_analyzer/fsm/registers
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      53.17        10.0
+                                  LUT4	      70.00        14.0
+                                PFUREG	         78        18.4
+---------------------------------------------------
+Report for cell Z_manta_interface_
+   Instance path: top_level/manta_inst/\interface
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     119.83        22.6
+                                  LUT4	     175.00        35.1
+                                PFUREG	        101        23.8
+                                RIPPLE	          9         7.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+          Z_manta_interface_bridge_rx_	          1         9.6
+            Z_manta_interface_uart_tx_	          1         3.9
+          Z_manta_interface_bridge_tx_	          1         5.0
+            Z_manta_interface_uart_rx_	          1         4.2
+---------------------------------------------------
+Report for cell Z_manta_interface_uart_tx_
+   Instance path: top_level/manta_inst/\interface/uart_tx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      20.58         3.9
+                                  LUT4	      26.00         5.2
+                                PFUREG	         19         4.5
+                                RIPPLE	          4         3.4
+---------------------------------------------------
+Report for cell Z_manta_interface_uart_rx_
+   Instance path: top_level/manta_inst/\interface/uart_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      22.00         4.2
+                                  LUT4	      23.00         4.6
+                                PFUREG	         24         5.7
+                                RIPPLE	          5         4.2
+---------------------------------------------------
+Report for cell Z_manta_interface_bridge_tx_
+   Instance path: top_level/manta_inst/\interface/bridge_tx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      26.42         5.0
+                                  LUT4	      40.00         8.0
+                                PFUREG	         20         4.7
+---------------------------------------------------
+Report for cell Z_manta_interface_bridge_rx_
+   Instance path: top_level/manta_inst/\interface/bridge_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      50.83         9.6
+                                  LUT4	      86.00        17.2
+                                PFUREG	         38         9.0

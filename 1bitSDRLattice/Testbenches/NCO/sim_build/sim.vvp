@@ -1,0 +1,77 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (devel)" "(s20221226-347-g58dcf39db)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x61ba5d310b20 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x61ba5d310cb0 .scope module, "nco_sig" "nco_sig" 3 13;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 64 "phase_inc_carr";
+    .port_info 2 /OUTPUT 64 "phase_accum";
+    .port_info 3 /OUTPUT 1 "sin_out";
+    .port_info 4 /OUTPUT 1 "cos_out";
+P_0x61ba5d3101b0 .param/l "IDLE_nco" 0 3 26, +C4<00000000000000000000000000000000>;
+P_0x61ba5d3101f0 .param/l "START_nco" 0 3 26, +C4<00000000000000000000000000000001>;
+L_0x7eceea386018 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x61ba5d334b90 .functor XNOR 1, L_0x61ba5d334a90, L_0x7eceea386018, C4<0>, C4<0>;
+L_0x61ba5d335030 .functor XOR 1, L_0x61ba5d334e70, L_0x61ba5d334f60, C4<0>, C4<0>;
+L_0x7eceea3860f0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x61ba5d335140 .functor XNOR 1, L_0x61ba5d335030, L_0x7eceea3860f0, C4<0>, C4<0>;
+v0x61ba5d310ff0_0 .net *"_ivl_1", 0 0, L_0x61ba5d334a90;  1 drivers
+v0x61ba5d333a60_0 .net *"_ivl_13", 0 0, L_0x61ba5d334e70;  1 drivers
+v0x61ba5d333b40_0 .net *"_ivl_15", 0 0, L_0x61ba5d334f60;  1 drivers
+v0x61ba5d333c30_0 .net *"_ivl_16", 0 0, L_0x61ba5d335030;  1 drivers
+v0x61ba5d333d10_0 .net/2u *"_ivl_18", 0 0, L_0x7eceea3860f0;  1 drivers
+v0x61ba5d333e40_0 .net/2u *"_ivl_2", 0 0, L_0x7eceea386018;  1 drivers
+v0x61ba5d333f20_0 .net *"_ivl_20", 0 0, L_0x61ba5d335140;  1 drivers
+L_0x7eceea386138 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x61ba5d333fe0_0 .net/2u *"_ivl_22", 0 0, L_0x7eceea386138;  1 drivers
+L_0x7eceea386180 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x61ba5d3340c0_0 .net/2u *"_ivl_24", 0 0, L_0x7eceea386180;  1 drivers
+v0x61ba5d3341a0_0 .net *"_ivl_4", 0 0, L_0x61ba5d334b90;  1 drivers
+L_0x7eceea386060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x61ba5d334260_0 .net/2u *"_ivl_6", 0 0, L_0x7eceea386060;  1 drivers
+L_0x7eceea3860a8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x61ba5d334340_0 .net/2u *"_ivl_8", 0 0, L_0x7eceea3860a8;  1 drivers
+o0x7eceea3cf258 .functor BUFZ 1, C4<z>; HiZ drive
+v0x61ba5d334420_0 .net "clk", 0 0, o0x7eceea3cf258;  0 drivers
+v0x61ba5d3344e0_0 .net "cos_out", 0 0, L_0x61ba5d3352a0;  1 drivers
+v0x61ba5d3345a0_0 .var "phase_accum", 63 0;
+o0x7eceea3cf2e8 .functor BUFZ 64, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x61ba5d334680_0 .net "phase_inc_carr", 63 0, o0x7eceea3cf2e8;  0 drivers
+v0x61ba5d334760_0 .net "sin_out", 0 0, L_0x61ba5d334cb0;  1 drivers
+v0x61ba5d334930_0 .var "state_nco_carr", 0 0;
+E_0x61ba5d3202c0 .event posedge, v0x61ba5d334420_0;
+L_0x61ba5d334a90 .part v0x61ba5d3345a0_0, 63, 1;
+L_0x61ba5d334cb0 .functor MUXZ 1, L_0x7eceea3860a8, L_0x7eceea386060, L_0x61ba5d334b90, C4<>;
+L_0x61ba5d334e70 .part v0x61ba5d3345a0_0, 63, 1;
+L_0x61ba5d334f60 .part v0x61ba5d3345a0_0, 62, 1;
+L_0x61ba5d3352a0 .functor MUXZ 1, L_0x7eceea386180, L_0x7eceea386138, L_0x61ba5d335140, C4<>;
+    .scope S_0x61ba5d310cb0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x61ba5d334930_0, 0, 1;
+    %end;
+    .thread T_0, $init;
+    .scope S_0x61ba5d310cb0;
+T_1 ;
+    %wait E_0x61ba5d3202c0;
+    %load/vec4 v0x61ba5d3345a0_0;
+    %load/vec4 v0x61ba5d334680_0;
+    %add;
+    %assign/vec4 v0x61ba5d3345a0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "hdl/NCO.v";

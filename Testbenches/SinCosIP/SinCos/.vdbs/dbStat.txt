@@ -1,1 +1,0 @@
-SinCos_rtl.vdb

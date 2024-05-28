@@ -1,0 +1,90 @@
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Duplicate module name manta (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Duplicate module name \manta.interface  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Duplicate module name \manta.interface.bridge_rx  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Duplicate module name \manta.interface.bridge_tx  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Duplicate module name \manta.interface.uart_rx  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Duplicate module name \manta.interface.uart_tx  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Duplicate module name \manta.my_logic_analyzer  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Duplicate module name \manta.my_logic_analyzer.fsm  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Duplicate module name \manta.my_logic_analyzer.fsm.registers  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Duplicate module name \manta.my_logic_analyzer.sample_mem  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Duplicate module name \manta.my_logic_analyzer.trig_blk  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe0_trigger  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe1_trigger  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe2_trigger  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe3_trigger  (using last description encountered)!
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Duplicate module name \manta.my_logic_analyzer.trig_blk.registers  (using last description encountered)!
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":403:4:403:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":414:4:414:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":425:4:425:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":434:4:434:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":445:4:445:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":456:4:456:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":467:4:467:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":485:10:485:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":494:10:494:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":518:8:518:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":528:8:528:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":548:10:548:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":574:10:574:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":701:4:701:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":710:4:710:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":731:4:731:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":753:4:753:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":761:10:761:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":776:4:776:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":797:4:797:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":918:4:918:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":934:4:934:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":953:4:953:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":960:8:960:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":975:4:975:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":981:6:981:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":983:8:983:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1000:4:1000:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1004:8:1004:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1107:8:1107:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1127:8:1127:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1149:8:1149:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1152:10:1152:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1171:8:1171:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1890:6:1890:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1897:6:1897:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1904:6:1904:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1911:6:1911:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1918:6:1918:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1925:6:1925:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1932:6:1932:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1939:6:1939:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1564:4:1564:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1596:6:1596:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1598:8:1598:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1605:10:1605:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1625:8:1625:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1653:6:1653:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1680:10:1680:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1690:8:1690:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1703:6:1703:7|Ignoring attribute full_case on statement
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2248:2:2248:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2516:2:2516:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2520:2:2520:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2788:2:2788:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3189:4:3189:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3302:4:3302:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3415:4:3415:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3528:4:3528:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3771:6:3771:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3778:6:3778:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3785:6:3785:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3792:6:3792:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3799:6:3799:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3806:6:3806:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3813:6:3813:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3820:6:3820:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3827:6:3827:7|Ignoring attribute full_case on statement
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Initial value is not supported on state machine state
+@W: CL247 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bit 34 of bus_i[34:0] is unused
+@W: CL246 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bits 15 to 0 of bus_i[34:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL260 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Pruning register bit 3 of _count[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Initial value is not supported on state machine _state
+

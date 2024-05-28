@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1716472907"/>
+            <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1716472838">
+            <Task name="Map" build_result="2" update_result="0" update_time="1716472838"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1716472883">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1716472883"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1716472887"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1716472722">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1716472722"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="3" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="3" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1716472723">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1716472723"/>
+        </Milestone>
+        <Report name="MantaTest_First_Implementation.bgn" last_build_time="1716472907" last_build_size="4574"/>
+        <Report name="MantaTest_First_Implementation.bit" last_build_time="1716472907" last_build_size="294339"/>
+        <Report name="MantaTest_First_Implementation.edi" last_build_time="1716472721" last_build_size="871568"/>
+        <Report name="MantaTest_First_Implementation.ncd" last_build_time="1716472883" last_build_size="913307"/>
+        <Report name="MantaTest_First_Implementation.ngd" last_build_time="1716472723" last_build_size="704201"/>
+        <Report name="MantaTest_First_Implementation.twr" last_build_time="1716472887" last_build_size="62944"/>
+        <Report name="MantaTest_First_Implementation_map.ncd" last_build_time="1716472838" last_build_size="657782"/>
+    </Strategy>
+</BuildStatus>

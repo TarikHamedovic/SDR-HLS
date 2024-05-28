@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "CIC_First_Implementation.log"
+-o "CIC_First_Implementation.csv"
+-pr "CIC_First_Implementation.prf"

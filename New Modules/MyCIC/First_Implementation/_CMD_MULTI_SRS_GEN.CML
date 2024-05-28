@@ -1,0 +1,1 @@
+ -link  -top  cic  -multisrs  "/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synwork/CIC_First_Implementation_comp.srs"  -osyn  "/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synwork/CIC_First_Implementation_mult.srs"  -log  "/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/synlog/CIC_First_Implementation_multi_srs_gen.srr" 

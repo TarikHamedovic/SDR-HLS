@@ -1,0 +1,1 @@
+run_tcl -fg MantaTest_First_Implementation_synplify.tcl

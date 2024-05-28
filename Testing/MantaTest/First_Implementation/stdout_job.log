@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "15:58:42    23-May-2024",
+	"Working Directory" : "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation",
+	"CDPL Log file" : "-",
+	"Install" : "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase"
+},
+"First_Implementation" :{
+   "Start Time" : "15:58:29",
+   "Runtime" : "13s",
+   "Executable Run Time" : "11s",
+   "synthesis" : {
+      "Start Time" : "15:58:29",
+      "Runtime" : "13s",
+      "Executable Run Time" : "11s",
+      "compile" : {
+         "Start Time" : "15:58:29",
+         "Runtime" : "03s",
+         "Executable Run Time" : "02s",
+         "compile_flow" : {
+            "Start Time" : "15:58:29",
+            "Runtime" : "02s",
+            "Executable Run Time" : "01s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "15:58:29",
+               "Run Time" : "02s",
+               "Exe Run Time" : "01s",
+               "Memory Usage" : "33.532000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "15:58:31",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "101.456000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "15:58:31",
+            "Run Time" : "01s",
+            "Exe Run Time" : "01s",
+            "Memory Usage" : "299.584000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Start Time" : "15:58:33",
+         "Runtime" : "09s",
+         "Executable Run Time" : "09s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "15:58:33",
+            "Run Time" : "09s",
+            "Exe Run Time" : "09s",
+            "Memory Usage" : "340.476000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

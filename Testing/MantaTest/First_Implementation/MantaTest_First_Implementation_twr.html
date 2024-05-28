@@ -1,0 +1,1267 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file MantaTest_First_Implementation.ncd.
+Design name: top_level
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Thu May 23 16:01:26 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o MantaTest_First_Implementation.twr -gui MantaTest_First_Implementation.ncd MantaTest_First_Implementation.prf 
+Design file:     MantaTest_First_Implementation.ncd
+Preference file: MantaTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY PORT "clk" 25.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+Report:   94.091MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY PORT "clk" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 29.372ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/bridge_rx/_byte_num[1]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.888ns  (22.1% logic, 77.9% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.888ns physical path delay manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.372ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C75A.CLK to     R52C75A.Q1 manta_inst/\interface/bridge_rx/SLICE_174 (from clk_c)
+ROUTE         8     0.840     R52C75A.Q1 to     R52C76B.B1 manta_inst/\interface/bridge_rx/_byte_num[1]
+CTOF_DEL    ---     0.236     R52C76B.B1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C80C.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C80C.B1 to     R49C80C.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_418
+ROUTE         8     1.558     R49C80C.F1 to     R48C81D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$18_1_sqmuxa
+CTOF_DEL    ---     0.236     R48C81D.D0 to     R48C81D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_520
+ROUTE         1     0.791     R48C81D.F0 to     R48C80B.B0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_4[16]
+CTOF_DEL    ---     0.236     R48C80B.B0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.888   (22.1% logic, 77.9% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.386ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[5]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.874ns  (22.2% logic, 77.8% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.874ns physical path delay manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.386ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R54C76D.CLK to     R54C76D.Q1 manta_inst/\interface/uart_rx/SLICE_189 (from clk_c)
+ROUTE         8     0.826     R54C76D.Q1 to     R52C76B.A1 manta_inst/\interface/data_i[5]
+CTOF_DEL    ---     0.236     R52C76B.A1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C80C.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C80C.B1 to     R49C80C.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_418
+ROUTE         8     1.558     R49C80C.F1 to     R48C81D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$18_1_sqmuxa
+CTOF_DEL    ---     0.236     R48C81D.D0 to     R48C81D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_520
+ROUTE         1     0.791     R48C81D.F0 to     R48C80B.B0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_4[16]
+CTOF_DEL    ---     0.236     R48C80B.B0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.874   (22.2% logic, 77.8% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R54C76D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.490ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/bridge_rx/_byte_num[1]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.770ns  (24.6% logic, 75.4% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.770ns physical path delay manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.490ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C75A.CLK to     R52C75A.Q1 manta_inst/\interface/bridge_rx/SLICE_174 (from clk_c)
+ROUTE         8     0.840     R52C75A.Q1 to     R52C76B.B1 manta_inst/\interface/bridge_rx/_byte_num[1]
+CTOF_DEL    ---     0.236     R52C76B.B1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C78B.B1 to     R49C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_468
+ROUTE         1     0.778     R49C78B.F1 to     R49C79D.B1 manta_inst/my_logic_analyzer/fsm/registers/N_225
+CTOF_DEL    ---     0.236     R49C79D.B1 to     R49C79D.F1 manta_inst/SLICE_274
+ROUTE         1     0.615     R49C79D.F1 to     R49C80D.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_0[16]
+CTOF_DEL    ---     0.236     R49C80D.C0 to     R49C80D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_415
+ROUTE         1     0.602     R49C80D.F0 to     R48C80B.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_5[16]
+CTOF_DEL    ---     0.236     R48C80B.C0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.770   (24.6% logic, 75.4% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.504ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[5]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.756ns  (24.6% logic, 75.4% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.756ns physical path delay manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.504ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R54C76D.CLK to     R54C76D.Q1 manta_inst/\interface/uart_rx/SLICE_189 (from clk_c)
+ROUTE         8     0.826     R54C76D.Q1 to     R52C76B.A1 manta_inst/\interface/data_i[5]
+CTOF_DEL    ---     0.236     R52C76B.A1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C78B.B1 to     R49C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_468
+ROUTE         1     0.778     R49C78B.F1 to     R49C79D.B1 manta_inst/my_logic_analyzer/fsm/registers/N_225
+CTOF_DEL    ---     0.236     R49C79D.B1 to     R49C79D.F1 manta_inst/SLICE_274
+ROUTE         1     0.615     R49C79D.F1 to     R49C80D.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_0[16]
+CTOF_DEL    ---     0.236     R49C80D.C0 to     R49C80D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_415
+ROUTE         1     0.602     R49C80D.F0 to     R48C80B.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_5[16]
+CTOF_DEL    ---     0.236     R48C80B.C0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.756   (24.6% logic, 75.4% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R54C76D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.564ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[4]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.696ns  (22.6% logic, 77.4% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.696ns physical path delay manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.564ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R54C76D.CLK to     R54C76D.Q0 manta_inst/\interface/uart_rx/SLICE_189 (from clk_c)
+ROUTE         8     0.645     R54C76D.Q0 to     R52C76B.C1 manta_inst/\interface/data_i[4]
+CTOF_DEL    ---     0.236     R52C76B.C1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C80C.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C80C.B1 to     R49C80C.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_418
+ROUTE         8     1.558     R49C80C.F1 to     R48C81D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$18_1_sqmuxa
+CTOF_DEL    ---     0.236     R48C81D.D0 to     R48C81D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_520
+ROUTE         1     0.791     R48C81D.F0 to     R48C80B.B0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_4[16]
+CTOF_DEL    ---     0.236     R48C80B.B0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.696   (22.6% logic, 77.4% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R54C76D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.596ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/bridge_rx/_byte_num[1]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.664ns  (22.6% logic, 77.4% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.664ns physical path delay manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.596ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C75A.CLK to     R52C75A.Q1 manta_inst/\interface/bridge_rx/SLICE_174 (from clk_c)
+ROUTE         8     0.840     R52C75A.Q1 to     R52C76B.B1 manta_inst/\interface/bridge_rx/_byte_num[1]
+CTOF_DEL    ---     0.236     R52C76B.B1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.591     R52C78C.F1 to     R52C78D.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R52C78D.A1 to     R52C78D.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_471
+ROUTE         1     0.786     R52C78D.F1 to     R50C78B.A1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_5
+CTOF_DEL    ---     0.236     R50C78B.A1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C80C.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C80C.B1 to     R49C80C.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_418
+ROUTE         8     1.558     R49C80C.F1 to     R48C81D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$18_1_sqmuxa
+CTOF_DEL    ---     0.236     R48C81D.D0 to     R48C81D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_520
+ROUTE         1     0.791     R48C81D.F0 to     R48C80B.B0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_4[16]
+CTOF_DEL    ---     0.236     R48C80B.B0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.664   (22.6% logic, 77.4% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.610ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[5]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.650ns  (22.6% logic, 77.4% route), 9 logic levels.
+
+ Constraint Details:
+
+     10.650ns physical path delay manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.610ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R54C76D.CLK to     R54C76D.Q1 manta_inst/\interface/uart_rx/SLICE_189 (from clk_c)
+ROUTE         8     0.826     R54C76D.Q1 to     R52C76B.A1 manta_inst/\interface/data_i[5]
+CTOF_DEL    ---     0.236     R52C76B.A1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.591     R52C78C.F1 to     R52C78D.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R52C78D.A1 to     R52C78D.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_471
+ROUTE         1     0.786     R52C78D.F1 to     R50C78B.A1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_5
+CTOF_DEL    ---     0.236     R50C78B.A1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C80C.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C80C.B1 to     R49C80C.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_418
+ROUTE         8     1.558     R49C80C.F1 to     R48C81D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$18_1_sqmuxa
+CTOF_DEL    ---     0.236     R48C81D.D0 to     R48C81D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_520
+ROUTE         1     0.791     R48C81D.F0 to     R48C80B.B0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_4[16]
+CTOF_DEL    ---     0.236     R48C80B.B0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.650   (22.6% logic, 77.4% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R54C76D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.682ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[4]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.578ns  (25.0% logic, 75.0% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.578ns physical path delay manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.682ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_189 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R54C76D.CLK to     R54C76D.Q0 manta_inst/\interface/uart_rx/SLICE_189 (from clk_c)
+ROUTE         8     0.645     R54C76D.Q0 to     R52C76B.C1 manta_inst/\interface/data_i[4]
+CTOF_DEL    ---     0.236     R52C76B.C1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.309     R50C78B.F1 to     R49C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R49C78B.B1 to     R49C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_468
+ROUTE         1     0.778     R49C78B.F1 to     R49C79D.B1 manta_inst/my_logic_analyzer/fsm/registers/N_225
+CTOF_DEL    ---     0.236     R49C79D.B1 to     R49C79D.F1 manta_inst/SLICE_274
+ROUTE         1     0.615     R49C79D.F1 to     R49C80D.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_0[16]
+CTOF_DEL    ---     0.236     R49C80D.C0 to     R49C80D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_415
+ROUTE         1     0.602     R49C80D.F0 to     R48C80B.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_5[16]
+CTOF_DEL    ---     0.236     R48C80B.C0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.578   (25.0% logic, 75.0% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R54C76D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.683ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              probe3[5]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/write_enable  (to clk_c +)
+
+   Delay:              10.444ns  (30.4% logic, 69.6% route), 11 logic levels.
+
+ Constraint Details:
+
+     10.444ns physical path delay SLICE_113 to manta_inst/my_logic_analyzer/fsm/SLICE_359 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 40.127ns) by 29.683ns
+
+ Physical Path Details:
+
+      Data path SLICE_113 to manta_inst/my_logic_analyzer/fsm/SLICE_359:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R48C85D.CLK to     R48C85D.Q0 SLICE_113 (from clk_c)
+ROUTE         9     2.666     R48C85D.Q0 to     R56C82B.C1 probe3[5]
+C1TOFCO_DE  ---     0.447     R56C82B.C1 to    R56C82B.FCO manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/SLICE_38
+ROUTE         1     0.000    R56C82B.FCO to    R56C82C.FCI manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_data_tmp[2]
+FCITOFCO_D  ---     0.071    R56C82C.FCI to    R56C82C.FCO manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/SLICE_39
+ROUTE         1     0.000    R56C82C.FCO to    R56C82D.FCI manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_data_tmp[4]
+FCITOFCO_D  ---     0.071    R56C82D.FCI to    R56C82D.FCO manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/SLICE_40
+ROUTE         1     0.000    R56C82D.FCO to    R56C83A.FCI manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_data_tmp[6]
+FCITOF1_DE  ---     0.474    R56C83A.FCI to     R56C83A.F1 manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/SLICE_41
+ROUTE         1     0.999     R56C83A.F1 to     R55C84A.B1 manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18
+CTOOFX_DEL  ---     0.401     R55C84A.B1 to   R55C84A.OFX0 manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/triggered_7/SLICE_363
+ROUTE         1     0.000   R55C84A.OFX0 to    R55C84A.FXB manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_16
+FXTOF_DEL   ---     0.242    R55C84A.FXB to   R55C84A.OFX1 manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/triggered_7/SLICE_363
+ROUTE         1     0.904   R55C84A.OFX1 to     R49C84B.D0 manta_inst/my_logic_analyzer/trig_blk/Z\triggered$4
+CTOF_DEL    ---     0.236     R49C84B.D0 to     R49C84B.F0 manta_inst/my_logic_analyzer/trig_blk/SLICE_474
+ROUTE         1     0.413     R49C84B.F0 to     R48C84B.D1 manta_inst/my_logic_analyzer/trig_blk/trig_1
+CTOF_DEL    ---     0.236     R48C84B.D1 to     R48C84B.F1 manta_inst/my_logic_analyzer/trig_blk/SLICE_399
+ROUTE         5     1.057     R48C84B.F1 to     R45C80D.D1 manta_inst/my_logic_analyzer/trigger
+CTOF_DEL    ---     0.236     R45C80D.D1 to     R45C80D.F1 manta_inst/my_logic_analyzer/fsm/SLICE_427
+ROUTE         4     0.583     R45C80D.F1 to     R45C80D.A0 manta_inst/my_logic_analyzer/fsm/un1_\$21[0]
+CTOF_DEL    ---     0.236     R45C80D.A0 to     R45C80D.F0 manta_inst/my_logic_analyzer/fsm/SLICE_427
+ROUTE         1     0.647     R45C80D.F0 to     R45C80A.CE manta_inst/my_logic_analyzer/fsm/Z\$28_2_sqmuxa_i (to clk_c)
+                  --------
+                   10.444   (30.4% logic, 69.6% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to SLICE_113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C85D.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/SLICE_359:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R45C80A.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 29.689ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/bridge_rx/_byte_num[1]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/registers/bus_o[16]  (to clk_c +)
+
+   Delay:              10.571ns  (25.0% logic, 75.0% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.571ns physical path delay manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 29.689ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C75A.CLK to     R52C75A.Q1 manta_inst/\interface/bridge_rx/SLICE_174 (from clk_c)
+ROUTE         8     0.840     R52C75A.Q1 to     R52C76B.B1 manta_inst/\interface/bridge_rx/_byte_num[1]
+CTOF_DEL    ---     0.236     R52C76B.B1 to     R52C76B.F1 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE         1     0.558     R52C76B.F1 to     R52C76B.B0 manta_inst/\interface/bridge_rx/valid_o_0_a2_2
+CTOF_DEL    ---     0.236     R52C76B.B0 to     R52C76B.F0 manta_inst/\interface/bridge_rx/SLICE_446
+ROUTE        17     1.821     R52C76B.F0 to     R52C78C.B1 manta_inst/\interface/bridge_rx/valid_o_0_a2_3
+CTOF_DEL    ---     0.236     R52C78C.B1 to     R52C78C.F1 manta_inst/SLICE_230
+ROUTE         6     0.823     R52C78C.F1 to     R51C78B.A1 manta_inst/bus_i[33]
+CTOF_DEL    ---     0.236     R51C78B.A1 to     R51C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_472
+ROUTE         1     0.778     R51C78B.F1 to     R50C78B.B1 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa_1_i_o2_6
+CTOF_DEL    ---     0.236     R50C78B.B1 to     R50C78B.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_424
+ROUTE        15     1.062     R50C78B.F1 to     R48C80D.A1 manta_inst/my_logic_analyzer/fsm/registers/N_86
+CTOF_DEL    ---     0.236     R48C80D.A1 to     R48C80D.F1 manta_inst/my_logic_analyzer/fsm/registers/SLICE_421
+ROUTE         3     1.028     R48C80D.F1 to     R49C79A.A0 manta_inst/my_logic_analyzer/fsm/registers/N_226
+CTOF_DEL    ---     0.236     R49C79A.A0 to     R49C79A.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_422
+ROUTE         1     0.413     R49C79A.F0 to     R49C80D.D0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_1[16]
+CTOF_DEL    ---     0.236     R49C80D.D0 to     R49C80D.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_415
+ROUTE         1     0.602     R49C80D.F0 to     R48C80B.C0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42_iv_5[16]
+CTOF_DEL    ---     0.236     R48C80B.C0 to     R48C80B.F0 manta_inst/my_logic_analyzer/fsm/registers/SLICE_222
+ROUTE         1     0.000     R48C80B.F0 to    R48C80B.DI0 manta_inst/my_logic_analyzer/fsm/registers/Z\$9_42[16] (to clk_c)
+                  --------
+                   10.571   (25.0% logic, 75.0% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/registers/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     2.781       G2.PADDI to    R48C80B.CLK clk_c
+                  --------
+                    2.781   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   94.091MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 25.000000 MHz ;    |   25.000 MHz|   94.091 MHz|   9  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 263
+   Covered under: FREQUENCY PORT "clk" 25.000000 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 29054 paths, 1 nets, and 3361 connections (99.94% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Thu May 23 16:01:26 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o MantaTest_First_Implementation.twr -gui MantaTest_First_Implementation.ncd MantaTest_First_Implementation.prf 
+Design file:     MantaTest_First_Implementation.ncd
+Preference file: MantaTest_First_Implementation.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY PORT "clk" 25.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY PORT "clk" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.147ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CF1[0]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/RAM1  (to clk_c +)
+                   FF                        manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/RAM1
+
+   Delay:               0.288ns  (56.9% logic, 43.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.288ns physical path delay manta_inst/my_logic_analyzer/sample_mem/SLICE_299 to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_137 meets
+      0.141ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.141ns) by 0.147ns
+
+ Physical Path Details:
+
+      Data path manta_inst/my_logic_analyzer/sample_mem/SLICE_299 to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R53C89D.CLK to     R53C89D.Q0 manta_inst/my_logic_analyzer/sample_mem/SLICE_299 (from clk_c)
+ROUTE        11     0.124     R53C89D.Q0 to     R53C89C.D0 manta_inst/my_logic_analyzer/sample_mem/CO0
+ZERO_DEL    ---     0.000     R53C89C.D0 to  R53C89C.WADO0 manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_135
+ROUTE         2     0.000  R53C89C.WADO0 to   R53C89B.WAD0 manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/WAD0_INT (to clk_c)
+                  --------
+                    0.288   (56.9% logic, 43.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/my_logic_analyzer/sample_mem/SLICE_299:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R53C89D.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R53C89B.WCK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.147ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CF1[0]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/RAM0  (to clk_c +)
+                   FF                        manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/RAM0
+
+   Delay:               0.288ns  (56.9% logic, 43.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.288ns physical path delay manta_inst/my_logic_analyzer/sample_mem/SLICE_299 to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_136 meets
+      0.141ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.141ns) by 0.147ns
+
+ Physical Path Details:
+
+      Data path manta_inst/my_logic_analyzer/sample_mem/SLICE_299 to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R53C89D.CLK to     R53C89D.Q0 manta_inst/my_logic_analyzer/sample_mem/SLICE_299 (from clk_c)
+ROUTE        11     0.124     R53C89D.Q0 to     R53C89C.D0 manta_inst/my_logic_analyzer/sample_mem/CO0
+ZERO_DEL    ---     0.000     R53C89C.D0 to  R53C89C.WADO0 manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_135
+ROUTE         2     0.000  R53C89C.WADO0 to   R53C89A.WAD0 manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/WAD0_INT (to clk_c)
+                  --------
+                    0.288   (56.9% logic, 43.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/my_logic_analyzer/sample_mem/SLICE_299:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R53C89D.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R53C89A.WCK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/data_o[7]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/\interface/uart_rx/data_o[6]  (to clk_c +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay manta_inst/\interface/uart_rx/SLICE_190 to manta_inst/\interface/uart_rx/SLICE_190 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_190 to manta_inst/\interface/uart_rx/SLICE_190:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R54C75D.CLK to     R54C75D.Q1 manta_inst/\interface/uart_rx/SLICE_190 (from clk_c)
+ROUTE         7     0.131     R54C75D.Q1 to     R54C75D.M0 manta_inst/\interface/data_i[7] (to clk_c)
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_190:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R54C75D.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/\interface/uart_rx/SLICE_190:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R54C75D.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/my_logic_analyzer/trig_blk/registers/probe3_arg_buf[4]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/trig_blk/registers/probe3_arg[4]  (to clk_c +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_347 to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_323 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_347 to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_323:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R52C81B.CLK to     R52C81B.Q0 manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_347 (from clk_c)
+ROUTE         2     0.131     R52C81B.Q0 to     R52C81A.M0 manta_inst/my_logic_analyzer/trig_blk/registers/probe3_arg_buf[4] (to clk_c)
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_347:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R52C81B.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_323:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R52C81A.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/my_logic_analyzer/trig_blk/registers/probe1_arg_buf[0]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/trig_blk/registers/probe1_arg[0]  (to clk_c +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_335 to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_311 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_335 to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_311:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C83D.CLK to     R49C83D.Q0 manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_335 (from clk_c)
+ROUTE         2     0.131     R49C83D.Q0 to     R49C83B.M0 manta_inst/my_logic_analyzer/trig_blk/registers/probe1_arg_buf[0] (to clk_c)
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_335:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R49C83D.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/trig_blk/registers/SLICE_311:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R49C83B.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/uart_rx/_rx_q  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/\interface/uart_rx/_rx_q_prev  (to clk_c +)
+
+   Delay:               0.295ns  (55.3% logic, 44.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay manta_inst/\interface/uart_rx/SLICE_201 to manta_inst/\interface/uart_rx/SLICE_201 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/uart_rx/SLICE_201 to manta_inst/\interface/uart_rx/SLICE_201:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R64C74C.CLK to     R64C74C.Q1 manta_inst/\interface/uart_rx/SLICE_201 (from clk_c)
+ROUTE         6     0.132     R64C74C.Q1 to     R64C74C.M0 manta_inst/\interface/uart_rx/_rx_q (to clk_c)
+                  --------
+                    0.295   (55.3% logic, 44.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/uart_rx/SLICE_201:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R64C74C.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/\interface/uart_rx/SLICE_201:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R64C74C.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              probe1[2]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/prev[2]  (to clk_c +)
+
+   Delay:               0.296ns  (55.1% logic, 44.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.296ns physical path delay SLICE_361 to manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/SLICE_258 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path SLICE_361 to manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/SLICE_258:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R47C87C.CLK to     R47C87C.Q1 SLICE_361 (from clk_c)
+ROUTE         9     0.133     R47C87C.Q1 to     R47C87B.M0 probe1[2] (to clk_c)
+                  --------
+                    0.296   (55.1% logic, 44.9% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to SLICE_361:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R47C87C.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/SLICE_258:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R47C87B.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              probe0  (from clk_c +)
+   Destination:    FF         Data in        probe0  (to clk_c +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay SLICE_360 to SLICE_360 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path SLICE_360 to SLICE_360:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C88A.CLK to     R49C88A.Q0 SLICE_360 (from clk_c)
+ROUTE         6     0.058     R49C88A.Q0 to     R49C88A.D0 probe0
+CTOF_DEL    ---     0.076     R49C88A.D0 to     R49C88A.F0 SLICE_360
+ROUTE         1     0.000     R49C88A.F0 to    R49C88A.DI0 probe0_i (to clk_c)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to SLICE_360:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R49C88A.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to SLICE_360:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R49C88A.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/\interface/bridge_rx/_byte_num[0]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/\interface/bridge_rx/_byte_num[0]  (to clk_c +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/\interface/bridge_rx/SLICE_174 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path manta_inst/\interface/bridge_rx/SLICE_174 to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R52C75A.CLK to     R52C75A.Q0 manta_inst/\interface/bridge_rx/SLICE_174 (from clk_c)
+ROUTE         8     0.058     R52C75A.Q0 to     R52C75A.D0 manta_inst/\interface/bridge_rx/_byte_num[0]
+CTOF_DEL    ---     0.076     R52C75A.D0 to     R52C75A.F0 manta_inst/\interface/bridge_rx/SLICE_174
+ROUTE         1     0.000     R52C75A.F0 to    R52C75A.DI0 manta_inst/\interface/bridge_rx/N_11_i (to clk_c)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/\interface/bridge_rx/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R52C75A.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              manta_inst/my_logic_analyzer/fsm/write_pointer[0]  (from clk_c +)
+   Destination:    FF         Data in        manta_inst/my_logic_analyzer/fsm/write_pointer[0]  (to clk_c +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay manta_inst/my_logic_analyzer/fsm/SLICE_355 to manta_inst/my_logic_analyzer/fsm/SLICE_355 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path manta_inst/my_logic_analyzer/fsm/SLICE_355 to manta_inst/my_logic_analyzer/fsm/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R45C81B.CLK to     R45C81B.Q0 manta_inst/my_logic_analyzer/fsm/SLICE_355 (from clk_c)
+ROUTE        14     0.058     R45C81B.Q0 to     R45C81B.D0 manta_inst/my_logic_analyzer/user_addr[0]
+CTOF_DEL    ---     0.076     R45C81B.D0 to     R45C81B.F0 manta_inst/my_logic_analyzer/fsm/SLICE_355
+ROUTE         1     0.000     R45C81B.F0 to    R45C81B.DI0 manta_inst/my_logic_analyzer/fsm/Z\$26[0] (to clk_c)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to manta_inst/my_logic_analyzer/fsm/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R45C81B.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk to manta_inst/my_logic_analyzer/fsm/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       263     0.911       G2.PADDI to    R45C81B.CLK clk_c
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 25.000000 MHz ;    |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 263
+   Covered under: FREQUENCY PORT "clk" 25.000000 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 29054 paths, 1 nets, and 3361 connections (99.94% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

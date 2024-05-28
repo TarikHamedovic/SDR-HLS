@@ -1,0 +1,536 @@
+
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "OneBitADCTestLattice_First_Implementation.ngd" -o "OneBitADCTestLattice_First_Implementation_map.ncd" -pr "OneBitADCTestLattice_First_Implementation.prf" -mp "OneBitADCTestLattice_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/OneBitADCTestLattice_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/Testing/1bitADCLattice/OneBitADCTestLattice.lpf"             
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: OneBitADCTestLattice_First_Implementation.ngd
+   Picdevice="LFE5U-85F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-85FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="DRIVE" arg1="4" arg2="rstn_pad/IOBUF"  />
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+101 CCU2 constant inputs absorbed.
+
+    <postMsg mid="51001030" type="Warning" dynamic="1" navigation="0" arg0="rstn_c"  />
+
+
+
+Design Summary:
+   Number of registers:     91 out of 84255 (0%)
+      PFU registers:           91 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:        80 out of 41820 (0%)
+      SLICEs as Logic/ROM:     80 out of 41820 (0%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:         30 out of 41820 (0%)
+   Number of LUT4s:         98 out of 83640 (0%)
+      Number used as logic LUTs:         38
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       60
+      Number used as shift registers:     0
+   Number of PIO sites used: 15 out of 205 (7%)
+      Number of PIO sites used for single ended IOs: 13
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO comps in NCD)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net clk_in_c: 53 loads, 53 rising, 0 falling (Driver: PIO clk_in )
+   Number of Clock Enables:  5
+     Net pwm_inst/clk_in_c_enable_11: 6 loads, 6 LSLICEs
+     Net SSD_ADC/rollover: 5 loads, 5 LSLICEs
+     Net SSD_ADC/clk_in_c_enable_20: 5 loads, 5 LSLICEs
+     Net SSD_ADC/box_ave/latch_result: 6 loads, 6 LSLICEs
+     Net SSD_ADC/box_ave/accumulate: 8 loads, 8 LSLICEs
+   Number of local set/reset loads for net rstn_c merged into GSR:  69
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net SSD_ADC/rollover: 17 loads
+     Net SSD_ADC/box_ave/count_0: 14 loads
+     Net SSD_ADC/box_ave/count_1: 13 loads
+     Net SSD_ADC/box_ave/accumulate: 8 loads
+     Net SSD_ADC/box_ave/latch_result: 7 loads
+     Net pwm_inst/clk_in_c_enable_11: 6 loads
+     Net SSD_ADC/clk_in_c_enable_20: 5 loads
+     Net sigma_0: 4 loads
+     Net counter_0: 3 loads
+     Net counter_1: 3 loads
+ 
+
+   Number of warnings:  2
+   Number of errors:    0
+
+
+
+Total CPU Time: 2 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 452 MB
+
+Dumping design to file OneBitADCTestLattice_First_Implementation_map.ncd.
+
+ncd2vdb "OneBitADCTestLattice_First_Implementation_map.ncd" ".vdbs/OneBitADCTestLattice_First_Implementation_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+
+mpartrce -p "OneBitADCTestLattice_First_Implementation.p2t" -f "OneBitADCTestLattice_First_Implementation.p3t" -tf "OneBitADCTestLattice_First_Implementation.pt" "OneBitADCTestLattice_First_Implementation_map.ncd" "OneBitADCTestLattice_First_Implementation.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "OneBitADCTestLattice_First_Implementation_map.ncd"
+Sun May 26 11:23:29 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 OneBitADCTestLattice_First_Implementation_map.ncd OneBitADCTestLattice_First_Implementation.dir/5_1.ncd OneBitADCTestLattice_First_Implementation.prf
+Preference file: OneBitADCTestLattice_First_Implementation.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file OneBitADCTestLattice_First_Implementation_map.ncd.
+Design name: ADC_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      15/365           4% used
+                     15/205           7% bonded
+
+   SLICE             80/41820        <1% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 199
+Number of Connections: 389
+
+Pin Constraint Summary:
+   6 out of 14 pins locked (42% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_in_c (driver: clk_in, clk/ce/sr load #: 53/0/0)
+
+
+Signal rstn_c is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+.............
+Finished Placer Phase 0.  REAL time: 6 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 45777.
+Finished Placer Phase 1.  REAL time: 13 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  45254
+Finished Placer Phase 2.  REAL time: 13 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 12 (8%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 0 out of 4 (0%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant TR Clocks:
+  PRIMARY "clk_in_c" from comp "clk_in" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 53
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Quadrant BL Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Quadrant BR Clocks:
+
+  PRIMARY  : 0 out of 16 (0%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   15 out of 365 (4.1%) PIO sites used.
+   15 out of 205 (7.3%) bonded PIO sites used.
+   Number of PIO comps: 14; differential: 1.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 27 (  0%) | -          | -          | -          |
+| 1        | 8 / 33 ( 24%) | 2.5V       | -          | -          |
+| 2        | 2 / 34 (  5%) | 1.2V       | -          | -          |
+| 3        | 1 / 33 (  3%) | 3.3V       | -          | -          |
+| 6        | 1 / 33 (  3%) | 3.3V       | -          | -          |
+| 7        | 2 / 32 (  6%) | 3.3V       | -          | -          |
+| 8        | 1 / 13 (  7%) | 3.3V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Total placer CPU time: 13 secs 
+
+Dumping design to file OneBitADCTestLattice_First_Implementation.dir/5_1.ncd.
+
+0 connections routed; 389 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 27 secs 
+
+Start NBR router at Sun May 26 11:23:56 CEST 2024
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at Sun May 26 11:23:56 CEST 2024
+
+Start NBR section for initial routing at Sun May 26 11:23:56 CEST 2024
+Level 4, iteration 1
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 34.823ns/0.000ns; real time: 28 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Sun May 26 11:23:57 CEST 2024
+Level 4, iteration 1
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 34.823ns/0.000ns; real time: 28 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 34.823ns/0.000ns; real time: 28 secs 
+Level 4, iteration 3
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 34.823ns/0.000ns; real time: 28 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at Sun May 26 11:23:57 CEST 2024
+
+Start NBR section for re-routing at Sun May 26 11:23:58 CEST 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 34.823ns/0.000ns; real time: 29 secs 
+
+Start NBR section for post-routing at Sun May 26 11:23:58 CEST 2024
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 34.823ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 29 secs 
+Total REAL time: 30 secs 
+Completely routed.
+End of route.  389 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file OneBitADCTestLattice_First_Implementation.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 34.823
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.176
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 30 secs 
+Total REAL time to completion: 31 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "OneBitADCTestLattice_First_Implementation.pt" -o "OneBitADCTestLattice_First_Implementation.twr" "OneBitADCTestLattice_First_Implementation.ncd" "OneBitADCTestLattice_First_Implementation.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file OneBitADCTestLattice_First_Implementation.ncd.
+Design name: ADC_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Sun May 26 11:24:05 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitADCTestLattice_First_Implementation.twr -gui OneBitADCTestLattice_First_Implementation.ncd OneBitADCTestLattice_First_Implementation.prf 
+Design file:     OneBitADCTestLattice_First_Implementation.ncd
+Preference file: OneBitADCTestLattice_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 734 paths, 1 nets, and 369 connections (94.86% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Sun May 26 11:24:05 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitADCTestLattice_First_Implementation.twr -gui OneBitADCTestLattice_First_Implementation.ncd OneBitADCTestLattice_First_Implementation.prf 
+Design file:     OneBitADCTestLattice_First_Implementation.ncd
+Preference file: OneBitADCTestLattice_First_Implementation.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 734 paths, 1 nets, and 369 connections (94.86% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 483 MB
+
+
+tmcheck -par "OneBitADCTestLattice_First_Implementation.par" 
+
+bitgen -w "OneBitADCTestLattice_First_Implementation.ncd" -f "OneBitADCTestLattice_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/Testing/1bitADCLattice/OneBitADCTestLattice.sec" -k "/home/user/SDR-HLS/Testing/1bitADCLattice/OneBitADCTestLattice.bek" "OneBitADCTestLattice_First_Implementation.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file OneBitADCTestLattice_First_Implementation.ncd.
+Design name: ADC_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application Bitgen from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from OneBitADCTestLattice_First_Implementation.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        CfgMode  |                      Disable**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                             62  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                    CONFIG_MODE  |                         JTAG**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                             ON  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+|            SLAVE_PARALLEL_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PULL  |                           ON**  |
++---------------------------------+---------------------------------+
+|               CONFIG_IOVOLTAGE  |                            3.3  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 10.27.
+ 
+Saving bit stream in "OneBitADCTestLattice_First_Implementation.bit".
+Total CPU Time: 14 secs 
+Total REAL Time: 15 secs 
+Peak Memory Usage: 799 MB

@@ -1,0 +1,3 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MO129 :|Sequential instance manta_inst.my_logic_analyzer.sample_mem.G_7 is reduced to a combinational gate by constant propagation.
+@W: MT529 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Found inferred clock top_level|clk which controls 518 sequential elements including manta_inst.\\interface.bridge_rx._state[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

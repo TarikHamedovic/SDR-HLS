@@ -1,0 +1,137 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun May 26 11:22:16 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     ADC_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_in_c]
+            627 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \SSD_ADC/rollover_27  (from clk_in_c +)
+   Destination:    FD1P3DX    SP             \SSD_ADC/sigma_i0  (to clk_in_c +)
+
+   Delay:                   4.935ns  (14.1% logic, 85.9% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.935ns data_path \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i0 meets
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.144ns
+
+ Path Details: \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \SSD_ADC/rollover_27 (from clk_in_c)
+Route        22   e 1.738                                  \SSD_ADC/rollover
+LUT4        ---     0.166              A to Z              \SSD_ADC/i1_2_lut_adj_1
+Route         1   e 1.020                                  \SSD_ADC/n12
+LUT4        ---     0.166              D to Z              \SSD_ADC/i10_4_lut
+Route        10   e 1.480                                  \SSD_ADC/clk_in_c_enable_20
+                  --------
+                    4.935  (14.1% logic, 85.9% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \SSD_ADC/rollover_27  (from clk_in_c +)
+   Destination:    FD1P3DX    SP             \SSD_ADC/sigma_i8  (to clk_in_c +)
+
+   Delay:                   4.935ns  (14.1% logic, 85.9% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.935ns data_path \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i8 meets
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.144ns
+
+ Path Details: \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i8
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \SSD_ADC/rollover_27 (from clk_in_c)
+Route        22   e 1.738                                  \SSD_ADC/rollover
+LUT4        ---     0.166              A to Z              \SSD_ADC/i1_2_lut_adj_1
+Route         1   e 1.020                                  \SSD_ADC/n12
+LUT4        ---     0.166              D to Z              \SSD_ADC/i10_4_lut
+Route        10   e 1.480                                  \SSD_ADC/clk_in_c_enable_20
+                  --------
+                    4.935  (14.1% logic, 85.9% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \SSD_ADC/rollover_27  (from clk_in_c +)
+   Destination:    FD1P3DX    SP             \SSD_ADC/sigma_i7  (to clk_in_c +)
+
+   Delay:                   4.935ns  (14.1% logic, 85.9% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.935ns data_path \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i7 meets
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 0.144ns
+
+ Path Details: \SSD_ADC/rollover_27 to \SSD_ADC/sigma_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \SSD_ADC/rollover_27 (from clk_in_c)
+Route        22   e 1.738                                  \SSD_ADC/rollover
+LUT4        ---     0.166              A to Z              \SSD_ADC/i1_2_lut_adj_1
+Route         1   e 1.020                                  \SSD_ADC/n12
+LUT4        ---     0.166              D to Z              \SSD_ADC/i10_4_lut
+Route        10   e 1.480                                  \SSD_ADC/clk_in_c_enable_20
+                  --------
+                    4.935  (14.1% logic, 85.9% route), 3 logic levels.
+
+Report: 4.856 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_in_c]                |     5.000 ns|     4.856 ns|     3  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  893 paths, 187 nets, and 430 connections (82.7% coverage)
+
+
+Peak memory: 271282176 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

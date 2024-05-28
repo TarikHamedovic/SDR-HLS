@@ -1,0 +1,116 @@
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Thu May 23 15:55:25 2024
+
+#Implementation: First_Implementation
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v" (library work)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv" (library work)
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Previous module with same name manta
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Duplicate module/interface name manta
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Previous module with same name \manta.interface 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Duplicate module/interface name \manta.interface 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Previous module with same name \manta.interface.bridge_rx 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Duplicate module/interface name \manta.interface.bridge_rx 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Previous module with same name \manta.interface.bridge_tx 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Duplicate module/interface name \manta.interface.bridge_tx 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Previous module with same name \manta.interface.uart_rx 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Duplicate module/interface name \manta.interface.uart_rx 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Previous module with same name \manta.interface.uart_tx 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Duplicate module/interface name \manta.interface.uart_tx 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Previous module with same name \manta.my_logic_analyzer 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Duplicate module/interface name \manta.my_logic_analyzer 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Previous module with same name \manta.my_logic_analyzer.fsm 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Duplicate module/interface name \manta.my_logic_analyzer.fsm 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Previous module with same name \manta.my_logic_analyzer.fsm.registers 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Duplicate module/interface name \manta.my_logic_analyzer.fsm.registers 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Previous module with same name \manta.my_logic_analyzer.sample_mem 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Duplicate module/interface name \manta.my_logic_analyzer.sample_mem 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Previous module with same name \manta.my_logic_analyzer.trig_blk 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Previous module with same name \manta.my_logic_analyzer.trig_blk.probe0_trigger 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe0_trigger 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Previous module with same name \manta.my_logic_analyzer.trig_blk.probe1_trigger 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe1_trigger 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Previous module with same name \manta.my_logic_analyzer.trig_blk.probe2_trigger 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe2_trigger 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Previous module with same name \manta.my_logic_analyzer.trig_blk.probe3_trigger 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe3_trigger 
+@W: CG679 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Previous module with same name \manta.my_logic_analyzer.trig_blk.registers 
+@N: CG1223 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.registers 
+@N|stack limit increased to max
+16 syntax errors
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 23 15:55:26 2024
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 23 15:55:26 2024
+
+###########################################################]

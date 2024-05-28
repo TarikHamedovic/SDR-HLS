@@ -1,0 +1,19 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sun May 26 11:45:43 2024 *
+NOTE DESIGN NAME: cic *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS o_data[0] : H3 : out *
+NOTE PINS o_ready : J19 : out *
+NOTE PINS o_data[9] : A17 : out *
+NOTE PINS o_data[8] : U19 : out *
+NOTE PINS o_data[7] : J1 : out *
+NOTE PINS o_data[6] : B13 : out *
+NOTE PINS o_data[5] : D7 : out *
+NOTE PINS o_data[4] : E3 : out *
+NOTE PINS o_data[3] : A19 : out *
+NOTE PINS o_data[2] : L5 : out *
+NOTE PINS o_data[1] : L20 : out *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

@@ -1,0 +1,25 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sun May 26 11:24:21 2024 *
+NOTE DESIGN NAME: ADC_top *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS digital_out[3] : D12 : out *
+NOTE PINS digital_out[4] : C12 : out *
+NOTE PINS digital_out[5] : E11 : out *
+NOTE PINS digital_out[6] : E12 : out *
+NOTE PINS digital_out[7] : A12 : out *
+NOTE PINS digital_out[2] : B12 : out *
+NOTE PINS digital_out[1] : D11 : out *
+NOTE PINS digital_out[0] : A13 : out *
+NOTE PINS analog_out : U18 : out *
+NOTE PINS sample_rdy : G3 : out *
+NOTE PINS pwm_out : A4 : out *
+NOTE PINS clk_in : G2 : in *
+NOTE PINS rstn : R1 : in *
+NOTE PINS analog_cmp : H18 : in *
+NOTE PINS SYSCONFIG_PIN_D1 : V2 : inout *
+NOTE PINS SYSCONFIG_PIN_D0 : W2 : inout *
+NOTE PINS SYSCONFIG_PIN_HOLDN : R2 : inout *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: on *

@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1715169312" />
-    <testcase name="AMDemod_test" classname="AMDemod_tb" file="/home/user/SDR-HLS/Testbenches/AMDemod/AMDemod_tb.py" lineno="27" time="0.2671177387237549" sim_time_ns="7875.001" ratio_time="29481.38539067257" />
-  </testsuite>
-</testsuites>

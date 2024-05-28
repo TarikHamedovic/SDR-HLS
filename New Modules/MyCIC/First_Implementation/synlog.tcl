@@ -1,0 +1,1 @@
+run_tcl -fg CIC_First_Implementation_synplify.tcl

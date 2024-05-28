@@ -1,0 +1,13 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/decimator.sv":1:7:1:15|Synthesizing module decimator in library work.
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":1:7:1:9|Synthesizing module cic in library work.
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/integrator.sv":1:7:1:16|Synthesizing module integrator in library work.
+@N: CG364 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/comb.sv":1:7:1:10|Synthesizing module comb in library work.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":7:16:7:20|Input i_clk is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":8:16:8:22|Input i_reset is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":9:16:9:19|Input i_ce is unused.
+@N: CL159 :"/home/user/SDR-HLS/New Modules/MyCIC/First_Implementation/source/cic.sv":10:32:10:37|Input i_data is unused.
+@N|Running in 64-bit mode
+

@@ -1,0 +1,1460 @@
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Thu May 23 15:58:28 2024
+
+#Implementation: First_Implementation
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v" (library work)
+@I::"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv" (library work)
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Previous declaration of module manta found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Duplicate module name manta (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Previous declaration of module \manta.interface  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Duplicate module name \manta.interface  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Previous declaration of module \manta.interface.bridge_rx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Duplicate module name \manta.interface.bridge_rx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Previous declaration of module \manta.interface.bridge_tx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Duplicate module name \manta.interface.bridge_tx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Previous declaration of module \manta.interface.uart_rx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Duplicate module name \manta.interface.uart_rx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Previous declaration of module \manta.interface.uart_tx  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Duplicate module name \manta.interface.uart_tx  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Previous declaration of module \manta.my_logic_analyzer  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Duplicate module name \manta.my_logic_analyzer  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Previous declaration of module \manta.my_logic_analyzer.fsm  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Duplicate module name \manta.my_logic_analyzer.fsm  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Previous declaration of module \manta.my_logic_analyzer.fsm.registers  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Duplicate module name \manta.my_logic_analyzer.fsm.registers  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Previous declaration of module \manta.my_logic_analyzer.sample_mem  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Duplicate module name \manta.my_logic_analyzer.sample_mem  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Previous declaration of module \manta.my_logic_analyzer.trig_blk  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Duplicate module name \manta.my_logic_analyzer.trig_blk  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe0_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe0_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe1_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe1_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe2_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe2_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe3_trigger  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Duplicate module name \manta.my_logic_analyzer.trig_blk.probe3_trigger  (using last description encountered)!
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Previous declaration of module \manta.my_logic_analyzer.trig_blk.registers  found
+@W: CG275 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Duplicate module name \manta.my_logic_analyzer.trig_blk.registers  (using last description encountered)!
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top_level
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Synthesizing module \manta.interface.bridge_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":403:4:403:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":414:4:414:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":425:4:425:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":434:4:434:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":445:4:445:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":456:4:456:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":467:4:467:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":485:10:485:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":494:10:494:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":518:8:518:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":528:8:528:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":548:10:548:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":574:10:574:11|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.bridge_rx  .......
+Finished optimization stage 1 on \manta.interface.bridge_rx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Synthesizing module \manta.interface.bridge_tx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":701:4:701:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":710:4:710:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":731:4:731:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":753:4:753:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":761:10:761:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":776:4:776:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":797:4:797:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.bridge_tx  .......
+Finished optimization stage 1 on \manta.interface.bridge_tx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Synthesizing module \manta.interface.uart_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":918:4:918:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":934:4:934:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":953:4:953:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":960:8:960:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":975:4:975:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":981:6:981:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":983:8:983:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1000:4:1000:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1004:8:1004:9|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.uart_rx  .......
+Finished optimization stage 1 on \manta.interface.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Synthesizing module \manta.interface.uart_tx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1107:8:1107:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1127:8:1127:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1149:8:1149:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1152:10:1152:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1171:8:1171:9|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.interface.uart_tx  .......
+Finished optimization stage 1 on \manta.interface.uart_tx  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Synthesizing module \manta.interface  in library work.
+Running optimization stage 1 on \manta.interface  .......
+Finished optimization stage 1 on \manta.interface  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Synthesizing module \manta.my_logic_analyzer.fsm.registers  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1890:6:1890:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1897:6:1897:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1904:6:1904:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1911:6:1911:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1918:6:1918:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1925:6:1925:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1932:6:1932:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1939:6:1939:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.fsm.registers  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.fsm.registers  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Synthesizing module \manta.my_logic_analyzer.fsm  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1564:4:1564:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1596:6:1596:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1598:8:1598:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1605:10:1605:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1625:8:1625:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1653:6:1653:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1680:10:1680:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1690:8:1690:9|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1703:6:1703:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.fsm  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.fsm  (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Synthesizing module \manta.my_logic_analyzer.sample_mem  in library work.
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2248:2:2248:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2516:2:2516:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2520:2:2520:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2788:2:2788:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on \manta.my_logic_analyzer.sample_mem  .......
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found RAM mem_1, depth=256, width=13
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found RAM mem_0, depth=256, width=16
+Finished optimization stage 1 on \manta.my_logic_analyzer.sample_mem  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe0_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3189:4:3189:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe1_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3302:4:3302:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe2_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3415:4:3415:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe3_trigger  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3528:4:3528:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Synthesizing module \manta.my_logic_analyzer.trig_blk.registers  in library work.
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3771:6:3771:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3778:6:3778:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3785:6:3785:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3792:6:3792:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3799:6:3799:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3806:6:3806:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3813:6:3813:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3820:6:3820:7|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3827:6:3827:7|Ignoring attribute full_case on statement
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk.registers  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk.registers  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Synthesizing module \manta.my_logic_analyzer.trig_blk  in library work.
+Running optimization stage 1 on \manta.my_logic_analyzer.trig_blk  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer.trig_blk  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Synthesizing module \manta.my_logic_analyzer  in library work.
+Running optimization stage 1 on \manta.my_logic_analyzer  .......
+Finished optimization stage 1 on \manta.my_logic_analyzer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Synthesizing module manta in library work.
+Running optimization stage 1 on manta .......
+Finished optimization stage 1 on manta (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":6:7:6:15|Synthesizing module top_level in library work.
+Running optimization stage 1 on top_level .......
+Finished optimization stage 1 on top_level (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on top_level .......
+Finished optimization stage 2 on top_level (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on manta .......
+Finished optimization stage 2 on manta (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.registers  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.registers  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe3_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe2_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe1_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.trig_blk.probe0_trigger  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.sample_mem  .......
+@N: CL135 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2819:2:2819:7|Found sequential shift \$signal$5 with address depth of 3 words and data bit width of 35.
+Finished optimization stage 2 on \manta.my_logic_analyzer.sample_mem  (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.fsm  .......
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 5 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Initial value is not supported on state machine state
+Finished optimization stage 2 on \manta.my_logic_analyzer.fsm  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.my_logic_analyzer.fsm.registers  .......
+Finished optimization stage 2 on \manta.my_logic_analyzer.fsm.registers  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface  .......
+@W: CL247 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bit 34 of bus_i[34:0] is unused
+
+@W: CL246 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":129:15:129:19|Input port bits 15 to 0 of bus_i[34:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on \manta.interface  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.uart_tx  .......
+Finished optimization stage 2 on \manta.interface.uart_tx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.uart_rx  .......
+Finished optimization stage 2 on \manta.interface.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.bridge_tx  .......
+@N: CL189 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Register bit _count[3] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Pruning register bit 3 of _count[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on \manta.interface.bridge_tx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+Running optimization stage 2 on \manta.interface.bridge_rx  .......
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Trying to extract state machine for register _state.
+Extracted state machine for register _state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@W: CL249 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Initial value is not supported on state machine _state
+Finished optimization stage 2 on \manta.interface.bridge_rx  (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 145MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/MantaTest_First_Implementation_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:30 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 136MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu May 23 15:58:31 2024
+
+###########################################################]
+Premap Report
+
+# Thu May 23 15:58:31 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Lattice Technology Pre-mapping, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 224MB peak: 224MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/MantaTest_First_Implementation_scck.rpt 
+See clock summary report "/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/MantaTest_First_Implementation_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 240MB peak: 240MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 242MB peak: 242MB)
+
+NConnInternalConnection caching is on
+@N: FX493 |Applying initial value "00000000000000000000000000000000" on instance _buffer[31:0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0000000000000000" on instance _buffer[15:0].
+@N: FX493 |Applying initial value "0" on instance start_o.
+@N: FX493 |Applying initial value "0" on instance _rx_d.
+@N: FX493 |Applying initial value "0" on instance _rx_q.
+@N: FX493 |Applying initial value "0" on instance _rx_q_prev.
+@N: FX493 |Applying initial value "00000000" on instance data_o[7:0].
+@N: FX493 |Applying initial value "0" on instance valid_o.
+@N: FX493 |Applying initial value "000000000" on instance _buffer[8:0].
+@N: FX493 |Applying initial value "1" on instance tx.
+@N: FX493 |Applying initial value "1" on instance done_o.
+@N: FX493 |Applying initial value "00000000" on instance trigger_location_buf[7:0].
+@N: FX493 |Applying initial value "00" on instance trigger_mode_buf[1:0].
+@N: FX493 |Applying initial value "0" on instance request_start_buf.
+@N: FX493 |Applying initial value "0" on instance request_stop_buf.
+@N: FX493 |Applying initial value "0" on instance _strobe.
+@N: FX493 |Applying initial value "00000000" on instance trigger_location[7:0].
+@N: FX493 |Applying initial value "00" on instance trigger_mode[1:0].
+@N: FX493 |Applying initial value "0" on instance request_start.
+@N: FX493 |Applying initial value "0" on instance request_stop.
+@N: FX493 |Applying initial value "000" on instance state_buf[2:0].
+@N: FX493 |Applying initial value "00000000" on instance read_pointer_buf[7:0].
+@N: FX493 |Applying initial value "00000000" on instance write_pointer_buf[7:0].
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+@N: FX493 |Applying initial value "0" on instance prev_request_start.
+@N: FX493 |Applying initial value "0" on instance prev_request_stop.
+@N: FX493 |Applying initial value "0" on instance write_enable.
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+@N: FX493 |Applying initial value "1" on instance G_1.
+@N: FX493 |Applying initial value "1" on instance G_2.
+@N: FX493 |Applying initial value "1" on instance G_3.
+@N: FX493 |Applying initial value "1" on instance G_4.
+@N: FX493 |Applying initial value "1" on instance G_5.
+@N: FX493 |Applying initial value "1" on instance G_6.
+@N: FX493 |Applying initial value "0" on instance prev.
+@N: FX493 |Applying initial value "0000" on instance prev[3:0].
+@N: FX493 |Applying initial value "00000000" on instance prev[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance prev[15:0].
+@N: FX493 |Applying initial value "0" on instance _strobe.
+@N: FX493 |Applying initial value "0000" on instance probe0_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe1_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe2_op_buf[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe3_op_buf[3:0].
+@N: FX493 |Applying initial value "0" on instance probe0_arg_buf.
+@N: FX493 |Applying initial value "0000" on instance probe1_arg_buf[3:0].
+@N: FX493 |Applying initial value "00000000" on instance probe2_arg_buf[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance probe3_arg_buf[15:0].
+@N: FX493 |Applying initial value "0000" on instance probe0_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe1_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe2_op[3:0].
+@N: FX493 |Applying initial value "0000" on instance probe3_op[3:0].
+@N: FX493 |Applying initial value "0" on instance probe0_arg.
+@N: FX493 |Applying initial value "0000" on instance probe1_arg[3:0].
+@N: FX493 |Applying initial value "00000000" on instance probe2_arg[7:0].
+@N: FX493 |Applying initial value "0000000000000000" on instance probe3_arg[15:0].
+@N: FX493 |Applying initial value "00000000000000000000000000000000000" on instance bus_o[34:0].
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 292MB peak: 292MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 292MB peak: 292MB)
+
+@W: MO129 :|Sequential instance manta_inst.my_logic_analyzer.sample_mem.G_7 is reduced to a combinational gate by constant propagation.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 292MB peak: 292MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 292MB peak: 292MB)
+
+@N: BN362 :|Removing sequential instance G_8 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_10 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_12 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_14 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_16 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_18 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_20 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_22 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_24 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_26 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_28 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_30 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_32 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_34 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_36 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_38 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_40 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_42 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_44 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_46 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_48 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_50 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_52 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_54 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_56 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_58 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_60 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_62 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_64 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_66 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_68 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_70 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_72 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance G_74 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[1] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[2] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[3] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[4] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[5] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[6] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[7] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[8] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[9] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[10] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[11] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[12] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[13] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[14] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2822:2:2822:7|Removing sequential instance bus_o[15] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+Encoding state machine _state[2:0] (in view: work.\\manta\.interface\.bridge_rx\ (verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[4:0] (in view: work.\\manta\.my_logic_analyzer\.fsm\ (verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+@N: FX493 |Applying initial value "1" on instance state[0].
+@N: FX493 |Applying initial value "0" on instance state[1].
+@N: FX493 |Applying initial value "0" on instance state[2].
+@N: FX493 |Applying initial value "0" on instance state[3].
+@N: FX493 |Applying initial value "0" on instance state[4].
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 293MB peak: 293MB)
+
+
+mixed edge conversion for GCC is OFF
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 293MB peak: 293MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 293MB peak: 293MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 293MB peak: 293MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top_level 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 293MB peak: 293MB)
+
+
+
+Clock Summary
+******************
+
+          Start             Requested     Requested     Clock        Clock          Clock
+Level     Clock             Frequency     Period        Type         Group          Load 
+-----------------------------------------------------------------------------------------
+0 -       top_level|clk     200.0 MHz     5.000         inferred     (multiple)     518  
+=========================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                  Clock     Source        Clock Pin       Non-clock Pin     Non-clock Pin
+Clock             Load      Pin           Seq Example     Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------
+top_level|clk     518       clk(port)     probe0.C        -                 -            
+=========================================================================================
+
+@W: MT529 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Found inferred clock top_level|clk which controls 518 sequential elements including manta_inst.\\interface.bridge_rx._state[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 458 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       clk                 port                   458        probe3[15:0]   
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 23 15:58:32 2024
+
+###########################################################]
+Map & Optimize Report
+
+# Thu May 23 15:58:33 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Lattice Technology Mapper, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 229MB peak: 229MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 239MB peak: 239MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+@W: MO160 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1073:2:1073:7|Register bit _buffer[7] (in view view:work.\\manta\.interface\.uart_tx\ (verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1073:2:1073:7|Removing sequential instance manta_inst.\interface.uart_tx._buffer[5] because it is equivalent to instance manta_inst.\interface.uart_tx._buffer[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 291MB peak: 291MB)
+
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":18:4:18:9|Found counter in view:work.top_level(verilog) instance probe3[15:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":18:4:18:9|Found counter in view:work.top_level(verilog) instance probe2[7:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":392:2:392:7|Found counter in view:work.\\manta\.interface\.bridge_rx\ (verilog) instance _byte_num[3:0] 
+@N: FX493 |Applying initial value "0" on instance _byte_num[0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance _byte_num[1].
+@N: FX493 |Applying initial value "0" on instance _byte_num[2].
+@N: FX493 |Applying initial value "0" on instance _byte_num[3].
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":885:2:885:7|Found counter in view:work.\\manta\.interface\.uart_rx\ (verilog) instance _bit_index[3:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":888:2:888:7|Found counter in view:work.\\manta\.interface\.uart_rx\ (verilog) instance _baud_counter[7:0] 
+@N: FX493 |Applying initial value "0" on instance _bit_index[0].
+@N: FX493 |Applying initial value "0" on instance _bit_index[1].
+@N: FX493 |Applying initial value "0" on instance _bit_index[2].
+@N: FX493 |Applying initial value "0" on instance _bit_index[3].
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1076:2:1076:7|Found counter in view:work.\\manta\.interface\.uart_tx\ (verilog) instance _bit_index[3:0] 
+@N: MO231 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1070:2:1070:7|Found counter in view:work.\\manta\.interface\.uart_tx\ (verilog) instance _baud_counter[6:0] 
+@N: FX493 |Applying initial value "0" on instance _bit_index[0].
+@N: FX493 |Applying initial value "0" on instance _bit_index[1].
+@N: FX493 |Applying initial value "0" on instance _bit_index[2].
+@N: FX493 |Applying initial value "0" on instance _bit_index[3].
+@N: MF179 :|Found 8 by 8 bit equality operator ('==') \\\$21 (in view: work.\\manta\.my_logic_analyzer\.fsm\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1518:17:1518:132|Found 9 by 9 bit equality operator ('==') \\\$13 (in view: work.\\manta\.my_logic_analyzer\.fsm\ (verilog))
+@N: FX493 |Applying initial value "0000000000000000" on instance _0_[15:0].
+@N: FX493 |Applying initial value "0" on instance _0__ret[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret[15].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[15].
+@N: FX493 |Applying initial value "0" on instance _0__ret_31.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found startup values on RAM instance mem_0[15:0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)).
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_00 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_01 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_02 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_03 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_04 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_05 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_06 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_07 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_08 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_09 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_0F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_10 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_11 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_12 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_13 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_14 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_15 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_16 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_17 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_18 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_19 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Initial value mem_0_0_0.INITVAL_1F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found startup values on RAM instance mem_0[15:0]
+@N: FX493 |Applying initial value "0000000000000" on instance _1_[12:0].
+@N: FX493 |Applying initial value "0" on instance _1__ret[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret[8].
+@N: FX493 |Applying initial value "0" on instance _1__ret[9].
+@N: FX493 |Applying initial value "0" on instance _1__ret[10].
+@N: FX493 |Applying initial value "0" on instance _1__ret[11].
+@N: FX493 |Applying initial value "0" on instance _1__ret[12].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_20[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_24.
+@N: FX493 |Applying initial value "0" on instance _1__ret_25.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found startup values on RAM instance mem_1[12:0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)).
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_00 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_01 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_02 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_03 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_04 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_05 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_06 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_07 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_08 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_09 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_0F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_10 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_11 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_12 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_13 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_14 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_15 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_16 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_17 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_18 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_19 = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1A = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1B = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1C = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1D = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1E = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX276 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Initial value mem_1_0_0.INITVAL_1F = 288'h00000000000000000000000000000000000000000000000000000000000000000000000000000000.
+@N: FX702 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found startup values on RAM instance mem_1[12:0]
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[12] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[11] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[9] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[8] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[7] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[6] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[5] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[4] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[3] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[2] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[1] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[10] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[15] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[14] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[13] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[12] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[11] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[10] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._1_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2783:2:2783:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._1_[0] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[9] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[8] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[7] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[6] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[5] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[4] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[3] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[2] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance manta_inst.my_logic_analyzer.sample_mem._0_[1] because it is equivalent to instance manta_inst.my_logic_analyzer.sample_mem._0_[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2511:2:2511:7|Removing sequential instance _0_[0] (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FX493 |Applying initial value "0" on instance _0__ret_31.
+@N: FX493 |Applying initial value "0" on instance _1__ret_25.
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[0].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[1].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[2].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[3].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[4].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[5].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[6].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[7].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[8].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[9].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[10].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[11].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[12].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[13].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[14].
+@N: FX493 |Applying initial value "0" on instance _0__ret_15[15].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[0].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[1].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[2].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[3].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[4].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[5].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[6].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[7].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[8].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[9].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[10].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[11].
+@N: FX493 |Applying initial value "0" on instance _1__ret_12[12].
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2513:29:2513:58|Found 8 by 8 bit equality operator ('==') un1_user_addr (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2785:29:2785:60|Found 8 by 8 bit equality operator ('==') un1_user_addr_1 (in view: work.\\manta\.my_logic_analyzer\.sample_mem\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3395:17:3395:134|Found 8 by 8 bit equality operator ('==') un1_\\\$13 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe2_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3400:17:3400:140|Found 8 by 8 bit equality operator ('==') \\\$18 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe2_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3508:17:3508:134|Found 16 by 16 bit equality operator ('==') un1_\\\$13 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe3_trigger\ (verilog))
+@N: MF179 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3513:17:3513:140|Found 16 by 16 bit equality operator ('==') \\\$18 (in view: work.\\manta\.my_logic_analyzer\.trig_blk\.probe3_trigger\ (verilog))
+@N: MF794 |RAM \\\$signal\$5_CR34[33:0] required 2 registers during mapping 
+@N: MF794 |RAM mem_0[15:0] required 17 registers during mapping 
+@N: MF794 |RAM mem_1[12:0] required 14 registers during mapping 
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 294MB peak: 294MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 303MB peak: 303MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 304MB peak: 304MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 307MB peak: 307MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 307MB peak: 307MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 307MB peak: 307MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 307MB peak: 307MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 326MB peak: 326MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:04s		    -3.05ns		 501 /       426
+   2		0h:00m:04s		    -3.02ns		 496 /       426
+   3		0h:00m:04s		    -2.80ns		 503 /       426
+   4		0h:00m:04s		    -2.85ns		 506 /       426
+   5		0h:00m:04s		    -2.80ns		 508 /       426
+   6		0h:00m:04s		    -2.80ns		 509 /       426
+
+   7		0h:00m:05s		    -2.80ns		 509 /       426
+   8		0h:00m:05s		    -2.80ns		 509 /       426
+   9		0h:00m:05s		    -2.80ns		 510 /       426
+  10		0h:00m:05s		    -2.85ns		 512 /       426
+  11		0h:00m:06s		    -2.85ns		 512 /       426
+
+
+  12		0h:00m:06s		    -2.85ns		 512 /       426
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 326MB peak: 326MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: FO126 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2819:2:2819:7|Generating RAM manta_inst.my_logic_analyzer.sample_mem.\\\$signal\$5_CR34[33:0]
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 326MB peak: 326MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 326MB peak: 326MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 326MB peak: 326MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 326MB peak: 326MB)
+
+Writing Analyst data base /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/MantaTest_First_Implementation_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 326MB peak: 326MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/MantaTest_First_Implementation.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 332MB peak: 332MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 332MB peak: 332MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 332MB peak: 332MB)
+
+@W: MT420 |Found inferred clock top_level|clk with period 5.00ns. Please declare a user-defined clock on port clk.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu May 23 15:58:42 2024
+#
+
+
+Top view:               top_level
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.837
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock     
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group     
+-------------------------------------------------------------------------------------------------------------
+top_level|clk      200.0 MHz     146.3 MHz     5.000         6.837         -1.837     inferred     (multiple)
+=============================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                        |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------
+Starting       Ending         |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------
+top_level|clk  top_level|clk  |  5.000       -1.837  |  No paths    -      |  No paths    -      |  No paths    -    
+=====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: top_level|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                  Starting                                                        Arrival           
+Instance                                                          Reference         Type         Pin      Net                     Time        Slack 
+                                                                  Clock                                                                             
+----------------------------------------------------------------------------------------------------------------------------------------------------
+manta_inst.my_logic_analyzer.sample_mem.mem_1_mem_1_0_0           top_level|clk     PDPW16KD     DO23     mem_1_o[5]              5.181       -1.837
+probe3[0]                                                         top_level|clk     FD1S3AX      Q        probe3[0]               1.045       -1.594
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.prev[0]      top_level|clk     FD1S3AX      Q        Z\\port\$0\$16_o[0]     0.985       -1.534
+probe3[1]                                                         top_level|clk     FD1S3AX      Q        probe3[1]               1.045       -1.533
+probe3[2]                                                         top_level|clk     FD1S3AX      Q        probe3[2]               1.045       -1.533
+manta_inst.my_logic_analyzer.trig_blk.registers.probe3_arg[0]     top_level|clk     FD1P3AX      Q        probe3_arg[0]           0.955       -1.504
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.prev[1]      top_level|clk     FD1S3AX      Q        Z\\port\$0\$16_o[1]     0.985       -1.473
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.prev[2]      top_level|clk     FD1S3AX      Q        Z\\port\$0\$16_o[2]     0.985       -1.473
+probe3[3]                                                         top_level|clk     FD1S3AX      Q        probe3[3]               1.045       -1.472
+probe3[4]                                                         top_level|clk     FD1S3AX      Q        probe3[4]               1.045       -1.472
+====================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                         Starting                                                     Required           
+Instance                                                 Reference         Type        Pin     Net                    Time         Slack 
+                                                         Clock                                                                           
+-----------------------------------------------------------------------------------------------------------------------------------------
+manta_inst.my_logic_analyzer.sample_mem.bus_o[21]        top_level|clk     FD1S3AX     D       Z\\\$26_8[21]          4.946        -1.837
+manta_inst.my_logic_analyzer.fsm.write_pointer[0]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[1]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[2]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[3]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[4]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[5]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[6]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.write_pointer[7]        top_level|clk     FD1P3AX     SP      Z\\\$26_2_sqmuxa_i     4.806        -1.594
+manta_inst.my_logic_analyzer.fsm.registers.bus_o[16]     top_level|clk     FD1S3AX     D       Z\\\$9_42[16]          4.946        -1.445
+=========================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      6.783
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.837
+
+    Number of logic level(s):                3
+    Starting point:                          manta_inst.my_logic_analyzer.sample_mem.mem_1_mem_1_0_0 / DO23
+    Ending point:                            manta_inst.my_logic_analyzer.sample_mem.bus_o[21] / D
+    The start point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CLKR
+    The end   point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                             Pin      Pin               Arrival     No. of    
+Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------
+manta_inst.my_logic_analyzer.sample_mem.mem_1_mem_1_0_0       PDPW16KD     DO23     Out     5.181     5.181 r     -         
+mem_1_o[5]                                                    Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_bm[21]       ORCALUT4     C        In      0.000     5.181 r     -         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_bm[21]       ORCALUT4     Z        Out     0.606     5.787 r     -         
+Z\\\$26_8_bm[21]                                              Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_mb_1[21]     ORCALUT4     A        In      0.000     5.787 r     -         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_mb_1[21]     ORCALUT4     Z        Out     0.606     6.393 f     -         
+Z\\\$26_8_mb_1[21]                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_mb[21]       ORCALUT4     B        In      0.000     6.393 f     -         
+manta_inst.my_logic_analyzer.sample_mem.\\\$26_8_mb[21]       ORCALUT4     Z        Out     0.390     6.783 r     -         
+Z\\\$26_8[21]                                                 Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.sample_mem.bus_o[21]             FD1S3AX      D        In      0.000     6.783 r     -         
+============================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.194
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.806
+
+    - Propagation time:                      6.401
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.594
+
+    Number of logic level(s):                16
+    Starting point:                          probe3[0] / Q
+    Ending point:                            manta_inst.my_logic_analyzer.fsm.write_pointer[0] / SP
+    The start point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+probe3[0]                                                                FD1S3AX      Q        Out     1.045     1.045 r     -         
+probe3[0]                                                                Net          -        -       -         -           9         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_0_0      CCU2C        A1       In      0.000     1.045 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_0_0      CCU2C        COUT     Out     0.900     1.945 r     -         
+Z\\\$11_cry_0                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_1_0      CCU2C        CIN      In      0.000     1.945 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_1_0      CCU2C        COUT     Out     0.061     2.006 r     -         
+Z\\\$11_cry_2                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_3_0      CCU2C        CIN      In      0.000     2.006 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_3_0      CCU2C        COUT     Out     0.061     2.067 r     -         
+Z\\\$11_cry_4                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_5_0      CCU2C        CIN      In      0.000     2.067 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_5_0      CCU2C        COUT     Out     0.061     2.128 r     -         
+Z\\\$11_cry_6                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_7_0      CCU2C        CIN      In      0.000     2.128 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_7_0      CCU2C        COUT     Out     0.061     2.189 r     -         
+Z\\\$11_cry_8                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_9_0      CCU2C        CIN      In      0.000     2.189 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_9_0      CCU2C        COUT     Out     0.061     2.250 r     -         
+Z\\\$11_cry_10                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_11_0     CCU2C        CIN      In      0.000     2.250 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_11_0     CCU2C        COUT     Out     0.061     2.311 r     -         
+Z\\\$11_cry_12                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_13_0     CCU2C        CIN      In      0.000     2.311 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_13_0     CCU2C        COUT     Out     0.061     2.372 r     -         
+Z\\\$11_cry_14                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_15_0     CCU2C        CIN      In      0.000     2.372 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$11_cry_15_0     CCU2C        S1       Out     0.698     3.070 r     -         
+Z\\\$11                                                                  Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6_bm      ORCALUT4     B        In      0.000     3.070 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6_bm      ORCALUT4     Z        Out     0.606     3.675 r     -         
+triggered_6_bm_0                                                         Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6         PFUMX        ALUT     In      0.000     3.675 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6         PFUMX        Z        Out     0.403     4.079 r     -         
+N_13                                                                     Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      D0       In      0.000     4.079 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      Z        Out     0.138     4.216 r     -         
+Z\\triggered\$4                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     B        In      0.000     4.216 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     Z        Out     0.606     4.822 r     -         
+trig_1                                                                   Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     D        In      0.000     4.822 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     Z        Out     0.180     5.003 r     -         
+trigger                                                                  Net          -        -       -         -           5         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     D        In      0.000     5.003 r     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     Z        Out     0.606     5.609 f     -         
+un1_\\\$21_1[0]                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     A        In      0.000     5.609 f     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     Z        Out     0.792     6.401 r     -         
+Z\\\$26_2_sqmuxa_i                                                       Net          -        -       -         -           8         
+manta_inst.my_logic_analyzer.fsm.write_pointer[0]                        FD1P3AX      SP       In      0.000     6.401 r     -         
+=======================================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.194
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.806
+
+    - Propagation time:                      6.401
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.594
+
+    Number of logic level(s):                16
+    Starting point:                          probe3[0] / Q
+    Ending point:                            manta_inst.my_logic_analyzer.fsm.write_pointer[0] / SP
+    The start point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+probe3[0]                                                                FD1S3AX      Q        Out     1.045     1.045 r     -         
+probe3[0]                                                                Net          -        -       -         -           9         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_0_0      CCU2C        B1       In      0.000     1.045 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_0_0      CCU2C        COUT     Out     0.900     1.945 r     -         
+Z\\\$12_cry_0                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_1_0      CCU2C        CIN      In      0.000     1.945 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_1_0      CCU2C        COUT     Out     0.061     2.006 r     -         
+Z\\\$12_cry_2                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_3_0      CCU2C        CIN      In      0.000     2.006 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_3_0      CCU2C        COUT     Out     0.061     2.067 r     -         
+Z\\\$12_cry_4                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_5_0      CCU2C        CIN      In      0.000     2.067 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_5_0      CCU2C        COUT     Out     0.061     2.128 r     -         
+Z\\\$12_cry_6                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_7_0      CCU2C        CIN      In      0.000     2.128 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_7_0      CCU2C        COUT     Out     0.061     2.189 r     -         
+Z\\\$12_cry_8                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_9_0      CCU2C        CIN      In      0.000     2.189 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_9_0      CCU2C        COUT     Out     0.061     2.250 r     -         
+Z\\\$12_cry_10                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_11_0     CCU2C        CIN      In      0.000     2.250 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_11_0     CCU2C        COUT     Out     0.061     2.311 r     -         
+Z\\\$12_cry_12                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_13_0     CCU2C        CIN      In      0.000     2.311 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_13_0     CCU2C        COUT     Out     0.061     2.372 r     -         
+Z\\\$12_cry_14                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_15_0     CCU2C        CIN      In      0.000     2.372 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$12_cry_15_0     CCU2C        S1       Out     0.698     3.070 r     -         
+Z\\\$12                                                                  Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6_am      ORCALUT4     C        In      0.000     3.070 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6_am      ORCALUT4     Z        Out     0.606     3.675 r     -         
+triggered_6_am_0                                                         Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6         PFUMX        BLUT     In      0.000     3.675 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_6         PFUMX        Z        Out     0.403     4.079 r     -         
+N_13                                                                     Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      D0       In      0.000     4.079 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      Z        Out     0.138     4.216 r     -         
+Z\\triggered\$4                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     B        In      0.000     4.216 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     Z        Out     0.606     4.822 r     -         
+trig_1                                                                   Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     D        In      0.000     4.822 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     Z        Out     0.180     5.003 r     -         
+trigger                                                                  Net          -        -       -         -           5         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     D        In      0.000     5.003 r     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     Z        Out     0.606     5.609 f     -         
+un1_\\\$21_1[0]                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     A        In      0.000     5.609 f     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     Z        Out     0.792     6.401 r     -         
+Z\\\$26_2_sqmuxa_i                                                       Net          -        -       -         -           8         
+manta_inst.my_logic_analyzer.fsm.write_pointer[0]                        FD1P3AX      SP       In      0.000     6.401 r     -         
+=======================================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.194
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.806
+
+    - Propagation time:                      6.401
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.594
+
+    Number of logic level(s):                16
+    Starting point:                          probe3[0] / Q
+    Ending point:                            manta_inst.my_logic_analyzer.fsm.write_pointer[0] / SP
+    The start point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+probe3[0]                                                                FD1S3AX      Q        Out     1.045     1.045 r     -         
+probe3[0]                                                                Net          -        -       -         -           9         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_0_0      CCU2C        A1       In      0.000     1.045 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_0_0      CCU2C        COUT     Out     0.900     1.945 r     -         
+Z\\\$14_cry_0                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_1_0      CCU2C        CIN      In      0.000     1.945 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_1_0      CCU2C        COUT     Out     0.061     2.006 r     -         
+Z\\\$14_cry_2                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_3_0      CCU2C        CIN      In      0.000     2.006 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_3_0      CCU2C        COUT     Out     0.061     2.067 r     -         
+Z\\\$14_cry_4                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_5_0      CCU2C        CIN      In      0.000     2.067 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_5_0      CCU2C        COUT     Out     0.061     2.128 r     -         
+Z\\\$14_cry_6                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_7_0      CCU2C        CIN      In      0.000     2.128 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_7_0      CCU2C        COUT     Out     0.061     2.189 r     -         
+Z\\\$14_cry_8                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_9_0      CCU2C        CIN      In      0.000     2.189 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_9_0      CCU2C        COUT     Out     0.061     2.250 r     -         
+Z\\\$14_cry_10                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_11_0     CCU2C        CIN      In      0.000     2.250 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_11_0     CCU2C        COUT     Out     0.061     2.311 r     -         
+Z\\\$14_cry_12                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_13_0     CCU2C        CIN      In      0.000     2.311 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_13_0     CCU2C        COUT     Out     0.061     2.372 r     -         
+Z\\\$14_cry_14                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_15_0     CCU2C        CIN      In      0.000     2.372 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$14_cry_15_0     CCU2C        S1       Out     0.698     3.070 r     -         
+Z\\\$14                                                                  Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7_am      ORCALUT4     C        In      0.000     3.070 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7_am      ORCALUT4     Z        Out     0.606     3.675 r     -         
+triggered_7_am_0                                                         Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7         PFUMX        BLUT     In      0.000     3.675 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7         PFUMX        Z        Out     0.403     4.079 r     -         
+N_16                                                                     Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      D1       In      0.000     4.079 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      Z        Out     0.138     4.216 r     -         
+Z\\triggered\$4                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     B        In      0.000     4.216 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     Z        Out     0.606     4.822 r     -         
+trig_1                                                                   Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     D        In      0.000     4.822 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     Z        Out     0.180     5.003 r     -         
+trigger                                                                  Net          -        -       -         -           5         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     D        In      0.000     5.003 r     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     Z        Out     0.606     5.609 f     -         
+un1_\\\$21_1[0]                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     A        In      0.000     5.609 f     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     Z        Out     0.792     6.401 r     -         
+Z\\\$26_2_sqmuxa_i                                                       Net          -        -       -         -           8         
+manta_inst.my_logic_analyzer.fsm.write_pointer[0]                        FD1P3AX      SP       In      0.000     6.401 r     -         
+=======================================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.194
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.806
+
+    - Propagation time:                      6.401
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.594
+
+    Number of logic level(s):                16
+    Starting point:                          probe3[0] / Q
+    Ending point:                            manta_inst.my_logic_analyzer.fsm.write_pointer[0] / SP
+    The start point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            top_level|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+probe3[0]                                                                FD1S3AX      Q        Out     1.045     1.045 r     -         
+probe3[0]                                                                Net          -        -       -         -           9         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_0_0      CCU2C        B1       In      0.000     1.045 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_0_0      CCU2C        COUT     Out     0.900     1.945 r     -         
+Z\\\$15_cry_0                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_1_0      CCU2C        CIN      In      0.000     1.945 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_1_0      CCU2C        COUT     Out     0.061     2.006 r     -         
+Z\\\$15_cry_2                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_3_0      CCU2C        CIN      In      0.000     2.006 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_3_0      CCU2C        COUT     Out     0.061     2.067 r     -         
+Z\\\$15_cry_4                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_5_0      CCU2C        CIN      In      0.000     2.067 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_5_0      CCU2C        COUT     Out     0.061     2.128 r     -         
+Z\\\$15_cry_6                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_7_0      CCU2C        CIN      In      0.000     2.128 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_7_0      CCU2C        COUT     Out     0.061     2.189 r     -         
+Z\\\$15_cry_8                                                            Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_9_0      CCU2C        CIN      In      0.000     2.189 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_9_0      CCU2C        COUT     Out     0.061     2.250 r     -         
+Z\\\$15_cry_10                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_11_0     CCU2C        CIN      In      0.000     2.250 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_11_0     CCU2C        COUT     Out     0.061     2.311 r     -         
+Z\\\$15_cry_12                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_13_0     CCU2C        CIN      In      0.000     2.311 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_13_0     CCU2C        COUT     Out     0.061     2.372 r     -         
+Z\\\$15_cry_14                                                           Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_15_0     CCU2C        CIN      In      0.000     2.372 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.\\\$15_cry_15_0     CCU2C        S1       Out     0.698     3.070 r     -         
+Z\\\$15                                                                  Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7_am      ORCALUT4     D        In      0.000     3.070 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7_am      ORCALUT4     Z        Out     0.606     3.675 r     -         
+triggered_7_am_0                                                         Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7         PFUMX        BLUT     In      0.000     3.675 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_7         PFUMX        Z        Out     0.403     4.079 r     -         
+N_16                                                                     Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      D1       In      0.000     4.079 r     -         
+manta_inst.my_logic_analyzer.trig_blk.probe3_trigger.triggered_u         L6MUX21      Z        Out     0.138     4.216 r     -         
+Z\\triggered\$4                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     B        In      0.000     4.216 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig_1                             ORCALUT4     Z        Out     0.606     4.822 r     -         
+trig_1                                                                   Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     D        In      0.000     4.822 r     -         
+manta_inst.my_logic_analyzer.trig_blk.trig                               ORCALUT4     Z        Out     0.180     5.003 r     -         
+trigger                                                                  Net          -        -       -         -           5         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     D        In      0.000     5.003 r     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1[0]                         ORCALUT4     Z        Out     0.606     5.609 f     -         
+un1_\\\$21_1[0]                                                          Net          -        -       -         -           1         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     A        In      0.000     5.609 f     -         
+manta_inst.my_logic_analyzer.fsm.un1_\\\$21_1_RNI99BO[0]                 ORCALUT4     Z        Out     0.792     6.401 r     -         
+Z\\\$26_2_sqmuxa_i                                                       Net          -        -       -         -           8         
+manta_inst.my_logic_analyzer.fsm.write_pointer[0]                        FD1P3AX      SP       In      0.000     6.401 r     -         
+=======================================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 332MB peak: 332MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 332MB peak: 332MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe5u_85f-6
+
+Register bits: 426 of 83640 (1%)
+PIC Latch:       0
+I/O cells:       3
+Block Rams : 2 of 208 (0%)
+
+
+Details:
+CCU2C:          118
+DPR16X4C:       9
+FD1P3AX:        257
+FD1P3AY:        1
+FD1S3AX:        162
+FD1S3AY:        1
+FD1S3IX:        3
+GSR:            1
+IB:             2
+IFS1P3DX:       1
+INV:            4
+L6MUX21:        2
+OB:             1
+OFS1P3BX:       1
+ORCALUT4:       495
+PDPW16KD:       2
+PFUMX:          27
+PUR:            1
+VHI:            17
+VLO:            17
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:09s; Memory used current: 332MB peak: 332MB)
+
+Process took 0h:00m:08s realtime, 0h:00m:09s cputime
+# Thu May 23 15:58:42 2024
+
+###########################################################]

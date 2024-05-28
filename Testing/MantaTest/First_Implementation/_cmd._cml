@@ -1,0 +1,1 @@
+-link -encrypt -top top_level -osyn /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/MantaTest_First_Implementation_comp.srs /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/synwork/layer0.srs  -jobname linker  

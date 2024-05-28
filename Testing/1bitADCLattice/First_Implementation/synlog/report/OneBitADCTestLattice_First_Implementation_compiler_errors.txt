@@ -1,0 +1,2 @@
+@E: CS187 :"/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/box_ave.v":83:0:83:0|Expecting endmodule
+

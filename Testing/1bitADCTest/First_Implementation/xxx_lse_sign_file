@@ -1,0 +1,6 @@
+LSE_CPS_ID_1 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/top.v:3[16:24]"
+LSE_CPS_ID_2 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/top.v:9[7] 12[4]"
+LSE_CPS_ID_3 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/top.v:2[16:21]"
+LSE_CPS_ID_4 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/top.v:16[11] 20[4]"
+LSE_CPS_ID_5 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/ADCTest.v:9[10] 12[8]"
+LSE_CPS_ID_6 "/home/user/SDR-HLS/Testing/1bitADCTest/First_Implementation/source/top.v:4[17:26]"

@@ -1,0 +1,17 @@
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Duplicate module/interface name manta
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Duplicate module/interface name \manta.interface 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Duplicate module/interface name \manta.interface.bridge_rx 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Duplicate module/interface name \manta.interface.bridge_tx 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Duplicate module/interface name \manta.interface.uart_rx 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Duplicate module/interface name \manta.interface.uart_tx 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Duplicate module/interface name \manta.my_logic_analyzer 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Duplicate module/interface name \manta.my_logic_analyzer.fsm 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Duplicate module/interface name \manta.my_logic_analyzer.fsm.registers 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Duplicate module/interface name \manta.my_logic_analyzer.sample_mem 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe0_trigger 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe1_trigger 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe2_trigger 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.probe3_trigger 
+@E: CG855 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Duplicate module/interface name \manta.my_logic_analyzer.trig_blk.registers 
+

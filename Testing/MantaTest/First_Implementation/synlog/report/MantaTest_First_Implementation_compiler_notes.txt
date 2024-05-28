@@ -1,0 +1,44 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Previous declaration of module manta found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Previous declaration of module \manta.interface  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Previous declaration of module \manta.interface.bridge_rx  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Previous declaration of module \manta.interface.bridge_tx  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Previous declaration of module \manta.interface.uart_rx  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Previous declaration of module \manta.interface.uart_tx  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Previous declaration of module \manta.my_logic_analyzer  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Previous declaration of module \manta.my_logic_analyzer.fsm  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Previous declaration of module \manta.my_logic_analyzer.fsm.registers  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Previous declaration of module \manta.my_logic_analyzer.sample_mem  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Previous declaration of module \manta.my_logic_analyzer.trig_blk  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe0_trigger  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe1_trigger  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe2_trigger  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Previous declaration of module \manta.my_logic_analyzer.trig_blk.probe3_trigger  found
+@N: CG1222 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Previous declaration of module \manta.my_logic_analyzer.trig_blk.registers  found
+@N|stack limit increased to max
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":268:7:268:32|Synthesizing module \manta.interface.bridge_rx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":614:7:614:32|Synthesizing module \manta.interface.bridge_tx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":818:7:818:30|Synthesizing module \manta.interface.uart_rx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1018:7:1018:30|Synthesizing module \manta.interface.uart_tx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":125:7:125:22|Synthesizing module \manta.interface  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1736:7:1736:44|Synthesizing module \manta.my_logic_analyzer.fsm.registers  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1406:7:1406:34|Synthesizing module \manta.my_logic_analyzer.fsm  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2107:7:2107:41|Synthesizing module \manta.my_logic_analyzer.sample_mem  in library work.
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2778:2:2778:7|Found RAM mem_1, depth=256, width=13
+@N: CL134 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2506:2:2506:7|Found RAM mem_0, depth=256, width=16
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3104:7:3104:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe0_trigger  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3217:7:3217:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe1_trigger  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3330:7:3330:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe2_trigger  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3443:7:3443:54|Synthesizing module \manta.my_logic_analyzer.trig_blk.probe3_trigger  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":3556:7:3556:49|Synthesizing module \manta.my_logic_analyzer.trig_blk.registers  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2922:7:2922:39|Synthesizing module \manta.my_logic_analyzer.trig_blk  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1188:7:1188:30|Synthesizing module \manta.my_logic_analyzer  in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":6:7:6:11|Synthesizing module manta in library work.
+@N: CG364 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/top_level.sv":6:7:6:15|Synthesizing module top_level in library work.
+@N: CL135 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":2819:2:2819:7|Found sequential shift \$signal$5 with address depth of 3 words and data bit width of 35.
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":1545:2:1545:7|Trying to extract state machine for register state.
+@N: CL189 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":696:2:696:7|Register bit _count[3] is always 0.
+@N: CL201 :"/home/user/SDR-HLS/Testing/MantaTest/First_Implementation/source/manta.v":395:2:395:7|Trying to extract state machine for register _state.
+@N|Running in 64-bit mode
+

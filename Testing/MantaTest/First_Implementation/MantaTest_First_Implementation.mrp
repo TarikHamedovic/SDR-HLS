@@ -1,0 +1,996 @@
+
+          Lattice Mapping Report File for Design Module 'top_level'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     MantaTest_First_Implementation.ngd -o
+     MantaTest_First_Implementation_map.ncd -pr
+     MantaTest_First_Implementation.prf -mp MantaTest_First_Implementation.mrp
+     -lpf /home/user/SDR-HLS/Testing/MantaTest/First_Implementation/MantaTest_Fi
+     rst_Implementation_synplify.lpf -lpf /home/user/FPGA/tools/manta/examples/v
+     erilog/ulx3s/uart_logic_analyzer/top_level.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  05/23/24  16:00:35
+
+Design Summary
+--------------
+
+   Number of registers:    426 out of 84255 (1%)
+      PFU registers:          424 out of 83640 (1%)
+      PIO registers:            2 out of   615 (0%)
+   Number of SLICEs:       530 out of 41820 (1%)
+      SLICEs as Logic/ROM:    503 out of 41820 (1%)
+      SLICEs as RAM:           27 out of 31365 (0%)
+      SLICEs as Carry:        118 out of 41820 (0%)
+   Number of LUT4s:        789 out of 83640 (1%)
+      Number used as logic LUTs:        499
+      Number used as distributed RAM:    54
+      Number used as ripple logic:      236
+      Number used as shift registers:     0
+   Number of PIO sites used: 3 out of 205 (1%)
+   Number of block RAMs:  2 out of 208 (1%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+
+                                    Page 1
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Design Summary (cont)
+---------------------
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  1
+     Net clk_c: 263 loads, 263 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  41
+     Net manta_inst.\interface.uart_tx._bit_indexe: 3 loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$24_0_sqmuxa: 1
+     loads, 1 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$21_0_sqmuxa: 2
+     loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$23_0_sqmuxa: 2
+     loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/_strobe: 23 loads, 23
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$27_0_sqmuxa: 8
+     loads, 8 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$22_0_sqmuxa: 2
+     loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$26_0_sqmuxa: 4
+     loads, 4 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$25_0_sqmuxa: 2
+     loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$20_0_sqmuxa: 2
+     loads, 2 LSLICEs
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/Z\$10_0_sqmuxa: 1
+     loads, 1 LSLICEs
+     Net manta_inst/my_logic_analyzer/user_write_enable: 2 loads, 0 LSLICEs
+     Net manta_inst/my_logic_analyzer/sample_mem/Z\$15: 4 loads, 4 LSLICEs
+     Net manta_inst/my_logic_analyzer/sample_mem/Z\$4: 5 loads, 5 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/_strobe: 8 loads, 8 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$10_1_sqmuxa_1_i: 2 loads,
+     2 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/N_44: 4 loads, 4 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$19_0_sqmuxa: 1 loads, 1
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$18_0_sqmuxa: 5 loads, 5
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$21_0_sqmuxa: 1 loads, 1
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$20_0_sqmuxa: 1 loads, 1
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/N_84: 4 loads, 4 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/registers/Z\$9_0_sqmuxa: 1 loads, 1
+     LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/Z\$26_2_sqmuxa_i: 4 loads, 4 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/Z\$28_2_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net manta_inst/my_logic_analyzer/fsm/un1_state_1_i: 4 loads, 4 LSLICEs
+     Net manta_inst/\interface/uart_tx/_baud_countere: 5 loads, 5 LSLICEs
+     Net manta_inst/\interface/uart_tx/un1_\$1_1: 5 loads, 5 LSLICEs
+     Net manta_inst/\interface/uart_rx/N_10_i: 4 loads, 4 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Design Summary (cont)
+---------------------
+     Net manta_inst/\interface/uart_rx/_bit_indexe: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/uart_rx/N_43_i: 4 loads, 4 LSLICEs
+     Net manta_inst/\interface/bridge_tx/un1_\$19_0_sqmuxa: 8 loads, 8 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[28]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/un1_\$3228_i: 3 loads, 3 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[0]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[4]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[8]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[12]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[16]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[20]: 2 loads, 2 LSLICEs
+     Net manta_inst/\interface/bridge_rx/_bufferce[24]: 2 loads, 2 LSLICEs
+   Number of LSRs:  1
+     Net manta_inst/\interface/bridge_tx/Z\$21_0_sqmuxa: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net manta_inst/my_logic_analyzer/sample_mem/CO0_i: 35 loads
+     Net manta_inst/my_logic_analyzer/sample_mem/tmp2[1]: 35 loads
+     Net manta_inst/bus_i[0]: 33 loads
+     Net manta_inst/my_logic_analyzer/Z\bus_i$7[1]: 26 loads
+     Net manta_inst/my_logic_analyzer/Z\bus_i$7[2]: 26 loads
+     Net manta_inst/bus_i[32]: 24 loads
+     Net manta_inst/my_logic_analyzer/trig_blk/registers/_strobe: 24 loads
+     Net manta_inst/\interface/bridge_tx/Z\$16_c2: 24 loads
+     Net manta_inst/my_logic_analyzer/fsm/state[0]: 22 loads
+     Net manta_inst/my_logic_analyzer/fsm/registers/N_89: 18 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: PULLMODE=UP for rs232_tx_ttl_pad/IOBUF violates legal combination
+     and is ignored.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| rs232_tx_ttl        | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rs232_rx_ttl        | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+
+
+
+
+                                    Page 3
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block GND undriven or does not drive anything - clipped.
+Block manta_inst/GND undriven or does not drive anything - clipped.
+Block manta_inst/VCC undriven or does not drive anything - clipped.
+Block manta_inst/\interface/GND undriven or does not drive anything - clipped.
+Block manta_inst/\interface/VCC undriven or does not drive anything - clipped.
+Block manta_inst/\interface/bridge_rx/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/\interface/bridge_rx/VCC undriven or does not drive anything -
+     clipped.
+Block manta_inst/\interface/bridge_tx/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/\interface/bridge_tx/VCC undriven or does not drive anything -
+     clipped.
+Block manta_inst/\interface/uart_rx/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/\interface/uart_tx/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/my_logic_analyzer/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/my_logic_analyzer/VCC undriven or does not drive anything -
+     clipped.
+Block manta_inst/my_logic_analyzer/fsm/GND undriven or does not drive anything -
+     clipped.
+Block manta_inst/my_logic_analyzer/fsm/registers/GND undriven or does not drive
+     anything - clipped.
+Block manta_inst/my_logic_analyzer/fsm/registers/VCC undriven or does not drive
+     anything - clipped.
+Block manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_7/RAM1
+     undriven or does not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/GND undriven or does not drive
+     anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/VCC undriven or does not drive
+     anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe0_trigger/GND undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe0_trigger/VCC undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/GND undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe1_trigger/VCC undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/GND undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/GND undriven or does
+     not drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/registers/GND undriven or does not
+     drive anything - clipped.
+Block manta_inst/my_logic_analyzer/trig_blk/registers/VCC undriven or does not
+     drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal manta_inst/\interface/uart_rx/VCC undriven or does not drive anything -
+     clipped.
+Signal manta_inst/\interface/uart_tx/VCC undriven or does not drive anything -
+     clipped.
+
+                                    Page 4
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+Signal manta_inst/my_logic_analyzer/fsm/VCC undriven or does not drive anything
+     - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/GND undriven or does not drive
+     anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/VCC undriven or does not drive
+     anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/VCC undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/VCC undriven or does
+     not drive anything - clipped.
+Signal GND undriven or does not drive anything - clipped.
+Signal probe3_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal probe2_s_0_S1[7] undriven or does not drive anything - clipped.
+Signal probe2_s_0_COUT[7] undriven or does not drive anything - clipped.
+Signal probe2_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_2 undriven or does not drive anything - clipped.
+Signal manta_inst/\interface/uart_rx/_baud_counter_s_0_S1[7] undriven or does
+     not drive anything - clipped.
+Signal manta_inst/\interface/uart_rx/_baud_counter_s_0_COUT[7] undriven or does
+     not drive anything - clipped.
+Signal manta_inst/\interface/uart_rx/_baud_counter_cry_0_S0[0] undriven or does
+     not drive anything - clipped.
+Signal manta_inst/\interface/uart_rx/N_1 undriven or does not drive anything -
+     clipped.
+Signal manta_inst/\interface/uart_tx/_baud_counter_cry_0_COUT[5] undriven or
+     does not drive anything - clipped.
+Signal manta_inst/\interface/uart_tx/_baud_counter_cry_0_S0_0[0] undriven or
+     does not drive anything - clipped.
+Signal manta_inst/\interface/uart_tx/N_2 undriven or does not drive anything -
+     clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_21_0_S0 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_21_0_COUT undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_9_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_9_0_S0 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_1_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$21_0_I_1_0_S0 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/N_1 undriven or does not drive anything
+     - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_27_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_27_0_COUT undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_21_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_21_0_S0 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_9_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_9_0_S0 undriven or does not
+
+                                    Page 5
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_1_0_S1 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/Z\$13_0_I_1_0_S0 undriven or does not
+     drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/N_2 undriven or does not drive anything
+     - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/un1_write_pointer_s_7_0_S1 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/un1_write_pointer_s_7_0_COUT undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/un1_write_pointer_cry_0_0_S1 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/un1_write_pointer_cry_0_0_S0 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/fsm/N_3 undriven or does not drive anything
+     - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO35 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO34 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO33 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO32 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO31 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO17 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO16 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO15 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO14 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO13 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO12 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO11 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO10 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO9 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO8 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO7 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO6 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO5 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO4 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO3 undriven or
+
+                                    Page 6
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO2 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO1 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0_DO0 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_21_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_21_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_9_0_S1 undriven
+     or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_9_0_S0 undriven
+     or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_1_0_S1 undriven
+     or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_0_I_1_0_S0 undriven
+     or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/N_1 undriven or does not drive
+     anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_21_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_21_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/un1_user_addr_1_0_I_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/N_2 undriven or does not drive
+     anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$5_s_7_0_S1 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$5_s_7_0_COUT undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$5_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$5_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/N_3 undriven or does not drive
+     anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$signal$5_CR34_ram_7_DO2
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/Z\$signal$5_CR34_ram_7_DO3
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO35 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO34 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO17 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO16 undriven or
+
+                                    Page 7
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO15 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO14 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO13 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO12 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO11 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO10 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO9 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO8 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO7 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO6 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO5 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO4 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO3 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO2 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO1 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0_DO0 undriven or
+     does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_21_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_21_0_CO
+     UT undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/un1_\$13_0_I_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_1 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_21_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_21_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_1_0_S1
+
+                                    Page 8
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$18_0_I_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_2 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_7_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_7_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_5_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_5_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_3_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_3_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$11_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_3 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_7_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_7_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_5_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_5_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_3_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_3_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$12_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_4 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_7_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_7_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_5_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_5_0_S0
+
+                                    Page 9
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_3_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_3_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$14_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_5 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_7_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_7_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_5_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_5_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_3_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_3_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/Z\$15_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/N_6 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_21_0_S0
+     _0 undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_21_0_CO
+     UT_0 undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_33_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_33_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_27_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_27_0_S0
+     undriven or does not drive anything - clipped.
+Signal
+     manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_9_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal
+     manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_9_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal
+
+                                   Page 10
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+     manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal
+     manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/un1_\$13_0_I_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_1 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_21_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal
+     manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_21_0_COUT_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_33_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_33_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_27_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_27_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_9_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_9_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$18_0_I_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_2 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_15_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_13_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_13_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_11_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_11_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_7_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_7_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_5_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_5_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_3_0_S1_0
+     undriven or does not drive anything - clipped.
+
+                                   Page 11
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_3_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_0_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$11_cry_0_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_3 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_15_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_13_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_13_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_11_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_11_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_7_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_7_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_5_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_5_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_3_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_3_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_0_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$12_cry_0_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_4 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_15_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_13_0_S1
+     undriven or does not drive anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_13_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_11_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_11_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_7_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_7_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_5_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_5_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_3_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_3_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_0_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$14_cry_0_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_5 undriven or does
+     not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_15_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_13_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_13_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_11_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_11_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_9_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_9_0_S0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_7_0_S1
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_7_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_5_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_5_0_S0_0
+     undriven or does not drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Removed logic (cont)
+--------------------
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_3_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_3_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_1_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_1_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_0_0_S1_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/Z\$15_cry_0_0_S0_0
+     undriven or does not drive anything - clipped.
+Signal manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/N_6 undriven or does
+     not drive anything - clipped.
+Signal probe3_s_0_S1[15] undriven or does not drive anything - clipped.
+Signal probe3_s_0_COUT[15] undriven or does not drive anything - clipped.
+Block VCC was optimized away.
+Block manta_inst/\interface/uart_rx/VCC was optimized away.
+Block manta_inst/\interface/uart_tx/VCC was optimized away.
+Block manta_inst/my_logic_analyzer/fsm/VCC was optimized away.
+Block manta_inst/my_logic_analyzer/sample_mem/GND was optimized away.
+Block manta_inst/my_logic_analyzer/sample_mem/VCC was optimized away.
+Block manta_inst/my_logic_analyzer/trig_blk/probe2_trigger/VCC was optimized
+     away.
+Block manta_inst/my_logic_analyzer/trig_blk/probe3_trigger/VCC was optimized
+     away.
+
+Memory Usage
+------------
+
+/manta_inst/my_logic_analyzer/sample_mem:
+    EBRs: 2
+    RAM SLICEs: 1
+    Logic SLICEs: 62
+    PFU Registers: 36
+    -Contains EBR mem_0_mem_0_0_0:  TYPE= PDPW16KD,  Width= 16,  Depth_R= 256,
+         Depth_W= 256,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR= DISABLED
+    -Contains EBR mem_1_mem_1_0_0:  TYPE= PDPW16KD,  Width= 13,  Depth_R= 256,
+         Depth_W= 256,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR= DISABLED
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_0:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_1:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_2:
+    EBRs: 0
+
+                                   Page 14
+
+
+
+
+Design:  top_level                                     Date:  05/23/24  16:00:35
+
+Memory Usage (cont)
+-------------------
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_3:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_4:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_5:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_6:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_7:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/manta_inst/my_logic_analyzer/sample_mem/\$signal$5_CR34_ram_7/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: manta_inst/my_logic_analyzer/sample_mem/mem_0_mem_0_0_0
+         Type: PDPW16KD
+Instance Name: manta_inst/my_logic_analyzer/sample_mem/mem_1_mem_1_0_0
+         Type: PDPW16KD
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 457 MB
+        
+
+
+
+
+
+
+                                   Page 15
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

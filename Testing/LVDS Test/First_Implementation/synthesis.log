@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  9 15:54:50 2024
+Mon May 20 15:59:35 2024
 
 
 Command Line:  synthesis -f LVDS_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/Testing/LVDS Test/promote.xml 
@@ -87,11 +87,9 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 Top-level module name = LVDS.
-WARNING - synthesis: I/O Port i_LVDS_n 's net has no driver and is unused.
 
 
 
-WARNING - synthesis: I/O Port i_LVDS_n 's net has no driver and is unused.
 GSR instance connected to net n5.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -101,10 +99,8 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'i_LVDS_n' has no load.
-WARNING - synthesis: input pad net 'i_LVDS_n' has no legal load.
 WARNING - synthesis: logical net 'GND_net' has no load.
-WARNING - synthesis: DRC complete with 3 warnings.
+WARNING - synthesis: DRC complete with 1 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file LVDS_First_Implementation.ngd.
 
@@ -149,8 +145,8 @@ clk0 [get_nets i_clk_c]                 |            -|            -|     0
 All constraints were met.
 
 
-Peak Memory Usage: 258.531  MB
+Peak Memory Usage: 258.535  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.037  secs
+Elapsed CPU time for LSE flow : 1.210  secs
 --------------------------------------------------------------

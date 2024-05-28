@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="MantaTest" device="LFE5U-85F-6BG381C" default_implementation="First_Implementation">
+    <Options/>
+    <Implementation title="First_Implementation" dir="First_Implementation" description="First_Implementation" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="top_level"/>
+        <Source name="First_Implementation/source/manta.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="First_Implementation/source/top_level.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog" top_module="top_level"/>
+        </Source>
+        <Source name="../../../FPGA/tools/manta/examples/verilog/ulx3s/uart_logic_analyzer/top_level.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="MantaTest1.sty"/>
+</BaliProject>
