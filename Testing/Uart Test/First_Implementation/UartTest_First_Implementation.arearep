@@ -1,34 +1,50 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  51 of 84255 (0.061%)
-I/O cells:      10
+Register bits:  93 of 84255 (0.110%)
+I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        11          100.0
-                            FD1P3AX        19          100.0
-                            FD1P3IX        16          100.0
-                            FD1S3AX        11          100.0
+                              CCU2C        18          100.0
+                            FD1P3AX        41          100.0
+                            FD1P3IX        32          100.0
+                            FD1S3AX        10          100.0
                             FD1S3AY         2          100.0
-                            FD1S3IX         3          100.0
+                            FD1S3IX         7          100.0
+                            FD1S3JX         1          100.0
                                 GSR         1          100.0
                                  IB         2          100.0
-                               LUT4        62          100.0
-                                 OB         8          100.0
-                              PFUMX         2          100.0
+                            L6MUX21         1          100.0
+                               LUT4        95          100.0
+                                 OB         9          100.0
+                              PFUMX         3          100.0
 SUB MODULES
-           uart_rx(CLKS_PER_BIT=27)         1
-                              TOTAL       138
+         uart_rx(CLKS_PER_BIT=2604)         1
+         uart_tx(CLKS_PER_BIT=2604)         1
+                              TOTAL       224
 ----------------------------------------------------------------------
-Report for cell uart_rx(CLKS_PER_BIT=27).v1
+Report for cell uart_tx(CLKS_PER_BIT=2604).v1
+Instance Path : uart_tx1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           50.0
+                            FD1P3AX        13           31.7
+                            FD1P3IX        16           50.0
+                            FD1S3IX         3           42.9
+                            L6MUX21         1          100.0
+                               LUT4        32           33.7
+                              PFUMX         2           66.7
+                              TOTAL        76
+----------------------------------------------------------------------
+Report for cell uart_rx(CLKS_PER_BIT=2604).v1
 Instance Path : uart_rx1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        11          100.0
-                            FD1P3AX        19          100.0
-                            FD1P3IX        16          100.0
-                            FD1S3AX         3           27.3
+                              CCU2C         9           50.0
+                            FD1P3AX        20           48.8
+                            FD1P3IX        16           50.0
+                            FD1S3AX         1           10.0
                             FD1S3AY         2          100.0
-                            FD1S3IX         3          100.0
-                               LUT4        62          100.0
-                              PFUMX         2          100.0
-                              TOTAL       118
+                            FD1S3IX         4           57.1
+                               LUT4        62           65.3
+                              PFUMX         1           33.3
+                              TOTAL       115

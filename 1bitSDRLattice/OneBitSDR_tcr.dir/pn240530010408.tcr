@@ -1,0 +1,15 @@
+#Start recording tcl command: 5/29/2024 22:24:48
+#Project Location: /home/user/SDR-HLS/1bitSDRLattice; Project name: OneBitSDR
+prj_project open "/home/user/SDR-HLS/1bitSDRLattice/OneBitSDR.ldf"
+prj_src remove "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/frequency_select.v"
+prj_src remove "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/HP_shift.v"
+prj_src remove "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartTX.v"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_project save
+prj_project close
+#Stop recording: 5/30/2024 01:04:08

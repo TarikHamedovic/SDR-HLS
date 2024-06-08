@@ -7,7 +7,7 @@ module \top
   attribute \src "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:743"
   wire width 1 \led_0__o
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:18"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:18"
   wire width 1 \leds
 
   attribute \src "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:505"
@@ -47,39 +47,39 @@ connect \clk25_0__i \clk [0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:26"
+attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:26"
 module \top.mixer
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:21"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:21"
   attribute \init 1'1
   wire width 1 \RFInR1
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:10"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:10"
   wire width 1 \RFIn
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:22"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:22"
   attribute \init 1'1
   wire width 1 \RFInR
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:16"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:16"
   attribute \init 12'000000000000
   wire width 12 signed \MixerOutSin
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:11"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:11"
   wire width 12 signed \sin_in
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:17"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:17"
   attribute \init 12'000000000000
   wire width 12 signed \MixerOutCos
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:12"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:12"
   wire width 12 signed \cos_in
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:15"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:15"
   attribute \init 1'1
   wire width 1 \RFOut
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:18"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:18"
   wire width 1 \leds
 
   attribute \src "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:505"
@@ -95,7 +95,7 @@ module \top.mixer
 
   wire width 12 $5
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:37"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:37"
   cell $eq $6
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -107,7 +107,7 @@ module \top.mixer
     connect \Y $1
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:44"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:44"
   cell $neg $7
     parameter \A_SIGNED 0
     parameter \A_WIDTH 0
@@ -116,7 +116,7 @@ module \top.mixer
     connect \Y $2
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:45"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:45"
   cell $neg $8
     parameter \A_SIGNED 0
     parameter \A_WIDTH 0
@@ -125,7 +125,7 @@ module \top.mixer
     connect \Y $3
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:21"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:21"
   cell $dff $9
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -134,7 +134,7 @@ module \top.mixer
     connect \Q \RFInR1
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:22"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:22"
   cell $dff $10
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -143,7 +143,7 @@ module \top.mixer
     connect \Q \RFInR
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:16"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:16"
   process $11
     assign $4 [11:0] \MixerOutSin [11:0]
     switch $1 [0]
@@ -154,7 +154,7 @@ module \top.mixer
     end
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:16"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:16"
   cell $dff $12
     parameter \WIDTH 12
     parameter \CLK_POLARITY 1
@@ -163,7 +163,7 @@ module \top.mixer
     connect \Q \MixerOutSin
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:17"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:17"
   process $13
     assign $5 [11:0] \MixerOutCos [11:0]
     switch $1 [0]
@@ -174,7 +174,7 @@ module \top.mixer
     end
   end
 
-  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:17"
+  attribute \src "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:17"
   cell $dff $14
     parameter \WIDTH 12
     parameter \CLK_POLARITY 1

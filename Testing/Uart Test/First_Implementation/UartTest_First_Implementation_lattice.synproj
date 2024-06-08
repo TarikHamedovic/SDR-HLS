@@ -31,13 +31,14 @@
 
 
 -lpf 1
--p "/home/user/Master Thesis/Uart Test"
--ver "/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v"
-"/home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v"
+-p "/home/user/SDR-HLS/Testing/Uart Test"
+-ver "/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v"
+"/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v"
+"/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v"
 -top top
 
 
--p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/Master Thesis/Uart Test/First_Implementation" "/home/user/Master Thesis/Uart Test"
+-p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/SDR-HLS/Testing/Uart Test/First_Implementation" "/home/user/SDR-HLS/Testing/Uart Test"
 
 -ngd "UartTest_First_Implementation.ngd"
 

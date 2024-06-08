@@ -1,0 +1,171 @@
+Info: constraining clock net 'clk25_0__io' to 25.00 MHz
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:         0/83640     0%
+Info:         logic LUTs:      0/83640     0%
+Info:         carry LUTs:      0/83640     0%
+Info:           RAM LUTs:      0/10455     0%
+Info:          RAMW LUTs:      0/20910     0%
+
+Info:      Total DFFs:         2/83640     0%
+
+Info: Packing IOs..
+Info: clk25_0__io feeds TRELLIS_IO pin_clk25_0.buf.buf.buf0, removing $nextpnr_ibuf clk25_0__io.
+Info: pin 'pin_clk25_0.buf.buf.buf0' constrained to Bel 'X0/Y47/PIOA'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     1 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info: Checksum: 0x49585300
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:     1/  365     0%
+Info: 	                DCCA:     0/   56     0%
+Info: 	              DP16KD:     0/  208     0%
+Info: 	          MULT18X18D:     0/  156     0%
+Info: 	              ALU54B:     0/   78     0%
+Info: 	             EHXPLLL:     0/    4     0%
+Info: 	             EXTREFB:     0/    2     0%
+Info: 	                DCUA:     0/    2     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  224     0%
+Info: 	            SIOLOGIC:     0/  141     0%
+Info: 	                 GSR:     1/    1   100%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/   14     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+Info: 	          TRELLIS_FF:     2/83640     0%
+Info: 	        TRELLIS_COMB:     2/83640     0%
+Info: 	        TRELLIS_RAMW:     0/10455     0%
+
+Info: Placed 2 cells based on constraints.
+Info: Creating initial analytic placement for 2 cells, random placement wirelen = 299.
+Info:     at initial placer iter 0, wirelen = 56
+Info:     at initial placer iter 1, wirelen = 53
+Info:     at initial placer iter 2, wirelen = 53
+Info:     at initial placer iter 3, wirelen = 53
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type ALL: wirelen solved = 53, spread = 53, legal = 53; time = 0.03s
+Info: HeAP Placer Time: 0.13s
+Info:   of which solving equations: 0.00s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 0, wirelen = 53
+Info:   at iteration #2: temp = 0.000000, timing cost = 0, wirelen = 53 
+Info: SA placement time 0.00s
+
+Info: Max frequency for clock 'clk': 995.02 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>     -> <async>: 5.28 ns
+Info: Max delay posedge clk -> <async>: 1.33 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 38995,  38996) |* 
+Info: [ 38996,  38997) | 
+Info: [ 38997,  38998) | 
+Info: [ 38998,  38999) | 
+Info: [ 38999,  39000) | 
+Info: [ 39000,  39001) | 
+Info: [ 39001,  39002) | 
+Info: [ 39002,  39003) | 
+Info: [ 39003,  39004) | 
+Info: [ 39004,  39005) | 
+Info: [ 39005,  39006) | 
+Info: [ 39006,  39007) | 
+Info: [ 39007,  39008) | 
+Info: [ 39008,  39009) | 
+Info: [ 39009,  39010) | 
+Info: [ 39010,  39011) | 
+Info: [ 39011,  39012) | 
+Info: [ 39012,  39013) | 
+Info: [ 39013,  39014) | 
+Info: [ 39014,  39015) | 
+Info: Checksum: 0xf95dbac0
+Info: Routing globals...
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 6 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:          6 |        0          6 |    0     6 |         0|       0.00       0.00|
+Info: Routing complete.
+Info: Router1 time 0.00s
+Info: Checksum: 0xb4484d0b
+
+Info: Critical path report for clock 'clk' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source cd_sync.U$0.Q
+Info:  0.5  1.0    Net cd_sync.gsr0 (3,93) -> (3,93)
+Info:                Sink cd_sync.U$1.M
+Info:                Defined in:
+Info:                  /home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:490
+Info:  0.0  1.0  Setup cd_sync.U$1.M
+Info: 0.5 ns logic, 0.5 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> '<async>':
+Info: curr total
+Info:  0.0  0.0  Source pin_clk25_0.buf.buf.buf0.O
+Info:  3.4  3.4    Net clk (0,47) -> (4,94)
+Info:                Sink cd_sync.U$2.CLK
+Info:                Defined in:
+Info:                  /home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165
+Info: 0.0 ns logic, 3.4 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source cd_sync.U$1.Q
+Info:  0.9  1.5    Net cd_sync.gsr1 (3,93) -> (4,94)
+Info:                Sink cd_sync.U$2.GSR
+Info:                Defined in:
+Info:                  /home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:491
+Info: 0.5 ns logic, 0.9 ns routing
+
+Info: Max frequency for clock 'clk': 954.20 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>     -> <async>: 3.45 ns
+Info: Max delay posedge clk -> <async>: 1.47 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 38952,  38953) |* 
+Info: [ 38953,  38954) | 
+Info: [ 38954,  38955) | 
+Info: [ 38955,  38956) | 
+Info: [ 38956,  38957) | 
+Info: [ 38957,  38958) | 
+Info: [ 38958,  38959) | 
+Info: [ 38959,  38960) | 
+Info: [ 38960,  38961) | 
+Info: [ 38961,  38962) | 
+Info: [ 38962,  38963) | 
+Info: [ 38963,  38964) | 
+Info: [ 38964,  38965) | 
+Info: [ 38965,  38966) | 
+Info: [ 38966,  38967) | 
+Info: [ 38967,  38968) | 
+Info: [ 38968,  38969) | 
+Info: [ 38969,  38970) | 
+Info: [ 38970,  38971) | 
+Info: [ 38971,  38972) | 
+
+Info: Program finished normally.

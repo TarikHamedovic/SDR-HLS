@@ -62,7 +62,7 @@ Info:     at initial placer iter 2, wirelen = 114
 Info:     at initial placer iter 3, wirelen = 114
 Info: Running main analytical placer, max placement attempts per cell = 10000.
 Info:     at iteration #1, type ALL: wirelen solved = 114, spread = 114, legal = 119; time = 0.03s
-Info: HeAP Placer Time: 0.12s
+Info: HeAP Placer Time: 0.14s
 Info:   of which solving equations: 0.00s
 Info:   of which spreading cells: 0.00s
 Info:   of which strict legalisation: 0.00s

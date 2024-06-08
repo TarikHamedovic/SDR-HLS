@@ -6,13 +6,13 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Tue Mar 19 23:08:42 2024
+Thu May 30 00:35:19 2024
 
 Pinout by Port Name:
 +----------------+----------+--------------+--------+-----------+---------------------------------+
 | Port Name      | Pin/Bank | Buffer Type  | Site   | BC Enable | Properties                      |
 +----------------+----------+--------------+--------+-----------+---------------------------------+
-| CIC_out_clkSin | B17/1    | LVCMOS25_OUT | PT114A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| CIC_out_clkSin | A12/1    | LVCMOS25_OUT | PT76A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
 | DiffOut        | U18/3    | LVCMOS25_OUT | PR92A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
 | PWMOut         | A4/7     | LVCMOS33_OUT | PL11A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
 | PWMOutN1       | A7/0     | LVCMOS33_OUT | PT18A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
@@ -35,7 +35,7 @@ Pinout by Port Name:
 | led[5]         | E2/7     | LVCMOS33_OUT | PL44D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
 | led[6]         | E1/7     | LVCMOS33_OUT | PL38D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
 | led[7]         | H3/7     | LVCMOS33_OUT | PL41D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| o_Tx_Serial    | K18/2    | LVCMOS25_OUT | PR41D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| o_Tx_Serial    | D15/1    | LVCMOS25_OUT | PT107A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
 | sinGen         | N17/3    | LVCMOS25_OUT | PR56A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
 | sin_out        | G3/7     | LVCMOS33_OUT | PL44A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
 +----------------+----------+--------------+--------+-----------+---------------------------------+
@@ -46,7 +46,7 @@ Vccio by Bank:
 +------+-------+
 | 0    | 3.3V  |
 | 1    | 2.5V  |
-| 2    | 2.5V  |
+| 2    | 1.2V  |
 | 3    | 2.5V  |
 | 6    | 3.3V  |
 | 7    | 3.3V  |
@@ -73,7 +73,7 @@ Pinout by Pin Number:
 | A9/0     | PWMOutP3              | LOCATED    | LVCMOS33_OUT  | PT60A  | GR_PCLK0_1               |           |
 | A10/0    | PWMOutP2              | LOCATED    | LVCMOS33_OUT  | PT63A  | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |               | PT63B  |                          |           |
-| A12/1    |     unused, PULL:DOWN |            |               | PT76A  |                          |           |
+| A12/1    | CIC_out_clkSin        |            | LVCMOS25_OUT  | PT76A  |                          |           |
 | A13/1    |     unused, PULL:DOWN |            |               | PT76B  |                          |           |
 | A14/1    |     unused, PULL:DOWN |            |               | PT83A  |                          |           |
 | A15/1    |     unused, PULL:DOWN |            |               | PT103A |                          |           |
@@ -95,7 +95,7 @@ Pinout by Pin Number:
 | B13/1    |     unused, PULL:DOWN |            |               | PT78A  |                          |           |
 | B15/1    |     unused, PULL:DOWN |            |               | PT105A |                          |           |
 | B16/1    |     unused, PULL:DOWN |            |               | PT110B |                          |           |
-| B17/1    | CIC_out_clkSin        |            | LVCMOS25_OUT  | PT114A |                          |           |
+| B17/1    |     unused, PULL:DOWN |            |               | PT114A |                          |           |
 | B18/1    |     unused, PULL:DOWN |            |               | PT116B |                          |           |
 | B19/1    |     unused, PULL:DOWN |            |               | PT119B |                          |           |
 | B20/1    |     unused, PULL:DOWN |            |               | PT121B | URC_GPLL1C_IN            |           |
@@ -132,7 +132,7 @@ Pinout by Pin Number:
 | D12/1    |     unused, PULL:DOWN |            |               | PT74A  | GR_PCLK1_0               |           |
 | D13/1    |     unused, PULL:DOWN |            |               | PT80A  |                          |           |
 | D14/1    |     unused, PULL:DOWN |            |               | PT85A  |                          |           |
-| D15/1    |     unused, PULL:DOWN |            |               | PT107A |                          |           |
+| D15/1    | o_Tx_Serial           |            | LVCMOS25_OUT  | PT107A |                          |           |
 | D16/1    |     unused, PULL:DOWN |            |               | PT112B |                          |           |
 | D17/2    |     unused, PULL:DOWN |            |               | PR11B  | URC_GPLL0C_IN/RDQ17      |           |
 | D18/2    |     unused, PULL:DOWN |            |               | PR14A  | RDQ17                    |           |
@@ -201,7 +201,7 @@ Pinout by Pin Number:
 | K5/6     |     unused, PULL:DOWN |            |               | PL56B  | VREF1_6/LDQ53            |           |
 | K16/2    |     unused, PULL:DOWN |            |               | PR29A  | RDQS29                   |           |
 | K17/2    |     unused, PULL:DOWN |            |               | PR29B  | RDQSN29                  |           |
-| K18/2    | o_Tx_Serial           |            | LVCMOS25_OUT  | PR41D  | RDQ41                    |           |
+| K18/2    |     unused, PULL:DOWN |            |               | PR41D  | RDQ41                    |           |
 | K19/2    |     unused, PULL:DOWN |            |               | PR44B  | PCLKC2_1/RDQ41           |           |
 | K20/2    |     unused, PULL:DOWN |            |               | PR44D  | PCLKC2_0/RDQ41           |           |
 | L1/6     |     unused, PULL:DOWN |            |               | PL89C  | LDQ89                    |           |
@@ -461,7 +461,7 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "CIC_out_clkSin"  SITE  "B17";
+LOCATE  COMP  "CIC_out_clkSin"  SITE  "A12";
 LOCATE  COMP  "DiffOut"  SITE  "U18";
 LOCATE  COMP  "PWMOut"  SITE  "A4";
 LOCATE  COMP  "PWMOutN1"  SITE  "A7";
@@ -484,12 +484,12 @@ LOCATE  COMP  "led[4]"  SITE  "D1";
 LOCATE  COMP  "led[5]"  SITE  "E2";
 LOCATE  COMP  "led[6]"  SITE  "E1";
 LOCATE  COMP  "led[7]"  SITE  "H3";
-LOCATE  COMP  "o_Tx_Serial"  SITE  "K18";
+LOCATE  COMP  "o_Tx_Serial"  SITE  "D15";
 LOCATE  COMP  "sinGen"  SITE  "N17";
 LOCATE  COMP  "sin_out"  SITE  "G3";
 
 #PLL
-LOCATE  COMP  "PLL1/PLLInst_0"  SITE  "PLL_BL0" ;
+LOCATE  COMP  "PLL_inst/PLLInst_0"  SITE  "PLL_BL0" ;
 
 
 
@@ -500,5 +500,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Mar 19 23:08:42 2024
+Thu May 30 00:35:19 2024
 

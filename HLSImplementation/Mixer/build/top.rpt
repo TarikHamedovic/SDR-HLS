@@ -1,26 +1,10 @@
 
  /----------------------------------------------------------------------------\
- |                                                                            |
  |  yosys -- Yosys Open SYnthesis Suite                                       |
- |                                                                            |
- |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
- |                                                                            |
- |  Permission to use, copy, modify, and/or distribute this software for any  |
- |  purpose with or without fee is hereby granted, provided that the above    |
- |  copyright notice and this permission notice appear in all copies.         |
- |                                                                            |
- |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
- |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
- |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
- |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
- |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
- |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
- |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
- |                                                                            |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
  \----------------------------------------------------------------------------/
-
- Yosys 0.35+56 (git sha1 8614d9b32, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
-
+ Yosys 0.41+108 (git sha1 111b747d2, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
 
 -- Executing script file `top.ys' --
 
@@ -619,7 +603,7 @@ Generating RTLIL representation for module `\_90_simplemap_registers'.
 Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
 Generating RTLIL representation for module `\_90_shift_shiftx'.
 Generating RTLIL representation for module `\_90_fa'.
-Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
 Generating RTLIL representation for module `\_90_alu'.
 Generating RTLIL representation for module `\_90_macc'.
 Generating RTLIL representation for module `\_90_alumacc'.
@@ -788,7 +772,7 @@ No more expansions possible.
 Cleaned up 0 empty switches.
 
 2.42.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 2.42.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -796,33 +780,33 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 2.42.3.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$497'.
+Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$505'.
   Set init value: \Q = 1'0
 
 2.42.3.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496'.
+Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504'.
 
 2.42.3.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 2.42.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$497'.
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$505'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504'.
      1/1: $0\Q[0:0]
 
 2.42.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 2.42.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496'.
-  created $adff cell `$procdff$500' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504'.
+  created $adff cell `$procdff$508' with positive edge clock and positive level reset.
 
 2.42.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.42.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$497'.
-Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496'.
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$496'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$505'.
+Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$504'.
 Cleaned up 1 empty switch.
 
 2.42.3.12. Executing OPT_EXPR pass (perform const folding).
@@ -878,7 +862,7 @@ Generating RTLIL representation for module `\_90_simplemap_registers'.
 Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
 Generating RTLIL representation for module `\_90_shift_shiftx'.
 Generating RTLIL representation for module `\_90_fa'.
-Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
 Generating RTLIL representation for module `\_90_alu'.
 Generating RTLIL representation for module `\_90_macc'.
 Generating RTLIL representation for module `\_90_alumacc'.
@@ -972,7 +956,7 @@ Generating RTLIL representation for module `\_90_simplemap_registers'.
 Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
 Generating RTLIL representation for module `\_90_shift_shiftx'.
 Generating RTLIL representation for module `\_90_fa'.
-Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
 Generating RTLIL representation for module `\_90_alu'.
 Generating RTLIL representation for module `\_90_macc'.
 Generating RTLIL representation for module `\_90_alumacc'.
@@ -1029,8 +1013,9 @@ Optimizing module top.
 2.42.16. Executing AIGMAP pass (map logic to AIG).
 
 2.42.17. Executing AIGMAP pass (map logic to AIG).
-Module top: replaced 0 cells with 0 new cells, skipped 7 cells.
-  not replaced 4 cell types:
+Module top: replaced 0 cells with 0 new cells, skipped 15 cells.
+  not replaced 5 cell types:
+       8 $scopeinfo
        1 SGSR
        2 TRELLIS_IO
        2 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp
@@ -1063,7 +1048,7 @@ ABC: + &dch -f
 ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =      5/      5  and =       0  lev =    0 (0.00)  mem = 0.00 MB  ch =    0  box = 2  bb = 2
 ABC: + &if -W 300 -v 
-ABC: K = 7. Memory (bytes): Truth =    0. Cut =   60. Obj =  140. Set =  636. CutMin = no
+ABC: K = 7. Memory (bytes): Truth =    0. Cut =   64. Obj =  148. Set =  672. CutMin = no
 ABC: Node =       0.  Ch =     0.  Total mem =    0.00 MB. Peak cut mem =    0.00 MB.
 ABC: P:  Del =    0.00.  Ar =       0.0.  Edge =        0.  Cut =        0.  T =     0.00 sec
 ABC: P:  Del =    0.00.  Ar =       0.0.  Edge =        0.  Cut =        0.  T =     0.00 sec
@@ -1210,10 +1195,13 @@ Removed 0 unused modules.
    Number of wire bits:             58
    Number of public wires:          36
    Number of public wire bits:      58
+   Number of ports:                  2
+   Number of port bits:              2
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                  5
+   Number of cells:                 13
+     $scopeinfo                      8
      SGSR                            1
      TRELLIS_FF                      2
      TRELLIS_IO                      2
@@ -1224,6 +1212,6 @@ Found and reported 0 problems.
 
 3. Executing JSON backend.
 
-End of script. Logfile hash: b29c14d7cf, CPU: user 0.63s system 0.02s, MEM: 25.84 MB peak
-Yosys 0.35+56 (git sha1 8614d9b32, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
-Time spent: 59% 19x read_verilog (0 sec), 6% 1x abc9_exe (0 sec), ...
+End of script. Logfile hash: 5b68fda17d, CPU: user 0.80s system 0.02s, MEM: 25.50 MB peak
+Yosys 0.41+108 (git sha1 111b747d2, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)
+Time spent: 54% 19x read_verilog (0 sec), 7% 17x opt_clean (0 sec), ...

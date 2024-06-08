@@ -31,25 +31,22 @@
 
 
 -lpf 1
--p "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest"
--ver "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/top.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/AMDemod.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/NCOAdder/NCOAdder.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/PLL.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/frequency_select.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/HP_shift.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/Mixer.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/NCO.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/PWM.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartRX.v"
-"/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartTX.v"
+-p "/home/user/SDR-HLS/1bitSDRLattice"
+-ver "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v"
+"/home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v"
+"/home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v"
+"/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v"
+"/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v"
+"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v"
 -top top
 
 
--p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation" "/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest"
+-p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation" "/home/user/SDR-HLS/1bitSDRLattice"
 
 -ngd "OneBitSDR_First_Implementation.ngd"
 

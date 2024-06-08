@@ -78,6 +78,6 @@ import numpy as np
 lgtable = 8  
 ow = 12
 pb = 64
-verilog_filename = "/home/user/Master Thesis/SineGenerator/Testbench/simpleSine_gen.v"
+verilog_filename = "/home/user/SDR-HLS/New Modules/SineGenerator/Testbench/simpleSine_gen.v"
 write_sine_table_to_hex(lgtable, ow, pb,verilog_filename)
 

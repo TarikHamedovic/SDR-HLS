@@ -38,46 +38,46 @@ For a 5-stage CIC decimation filter with a decimation factor of 16384 (14 bits):
 */
 
 module CIC #(
-    parameter width = 64,
-    parameter decimation_ratio = 16
+    parameter WIDTH = 64,
+    parameter DECIMATION_RATIO = 16
 )(
-    input wire clk,
-    input wire [7:0] Gain,
+    input wire               clk,
+    input wire [7:0]         Gain,
     input wire signed [11:0] d_in,
     output reg signed [11:0] d_out,
-    output reg d_clk
+    output reg               d_clk
 );
 
     // Internal registers
-    reg signed [width-1:0] d_tmp, d_d_tmp;
-    reg signed [width-1:0] d1, d2, d3, d4, d5;
-    reg signed [width-1:0] d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10;
-    reg signed [width-1:0] d_scaled;
-    reg [15:0] count;
-    reg v_comb;  // Valid signal for comb section running at output rate
-    reg d_clk_tmp;
+    reg signed [WIDTH-1:0] d_tmp, d_d_tmp;
+    reg signed [WIDTH-1:0] d1, d2, d3, d4, d5;
+    reg signed [WIDTH-1:0] d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10;
+    reg signed [WIDTH-1:0] d_scaled;
+    reg        [15:0]      count;
+    reg                    v_comb;  // Valid signal for comb section running at output rate
+    reg                    d_clk_tmp;
 
     // Integrator section
     always @(posedge clk) begin
         d1 <= d_in + d1;
-        d2 <= d1 + d2;
-        d3 <= d2 + d3;
-        d4 <= d3 + d4;
-        d5 <= d4 + d5;
+        d2 <= d1   + d2;
+        d3 <= d2   + d3;
+        d4 <= d3   + d4;
+        d5 <= d4   + d5;
 
         // Decimation
-        if (count == decimation_ratio - 1) begin
-            count <= 16'b0;
-            d_tmp <= d5;
+        if (count == DECIMATION_RATIO- 1) begin
+            count     <= 16'b0;
+            d_tmp     <= d5;
             d_clk_tmp <= 1'b1;
-            v_comb <= 1'b1;
-        end else if (count == decimation_ratio >> 1) begin
+            v_comb    <= 1'b1;
+        end else if (count == DECIMATION_RATIO >> 1) begin
             d_clk_tmp <= 1'b0;
-            count <= count + 16'd1;
-            v_comb <= 1'b0;
+            count     <= count + 16'd1;
+            v_comb    <= 1'b0;
         end else begin
-            count <= count + 16'd1;
-            v_comb <= 1'b0;
+            count     <= count + 16'd1;
+            v_comb    <= 1'b0;
         end
     end
 
@@ -87,19 +87,19 @@ module CIC #(
 
         if (v_comb) begin
             // Comb section
-            d_d_tmp <= d_tmp;
-            d6 <= d_tmp - d_d_tmp;
-            d_d6 <= d6;
-            d7 <= d6 - d_d6;
-            d_d7 <= d7;
-            d8 <= d7 - d_d7;
-            d_d8 <= d8;
-            d9 <= d8 - d_d8;
-            d_d9 <= d9;
-            d10 <= d9 - d_d9;
+            d_d_tmp  <= d_tmp;
+            d6       <= d_tmp - d_d_tmp;
+            d_d6     <= d6;
+            d7       <= d6 - d_d6;
+            d_d7     <= d7;
+            d8       <= d7 - d_d7;
+            d_d8     <= d8;
+            d9       <= d8 - d_d8;
+            d_d9     <= d9;
+            d10      <= d9 - d_d9;
 
             d_scaled <= d10;
-            d_out <= d10 >>> (width - 12 - Gain);
+            d_out    <= d10 >>> (WIDTH - 12 - Gain);
         end
     end
 

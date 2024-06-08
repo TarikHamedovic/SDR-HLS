@@ -16,30 +16,31 @@
 Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
      UartTest_First_Implementation.ngd -o UartTest_First_Implementation_map.ncd
      -pr UartTest_First_Implementation.prf -mp UartTest_First_Implementation.mrp
-     -lpf /home/user/Master Thesis/Uart
+     -lpf /home/user/SDR-HLS/Testing/Uart
      Test/First_Implementation/UartTest_First_Implementation.lpf -lpf
-     /home/user/Master Thesis/Uart Test/UartTest.lpf -gui 
+     /home/user/SDR-HLS/Testing/Uart Test/UartTest.lpf -gui -msgset
+     /home/user/SDR-HLS/Testing/Uart Test/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LFE5U-85FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  03/18/24  02:47:51
+Mapped on:  06/08/24  13:40:13
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:     51 out of 84255 (0%)
-      PFU registers:           51 out of 83640 (0%)
+   Number of registers:     93 out of 84255 (0%)
+      PFU registers:           93 out of 83640 (0%)
       PIO registers:            0 out of   615 (0%)
-   Number of SLICEs:        67 out of 41820 (0%)
-      SLICEs as Logic/ROM:     67 out of 41820 (0%)
+   Number of SLICEs:        98 out of 41820 (0%)
+      SLICEs as Logic/ROM:     98 out of 41820 (0%)
       SLICEs as RAM:            0 out of 31365 (0%)
-      SLICEs as Carry:         11 out of 41820 (0%)
-   Number of LUT4s:         84 out of 83640 (0%)
-      Number used as logic LUTs:         62
+      SLICEs as Carry:         18 out of 41820 (0%)
+   Number of LUT4s:        129 out of 83640 (0%)
+      Number used as logic LUTs:         93
       Number used as distributed RAM:     0
-      Number used as ripple logic:       22
+      Number used as ripple logic:       36
       Number used as shift registers:     0
-   Number of PIO sites used: 10 out of 205 (5%)
+   Number of PIO sites used: 11 out of 205 (5%)
    Number of block RAMs:  0 out of 208 (0%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
@@ -66,8 +67,8 @@ Mapped on:  03/18/24  02:47:51
    --------------------------------
    MULT18X18D          0
    MULT9X9D            0
-   ALU54B              0
 
+   ALU54B              0
    ALU24B              0
    PRADD18A            0
    PRADD9A             0
@@ -75,57 +76,63 @@ Mapped on:  03/18/24  02:47:51
    Number of Used DSP MULT Sites:  0 out of 312 (0 %)
    Number of Used DSP ALU Sites:  0 out of 156 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
-   Number of clocks:  2
-     Net uart_rx1/UartClk[2]: 27 loads, 27 rising, 0 falling (Driver:
-     uart_rx1/UartClk_103_133__i2 )
-     Net clk_25mhz_c: 7 loads, 7 rising, 0 falling (Driver: PIO clk_25mhz )
-   Number of Clock Enables:  12
-     Net uart_rx1/UartClk_2_enable_1: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_12: 4 loads, 4 LSLICEs
-     Net uart_rx1/UartClk_2_enable_3: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_15: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_29: 9 loads, 9 LSLICEs
-     Net uart_rx1/UartClk_2_enable_25: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_30: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_31: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_32: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_33: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_34: 1 loads, 1 LSLICEs
-     Net uart_rx1/UartClk_2_enable_35: 1 loads, 1 LSLICEs
-   Number of LSRs:  3
+   Number of clocks:  1
+     Net clk_25mhz_c: 59 loads, 59 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  17
+     Net uart_tx1/clk_25mhz_c_enable_32: 1 loads, 1 LSLICEs
+     Net uart_tx1/r_SM_Main_2: 10 loads, 10 LSLICEs
+     Net uart_tx1/clk_25mhz_c_enable_62: 2 loads, 2 LSLICEs
+     Net uart_tx1/clk_25mhz_c_enable_44: 4 loads, 4 LSLICEs
+     Net i_Tx_DV_N_9: 4 loads, 4 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_57: 9 loads, 9 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_34: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_3: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_21: 4 loads, 4 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_5: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_64: 2 loads, 2 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_35: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_28: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_45: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_33: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_29: 1 loads, 1 LSLICEs
+     Net uart_rx1/clk_25mhz_c_enable_65: 1 loads, 1 LSLICEs
+   Number of LSRs:  8
+     Net uart_tx1/n1738: 1 loads, 1 LSLICEs
+     Net uart_tx1/r_SM_Main_2: 1 loads, 1 LSLICEs
+     Net uart_tx1/n913: 9 loads, 9 LSLICEs
+     Net i_Tx_DV_N_9: 1 loads, 1 LSLICEs
+     Net uart_rx1/n929: 9 loads, 9 LSLICEs
      Net uart_rx1/r_SM_Main_2: 2 loads, 2 LSLICEs
-     Net uart_rx1/n585: 9 loads, 9 LSLICEs
-     Net uart_rx1/n890: 1 loads, 1 LSLICEs
+     Net uart_rx1/r_Rx_DV: 1 loads, 1 LSLICEs
+     Net uart_rx1/n1940: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net uart_rx1/r_SM_Main_0: 18 loads
-     Net uart_rx1/r_SM_Main_1: 17 loads
-     Net uart_rx1/r_SM_Main_2: 14 loads
+     Net uart_rx1/r_SM_Main_0: 16 loads
+     Net uart_rx1/r_SM_Main_1: 16 loads
+     Net uart_tx1/r_SM_Main_2: 16 loads
      Net uart_rx1/r_Rx_Data: 12 loads
-     Net uart_rx1/r_SM_Main_2_N_47_1: 11 loads
-     Net uart_rx1/n585: 9 loads
-     Net uart_rx1/r_Bit_Index_1: 9 loads
-     Net uart_rx1/r_Bit_Index_2: 9 loads
-     Net uart_rx1/UartClk_2_enable_29: 9 loads
-     Net uart_rx1/r_Bit_Index_0: 8 loads
+     Net uart_rx1/r_SM_Main_2: 12 loads
+     Net uart_tx1/r_SM_Main_0: 11 loads
+     Net uart_tx1/r_SM_Main_1: 11 loads
+     Net uart_rx1/n1721: 10 loads
+     Net uart_rx1/n2319: 10 loads
+     Net uart_rx1/r_Bit_Index_0: 10 loads
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  1
    Number of errors:    0
      
 
 
 
 
+
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-   No errors or warnings present.
-
-
-
-
+WARNING - map: PULLMODE=UP for o_Tx_Serial_pad/IOBUF violates legal combination
+     and is ignored.
 
 
 
@@ -135,11 +142,13 @@ Mapped on:  03/18/24  02:47:51
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 | led[6]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led[5]              | OUTPUT    | LVCMOS33  |            |
+| o_Tx_Serial         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led[7]              | OUTPUT    | LVCMOS33  |            |
+| led[5]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | led[4]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -161,22 +170,30 @@ Mapped on:  03/18/24  02:47:51
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block GSR_INST undriven or does not drive anything - clipped.
+Signal uart_rx1/n889 was merged into signal uart_rx1/r_Rx_DV
+Signal uart_tx1/clk_25mhz_c_enable_60 was merged into signal
+     uart_tx1/r_SM_Main_2
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal uart_rx1/r_Clock_Count_105_add_4_1/S0 undriven or does not drive anything
+Signal uart_rx1/r_Clock_Count_169_add_4_1/S0 undriven or does not drive anything
      - clipped.
-Signal uart_rx1/r_Clock_Count_105_add_4_1/CI undriven or does not drive anything
+Signal uart_rx1/r_Clock_Count_169_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal uart_rx1/r_Clock_Count_105_add_4_17/S1 undriven or does not drive
+Signal uart_rx1/r_Clock_Count_169_add_4_17/S1 undriven or does not drive
      anything - clipped.
-Signal uart_rx1/r_Clock_Count_105_add_4_17/CO undriven or does not drive
+Signal uart_rx1/r_Clock_Count_169_add_4_17/CO undriven or does not drive
      anything - clipped.
-Signal uart_rx1/UartClk_103_133_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal uart_rx1/UartClk_103_133_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal uart_rx1/UartClk_103_133_add_4_3/CO undriven or does not drive anything -
-     clipped.
-Block i18 was optimized away.
+Signal uart_tx1/r_Clock_Count_171_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal uart_tx1/r_Clock_Count_171_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal uart_tx1/r_Clock_Count_171_add_4_17/S1 undriven or does not drive
+
+     anything - clipped.
+Signal uart_tx1/r_Clock_Count_171_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Block uart_rx1/i743_1_lut was optimized away.
+Block uart_tx1/i1_1_lut_rep_51 was optimized away.
+Block i2 was optimized away.
 
      
 
@@ -186,9 +203,49 @@ Block i18 was optimized away.
 -------------------------
 
    Total CPU Time: 2 secs  
-   Total REAL Time: 3 secs  
+   Total REAL Time: 2 secs  
    Peak Memory Usage: 452 MB
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

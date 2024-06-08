@@ -1,5 +1,5 @@
 {
-  "creator": "Yosys 0.35+56 (git sha1 8614d9b32, clang 14.0.0-1ubuntu1.1 -fPIC -Os)",
+  "creator": "Yosys 0.41+108 (git sha1 111b747d2, g++ 11.4.0-1ubuntu1~22.04 -fPIC -Os)",
   "modules": {
     "$__ABC9_DELAY": {
       "attributes": {
@@ -21,7 +21,7 @@
         }
       },
       "cells": {
-        "$specify$583": {
+        "$specify$591": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -236,7 +236,7 @@
     "$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\\TRELLIS_FF": {
       "attributes": {
         "abc9_bypass": "00000000000000000000000000000001",
-        "hdlname": "\\TRELLIS_FF",
+        "hdlname": "TRELLIS_FF",
         "abc9_flop": "0",
         "blackbox": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -21557,7 +21557,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_clk25_0 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:67|/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:40|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:39|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:2.114-2.146"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:40|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:2.114-2.146"
           },
           "port_directions": {
             "B": "inout",
@@ -21578,7 +21578,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_0 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:67|/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:45|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:45|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -21664,7 +21664,7 @@
           "hide_name": 0,
           "bits": [ "1" ],
           "attributes": {
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:18"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:18"
           }
         },
         "mixer.RFIn": {
@@ -21672,7 +21672,7 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "mixer RFIn",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:10"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:10"
           }
         },
         "mixer.RFInR1": {
@@ -21680,7 +21680,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "mixer RFInR1",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:21"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:21"
           }
         },
         "mixer.RFOut": {
@@ -21688,7 +21688,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "mixer RFOut",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:15"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:15"
           }
         },
         "mixer.clk": {
@@ -21696,7 +21696,7 @@
           "bits": [ 4 ],
           "attributes": {
             "hdlname": "mixer clk",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:505"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:505"
           }
         },
         "mixer.cos_in": {
@@ -21705,7 +21705,7 @@
           "signed": 1,
           "attributes": {
             "hdlname": "mixer cos_in",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:12"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:12"
           }
         },
         "mixer.leds": {
@@ -21713,7 +21713,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "mixer leds",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:18"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:18"
           }
         },
         "mixer.sin_in": {
@@ -21722,7 +21722,7 @@
           "signed": 1,
           "attributes": {
             "hdlname": "mixer sin_in",
-            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/top.py:11|/home/user/SDR-HLS/HLSImplementation/Mixer/Mixer.py:11"
+            "src": "/home/user/SDR-HLS/HLSImplementation/Mixer/mixer.py:11"
           }
         },
         "pin_clk25_0.buf.buf.clk25_0__io": {
@@ -21738,7 +21738,7 @@
           "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_clk25_0 buf buf i",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:67|/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:39"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_clk25_0.buf.clk25_0__io": {
@@ -21754,7 +21754,7 @@
           "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_clk25_0 buf i",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:39"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_clk25_0.buf.i$1": {
@@ -21762,7 +21762,7 @@
           "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_clk25_0 buf i$1",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:39"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_clk25_0.clk25_0__i": {
@@ -21801,7 +21801,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_0 buf buf o",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:67|/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.buf.buf.t": {
@@ -21809,7 +21809,7 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_0 buf buf t",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice_ecp5.py:67|/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.buf.led_0__io": {
@@ -21824,7 +21824,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_0 buf o",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.buf.o$1": {
@@ -21832,7 +21832,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_0 buf o$1",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.buf.oe": {
@@ -21840,7 +21840,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_0 buf oe",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.buf.t": {
@@ -21848,7 +21848,7 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_0 buf t",
-            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165|/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:54"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:165"
           }
         },
         "pin_led_0.led_0__io": {

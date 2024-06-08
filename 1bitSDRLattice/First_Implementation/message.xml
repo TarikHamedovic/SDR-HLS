@@ -12,24 +12,6 @@
             <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
         </Message>
     </Task>
-    <Task name="Map">
-        <Message>
-            <ID>1100679</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(123): Semantic error in &quot;LOCATE COMP &quot;SDFeedback&quot; SITE &quot;H17&quot; ;&quot;: </Dynamic>
-            <Dynamic>SDFeedback</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf</Navigation>
-            <Navigation>123</Navigation>
-        </Message>
-        <Message>
-            <ID>1100644</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf(124): Semantic error in &quot;IOBUF PORT &quot;SDFeedback&quot; IO_TYPE=LVDS HYSTERESIS=NA CLAMP=ON DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF ;&quot;: </Dynamic>
-            <Dynamic>SDFeedback</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/OneBitSDR.lpf</Navigation>
-            <Navigation>124</Navigation>
-        </Message>
-    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -42,25 +24,17 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/top.v(45): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v(39): </Dynamic>
             <Dynamic>top</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/top.v</Navigation>
-            <Navigation>45</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v</Navigation>
+            <Navigation>39</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(693): </Dynamic>
-            <Dynamic>PUR</Dynamic>
-            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>693</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/PLL.v(8): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v(8): </Dynamic>
             <Dynamic>PLL</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/PLL/PLL.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -90,9 +64,9 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(8): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(8): </Dynamic>
             <Dynamic>SinCos</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -346,315 +320,187 @@
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>704</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>868</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>938</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/NCO.v(13): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(19): </Dynamic>
             <Dynamic>nco_sig</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/NCO.v</Navigation>
-            <Navigation>13</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(46): </Dynamic>
+            <Dynamic>dumpfile</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>46</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(47): </Dynamic>
+            <Dynamic>dumpvars</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>47</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/Mixer.v(2): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(17): </Dynamic>
             <Dynamic>Mixer</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/Mixer.v</Navigation>
-            <Navigation>2</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(57): </Dynamic>
+            <Dynamic>dumpfile</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>57</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(58): </Dynamic>
+            <Dynamic>dumpvars</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>58</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v(20): </Dynamic>
-            <Dynamic>CIC(width=72,decimation_ratio=4096)</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v</Navigation>
-            <Navigation>20</Navigation>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(40): </Dynamic>
+            <Dynamic>CIC(WIDTH=72,DECIMATION_RATIO=4096)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(110): </Dynamic>
+            <Dynamic>dumpfile</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>110</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(111): </Dynamic>
+            <Dynamic>dumpvars</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>111</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v(119): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(102): </Dynamic>
             <Dynamic>72</Dynamic>
             <Dynamic>12</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/CIC.v</Navigation>
-            <Navigation>119</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>102</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/PWM.v(1): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(29): </Dynamic>
             <Dynamic>PWM</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/PWM.v</Navigation>
-            <Navigation>1</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>29</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(60): </Dynamic>
+            <Dynamic>dumpfile</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(61): </Dynamic>
+            <Dynamic>dumpvars</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>61</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/AMDemod.v(8): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(21): </Dynamic>
             <Dynamic>AMDemodulator</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/AMDemod.v</Navigation>
-            <Navigation>8</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(103): </Dynamic>
+            <Dynamic>dumpfile</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>103</Navigation>
+        </Message>
+        <Message>
+            <ID>35901142</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(104): </Dynamic>
+            <Dynamic>dumpvars</Dynamic>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>104</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(8): </Dynamic>
-            <Dynamic>Multiplier</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>8</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(531): </Dynamic>
-            <Dynamic>ND2</Dynamic>
-            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>531</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): </Dynamic>
-            <Dynamic>CCU2C(INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)</Dynamic>
-            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>76</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): </Dynamic>
-            <Dynamic>CCU2C(INIT0=16'b0111100010001000,INIT1=16'b0111100010001000,INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)</Dynamic>
-            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
-            <Navigation>76</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(790): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>790</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(806): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>806</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(823): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>823</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(840): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>840</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(857): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>857</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(874): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>874</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(892): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>892</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(973): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>973</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1054): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1054</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1126): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1126</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1224): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1224</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartRX.v(19): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v(19): </Dynamic>
             <Dynamic>uart_rx(CLKS_PER_BIT=87)</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/First_Implementation/source/UartRX.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v</Navigation>
             <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>704</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>868</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
             <Navigation>938</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(790): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>790</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(806): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>806</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(823): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>823</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(840): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>840</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(857): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>857</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(874): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>874</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(892): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>892</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(973): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>973</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1054): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1054</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1126): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1126</Navigation>
-        </Message>
-        <Message>
-            <ID>35931013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v(1224): </Dynamic>
-            <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/Master Thesis/1bitSDR/1bitSDRLatticeTest/IP/Multiplier/Multiplier.v</Navigation>
-            <Navigation>1224</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>

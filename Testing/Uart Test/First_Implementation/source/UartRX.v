@@ -54,7 +54,7 @@ module uart_rx
   // This allows it to be used in the UART RX Clock Domain.
   // (It removes problems caused by metastability)
 
-   always @(posedge UartClk[2])
+   always @(posedge osc_clk)
 
     begin
       r_Rx_Data_R <= i_Rx_Serial;
@@ -63,7 +63,7 @@ module uart_rx
  
   // Purpose: Control RX state machine
   
-  always @(posedge UartClk[2])
+  always @(posedge osc_clk)
     begin
        
       case (r_SM_Main)

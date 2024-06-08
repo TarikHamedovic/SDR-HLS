@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Mar 18 02:47:49 2024
+Sat Jun  8 13:40:11 2024
 
 
-Command Line:  synthesis -f UartTest_First_Implementation_lattice.synproj -gui 
+Command Line:  synthesis -f UartTest_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml 
 
 Synthesis options:
 The -a option is ECP5U.
@@ -61,12 +61,13 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p /home/user/Master Thesis/Uart Test (searchpath added)
+-p /home/user/SDR-HLS/Testing/Uart Test (searchpath added)
 -p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
--p /home/user/Master Thesis/Uart Test/First_Implementation (searchpath added)
--p /home/user/Master Thesis/Uart Test (searchpath added)
-Verilog design file = /home/user/Master Thesis/Uart Test/First_Implementation/source/top.v
-Verilog design file = /home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v
+-p /home/user/SDR-HLS/Testing/Uart Test/First_Implementation (searchpath added)
+-p /home/user/SDR-HLS/Testing/Uart Test (searchpath added)
+Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v
+Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v
+Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v
 NGD file = UartTest_First_Implementation.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -77,12 +78,14 @@ Technology check ok...
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file /home/user/Master Thesis/Uart Test/First_Implementation/source/top.v. VERI-1482
-Analyzing Verilog file /home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v. VERI-1482
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): top
-INFO - synthesis: /home/user/Master Thesis/Uart Test/First_Implementation/source/top.v(1): compiling module top. VERI-1018
-INFO - synthesis: /home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v(19): compiling module uart_rx(CLKS_PER_BIT=27). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v(1): compiling module top. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v(19): compiling module uart_rx(CLKS_PER_BIT=2604). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v(14): compiling module uart_tx(CLKS_PER_BIT=2604). VERI-1018
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -106,50 +109,51 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file UartTest_First_Implementation.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 51 of 84255 (0 % )
-CCU2C => 11
-FD1P3AX => 19
-FD1P3IX => 16
-FD1S3AX => 11
+Number of register bits => 93 of 84255 (0 % )
+CCU2C => 18
+FD1P3AX => 41
+FD1P3IX => 32
+FD1S3AX => 10
 FD1S3AY => 2
-FD1S3IX => 3
+FD1S3IX => 7
+FD1S3JX => 1
 GSR => 1
 IB => 2
-LUT4 => 62
-OB => 8
-PFUMX => 2
+L6MUX21 => 1
+LUT4 => 95
+OB => 9
+PFUMX => 3
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : uart_rx1/UartClk_2, loads : 41
-  Net : clk_25mhz_c, loads : 11
+Number of Clocks: 1
+  Net : clk_25mhz_c, loads : 93
 Clock Enable Nets
-Number of Clock Enables: 12
+Number of Clock Enables: 17
 Top 10 highest fanout Clock Enables:
-  Net : uart_rx1/UartClk_2_enable_29, loads : 16
-  Net : uart_rx1/UartClk_2_enable_12, loads : 8
-  Net : uart_rx1/UartClk_2_enable_15, loads : 2
-  Net : uart_rx1/UartClk_2_enable_25, loads : 1
-  Net : uart_rx1/UartClk_2_enable_31, loads : 1
-  Net : uart_rx1/UartClk_2_enable_32, loads : 1
-  Net : uart_rx1/UartClk_2_enable_1, loads : 1
-  Net : uart_rx1/UartClk_2_enable_33, loads : 1
-  Net : uart_rx1/UartClk_2_enable_3, loads : 1
-  Net : uart_rx1/UartClk_2_enable_34, loads : 1
+  Net : uart_tx1/clk_25mhz_c_enable_60, loads : 17
+  Net : uart_rx1/clk_25mhz_c_enable_57, loads : 16
+  Net : i_Tx_DV_N_9, loads : 9
+  Net : uart_rx1/clk_25mhz_c_enable_21, loads : 9
+  Net : uart_tx1/clk_25mhz_c_enable_44, loads : 8
+  Net : uart_rx1/clk_25mhz_c_enable_64, loads : 3
+  Net : uart_tx1/clk_25mhz_c_enable_62, loads : 3
+  Net : uart_rx1/clk_25mhz_c_enable_5, loads : 1
+  Net : uart_rx1/clk_25mhz_c_enable_33, loads : 1
+  Net : uart_rx1/clk_25mhz_c_enable_3, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : uart_rx1/r_SM_Main_0, loads : 18
-  Net : uart_rx1/r_SM_Main_1, loads : 17
-  Net : uart_rx1/UartClk_2_enable_29, loads : 16
-  Net : uart_rx1/n585, loads : 16
-  Net : uart_rx1/r_SM_Main_2, loads : 14
+  Net : uart_tx1/clk_25mhz_c_enable_60, loads : 17
+  Net : uart_tx1/n913, loads : 16
+  Net : uart_rx1/clk_25mhz_c_enable_57, loads : 16
+  Net : uart_rx1/n929, loads : 16
+  Net : uart_rx1/r_SM_Main_1, loads : 16
+  Net : uart_rx1/r_SM_Main_0, loads : 16
+  Net : uart_rx1/r_SM_Main_2, loads : 12
   Net : uart_rx1/r_Rx_Data, loads : 12
-  Net : uart_rx1/r_SM_Main_2_N_47_1, loads : 11
-  Net : uart_rx1/r_Bit_Index_1, loads : 9
-  Net : uart_rx1/r_Bit_Index_2, loads : 9
-  Net : uart_rx1/r_Clock_Count_10, loads : 8
+  Net : uart_tx1/r_SM_Main_0, loads : 11
+  Net : uart_tx1/r_SM_Main_1, loads : 11
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -159,10 +163,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets \uart_rx1/UartClk[2]]    |  200.000 MHz|  140.154 MHz|     5 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  344.709 MHz|     3  
+clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  107.759 MHz|     7 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -170,8 +171,8 @@ clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  344.709 MHz|     3
 1 constraints not met.
 
 
-Peak Memory Usage: 261.906  MB
+Peak Memory Usage: 261.965  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.882  secs
+Elapsed CPU time for LSE flow : 1.506  secs
 --------------------------------------------------------------

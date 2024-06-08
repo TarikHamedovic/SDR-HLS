@@ -27,8 +27,8 @@ module nco_sig #(
 );
 
     // Internal state parameter
-    parameter IDLE_nco = 0, START_nco = 1;
-    reg state_nco_carr = IDLE_nco;
+    //parameter IDLE_nco = 0, START_nco = 1;
+    //reg state_nco_carr = IDLE_nco;
 
     // Generate sin_out and cos_out based on phase accumulator
     assign sin_out = (phase_accum[WIDTH-1] == 1'b1) ? 1'b0 : 1'b1;

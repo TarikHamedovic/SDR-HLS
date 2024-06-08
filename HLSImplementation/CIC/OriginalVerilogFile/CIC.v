@@ -5,13 +5,13 @@
 // http://home.mit.bme.hu/~kollar/papers/cic.pdf
 
 /*
-or a Q-stage CIC decimation-by-D filter (diff delay = 1) overflow errors are avoided if the number of integrator and comb register bit widths is at least
+or a Q-stage CIC decimation-by-D filter (diff delay = 1) overflow errors are avoided if the number of integrator and comb register bit WIDTHs is at least
 
-    register bit widths = number of bits in x(n) + {Qlog2(D)}
+    register bit WIDTHs = number of bits in x(n) + {Qlog2(D)}
 
-where x(n) is the input to the CIC filter, and {k} means that if k is not an integer, round it up to the next larger integer. For example, if a Q = 3-stage CIC decimation filter accepts one-bit binary input words from a sigma-delta A/D converter and the decimation factor is D = 64, binary overflow errors are avoided if the three integrator and three comb registers� bit widths are no less than
+where x(n) is the input to the CIC filter, and {k} means that if k is not an integer, round it up to the next larger integer. For example, if a Q = 3-stage CIC decimation filter accepts one-bit binary input words from a sigma-delta A/D converter and the decimation factor is D = 64, binary overflow errors are avoided if the three integrator and three comb registers� bit WIDTHs are no less than
 
-    register bit widths = 1 + {3 log2(D)} = 1 + 3 6 = 19 bits.
+    register bit WIDTHs = 1 + {3 log2(D)} = 1 + 3 6 = 19 bits.
 	5 stadi, decimation 16384 (14 bit) 1 + 5 * 14 = 71 
 
 */
@@ -24,29 +24,29 @@ module CIC
    output reg signed [11:0]  d_out,
    output reg 				 d_clk);
 
-  parameter width = 64;
-  parameter decimation_ratio = 16;
+  parameter WIDTH = 64;
+  parameter DECIMATION_RATIO = 16;
 
-  reg signed [width-1:0] d_tmp, d_d_tmp;
+  reg signed [WIDTH-1:0] d_tmp, d_d_tmp;
 
 
   // Integrator stage registers
 
-  reg signed [width-1:0] d1;
-  reg signed [width-1:0] d2;
-  reg signed [width-1:0] d3;
-  reg signed [width-1:0] d4;
-  reg signed [width-1:0] d5;
+  reg signed [WIDTH-1:0] d1;
+  reg signed [WIDTH-1:0] d2;
+  reg signed [WIDTH-1:0] d3;
+  reg signed [WIDTH-1:0] d4;
+  reg signed [WIDTH-1:0] d5;
 
   // Comb stage registers
 
-  reg signed [width-1:0] d6, d_d6;
-  reg signed [width-1:0] d7, d_d7;
-  reg signed [width-1:0] d8, d_d8;
-  reg signed [width-1:0] d9, d_d9;
-  reg signed [width-1:0] d10;
+  reg signed [WIDTH-1:0] d6, d_d6;
+  reg signed [WIDTH-1:0] d7, d_d7;
+  reg signed [WIDTH-1:0] d8, d_d8;
+  reg signed [WIDTH-1:0] d9, d_d9;
+  reg signed [WIDTH-1:0] d10;
 
-  reg signed [width-1:0] d_scaled;
+  reg signed [WIDTH-1:0] d_scaled;
   reg [15:0] count;
 
   reg v_comb;  // Valid signal for comb section running at output rate
@@ -71,13 +71,13 @@ module CIC
 
       // Decimation
 
-      if (count == decimation_ratio - 1)
+      if (count == DECIMATION_RATIO - 1)
       begin
           count <= 16'b0;
           d_tmp <= d5;
           d_clk_tmp <= 1'b1;
           v_comb <= 1'b1;
-      end else if (count == decimation_ratio >> 1)
+      end else if (count == DECIMATION_RATIO >> 1)
       begin
           d_clk_tmp <= 1'b0;
           count <= count + 16'd1;
@@ -116,7 +116,7 @@ module CIC
 
           d_scaled <= d10;
 
-          d_out <= d10 >>> (width - 12 - Gain); 
+          d_out <= d10 >>> (WIDTH - 12 - Gain); 
         end
     end								
 endmodule

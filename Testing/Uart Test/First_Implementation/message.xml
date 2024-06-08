@@ -12,6 +12,15 @@
             <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
         </Message>
     </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101275</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>PULLMODE</Dynamic>
+            <Dynamic>UP</Dynamic>
+            <Dynamic>o_Tx_Serial_pad/IOBUF</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -24,18 +33,26 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v(1): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v(1): </Dynamic>
             <Dynamic>top</Dynamic>
-            <Navigation>/home/user/Master Thesis/Uart Test/First_Implementation/source/top.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v(19): </Dynamic>
-            <Dynamic>uart_rx(CLKS_PER_BIT=27)</Dynamic>
-            <Navigation>/home/user/Master Thesis/Uart Test/First_Implementation/source/UartRX.v</Navigation>
+            <Dynamic>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v(19): </Dynamic>
+            <Dynamic>uart_rx(CLKS_PER_BIT=2604)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v</Navigation>
             <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v(14): </Dynamic>
+            <Dynamic>uart_tx(CLKS_PER_BIT=2604)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v</Navigation>
+            <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

@@ -2,47 +2,50 @@ from amaranth import *
 
 class CIC(Elaboratable):
 
-    def __init__(self, width = 64, decimation_ratio = 16):
+    def __init__(self, WIDTH = 64, DECIMATION_RATIO = 16):
         # Parameters #
-        self.width = width
-        self.decimation_ratio = decimation_ratio
+        self.WIDTH = WIDTH
+        self.DECIMATION_RATIO = DECIMATION_RATIO
 
         # Inputs #
-        self.clk = Signal()
-        self.Gain = Signal(8)
-        self.d_in = Signal(12, signed = True)
+        self.clk  = Signal()
+        self.gain = Signal(8)
+        self.d_in = Signal(signed(12))
         # Outputs #
-        self.d_out = Signal(12, signed = True)
+        self.d_out = Signal(signed(12))
         self.d_clk = Signal()
 
     def elaborate(self, platform):
         m = Module()
 
-        d_tmp = Signal(self.width, signed = True)
-        d_d_tmp = Signal(self.width, signed = True)
+        WIDTH = self.WIDTH
+        DECIMATION_RATIO = self.DECIMATION_RATIO
+
+        d_tmp    = Signal(signed(WIDTH))
+        d_d_tmp  = Signal(signed(WIDTH))
 
         # Integrator stage registers #
-        d1 = Signal(self.width, signed = True)
-        d2 = Signal(self.width, signed = True)
-        d3 = Signal(self.width, signed = True)
-        d4 = Signal(self.width, signed = True)
-        d5 = Signal(self.width, signed = True)
+        d1       = Signal(signed(WIDTH))
+        d2       = Signal(signed(WIDTH))
+        d3       = Signal(signed(WIDTH))
+        d4       = Signal(signed(WIDTH))
+        d5       = Signal(signed(WIDTH))
 
         # Comb stage registers #
-        d6 = Signal(self.width, signed = True)
-        d_d6 = Signal(self.width, signed = True)
-        d7 = Signal(self.width, signed = True)
-        d_d7 = Signal(self.width, signed = True)
-        d8 = Signal(self.width, signed = True)
-        d_d8 = Signal(self.width, signed = True)
-        d9 = Signal(self.width, signed = True)
-        d_d9 = Signal(self.width, signed = True)
-        d10 = Signal(self.width, signed = True)
+        d6       = Signal(signed(WIDTH))
+        d_d6     = Signal(signed(WIDTH))
+        d7       = Signal(signed(WIDTH))
+        d_d7     = Signal(signed(WIDTH))
+        d8       = Signal(signed(WIDTH))
+        d_d8     = Signal(signed(WIDTH))
+        d9       = Signal(signed(WIDTH))
+        d_d9     = Signal(signed(WIDTH))
+        d10      = Signal(signed(WIDTH))
 
-        d_scaled = Signal(self.width, signed = True)
-        count = Signal(16, signed = True)
+        d_scaled = Signal(signed(WIDTH))
+        count    = Signal(16)
 
-        v_comb = Signal()
+        v_comb    = Signal()
         d_clk_tmp = Signal()
 
 
@@ -55,15 +58,16 @@ class CIC(Elaboratable):
             d5.eq(d4 + d5)
         ]
 
-        with m.If(count == self.decimation_ratio -1):
+        # Decimation #
+        with m.If(count == DECIMATION_RATIO -1):
             m.d.sync += [
                 count.eq(0),
                 d_tmp.eq(d5),
                 d_clk_tmp.eq(1),
                 v_comb.eq(1)
             ]
-
-        with m.Elif(count == self.decimation_ratio >> 1):
+   
+        with m.Elif(count == DECIMATION_RATIO >> 1):
             m.d.sync += [
                 d_clk_tmp.eq(0),
                 count.eq(count + 1),
@@ -98,8 +102,18 @@ class CIC(Elaboratable):
 
                 d_scaled.eq(d10),
 
-                d_out.eq(d10 >>> (width -12 - Gain))
+                self.d_out.eq(d10 >> (WIDTH -12 - self.gain).as_unsigned())
             ]
+        return m
+
+if __name__ == "__main__":
+    from amaranth.back import verilog
+
+    cic = CIC()
+    ports = [cic.clk, cic.gain, cic.d_in, cic.d_out, cic.d_clk]
+    verilog_code = verilog.convert(cic, ports=ports)
+    with open("cic.v", "w") as f:
+        f.write(verilog_code)
         
 
 

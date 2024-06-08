@@ -21,25 +21,25 @@ Output:
 module AMDemodulator #(
   parameter WIDTH = 12
 )(
-  input clk,  
-  input signed [WIDTH-1:0] I_in,
-  input signed [WIDTH-1:0] Q_in,
-  output reg [WIDTH-1:0] d_out
+  input                     clk,  
+  input  signed [WIDTH-1:0] I_in,
+  input  signed [WIDTH-1:0] Q_in,
+  output reg    [WIDTH-1:0] d_out
 );
 
-  reg signed [15:0] d_out_d;
-  reg [1:0] state;
-  reg NewSample;
-  reg [31:0] ISquare;
-  reg [15:0] QSquare;
-  reg [15:0] SquareSum;
+  reg signed [15:0]        d_out_d;
+  reg        [1:0]         state;
+  reg                      NewSample;
+  reg        [31:0]        ISquare;
+  reg        [15:0]        QSquare;
+  reg        [15:0]        SquareSum;
 
-  reg signed [WIDTH-1:0] MultDataA;
-  reg signed [WIDTH-1:0] MultDataB;
+  reg signed [WIDTH-1:0]   MultDataA;
+  reg signed [WIDTH-1:0]   MultDataB;
   reg signed [2*WIDTH-1:0] MultResult1;
 
-  reg signed [WIDTH:0] MultDataC;
-  reg signed [WIDTH:0] MultDataD;
+  reg signed [WIDTH:0]     MultDataC;
+  reg signed [WIDTH:0]     MultDataD;
   reg signed [2*WIDTH-1:0] MultResult2;
 
   // Function to calculate the square root
@@ -78,22 +78,22 @@ module AMDemodulator #(
   // Main processing block
   always @(posedge clk) begin
     // Load inputs to multipliers
-    MultDataA <= I_in;
-    MultDataB <= I_in;
-    MultDataC <= Q_in;
-    MultDataD <= Q_in;
+    MultDataA  <= I_in;
+    MultDataB  <= I_in;
+    MultDataC  <= Q_in;
+    MultDataD  <= Q_in;
 
     MultResult1 <= MultDataA*MultDataB;
     MultResult2 <= MultDataC*MultDataD;
 
     // Calculate I^2 + Q^2
-    ISquare <= MultResult1 + MultResult2;
+    ISquare     <= MultResult1 + MultResult2;
 
     // Compute the square root of the sum of squares
-    d_out_d <= sqrt(ISquare);
+    d_out_d     <= sqrt(ISquare);
 
     // Assign the lower 12 bits to the output
-    d_out <= d_out_d[WIDTH-1:0];
+    d_out       <= d_out_d[WIDTH-1:0];
   end
 
  //----------------------------- 

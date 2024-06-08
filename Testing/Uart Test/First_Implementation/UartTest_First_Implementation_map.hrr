@@ -3,20 +3,30 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      67.00        100.0
-                                  LUT4	      62.00        100.0
-                                 IOBUF	         10        100.0
-                                PFUREG	         51        100.0
-                                RIPPLE	         11        100.0
+                                  SLIC	      98.00        100.0
+                                  LUT4	      93.00        100.0
+                                 IOBUF	         11        100.0
+                                PFUREG	         93        100.0
+                                RIPPLE	         18        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-              uart_rx(CLKS_PER_BIT=27)	          1        94.0
+            uart_tx(CLKS_PER_BIT=2604)	          1        31.6
+            uart_rx(CLKS_PER_BIT=2604)	          1        58.2
 ---------------------------------------------------
-Report for cell uart_rx(CLKS_PER_BIT=27)
+Report for cell uart_tx(CLKS_PER_BIT=2604)
+   Instance path: top/uart_tx1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      31.00        31.6
+                                  LUT4	      31.00        33.3
+                                PFUREG	         32        34.4
+                                RIPPLE	          9        50.0
+---------------------------------------------------
+Report for cell uart_rx(CLKS_PER_BIT=2604)
    Instance path: top/uart_rx1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      63.00        94.0
-                                  LUT4	      62.00        100.0
-                                PFUREG	         43        84.3
-                                RIPPLE	         11        100.0
+                                  SLIC	      57.00        58.2
+                                  LUT4	      61.00        65.6
+                                PFUREG	         43        46.2
+                                RIPPLE	          9        50.0
