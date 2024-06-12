@@ -46,13 +46,13 @@ async def wait(dut, n_cycles):
 
 
 @cocotb.test()
-async def Mixer_test(dut):
+async def test_mixer_behavior(dut):
 
     input_bits = int(os.environ.get("INPUT_BITS", 12))
     number_of_iterations = int(os.environ.get("ITERATIONS", 100))
     # Starting Clock #
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
-    cocotb.log.info(f"Test: Starting AMDemodulation cocotb test with clock_value = {clock_value} ns")
+    cocotb.log.info(f"Test: Starting Mixer cocotb test with clock_value = {clock_value} ns")
     cocotb.start_soon(Clock(dut.clk, clock_value, units="ns").start())
 
     """	
@@ -72,7 +72,7 @@ async def Mixer_test(dut):
 
     for _ in range(number_of_iterations):
         dut.log.info("Test: Generating random inputs...")
-        # Generate random inputs
+        # Generate random inputs #
         sin_random_value = random.randint(-(2 ** (input_bits - 1)), 2 ** (input_bits - 1) - 1)
         cos_random_value = random.randint(-(2 ** (input_bits - 1)), 2 ** (input_bits - 1) - 1)
         RFIn_random_value = random.randint(0, 1)

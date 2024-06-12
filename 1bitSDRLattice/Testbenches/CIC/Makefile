@@ -13,3 +13,11 @@ TOPLEVEL = CIC
 # Python test module(s)
 MODULE = CIC_tb
 
+# Define the clean target
+.PHONY: clean
+
+clean::
+	$(RM) -r __pycache__
+	$(RM) -r sim_build
+	$(RM) results.xml
+	$(RM) *.vcd

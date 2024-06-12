@@ -38,8 +38,8 @@ For a 5-stage CIC decimation filter with a decimation factor of 16384 (14 bits):
 */
 
 module CIC #(
-    parameter width = 64,
-    parameter decimation_ratio = 16
+    parameter int width = 64,
+    parameter int decimation_ratio = 16
 )(
     input wire clk,
     input wire [7:0] Gain,

@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1713471697" />
-    <testcase name="test_CIC_behavior" classname="CIC_tb" file="/home/user/SDR-HLS/Testbenches/CIC/CIC_tb.py" lineno="10" time="0.04269886016845703" sim_time_ns="2487.501" ratio_time="58256.84784526389" />
+    <property name="random_seed" value="1718201166" />
+    <testcase name="CIC_test" classname="CIC_tb" file="/home/user/SDR-HLS/1bitSDRLattice/Testbenches/CIC/CIC_tb.py" lineno="154" time="0.16253066062927246" sim_time_ns="625.001" ratio_time="3845.43444037066" />
   </testsuite>
 </testsuites>

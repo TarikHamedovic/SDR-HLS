@@ -18,10 +18,10 @@ Output:
 - d_out: 12-bit output signal representing the demodulated AM signal.
 */
 
-module AMDemodulator #(
-  parameter WIDTH = 12
+module AMDemodulator #( // TODO: Change name so it matches the file name
+  parameter int WIDTH = 12
 )(
-  input                     clk,  
+  input                     clk,
   input  signed [WIDTH-1:0] I_in,
   input  signed [WIDTH-1:0] Q_in,
   output reg    [WIDTH-1:0] d_out
@@ -48,7 +48,7 @@ module AMDemodulator #(
     // Intermediate signals
     reg [31:0] a;
     reg [15:0] q;
-    reg [17:0] left, right, r;    
+    reg [17:0] left, right, r;
     integer i;
     begin
       // Initialize all the variables
@@ -60,7 +60,7 @@ module AMDemodulator #(
       r = 0;  // Remainder
 
       // Run the calculations for 16 iterations
-      for (i = 0; i < 16; i = i + 1) begin 
+      for (i = 0; i < 16; i = i + 1) begin
         right = {q, r[17], 1'b1};
         left = {r[15:0], a[31:30]};
         a = {a[29:0], 2'b00};  // Left shift by 2 bits
@@ -68,7 +68,7 @@ module AMDemodulator #(
           r = left + right;
         else  // Subtract if r is positive
           r = left - right;
-        q = {q[14:0], !r[17]};       
+        q = {q[14:0], !r[17]};
       end
       sqrt = q;  // Final assignment of output
     end
@@ -96,9 +96,9 @@ module AMDemodulator #(
     d_out       <= d_out_d[WIDTH-1:0];
   end
 
- //----------------------------- 
+ //-----------------------------
  // For sim only
- //----------------------------- 
+ //-----------------------------
   initial begin
       $dumpfile("AMDemod_waves.vcd");
       $dumpvars;
@@ -110,6 +110,6 @@ endmodule
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
- 2024/4/18 TH: initial creation    
+ 2024/4/18 TH: initial creation
  2024/5/26 TH: revision
 */

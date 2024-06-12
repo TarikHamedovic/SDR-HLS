@@ -16,8 +16,8 @@ Outputs:
 -----------------------------------------------------------------------------
 */
 
-module nco_sig #(
-    parameter WIDTH = 64
+module nco_sig #( // TODO: Change name so it matches module file name
+    parameter int WIDTH = 64
 )(
     input                  clk,
     input      [WIDTH-1:0] phase_inc_carr,
@@ -39,9 +39,9 @@ module nco_sig #(
         phase_accum <= phase_accum + phase_inc_carr;
     end
 
-    //----------------------------- 
+    //-----------------------------
     // For simulation only
-    //----------------------------- 
+    //-----------------------------
     initial begin
         $dumpfile("nco_sig_waves.vcd");
         $dumpvars;
@@ -52,6 +52,6 @@ endmodule
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
- 2024/5/26 TH: initial creation    
+ 2024/5/26 TH: initial creation
  2024/5/26 TH: revision
 */

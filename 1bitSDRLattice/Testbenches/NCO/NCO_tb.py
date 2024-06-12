@@ -4,6 +4,8 @@ CocoTB Testbench for nco_sig.v module
 -----------------------------------------------------------------------------
 """
 
+# TODO: Add clock variable to MakeFile for changing simulation in terminal
+
 import cocotb
 from cocotb.triggers import RisingEdge, Timer
 from cocotb.clock import Clock

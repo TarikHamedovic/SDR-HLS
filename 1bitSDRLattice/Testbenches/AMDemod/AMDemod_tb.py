@@ -5,13 +5,13 @@ CocoTB Testbench for AMDemod.v module
 """
 
 import cocotb
-from cocotb.triggers import RisingEdge, FallingEdge, Timer
+from cocotb.triggers import RisingEdge, Timer
 from cocotb.clock import Clock
 import numpy as np
 import random
 import os
 
-NUM_TEST_VALUES = 100
+NUM_TEST_VALUES = int(os.environ.get('NUM_TEST_VALUES', 100))
 
 async def init(I_in, Q_in, duration_ns):
     # Function to initialize I_in and Q_in values #
@@ -29,18 +29,19 @@ async def init(I_in, Q_in, duration_ns):
     cocotb.log.info(f"Initialization: {Q_in._name} value changed from {original_Q_in} to {Q_in.value}")
 
 def print_vars(dut):
-   # Log monitored variables #
+    # Log monitored variables #
     dut._log.info(f"Monitor: I_in={dut.I_in.value}, Q_in={dut.Q_in.value}, d_out={dut.d_out.value}")
 
 @cocotb.test()
 async def AMDemod_test(dut):
-	
     input_bits = int(os.environ.get('INPUT_BITS', 12))
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))	
+    num_test_values = int(os.environ.get('NUM_TEST_VALUES', 100))
     
     dut._log.info(f"Test: Starting AMDemodulation cocotb test with clock_value = {clock_value} ns")
+
     # Starting Clock #
-    clock = Clock(dut.clk, clock_value, units = "ns")
+    clock = Clock(dut.clk, clock_value, units="ns")
     cocotb.start_soon(clock.start())
 
     # Initializing Input Variables to 0 #
@@ -50,8 +51,18 @@ async def AMDemod_test(dut):
     print_vars(dut)
 
     # Generating test data including edge cases and random values #
-    test_data = [[0, 0], [2**(input_bits-1)-1, 2**(input_bits-1)-1 ], [-2**(input_bits-1), -2**(input_bits-1)], [2*(input_bits-1)-1, -2**(input_bits-1)], [-2**(input_bits-1), 2**(input_bits-1)-1]]
-    test_data += [[random.randint(-2**(input_bits-1), 2**(input_bits-1)-1), random.randint(-2**(input_bits-1), 2**(input_bits-1)-1)] for _ in range(NUM_TEST_VALUES)]
+    test_data = [
+        [0, 0], 
+        [2**(input_bits-1)-1, 2**(input_bits-1)-1], 
+        [-2**(input_bits-1), -2**(input_bits-1)], 
+        [2*(input_bits-1)-1, -2**(input_bits-1)], 
+        [-2**(input_bits-1), 2**(input_bits-1)-1]
+    ]
+    test_data += [
+        [random.randint(-2**(input_bits-1), 2**(input_bits-1)-1), 
+         random.randint(-2**(input_bits-1), 2**(input_bits-1)-1)] 
+        for _ in range(num_test_values)
+    ]
     cocotb.log.info("Test: Generated test data with edge and random values")
 
     for I_in, Q_in in test_data:
@@ -66,6 +77,7 @@ async def AMDemod_test(dut):
         cocotb.log.info("Test: Calculating output...")
         cocotb.log.info("----- Waiting 5 clock cycles for the operation to finish -----")
         for _ in range(5):
+            #cocotb.log.info(f"Check: d_out_d={dut.d_out_d.value}")
             await RisingEdge(dut.clk)
 
         # Monitoring variables after operation #
@@ -84,3 +96,4 @@ Version History:
 -----------------------------------------------------------------------------
  2024/4/18 TH: initial creation    
 """
+

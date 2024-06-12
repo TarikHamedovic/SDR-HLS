@@ -37,8 +37,8 @@ async def test_cordic_sine_cosine(dut):
 
 
     dut._log.info("Input Values")
-    phase_increment = 19661 #for 80 MHz
-    #phase_increment = 16384 # for 1.25Mhz output frequency
+    #phase_increment = 19661 #for 80 MHz
+    phase_increment = 16384 # for 1.25Mhz output frequency
     #phase_increment = 31520 # for 50 MHz
     dut.i_xval.value = 4095
     dut.i_yval.value = 0

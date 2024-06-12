@@ -10,7 +10,7 @@
 // dissemination to all third parties; and (3) shall use the same for operation
 // and maintenance purposes only.
 //--------------------------------------------------------------------------
-// Description: 
+// Description:
 //   Test code for Tarik's MSEE, based on:
 //      https://zipcpu.com/dsp/2017/08/30/cordic.html
 //==========================================================================
@@ -23,22 +23,22 @@ module cordic #(
 )(
 
  //inputs
-   input  logic                 i_clk,  
+   input  logic                 i_clk,
    input  logic                 i_reset,
-   input  logic signed [IW-1:0] i_xval, 
-   input  logic signed [IW-1:0] i_yval, 
+   input  logic signed [IW-1:0] i_xval,
+   input  logic signed [IW-1:0] i_yval,
    input  logic        [PW-1:0] i_phase,
 
  //outputs
-   output logic signed [OW-1:0] o_xval, 
-   output logic signed [OW-1:0] o_yval, 
-   output logic        [PW-1:0] o_phval 
+   output logic signed [OW-1:0] o_xval,
+   output logic signed [OW-1:0] o_yval,
+   output logic        [PW-1:0] o_phval
 );
-   
+
    localparam int NSTAGES = 16; // Number of Stages
 
    // Declare variables for all of the separate stages
-   logic signed [WW-1:0] e_xval, e_yval; 
+   logic signed [WW-1:0] e_xval, e_yval;
 
    logic signed [WW-1:0] xv [NSTAGES+1];
    logic signed [WW-1:0] yv [NSTAGES+1];
@@ -132,9 +132,9 @@ module cordic #(
             yv[i+1] = yv[i] - (xv[i] >>> (i+1));
             ph[i+1] = ph[i] + cordic_angle[i];
          end
-          
+
          // if phase is positive, rotate counter-clockwise
-         else begin   
+         else begin
             xv[i+1] = xv[i] - (yv[i] >>> (i+1));
             yv[i+1] = yv[i] + (xv[i] >>> (i+1));
             ph[i+1] = ph[i] - cordic_angle[i];
@@ -143,18 +143,18 @@ module cordic #(
 
 
       //--Step4: Round our result towards even
-      pre_xval = xv[NSTAGES] 
-               + $signed({ 
+      pre_xval = xv[NSTAGES]
+               + $signed({
                    {OW{1'b0}},
                     xv[NSTAGES][WW-OW],
-                    {WW-OW-1{~xv[NSTAGES][WW-OW]}} 
+                    {WW-OW-1{~xv[NSTAGES][WW-OW]}}
                  });
 
-      pre_yval = yv[NSTAGES] 
+      pre_yval = yv[NSTAGES]
                + $signed({ 
                    {OW{1'b0}},
                     yv[NSTAGES][WW-OW],
-                   {WW-OW-1{~yv[NSTAGES][WW-OW]}} 
+                   {WW-OW-1{~yv[NSTAGES][WW-OW]}}
                  });
 
    end: _cordic_comb
@@ -168,19 +168,19 @@ module cordic #(
       end 
       else begin
          o_xval <= pre_xval[(WW-1):(WW-OW)];
-	 o_yval <= pre_yval[(WW-1):(WW-OW)];
+         o_yval <= pre_yval[(WW-1):(WW-OW)];
       end
    end: _cordic_ff
 
 
-  //----------------------------- 
+  //-----------------------------
   // For sim only
-  //----------------------------- 
+  //-----------------------------
    initial begin
       $dumpfile("cordic_waves.vcd");
       $dumpvars;
    end
-   
+
 endmodule: cordic
 
 /*

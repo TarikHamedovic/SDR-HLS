@@ -1,8 +1,8 @@
 # Include the general configuration file
-include ../config.mk
+include ../../config.mk
 
 # Verilog sources
-VERILOG_SOURCES += hdl/top.v
+VERILOG_SOURCES += Mixer.v
 
 # VHDL sources (if any)
 VHDL_SOURCES = 
@@ -11,7 +11,7 @@ VHDL_SOURCES =
 TOPLEVEL = top
 
 # Python test module(s)
-MODULE = top_tb
+MODULE = Mixer_tb
 
 # Define the clean target
 .PHONY: clean
@@ -20,5 +20,3 @@ clean::
 	$(RM) -r __pycache__
 	$(RM) -r sim_build
 	$(RM) results.xml
-	$(RM) *.vcd
-

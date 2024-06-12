@@ -40,27 +40,26 @@ reg [11:0] DataInReg;
 
 always @(posedge clk)
    begin
-		    counter <= counter + 1'b 1;
-		    if (counter == 0) begin
-			      DataInReg <= DataIn+  10'd 512;
+      counter <= counter + 1'b 1;
+      if (counter == 0) begin
+         DataInReg <= DataIn +  10'd 512;
       end
-
-		    if (counter > (DataInReg[9:0])) begin
-		        PWMOut   <= 1'b 0;
+      if (counter > (DataInReg[9:0])) begin
+         PWMOut   <= 1'b0;
       end else begin
-		        PWMOut   <= 1'b 1;
+         PWMOut   <= 1'b1;
       end
-	  end
+   end
 
 
-    //----------------------------- 
+    //-----------------------------
     // For simulation only
-    //----------------------------- 
+    //-----------------------------
     initial begin
         $dumpfile("pwm_waves.vcd");
         $dumpvars;
     end
-	
+
 endmodule
 
 /*
@@ -68,6 +67,6 @@ endmodule
 Version History:
 -----------------------------------------------------------------------------
  2024/5/28 TH: initial creation
-	2024/5/29 TH: Created SV file
-
+ 2024/5/29 TH: Created SV file
+ 2024/6/10 TH: Fixed Indentation
 */

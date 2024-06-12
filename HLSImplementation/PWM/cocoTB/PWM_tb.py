@@ -10,6 +10,7 @@ from cocotb.clock import Clock
 import random
 import os
 
+NUM_TEST_VALUES = 10 # TODO: Argparser
 
 async def init(dut, duration_ns):
     # Function to initialize DUT values #
@@ -35,7 +36,6 @@ def calculate_expected_output(dut, counter, data_in_reg, bit_width):
 @cocotb.test()
 async def PWM_test(dut):
     input_bits = int(os.environ.get('INPUT_BITS', 12))
-    number_of_iterations = int(os.environ.get("ITERATIONS", 10))
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))
     counter_bits = int(os.environ.get('COUNTER_BITS', 10))
 
@@ -52,7 +52,7 @@ async def PWM_test(dut):
 
     # Generating test data including edge cases and random values #
     test_data = [1022, 0, 1023, -512, -1023, 1024, 2000, 1]
-    test_data += [random.randint(-2**(input_bits-1), 2**(input_bits-1)-1) for _ in range(number_of_iterations)]
+    test_data += [random.randint(-2**(input_bits-1), 2**(input_bits-1)-1) for _ in range(NUM_TEST_VALUES)]
     cocotb.log.info("Test: Generated test data with edge and random values")
 
     for data in test_data:
@@ -80,8 +80,9 @@ async def PWM_test(dut):
         cocotb.log.info("Test: Assertion passed for current input set")
 
         """
+        TODO: Fix error when asserting, mismatch between expected and actual data for data over 512 -- Fixed(Only needed to look the bottom 10 bits of DataInReg)
         TODO: Add maybe more test cases, edge cases?
-        TODO: Make a signals variable that will store all the signals in the DUT so that I can print them in a loop, making it more robust
+        TODO: Add argument parser for variable inputs through terminal
         """
 
 """
@@ -90,8 +91,6 @@ Version History:
 -----------------------------------------------------------------------------
  2024/4/22 TH: initial creation   
  2024/5/26 TH: revision 
- 2024/5/26 TH: Fixed error when asserting, mismatch between expected and actual data for data over 512 -- Fixed(Only needed to look the bottom 10 bits of DataInReg)
- 2024/6/11 TH: Added argument parser for variable inputs through terminal
- 
+ 2024/5/26 TH: fixed first TODO 
 """
 

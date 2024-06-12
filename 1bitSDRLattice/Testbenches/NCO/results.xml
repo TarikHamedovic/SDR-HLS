@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1716746406" />
-    <testcase name="nco_sig_test" classname="NCO_tb" file="/home/user/SDR-HLS/1bitSDRLattice/Testbenches/NCO/NCO_tb.py" lineno="34" time="0.1804206371307373" sim_time_ns="2100.001" ratio_time="11639.472254375683" />
-  </testsuite>
-</testsuites>
