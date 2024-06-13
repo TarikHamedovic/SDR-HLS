@@ -18,12 +18,12 @@ A typical Software-Defined Radio (SDR) transceiver is composed of four principal
 The schematic representation of a contemporary digital communication system, depicted above, demonstrates the dynamic nature of SDR technology, emphasizing its reconfigurable and programmable capabilities.
 
 ## Zero-IF Recievers
-In this project a Zero-IF Reciever Architecture is implemented. The zero-IF (ZIF) or Direct-RF architecture presents an innovative alternative to the traditional superheterodyne receiver design, streamlining the frequency
-conversion process and reducing component complexity. In this architecture, the signal’s conversion to baseband is achieved through a singular frequency mixing stage, where the local oscillator (LO) is precisely tuned to the signal’s frequency band. This approach effectively translates the received signal directly to baseband, processing it in both phase (I) and quadrature (Q) components. This method significantly reduces the need for complex and expensive RF/IF filtering, as all necessary filtering is performed at the baseband level. Here, filters are simpler, more cost-effective, and easier to design.
+
 
 ![ZeroIF](0.doc/Images/ZeroIF.png)
 
-
+In this project a Zero-IF Reciever Architecture is implemented. The zero-IF (ZIF) or Direct-RF architecture presents an innovative alternative to the traditional superheterodyne receiver design, streamlining the frequency
+conversion process and reducing component complexity. In this architecture, the signal’s conversion to baseband is achieved through a singular frequency mixing stage, where the local oscillator (LO) is precisely tuned to the signal’s frequency band. This approach effectively translates the received signal directly to baseband, processing it in both phase (I) and quadrature (Q) components. This method significantly reduces the need for complex and expensive RF/IF filtering, as all necessary filtering is performed at the baseband level. Here, filters are simpler, more cost-effective, and easier to design.
 
 # 1bit SDR Project
 ![1-bit SDR Block Diagram](0.doc/Images/MyBlockDiagram.png)
