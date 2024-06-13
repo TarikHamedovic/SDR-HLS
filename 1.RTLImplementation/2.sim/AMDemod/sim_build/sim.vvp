@@ -1,0 +1,164 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (devel)" "(s20221226-347-g58dcf39db)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x61c444021080 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x61c444021210 .scope module, "AMDemodulator" "AMDemodulator" 3 21;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 12 "I_in";
+    .port_info 2 /INPUT 12 "Q_in";
+    .port_info 3 /OUTPUT 12 "d_out";
+P_0x61c4440213a0 .param/l "WIDTH" 0 3 22, +C4<00000000000000000000000000001100>;
+v0x61c44404c620_0 .var "ISquare", 31 0;
+o0x769cec2f11c8 .functor BUFZ 12, C4<zzzzzzzzzzzz>; HiZ drive
+v0x61c44404c720_0 .net/s "I_in", 11 0, o0x769cec2f11c8;  0 drivers
+v0x61c44404c800_0 .var/s "MultDataA", 11 0;
+v0x61c44404c8c0_0 .var/s "MultDataB", 11 0;
+v0x61c44404c9a0_0 .var/s "MultDataC", 12 0;
+v0x61c44404cad0_0 .var/s "MultDataD", 12 0;
+v0x61c44404cbb0_0 .var/s "MultResult1", 23 0;
+v0x61c44404cc90_0 .var/s "MultResult2", 23 0;
+o0x769cec2f1318 .functor BUFZ 12, C4<zzzzzzzzzzzz>; HiZ drive
+v0x61c44404cd70_0 .net/s "Q_in", 11 0, o0x769cec2f1318;  0 drivers
+o0x769cec2f1348 .functor BUFZ 1, C4<z>; HiZ drive
+v0x61c44404ce50_0 .net "clk", 0 0, o0x769cec2f1348;  0 drivers
+v0x61c44404cf10_0 .var "d_out", 11 0;
+v0x61c44404cff0_0 .var/s "d_out_d", 15 0;
+E_0x61c44402f390 .event posedge, v0x61c44404ce50_0;
+S_0x61c444021470 .scope function.vec4.s16, "sqrt" "sqrt" 3 46, 3 46 0, S_0x61c444021210;
+ .timescale -9 -12;
+v0x61c444021650_0 .var "a", 31 0;
+v0x61c44404bfa0_0 .var/i "i", 31 0;
+v0x61c44404c080_0 .var "left", 17 0;
+v0x61c44404c170_0 .var "num", 31 0;
+v0x61c44404c250_0 .var "q", 15 0;
+v0x61c44404c380_0 .var "r", 17 0;
+v0x61c44404c460_0 .var "right", 17 0;
+; Variable sqrt is vec4 return value of scope S_0x61c444021470
+TD_AMDemodulator.sqrt ;
+    %load/vec4 v0x61c44404c170_0;
+    %store/vec4 v0x61c444021650_0, 0, 32;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x61c44404c250_0, 0, 16;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x61c44404bfa0_0, 0, 32;
+    %pushi/vec4 0, 0, 18;
+    %store/vec4 v0x61c44404c080_0, 0, 18;
+    %pushi/vec4 0, 0, 18;
+    %store/vec4 v0x61c44404c460_0, 0, 18;
+    %pushi/vec4 0, 0, 18;
+    %store/vec4 v0x61c44404c380_0, 0, 18;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x61c44404bfa0_0, 0, 32;
+T_0.0 ; Top of for-loop 
+    %load/vec4 v0x61c44404bfa0_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x61c44404c250_0;
+    %load/vec4 v0x61c44404c380_0;
+    %parti/s 1, 17, 6;
+    %concat/vec4; draw_concat_vec4
+    %concati/vec4 1, 0, 1;
+    %store/vec4 v0x61c44404c460_0, 0, 18;
+    %load/vec4 v0x61c44404c380_0;
+    %parti/s 16, 0, 2;
+    %load/vec4 v0x61c444021650_0;
+    %parti/s 2, 30, 6;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0x61c44404c080_0, 0, 18;
+    %load/vec4 v0x61c444021650_0;
+    %parti/s 30, 0, 2;
+    %concati/vec4 0, 0, 2;
+    %store/vec4 v0x61c444021650_0, 0, 32;
+    %load/vec4 v0x61c44404c380_0;
+    %parti/s 1, 17, 6;
+    %pad/u 32;
+    %cmpi/e 1, 0, 32;
+    %jmp/0xz  T_0.3, 4;
+    %load/vec4 v0x61c44404c080_0;
+    %load/vec4 v0x61c44404c460_0;
+    %add;
+    %store/vec4 v0x61c44404c380_0, 0, 18;
+    %jmp T_0.4;
+T_0.3 ;
+    %load/vec4 v0x61c44404c080_0;
+    %load/vec4 v0x61c44404c460_0;
+    %sub;
+    %store/vec4 v0x61c44404c380_0, 0, 18;
+T_0.4 ;
+    %load/vec4 v0x61c44404c250_0;
+    %parti/s 15, 0, 2;
+    %load/vec4 v0x61c44404c380_0;
+    %parti/s 1, 17, 6;
+    %nor/r;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0x61c44404c250_0, 0, 16;
+T_0.2 ; for-loop step statement
+    %load/vec4 v0x61c44404bfa0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x61c44404bfa0_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ; for-loop exit label
+    %load/vec4 v0x61c44404c250_0;
+    %ret/vec4 0, 0, 16;  Assign to sqrt (store_vec4_to_lval)
+    %end;
+    .scope S_0x61c444021210;
+T_1 ;
+    %wait E_0x61c44402f390;
+    %load/vec4 v0x61c44404c720_0;
+    %assign/vec4 v0x61c44404c800_0, 0;
+    %load/vec4 v0x61c44404c720_0;
+    %assign/vec4 v0x61c44404c8c0_0, 0;
+    %load/vec4 v0x61c44404cd70_0;
+    %pad/s 13;
+    %assign/vec4 v0x61c44404c9a0_0, 0;
+    %load/vec4 v0x61c44404cd70_0;
+    %pad/s 13;
+    %assign/vec4 v0x61c44404cad0_0, 0;
+    %load/vec4 v0x61c44404c800_0;
+    %pad/s 24;
+    %load/vec4 v0x61c44404c8c0_0;
+    %pad/s 24;
+    %mul;
+    %assign/vec4 v0x61c44404cbb0_0, 0;
+    %load/vec4 v0x61c44404c9a0_0;
+    %pad/s 24;
+    %load/vec4 v0x61c44404cad0_0;
+    %pad/s 24;
+    %mul;
+    %assign/vec4 v0x61c44404cc90_0, 0;
+    %load/vec4 v0x61c44404cbb0_0;
+    %pad/s 32;
+    %load/vec4 v0x61c44404cc90_0;
+    %pad/s 32;
+    %add;
+    %assign/vec4 v0x61c44404c620_0, 0;
+    %load/vec4 v0x61c44404c620_0;
+    %store/vec4 v0x61c44404c170_0, 0, 32;
+    %callf/vec4 TD_AMDemodulator.sqrt, S_0x61c444021470;
+    %assign/vec4 v0x61c44404cff0_0, 0;
+    %load/vec4 v0x61c44404cff0_0;
+    %parti/s 12, 0, 2;
+    %assign/vec4 v0x61c44404cf10_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x61c444021210;
+T_2 ;
+    %vpi_call/w 3 103 "$dumpfile", "AMDemod_waves.vcd" {0 0 0};
+    %vpi_call/w 3 104 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "hdl/AMDemod.v";
