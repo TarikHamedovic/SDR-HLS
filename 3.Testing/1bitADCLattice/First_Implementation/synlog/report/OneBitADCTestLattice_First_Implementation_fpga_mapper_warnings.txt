@@ -1,1 +1,0 @@
-@W: MT420 |Found inferred clock ADC_top|clk_in with period 5.00ns. Please declare a user-defined clock on port clk_in.

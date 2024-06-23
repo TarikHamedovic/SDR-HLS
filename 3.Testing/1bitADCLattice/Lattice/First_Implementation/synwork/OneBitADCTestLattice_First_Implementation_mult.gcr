@@ -1,0 +1,8 @@
+i clk_in
+m 0 0
+u 13 64
+p {p:clk_in}{t:SSD_ADC.clk}{p:SSD_ADC.clk}{t:SSD_ADC.accum[7:0].C}
+e ckid0_0 {t:SSD_ADC.accum[7:0].C} dffre
+c ckid0_0 {p:clk_in} port Unsupported/too complex instance on clock path
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

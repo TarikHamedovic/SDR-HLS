@@ -41,11 +41,11 @@ module CIC #(
     parameter int WIDTH = 64,
     parameter int DECIMATION_RATIO = 16
 )(
-    input wire               clk,
-    input wire [7:0]         Gain,
-    input wire signed [11:0] d_in,
-    output reg signed [11:0] d_out,
-    output reg               d_clk
+    input  wire               clk,
+    input  wire [7:0]         Gain,
+    input  wire signed [11:0] d_in,
+    output reg  signed [11:0] d_out,
+    output reg                d_clk
 );
 
     // Internal registers

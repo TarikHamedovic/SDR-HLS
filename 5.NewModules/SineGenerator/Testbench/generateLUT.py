@@ -69,15 +69,15 @@ def write_sine_table_to_hex(lgtable, ow, pb, verilog_filename):
         verfp.write("end\n\n")
         verfp.write("endmodule")
 
-    #plt.figure()
-    #plt.plot(dv_values)
-    #plt.show()
+    plt.figure()
+    plt.plot(dv_values)
+    plt.show()
 
 import numpy as np
 
 lgtable = 8
 ow = 12
 pb = 64
-verilog_filename = "/home/user/SDR-HLS/New Modules/SineGenerator/Testbench/simpleSine_gen.v"
+verilog_filename = "/home/user/SDR-HLS/5.NewModules/SineGenerator/Testbench/simpleSine_gen.v"
 write_sine_table_to_hex(lgtable, ow, pb,verilog_filename)
 

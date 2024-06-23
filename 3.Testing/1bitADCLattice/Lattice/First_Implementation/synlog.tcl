@@ -1,0 +1,1 @@
+run_tcl -fg OneBitADCTestLattice_First_Implementation_synplify.tcl

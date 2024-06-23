@@ -1,0 +1,36 @@
+[ START MERGED ]
+rstn_N_51 rstn_c
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+SSD_ADC/box_ave/accum_40_add_4_1/S0
+SSD_ADC/box_ave/accum_40_add_4_1/CI
+SSD_ADC/box_ave/accum_40_add_4_11/CO
+SSD_ADC/counter_39_add_4_1/S0
+SSD_ADC/counter_39_add_4_1/CI
+SSD_ADC/counter_39_add_4_11/S1
+SSD_ADC/counter_39_add_4_11/CO
+pwm_inst/counter_41_add_4_1/S0
+pwm_inst/counter_41_add_4_1/CI
+pwm_inst/counter_41_add_4_9/S1
+pwm_inst/counter_41_add_4_9/CO
+_add_1_add_4_10/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.13.0.56.2 -- WARNING: Map write only section -- Mon Jun 24 01:02:01 2024
+
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=ENABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=62 TRANSFR=OFF CONFIG_IOVOLTAGE=3.3 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=ON CONFIG_MODE=JTAG INBUF=OFF ;
+LOCATE COMP "analog_out" SITE "U18" ;
+LOCATE COMP "sample_rdy" SITE "G3" ;
+LOCATE COMP "pwm_out" SITE "A4" ;
+LOCATE COMP "clk_in" SITE "G2" ;
+LOCATE COMP "rstn" SITE "R1" ;
+LOCATE COMP "analog_cmp" SITE "H18" ;
+FREQUENCY NET "clk_in_c" 25.000000 MHz ;
+FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+FREQUENCY PORT "clk_in" 25.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

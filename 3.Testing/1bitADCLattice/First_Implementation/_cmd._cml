@@ -1,1 +1,0 @@
--link -encrypt -top ADC_top -osyn /home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/synwork/OneBitADCTestLattice_First_Implementation_comp.srs /home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/synwork/layer0.srs  -jobname linker  

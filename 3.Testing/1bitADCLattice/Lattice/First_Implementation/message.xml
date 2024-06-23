@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>51001030</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>rstn_c</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(67): </Dynamic>
+            <Dynamic>ADC_top</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v</Navigation>
+            <Navigation>67</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PLL.v(8): </Dynamic>
+            <Dynamic>PLL</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PLL.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): </Dynamic>
+            <Dynamic>VHI</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>757</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): </Dynamic>
+            <Dynamic>VLO</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>761</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): </Dynamic>
+            <Dynamic>EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)</Dynamic>
+            <Navigation>/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v</Navigation>
+            <Navigation>1696</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v(68): </Dynamic>
+            <Dynamic>sigmadelta_adc</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v</Navigation>
+            <Navigation>68</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v(72): </Dynamic>
+            <Dynamic>box_ave(LPF_DEPTH_BITS=3)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v(30): </Dynamic>
+            <Dynamic>PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v(53): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>53</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="Translate">
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LPF_DEPTH_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ADC_WIDTH</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ADC_WIDTH</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LPF_DEPTH_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LPF_DEPTH_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ACCUM_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ADC_WIDTH</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ADC_WIDTH</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ACCUM_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LPF_DEPTH_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>LPF_DEPTH_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ACCUM_BITS</Dynamic>
+        </Message>
+        <Message>
+            <ID>1121028</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>ADC_WIDTH</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Synplify_Synthesis">
+        <Message>
+            <ID>2011000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MT529 :&quot;/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/box_ave.v&quot;:175:0:175:5|Found inferred clock ADC_top|clk_in which controls 64 sequential elements including SSD_ADC.box_ave.ave_data_out[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance.</Dynamic>
+            <Navigation>MT529</Navigation>
+            <Navigation>/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/box_ave.v</Navigation>
+            <Navigation>175</Navigation>
+            <Navigation>0</Navigation>
+            <Navigation>175</Navigation>
+            <Navigation>5</Navigation>
+            <Navigation>Found inferred clock ADC_top|clk_in which controls 64 sequential elements including SSD_ADC.box_ave.ave_data_out[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </Navigation>
+        </Message>
+        <Message>
+            <ID>2019993</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MT420 |Found inferred clock ADC_top|clk_in with period 5.00ns. Please declare a user-defined clock on port clk_in.</Dynamic>
+            <Navigation>MT420</Navigation>
+            <Navigation>Found inferred clock ADC_top|clk_in with period 5.00ns. Please declare a user-defined clock on port clk_in.</Navigation>
+        </Message>
+    </Task>
+</BaliMessageLog>

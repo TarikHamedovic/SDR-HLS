@@ -1,8 +1,0 @@
-@N|Running in 64-bit mode
-@N|Running in 64-bit mode
-@N|stack limit increased to max
-@N: CG364 :"/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/box_ave.v":72:7:72:13|Synthesizing module box_ave in library work.
-@N: CG364 :"/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/sigmadelta_adc.v":68:7:68:20|Synthesizing module sigmadelta_adc in library work.
-@N: CG364 :"/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/adc_top.v":67:7:67:13|Synthesizing module ADC_top in library work.
-@N|Running in 64-bit mode
-

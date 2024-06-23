@@ -6,19 +6,20 @@ This module generates a Pulse Width Modulation (PWM) signal based on the input d
 
 Inputs:
 - clk: Clock signal.
-- DataIn: 12-bit signed input data signal used to control the duty cycle of the PWM signal.
+- rstn: Active-low reset signal.
+- DataIn: Input data signal used to control the duty cycle of the PWM signal.
 
 Outputs:
 - PWMOut: Output PWM signal.
 
 Parameters:
-- None
+- DATA_WIDTH: Width of the input data signal (default: 12).
+- COUNTER_WIDTH: Width of the counter (default: 10).
+- OFFSET: Offset to be added to DataIn (default: 512).
 
 Internal Registers:
-- counter: 10-bit counter used to generate the PWM signal.
-- SimIn: 12-bit signed register for internal use.
-- DataInNoSign: 12-bit unsigned register for internal use.
-- DataInReg: 12-bit register holding the adjusted input data value.
+- counter: Counter used to generate the PWM signal.
+- DataInReg: Register holding the adjusted input data value.
 
 Operation:
 - The counter increments on each clock cycle.
@@ -26,40 +27,39 @@ Operation:
 - The PWM output signal is generated based on the comparison between the counter and DataInReg.
 -----------------------------------------------------------------------------
 */
-module PWM
-(
-   input         clk,
-   input  [11:0] DataIn,
-   output reg    PWMOut
+module PWM#(
+   parameter int DATA_WIDTH = 12,
+   parameter int COUNTER_WIDTH = 10,
+   parameter int OFFSET = 512
+)(
+   input                       clk,
+   input      [DATA_WIDTH-1:0] DataIn,
+   output reg                  PWMOut
 );
 
-reg [9:0]  counter;
-reg [11:0] SimIn;
-reg [11:0] DataInNoSign;
-reg [11:0] DataInReg;
+reg [COUNTER_WIDTH-1:0] counter;
+reg [DATA_WIDTH-1:0] DataInReg;
 
 always @(posedge clk)
-   begin
-      counter <= counter + 1'b 1;
-      if (counter == 0) begin
-         DataInReg <= DataIn +  10'd 512;
-      end
-      if (counter > (DataInReg[9:0])) begin
-         PWMOut   <= 1'b0;
-      end else begin
-         PWMOut   <= 1'b1;
-      end
+begin
+
+   counter <= counter + 1'b1;
+   if (counter == 0) begin
+      DataInReg <= DataIn + OFFSET;
    end
+   if (counter >= DataInReg[COUNTER_WIDTH-1:0]) begin
+      PWMOut <= 1'b0;
+   end else begin
+      PWMOut <= 1'b1;
+   end
+end
 
-
-    //-----------------------------
-    // For simulation only
-    //-----------------------------
-    initial begin
-        $dumpfile("pwm_waves.vcd");
-        $dumpvars;
-    end
-
+// For simulation only
+/*initial begin
+   $dumpfile("ADC_waves.vcd");
+   $dumpvars;
+end
+*/
 endmodule
 
 /*
@@ -69,4 +69,5 @@ Version History:
  2024/5/28 TH: initial creation
  2024/5/29 TH: Created SV file
  2024/6/10 TH: Fixed Indentation
+ 2024/6/22 TH: Made module fully generic
 */

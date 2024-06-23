@@ -1,0 +1,1180 @@
+
+Loading design for application trce from file OneBitADCTestLattice_First_Implementation.ncd.
+Design name: ADC_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Mon Jun 24 01:03:24 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitADCTestLattice_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/promote.xml OneBitADCTestLattice_First_Implementation.ncd OneBitADCTestLattice_First_Implementation.prf 
+Design file:     OneBitADCTestLattice_First_Implementation.ncd
+Preference file: OneBitADCTestLattice_First_Implementation.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_in_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            705 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 8.094ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/delta_22  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/sigma_i7  (to clk_80mhz +)
+
+   Delay:               4.172ns  (43.7% logic, 56.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      4.172ns physical path delay SSD_ADC/SLICE_35 to SSD_ADC/SLICE_49 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.094ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/SLICE_35 to SSD_ADC/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525   R20C124D.CLK to    R20C124D.Q0 SSD_ADC/SLICE_35 (from clk_80mhz)
+ROUTE         3     1.562    R20C124D.Q0 to    R19C106A.B0 analog_out_c
+C0TOFCO_DE  ---     0.447    R19C106A.B0 to   R19C106A.FCO SLICE_2
+ROUTE         1     0.000   R19C106A.FCO to   R19C106B.FCI n245
+FCITOFCO_D  ---     0.071   R19C106B.FCI to   R19C106B.FCO SLICE_0
+ROUTE         1     0.000   R19C106B.FCO to   R19C106C.FCI n246
+FCITOFCO_D  ---     0.071   R19C106C.FCI to   R19C106C.FCO SLICE_4
+ROUTE         1     0.000   R19C106C.FCO to   R19C106D.FCI n247
+FCITOF1_DE  ---     0.474   R19C106D.FCI to    R19C106D.F1 SLICE_1
+ROUTE         1     0.786    R19C106D.F1 to    R20C106A.A1 n30
+CTOF_DEL    ---     0.236    R20C106A.A1 to    R20C106A.F1 SSD_ADC/SLICE_49
+ROUTE         1     0.000    R20C106A.F1 to   R20C106A.DI1 SSD_ADC/n170 (to clk_80mhz)
+                  --------
+                    4.172   (43.7% logic, 56.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R20C124D.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R20C106A.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.187ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pwm_inst/counter_41__i4  (from clk_80mhz +)
+   Destination:    FF         Data in        pwm_inst/PWMOut_17  (to clk_80mhz +)
+
+   Delay:               4.073ns  (36.5% logic, 63.5% route), 5 logic levels.
+
+ Constraint Details:
+
+      4.073ns physical path delay pwm_inst/SLICE_7 to pwm_inst/SLICE_44 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 12.260ns) by 8.187ns
+
+ Physical Path Details:
+
+      Data path pwm_inst/SLICE_7 to pwm_inst/SLICE_44:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R13C82C.CLK to     R13C82C.Q1 pwm_inst/SLICE_7 (from clk_80mhz)
+ROUTE         4     1.036     R13C82C.Q1 to     R11C81C.A0 pwm_inst/counter_4
+CTOF_DEL    ---     0.236     R11C81C.A0 to     R11C81C.F0 pwm_inst/SLICE_51
+ROUTE         1     0.382     R11C81C.F0 to     R11C81C.C1 pwm_inst/n468
+CTOF_DEL    ---     0.236     R11C81C.C1 to     R11C81C.F1 pwm_inst/SLICE_51
+ROUTE         1     0.786     R11C81C.F1 to     R11C82A.A1 pwm_inst/n397
+CTOF_DEL    ---     0.236     R11C82A.A1 to     R11C82A.F1 pwm_inst/SLICE_52
+ROUTE         1     0.383     R11C82A.F1 to     R11C82B.M0 pwm_inst/n408
+MTOF_DEL    ---     0.256     R11C82B.M0 to   R11C82B.OFX0 pwm_inst/SLICE_44
+ROUTE         1     0.000   R11C82B.OFX0 to    R11C82B.DI0 pwm_inst/PWMOut_N_110 (to clk_80mhz)
+                  --------
+                    4.073   (36.5% logic, 63.5% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to pwm_inst/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R13C82C.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to pwm_inst/SLICE_44:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R11C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.197ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i10  (to clk_80mhz +)
+
+   Delay:               4.069ns  (48.2% logic, 51.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      4.069ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.197ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R24C82B.CLK to     R24C82B.Q1 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         7     0.818     R24C82B.Q1 to     R24C81C.B0 SSD_ADC/box_ave/count_1
+CTOF_DEL    ---     0.236     R24C81C.B0 to     R24C81C.F0 SSD_ADC/box_ave/SLICE_65
+ROUTE         8     1.288     R24C81C.F0 to     R23C80A.B1 SSD_ADC/box_ave/n4
+C1TOFCO_DE  ---     0.447     R23C80A.B1 to    R23C80A.FCO SSD_ADC/box_ave/SLICE_21
+ROUTE         1     0.000    R23C80A.FCO to    R23C80B.FCI SSD_ADC/box_ave/n254
+FCITOFCO_D  ---     0.071    R23C80B.FCI to    R23C80B.FCO SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000    R23C80B.FCO to    R23C80C.FCI SSD_ADC/box_ave/n255
+FCITOFCO_D  ---     0.071    R23C80C.FCI to    R23C80C.FCO SSD_ADC/box_ave/SLICE_19
+ROUTE         1     0.000    R23C80C.FCO to    R23C80D.FCI SSD_ADC/box_ave/n256
+FCITOFCO_D  ---     0.071    R23C80D.FCI to    R23C80D.FCO SSD_ADC/box_ave/SLICE_18
+ROUTE         1     0.000    R23C80D.FCO to    R23C81A.FCI SSD_ADC/box_ave/n257
+FCITOFCO_D  ---     0.071    R23C81A.FCI to    R23C81A.FCO SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000    R23C81A.FCO to    R23C81B.FCI SSD_ADC/box_ave/n258
+FCITOF1_DE  ---     0.474    R23C81B.FCI to     R23C81B.F1 SSD_ADC/box_ave/SLICE_16
+ROUTE         1     0.000     R23C81B.F1 to    R23C81B.DI1 SSD_ADC/box_ave/n50 (to clk_80mhz)
+                  --------
+                    4.069   (48.2% logic, 51.8% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.222ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i9  (to clk_80mhz +)
+
+   Delay:               4.038ns  (47.8% logic, 52.2% route), 8 logic levels.
+
+ Constraint Details:
+
+      4.038ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 12.260ns) by 8.222ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R24C82B.CLK to     R24C82B.Q1 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         7     0.818     R24C82B.Q1 to     R24C81C.B0 SSD_ADC/box_ave/count_1
+CTOF_DEL    ---     0.236     R24C81C.B0 to     R24C81C.F0 SSD_ADC/box_ave/SLICE_65
+ROUTE         8     1.288     R24C81C.F0 to     R23C80A.B1 SSD_ADC/box_ave/n4
+C1TOFCO_DE  ---     0.447     R23C80A.B1 to    R23C80A.FCO SSD_ADC/box_ave/SLICE_21
+ROUTE         1     0.000    R23C80A.FCO to    R23C80B.FCI SSD_ADC/box_ave/n254
+FCITOFCO_D  ---     0.071    R23C80B.FCI to    R23C80B.FCO SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000    R23C80B.FCO to    R23C80C.FCI SSD_ADC/box_ave/n255
+FCITOFCO_D  ---     0.071    R23C80C.FCI to    R23C80C.FCO SSD_ADC/box_ave/SLICE_19
+ROUTE         1     0.000    R23C80C.FCO to    R23C80D.FCI SSD_ADC/box_ave/n256
+FCITOFCO_D  ---     0.071    R23C80D.FCI to    R23C80D.FCO SSD_ADC/box_ave/SLICE_18
+ROUTE         1     0.000    R23C80D.FCO to    R23C81A.FCI SSD_ADC/box_ave/n257
+FCITOFCO_D  ---     0.071    R23C81A.FCI to    R23C81A.FCO SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000    R23C81A.FCO to    R23C81B.FCI SSD_ADC/box_ave/n258
+FCITOF0_DE  ---     0.443    R23C81B.FCI to     R23C81B.F0 SSD_ADC/box_ave/SLICE_16
+ROUTE         1     0.000     R23C81B.F0 to    R23C81B.DI0 SSD_ADC/box_ave/n51 (to clk_80mhz)
+                  --------
+                    4.038   (47.8% logic, 52.2% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.244ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/delta_22  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/sigma_i3  (to clk_80mhz +)
+
+   Delay:               4.022ns  (41.8% logic, 58.2% route), 4 logic levels.
+
+ Constraint Details:
+
+      4.022ns physical path delay SSD_ADC/SLICE_35 to SSD_ADC/SLICE_47 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.244ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/SLICE_35 to SSD_ADC/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525   R20C124D.CLK to    R20C124D.Q0 SSD_ADC/SLICE_35 (from clk_80mhz)
+ROUTE         3     1.562    R20C124D.Q0 to    R19C106A.B0 analog_out_c
+C0TOFCO_DE  ---     0.447    R19C106A.B0 to   R19C106A.FCO SLICE_2
+ROUTE         1     0.000   R19C106A.FCO to   R19C106B.FCI n245
+FCITOF1_DE  ---     0.474   R19C106B.FCI to    R19C106B.F1 SLICE_0
+ROUTE         1     0.778    R19C106B.F1 to    R19C105B.B1 n42
+CTOF_DEL    ---     0.236    R19C105B.B1 to    R19C105B.F1 SSD_ADC/SLICE_47
+ROUTE         1     0.000    R19C105B.F1 to   R19C105B.DI1 SSD_ADC/n178 (to clk_80mhz)
+                  --------
+                    4.022   (41.8% logic, 58.2% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R20C124D.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R19C105B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.251ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/delta_22  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/sigma_i9  (to clk_80mhz +)
+
+   Delay:               4.015ns  (47.2% logic, 52.8% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.015ns physical path delay SSD_ADC/SLICE_35 to SSD_ADC/SLICE_50 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.251ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/SLICE_35 to SSD_ADC/SLICE_50:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525   R20C124D.CLK to    R20C124D.Q0 SSD_ADC/SLICE_35 (from clk_80mhz)
+ROUTE         3     1.562    R20C124D.Q0 to    R19C106A.B0 analog_out_c
+C0TOFCO_DE  ---     0.447    R19C106A.B0 to   R19C106A.FCO SLICE_2
+ROUTE         1     0.000   R19C106A.FCO to   R19C106B.FCI n245
+FCITOFCO_D  ---     0.071   R19C106B.FCI to   R19C106B.FCO SLICE_0
+ROUTE         1     0.000   R19C106B.FCO to   R19C106C.FCI n246
+FCITOFCO_D  ---     0.071   R19C106C.FCI to   R19C106C.FCO SLICE_4
+ROUTE         1     0.000   R19C106C.FCO to   R19C106D.FCI n247
+FCITOFCO_D  ---     0.071   R19C106D.FCI to   R19C106D.FCO SLICE_1
+ROUTE         1     0.000   R19C106D.FCO to   R19C107A.FCI n248
+FCITOF1_DE  ---     0.474   R19C107A.FCI to    R19C107A.F1 SLICE_3
+ROUTE         1     0.558    R19C107A.F1 to    R19C107D.B1 n24
+CTOF_DEL    ---     0.236    R19C107D.B1 to    R19C107D.F1 SSD_ADC/SLICE_50
+ROUTE         1     0.000    R19C107D.F1 to   R19C107D.DI1 SSD_ADC/n166 (to clk_80mhz)
+                  --------
+                    4.015   (47.2% logic, 52.8% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R20C124D.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_50:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to   R19C107D.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.260ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i10  (to clk_80mhz +)
+
+   Delay:               4.006ns  (47.2% logic, 52.8% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.006ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.260ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R24C82B.CLK to     R24C82B.Q1 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         7     0.818     R24C82B.Q1 to     R24C81C.B0 SSD_ADC/box_ave/count_1
+CTOF_DEL    ---     0.236     R24C81C.B0 to     R24C81C.F0 SSD_ADC/box_ave/SLICE_65
+ROUTE         8     1.296     R24C81C.F0 to     R23C80B.A0 SSD_ADC/box_ave/n4
+C0TOFCO_DE  ---     0.447     R23C80B.A0 to    R23C80B.FCO SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000    R23C80B.FCO to    R23C80C.FCI SSD_ADC/box_ave/n255
+FCITOFCO_D  ---     0.071    R23C80C.FCI to    R23C80C.FCO SSD_ADC/box_ave/SLICE_19
+ROUTE         1     0.000    R23C80C.FCO to    R23C80D.FCI SSD_ADC/box_ave/n256
+FCITOFCO_D  ---     0.071    R23C80D.FCI to    R23C80D.FCO SSD_ADC/box_ave/SLICE_18
+ROUTE         1     0.000    R23C80D.FCO to    R23C81A.FCI SSD_ADC/box_ave/n257
+FCITOFCO_D  ---     0.071    R23C81A.FCI to    R23C81A.FCO SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000    R23C81A.FCO to    R23C81B.FCI SSD_ADC/box_ave/n258
+FCITOF1_DE  ---     0.474    R23C81B.FCI to     R23C81B.F1 SSD_ADC/box_ave/SLICE_16
+ROUTE         1     0.000     R23C81B.F1 to    R23C81B.DI1 SSD_ADC/box_ave/n50 (to clk_80mhz)
+                  --------
+                    4.006   (47.2% logic, 52.8% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.260ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i10  (to clk_80mhz +)
+
+   Delay:               4.006ns  (47.2% logic, 52.8% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.006ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.260ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R24C82B.CLK to     R24C82B.Q1 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         7     0.818     R24C82B.Q1 to     R24C81C.B0 SSD_ADC/box_ave/count_1
+CTOF_DEL    ---     0.236     R24C81C.B0 to     R24C81C.F0 SSD_ADC/box_ave/SLICE_65
+ROUTE         8     1.296     R24C81C.F0 to     R23C80B.A1 SSD_ADC/box_ave/n4
+C1TOFCO_DE  ---     0.447     R23C80B.A1 to    R23C80B.FCO SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000    R23C80B.FCO to    R23C80C.FCI SSD_ADC/box_ave/n255
+FCITOFCO_D  ---     0.071    R23C80C.FCI to    R23C80C.FCO SSD_ADC/box_ave/SLICE_19
+ROUTE         1     0.000    R23C80C.FCO to    R23C80D.FCI SSD_ADC/box_ave/n256
+FCITOFCO_D  ---     0.071    R23C80D.FCI to    R23C80D.FCO SSD_ADC/box_ave/SLICE_18
+ROUTE         1     0.000    R23C80D.FCO to    R23C81A.FCI SSD_ADC/box_ave/n257
+FCITOFCO_D  ---     0.071    R23C81A.FCI to    R23C81A.FCO SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000    R23C81A.FCO to    R23C81B.FCI SSD_ADC/box_ave/n258
+FCITOF1_DE  ---     0.474    R23C81B.FCI to     R23C81B.F1 SSD_ADC/box_ave/SLICE_16
+ROUTE         1     0.000     R23C81B.F1 to    R23C81B.DI1 SSD_ADC/box_ave/n50 (to clk_80mhz)
+                  --------
+                    4.006   (47.2% logic, 52.8% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.262ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pwm_inst/counter_41__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        pwm_inst/DataInReg_i0_i5  (to clk_80mhz +)
+                   FF                        pwm_inst/DataInReg_i0_i4
+
+   Delay:               3.865ns  (25.8% logic, 74.2% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.865ns physical path delay pwm_inst/SLICE_8 to SLICE_42 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.127ns CE_SET requirement (totaling 12.127ns) by 8.262ns
+
+ Physical Path Details:
+
+      Data path pwm_inst/SLICE_8 to SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R13C82B.CLK to     R13C82B.Q0 pwm_inst/SLICE_8 (from clk_80mhz)
+ROUTE         3     0.982     R13C82B.Q0 to     R12C82A.B0 pwm_inst/counter_1
+CTOF_DEL    ---     0.236     R12C82A.B0 to     R12C82A.F0 pwm_inst/SLICE_62
+ROUTE         1     0.747     R12C82A.F0 to     R12C82D.A0 pwm_inst/n14
+CTOF_DEL    ---     0.236     R12C82D.A0 to     R12C82D.F0 pwm_inst/SLICE_54
+ROUTE         4     1.139     R12C82D.F0 to     R11C83C.CE pwm_inst/clk_80mhz_enable_13 (to clk_80mhz)
+                  --------
+                    3.865   (25.8% logic, 74.2% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to pwm_inst/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R13C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R11C83C.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 8.268ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i8  (to clk_80mhz +)
+
+   Delay:               3.998ns  (47.3% logic, 52.7% route), 7 logic levels.
+
+ Constraint Details:
+
+      3.998ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_17 meets
+     12.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 8.268ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R24C82B.CLK to     R24C82B.Q1 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         7     0.818     R24C82B.Q1 to     R24C81C.B0 SSD_ADC/box_ave/count_1
+CTOF_DEL    ---     0.236     R24C81C.B0 to     R24C81C.F0 SSD_ADC/box_ave/SLICE_65
+ROUTE         8     1.288     R24C81C.F0 to     R23C80A.B1 SSD_ADC/box_ave/n4
+C1TOFCO_DE  ---     0.447     R23C80A.B1 to    R23C80A.FCO SSD_ADC/box_ave/SLICE_21
+ROUTE         1     0.000    R23C80A.FCO to    R23C80B.FCI SSD_ADC/box_ave/n254
+FCITOFCO_D  ---     0.071    R23C80B.FCI to    R23C80B.FCO SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000    R23C80B.FCO to    R23C80C.FCI SSD_ADC/box_ave/n255
+FCITOFCO_D  ---     0.071    R23C80C.FCI to    R23C80C.FCO SSD_ADC/box_ave/SLICE_19
+ROUTE         1     0.000    R23C80C.FCO to    R23C80D.FCI SSD_ADC/box_ave/n256
+FCITOFCO_D  ---     0.071    R23C80D.FCI to    R23C80D.FCO SSD_ADC/box_ave/SLICE_18
+ROUTE         1     0.000    R23C80D.FCO to    R23C81A.FCI SSD_ADC/box_ave/n257
+FCITOF1_DE  ---     0.474    R23C81A.FCI to     R23C81A.F1 SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000     R23C81A.F1 to    R23C81A.DI1 SSD_ADC/box_ave/n52 (to clk_80mhz)
+                  --------
+                    3.998   (47.3% logic, 52.7% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     2.690  PLL_BL0.CLKOP to    R23C81A.CLK clk_80mhz
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  256.016MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_in" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 35.000ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            clk_in
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 25.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |   83.333 MHz|  256.016 MHz|   6  
+                                        |             |             |
+FREQUENCY PORT "clk_in" 25.000000 MHz ; |   25.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_80mhz   Source: PLL1/PLLInst_0.CLKOP   Loads: 47
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 705 paths, 2 nets, and 372 connections (96.88% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Mon Jun 24 01:03:25 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitADCTestLattice_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/promote.xml OneBitADCTestLattice_First_Implementation.ncd OneBitADCTestLattice_First_Implementation.prf 
+Design file:     OneBitADCTestLattice_First_Implementation.ncd
+Preference file: OneBitADCTestLattice_First_Implementation.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_in_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            705 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i1  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i1  (to clk_80mhz +)
+
+   Delay:               0.295ns  (81.4% logic, 18.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay SSD_ADC/box_ave/SLICE_20 to SSD_ADC/box_ave/SLICE_20 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_20 to SSD_ADC/box_ave/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R23C80B.CLK to     R23C80B.Q0 SSD_ADC/box_ave/SLICE_20 (from clk_80mhz)
+ROUTE         1     0.055     R23C80B.Q0 to     R23C80B.D0 SSD_ADC/box_ave/n10
+CTOF_DEL    ---     0.076     R23C80B.D0 to     R23C80B.F0 SSD_ADC/box_ave/SLICE_20
+ROUTE         1     0.000     R23C80B.F0 to    R23C80B.DI0 SSD_ADC/box_ave/n59 (to clk_80mhz)
+                  --------
+                    0.295   (81.4% logic, 18.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C80B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C80B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i8  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/ave_data_out_i0_i5  (to clk_80mhz +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_38 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R23C81A.CLK to     R23C81A.Q1 SSD_ADC/box_ave/SLICE_17 (from clk_80mhz)
+ROUTE         2     0.131     R23C81A.Q1 to     R23C81D.M1 SSD_ADC/box_ave/accum_8 (to clk_80mhz)
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/sample_d1_30  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/sample_d2_31  (to clk_80mhz +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay SSD_ADC/box_ave/SLICE_33 to SSD_ADC/box_ave/SLICE_33 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_33 to SSD_ADC/box_ave/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R25C82D.CLK to     R25C82D.Q0 SSD_ADC/box_ave/SLICE_33 (from clk_80mhz)
+ROUTE         3     0.131     R25C82D.Q0 to     R25C82D.M1 SSD_ADC/box_ave/sample_d1 (to clk_80mhz)
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R25C82D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R25C82D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i7  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/ave_data_out_i0_i4  (to clk_80mhz +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_38 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R23C81A.CLK to     R23C81A.Q0 SSD_ADC/box_ave/SLICE_17 (from clk_80mhz)
+ROUTE         2     0.131     R23C81A.Q0 to     R23C81D.M0 SSD_ADC/box_ave/accum_7 (to clk_80mhz)
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i9  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i9  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay SSD_ADC/box_ave/SLICE_16 to SSD_ADC/box_ave/SLICE_16 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_16 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R23C81B.CLK to     R23C81B.Q0 SSD_ADC/box_ave/SLICE_16 (from clk_80mhz)
+ROUTE         2     0.057     R23C81B.Q0 to     R23C81B.D0 SSD_ADC/box_ave/accum_9
+CTOF_DEL    ---     0.076     R23C81B.D0 to     R23C81B.F0 SSD_ADC/box_ave/SLICE_16
+ROUTE         1     0.000     R23C81B.F0 to    R23C81B.DI0 SSD_ADC/box_ave/n51 (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i7  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/accum_40__i7  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_17 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_17 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R23C81A.CLK to     R23C81A.Q0 SSD_ADC/box_ave/SLICE_17 (from clk_80mhz)
+ROUTE         2     0.057     R23C81A.Q0 to     R23C81A.D0 SSD_ADC/box_ave/accum_7
+CTOF_DEL    ---     0.076     R23C81A.D0 to     R23C81A.F0 SSD_ADC/box_ave/SLICE_17
+ROUTE         1     0.000     R23C81A.F0 to    R23C81A.DI0 SSD_ADC/box_ave/n53 (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i2  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/count_42__i2  (to clk_80mhz +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay SSD_ADC/box_ave/SLICE_28 to SSD_ADC/box_ave/SLICE_28 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_28 to SSD_ADC/box_ave/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R24C81B.CLK to     R24C81B.Q0 SSD_ADC/box_ave/SLICE_28 (from clk_80mhz)
+ROUTE        13     0.058     R24C81B.Q0 to     R24C81B.D0 SSD_ADC/box_ave/count_2
+CTOF_DEL    ---     0.076     R24C81B.D0 to     R24C81B.F0 SSD_ADC/box_ave/SLICE_28
+ROUTE         1     0.000     R24C81B.F0 to    R24C81B.DI0 SSD_ADC/box_ave/n18 (to clk_80mhz)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R24C81B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R24C81B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.181ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/count_42__i0  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/count_42__i0  (to clk_80mhz +)
+
+   Delay:               0.300ns  (80.0% logic, 20.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.300ns physical path delay SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_27 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.181ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_27 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R24C82B.CLK to     R24C82B.Q0 SSD_ADC/box_ave/SLICE_27 (from clk_80mhz)
+ROUTE         8     0.060     R24C82B.Q0 to     R24C82B.D0 SSD_ADC/box_ave/count_0
+CTOF_DEL    ---     0.076     R24C82B.D0 to     R24C82B.F0 SSD_ADC/box_ave/SLICE_27
+ROUTE         1     0.000     R24C82B.F0 to    R24C82B.DI0 SSD_ADC/box_ave/n20 (to clk_80mhz)
+                  --------
+                    0.300   (80.0% logic, 20.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R24C82B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.193ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/sigma_i0  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/sigma_i0  (to clk_80mhz +)
+
+   Delay:               0.312ns  (76.9% logic, 23.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.312ns physical path delay SSD_ADC/SLICE_46 to SSD_ADC/SLICE_46 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.193ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/SLICE_46 to SSD_ADC/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164   R20C106D.CLK to    R20C106D.Q0 SSD_ADC/SLICE_46 (from clk_80mhz)
+ROUTE         3     0.072    R20C106D.Q0 to    R20C106D.C0 sigma_0
+CTOF_DEL    ---     0.076    R20C106D.C0 to    R20C106D.F0 SSD_ADC/SLICE_46
+ROUTE         1     0.000    R20C106D.F0 to   R20C106D.DI0 SSD_ADC/sigma_9_N_1_0 (to clk_80mhz)
+                  --------
+                    0.312   (76.9% logic, 23.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to   R20C106D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to   R20C106D.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.193ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SSD_ADC/box_ave/accum_40__i3  (from clk_80mhz +)
+   Destination:    FF         Data in        SSD_ADC/box_ave/ave_data_out_i0_i0  (to clk_80mhz +)
+
+   Delay:               0.311ns  (52.7% logic, 47.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.311ns physical path delay SSD_ADC/box_ave/SLICE_19 to SSD_ADC/box_ave/SLICE_36 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.193ns
+
+ Physical Path Details:
+
+      Data path SSD_ADC/box_ave/SLICE_19 to SSD_ADC/box_ave/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R23C80C.CLK to     R23C80C.Q0 SSD_ADC/box_ave/SLICE_19 (from clk_80mhz)
+ROUTE         2     0.147     R23C80C.Q0 to     R23C81C.M0 SSD_ADC/box_ave/accum_3 (to clk_80mhz)
+                  --------
+                    0.311   (52.7% logic, 47.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C80C.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to SSD_ADC/box_ave/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        47     0.892  PLL_BL0.CLKOP to    R23C81C.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_in" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 25.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |     0.000 ns|     0.176 ns|   2  
+                                        |             |             |
+FREQUENCY PORT "clk_in" 25.000000 MHz ; |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_80mhz   Source: PLL1/PLLInst_0.CLKOP   Loads: 47
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 705 paths, 2 nets, and 372 connections (96.88% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

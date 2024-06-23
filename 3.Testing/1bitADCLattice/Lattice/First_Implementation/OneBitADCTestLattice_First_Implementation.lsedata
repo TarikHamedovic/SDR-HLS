@@ -1,0 +1,2068 @@
+<top name = "ADC_top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "clk_in"  type = "port" />
+    <clockitem name = "clk_80mhz"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 2
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "ADC_top">
+
+    <!--
+        Top Level Pins: 14
+    -->
+
+    <pins>
+        <pitem  name = "clk_in"  direction = "in"  />
+        <pitem  name = "rstn"  direction = "in"  />
+        <pitem  name = "digital_out[7]"  direction = "out"  />
+        <pitem  name = "digital_out[6]"  direction = "out"  />
+        <pitem  name = "digital_out[5]"  direction = "out"  />
+        <pitem  name = "digital_out[4]"  direction = "out"  />
+        <pitem  name = "digital_out[3]"  direction = "out"  />
+        <pitem  name = "digital_out[2]"  direction = "out"  />
+        <pitem  name = "digital_out[1]"  direction = "out"  />
+        <pitem  name = "digital_out[0]"  direction = "out"  />
+        <pitem  name = "analog_cmp"  direction = "in"  />
+        <pitem  name = "analog_out"  direction = "out"  />
+        <pitem  name = "sample_rdy"  direction = "out"  />
+        <pitem  name = "pwm_out"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 51
+    -->
+
+    <instance  name = "PLL1/PLLInst_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "CLKI"  direction = "in"  />
+        <pitem  name = "CLKOP"  direction = "out"  />
+        <pitem  name = "CLKFB"  direction = "in"  />
+        <pitem  name = "PHASESEL1"  direction = "in"  />
+        <pitem  name = "PHASESEL0"  direction = "in"  />
+        <pitem  name = "PHASEDIR"  direction = "in"  />
+        <pitem  name = "PHASESTEP"  direction = "in"  />
+        <pitem  name = "PHASELOADREG"  direction = "in"  />
+        <pitem  name = "STDBY"  direction = "in"  />
+        <pitem  name = "PLLWAKESYNC"  direction = "in"  />
+        <pitem  name = "RST"  direction = "in"  />
+        <pitem  name = "ENCLKOP"  direction = "in"  />
+        <pitem  name = "ENCLKOS"  direction = "in"  />
+        <pitem  name = "ENCLKOS2"  direction = "in"  />
+        <pitem  name = "ENCLKOS3"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk_in"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "PLL1/scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "PLL1/scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/scuba_vhi_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        </pins>
+
+        <nets>
+        </nets>
+    </instance>
+
+    <instance  name = "digital_out_i_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i[7]"  direction = "in"  />
+        <pitem  name = "i[6]"  direction = "in"  />
+        <pitem  name = "i[5]"  direction = "in"  />
+        <pitem  name = "i[4]"  direction = "in"  />
+        <pitem  name = "i[3]"  direction = "in"  />
+        <pitem  name = "i[2]"  direction = "in"  />
+        <pitem  name = "i[1]"  direction = "in"  />
+        <pitem  name = "i[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "digital_out_i[7]"  />
+        <nitem  name = "digital_out_i[6]"  />
+        <nitem  name = "digital_out_i[5]"  />
+        <nitem  name = "digital_out_i[4]"  />
+        <nitem  name = "digital_out_i[3]"  />
+        <nitem  name = "digital_out_i[2]"  />
+        <nitem  name = "digital_out_i[1]"  />
+        <nitem  name = "digital_out_i[0]"  />
+        <nitem  name = "digital_out[7]"  />
+        <nitem  name = "digital_out[6]"  />
+        <nitem  name = "digital_out[5]"  />
+        <nitem  name = "digital_out[4]"  />
+        <nitem  name = "digital_out[3]"  />
+        <nitem  name = "digital_out[2]"  />
+        <nitem  name = "digital_out[1]"  />
+        <nitem  name = "digital_out[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/sigma"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/sigma[9]"  />
+        <nitem  name = "SSD_ADC/sigma[8]"  />
+        <nitem  name = "SSD_ADC/sigma[7]"  />
+        <nitem  name = "SSD_ADC/sigma[6]"  />
+        <nitem  name = "SSD_ADC/sigma[5]"  />
+        <nitem  name = "SSD_ADC/sigma[4]"  />
+        <nitem  name = "SSD_ADC/sigma[3]"  />
+        <nitem  name = "SSD_ADC/sigma[2]"  />
+        <nitem  name = "SSD_ADC/sigma[1]"  />
+        <nitem  name = "SSD_ADC/sigma[0]"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[9]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[8]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[7]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[6]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[5]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[4]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[3]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[2]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[1]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/rstn_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rstn"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/reduce_and_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/sigma[9]"  />
+        <nitem  name = "SSD_ADC/sigma[8]"  />
+        <nitem  name = "SSD_ADC/sigma[7]"  />
+        <nitem  name = "SSD_ADC/sigma[6]"  />
+        <nitem  name = "SSD_ADC/sigma[5]"  />
+        <nitem  name = "SSD_ADC/sigma[4]"  />
+        <nitem  name = "SSD_ADC/sigma[3]"  />
+        <nitem  name = "SSD_ADC/sigma[2]"  />
+        <nitem  name = "SSD_ADC/sigma[1]"  />
+        <nitem  name = "SSD_ADC/sigma[0]"  />
+        <nitem  name = "SSD_ADC/n5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/i8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/n5"  />
+        <nitem  name = "SSD_ADC/n6"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/add_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "analog_out"  />
+        <nitem  name = "SSD_ADC/sigma[9]"  />
+        <nitem  name = "SSD_ADC/sigma[8]"  />
+        <nitem  name = "SSD_ADC/sigma[7]"  />
+        <nitem  name = "SSD_ADC/sigma[6]"  />
+        <nitem  name = "SSD_ADC/sigma[5]"  />
+        <nitem  name = "SSD_ADC/sigma[4]"  />
+        <nitem  name = "SSD_ADC/sigma[3]"  />
+        <nitem  name = "SSD_ADC/sigma[2]"  />
+        <nitem  name = "SSD_ADC/sigma[1]"  />
+        <nitem  name = "SSD_ADC/sigma[0]"  />
+        <nitem  name = "SSD_ADC/n9"  />
+        <nitem  name = "SSD_ADC/n10"  />
+        <nitem  name = "SSD_ADC/n11"  />
+        <nitem  name = "SSD_ADC/n12"  />
+        <nitem  name = "SSD_ADC/n13"  />
+        <nitem  name = "SSD_ADC/n14"  />
+        <nitem  name = "SSD_ADC/n15"  />
+        <nitem  name = "SSD_ADC/n16"  />
+        <nitem  name = "SSD_ADC/n17"  />
+        <nitem  name = "SSD_ADC/n18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/mux_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/sigma[9]"  />
+        <nitem  name = "SSD_ADC/sigma[8]"  />
+        <nitem  name = "SSD_ADC/sigma[7]"  />
+        <nitem  name = "SSD_ADC/sigma[6]"  />
+        <nitem  name = "SSD_ADC/sigma[5]"  />
+        <nitem  name = "SSD_ADC/sigma[4]"  />
+        <nitem  name = "SSD_ADC/sigma[3]"  />
+        <nitem  name = "SSD_ADC/sigma[2]"  />
+        <nitem  name = "SSD_ADC/sigma[1]"  />
+        <nitem  name = "SSD_ADC/sigma[0]"  />
+        <nitem  name = "SSD_ADC/n6"  />
+        <nitem  name = "SSD_ADC/n9"  />
+        <nitem  name = "SSD_ADC/n10"  />
+        <nitem  name = "SSD_ADC/n11"  />
+        <nitem  name = "SSD_ADC/n12"  />
+        <nitem  name = "SSD_ADC/n13"  />
+        <nitem  name = "SSD_ADC/n14"  />
+        <nitem  name = "SSD_ADC/n15"  />
+        <nitem  name = "SSD_ADC/n16"  />
+        <nitem  name = "SSD_ADC/n17"  />
+        <nitem  name = "SSD_ADC/n18"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[9]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[8]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[7]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[6]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[5]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[4]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[3]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[2]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[1]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/accum_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/sigma[9]"  />
+        <nitem  name = "SSD_ADC/sigma[8]"  />
+        <nitem  name = "SSD_ADC/sigma[7]"  />
+        <nitem  name = "SSD_ADC/sigma[6]"  />
+        <nitem  name = "SSD_ADC/sigma[5]"  />
+        <nitem  name = "SSD_ADC/sigma[4]"  />
+        <nitem  name = "SSD_ADC/sigma[3]"  />
+        <nitem  name = "SSD_ADC/sigma[2]"  />
+        <nitem  name = "SSD_ADC/accum[7]"  />
+        <nitem  name = "SSD_ADC/accum[6]"  />
+        <nitem  name = "SSD_ADC/accum[5]"  />
+        <nitem  name = "SSD_ADC/accum[4]"  />
+        <nitem  name = "SSD_ADC/accum[3]"  />
+        <nitem  name = "SSD_ADC/accum[2]"  />
+        <nitem  name = "SSD_ADC/accum[1]"  />
+        <nitem  name = "SSD_ADC/accum[0]"  />
+        <nitem  name = "SSD_ADC/rollover"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[7]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[6]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[5]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[4]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[3]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[2]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[1]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/sigma_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "analog_out"  />
+        <nitem  name = "SSD_ADC/rollover"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[9]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[8]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[7]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[6]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[5]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[4]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[3]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[2]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[1]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_31[0]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[9]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[8]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[7]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[6]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[5]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[4]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[3]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[2]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[1]"  />
+        <nitem  name = "SSD_ADC/sigma_9__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/accum"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/accum[7]"  />
+        <nitem  name = "SSD_ADC/accum[6]"  />
+        <nitem  name = "SSD_ADC/accum[5]"  />
+        <nitem  name = "SSD_ADC/accum[4]"  />
+        <nitem  name = "SSD_ADC/accum[3]"  />
+        <nitem  name = "SSD_ADC/accum[2]"  />
+        <nitem  name = "SSD_ADC/accum[1]"  />
+        <nitem  name = "SSD_ADC/accum[0]"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[7]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[6]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[5]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[4]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[3]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[2]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[1]"  />
+        <nitem  name = "SSD_ADC/accum_7__N_13[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/accum_rdy_25"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/rollover"  />
+        <nitem  name = "SSD_ADC/accum_rdy"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/counter[9]"  />
+        <nitem  name = "SSD_ADC/counter[8]"  />
+        <nitem  name = "SSD_ADC/counter[7]"  />
+        <nitem  name = "SSD_ADC/counter[6]"  />
+        <nitem  name = "SSD_ADC/counter[5]"  />
+        <nitem  name = "SSD_ADC/counter[4]"  />
+        <nitem  name = "SSD_ADC/counter[3]"  />
+        <nitem  name = "SSD_ADC/counter[2]"  />
+        <nitem  name = "SSD_ADC/counter[1]"  />
+        <nitem  name = "SSD_ADC/counter[0]"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[9]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[8]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[7]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[6]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[5]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[4]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[3]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[2]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[1]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/counter_9__I_0_28"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "SSD_ADC/pwr"  />
+        <nitem  name = "SSD_ADC/counter[9]"  />
+        <nitem  name = "SSD_ADC/counter[8]"  />
+        <nitem  name = "SSD_ADC/counter[7]"  />
+        <nitem  name = "SSD_ADC/counter[6]"  />
+        <nitem  name = "SSD_ADC/counter[5]"  />
+        <nitem  name = "SSD_ADC/counter[4]"  />
+        <nitem  name = "SSD_ADC/counter[3]"  />
+        <nitem  name = "SSD_ADC/counter[2]"  />
+        <nitem  name = "SSD_ADC/counter[1]"  />
+        <nitem  name = "SSD_ADC/counter[0]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[9]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[8]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[7]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[6]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[5]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[4]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[3]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[2]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[1]"  />
+        <nitem  name = "SSD_ADC/counter_9__N_21[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/counter_9__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/counter[9]"  />
+        <nitem  name = "SSD_ADC/counter[8]"  />
+        <nitem  name = "SSD_ADC/counter[7]"  />
+        <nitem  name = "SSD_ADC/counter[6]"  />
+        <nitem  name = "SSD_ADC/counter[5]"  />
+        <nitem  name = "SSD_ADC/counter[4]"  />
+        <nitem  name = "SSD_ADC/counter[3]"  />
+        <nitem  name = "SSD_ADC/counter[2]"  />
+        <nitem  name = "SSD_ADC/counter[1]"  />
+        <nitem  name = "SSD_ADC/counter[0]"  />
+        <nitem  name = "SSD_ADC/rollover_N_41"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/rollover_27"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/rollover"  />
+        <nitem  name = "SSD_ADC/rstn_N_12"  />
+        <nitem  name = "SSD_ADC/rollover_N_41"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/delta_22"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "analog_cmp"  />
+        <nitem  name = "analog_out"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/rstn_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rstn"  />
+        <nitem  name = "pwm_inst/rstn_N_92"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/counter_7__I_0_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "pwm_inst/pwr"  />
+        <nitem  name = "pwm_inst/counter[7]"  />
+        <nitem  name = "pwm_inst/counter[6]"  />
+        <nitem  name = "pwm_inst/counter[5]"  />
+        <nitem  name = "pwm_inst/counter[4]"  />
+        <nitem  name = "pwm_inst/counter[3]"  />
+        <nitem  name = "pwm_inst/counter[2]"  />
+        <nitem  name = "pwm_inst/counter[1]"  />
+        <nitem  name = "pwm_inst/counter[0]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[7]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[6]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[5]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[4]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[3]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[2]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[1]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/counter_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "pwm_inst/counter[7]"  />
+        <nitem  name = "pwm_inst/counter[6]"  />
+        <nitem  name = "pwm_inst/counter[5]"  />
+        <nitem  name = "pwm_inst/counter[4]"  />
+        <nitem  name = "pwm_inst/counter[3]"  />
+        <nitem  name = "pwm_inst/counter[2]"  />
+        <nitem  name = "pwm_inst/counter[1]"  />
+        <nitem  name = "pwm_inst/counter[0]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_109"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/add_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "digital_out[7]"  />
+        <nitem  name = "digital_out[6]"  />
+        <nitem  name = "digital_out[5]"  />
+        <nitem  name = "digital_out[4]"  />
+        <nitem  name = "digital_out[3]"  />
+        <nitem  name = "digital_out[2]"  />
+        <nitem  name = "digital_out[1]"  />
+        <nitem  name = "digital_out[0]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[7]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[6]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[5]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[4]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[3]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[2]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[1]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/DataInReg_7__I_0_19"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/DataInReg[7]"  />
+        <nitem  name = "pwm_inst/DataInReg[6]"  />
+        <nitem  name = "pwm_inst/DataInReg[5]"  />
+        <nitem  name = "pwm_inst/DataInReg[4]"  />
+        <nitem  name = "pwm_inst/DataInReg[3]"  />
+        <nitem  name = "pwm_inst/DataInReg[2]"  />
+        <nitem  name = "pwm_inst/DataInReg[1]"  />
+        <nitem  name = "pwm_inst/DataInReg[0]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_109"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[7]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[6]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[5]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[4]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[3]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[2]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[1]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_101[0]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[7]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[6]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[5]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[4]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[3]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[2]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[1]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/DataInReg_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/pwr"  />
+        <nitem  name = "pwm_inst/counter[7]"  />
+        <nitem  name = "pwm_inst/counter[6]"  />
+        <nitem  name = "pwm_inst/counter[5]"  />
+        <nitem  name = "pwm_inst/counter[4]"  />
+        <nitem  name = "pwm_inst/counter[3]"  />
+        <nitem  name = "pwm_inst/counter[2]"  />
+        <nitem  name = "pwm_inst/counter[1]"  />
+        <nitem  name = "pwm_inst/counter[0]"  />
+        <nitem  name = "pwm_inst/DataInReg[7]"  />
+        <nitem  name = "pwm_inst/DataInReg[6]"  />
+        <nitem  name = "pwm_inst/DataInReg[5]"  />
+        <nitem  name = "pwm_inst/DataInReg[4]"  />
+        <nitem  name = "pwm_inst/DataInReg[3]"  />
+        <nitem  name = "pwm_inst/DataInReg[2]"  />
+        <nitem  name = "pwm_inst/DataInReg[1]"  />
+        <nitem  name = "pwm_inst/DataInReg[0]"  />
+        <nitem  name = "pwm_inst/PWMOut_N_111"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/PWMOut_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/PWMOut_N_111"  />
+        <nitem  name = "pwm_inst/PWMOut_N_110"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/DataInReg"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "pwm_inst/DataInReg[7]"  />
+        <nitem  name = "pwm_inst/DataInReg[6]"  />
+        <nitem  name = "pwm_inst/DataInReg[5]"  />
+        <nitem  name = "pwm_inst/DataInReg[4]"  />
+        <nitem  name = "pwm_inst/DataInReg[3]"  />
+        <nitem  name = "pwm_inst/DataInReg[2]"  />
+        <nitem  name = "pwm_inst/DataInReg[1]"  />
+        <nitem  name = "pwm_inst/DataInReg[0]"  />
+        <nitem  name = "pwm_inst/rstn_N_92"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[7]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[6]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[5]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[4]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[3]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[2]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[1]"  />
+        <nitem  name = "pwm_inst/DataInReg_7__N_93[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/PWMOut_17"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "pwm_out"  />
+        <nitem  name = "pwm_inst/rstn_N_92"  />
+        <nitem  name = "pwm_inst/PWMOut_N_110"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pwm_inst/counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwm_inst/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "pwm_inst/counter[7]"  />
+        <nitem  name = "pwm_inst/counter[6]"  />
+        <nitem  name = "pwm_inst/counter[5]"  />
+        <nitem  name = "pwm_inst/counter[4]"  />
+        <nitem  name = "pwm_inst/counter[3]"  />
+        <nitem  name = "pwm_inst/counter[2]"  />
+        <nitem  name = "pwm_inst/counter[1]"  />
+        <nitem  name = "pwm_inst/counter[0]"  />
+        <nitem  name = "pwm_inst/rstn_N_92"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[7]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[6]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[5]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[4]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[3]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[2]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[1]"  />
+        <nitem  name = "pwm_inst/counter_7__N_83[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/sample_d2_31"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/box_ave/sample_d1"  />
+        <nitem  name = "SSD_ADC/box_ave/sample_d2"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/raw_data_d1"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/accum[7]"  />
+        <nitem  name = "SSD_ADC/accum[6]"  />
+        <nitem  name = "SSD_ADC/accum[5]"  />
+        <nitem  name = "SSD_ADC/accum[4]"  />
+        <nitem  name = "SSD_ADC/accum[3]"  />
+        <nitem  name = "SSD_ADC/accum[2]"  />
+        <nitem  name = "SSD_ADC/accum[1]"  />
+        <nitem  name = "SSD_ADC/accum[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/result_valid_33"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "sample_rdy"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/count"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/box_ave/count[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/sample_d2_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/sample_d2"  />
+        <nitem  name = "SSD_ADC/box_ave/sample_d2_N_81"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/sample_d1_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/sample_d1"  />
+        <nitem  name = "SSD_ADC/box_ave/accumulate"  />
+        <nitem  name = "SSD_ADC/box_ave/sample_d2_N_81"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/count_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "SSD_ADC/box_ave/count[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result_N_82"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/accumulate_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/accumulate"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result_N_82"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/add_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "SSD_ADC/box_ave/pwr"  />
+        <nitem  name = "SSD_ADC/box_ave/count[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/count_2__I_0_37"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/count[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/accumulate"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_66[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/count_2__N_63[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/accum"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/add_21"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/n40"  />
+        <nitem  name = "SSD_ADC/box_ave/n41"  />
+        <nitem  name = "SSD_ADC/box_ave/n42"  />
+        <nitem  name = "SSD_ADC/box_ave/n43"  />
+        <nitem  name = "SSD_ADC/box_ave/n44"  />
+        <nitem  name = "SSD_ADC/box_ave/n45"  />
+        <nitem  name = "SSD_ADC/box_ave/n46"  />
+        <nitem  name = "SSD_ADC/box_ave/n47"  />
+        <nitem  name = "SSD_ADC/box_ave/n48"  />
+        <nitem  name = "SSD_ADC/box_ave/n49"  />
+        <nitem  name = "SSD_ADC/box_ave/n50"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/mux_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/raw_data_d1[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result_N_82"  />
+        <nitem  name = "SSD_ADC/box_ave/n40"  />
+        <nitem  name = "SSD_ADC/box_ave/n41"  />
+        <nitem  name = "SSD_ADC/box_ave/n42"  />
+        <nitem  name = "SSD_ADC/box_ave/n43"  />
+        <nitem  name = "SSD_ADC/box_ave/n44"  />
+        <nitem  name = "SSD_ADC/box_ave/n45"  />
+        <nitem  name = "SSD_ADC/box_ave/n46"  />
+        <nitem  name = "SSD_ADC/box_ave/n47"  />
+        <nitem  name = "SSD_ADC/box_ave/n48"  />
+        <nitem  name = "SSD_ADC/box_ave/n49"  />
+        <nitem  name = "SSD_ADC/box_ave/n50"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/accum_10__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[10]"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[10]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/accum[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/accumulate"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_69[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum_10__N_52[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/ave_data_out"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "digital_out_i[7]"  />
+        <nitem  name = "digital_out_i[6]"  />
+        <nitem  name = "digital_out_i[5]"  />
+        <nitem  name = "digital_out_i[4]"  />
+        <nitem  name = "digital_out_i[3]"  />
+        <nitem  name = "digital_out_i[2]"  />
+        <nitem  name = "digital_out_i[1]"  />
+        <nitem  name = "digital_out_i[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/rstn_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rstn"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/ave_data_out_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "digital_out_i[7]"  />
+        <nitem  name = "digital_out_i[6]"  />
+        <nitem  name = "digital_out_i[5]"  />
+        <nitem  name = "digital_out_i[4]"  />
+        <nitem  name = "digital_out_i[3]"  />
+        <nitem  name = "digital_out_i[2]"  />
+        <nitem  name = "digital_out_i[1]"  />
+        <nitem  name = "digital_out_i[0]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[10]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[9]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[8]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/accum[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/latch_result"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[7]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[6]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[5]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[4]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[3]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[2]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[1]"  />
+        <nitem  name = "SSD_ADC/box_ave/ave_data_out_7__N_42[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "SSD_ADC/box_ave/sample_d1_30"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "r"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "SSD_ADC/box_ave/gnd"  />
+        <nitem  name = "clk_80mhz"  />
+        <nitem  name = "SSD_ADC/accum_rdy"  />
+        <nitem  name = "SSD_ADC/box_ave/sample_d1"  />
+        <nitem  name = "SSD_ADC/box_ave/rstn_N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "PLL1/PLL1"  />
+    <instance  name = "SSD_ADC"  />
+    <instance  name = "box_ave"  />
+    <instance  name = "pwm_inst"  />
+    <!--
+        REG instances in netlist: 16
+    -->
+
+    <regs>
+        <reg  name = "SSD_ADC/sigma"  />
+        <reg  name = "SSD_ADC/accum"  />
+        <reg  name = "SSD_ADC/accum_rdy_25"  />
+        <reg  name = "SSD_ADC/counter"  />
+        <reg  name = "SSD_ADC/rollover_27"  />
+        <reg  name = "SSD_ADC/delta_22"  />
+        <reg  name = "pwm_inst/DataInReg"  />
+        <reg  name = "pwm_inst/PWMOut_17"  />
+        <reg  name = "pwm_inst/counter"  />
+        <reg  name = "SSD_ADC/box_ave/sample_d2_31"  />
+        <reg  name = "SSD_ADC/box_ave/raw_data_d1"  />
+        <reg  name = "SSD_ADC/box_ave/result_valid_33"  />
+        <reg  name = "SSD_ADC/box_ave/count"  />
+        <reg  name = "SSD_ADC/box_ave/accum"  />
+        <reg  name = "SSD_ADC/box_ave/ave_data_out"  />
+        <reg  name = "SSD_ADC/box_ave/sample_d1_30"  />
+    </regs>
+
+    <!--
+        Views in design "ADC_top": 3
+    -->
+
+    <views>
+        <view  name = "PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)"  />
+        <view  name = "box_ave(LPF_DEPTH_BITS=3)"  />
+        <view  name = "sigmadelta_adc"  />
+    </views>
+
+</unit>
+
+</library>
+
+</top>

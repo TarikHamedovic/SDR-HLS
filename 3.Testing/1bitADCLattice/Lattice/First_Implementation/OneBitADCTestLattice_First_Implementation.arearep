@@ -1,0 +1,63 @@
+----------------------------------------------------------------------
+Report for cell ADC_top.TECH
+Register bits:  81 of 84255 (0.096%)
+I/O cells:      14
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        22          100.0
+                            EHXPLLL         1          100.0
+                            FD1P3DX        48          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3DX        32          100.0
+                                GSR         1          100.0
+                                 IB         3          100.0
+                               LUT4        52          100.0
+                                 OB        11          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                                PLL         1
+PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)         1
+          box_ave(LPF_DEPTH_BITS=3)         1
+                     sigmadelta_adc         1
+                              TOTAL       176
+----------------------------------------------------------------------
+Report for cell PLL.v1
+Instance Path : PLL1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLL         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0).v1
+Instance Path : pwm_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         5           22.7
+                            FD1P3DX         8           16.7
+                            FD1S3DX         9           28.1
+                               LUT4        17           32.7
+                              PFUMX         1          100.0
+                              TOTAL        40
+----------------------------------------------------------------------
+Report for cell sigmadelta_adc.v1
+Instance Path : SSD_ADC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        12           54.5
+                            FD1P3DX        40           83.3
+                            FD1S3AX         1          100.0
+                            FD1S3DX        23           71.9
+                               LUT4        27           51.9
+SUB MODULES
+          box_ave(LPF_DEPTH_BITS=3)         1
+                              TOTAL       104
+----------------------------------------------------------------------
+Report for cell box_ave(LPF_DEPTH_BITS=3).v1
+Instance Path : SSD_ADC.box_ave
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         6           27.3
+                            FD1P3DX        22           45.8
+                            FD1S3DX        11           34.4
+                               LUT4         7           13.5
+                              TOTAL        46

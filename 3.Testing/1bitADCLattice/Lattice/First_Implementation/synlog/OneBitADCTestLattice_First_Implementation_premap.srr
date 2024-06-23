@@ -1,0 +1,147 @@
+# Sun May 26 10:26:47 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47069
+max stack size: 8388608 (bytes)
+
+
+Implementation : First_Implementation
+Synopsys Lattice Technology Pre-mapping, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/OneBitADCTestLattice_First_Implementation_scck.rpt 
+See clock summary report "/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/OneBitADCTestLattice_First_Implementation_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 238MB peak: 238MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 240MB peak: 240MB)
+
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+mixed edge conversion for GCC is OFF
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist ADC_top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+
+Clock Summary
+******************
+
+          Start              Requested     Requested     Clock        Clock          Clock
+Level     Clock              Frequency     Period        Type         Group          Load 
+------------------------------------------------------------------------------------------
+0 -       ADC_top|clk_in     200.0 MHz     5.000         inferred     (multiple)     64   
+==========================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                   Clock     Source           Clock Pin           Non-clock Pin     Non-clock Pin
+Clock              Load      Pin              Seq Example         Seq Example       Comb Example 
+-------------------------------------------------------------------------------------------------
+ADC_top|clk_in     64        clk_in(port)     SSD_ADC.delta.C     -                 -            
+=================================================================================================
+
+@W: MT529 :"/home/user/SDR-HLS/Testing/1bitADCLattice/First_Implementation/source/box_ave.v":175:0:175:5|Found inferred clock ADC_top|clk_in which controls 64 sequential elements including SSD_ADC.box_ave.ave_data_out[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 64 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+============================= Non-Gated/Non-Generated Clocks =============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance   
+------------------------------------------------------------------------------------------
+@KP:ckid0_0       clk_in              port                   64         SSD_ADC.accum[7:0]
+==========================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 26 10:26:48 2024
+
+###########################################################]

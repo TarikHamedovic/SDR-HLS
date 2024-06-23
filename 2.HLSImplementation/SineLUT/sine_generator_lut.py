@@ -2,7 +2,7 @@
 
 """
 -----------------------------------------------------------------------------
-HLS Implementation for PWM.v module
+HLS Implementation for sine/cosine generator using LUT
 -----------------------------------------------------------------------------
 """
 
