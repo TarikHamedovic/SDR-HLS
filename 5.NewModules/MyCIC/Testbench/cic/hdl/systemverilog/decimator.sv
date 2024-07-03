@@ -1,7 +1,7 @@
 module decimator #(
-    parameter int W = 5,  // Width of the data
+    parameter int W = 10,  // Width of the data
     parameter int R = 5,  // Decimation ratio
-    parameter int RW = 32 // Width of the counter
+    parameter int RW = 5 // Width of the counter
 )(
     input logic i_clk,
     input logic i_reset,

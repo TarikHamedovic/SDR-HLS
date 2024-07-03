@@ -1,5 +1,5 @@
 module integrator #(
-    parameter int IW = 5,   // Input width
+    parameter int IW = 10,   // Input width
     parameter int OW = 10    // Output width
 )(
     input logic              i_clk,
@@ -25,14 +25,6 @@ always_ff @(posedge i_clk or posedge i_reset) begin
     end else begin
         o_ready <= 1'b0;  
     end
-end
-
-//----------------------------- 
-// For simulation only
-//----------------------------- 
-initial begin
-    $dumpfile("integrator_waves.vcd");
-    $dumpvars(0, integrator);
 end
 
 endmodule

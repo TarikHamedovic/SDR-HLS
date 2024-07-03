@@ -1,18 +1,24 @@
-# Makefile
+# Include the general configuration file
+include ../config.mk
 
-# defaults
-SIM ?= icarus
-TOPLEVEL_LANG ?= verilog
+# Verilog sources
+VERILOG_SOURCES += hdl/systemverilog/integrator.sv
+#VERILOG_SOURCES += hdl/verilog/integrator.v
 
-VERILOG_SOURCES += hdl/integrator.sv
-# use VHDL_SOURCES for VHDL files
+# VHDL sources (if any)
+VHDL_SOURCES = 
 
-# TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
+# Top-level module name
 TOPLEVEL = integrator
 
-# MODULE is the basename of the Python test file
+# Python test module(s)
 MODULE = integrator_tb
 
+# Define the clean target
+.PHONY: clean
+clean::
+	$(RM) -r __pycache__
+	$(RM) -r sim_build
+	$(RM) results.xml
+	$(RM) *.vcd
 
-# include cocotb's make rules to take care of the simulator setup
-include $(shell cocotb-config --makefiles)/Makefile.sim

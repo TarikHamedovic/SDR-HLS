@@ -25,12 +25,5 @@ always @(posedge i_clk or posedge i_reset) begin
     end
 end
 
-//----------------------------- 
-// For simulation only
-//----------------------------- 
-initial begin
-    $dumpfile("integrator_waves.vcd");
-    $dumpvars(0, integrator);
-end
 
 endmodule

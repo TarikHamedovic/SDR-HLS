@@ -30,12 +30,4 @@ always @(posedge i_clk or i_reset) begin
     end
 end
 
-//----------------------------- 
-// For simulation only
-//----------------------------- 
-initial begin
-    $dumpfile("comb_waves.vcd");
-    $dumpvars(0, comb);
-end
-
 endmodule
