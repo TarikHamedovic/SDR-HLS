@@ -1,0 +1,2 @@
+Library, Design Unit ,Compile time , Hardware Gen ,Optimization Stg1 ,Optimization Stg2 , Peak Mem Usage, Incr Mem Usage, Hardware Gen ,Optimization Stg1 ,Optimization Stg2
+work, sqrt_wrapper,0h:00m:01s,0h:00m:00s,0h:00m:00s,0h:00m:01s,   144 MB,    18 MB,     4 MB,     2 MB,    12 MB

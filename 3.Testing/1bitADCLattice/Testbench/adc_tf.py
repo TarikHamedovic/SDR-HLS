@@ -12,7 +12,10 @@ FULL_RANGE_BITS = 16
 FULL_RANGE      = 2**FULL_RANGE_BITS
 
 # Clock period in nanoseconds
-clock_value = 16  # --> 62.5 MHz
+#clock_value = 16    # --> 62.5 MHz
+#clock_value = 12.5  # --> 80 MHz
+clock_value = 40    # --> 25 MHz
+
 
 shared_vars = {
     'analog_input': 0,
@@ -108,10 +111,10 @@ async def adc_tf(dut):
     await RisingEdge(dut.clk_in)
     
     # Start the sinewave generator
-    cocotb.start_soon(generate_input_sine_wave(dut))
+    #cocotb.start_soon(generate_input_sine_wave(dut))
 
     # Start the sawtooth generator
-    #cocotb.start_soon(generate_input_sawtooth_ramp(dut))
+    cocotb.start_soon(generate_input_sawtooth_ramp(dut))
 
     # Start the integrate feedback
     cocotb.start_soon(integrate_feedback(dut))

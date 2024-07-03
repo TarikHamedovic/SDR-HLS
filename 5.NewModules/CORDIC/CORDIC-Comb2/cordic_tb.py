@@ -11,6 +11,8 @@ def print_vars(dut):
    # Log monitored variables #
     dut._log.info(f"Monitor: i_reset={dut.i_reset.value}")
     dut._log.info(f"Monitor: i_xval={dut.i_xval.value}, i_yval={dut.i_yval.value}, i_phase={dut.i_phase.value}, o_xval={dut.o_xval.value}, o_yval={dut.o_yval.value}")
+    dut._log.info(f"Monitor: e_xval={dut.e_xval.value}, e_yval={dut.e_yval.value}")
+    dut._log.info(f"Monitor: pre_xval={dut.pre_xval.value}, pre_yval={dut.pre_yval.value}")
     dut._log.info(f"Monitor: xv={dut.xv.value}, yv={dut.yv.value}, ph={dut.ph.value}")
 
 @cocotb.test()
@@ -63,7 +65,7 @@ async def test_cordic_sine_cosine(dut):
         y_values.append(y_decimal)
     
     #dut._log.info(f"Monitor: x_values = {x_values}")
-    plt.figure();
+    plt.figure()
     plt.plot(x_values)
     plt.plot(y_values)
     plt.show()

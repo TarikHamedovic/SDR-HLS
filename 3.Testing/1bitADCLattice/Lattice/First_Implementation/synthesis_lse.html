@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Jun 24 01:01:54 2024
+Thu Jun 27 17:28:05 2024
 
 
 Command Line:  synthesis -f OneBitADCTestLattice_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/promote.xml 
@@ -79,6 +79,9 @@ Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_
 Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v
 Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v
 Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PLL.v
+Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v
+Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v
+Verilog design file = /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/UartTX.v
 NGD file = OneBitADCTestLattice_First_Implementation.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -94,15 +97,24 @@ Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First
 Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v. VERI-1482
 Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v. VERI-1482
 Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/UartTX.v. VERI-1482
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): ADC_top
-INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(67): compiling module ADC_top. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(1): compiling module ADC_top. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v(1): compiling module clock_divider. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v(14): using initial value of half_div since it is never assigned. VERI-1220
 INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PLL.v(8): compiling module PLL. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
-INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v(68): compiling module sigmadelta_adc. VERI-1018
-INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v(72): compiling module box_ave(LPF_DEPTH_BITS=3). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(1): compiling module sawtooth_generator(DIV_FACTOR=1024). VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(19): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(21): expression size 32 truncated to fit in target size 10. VERI-1209
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v(68): compiling module sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v(72): compiling module box_ave(LPF_DEPTH_BITS=2). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/UartTX.v(1): compiling module uart_tx(CLKS_PER_BIT=217). VERI-1018
 INFO - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v(30): compiling module PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0). VERI-1018
 WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v(53): expression size 32 truncated to fit in target size 8. VERI-1209
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
@@ -112,6 +124,9 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 Top-level module name = ADC_top.
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(55): Removing unused instance clk_divider. VDB-5034
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(60): Removing unused instance PLL_inst. VDB-5034
+WARNING - synthesis: /home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(70): Removing unused instance saw_gen. VDB-5034
 
 
 
@@ -127,44 +142,48 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file OneBitADCTestLattice_First_Implementation.ngd.
 
 ################### Begin Area Report (ADC_top)######################
-Number of register bits => 81 of 84255 (0 % )
-CCU2C => 22
-EHXPLLL => 1
-FD1P3DX => 48
+Number of register bits => 106 of 84255 (0 % )
+CCU2C => 29
+FD1P3BX => 1
+FD1P3DX => 71
 FD1S3AX => 1
-FD1S3DX => 32
+FD1S3DX => 33
 GSR => 1
 IB => 3
-LUT4 => 52
-OB => 11
-PFUMX => 1
+L6MUX21 => 1
+LUT4 => 102
+OB => 21
+PFUMX => 4
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : clk_80mhz, loads : 82
-  Net : clk_in_c, loads : 1
+Number of Clocks: 1
+  Net : clk_in_c, loads : 107
 Clock Enable Nets
-Number of Clock Enables: 5
-Top 5 highest fanout Clock Enables:
-  Net : SSD_ADC/rollover, loads : 20
-  Net : SSD_ADC/box_ave/accumulate, loads : 14
-  Net : SSD_ADC/clk_80mhz_enable_18, loads : 10
+Number of Clock Enables: 9
+Top 9 highest fanout Clock Enables:
+  Net : SSD_ADC/rollover, loads : 18
+  Net : uart_tx_inst/clk_in_c_enable_43, loads : 17
+  Net : SSD_ADC/box_ave/accumulate, loads : 12
   Net : SSD_ADC/box_ave/latch_result, loads : 9
-  Net : pwm_inst/clk_80mhz_enable_13, loads : 8
+  Net : pwm_inst/clk_in_c_enable_16, loads : 8
+  Net : uart_tx_inst/clk_in_c_enable_24, loads : 8
+  Net : SSD_ADC/clk_in_c_enable_29, loads : 8
+  Net : uart_tx_inst/clk_in_c_enable_25, loads : 2
+  Net : uart_tx_inst/clk_in_c_enable_44, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : SSD_ADC/rstn_N_51, loads : 79
-  Net : SSD_ADC/rollover, loads : 20
-  Net : SSD_ADC/box_ave/accumulate, loads : 14
-  Net : SSD_ADC/box_ave/count_2, loads : 13
-  Net : SSD_ADC/clk_80mhz_enable_18, loads : 10
-  Net : SSD_ADC/box_ave/latch_result, loads : 9
-  Net : pwm_inst/clk_80mhz_enable_13, loads : 8
-  Net : SSD_ADC/box_ave/count_0, loads : 8
-  Net : SSD_ADC/box_ave/n4, loads : 8
-  Net : SSD_ADC/box_ave/count_1, loads : 7
+  Net : SSD_ADC/rstn_N_152, loads : 104
+  Net : uart_tx_inst/r_SM_Main_1, loads : 24
+  Net : uart_tx_inst/r_SM_Main_0, loads : 22
+  Net : uart_tx_inst/n653, loads : 21
+  Net : uart_tx_inst/n734, loads : 21
+  Net : uart_tx_inst/r_SM_Main_2, loads : 21
+  Net : SSD_ADC/rollover, loads : 18
+  Net : uart_tx_inst/clk_in_c_enable_43, loads : 17
+  Net : SSD_ADC/box_ave/count_0, loads : 12
+  Net : SSD_ADC/box_ave/accumulate, loads : 12
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -174,7 +193,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_80mhz]               |  200.000 MHz|  187.126 MHz|     5 *
+clk0 [get_nets clk_in_c]                |  200.000 MHz|  121.021 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -182,10 +201,10 @@ clk0 [get_nets clk_80mhz]               |  200.000 MHz|  187.126 MHz|     5 *
 1 constraints not met.
 
 
-Peak Memory Usage: 260.973  MB
+Peak Memory Usage: 261.699  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.542  secs
+Elapsed CPU time for LSE flow : 2.343  secs
 --------------------------------------------------------------
 
 

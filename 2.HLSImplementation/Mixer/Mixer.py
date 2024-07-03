@@ -2,7 +2,7 @@
 
 """
 -----------------------------------------------------------------------------
-HLS Implementation for Mixer.v module
+HLS Implementation for Mixer module
 -----------------------------------------------------------------------------
 """
 
@@ -21,23 +21,23 @@ import random
 
 top_name = "Mixer"
 
-class Mixer(Elaboratable): #TODO:Change lowercase parameters to uppercase
+class Mixer(Elaboratable): 
 
-    def __init__(self, input_bits=12):
+    def __init__(self, INPUT_BITS=12):
         # Define the module's ports
 
         # Parameters 
-        self.input_bits = input_bits
+        self.INPUT_BITS = INPUT_BITS
 
         # Inputs
         self.RFIn        = Signal() # RF input signal
-        self.sin_in      = Signal(signed(self.input_bits)) # Sine input
-        self.cos_in      = Signal(signed(self.input_bits)) # Cosine input
+        self.sin_in      = Signal(signed(self.INPUT_BITS)) # Sine input
+        self.cos_in      = Signal(signed(self.INPUT_BITS)) # Cosine input
 
         # Outputs
         self.RFOut       = Signal()
-        self.MixerOutSin = Signal(signed(self.input_bits))
-        self.MixerOutCos = Signal(signed(self.input_bits))
+        self.MixerOutSin = Signal(signed(self.INPUT_BITS))
+        self.MixerOutCos = Signal(signed(self.INPUT_BITS))
 
         # Internal Registers # TODO:Check if this needs to be here or in elaborate function?
         self.RFInR1 = Signal(reset=1) # TODO: Check reset?
@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
                 print(f"Test: Starting Mixer Amaranth Simulation with clock frequency of {clock_frequency} MHz") # TODO:Make it generic
 
-                print("Test: Initializing inputs to 0, and RFIn to 1")
+                print("Test: Initializing inputs to 0, and RFIn to 0")
 
                 yield dut.sin_in.eq(0)
                 yield dut.cos_in.eq(0)

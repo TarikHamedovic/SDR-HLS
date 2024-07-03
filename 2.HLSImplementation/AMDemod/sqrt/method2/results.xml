@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1719909028" />
+    <testcase name="math_sqrt_simplifiedsamovi_tb" classname="math_sqrt_simplifiedsamovi_tb" file="/home/user/SDR-HLS/2.HLSImplementation/AMDemod/sqrt/method2/math_sqrt_simplifiedsamovi_tb.py" lineno="5" time="1.2539145946502686" sim_time_ns="384100.001" ratio_time="306320.703689656" />
+  </testsuite>
+</testsuites>

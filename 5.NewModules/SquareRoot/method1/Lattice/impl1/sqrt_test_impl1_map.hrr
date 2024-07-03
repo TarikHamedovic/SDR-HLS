@@ -1,0 +1,9 @@
+---------------------------------------------------
+Report for cell sqrt_wrapper
+   Instance path: sqrt_wrapper
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     261.00        100.0
+                                  LUT4	     115.00        100.0
+                                 IOBUF	         48        100.0
+                                RIPPLE	        167        100.0

@@ -12,20 +12,20 @@ or a Q-stage CIC decimation-by-D filter (diff delay = 1) overflow errors are avo
 where x(n) is the input to the CIC filter, and {k} means that if k is not an integer, round it up to the next larger integer. For example, if a Q = 3-stage CIC decimation filter accepts one-bit binary input words from a sigma-delta A/D converter and the decimation factor is D = 64, binary overflow errors are avoided if the three integrator and three comb registers� bit WIDTHs are no less than
 
     register bit WIDTHs = 1 + {3 log2(D)} = 1 + 3 6 = 19 bits.
-	5 stadi, decimation 16384 (14 bit) 1 + 5 * 14 = 71 
+    5 stadi, decimation 16384 (14 bit) 1 + 5 * 14 = 71
 
 */
 
 
-module CIC 
-  (input wire               clk,
-   input wire [7:0]		Gain,
+module CIC
+  (input wire                clk,
+   input wire [7:0]          Gain,
    input wire signed [11:0]  d_in,
    output reg signed [11:0]  d_out,
-   output reg 				 d_clk);
+   output reg                d_clk);
 
-  parameter WIDTH = 64;
-  parameter DECIMATION_RATIO = 16;
+  parameter int WIDTH = 32;
+  parameter int DECIMATION_RATIO = 16;
 
   reg signed [WIDTH-1:0] d_tmp, d_d_tmp;
 
@@ -116,7 +116,7 @@ module CIC
 
           d_scaled <= d10;
 
-          d_out <= d10 >>> (WIDTH - 12 - Gain); 
+          d_out <= d10 >>> (WIDTH - 12 - Gain);
         end
-    end								
+    end
 endmodule

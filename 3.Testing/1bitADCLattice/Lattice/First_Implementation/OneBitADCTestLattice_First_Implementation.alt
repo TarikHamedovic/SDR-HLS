@@ -1,20 +1,30 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Mon Jun 24 01:04:00 2024 *
+NOTE DATE CREATED: Thu Jun 27 18:16:25 2024 *
 NOTE DESIGN NAME: ADC_top *
 NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS digital_out[3] : B13 : out *
-NOTE PINS digital_out[4] : C14 : out *
-NOTE PINS digital_out[5] : A14 : out *
-NOTE PINS digital_out[6] : D14 : out *
-NOTE PINS digital_out[7] : E14 : out *
-NOTE PINS digital_out[2] : C13 : out *
-NOTE PINS digital_out[1] : E13 : out *
-NOTE PINS digital_out[0] : D13 : out *
-NOTE PINS analog_out : U18 : out *
+NOTE PINS digital_out[5] : B12 : out *
+NOTE PINS digital_out[6] : D11 : out *
+NOTE PINS digital_out[7] : E12 : out *
 NOTE PINS sample_rdy : G3 : out *
+NOTE PINS analog_out : U18 : out *
+NOTE PINS digital_out[4] : C12 : out *
+NOTE PINS digital_out[3] : A13 : out *
+NOTE PINS digital_out[2] : D12 : out *
+NOTE PINS digital_out[1] : E11 : out *
+NOTE PINS digital_out[0] : A12 : out *
 NOTE PINS pwm_out : A4 : out *
+NOTE PINS clk_out : A9 : out *
+NOTE PINS led[7] : H3 : out *
+NOTE PINS led[6] : E1 : out *
+NOTE PINS led[5] : E2 : out *
+NOTE PINS led[4] : D1 : out *
+NOTE PINS led[3] : D2 : out *
+NOTE PINS led[2] : C1 : out *
+NOTE PINS led[1] : C2 : out *
+NOTE PINS led[0] : B2 : out *
+NOTE PINS uart_tx : A10 : out *
 NOTE PINS clk_in : G2 : in *
 NOTE PINS rstn : R1 : in *
 NOTE PINS analog_cmp : H18 : in *

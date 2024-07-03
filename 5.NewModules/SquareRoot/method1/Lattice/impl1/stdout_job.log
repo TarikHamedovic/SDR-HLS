@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "15:27:08    03-Jul-2024",
+	"Working Directory" : "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1",
+	"CDPL Log file" : "-",
+	"Install" : "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase"
+},
+"impl1" :{
+   "Start Time" : "15:27:00",
+   "Runtime" : "08s",
+   "Executable Run Time" : "07s",
+   "synthesis" : {
+      "Start Time" : "15:27:00",
+      "Runtime" : "08s",
+      "Executable Run Time" : "07s",
+      "compile" : {
+         "Start Time" : "15:27:00",
+         "Runtime" : "05s",
+         "Executable Run Time" : "04s",
+         "compile_flow" : {
+            "Start Time" : "15:27:00",
+            "Runtime" : "03s",
+            "Executable Run Time" : "02s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "15:27:00",
+               "Run Time" : "03s",
+               "Exe Run Time" : "02s",
+               "Memory Usage" : "33.528000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "15:27:03",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "61.628000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "0",
+            "Has Errors" : "no",
+            "Run Start Time" : "15:27:03",
+            "Run Time" : "02s",
+            "Exe Run Time" : "02s",
+            "Memory Usage" : "296.272000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Start Time" : "15:27:05",
+         "Runtime" : "03s",
+         "Executable Run Time" : "03s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "0",
+            "Has Errors" : "no",
+            "Run Start Time" : "15:27:05",
+            "Run Time" : "03s",
+            "Exe Run Time" : "03s",
+            "Memory Usage" : "307.972000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

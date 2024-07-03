@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="OneBitADCTestLattice" device="LFE5U-85F-6BG381C" default_implementation="First_Implementation">
     <Options/>
     <Implementation title="First_Implementation" dir="First_Implementation" description="First_Implementation" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="PLL" top="ADC_top"/>
+        <Options def_top="ADC_top" top="ADC_top"/>
         <Source name="First_Implementation/source/adc_top.v" type="Verilog" type_short="Verilog">
             <Options top_module="ADC_top"/>
         </Source>
@@ -16,6 +16,15 @@
             <Options/>
         </Source>
         <Source name="First_Implementation/source/PLL.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="clock_divider.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="sawtooth_generator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="First_Implementation/source/UartTX.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="OneBitADCTestLattice.lpf" type="Logic Preference" type_short="LPF">

@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Jun 24 01:02:06 2024
+Thu Jun 27 18:14:34 2024
 
 /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
 OneBitADCTestLattice_First_Implementation.p2t
@@ -19,11 +19,11 @@ Preference file: OneBitADCTestLattice_First_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            8.094        0            0.176        0            01:09        Completed
+5_1   *      0            33.575       0            0.176        0            01:11        Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 1 mins 9 secs 
+Total (real) run time for 1-seed: 1 mins 11 secs 
 
 par done!
 

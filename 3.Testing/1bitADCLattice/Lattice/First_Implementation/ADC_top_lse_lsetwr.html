@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Jun 24 01:01:56 2024
+Thu Jun 27 17:28:08 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,107 +27,113 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_80mhz]
-            626 items scored, 91 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_in_c]
+            713 items scored, 322 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 0.344ns
+Error:  The following path violates requirements by 3.263ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3DX    CK             \pwm_inst/counter_41__i4  (from clk_80mhz +)
-   Destination:    FD1S3DX    D              \pwm_inst/PWMOut_17  (to clk_80mhz +)
+   Source:         FD1P3DX    CK             \uart_tx_inst/r_Clock_Count_98__i6  (from clk_in_c +)
+   Destination:    FD1S3DX    D              \uart_tx_inst/r_SM_Main_i0  (to clk_in_c +)
 
-   Delay:                   5.519ns  (18.9% logic, 81.1% route), 5 logic levels.
+   Delay:                   8.438ns  (14.2% logic, 85.8% route), 6 logic levels.
 
  Constraint Details:
 
-      5.519ns data_path \pwm_inst/counter_41__i4 to \pwm_inst/PWMOut_17 violates
+      8.438ns data_path \uart_tx_inst/r_Clock_Count_98__i6 to \uart_tx_inst/r_SM_Main_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 0.344ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.263ns
 
- Path Details: \pwm_inst/counter_41__i4 to \pwm_inst/PWMOut_17
+ Path Details: \uart_tx_inst/r_Clock_Count_98__i6 to \uart_tx_inst/r_SM_Main_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \pwm_inst/counter_41__i4 (from clk_80mhz)
-Route         4   e 1.397                                  \pwm_inst/counter[4]
-LUT4        ---     0.166              B to Z              \pwm_inst/DataInReg_7__I_0_i9_2_lut_rep_16
-Route         1   e 1.020                                  \pwm_inst/n468
-LUT4        ---     0.166              A to Z              \pwm_inst/i286_4_lut
-Route         1   e 1.020                                  \pwm_inst/n397
-LUT4        ---     0.166              D to Z              \pwm_inst/i316_4_lut
-Route         1   e 0.020                                  \pwm_inst/n408
-MOFX0       ---     0.179             C0 to Z              \pwm_inst/DataInReg_7__I_0_i16
-Route         1   e 1.020                                  \pwm_inst/PWMOut_N_110
+L_CO        ---     0.365             CK to Q              \uart_tx_inst/r_Clock_Count_98__i6 (from clk_in_c)
+Route         2   e 1.258                                  \uart_tx_inst/r_Clock_Count[6]
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_2_lut_adj_34
+Route         1   e 1.020                                  \uart_tx_inst/n838
+LUT4        ---     0.166              A to Z              \uart_tx_inst/i1_4_lut_adj_30
+Route        21   e 1.628                                  \uart_tx_inst/n734
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_2_lut_rep_50
+Route         4   e 1.297                                  \uart_tx_inst/n1098
+LUT4        ---     0.166              D to Z              \uart_tx_inst/i28_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/n14
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/r_SM_Main_2__N_180[0]
                   --------
-                    5.519  (18.9% logic, 81.1% route), 5 logic levels.
+                    8.438  (14.2% logic, 85.8% route), 6 logic levels.
 
 
-Error:  The following path violates requirements by 0.344ns
+Error:  The following path violates requirements by 3.263ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3DX    CK             \pwm_inst/counter_41__i3  (from clk_80mhz +)
-   Destination:    FD1S3DX    D              \pwm_inst/PWMOut_17  (to clk_80mhz +)
+   Source:         FD1P3DX    CK             \uart_tx_inst/r_Clock_Count_98__i7  (from clk_in_c +)
+   Destination:    FD1S3DX    D              \uart_tx_inst/r_SM_Main_i0  (to clk_in_c +)
 
-   Delay:                   5.519ns  (18.9% logic, 81.1% route), 5 logic levels.
+   Delay:                   8.438ns  (14.2% logic, 85.8% route), 6 logic levels.
 
  Constraint Details:
 
-      5.519ns data_path \pwm_inst/counter_41__i3 to \pwm_inst/PWMOut_17 violates
+      8.438ns data_path \uart_tx_inst/r_Clock_Count_98__i7 to \uart_tx_inst/r_SM_Main_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 0.344ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.263ns
 
- Path Details: \pwm_inst/counter_41__i3 to \pwm_inst/PWMOut_17
+ Path Details: \uart_tx_inst/r_Clock_Count_98__i7 to \uart_tx_inst/r_SM_Main_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \pwm_inst/counter_41__i3 (from clk_80mhz)
-Route         4   e 1.397                                  \pwm_inst/counter[3]
-LUT4        ---     0.166              B to Z              \pwm_inst/DataInReg_7__I_0_i7_2_lut_rep_15
-Route         1   e 1.020                                  \pwm_inst/n467
-LUT4        ---     0.166              B to Z              \pwm_inst/i286_4_lut
-Route         1   e 1.020                                  \pwm_inst/n397
-LUT4        ---     0.166              D to Z              \pwm_inst/i316_4_lut
-Route         1   e 0.020                                  \pwm_inst/n408
-MOFX0       ---     0.179             C0 to Z              \pwm_inst/DataInReg_7__I_0_i16
-Route         1   e 1.020                                  \pwm_inst/PWMOut_N_110
+L_CO        ---     0.365             CK to Q              \uart_tx_inst/r_Clock_Count_98__i7 (from clk_in_c)
+Route         2   e 1.258                                  \uart_tx_inst/r_Clock_Count[7]
+LUT4        ---     0.166              A to Z              \uart_tx_inst/i1_2_lut_adj_34
+Route         1   e 1.020                                  \uart_tx_inst/n838
+LUT4        ---     0.166              A to Z              \uart_tx_inst/i1_4_lut_adj_30
+Route        21   e 1.628                                  \uart_tx_inst/n734
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_2_lut_rep_50
+Route         4   e 1.297                                  \uart_tx_inst/n1098
+LUT4        ---     0.166              D to Z              \uart_tx_inst/i28_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/n14
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/r_SM_Main_2__N_180[0]
                   --------
-                    5.519  (18.9% logic, 81.1% route), 5 logic levels.
+                    8.438  (14.2% logic, 85.8% route), 6 logic levels.
 
 
-Error:  The following path violates requirements by 0.325ns
+Error:  The following path violates requirements by 3.263ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3DX    CK             \pwm_inst/counter_41__i6  (from clk_80mhz +)
-   Destination:    FD1S3DX    D              \pwm_inst/PWMOut_17  (to clk_80mhz +)
+   Source:         FD1P3DX    CK             \uart_tx_inst/r_Clock_Count_98__i8  (from clk_in_c +)
+   Destination:    FD1S3DX    D              \uart_tx_inst/r_SM_Main_i0  (to clk_in_c +)
 
-   Delay:                   5.500ns  (17.8% logic, 82.2% route), 5 logic levels.
+   Delay:                   8.438ns  (14.2% logic, 85.8% route), 6 logic levels.
 
  Constraint Details:
 
-      5.500ns data_path \pwm_inst/counter_41__i6 to \pwm_inst/PWMOut_17 violates
+      8.438ns data_path \uart_tx_inst/r_Clock_Count_98__i8 to \uart_tx_inst/r_SM_Main_i0 violates
       5.000ns delay constraint less
-     -0.175ns L_S requirement (totaling 5.175ns) by 0.325ns
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.263ns
 
- Path Details: \pwm_inst/counter_41__i6 to \pwm_inst/PWMOut_17
+ Path Details: \uart_tx_inst/r_Clock_Count_98__i8 to \uart_tx_inst/r_SM_Main_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.365             CK to Q              \pwm_inst/counter_41__i6 (from clk_80mhz)
-Route         5   e 1.441                                  \pwm_inst/counter[6]
-LUT4        ---     0.166              B to Z              \pwm_inst/DataInReg_7__I_0_i10_3_lut_3_lut
-Route         1   e 1.020                                  \pwm_inst/n10
-LUT4        ---     0.166              C to Z              \pwm_inst/DataInReg_7__I_0_i12_3_lut_3_lut
-Route         1   e 1.020                                  \pwm_inst/n12
-LUT4        ---     0.166              C to Z              \pwm_inst/i308_1_lut_4_lut_4_lut
-Route         1   e 0.020                                  \pwm_inst/n420
-MUXL5       ---     0.116           ALUT to Z              \pwm_inst/DataInReg_7__I_0_i16
-Route         1   e 1.020                                  \pwm_inst/PWMOut_N_110
+L_CO        ---     0.365             CK to Q              \uart_tx_inst/r_Clock_Count_98__i8 (from clk_in_c)
+Route         2   e 1.258                                  \uart_tx_inst/r_Clock_Count[8]
+LUT4        ---     0.166              C to Z              \uart_tx_inst/i1_4_lut_adj_27
+Route         1   e 1.020                                  \uart_tx_inst/n848
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_4_lut_adj_25
+Route        21   e 1.628                                  \uart_tx_inst/n653
+LUT4        ---     0.166              A to Z              \uart_tx_inst/i1_2_lut_rep_50
+Route         4   e 1.297                                  \uart_tx_inst/n1098
+LUT4        ---     0.166              D to Z              \uart_tx_inst/i28_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/n14
+LUT4        ---     0.166              B to Z              \uart_tx_inst/i1_4_lut
+Route         1   e 1.020                                  \uart_tx_inst/r_SM_Main_2__N_180[0]
                   --------
-                    5.500  (17.8% logic, 82.2% route), 5 logic levels.
+                    8.438  (14.2% logic, 85.8% route), 6 logic levels.
 
-Warning: 5.344 ns is the maximum delay for this constraint.
+Warning: 8.263 ns is the maximum delay for this constraint.
 
 
 <A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -137,7 +143,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_80mhz]               |     5.000 ns|     5.344 ns|     5 *
+clk0 [get_nets clk_in_c]                |     5.000 ns|     8.263 ns|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -147,29 +153,25 @@ clk0 [get_nets clk_80mhz]               |     5.000 ns|     5.344 ns|     5 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\SSD_ADC/box_ave/n4                     |       8|      80|     87.91%
+\uart_tx_inst/n653                      |      21|     158|     49.07%
                                         |        |        |
-\SSD_ADC/box_ave/n256                   |       1|      56|     61.54%
+\uart_tx_inst/n848                      |       1|     100|     31.06%
                                         |        |        |
-\SSD_ADC/box_ave/n257                   |       1|      52|     57.14%
+\uart_tx_inst/n734                      |      21|      62|     19.25%
                                         |        |        |
-\SSD_ADC/box_ave/count[0]               |       8|      48|     52.75%
+\uart_tx_inst/n1098                     |       4|      52|     16.15%
                                         |        |        |
-\SSD_ADC/box_ave/n255                   |       1|      44|     48.35%
+\uart_tx_inst/n838                      |       1|      50|     15.53%
                                         |        |        |
-\SSD_ADC/box_ave/count[1]               |       7|      32|     35.16%
+\uart_tx_inst/n846                      |       1|      50|     15.53%
                                         |        |        |
-\SSD_ADC/box_ave/n258                   |       1|      30|     32.97%
+\uart_tx_inst/n629                      |       1|      42|     13.04%
                                         |        |        |
-\SSD_ADC/box_ave/n254                   |       1|      18|     19.78%
+\uart_tx_inst/n628                      |       1|      40|     12.42%
                                         |        |        |
-\SSD_ADC/box_ave/n50                    |       1|      15|     16.48%
+\uart_tx_inst/n630                      |       1|      36|     11.18%
                                         |        |        |
-\SSD_ADC/box_ave/n51                    |       1|      15|     16.48%
-                                        |        |        |
-\SSD_ADC/box_ave/n52                    |       1|      12|     13.19%
-                                        |        |        |
-\SSD_ADC/box_ave/n53                    |       1|      12|     13.19%
+\uart_tx_inst/r_Clock_Count[6]          |       2|      33|     10.25%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -177,12 +179,12 @@ Critical Nets                           |   Loads|  Errors| % of total
 <A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
 ---------------
 
-Timing errors: 91  Score: 11043
+Timing errors: 322  Score: 249223
 
-Constraints cover  862 paths, 188 nets, and 347 connections (66.3% coverage)
+Constraints cover  1271 paths, 284 nets, and 698 connections (84.5% coverage)
 
 
-Peak memory: 271544320 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+Peak memory: 272142336 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

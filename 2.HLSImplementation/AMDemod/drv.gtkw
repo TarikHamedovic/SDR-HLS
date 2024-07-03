@@ -1,7 +1,0 @@
-[dumpfile] "/home/user/SDR-HLS/HLSImplementation/AMDemod/drv.vcd"
-[dumpfile_size] 10516
-[treeopen] top.
-@22
-bench.top.I_in[11:0]
-bench.top.Q_in[11:0]
-bench.top.d_out[24:0]

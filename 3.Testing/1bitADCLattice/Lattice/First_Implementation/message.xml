@@ -31,10 +31,26 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(67): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(1): </Dynamic>
             <Dynamic>ADC_top</Dynamic>
             <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v</Navigation>
-            <Navigation>67</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v(1): </Dynamic>
+            <Dynamic>clock_divider</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901220</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v(14): </Dynamic>
+            <Dynamic>half_div</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/clock_divider.v</Navigation>
+            <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -71,8 +87,34 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(1): </Dynamic>
+            <Dynamic>sawtooth_generator(DIV_FACTOR=1024)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(19): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v(21): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>10</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/sawtooth_generator.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
             <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v(68): </Dynamic>
-            <Dynamic>sigmadelta_adc</Dynamic>
+            <Dynamic>sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2)</Dynamic>
             <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/sigmadelta_adc.v</Navigation>
             <Navigation>68</Navigation>
         </Message>
@@ -80,9 +122,17 @@
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v(72): </Dynamic>
-            <Dynamic>box_ave(LPF_DEPTH_BITS=3)</Dynamic>
+            <Dynamic>box_ave(LPF_DEPTH_BITS=2)</Dynamic>
             <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/box_ave.v</Navigation>
             <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/UartTX.v(1): </Dynamic>
+            <Dynamic>uart_tx(CLKS_PER_BIT=217)</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/UartTX.v</Navigation>
+            <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -100,6 +150,30 @@
             <Dynamic>8</Dynamic>
             <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/PWM.v</Navigation>
             <Navigation>53</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(55): </Dynamic>
+            <Dynamic>clk_divider</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v</Navigation>
+            <Navigation>55</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(60): </Dynamic>
+            <Dynamic>PLL_inst</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v(70): </Dynamic>
+            <Dynamic>saw_gen</Dynamic>
+            <Navigation>/home/user/SDR-HLS/3.Testing/1bitADCLattice/Lattice/First_Implementation/source/adc_top.v</Navigation>
+            <Navigation>70</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

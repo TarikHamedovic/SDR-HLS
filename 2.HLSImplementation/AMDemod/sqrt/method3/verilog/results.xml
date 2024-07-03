@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1719921174" />
+    <testcase name="square_root_test" classname="square_root_tb" file="/home/user/SDR-HLS/2.HLSImplementation/AMDemod/sqrt/method3/verilog/square_root_tb.py" lineno="16" time="0.005655765533447266" sim_time_ns="100.001" ratio_time="17681.249232948318" />
+  </testsuite>
+</testsuites>

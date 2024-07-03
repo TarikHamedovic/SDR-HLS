@@ -1,192 +1,124 @@
-//   ==================================================================
-//   >>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
-//   ------------------------------------------------------------------
-//   Copyright (c) 2014 by Lattice Semiconductor Corporation
-//   ALL RIGHTS RESERVED
-//   ------------------------------------------------------------------
-//
-//   Permission:
-//
-//      Lattice SG Pte. Ltd. grants permission to use this code
-//      pursuant to the terms of the Lattice Reference Design License Agreement.
-//
-//
-//   Disclaimer:
-//
-//      This VHDL or Verilog source code is intended as a design reference
-//      which illustrates how these types of functions can be implemented.
-//      It is the user's responsibility to verify their design for
-//      consistency and functionality through the use of formal
-//      verification methods.  Lattice provides no warranty
-//      regarding the use or functionality of this code.
-//
-//   --------------------------------------------------------------------
-//
-//                  Lattice SG Pte. Ltd.
-//                  101 Thomson Road, United Square #07-02
-//                  Singapore 307591
-//
-//
-//                  TEL: 1-800-Lattice (USA and Canada)
-//                       +65-6631-2000 (Singapore)
-//                       +1-503-268-8001 (other locations)
-//
-//                  web: http://www.latticesemi.com/
-//                  email: techsupport@latticesemi.com
-//
-//   --------------------------------------------------------------------
-//
-//  Project:     ADC_lvds
-//  File:        adc_top.v
-//  Title:       ADC Top Level
-//  Description: Top level of Analog to Digital Convertor
-//
-// --------------------------------------------------------------------
-//
-// Revision History :
-// --------------------------------------------------------------------
-// $Log: RD#rd1066_simple_sigma_delta_adc#rd1066#source#verilog#adc_top.v,v $
-// Revision 1.1  2015-02-05 00:00:56-08  mbevinam
-// Updated RD Placed in RD Folder. Previous versions are in RD_Dimensions Archive folder.
-//
-// Revision Date
-// 1.0  10/12/2009 Initial Revision
-//
-// --------------------------------------------------------------------
-
-
-
-//*********************************************************************
-//
-// ADC Top Level Module
-//
-//*********************************************************************
-
-
-
 module ADC_top #(
- parameter ADC_WIDTH = 8,              // ADC Convertor Bit Precision
- parameter ACCUM_BITS = 10,            // 2^ACCUM_BITS is decimation rate of accumulator
- parameter LPF_DEPTH_BITS = 3,         // 2^LPF_DEPTH_BITS is decimation rate of averager
- parameter INPUT_TOPOLOGY = 0         // 0: DIRECT: Analog input directly connected to + input of comparitor
+    parameter ADC_WIDTH = 8,              // ADC Convertor Bit Precision
+    parameter ACCUM_BITS = 8,            // 2^ACCUM_BITS is decimation rate of accumulator
+    parameter LPF_DEPTH_BITS = 2,         // 2^LPF_DEPTH_BITS is decimation rate of averager
+    parameter INPUT_TOPOLOGY = 0,         // 0: DIRECT: Analog input directly connected to + input of comparator
                                           // 1: NETWORK:Analog input connected through R divider to - input of comp.
+    parameter DIV_FACTOR = 4,             // Division factor for clock divider
+    parameter SAW_DIV_FACTOR = 1024       // Division factor for sawtooth generator
 )(
- clk_in,
- rstn,
- digital_out,
- analog_cmp,
- analog_out,
- sample_rdy,
- `ifdef SIMULATION
- analog_input,
- `endif
- pwm_out
+    input wire clk_in,                    // 25 MHz on Control Demo board
+    input wire rstn,
+    input wire analog_cmp,                // from LVDS buffer or external comparator
+    `ifdef SIMULATION
+    input wire [15:0] analog_input,
+    `endif
+    output wire analog_out,               // feedback to RC network
+    output wire sample_rdy,
+    output wire [7:0] digital_out,        // connected to LED field on control demo bd.
+    output wire pwm_out,
+    output wire clk_out,
+    output wire [7:0] led,
+    output wire uart_tx                   // UART transmit pin
 );
 
-//input ports
-input        clk_in; // 25 Mhz on Control Demo board
-input        rstn;
-input        analog_cmp; // from LVDS buffer or external comparator
-`ifdef SIMULATION
-input [15:0] analog_input;
-`endif
-//output ports
-output       analog_out; // feedback to RC network
-output       sample_rdy;
-output [7:0] digital_out; // connected to LED field on control demo bd.
-output       pwm_out;
-
-
-//**********************************************************************
-//
 // Internal Wire & Reg Signals
-//
-//**********************************************************************
-wire                   clk;
-wire                   analog_out_i;
-wire                   sample_rdy_i;
-wire [ADC_WIDTH-1:0]   digital_out_i;
-wire [ADC_WIDTH-1:0]   digital_out_abs;
-
-
+wire clk;
+wire clk_div;
+wire clk_80mhz;
+wire analog_out_i;
+wire sample_rdy_i;
+wire [ADC_WIDTH-1:0] digital_out_i;
+wire [ADC_WIDTH-1:0] digital_out_abs;
+wire [ADC_WIDTH-1:0] sawtooth_out;
 
 assign clk = clk_in;
+assign clk_out = clk;
+
+assign led[0] = digital_out[0];
+assign led[1] = digital_out[1];
+assign led[2] = digital_out[2];
+assign led[3] = digital_out[3];
+assign led[4] = digital_out[4];
+assign led[5] = digital_out[5];
+assign led[6] = digital_out[6];
+assign led[7] = digital_out[7];
 
 
-//***********************************************************************
-//
-//  PLL Instantation
-//
-//***********************************************************************
-
-
-PLL PLL1 (
-.CLKI (clk),
-.CLKOP (clk_80mhz)
+// Instantiate Generic Clock Divider
+clock_divider #(
+    .DIV_FACTOR(DIV_FACTOR)
+) clk_divider (
+    .clk_in(clk),
+    .rstn(rstn),
+    .clk_out(clk_div)
 );
 
+PLL PLL_inst (
+   .CLKI (clk_in),
+   .CLKOP (clk_80mhz)
+);
 
-//***********************************************************************
-//
-//  SSD ADC using onboard LVDS buffer or external comparitor
-//
-//***********************************************************************
+// Instantiate Sawtooth Generator
+sawtooth_generator #(
+    .WIDTH(ADC_WIDTH),
+    .DIV_FACTOR(SAW_DIV_FACTOR)
+) saw_gen (
+    .clk(clk),
+    .rstn(rstn),
+    .sawtooth_out(sawtooth_out)
+);
+
+// SSD ADC using onboard LVDS buffer or external comparator
 sigmadelta_adc #(
- .ADC_WIDTH(ADC_WIDTH),
- .ACCUM_BITS(ACCUM_BITS),
- .LPF_DEPTH_BITS(LPF_DEPTH_BITS)
- )
-SSD_ADC(
- .clk(clk_80mhz),
- .rstn(rstn),
- .analog_cmp(analog_cmp),
- .digital_out(digital_out_i),
- .analog_out(analog_out_i),
- .sample_rdy(sample_rdy_i)
- );
+    .ADC_WIDTH(ADC_WIDTH),
+    .ACCUM_BITS(ACCUM_BITS),
+    .LPF_DEPTH_BITS(LPF_DEPTH_BITS)
+) SSD_ADC (
+    .clk(clk),
+    .rstn(rstn),
+    .analog_cmp(analog_cmp),
+    .digital_out(digital_out_i),
+    .analog_out(analog_out_i),
+    .sample_rdy(sample_rdy_i)
+);
 
 assign digital_out_abs = INPUT_TOPOLOGY ? ~digital_out_i : digital_out_i;
 
-//***********************************************************************
-//
-//  Output Assignments
-//
-//***********************************************************************
+// Output Assignments
+assign digital_out = ~digital_out_abs; // invert bits for LED display
+assign analog_out = analog_out_i;
+assign sample_rdy = sample_rdy_i;
 
+// UART transmission
+uart_tx  #(.CLKS_PER_BIT(217))  uart_tx_inst (  // 115200 baud rate at 25 MHz clock
+   .osc_clk (clk),
+   .rstn (rstn),
+   .i_Tx_DV (sample_rdy),
+   .i_Tx_Byte (digital_out),
+   .o_Tx_Serial (uart_tx),
+   .o_Tx_Active (),
+   .o_Tx_Done ()
+);	
 
-assign digital_out   = ~digital_out_abs; // invert bits for LED display
-assign analog_out    =  analog_out_i;
-assign sample_rdy    =  sample_rdy_i;
-
-
-//***********************************************************************
-//
-//  PWM Output
-//
-//***********************************************************************
-
-PWM#(
- .DATA_WIDTH(ADC_WIDTH),
- .COUNTER_WIDTH(ADC_WIDTH),
- .OFFSET(0)
- )
-pwm_inst(
- .clk(clk_80mhz),
- .rstn(rstn),
- .DataIn(digital_out),
- .PWMOut(pwm_out)
+// PWM Output
+PWM #(
+    .DATA_WIDTH(ADC_WIDTH),
+    .COUNTER_WIDTH(ADC_WIDTH),
+    .OFFSET(0)
+) pwm_inst (
+    .clk(clk),
+    .rstn(rstn),
+    .DataIn(digital_out_abs), // Use the sawtooth wave as input to the PWM
+    .PWMOut(pwm_out)
 );
 
-//-----------------------------
 // For simulation only
-//-----------------------------
 `ifdef SIMULATION
 initial begin
-   $dumpfile("ADC_waves.vcd");
-   $dumpvars;
+    $dumpfile("ADC_waves.vcd");
+    $dumpvars;
 end
 `endif
-
-
 
 endmodule

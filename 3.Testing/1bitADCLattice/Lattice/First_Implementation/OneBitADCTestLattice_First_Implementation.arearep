@@ -1,63 +1,74 @@
 ----------------------------------------------------------------------
 Report for cell ADC_top.TECH
-Register bits:  81 of 84255 (0.096%)
-I/O cells:      14
+Register bits:  106 of 84255 (0.126%)
+I/O cells:      24
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        22          100.0
-                            EHXPLLL         1          100.0
-                            FD1P3DX        48          100.0
+                              CCU2C        29          100.0
+                            FD1P3BX         1          100.0
+                            FD1P3DX        71          100.0
                             FD1S3AX         1          100.0
-                            FD1S3DX        32          100.0
+                            FD1S3DX        33          100.0
                                 GSR         1          100.0
                                  IB         3          100.0
-                               LUT4        52          100.0
-                                 OB        11          100.0
-                              PFUMX         1          100.0
+                            L6MUX21         1          100.0
+                               LUT4       102          100.0
+                                 OB        21          100.0
+                              PFUMX         4          100.0
+                        VERIFIC_PWR         5          100.0
 SUB MODULES
-                                PLL         1
 PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)         1
-          box_ave(LPF_DEPTH_BITS=3)         1
-                     sigmadelta_adc         1
-                              TOTAL       176
-----------------------------------------------------------------------
-Report for cell PLL.v1
-Instance Path : PLL1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            EHXPLLL         1          100.0
-                              TOTAL         1
+          box_ave(LPF_DEPTH_BITS=2)         1
+sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2)         1
+          uart_tx(CLKS_PER_BIT=217)         1
+                              TOTAL       276
 ----------------------------------------------------------------------
 Report for cell PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0).v1
 Instance Path : pwm_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C         5           22.7
-                            FD1P3DX         8           16.7
-                            FD1S3DX         9           28.1
-                               LUT4        17           32.7
-                              PFUMX         1          100.0
-                              TOTAL        40
+                              CCU2C         5           17.2
+                            FD1P3DX         8           11.3
+                            FD1S3DX         9           27.3
+                               LUT4        17           16.7
+                              PFUMX         1           25.0
+                        VERIFIC_PWR         1           20.0
+                              TOTAL        41
 ----------------------------------------------------------------------
-Report for cell sigmadelta_adc.v1
+Report for cell uart_tx(CLKS_PER_BIT=217).v1
+Instance Path : uart_tx_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           31.0
+                            FD1P3BX         1          100.0
+                            FD1P3DX        27           38.0
+                            FD1S3DX         3            9.1
+                               LUT4        51           50.0
+                              PFUMX         1           25.0
+                        VERIFIC_PWR         1           20.0
+                              TOTAL        93
+----------------------------------------------------------------------
+Report for cell sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2).v1
 Instance Path : SSD_ADC
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C        12           54.5
-                            FD1P3DX        40           83.3
+                              CCU2C        11           37.9
+                            FD1P3DX        36           50.7
                             FD1S3AX         1          100.0
-                            FD1S3DX        23           71.9
-                               LUT4        27           51.9
+                            FD1S3DX        21           63.6
+                               LUT4        21           20.6
+                        VERIFIC_PWR         2           40.0
 SUB MODULES
-          box_ave(LPF_DEPTH_BITS=3)         1
-                              TOTAL       104
+          box_ave(LPF_DEPTH_BITS=2)         1
+                              TOTAL        93
 ----------------------------------------------------------------------
-Report for cell box_ave(LPF_DEPTH_BITS=3).v1
+Report for cell box_ave(LPF_DEPTH_BITS=2).v1
 Instance Path : SSD_ADC.box_ave
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2C         6           27.3
-                            FD1P3DX        22           45.8
-                            FD1S3DX        11           34.4
-                               LUT4         7           13.5
-                              TOTAL        46
+                              CCU2C         6           20.7
+                            FD1P3DX        20           28.2
+                            FD1S3DX        11           33.3
+                               LUT4         5            4.9
+                        VERIFIC_PWR         1           20.0
+                              TOTAL        43

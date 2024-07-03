@@ -1,0 +1,1 @@
+-link -encrypt -top sqrt_wrapper -osyn /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synwork/sqrt_test_impl1_comp.srs /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synwork/layer0.srs  -jobname linker  

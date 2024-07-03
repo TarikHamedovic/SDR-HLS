@@ -1,0 +1,10 @@
+Runtime Summary:
+================
+
+	* Library: work, DesignUnit: sqrt_wrapper
+		Optimization Phase          : 0h:00m:01s
+
+	The following design units have negligible CPU times:
+	=====================================================
+		* Library: work, DesignUnit: sqrt_wrapper
+			Hardware Generation Phase, Initial Cleanup Phase: Negligible CPU time

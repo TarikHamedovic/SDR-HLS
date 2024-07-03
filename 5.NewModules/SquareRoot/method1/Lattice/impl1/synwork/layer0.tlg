@@ -1,0 +1,12 @@
+Selecting top level module sqrt_wrapper
+@N: CG364 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/source/sqrt_wrapper.sv":1:7:1:18|Synthesizing module sqrt_wrapper in library work.
+Running optimization stage 1 on sqrt_wrapper .......
+Finished optimization stage 1 on sqrt_wrapper (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+Running optimization stage 2 on sqrt_wrapper .......
+Finished optimization stage 2 on sqrt_wrapper (CPU Time 0h:00m:01s, Memory Used current: 144MB peak: 144MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synwork/layer0.duruntime
+
+

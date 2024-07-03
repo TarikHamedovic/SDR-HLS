@@ -14,32 +14,43 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Mon Jun 24 01:02:40 2024
+Thu Jun 27 18:15:07 2024
 
 Pinout by Port Name:
 +----------------+----------+--------------+-------+-----------+-----------------------------------+
 | Port Name      | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
 +----------------+----------+--------------+-------+-----------+-----------------------------------+
 | analog_cmp     | H18/2    | LVDS_IN      | PR20A |           | CLAMP:ON                          |
-| analog_out     | U18/3    | LVCMOS33_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| analog_out     | U18/3    | LVCMOS33_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:FAST      |
 | clk_in         | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON            |
-| digital_out[0] | D13/1    | LVCMOS25_OUT | PT80A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[1] | E13/1    | LVCMOS25_OUT | PT80B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[2] | C13/1    | LVCMOS25_OUT | PT78B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[3] | B13/1    | LVCMOS25_OUT | PT78A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[4] | C14/1    | LVCMOS25_OUT | PT83B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[5] | A14/1    | LVCMOS25_OUT | PT83A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[6] | D14/1    | LVCMOS25_OUT | PT85A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| digital_out[7] | E14/1    | LVCMOS25_OUT | PT85B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| clk_out        | A9/0     | LVCMOS33_OUT | PT60A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| digital_out[0] | A12/1    | LVCMOS25_OUT | PT76A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[1] | E11/1    | LVCMOS25_OUT | PT69B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[2] | D12/1    | LVCMOS25_OUT | PT74A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[3] | A13/1    | LVCMOS25_OUT | PT76B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[4] | C12/1    | LVCMOS25_OUT | PT71B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[5] | B12/1    | LVCMOS25_OUT | PT71A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[6] | D11/1    | LVCMOS25_OUT | PT69A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| digital_out[7] | E12/1    | LVCMOS25_OUT | PT74B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| led[0]         | B2/7     | LVCMOS33_OUT | PL35C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[1]         | C2/7     | LVCMOS33_OUT | PL35D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[2]         | C1/7     | LVCMOS33_OUT | PL38A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[3]         | D2/7     | LVCMOS33_OUT | PL38C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[4]         | D1/7     | LVCMOS33_OUT | PL38B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[5]         | E2/7     | LVCMOS33_OUT | PL44D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[6]         | E1/7     | LVCMOS33_OUT | PL38D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
+| led[7]         | H3/7     | LVCMOS33_OUT | PL41D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
 | pwm_out        | A4/7     | LVCMOS33_OUT | PL11A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
 | rstn           | R1/8     | LVCMOS33_IN  | PB4A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
 | sample_rdy     | G3/7     | LVCMOS33_OUT | PL44A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| uart_tx        | A10/0    | LVCMOS33_OUT | PT63A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW      |
 +----------------+----------+--------------+-------+-----------+-----------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
+| 0    | 3.3V  |
 | 1    | 2.5V  |
 | 2    | 1.2V  |
 | 3    | 3.3V  |
@@ -66,19 +77,19 @@ Vccio by Bank:
 | A6/0     |     unused, PULL:DOWN |            |               | PT4A   | ULC_GPLL1T_IN            |           |
 | A7/0     |     unused, PULL:DOWN |            |               | PT18A  |                          |           |
 | A8/0     |     unused, PULL:DOWN |            |               | PT18B  |                          |           |
-| A9/0     |     unused, PULL:DOWN |            |               | PT60A  | GR_PCLK0_1               |           |
-| A10/0    |     unused, PULL:DOWN |            |               | PT63A  | PCLKT0_1                 |           |
+| A9/0     | clk_out               | LOCATED    | LVCMOS33_OUT  | PT60A  | GR_PCLK0_1               |           |
+| A10/0    | uart_tx               | LOCATED    | LVCMOS33_OUT  | PT63A  | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |               | PT63B  |                          |           |
-| A12/1    |     unused, PULL:DOWN |            |               | PT76A  |                          |           |
-| A13/1    |     unused, PULL:DOWN |            |               | PT76B  |                          |           |
-| A14/1    | digital_out[5]        |            | LVCMOS25_OUT  | PT83A  |                          |           |
+| A12/1    | digital_out[0]        |            | LVCMOS25_OUT  | PT76A  |                          |           |
+| A13/1    | digital_out[3]        |            | LVCMOS25_OUT  | PT76B  |                          |           |
+| A14/1    |     unused, PULL:DOWN |            |               | PT83A  |                          |           |
 | A15/1    |     unused, PULL:DOWN |            |               | PT103A |                          |           |
 | A16/1    |     unused, PULL:DOWN |            |               | PT110A |                          |           |
 | A17/1    |     unused, PULL:DOWN |            |               | PT116A |                          |           |
 | A18/1    |     unused, PULL:DOWN |            |               | PT119A |                          |           |
 | A19/1    |     unused, PULL:DOWN |            |               | PT121A | URC_GPLL1T_IN            |           |
 | B1/7     |     unused, PULL:DOWN |            |               | PL35B  | LDQ41                    |           |
-| B2/7     |     unused, PULL:DOWN |            |               | PL35C  | VREF1_7/LDQ41            |           |
+| B2/7     | led[0]                | LOCATED    | LVCMOS33_OUT  | PL35C  | VREF1_7/LDQ41            |           |
 | B3/7     |     unused, PULL:DOWN |            |               | PL14D  | LDQ17                    |           |
 | B4/7     |     unused, PULL:DOWN |            |               | PL14B  | LDQ17                    |           |
 | B5/7     |     unused, PULL:DOWN |            |               | PL11C  | LDQ17                    |           |
@@ -87,16 +98,16 @@ Vccio by Bank:
 | B9/0     |     unused, PULL:DOWN |            |               | PT58A  |                          |           |
 | B10/0    |     unused, PULL:DOWN |            |               | PT60B  | GR_PCLK0_0               |           |
 | B11/0    |     unused, PULL:DOWN |            |               | PT65A  | PCLKT0_0                 |           |
-| B12/1    |     unused, PULL:DOWN |            |               | PT71A  | PCLKT1_0                 |           |
-| B13/1    | digital_out[3]        |            | LVCMOS25_OUT  | PT78A  |                          |           |
+| B12/1    | digital_out[5]        |            | LVCMOS25_OUT  | PT71A  | PCLKT1_0                 |           |
+| B13/1    |     unused, PULL:DOWN |            |               | PT78A  |                          |           |
 | B15/1    |     unused, PULL:DOWN |            |               | PT105A |                          |           |
 | B16/1    |     unused, PULL:DOWN |            |               | PT110B |                          |           |
 | B17/1    |     unused, PULL:DOWN |            |               | PT114A |                          |           |
 | B18/1    |     unused, PULL:DOWN |            |               | PT116B |                          |           |
 | B19/1    |     unused, PULL:DOWN |            |               | PT119B |                          |           |
 | B20/1    |     unused, PULL:DOWN |            |               | PT121B | URC_GPLL1C_IN            |           |
-| C1/7     |     unused, PULL:DOWN |            |               | PL38A  | LDQ41                    |           |
-| C2/7     |     unused, PULL:DOWN |            |               | PL35D  | LDQ41                    |           |
+| C1/7     | led[2]                | LOCATED    | LVCMOS33_OUT  | PL38A  | LDQ41                    |           |
+| C2/7     | led[1]                | LOCATED    | LVCMOS33_OUT  | PL35D  | LDQ41                    |           |
 | C3/7     |     unused, PULL:DOWN |            |               | PL17C  | LDQ17                    |           |
 | C4/7     |     unused, PULL:DOWN |            |               | PL14A  | LDQ17                    |           |
 | C5/7     |     unused, PULL:DOWN |            |               | PL11D  | LDQ17                    |           |
@@ -106,17 +117,17 @@ Vccio by Bank:
 | C9/0     |     unused, PULL:DOWN |            |               | PT54A  |                          |           |
 | C10/0    |     unused, PULL:DOWN |            |               | PT58B  |                          |           |
 | C11/0    |     unused, PULL:DOWN |            |               | PT65B  |                          |           |
-| C12/1    |     unused, PULL:DOWN |            |               | PT71B  |                          |           |
-| C13/1    | digital_out[2]        |            | LVCMOS25_OUT  | PT78B  |                          |           |
-| C14/1    | digital_out[4]        |            | LVCMOS25_OUT  | PT83B  |                          |           |
+| C12/1    | digital_out[4]        |            | LVCMOS25_OUT  | PT71B  |                          |           |
+| C13/1    |     unused, PULL:DOWN |            |               | PT78B  |                          |           |
+| C14/1    |     unused, PULL:DOWN |            |               | PT83B  |                          |           |
 | C15/1    |     unused, PULL:DOWN |            |               | PT105B |                          |           |
 | C16/1    |     unused, PULL:DOWN |            |               | PT112A |                          |           |
 | C17/1    |     unused, PULL:DOWN |            |               | PT114B |                          |           |
 | C18/2    |     unused, PULL:DOWN |            |               | PR11A  | URC_GPLL0T_IN/RDQ17      |           |
 | C20/2    |     unused, PULL:DOWN |            |               | PR35A  | RDQ41                    |           |
 | CCLK/8   |                       |            |               | CCLK   | MCLK/SCK                 |           |
-| D1/7     |     unused, PULL:DOWN |            |               | PL38B  | LDQ41                    |           |
-| D2/7     |     unused, PULL:DOWN |            |               | PL38C  | LDQ41                    |           |
+| D1/7     | led[4]                | LOCATED    | LVCMOS33_OUT  | PL38B  | LDQ41                    |           |
+| D2/7     | led[3]                | LOCATED    | LVCMOS33_OUT  | PL38C  | LDQ41                    |           |
 | D3/7     |     unused, PULL:DOWN |            |               | PL17D  | LDQ17                    |           |
 | D5/7     |     unused, PULL:DOWN |            |               | PL17B  | LDQSN17                  |           |
 | D6/0     |     unused, PULL:DOWN |            |               | PT6B   |                          |           |
@@ -124,18 +135,18 @@ Vccio by Bank:
 | D8/0     |     unused, PULL:DOWN |            |               | PT13B  |                          |           |
 | D9/0     |     unused, PULL:DOWN |            |               | PT20A  |                          |           |
 | D10/0    |     unused, PULL:DOWN |            |               | PT56A  |                          |           |
-| D11/1    |     unused, PULL:DOWN |            |               | PT69A  | PCLKT1_1                 |           |
-| D12/1    |     unused, PULL:DOWN |            |               | PT74A  | GR_PCLK1_0               |           |
-| D13/1    | digital_out[0]        |            | LVCMOS25_OUT  | PT80A  |                          |           |
-| D14/1    | digital_out[6]        |            | LVCMOS25_OUT  | PT85A  |                          |           |
+| D11/1    | digital_out[6]        |            | LVCMOS25_OUT  | PT69A  | PCLKT1_1                 |           |
+| D12/1    | digital_out[2]        |            | LVCMOS25_OUT  | PT74A  | GR_PCLK1_0               |           |
+| D13/1    |     unused, PULL:DOWN |            |               | PT80A  |                          |           |
+| D14/1    |     unused, PULL:DOWN |            |               | PT85A  |                          |           |
 | D15/1    |     unused, PULL:DOWN |            |               | PT107A |                          |           |
 | D16/1    |     unused, PULL:DOWN |            |               | PT112B |                          |           |
 | D17/2    |     unused, PULL:DOWN |            |               | PR11B  | URC_GPLL0C_IN/RDQ17      |           |
 | D18/2    |     unused, PULL:DOWN |            |               | PR14A  | RDQ17                    |           |
 | D19/2    |     unused, PULL:DOWN |            |               | PR35B  | RDQ41                    |           |
 | D20/2    |     unused, PULL:DOWN |            |               | PR35C  | VREF1_2/RDQ41            |           |
-| E1/7     |     unused, PULL:DOWN |            |               | PL38D  | LDQ41                    |           |
-| E2/7     |     unused, PULL:DOWN |            |               | PL44D  | PCLKC7_0/LDQ41           |           |
+| E1/7     | led[6]                | LOCATED    | LVCMOS33_OUT  | PL38D  | LDQ41                    |           |
+| E2/7     | led[5]                | LOCATED    | LVCMOS33_OUT  | PL44D  | PCLKC7_0/LDQ41           |           |
 | E3/7     |     unused, PULL:DOWN |            |               | PL20B  | LDQ17                    |           |
 | E4/7     |     unused, PULL:DOWN |            |               | PL17A  | LDQS17                   |           |
 | E5/7     |     unused, PULL:DOWN |            |               | PL20C  | LDQ17                    |           |
@@ -144,10 +155,10 @@ Vccio by Bank:
 | E8/0     |     unused, PULL:DOWN |            |               | PT13A  |                          |           |
 | E9/0     |     unused, PULL:DOWN |            |               | PT20B  |                          |           |
 | E10/0    |     unused, PULL:DOWN |            |               | PT56B  |                          |           |
-| E11/1    |     unused, PULL:DOWN |            |               | PT69B  |                          |           |
-| E12/1    |     unused, PULL:DOWN |            |               | PT74B  | GR_PCLK1_1               |           |
-| E13/1    | digital_out[1]        |            | LVCMOS25_OUT  | PT80B  |                          |           |
-| E14/1    | digital_out[7]        |            | LVCMOS25_OUT  | PT85B  |                          |           |
+| E11/1    | digital_out[1]        |            | LVCMOS25_OUT  | PT69B  |                          |           |
+| E12/1    | digital_out[7]        |            | LVCMOS25_OUT  | PT74B  | GR_PCLK1_1               |           |
+| E13/1    |     unused, PULL:DOWN |            |               | PT80B  |                          |           |
+| E14/1    |     unused, PULL:DOWN |            |               | PT85B  |                          |           |
 | E15/1    |     unused, PULL:DOWN |            |               | PT107B |                          |           |
 | E16/2    |     unused, PULL:DOWN |            |               | PR11C  | RDQ17                    |           |
 | E17/2    |     unused, PULL:DOWN |            |               | PR14B  | RDQ17                    |           |
@@ -174,7 +185,7 @@ Vccio by Bank:
 | G20/2    |     unused, PULL:DOWN |            |               | PR38D  | RDQ41                    |           |
 | H1/6     |     unused, PULL:DOWN |            |               | PL53C  | LDQ53                    |           |
 | H2/6     |     unused, PULL:DOWN |            |               | PL47C  | PCLKT6_0/LDQ53           |           |
-| H3/7     |     unused, PULL:DOWN |            |               | PL41D  | LDQ41                    |           |
+| H3/7     | led[7]                | LOCATED    | LVCMOS33_OUT  | PL41D  | LDQ41                    |           |
 | H4/7     |     unused, PULL:DOWN |            |               | PL41A  | GR_PCLK7_1/LDQS41        |           |
 | H5/7     |     unused, PULL:DOWN |            |               | PL41C  | GR_PCLK7_0/LDQ41         |           |
 | H16/2    |     unused, PULL:DOWN |            |               | PR17D  | RDQ17                    |           |
@@ -460,20 +471,28 @@ to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste):
 LOCATE  COMP  "analog_cmp"  SITE  "H18";
 LOCATE  COMP  "analog_out"  SITE  "U18";
 LOCATE  COMP  "clk_in"  SITE  "G2";
-LOCATE  COMP  "digital_out[0]"  SITE  "D13";
-LOCATE  COMP  "digital_out[1]"  SITE  "E13";
-LOCATE  COMP  "digital_out[2]"  SITE  "C13";
-LOCATE  COMP  "digital_out[3]"  SITE  "B13";
-LOCATE  COMP  "digital_out[4]"  SITE  "C14";
-LOCATE  COMP  "digital_out[5]"  SITE  "A14";
-LOCATE  COMP  "digital_out[6]"  SITE  "D14";
-LOCATE  COMP  "digital_out[7]"  SITE  "E14";
+LOCATE  COMP  "clk_out"  SITE  "A9";
+LOCATE  COMP  "digital_out[0]"  SITE  "A12";
+LOCATE  COMP  "digital_out[1]"  SITE  "E11";
+LOCATE  COMP  "digital_out[2]"  SITE  "D12";
+LOCATE  COMP  "digital_out[3]"  SITE  "A13";
+LOCATE  COMP  "digital_out[4]"  SITE  "C12";
+LOCATE  COMP  "digital_out[5]"  SITE  "B12";
+LOCATE  COMP  "digital_out[6]"  SITE  "D11";
+LOCATE  COMP  "digital_out[7]"  SITE  "E12";
+LOCATE  COMP  "led[0]"  SITE  "B2";
+LOCATE  COMP  "led[1]"  SITE  "C2";
+LOCATE  COMP  "led[2]"  SITE  "C1";
+LOCATE  COMP  "led[3]"  SITE  "D2";
+LOCATE  COMP  "led[4]"  SITE  "D1";
+LOCATE  COMP  "led[5]"  SITE  "E2";
+LOCATE  COMP  "led[6]"  SITE  "E1";
+LOCATE  COMP  "led[7]"  SITE  "H3";
 LOCATE  COMP  "pwm_out"  SITE  "A4";
 LOCATE  COMP  "rstn"  SITE  "R1";
 LOCATE  COMP  "sample_rdy"  SITE  "G3";
+LOCATE  COMP  "uart_tx"  SITE  "A10";
 
-#PLL
-LOCATE  COMP  "PLL1/PLLInst_0"  SITE  "PLL_BL0" ;
 
 
 
@@ -484,7 +503,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Jun 24 01:02:40 2024
+Thu Jun 27 18:15:07 2024
 
 
 

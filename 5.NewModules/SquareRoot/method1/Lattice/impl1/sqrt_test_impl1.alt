@@ -1,0 +1,32 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Jul  3 15:24:28 2024 *
+NOTE DESIGN NAME: sqrt_wrapper *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS result[0] : R17 : out *
+NOTE PINS num[0] : P16 : in *
+NOTE PINS result[7] : M18 : out *
+NOTE PINS result[6] : L16 : out *
+NOTE PINS result[5] : L18 : out *
+NOTE PINS result[4] : L17 : out *
+NOTE PINS result[3] : K18 : out *
+NOTE PINS result[2] : N17 : out *
+NOTE PINS result[1] : N18 : out *
+NOTE PINS num[15] : M20 : in *
+NOTE PINS num[14] : M19 : in *
+NOTE PINS num[13] : L20 : in *
+NOTE PINS num[12] : J20 : in *
+NOTE PINS num[11] : J19 : in *
+NOTE PINS num[10] : L19 : in *
+NOTE PINS num[9] : H20 : in *
+NOTE PINS num[8] : K20 : in *
+NOTE PINS num[7] : J18 : in *
+NOTE PINS num[6] : K19 : in *
+NOTE PINS num[5] : G19 : in *
+NOTE PINS num[4] : M17 : in *
+NOTE PINS num[3] : P17 : in *
+NOTE PINS num[2] : N16 : in *
+NOTE PINS num[1] : R16 : in *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

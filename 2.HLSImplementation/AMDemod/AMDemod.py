@@ -19,6 +19,8 @@ import shutil
 import random
 import numpy as np
 
+from sqrt_int import sqrt_int
+
 top_name = "AMDemod"
 
 class AMDemod(Elaboratable):
@@ -42,6 +44,8 @@ class AMDemod(Elaboratable):
 
         WIDTH = self.WIDTH
 
+        m.submodules.sqrt = sqrt_int(32)
+
         # Internal Registers
 
         MultDataA = Signal(signed(WIDTH))
@@ -64,7 +68,22 @@ class AMDemod(Elaboratable):
             SquareSum.eq(MultResult1 + MultResult2)
         ]
 
-        m.d.comb += self.d_out.eq(SquareSum.as_signed())
+        # State machine for the start signal
+        with m.FSM() as fsm:
+            with m.State("IDLE"):
+                m.submodules.sqrt.rad.eq(SquareSum)
+                m.d.sync += m.submodules.sqrt.start.eq(0)
+                m.next = "START"
+
+            with m.State("START"):
+                m.d.sync += m.submodules.sqrt.start.eq(1)
+                m.next = "WAIT"
+
+            with m.State("WAIT"):
+                m.d.sync += m.submodules.sqrt.start.eq(0)
+                with m.If(m.submodules.sqrt.valid):
+                    m.d.sync += self.d_out.eq(m.submodules.sqrt.root)
+                    m.next = "IDLE"
         
         return m
 

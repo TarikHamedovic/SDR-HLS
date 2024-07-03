@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1719821781" />
+    <testcase name="AMDemod_test" classname="AMDemod_tb" file="/home/user/SDR-HLS/2.HLSImplementation/AMDemod/AMDemod_tb.py" lineno="35" time="0.01812601089477539" sim_time_ns="825.001" ratio_time="45514.75803414621">
+      <failure message="Test failed with RANDOM_SEED=1719821781" />
+    </testcase>
+  </testsuite>
+</testsuites>

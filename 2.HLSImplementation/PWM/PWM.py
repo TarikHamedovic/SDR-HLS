@@ -111,7 +111,8 @@ if __name__ == "__main__":
                 mask = (1 << counter_bits) - 1  # Create a mask for the given bit width
                 return 1 if counter < (data_in_reg & mask) + 2 else 0 # Added 2 because of delay to enter the DataInValue to DataInReg and 1 more delay to pass the value to PWMOut
 
-
+            # NOTE: Testbench sometimes fails...
+            # But cocotb testbench of the verilog file works fine
             def testbench():
 
                 print(f"Test: Starting PWM Amaranth Simulation with clock frequency of {clock_frequency} MHz") # TODO:Make it generic
@@ -127,6 +128,7 @@ if __name__ == "__main__":
                 yield Tick()
 
                 assertions_passed = 0
+                assertions_failed = 0
 
                 for _ in range(runtime):
 
@@ -161,12 +163,14 @@ if __name__ == "__main__":
                             assertions_passed += 1  # Counting every counter interation
                         except AssertionError as e:
                             print(e)
+                            assertions_failed += 1
                 print("------ Assertions passed for this input ------ ")
                 print(f"----Summary of {top_name} module ----")
                 print(f"Summary: Clock frequency of simulation: {clock_frequency} MHz")
                 print(f"Summary: Input bit width: {input_bits}")
                 print(f"Summary: Counter bit width: {counter_bits}")
                 print(f"Summary: Total number of assertions passed: {assertions_passed}")
+                print(f"Summary: Total number of assertions failed: {assertions_failed}")
                 print(f"Summary: Runtime of simulation in checks: {runtime}")
 
             # Instantiate the PWM module

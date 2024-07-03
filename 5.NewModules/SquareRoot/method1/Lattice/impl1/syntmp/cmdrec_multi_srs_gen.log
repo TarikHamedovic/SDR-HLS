@@ -1,0 +1,8 @@
+/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter  -link  -top  sqrt_wrapper  -multisrs  /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synwork/sqrt_test_impl1_comp.srs  -osyn  /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synwork/sqrt_test_impl1_mult.srs  -log  /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/synlog/sqrt_test_impl1_multi_srs_gen.srr 
+relcom:../../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter -link -top sqrt_wrapper -multisrs ../synwork/sqrt_test_impl1_comp.srs -osyn ../synwork/sqrt_test_impl1_mult.srs -log ../synlog/sqrt_test_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:../synwork/sqrt_test_impl1_comp.srs|io:i|time:1720013222|size:5835|exec:0|csum:983ACF3C4E6E85A09CA4E39AFA2CF290
+file:../synwork/sqrt_test_impl1_mult.srs|io:o|time:1720013223|size:5504|exec:0|csum:
+file:../synlog/sqrt_test_impl1_multi_srs_gen.srr|io:o|time:1720013223|size:1290|exec:0|csum:
+file:../../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/syn_nfilter|io:i|time:1691686801|size:14307024|exec:1|csum:DCFFD1FC80E17949E93B27FFDE78343E
+file:../../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter|io:i|time:1691686326|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

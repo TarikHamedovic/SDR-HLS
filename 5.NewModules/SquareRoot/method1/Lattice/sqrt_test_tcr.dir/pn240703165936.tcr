@@ -1,0 +1,9 @@
+#Start recording tcl command: 7/3/2024 15:23:13
+#Project Location: /home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice; Project name: sqrt_test
+prj_project new -name "sqrt_test" -impl "impl1" -dev LFE5U-85F-6BG381C -synthesis "synplify"
+file copy -force -- "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/sqrt_wrapper.sv" "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/source"
+prj_src add "/home/user/SDR-HLS/5.NewModules/SquareRoot/method1/Lattice/impl1/source/sqrt_wrapper.sv"
+prj_project save
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task TimingSimFileVHD
+#Stop recording: 7/3/2024 16:59:36

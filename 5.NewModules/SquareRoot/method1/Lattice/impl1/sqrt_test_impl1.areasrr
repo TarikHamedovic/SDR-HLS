@@ -1,0 +1,19 @@
+----------------------------------------------------------------------
+Report for cell sqrt_wrapper.verilog
+
+Register bits: 0 of 83640 (0%)
+PIC Latch:       0
+I/O cells:       48
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      167       100.0
+                                GSR        1       100.0
+                                 IB       32       100.0
+                                INV        2       100.0
+                                 OB       16       100.0
+                           ORCALUT4      113       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL           334           

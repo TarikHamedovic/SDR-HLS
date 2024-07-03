@@ -18,25 +18,25 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-85FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  06/24/24  01:01:57
+Mapped on:  06/27/24  18:14:26
 
 Design Summary
 --------------
 
-   Number of registers:     81 out of 84255 (0%)
-      PFU registers:           81 out of 83640 (0%)
+   Number of registers:    106 out of 84255 (0%)
+      PFU registers:          106 out of 83640 (0%)
       PIO registers:            0 out of   615 (0%)
-   Number of SLICEs:        67 out of 41820 (0%)
-      SLICEs as Logic/ROM:     67 out of 41820 (0%)
+   Number of SLICEs:       108 out of 41820 (0%)
+      SLICEs as Logic/ROM:    108 out of 41820 (0%)
       SLICEs as RAM:            0 out of 31365 (0%)
-      SLICEs as Carry:         22 out of 41820 (0%)
-   Number of LUT4s:         96 out of 83640 (0%)
-      Number used as logic LUTs:         52
+      SLICEs as Carry:         29 out of 41820 (0%)
+   Number of LUT4s:        158 out of 83640 (0%)
+      Number used as logic LUTs:        100
       Number used as distributed RAM:     0
-      Number used as ripple logic:       44
+      Number used as ripple logic:       58
       Number used as shift registers:     0
-   Number of PIO sites used: 15 out of 205 (7%)
-      Number of PIO sites used for single ended IOs: 13
+   Number of PIO sites used: 25 out of 205 (12%)
+      Number of PIO sites used for single ended IOs: 23
       Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
      comps in NCD)
    Number of block RAMs:  0 out of 208 (0%)
@@ -50,7 +50,7 @@ Design Summary
    Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
    Number of DCC:  0 out of 60 (0%)
    Number of DCS:  0 out of 2 (0%)
-   Number of PLLs:  1 out of 4 (25%)
+   Number of PLLs:  0 out of 4 (0%)
    Number of DDRDLLs:  0 out of 4 (0%)
    Number of CLKDIV:  0 out of 4 (0%)
    Number of ECLKSYNC:  0 out of 10 (0%)
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  ADC_top                                       Date:  06/24/24  01:01:57
+Design:  ADC_top                                       Date:  06/27/24  18:14:26
 
 Design Summary (cont)
 ---------------------
@@ -83,29 +83,32 @@ Design Summary (cont)
    Number of Used DSP MULT Sites:  0 out of 312 (0 %)
    Number of Used DSP ALU Sites:  0 out of 156 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
-   Number of clocks:  2
-     Net clk_in_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_in )
-     Net clk_80mhz: 47 loads, 47 rising, 0 falling (Driver: PLL1/PLLInst_0 )
-   Number of Clock Enables:  5
-     Net pwm_inst/clk_80mhz_enable_13: 4 loads, 4 LSLICEs
+   Number of clocks:  1
+     Net clk_in_c: 61 loads, 61 rising, 0 falling (Driver: PIO clk_in )
+   Number of Clock Enables:  9
+     Net pwm_inst/clk_in_c_enable_16: 4 loads, 4 LSLICEs
+     Net uart_tx_inst/r_SM_Main_2: 10 loads, 10 LSLICEs
+     Net uart_tx_inst/clk_in_c_enable_25: 1 loads, 1 LSLICEs
+     Net uart_tx_inst/clk_in_c_enable_24: 4 loads, 4 LSLICEs
+     Net uart_tx_inst/clk_in_c_enable_44: 1 loads, 1 LSLICEs
      Net SSD_ADC/rollover: 4 loads, 4 LSLICEs
-     Net SSD_ADC/clk_80mhz_enable_18: 5 loads, 5 LSLICEs
+     Net SSD_ADC/clk_in_c_enable_29: 4 loads, 4 LSLICEs
+     Net SSD_ADC/box_ave/accumulate: 7 loads, 7 LSLICEs
      Net SSD_ADC/box_ave/latch_result: 4 loads, 4 LSLICEs
-     Net SSD_ADC/box_ave/accumulate: 8 loads, 8 LSLICEs
-   Number of local set/reset loads for net rstn_c merged into GSR:  80
+   Number of local set/reset loads for net rstn_c merged into GSR:  105
    Number of LSRs:  0
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net SSD_ADC/rollover: 16 loads
-     Net SSD_ADC/box_ave/count_2: 13 loads
-     Net SSD_ADC/box_ave/accumulate: 8 loads
-     Net SSD_ADC/box_ave/count_0: 8 loads
-     Net SSD_ADC/box_ave/n4: 8 loads
-     Net SSD_ADC/box_ave/count_1: 7 loads
-     Net pwm_inst/counter_5: 5 loads
-     Net pwm_inst/counter_6: 5 loads
-     Net SSD_ADC/box_ave/latch_result: 5 loads
-     Net SSD_ADC/clk_80mhz_enable_18: 5 loads
+     Net uart_tx_inst/r_SM_Main_2: 30 loads
+     Net uart_tx_inst/r_SM_Main_1: 24 loads
+     Net uart_tx_inst/r_SM_Main_0: 22 loads
+     Net uart_tx_inst/n653: 21 loads
+     Net uart_tx_inst/n734: 21 loads
+     Net SSD_ADC/rollover: 14 loads
+     Net SSD_ADC/box_ave/count_0: 12 loads
+     Net SSD_ADC/box_ave/count_1: 11 loads
+     Net SSD_ADC/box_ave/accumulate: 7 loads
+     Net r_Bit_Index_2: 6 loads
 
 
 
@@ -123,22 +126,18 @@ IO (PIO) Attributes
 -------------------
 
 +---------------------+-----------+-----------+------------+
-| IO Name             | Direction | Levelmode | IO         |
-|                     |           |  IO_TYPE  | Register   |
-+---------------------+-----------+-----------+------------+
 
                                     Page 2
 
 
 
 
-Design:  ADC_top                                       Date:  06/24/24  01:01:57
+Design:  ADC_top                                       Date:  06/27/24  18:14:26
 
 IO (PIO) Attributes (cont)
 --------------------------
-| digital_out[3]      | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| digital_out[4]      | OUTPUT    | LVCMOS25  |            |
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
 | digital_out[5]      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -146,17 +145,41 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | digital_out[7]      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
+| sample_rdy          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| analog_out          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| digital_out[4]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digital_out[3]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
 | digital_out[2]      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | digital_out[1]      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | digital_out[0]      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| analog_out          | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| sample_rdy          | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 | pwm_out             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk_out             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| uart_tx             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | clk_in              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -168,112 +191,83 @@ IO (PIO) Attributes (cont)
 Removed logic
 -------------
 
-Signal rstn_N_51 was merged into signal rstn_c
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal SSD_ADC/box_ave/accum_40_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal SSD_ADC/box_ave/accum_40_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal SSD_ADC/box_ave/accum_40_add_4_11/CO undriven or does not drive anything
-     - clipped.
-Signal SSD_ADC/counter_39_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal SSD_ADC/counter_39_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal SSD_ADC/counter_39_add_4_11/S1 undriven or does not drive anything -
-     clipped.
-Signal SSD_ADC/counter_39_add_4_11/CO undriven or does not drive anything -
-     clipped.
-Signal pwm_inst/counter_41_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal pwm_inst/counter_41_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal pwm_inst/counter_41_add_4_9/S1 undriven or does not drive anything -
-     clipped.
-Signal pwm_inst/counter_41_add_4_9/CO undriven or does not drive anything -
-     clipped.
+Signal rstn_N_152 was merged into signal rstn_c
 
                                     Page 3
 
 
 
 
-Design:  ADC_top                                       Date:  06/24/24  01:01:57
+Design:  ADC_top                                       Date:  06/27/24  18:14:26
 
 Removed logic (cont)
 --------------------
-Signal _add_1_add_4_10/CO undriven or does not drive anything - clipped.
+Signal uart_tx_inst/clk_in_c_enable_43 was merged into signal
+     uart_tx_inst/r_SM_Main_2
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal SSD_ADC/VCC_net undriven or does not drive anything - clipped.
+Signal SSD_ADC/box_ave/VCC_net undriven or does not drive anything - clipped.
+Signal uart_tx_inst/VCC_net undriven or does not drive anything - clipped.
+Signal pwm_inst/VCC_net undriven or does not drive anything - clipped.
+Signal SSD_ADC/box_ave/accum_101_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal SSD_ADC/box_ave/accum_101_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal SSD_ADC/box_ave/accum_101_add_4_11/S1 undriven or does not drive anything
+     - clipped.
+Signal SSD_ADC/box_ave/accum_101_add_4_11/CO undriven or does not drive anything
+     - clipped.
+Signal SSD_ADC/counter_96_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal SSD_ADC/counter_96_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal SSD_ADC/counter_96_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal SSD_ADC/counter_96_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal uart_tx_inst/r_Clock_Count_98_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal uart_tx_inst/r_Clock_Count_98_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal uart_tx_inst/r_Clock_Count_98_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal uart_tx_inst/r_Clock_Count_98_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal pwm_inst/counter_99_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/counter_99_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/counter_99_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/counter_99_add_4_1/CI undriven or does not drive anything -
+     clipped.
 Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
 Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_8/CO undriven or does not drive anything - clipped.
 Block SSD_ADC/rstn_I_0_1_lut was optimized away.
-Block i6 was optimized away.
+Block uart_tx_inst/i5_1_lut_rep_53 was optimized away.
+Block i913 was optimized away.
+Block SSD_ADC/i1 was optimized away.
+Block SSD_ADC/box_ave/i1 was optimized away.
+Block uart_tx_inst/i1 was optimized away.
+Block pwm_inst/i1 was optimized away.
 
      
 
-PLL/DLL Summary
----------------
+GSR Usage
+---------
 
-PLL 1:                                     Pin/Node Value
-  PLL Instance Name:                                PLL1/PLLInst_0
-  PLL Type:                                         EHXPLLL
-  Input Clock:                             PIN      clk_in_c
-  Input Clock2:                                     NONE
-  Input Clock select:                               NONE
-  Output Clock(P):                         NODE     clk_80mhz
-  Feedback Signal:                         NODE     clk_80mhz
-  Reset Signal:                                     NONE
-  Standby Signal:                          NODE     GND_net
-  Input Clock Frequency (MHz):                      25.0000
-  Output Clock(P) Frequency (MHz):                  83.3333
-  CLKOP Post Divider A Input:                       DIVA
-  CLKOS Post Divider B Input:                       DIVB
-  CLKOS2 Post Divider C Input:                      DIVC
-  CLKOS3 Post Divider D Input:                      DIVD
-  Pre Divider A Input:                              NONE
-  Pre Divider B Input:                              NONE
-  Pre Divider C Input:                              NONE
-  Pre Divider D Input:                              NONE
-  FB_MODE:                                          CLKOP
-  CLKI Divider:                                     3
-  CLKFB Divider:                                    10
-  CLKOP Divider:                                    7
-  CLKOS Divider:                                    1
-  CLKOS2 Divider:                                   1
-  CLKOS3 Divider:                                   1
-  Fractional N Divider:                             NONE
-  CLKOP Desired Phase Shift(degree):                0
-  CLKOP Trim Option Rising/Falling:                 FALLING
-  CLKOP Trim Option Delay:                          0
-  CLKOS Desired Phase Shift(degree):                0
-  CLKOS Trim Option Rising/Falling:                 FALLING
-  CLKOS Trim Option Delay:                          0
-  CLKOS2 Desired Phase Shift(degree):               0
-  CLKOS2 Trim Option Rising/Falling:                NONE
-  CLKOS2 Trim Option Delay:                         NONE
-  CLKOS3 Desired Phase Shift(degree):               0
-  CLKOS3 Trim Option Rising/Falling:                NONE
-  CLKOS3 Trim Option Delay:                         NONE
-
-ASIC Components
----------------
-
-Instance Name: PLL1/PLLInst_0
+GSR Component:
 
                                     Page 4
 
 
 
 
-Design:  ADC_top                                       Date:  06/24/24  01:01:57
+Design:  ADC_top                                       Date:  06/27/24  18:14:26
 
-ASIC Components (cont)
-----------------------
-         Type: EHXPLLL
-
-GSR Usage
----------
-
-GSR Component:
+GSR Usage (cont)
+----------------
    The local reset signal 'rstn_c' of the design has been inferred as Global Set
         Reset (GSR). The reset signal used for GSR control is 'rstn_c'.
         
@@ -289,8 +283,14 @@ Run Time and Memory Usage
 
    Total CPU Time: 3 secs  
    Total REAL Time: 4 secs  
-   Peak Memory Usage: 452 MB
+   Peak Memory Usage: 453 MB
         
+
+
+
+
+
+
 
 
 

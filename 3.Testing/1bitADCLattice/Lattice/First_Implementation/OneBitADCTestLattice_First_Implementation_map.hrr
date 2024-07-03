@@ -3,48 +3,52 @@ Report for cell ADC_top
    Instance path: ADC_top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      67.00        100.0
-                                  LUT4	      52.00        100.0
-                                 IOBUF	         14        100.0
-                                PFUREG	         81        100.0
-                                RIPPLE	         22        100.0
+                                  SLIC	     108.00        100.0
+                                  LUT4	     100.00        100.0
+                                 IOBUF	         24        100.0
+                                PFUREG	        106        100.0
+                                RIPPLE	         29        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                        sigmadelta_adc	          1        62.7
-PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)	          1        25.4
-                                   PLL	          1         0.0
----------------------------------------------------
-Report for cell PLL
-   Instance path: ADC_top/PLL1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
+sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2)	          1        35.2
+             uart_tx(CLKS_PER_BIT=217)	          1        40.4
+PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)	          1        16.7
 ---------------------------------------------------
 Report for cell PWM(DATA_WIDTH=8,COUNTER_WIDTH=8,OFFSET=0)
    Instance path: ADC_top/pwm_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      17.00        25.4
-                                  LUT4	      17.00        32.7
-                                PFUREG	         17        21.0
-                                RIPPLE	          5        22.7
+                                  SLIC	      18.00        16.7
+                                  LUT4	      17.00        17.0
+                                PFUREG	         17        16.0
+                                RIPPLE	          5        17.2
 ---------------------------------------------------
-Report for cell sigmadelta_adc
+Report for cell uart_tx(CLKS_PER_BIT=217)
+   Instance path: ADC_top/uart_tx_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.67        40.4
+                                  LUT4	      50.00        50.0
+                                PFUREG	         31        29.2
+                                RIPPLE	          9        31.0
+---------------------------------------------------
+Report for cell sigmadelta_adc(ACCUM_BITS=8,LPF_DEPTH_BITS=2)
    Instance path: ADC_top/SSD_ADC
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      42.00        62.7
-                                  LUT4	      26.00        50.0
-                                PFUREG	         64        79.0
-                                RIPPLE	         12        54.5
+                                  SLIC	      38.00        35.2
+                                  LUT4	      20.00        20.0
+                                PFUREG	         58        54.7
+                                RIPPLE	         11        37.9
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-             box_ave(LPF_DEPTH_BITS=3)	          1        29.9
+             box_ave(LPF_DEPTH_BITS=2)	          1        17.6
 ---------------------------------------------------
-Report for cell box_ave(LPF_DEPTH_BITS=3)
+Report for cell box_ave(LPF_DEPTH_BITS=2)
    Instance path: ADC_top/SSD_ADC/box_ave
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      20.00        29.9
-                                  LUT4	       7.00        13.5
-                                PFUREG	         33        40.7
-                                RIPPLE	          6        27.3
+                                  SLIC	      19.00        17.6
+                                  LUT4	       5.00         5.0
+                                PFUREG	         31        29.2
+                                RIPPLE	          6        20.7

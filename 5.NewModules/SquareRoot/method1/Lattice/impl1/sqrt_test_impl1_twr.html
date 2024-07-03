@@ -1,0 +1,1114 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file sqrt_test_impl1.ncd.
+Design name: sqrt_wrapper
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
+Wed Jul  3 15:27:43 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o sqrt_test_impl1.twr -gui sqrt_test_impl1.ncd sqrt_test_impl1.prf 
+Design file:     sqrt_test_impl1.ncd
+Preference file: sqrt_test_impl1.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>Default path enumeration(0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_0_1' Target='right'>Default net enumeration(0 errors)</A></LI>            522 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: Default path enumeration
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:   46.503ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A1 N_16_i
+C1TOFCO_DE  ---     0.447     R47C94C.A1 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.503   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.503ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A0 N_16_i
+C0TOFCO_DE  ---     0.447     R47C94C.A0 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.503   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.503ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B0 un1_r_8[12]
+C0TOFCO_DE  ---     0.447     R44C90C.B0 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A1 N_16_i
+C1TOFCO_DE  ---     0.447     R47C94C.A1 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.503   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.503ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B0 un1_r_8[12]
+C0TOFCO_DE  ---     0.447     R44C90C.B0 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A0 N_16_i
+C0TOFCO_DE  ---     0.447     R47C94C.A0 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.503   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.491ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.756      L19.PADDI to    R44C111B.B0 num_c[30]
+CTOF_DEL    ---     0.236    R44C111B.B0 to    R44C111B.F0 SLICE_180
+ROUTE        37     1.586    R44C111B.F0 to    R42C110C.C0 r[2]_4
+CTOF_DEL    ---     0.236    R42C110C.C0 to    R42C110C.F0 SLICE_43
+ROUTE         1     0.817    R42C110C.F0 to    R43C109A.D0 un18_r_cry_3_0_S0
+CTOF_DEL    ---     0.236    R43C109A.D0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A0 N_16_i
+C0TOFCO_DE  ---     0.447     R47C94C.A0 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.491   (32.1% logic, 67.9% route), 39 logic levels.
+
+Report:   46.491ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.756      L19.PADDI to    R44C111B.B0 num_c[30]
+CTOF_DEL    ---     0.236    R44C111B.B0 to    R44C111B.F0 SLICE_180
+ROUTE        37     1.586    R44C111B.F0 to    R42C110C.C0 r[2]_4
+CTOF_DEL    ---     0.236    R42C110C.C0 to    R42C110C.F0 SLICE_43
+ROUTE         1     0.817    R42C110C.F0 to    R43C109A.D0 un18_r_cry_3_0_S0
+CTOF_DEL    ---     0.236    R43C109A.D0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A1 N_16_i
+C1TOFCO_DE  ---     0.447     R47C94C.A1 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.491   (32.1% logic, 67.9% route), 39 logic levels.
+
+Report:   46.491ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.756      L19.PADDI to    R44C111B.B0 num_c[30]
+CTOF_DEL    ---     0.236    R44C111B.B0 to    R44C111B.F0 SLICE_180
+ROUTE        37     1.586    R44C111B.F0 to    R42C110C.C0 r[2]_4
+CTOF_DEL    ---     0.236    R42C110C.C0 to    R42C110C.F0 SLICE_43
+ROUTE         1     0.817    R42C110C.F0 to    R43C109A.D0 un18_r_cry_3_0_S0
+CTOF_DEL    ---     0.236    R43C109A.D0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B0 un1_r_8[12]
+C0TOFCO_DE  ---     0.447     R44C90C.B0 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A0 N_16_i
+C0TOFCO_DE  ---     0.447     R47C94C.A0 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.491   (32.1% logic, 67.9% route), 39 logic levels.
+
+Report:   46.491ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.756      L19.PADDI to    R44C111B.B0 num_c[30]
+CTOF_DEL    ---     0.236    R44C111B.B0 to    R44C111B.F0 SLICE_180
+ROUTE        37     1.586    R44C111B.F0 to    R42C110C.C0 r[2]_4
+CTOF_DEL    ---     0.236    R42C110C.C0 to    R42C110C.F0 SLICE_43
+ROUTE         1     0.817    R42C110C.F0 to    R43C109A.D0 un18_r_cry_3_0_S0
+CTOF_DEL    ---     0.236    R43C109A.D0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF1_DE  ---     0.474    R41C87D.FCI to     R41C87D.F1 SLICE_133
+ROUTE         1     0.786     R41C87D.F1 to     R41C88C.A1 un38_r_cry_5_0_S1
+CTOF_DEL    ---     0.236     R41C88C.A1 to     R41C88C.F1 SLICE_186
+ROUTE         2     1.029     R41C88C.F1 to     R40C90A.C1 un1_r_4[6]
+C1TOFCO_DE  ---     0.447     R40C90A.C1 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B0 un1_r_8[12]
+C0TOFCO_DE  ---     0.447     R44C90C.B0 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A1 N_16_i
+C1TOFCO_DE  ---     0.447     R47C94C.A1 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.491   (32.1% logic, 67.9% route), 39 logic levels.
+
+Report:   46.453ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF0_DE  ---     0.443    R41C87D.FCI to     R41C87D.F0 SLICE_133
+ROUTE         1     0.602     R41C87D.F0 to     R41C88D.C0 un38_r_cry_5_0_S0
+CTOF_DEL    ---     0.236     R41C88D.C0 to     R41C88D.F0 SLICE_187
+ROUTE         2     1.194     R41C88D.F0 to     R40C90A.B0 un1_r_4[5]
+C0TOFCO_DE  ---     0.447     R40C90A.B0 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A0 N_16_i
+C0TOFCO_DE  ---     0.447     R47C94C.A0 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.453   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.453ns delay num[30] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005        L19.PAD to      L19.PADDI num[30]
+ROUTE        25     2.988      L19.PADDI to    R43C111C.A1 num_c[30]
+CTOF_DEL    ---     0.236    R43C111C.A1 to    R43C111C.F1 SLICE_179
+ROUTE         7     0.764    R43C111C.F1 to    R43C111D.B0 CO1_1
+CTOF_DEL    ---     0.236    R43C111D.B0 to    R43C111D.F0 SLICE_167
+ROUTE         2     0.608    R43C111D.F0 to    R43C109A.C1 un14_r_c4
+CTOF_DEL    ---     0.236    R43C109A.C1 to    R43C109A.F1 SLICE_176
+ROUTE        27     0.575    R43C109A.F1 to    R43C109A.B0 un1_r[4]
+CTOF_DEL    ---     0.236    R43C109A.B0 to    R43C109A.F0 SLICE_176
+ROUTE         2     1.202    R43C109A.F0 to    R42C108D.A0 un1_r_1[3]
+CTOF1_DEL   ---     0.714    R42C108D.A0 to    R42C108D.F1 SLICE_40
+ROUTE         2     0.646    R42C108D.F1 to    R42C105B.D1 un24_r_cry_5_0_S1
+CTOF_DEL    ---     0.236    R42C105B.D1 to    R42C105B.F1 SLICE_174
+ROUTE        25     3.198    R42C105B.F1 to     R41C87C.B0 un1_r_2[6]
+C0TOFCO_DE  ---     0.447     R41C87C.B0 to    R41C87C.FCO SLICE_132
+ROUTE         1     0.000    R41C87C.FCO to    R41C87D.FCI un38_r_cry_4
+FCITOF0_DE  ---     0.443    R41C87D.FCI to     R41C87D.F0 SLICE_133
+ROUTE         1     0.602     R41C87D.F0 to     R41C88D.C0 un38_r_cry_5_0_S0
+CTOF_DEL    ---     0.236     R41C88D.C0 to     R41C88D.F0 SLICE_187
+ROUTE         2     1.194     R41C88D.F0 to     R40C90A.B0 un1_r_4[5]
+C0TOFCO_DE  ---     0.447     R40C90A.B0 to    R40C90A.FCO SLICE_99
+ROUTE         1     0.000    R40C90A.FCO to    R40C90B.FCI un44_r_cry_8
+FCITOF0_DE  ---     0.443    R40C90B.FCI to     R40C90B.F0 SLICE_100
+ROUTE         2     0.646     R40C90B.F0 to     R41C91B.D1 un44_r_s_9_0_S0
+CTOF_DEL    ---     0.236     R41C91B.D1 to     R41C91B.F1 SLICE_171
+ROUTE        22     1.977     R41C91B.F1 to     R40C94A.A0 un1_r_5[9]
+CTOF_DEL    ---     0.236     R40C94A.A0 to     R40C94A.F0 SLICE_206
+ROUTE         2     1.209     R40C94A.F0 to     R41C93A.B0 un1_r_6[5]
+C0TOFCO_DE  ---     0.447     R41C93A.B0 to    R41C93A.FCO SLICE_12
+ROUTE         1     0.000    R41C93A.FCO to    R41C93B.FCI un54_r_cry_8
+FCITOF0_DE  ---     0.443    R41C93B.FCI to     R41C93B.F0 SLICE_13
+ROUTE         1     0.602     R41C93B.F0 to     R40C93D.C0 un54_r_cry_9_0_S0
+CTOF_DEL    ---     0.236     R40C93D.C0 to     R40C93D.F0 SLICE_204
+ROUTE         2     1.050     R40C93D.F0 to     R42C93C.C0 un1_r_7[9]
+CTOF1_DEL   ---     0.714     R42C93C.C0 to     R42C93C.F1 SLICE_81
+ROUTE         2     1.033     R42C93C.F1 to     R43C94C.A0 un62_r_cry_11_0_S1
+CTOF_DEL    ---     0.236     R43C94C.A0 to     R43C94C.F0 SLICE_198
+ROUTE        19     1.499     R43C94C.F0 to     R44C90C.B1 un1_r_8[12]
+C1TOFCO_DE  ---     0.447     R44C90C.B1 to    R44C90C.FCO SLICE_113
+ROUTE         1     0.000    R44C90C.FCO to    R44C90D.FCI un1_num_cry_4
+FCITOFCO_D  ---     0.071    R44C90D.FCI to    R44C90D.FCO SLICE_114
+ROUTE         1     0.000    R44C90D.FCO to    R44C91A.FCI un1_num_cry_6
+FCITOF0_DE  ---     0.443    R44C91A.FCI to     R44C91A.F0 SLICE_115
+ROUTE         2     1.674     R44C91A.F0 to     R45C87B.B0 un1_num_cry_7_0_S0
+C0TOFCO_DE  ---     0.447     R45C87B.B0 to    R45C87B.FCO SLICE_163
+ROUTE         1     0.000    R45C87B.FCO to    R45C87C.FCI un74_r_cry_10
+FCITOF0_DE  ---     0.443    R45C87C.FCI to     R45C87C.F0 SLICE_164
+ROUTE         1     0.754     R45C87C.F0 to     R47C88C.D0 un74_r_cry_11_0_S0
+CTOF_DEL    ---     0.236     R47C88C.D0 to     R47C88C.F0 SLICE_251
+ROUTE         2     1.599     R47C88C.F0 to     R44C87D.B0 un1_r_10[11]
+CTOF1_DEL   ---     0.714     R44C87D.B0 to     R44C87D.F1 SLICE_155
+ROUTE         2     1.274     R44C87D.F1 to     R45C89D.A0 un80_r_cry_13_0_S1
+CTOF_DEL    ---     0.236     R45C89D.A0 to     R45C89D.F0 SLICE_169
+ROUTE         1     1.042     R45C89D.F0 to     R44C95A.A1 un84_r_axb_16
+C1TOFCO_DE  ---     0.447     R44C95A.A1 to    R44C95A.FCO SLICE_109
+ROUTE         1     0.000    R44C95A.FCO to    R44C95B.FCI un86_r_cry_16
+FCITOF0_DE  ---     0.443    R44C95B.FCI to     R44C95B.F0 SLICE_110
+ROUTE         2     1.157     R44C95B.F0 to     R47C96D.B0 un86_r_s_17_0_S0
+CTOF_DEL    ---     0.236     R47C96D.B0 to     R47C96D.F0 SLICE_178
+ROUTE        15     1.019     R47C96D.F0 to     R47C94C.A1 N_16_i
+C1TOFCO_DE  ---     0.447     R47C94C.A1 to    R47C94C.FCO SLICE_122
+ROUTE         1     0.000    R47C94C.FCO to    R47C94D.FCI un1_num_1_cry_4
+FCITOFCO_D  ---     0.071    R47C94D.FCI to    R47C94D.FCO SLICE_123
+ROUTE         1     0.000    R47C94D.FCO to    R47C95A.FCI un1_num_1_cry_6
+FCITOFCO_D  ---     0.071    R47C95A.FCI to    R47C95A.FCO SLICE_124
+ROUTE         1     0.000    R47C95A.FCO to    R47C95B.FCI un1_num_1_cry_8
+FCITOFCO_D  ---     0.071    R47C95B.FCI to    R47C95B.FCO SLICE_125
+ROUTE         1     0.000    R47C95B.FCO to    R47C95C.FCI un1_num_1_cry_10
+FCITOFCO_D  ---     0.071    R47C95C.FCI to    R47C95C.FCO SLICE_126
+ROUTE         1     0.000    R47C95C.FCO to    R47C95D.FCI un1_num_1_cry_12
+FCITOFCO_D  ---     0.071    R47C95D.FCI to    R47C95D.FCO SLICE_127
+ROUTE         1     0.000    R47C95D.FCO to    R47C96A.FCI un1_num_1_cry_14
+FCITOFCO_D  ---     0.071    R47C96A.FCI to    R47C96A.FCO SLICE_128
+ROUTE         1     0.000    R47C96A.FCO to    R47C96B.FCI un1_num_1_cry_16
+FCITOF0_DE  ---     0.443    R47C96B.FCI to     R47C96B.F0 SLICE_129
+ROUTE         1     1.771     R47C96B.F0 to    R53C111A.A0 un1_num_1_s_17_0_S0
+CTOF_DEL    ---     0.236    R53C111A.A0 to    R53C111A.F0 SLICE_259
+ROUTE         1     1.241    R53C111A.F0 to      N16.PADDO N_12873_i
+DOPAD_DEL   ---     1.951      N16.PADDO to        N16.PAD result[0]
+                  --------
+                   46.453   (32.6% logic, 67.4% route), 40 logic levels.
+
+Report:   46.503ns is the maximum delay for this preference.
+
+
+================================================================================
+<A name="par_twr_pref_0_1"></A>Preference: Default net enumeration
+            522 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    4.769ns maximum delay on num_c[8]
+
+           Delays             Connection(s)
+           4.769ns        C13.PADDI to R45C86B.B1      
+           4.693ns        C13.PADDI to R44C90A.B1      
+           4.244ns        C13.PADDI to R47C86B.B1      
+
+Report:    4.702ns maximum delay on num_c[31]
+
+           Delays             Connection(s)
+           2.273ns        M20.PADDI to R44C111B.C0     
+           2.045ns        M20.PADDI to R43C111C.B1     
+           4.481ns        M20.PADDI to R45C87D.B0      
+           3.756ns        M20.PADDI to R44C87D.A1      
+           2.734ns        M20.PADDI to R43C110C.B1     
+           2.719ns        M20.PADDI to R42C109D.A0     
+           2.315ns        M20.PADDI to R41C106D.A1     
+           3.544ns        M20.PADDI to R41C88A.B0      
+           3.331ns        M20.PADDI to R44C95A.A0      
+           3.361ns        M20.PADDI to R40C90A.B1      
+           3.040ns        M20.PADDI to R41C95B.B0      
+           3.338ns        M20.PADDI to R40C93B.B1      
+           3.048ns        M20.PADDI to R42C93C.A0      
+           4.311ns        M20.PADDI to R47C87D.B0      
+           4.702ns        M20.PADDI to R43C87D.B1      
+           3.494ns        M20.PADDI to R45C94A.B0      
+           2.274ns        M20.PADDI to R42C110C.A1     
+           2.330ns        M20.PADDI to R42C108D.B0     
+           2.559ns        M20.PADDI to R42C106D.A1     
+           3.302ns        M20.PADDI to R42C89A.A0      
+           3.140ns        M20.PADDI to R41C90A.B1      
+           3.110ns        M20.PADDI to R42C95B.A0      
+           2.895ns        M20.PADDI to R41C93B.B1      
+           3.061ns        M20.PADDI to R43C91C.B0      
+
+Report:    4.578ns maximum delay on num_c[18]
+
+           Delays             Connection(s)
+           4.053ns        B13.PADDI to R41C87A.B1      
+           4.136ns        B13.PADDI to R40C89B.A1      
+           4.578ns        B13.PADDI to R42C88A.A1      
+           4.136ns        B13.PADDI to R41C89B.A1      
+
+Report:    4.236ns maximum delay on num_c[4]
+
+           Delays             Connection(s)
+           4.236ns        R17.PADDI to R44C86A.A1      
+           3.485ns        R17.PADDI to R44C93B.B1      
+           3.832ns        R17.PADDI to R43C86A.A1      
+           3.089ns        R17.PADDI to R45C92B.A1      
+
+Report:    4.191ns maximum delay on num_c[30]
+
+           Delays             Connection(s)
+           2.756ns        L19.PADDI to R44C111B.B1     
+           2.756ns        L19.PADDI to R44C111B.B0     
+           2.988ns        L19.PADDI to R43C111C.A1     
+           3.087ns        L19.PADDI to R45C87D.C0      
+           3.080ns        L19.PADDI to R44C87D.B1      
+           2.141ns        L19.PADDI to R43C110C.C1     
+           2.759ns        L19.PADDI to R42C109D.B0     
+           2.538ns        L19.PADDI to R41C106D.B1     
+           4.191ns        L19.PADDI to R41C88A.A0      
+           3.518ns        L19.PADDI to R44C95A.B0      
+           3.542ns        L19.PADDI to R40C90A.A1      
+           3.526ns        L19.PADDI to R41C95B.A0      
+           3.100ns        L19.PADDI to R40C93B.A1      
+           3.042ns        L19.PADDI to R42C93C.B0      
+           2.506ns        L19.PADDI to R47C87D.C0      
+           3.603ns        L19.PADDI to R43C87D.C1      
+           3.380ns        L19.PADDI to R45C94A.C0      
+           2.557ns        L19.PADDI to R42C110C.C1     
+           2.595ns        L19.PADDI to R42C108D.C0     
+           2.545ns        L19.PADDI to R42C106D.C1     
+           3.370ns        L19.PADDI to R42C89A.C0      
+           3.137ns        L19.PADDI to R41C90A.C1      
+           2.938ns        L19.PADDI to R42C95B.C0      
+           2.683ns        L19.PADDI to R41C93B.C1      
+           2.638ns        L19.PADDI to R43C91C.C0      
+
+Report:    4.172ns maximum delay on num_c[16]
+
+           Delays             Connection(s)
+           3.951ns        D14.PADDI to R40C89A.B1      
+           3.698ns        D14.PADDI to R41C94B.B1      
+           4.172ns        D14.PADDI to R41C89A.B1      
+           3.698ns        D14.PADDI to R42C94B.B1      
+
+Report:    3.915ns maximum delay on num_c[7]
+
+           Delays             Connection(s)
+           3.915ns        A13.PADDI to R45C86B.A0      
+           3.798ns        A13.PADDI to R47C86B.A0      
+
+Report:    3.831ns maximum delay on num_c[15]
+
+           Delays             Connection(s)
+           3.831ns        J16.PADDI to R41C94B.A0      
+           3.831ns        J16.PADDI to R42C94B.A0      
+
+Report:    3.783ns maximum delay on num_c[6]
+
+           Delays             Connection(s)
+           3.442ns        E13.PADDI to R45C86A.B1      
+           3.442ns        E13.PADDI to R44C86B.B1      
+           3.783ns        E13.PADDI to R47C86A.B1      
+           3.198ns        E13.PADDI to R43C86B.B1      
+
+Report:    3.725ns maximum delay on num_c[22]
+
+           Delays             Connection(s)
+           3.725ns        H17.PADDI to R42C109A.A1     
+           3.088ns        H17.PADDI to R41C106B.A1     
+           3.321ns        H17.PADDI to R42C108A.A1     
+           3.088ns        H17.PADDI to R42C106B.A1     
+
+Report:    4.769ns is the maximum delay for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|    46.503 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     4.769 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 0 clocks:
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 873337220 paths, 522 nets, and 1094 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

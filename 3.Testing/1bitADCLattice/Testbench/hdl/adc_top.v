@@ -68,7 +68,7 @@ module ADC_top #(
  parameter int ADC_WIDTH = 8,              // ADC Convertor Bit Precision
  parameter int ACCUM_BITS = 10,            // 2^ACCUM_BITS is decimation rate of accumulator
  parameter int LPF_DEPTH_BITS = 3,         // 2^LPF_DEPTH_BITS is decimation rate of averager
- parameter int INPUT_TOPOLOGY = 1         // 0: DIRECT: Analog input directly connected to + input of comparitor
+ parameter int INPUT_TOPOLOGY = 1         // 0: DIRECT: Analog input directly connected to + input of comparator
                                           // 1: NETWORK:Analog input connected through R divider to - input of comp.
 )(
  clk_in,
@@ -164,7 +164,7 @@ assign sample_rdy    =  sample_rdy_i;
 PWM#(
  .DATA_WIDTH(ADC_WIDTH),
  .COUNTER_WIDTH(ADC_WIDTH),
- .OFFSET(128)
+ .OFFSET(0)
  )
 pwm_inst(
  .clk(clk),
