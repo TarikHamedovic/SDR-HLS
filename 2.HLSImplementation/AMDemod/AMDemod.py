@@ -19,7 +19,7 @@ import shutil
 import random
 import numpy as np
 
-from sqrt_int import sqrt_int
+from sqrt_combinatorial import sqrt_combinatorial
 
 top_name = "AMDemod"
 
@@ -44,7 +44,10 @@ class AMDemod(Elaboratable):
 
         WIDTH = self.WIDTH
 
-        m.submodules.sqrt = sqrt_int(32)
+        # Initialization of square root module
+        # NOTE: The parameter N MUST be even!
+        # TODO: Maybe add a test for that
+        m.submodules.sqrt = sqrt_combinatorial(2 * WIDTH + 2)
 
         # Internal Registers
 
@@ -57,6 +60,7 @@ class AMDemod(Elaboratable):
         MultResult2 = Signal(signed(2 * WIDTH))
 
         SquareSum = Signal(signed(2 * WIDTH + 1))
+        d_out_d = Signal(WIDTH)
 
         m.d.sync += [
             MultDataA.eq(self.I_in),
@@ -65,32 +69,22 @@ class AMDemod(Elaboratable):
             MultDataD.eq(self.Q_in),
             MultResult1.eq(MultDataA * MultDataB),
             MultResult2.eq(MultDataC * MultDataD),
-            SquareSum.eq(MultResult1 + MultResult2)
+            SquareSum.eq(MultResult1 + MultResult2)        
         ]
 
-        # State machine for the start signal
-        with m.FSM() as fsm:
-            with m.State("IDLE"):
-                m.submodules.sqrt.rad.eq(SquareSum)
-                m.d.sync += m.submodules.sqrt.start.eq(0)
-                m.next = "START"
+        m.d.comb += [
+            m.submodules.sqrt.num.eq(SquareSum),
+            d_out_d.eq(m.submodules.sqrt.result)
+        ]
 
-            with m.State("START"):
-                m.d.sync += m.submodules.sqrt.start.eq(1)
-                m.next = "WAIT"
-
-            with m.State("WAIT"):
-                m.d.sync += m.submodules.sqrt.start.eq(0)
-                with m.If(m.submodules.sqrt.valid):
-                    m.d.sync += self.d_out.eq(m.submodules.sqrt.root)
-                    m.next = "IDLE"
+        m.d.sync += self.d_out.eq(d_out_d)
         
         return m
 
 
 def clean():
     files_to_remove = [f"{top_name}.vcd", f"{top_name}.gtkw", f"{top_name}.v"]
-    build_dir = "build"
+    directories_to_remove = ["build", "__pycache__"]
 
     for file in files_to_remove:
         try:
@@ -99,12 +93,13 @@ def clean():
         except FileNotFoundError:
             print(f"{file} not found, skipping")
 
-    if os.path.isdir(build_dir):
-        try:
-            shutil.rmtree(build_dir)
-            print(f"Removed {build_dir} directory")
-        except OSError as e:
-            print(f"Error removing {build_dir}: {e}")
+    for directory in directories_to_remove:
+        if os.path.isdir(directory):
+            try:
+                shutil.rmtree(directory)
+                print(f"Removed {directory} directory")
+            except OSError as e:
+                print(f"Error removing {directory}: {e}")
 
 
 if __name__ == "__main__":
@@ -136,7 +131,7 @@ if __name__ == "__main__":
 
             def testbench():
 
-                print(f"Test: Starting AMDemod Amaranth Simulation with clock frequency of {clock_frequency} MHz") # TODO:Make it generic
+                print(f"Test: Starting AMDemod Amaranth Simulation with clock frequency of {clock_frequency} MHz")
 
                 print("Test: Initializing inputs to 0")
 
@@ -150,8 +145,9 @@ if __name__ == "__main__":
                 assertions_passed = 0
                 
                 for _ in range(runtime):
-
+                    print("----------------------------------")
                     print("Test: Generating random inputs...")
+
                     # Generate random inputs # 
                     test_data = [random.randint(-2**(width-1), 2**(width-1)-1), 
                                  random.randint(-2**(width-1), 2**(width-1)-1)] 
@@ -170,8 +166,10 @@ if __name__ == "__main__":
 
                     # Doing operation sqrt(I_in^2 + Q_in^2)
                     print("Test: Calculating output...")
-                    print("----- Waiting 5 clock cycles for the operation to finish -----")
-                    for _ in range(4): # TODO: Create function, what should be appropriate the name?
+                    print("Operation: sqrt(I_in^2 + Q_in^2)")
+                    wait_cycles = 4
+                    print(f"----- Waiting {wait_cycles} clock cycles for the operation to finish -----")
+                    for _ in range(wait_cycles):
                         yield Tick()
 
                     # Checking the output against expected value #
@@ -189,8 +187,8 @@ if __name__ == "__main__":
                 print(f"----Summary of {top_name} module ----")
                 print(f"Summary: Clock frequency of simulation: {clock_frequency} MHz")
                 print(f"Summary: Width: {width}")
-                print(f"Summary: Total number of assertions passed: {assertions_passed}")
                 print(f"Summary: Runtime of simulation in checks: {runtime}")
+                print(f"Summary: Total number of assertions passed: {assertions_passed}")
 
             # Instantiate the Mixer module
             dut = AMDemod(width)
@@ -215,37 +213,19 @@ if __name__ == "__main__":
             plat = platform_class()
             plat.build(AMDemod(width), do_program=do_program)
 
-        elif args.verilog: # TODO: Maybe change from top ---> mixer for clarity?
+        elif args.verilog:
             top = AMDemod(width)
             ports = [top.I_in, top.Q_in, top.d_out]
 
             with open(f"{top_name}.v", "w") as f:
-                f.write(verilog.convert(top, ports=ports)) # Append simulation-only lines to the Verilog file
-                        # Read the generated Verilog file and insert the simulation code before the endmodule
-            with open(f"{top_name}.v", "r") as f:
-                lines = f.readlines()
+                f.write(verilog.convert(top, ports=ports))
 
-            # Find the line with endmodule
-            with open(f"{top_name}.v", "w") as f:
-                for line in lines:
-                    if line.strip() == "endmodule":
-                        f.write(f"""
-  //----------------------------- 
-  // For simulation only
-  //----------------------------- 
-  initial begin
-    $dumpfile("{top_name}_waves.vcd");
-    $dumpvars;
-  end
-""")
-                    f.write(line)
-
-# TODO: Figure out why cocoTB .vcd files won't generate after running make 
-
+        
 """
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
  2024/4/20 TH: Initial Creation   
- 2024/6/9 TH: Added ArgumentParsers and cleaned up the module
+ 2024/6/9  TH: Added ArgumentParsers and cleaned up the module
+ 2024/7/5  TH: Added sqrt_combinatorial module to calculate the square root
 """

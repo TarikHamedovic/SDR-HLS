@@ -1,0 +1,2 @@
+@W: CL265 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv":51:2:51:10|Removing unused bit 16 of r_reg[17:0]. Either assign all bits or reduce the width of the signal.
+

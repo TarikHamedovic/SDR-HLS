@@ -53,10 +53,10 @@ module Mixer#
   //----------------------------- 
   // For simulation only
   //----------------------------- 
-  initial begin
-    $dumpfile("mixer_waves.vcd");
-    $dumpvars;
-  end
+  //initial begin
+  //  $dumpfile("mixer_waves.vcd");
+  //  $dumpvars;
+  //end
 endmodule
 
 /*

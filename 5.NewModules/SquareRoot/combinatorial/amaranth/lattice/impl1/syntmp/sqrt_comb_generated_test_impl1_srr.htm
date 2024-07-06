@@ -1,0 +1,798 @@
+<html><body><samp><pre>
+<!@TC:1720229263>
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Sat Jul  6 03:27:43 2024
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport1></a>Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095</a>
+
+@N: : <!@TM:1720229263> | Running in 64-bit mode 
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport2></a>Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095</a>
+
+@N: : <!@TM:1720229263> | Running in 64-bit mode 
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv" (library work)
+@N: : <!@TM:1720229263> | stack limit increased to max 
+Verilog syntax check successful!
+Selecting top level module sqrt_sequential
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:1:7:1:22:@N:CG364:@XP_MSG">sqrt_sequential.sv(1)</a><!@TM:1720229263> | Synthesizing module sqrt_sequential in library work.
+Running optimization stage 1 on sqrt_sequential .......
+<font color=#A52A2A>@W:<a href="@W:CL265:@XP_HELP">CL265</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@W:CL265:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229263> | Removing unused bit 16 of r_reg[17:0]. Either assign all bits or reduce the width of the signal.</font>
+Finished optimization stage 1 on sqrt_sequential (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+Running optimization stage 2 on sqrt_sequential .......
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:26:2:26:11:@N:CL201:@XP_MSG">sqrt_sequential.sv(26)</a><!@TM:1720229263> | Trying to extract state machine for register sqrt_state.
+Extracted state machine for register sqrt_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+Finished optimization stage 2 on sqrt_sequential (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+Linked File:  <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/layer0.duruntime:@XP_FILE">layer0.duruntime</a>
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 132MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul  6 03:27:43 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport3></a>Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095</a>
+
+@N: : <!@TM:1720229263> | Running in 64-bit mode 
+File /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 134MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul  6 03:27:43 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+Linked File:  <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/sqrt_comb_generated_test_impl1_comp.rt.csv:@XP_FILE">sqrt_comb_generated_test_impl1_comp.rt.csv</a>
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul  6 03:27:43 2024
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1720229263>
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport10></a>Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095</a>
+
+@N: : <!@TM:1720229264> | Running in 64-bit mode 
+File /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/sqrt_comb_generated_test_impl1_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 134MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul  6 03:27:44 2024
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1720229263>
+Premap Report
+
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1720229263>
+# Sat Jul  6 03:27:44 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=mapperReport23></a>Synopsys Lattice Technology Pre-mapping, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1720229265> | No constraint file specified. 
+Linked File:  <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1_scck.rpt:@XP_FILE">sqrt_comb_generated_test_impl1_scck.rpt</a>
+See clock summary report "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1_scck.rpt"
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1720229265> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1720229265> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1720229265> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 238MB peak: 238MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 240MB peak: 240MB)
+
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Encoding state machine sqrt_state[2:0] (in view: work.sqrt_sequential(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+mixed edge conversion for GCC is OFF
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+@N:<a href="@N:FX1184:@XP_HELP">FX1184</a> : <!@TM:1720229265> | Applying syn_allowed_resources blockrams=208 on top level netlist sqrt_sequential  
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+
+<a name=mapperReport24></a>Clock Summary</a>
+******************
+
+          Start                   Requested     Requested     Clock        Clock          Clock
+Level     Clock                   Frequency     Period        Type         Group          Load 
+-----------------------------------------------------------------------------------------------
+0 -       sqrt_sequential|clk     200.0 MHz     5.000         inferred     (multiple)     72   
+===============================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                        Clock     Source        Clock Pin       Non-clock Pin     Non-clock Pin
+Clock                   Load      Pin           Seq Example     Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------
+sqrt_sequential|clk     72        clk(port)     a[31:0].C       -                 -            
+===============================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:26:2:26:11:@W:MT529:@XP_MSG">sqrt_sequential.sv(26)</a><!@TM:1720229265> | Found inferred clock sqrt_sequential|clk which controls 72 sequential elements including sqrt_state[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+<a name=clockReport25></a>#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[</a>
+
+1 non-gated/non-generated clock tree(s) driving 72 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+<a href="@|L:/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/sqrt_comb_generated_test_impl1_prem.srm@|S:clk@|E:sqrt_state[1]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0 @XP_NAMES_BY_PROP">ClockId_0_0</a>       clk                 port                   72         sqrt_state[1]  
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N:<a href="@N:FX1143:@XP_HELP">FX1143</a> : <!@TM:1720229265> | Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized. 
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Jul  6 03:27:45 2024
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1720229263>
+Map & Optimize Report
+
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1720229263>
+# Sat Jul  6 03:27:46 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=mapperReport38></a>Synopsys Lattice Technology Mapper, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1720229268> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1720229268> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1720229268> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 229MB peak: 229MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 239MB peak: 239MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 287MB peak: 287MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 288MB peak: 288MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 288MB peak: 288MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 288MB peak: 288MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 289MB peak: 289MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		     1.28ns		  64 /        72
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+@N:<a href="@N:FX164:@XP_HELP">FX164</a> : <!@TM:1720229268> | The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.   
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_15_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_14_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_13_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_12_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_11_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_10_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_9_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_8_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_7_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_6_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_5_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_4_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_3_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_2_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_1_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv:51:2:51:11:@A:BN291:@XP_MSG">sqrt_sequential.sv(51)</a><!@TM:1720229268> | Boundary register q_0_.fb (in view: work.sqrt_sequential(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 290MB peak: 290MB)
+
+Writing Analyst data base /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/sqrt_comb_generated_test_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 290MB peak: 290MB)
+
+Writing EDIF Netlist and constraint files
+@N:<a href="@N:FX1056:@XP_HELP">FX1056</a> : <!@TM:1720229268> | Writing EDF file: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.edi 
+@N:<a href="@N:BW106:@XP_HELP">BW106</a> : <!@TM:1720229268> | Synplicity Constraint File capacitance units using default value of 1pF  
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 297MB peak: 297MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 297MB peak: 297MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 297MB peak: 297MB)
+
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1720229268> | Found inferred clock sqrt_sequential|clk with period 5.00ns. Please declare a user-defined clock on port clk.</font> 
+
+
+<a name=timingReport39></a>##### START OF TIMING REPORT #####[</a>
+# Timing report written on Sat Jul  6 03:27:48 2024
+#
+
+
+Top view:               sqrt_sequential
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        3
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1720229268> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1720229268> | Clock constraints include only register-to-register paths associated with each individual clock. 
+
+
+
+<a name=performanceSummary40></a>Performance Summary</a>
+*******************
+
+
+Worst slack in design: 0.856
+
+                        Requested     Estimated     Requested     Estimated               Clock        Clock     
+Starting Clock          Frequency     Frequency     Period        Period        Slack     Type         Group     
+-----------------------------------------------------------------------------------------------------------------
+sqrt_sequential|clk     200.0 MHz     241.3 MHz     5.000         4.144         0.856     inferred     (multiple)
+=================================================================================================================
+
+
+
+
+
+<a name=clockRelationships41></a>Clock Relationships</a>
+*******************
+
+Clocks                                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------
+Starting             Ending               |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------
+sqrt_sequential|clk  sqrt_sequential|clk  |  5.000       0.856  |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo42></a>Interface Information </a>
+*********************
+
+No IO constraint found
+
+
+
+====================================
+<a name=clockReport43></a>Detailed Report for Clock: sqrt_sequential|clk</a>
+====================================
+
+
+
+<a name=startingSlack44></a>Starting Points with Worst Slack</a>
+********************************
+
+             Starting                                                 Arrival          
+Instance     Reference               Type        Pin     Net          Time        Slack
+             Clock                                                                     
+---------------------------------------------------------------------------------------
+a[30]        sqrt_sequential|clk     FD1P3IX     Q       a[30]        0.955       0.856
+q[0]         sqrt_sequential|clk     FD1P3IX     Q       res_c[0]     0.985       0.886
+q[1]         sqrt_sequential|clk     FD1P3IX     Q       res_c[1]     0.985       0.948
+q[2]         sqrt_sequential|clk     FD1P3IX     Q       res_c[2]     0.985       0.948
+a[31]        sqrt_sequential|clk     FD1P3IX     Q       a[31]        0.907       0.965
+r_reg[0]     sqrt_sequential|clk     FD1P3IX     Q       r_reg[0]     0.907       0.965
+q[3]         sqrt_sequential|clk     FD1P3IX     Q       res_c[3]     0.985       1.008
+q[4]         sqrt_sequential|clk     FD1P3IX     Q       res_c[4]     0.985       1.008
+r_reg[1]     sqrt_sequential|clk     FD1P3IX     Q       r_reg[1]     0.907       1.026
+r_reg[2]     sqrt_sequential|clk     FD1P3IX     Q       r_reg[2]     0.907       1.026
+=======================================================================================
+
+
+<a name=endingSlack45></a>Ending Points with Worst Slack</a>
+******************************
+
+              Starting                                                    Required          
+Instance      Reference               Type        Pin     Net             Time         Slack
+              Clock                                                                         
+--------------------------------------------------------------------------------------------
+r_reg[17]     sqrt_sequential|clk     FD1S3AX     D       r_reg_1[17]     4.946        0.856
+q[0]          sqrt_sequential|clk     FD1P3IX     D       r_i[17]         4.946        1.462
+r_reg[15]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[15]     4.946        1.577
+r_reg[13]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[13]     4.946        1.637
+r_reg[14]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[14]     4.946        1.637
+r_reg[11]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[11]     4.946        1.698
+r_reg[12]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[12]     4.946        1.698
+r_reg[9]      sqrt_sequential|clk     FD1P3IX     D       r_reg_5[9]      4.946        1.760
+r_reg[10]     sqrt_sequential|clk     FD1P3IX     D       r_reg_5[10]     4.946        1.760
+r_reg[7]      sqrt_sequential|clk     FD1P3IX     D       r_reg_5[7]      4.946        1.821
+============================================================================================
+
+
+
+<a name=worstPaths46></a>Worst Path Information</a>
+<a href="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.srr:srsf/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.srs:fp:31166:34364:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      4.090
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.856
+
+    Number of logic level(s):                12
+    Starting point:                          a[30] / Q
+    Ending point:                            r_reg[17] / D
+    The start point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+a[30]              FD1P3IX      Q        Out     0.955     0.955 r     -         
+a[30]              Net          -        -       -         -           3         
+un2_r_cry_0_0      CCU2C        A1       In      0.000     0.955 r     -         
+un2_r_cry_0_0      CCU2C        COUT     Out     0.900     1.855 r     -         
+un2_r_cry_0        Net          -        -       -         -           1         
+un2_r_cry_1_0      CCU2C        CIN      In      0.000     1.855 r     -         
+un2_r_cry_1_0      CCU2C        COUT     Out     0.061     1.916 r     -         
+un2_r_cry_2        Net          -        -       -         -           1         
+un2_r_cry_3_0      CCU2C        CIN      In      0.000     1.916 r     -         
+un2_r_cry_3_0      CCU2C        COUT     Out     0.061     1.977 r     -         
+un2_r_cry_4        Net          -        -       -         -           1         
+un2_r_cry_5_0      CCU2C        CIN      In      0.000     1.977 r     -         
+un2_r_cry_5_0      CCU2C        COUT     Out     0.061     2.038 r     -         
+un2_r_cry_6        Net          -        -       -         -           1         
+un2_r_cry_7_0      CCU2C        CIN      In      0.000     2.038 r     -         
+un2_r_cry_7_0      CCU2C        COUT     Out     0.061     2.099 r     -         
+un2_r_cry_8        Net          -        -       -         -           1         
+un2_r_cry_9_0      CCU2C        CIN      In      0.000     2.099 r     -         
+un2_r_cry_9_0      CCU2C        COUT     Out     0.061     2.160 r     -         
+un2_r_cry_10       Net          -        -       -         -           1         
+un2_r_cry_11_0     CCU2C        CIN      In      0.000     2.160 r     -         
+un2_r_cry_11_0     CCU2C        COUT     Out     0.061     2.221 r     -         
+un2_r_cry_12       Net          -        -       -         -           1         
+un2_r_cry_13_0     CCU2C        CIN      In      0.000     2.221 r     -         
+un2_r_cry_13_0     CCU2C        COUT     Out     0.061     2.282 r     -         
+un2_r_cry_14       Net          -        -       -         -           1         
+un2_r_cry_15_0     CCU2C        CIN      In      0.000     2.282 r     -         
+un2_r_cry_15_0     CCU2C        COUT     Out     0.061     2.343 r     -         
+un2_r_cry_16       Net          -        -       -         -           1         
+un2_r_s_17_0       CCU2C        CIN      In      0.000     2.343 r     -         
+un2_r_s_17_0       CCU2C        S0       Out     0.751     3.095 r     -         
+un2_r[17]          Net          -        -       -         -           2         
+r[17]              ORCALUT4     B        In      0.000     3.095 r     -         
+r[17]              ORCALUT4     Z        Out     0.606     3.700 r     -         
+r[17]              Net          -        -       -         -           1         
+r_reg_1[17]        ORCALUT4     B        In      0.000     3.700 r     -         
+r_reg_1[17]        ORCALUT4     Z        Out     0.390     4.090 r     -         
+r_reg_1[17]        Net          -        -       -         -           1         
+r_reg[17]          FD1S3AX      D        In      0.000     4.090 r     -         
+=================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      4.090
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.856
+
+    Number of logic level(s):                12
+    Starting point:                          a[30] / Q
+    Ending point:                            r_reg[17] / D
+    The start point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+a[30]              FD1P3IX      Q        Out     0.955     0.955 r     -         
+a[30]              Net          -        -       -         -           3         
+un4_r_cry_0_0      CCU2C        A1       In      0.000     0.955 r     -         
+un4_r_cry_0_0      CCU2C        COUT     Out     0.900     1.855 r     -         
+un4_r_cry_0        Net          -        -       -         -           1         
+un4_r_cry_1_0      CCU2C        CIN      In      0.000     1.855 r     -         
+un4_r_cry_1_0      CCU2C        COUT     Out     0.061     1.916 r     -         
+un4_r_cry_2        Net          -        -       -         -           1         
+un4_r_cry_3_0      CCU2C        CIN      In      0.000     1.916 r     -         
+un4_r_cry_3_0      CCU2C        COUT     Out     0.061     1.977 r     -         
+un4_r_cry_4        Net          -        -       -         -           1         
+un4_r_cry_5_0      CCU2C        CIN      In      0.000     1.977 r     -         
+un4_r_cry_5_0      CCU2C        COUT     Out     0.061     2.038 r     -         
+un4_r_cry_6        Net          -        -       -         -           1         
+un4_r_cry_7_0      CCU2C        CIN      In      0.000     2.038 r     -         
+un4_r_cry_7_0      CCU2C        COUT     Out     0.061     2.099 r     -         
+un4_r_cry_8        Net          -        -       -         -           1         
+un4_r_cry_9_0      CCU2C        CIN      In      0.000     2.099 r     -         
+un4_r_cry_9_0      CCU2C        COUT     Out     0.061     2.160 r     -         
+un4_r_cry_10       Net          -        -       -         -           1         
+un4_r_cry_11_0     CCU2C        CIN      In      0.000     2.160 r     -         
+un4_r_cry_11_0     CCU2C        COUT     Out     0.061     2.221 r     -         
+un4_r_cry_12       Net          -        -       -         -           1         
+un4_r_cry_13_0     CCU2C        CIN      In      0.000     2.221 r     -         
+un4_r_cry_13_0     CCU2C        COUT     Out     0.061     2.282 r     -         
+un4_r_cry_14       Net          -        -       -         -           1         
+un4_r_cry_15_0     CCU2C        CIN      In      0.000     2.282 r     -         
+un4_r_cry_15_0     CCU2C        COUT     Out     0.061     2.343 r     -         
+un4_r_cry_16       Net          -        -       -         -           1         
+un4_r_s_17_0       CCU2C        CIN      In      0.000     2.343 r     -         
+un4_r_s_17_0       CCU2C        S0       Out     0.751     3.095 r     -         
+un4_r[17]          Net          -        -       -         -           2         
+r[17]              ORCALUT4     C        In      0.000     3.095 r     -         
+r[17]              ORCALUT4     Z        Out     0.606     3.700 r     -         
+r[17]              Net          -        -       -         -           1         
+r_reg_1[17]        ORCALUT4     B        In      0.000     3.700 r     -         
+r_reg_1[17]        ORCALUT4     Z        Out     0.390     4.090 r     -         
+r_reg_1[17]        Net          -        -       -         -           1         
+r_reg[17]          FD1S3AX      D        In      0.000     4.090 r     -         
+=================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      4.059
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 0.886
+
+    Number of logic level(s):                11
+    Starting point:                          q[0] / Q
+    Ending point:                            r_reg[17] / D
+    The start point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            sqrt_sequential|clk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+q[0]               FD1P3IX      Q        Out     0.985     0.985 r     -         
+res_c[0]           Net          -        -       -         -           4         
+un2_r_cry_1_0      CCU2C        A1       In      0.000     0.985 r     -         
+un2_r_cry_1_0      CCU2C        COUT     Out     0.900     1.885 r     -         
+un2_r_cry_2        Net          -        -       -         -           1         
+un2_r_cry_3_0      CCU2C        CIN      In      0.000     1.885 r     -         
+un2_r_cry_3_0      CCU2C        COUT     Out     0.061     1.946 r     -         
+un2_r_cry_4        Net          -        -       -         -           1         
+un2_r_cry_5_0      CCU2C        CIN      In      0.000     1.946 r     -         
+un2_r_cry_5_0      CCU2C        COUT     Out     0.061     2.007 r     -         
+un2_r_cry_6        Net          -        -       -         -           1         
+un2_r_cry_7_0      CCU2C        CIN      In      0.000     2.007 r     -         
+un2_r_cry_7_0      CCU2C        COUT     Out     0.061     2.068 r     -         
+un2_r_cry_8        Net          -        -       -         -           1         
+un2_r_cry_9_0      CCU2C        CIN      In      0.000     2.068 r     -         
+un2_r_cry_9_0      CCU2C        COUT     Out     0.061     2.129 r     -         
+un2_r_cry_10       Net          -        -       -         -           1         
+un2_r_cry_11_0     CCU2C        CIN      In      0.000     2.129 r     -         
+un2_r_cry_11_0     CCU2C        COUT     Out     0.061     2.190 r     -         
+un2_r_cry_12       Net          -        -       -         -           1         
+un2_r_cry_13_0     CCU2C        CIN      In      0.000     2.190 r     -         
+un2_r_cry_13_0     CCU2C        COUT     Out     0.061     2.251 r     -         
+un2_r_cry_14       Net          -        -       -         -           1         
+un2_r_cry_15_0     CCU2C        CIN      In      0.000     2.251 r     -         
+un2_r_cry_15_0     CCU2C        COUT     Out     0.061     2.312 r     -         
+un2_r_cry_16       Net          -        -       -         -           1         
+un2_r_s_17_0       CCU2C        CIN      In      0.000     2.312 r     -         
+un2_r_s_17_0       CCU2C        S0       Out     0.751     3.063 r     -         
+un2_r[17]          Net          -        -       -         -           2         
+r[17]              ORCALUT4     B        In      0.000     3.063 r     -         
+r[17]              ORCALUT4     Z        Out     0.606     3.670 r     -         
+r[17]              Net          -        -       -         -           1         
+r_reg_1[17]        ORCALUT4     B        In      0.000     3.670 r     -         
+r_reg_1[17]        ORCALUT4     Z        Out     0.390     4.059 r     -         
+r_reg_1[17]        Net          -        -       -         -           1         
+r_reg[17]          FD1S3AX      D        In      0.000     4.059 r     -         
+=================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 297MB peak: 297MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 297MB peak: 297MB)
+
+---------------------------------------
+<a name=resourceUsage47></a>Resource Usage Report</a>
+Part: lfe5u_85f-6
+
+Register bits: 72 of 83640 (0%)
+PIC Latch:       0
+I/O cells:       52
+
+
+Details:
+CCU2C:          20
+FD1P3AX:        1
+FD1P3IX:        64
+FD1S3AX:        3
+FD1S3IX:        4
+GSR:            1
+IB:             35
+INV:            2
+OB:             17
+ORCALUT4:       62
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 297MB peak: 297MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sat Jul  6 03:27:48 2024
+
+###########################################################]
+
+</pre></samp></body></html>

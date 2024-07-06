@@ -1,0 +1,8 @@
+@P:  Worst Slack : 0.856
+@P:  sqrt_sequential|clk - Estimated Frequency : 241.3 MHz
+@P:  sqrt_sequential|clk - Requested Frequency : 200.0 MHz
+@P:  sqrt_sequential|clk - Estimated Period : 4.144
+@P:  sqrt_sequential|clk - Requested Period : 5.000
+@P:  sqrt_sequential|clk - Slack : 0.856
+@P:  Total Area : 64.0
+@P:  CPU Time : 0h:00m:02s

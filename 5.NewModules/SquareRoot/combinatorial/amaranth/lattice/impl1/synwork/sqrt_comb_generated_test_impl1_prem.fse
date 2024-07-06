@@ -1,0 +1,10 @@
+
+fsm_encoding {5262261} sequential
+
+fsm_state_encoding {5262261} IDLE {00}
+
+fsm_state_encoding {5262261} COMP {01}
+
+fsm_state_encoding {5262261} FINISH {10}
+
+fsm_registers {5262261} {sqrt_state[1]}  {sqrt_state[0]} 

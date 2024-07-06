@@ -1,0 +1,1 @@
+@W: MT420 |Found inferred clock sqrt_sequential|clk with period 5.00ns. Please declare a user-defined clock on port clk.

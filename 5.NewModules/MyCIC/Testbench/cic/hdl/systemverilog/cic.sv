@@ -1,8 +1,8 @@
 module cic#(
     parameter int IW = 10,
     parameter int OW = 10,
-    parameter int R = 100,
-    parameter int M = 10
+    parameter int R = 10,
+    parameter int M = 3
 )(
     input logic i_clk,
     input logic i_reset,
@@ -79,7 +79,7 @@ module cic#(
               comb#(
                   .IW(OW),
                   .OW(OW),
-                  .N(1)
+                  .N(1*R/R)
               )comb_inst(
                   .i_clk(i_clk),
                   .i_reset(i_reset),

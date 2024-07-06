@@ -1,0 +1,70 @@
+Running in Lattice mode
+
+                               Synplify Pro (R) 
+
+               Version U-2023.03L-SP1 for linux64 - Aug 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/mbin/synbatch
+Install:     /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+Hostname:    user-HP-ProBook-450-G5
+Date:        Sat Jul  6 03:24:45 2024
+Version:     U-2023.03L-SP1
+
+Arguments:   -product synplify_base -batch sqrt_comb_generated_test_impl1_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+log file: "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.srr"
+Running: impl1 in foreground
+
+Running proj_1|impl1
+
+Running Flow: compile (Compile) on proj_1|impl1
+# Sat Jul  6 03:24:46 2024
+
+Running Flow: compile_flow (Compile Process) on proj_1|impl1
+# Sat Jul  6 03:24:46 2024
+
+Running: compiler (Compile Input) on proj_1|impl1
+# Sat Jul  6 03:24:46 2024
+Process ID: 10526
+compiler exited with errors
+Job failed on: proj_1|impl1
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synlog/sqrt_comb_generated_test_impl1_compiler.srr"
+# Sat Jul  6 03:24:46 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on proj_1|impl1
+Complete: Compile on proj_1|impl1
+Complete: Logic Synthesis on proj_1|impl1
+Copied /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.srr to /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.srf
+Error: At line 64 while processing "sqrt_comb_generated_test_impl1_synplify.tcl"
+2
+TCL script complete: "sqrt_comb_generated_test_impl1_synplify.tcl"
+TCL script had errors: "sqrt_comb_generated_test_impl1_synplify.tcl"
+exit status=9
+exit status=9
+Save changes for project:
+/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/proj_1.prj
+batch mode default:no

@@ -1,0 +1,349 @@
+
+Loading design for application trce from file sqrt_comb_generated_test_impl1_map.ncd.
+Design name: sqrt_combinatorial
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Sat Jul  6 03:45:34 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o sqrt_comb_generated_test_impl1.tw1 -gui sqrt_comb_generated_test_impl1_map.ncd sqrt_comb_generated_test_impl1.prf 
+Design file:     sqrt_comb_generated_test_impl1_map.ncd
+Preference file: sqrt_comb_generated_test_impl1.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: Default path enumeration
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:   44.953ns delay num[28] to result[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.005    num[28].PAD to  num[28].PADDI num[28]
+ROUTE         6   e 0.573  num[28].PADDI to   SLICE_300.B0 num_c_28
+CTOF_DEL    ---     0.236   SLICE_300.B0 to   SLICE_300.F0 SLICE_300
+ROUTE         1   e 0.573   SLICE_300.F0 to    SLICE_97.C1 n1319
+C1TOFCO_DE  ---     0.447    SLICE_97.C1 to   SLICE_97.FCO SLICE_97
+ROUTE         1   e 0.001   SLICE_97.FCO to   SLICE_96.FCI n1178
+FCITOFCO_D  ---     0.071   SLICE_96.FCI to   SLICE_96.FCO SLICE_96
+ROUTE         1   e 0.001   SLICE_96.FCO to   SLICE_95.FCI n1179
+FCITOF1_DE  ---     0.474   SLICE_95.FCI to    SLICE_95.F1 SLICE_95
+ROUTE        41   e 0.573    SLICE_95.F1 to   SLICE_156.B0 right_2_1_N_3_5
+C0TOFCO_DE  ---     0.447   SLICE_156.B0 to  SLICE_156.FCO SLICE_156
+ROUTE         1   e 0.001  SLICE_156.FCO to  SLICE_155.FCI n1116
+FCITOF0_DE  ---     0.443  SLICE_155.FCI to   SLICE_155.F0 SLICE_155
+ROUTE         1   e 0.573   SLICE_155.F0 to     SLICE_4.C1 right_3_1_N_8_3
+C1TOFCO_DE  ---     0.447     SLICE_4.C1 to    SLICE_4.FCO SLICE_4
+ROUTE         1   e 0.001    SLICE_4.FCO to    SLICE_3.FCI n1068
+FCITOFCO_D  ---     0.071    SLICE_3.FCI to    SLICE_3.FCO SLICE_3
+ROUTE         1   e 0.001    SLICE_3.FCO to    SLICE_2.FCI n1069
+FCITOFCO_D  ---     0.071    SLICE_2.FCI to    SLICE_2.FCO SLICE_2
+ROUTE         1   e 0.001    SLICE_2.FCO to    SLICE_1.FCI n1070
+FCITOF0_DE  ---     0.443    SLICE_1.FCI to     SLICE_1.F0 SLICE_1
+ROUTE        42   e 0.573     SLICE_1.F0 to   SLICE_237.B0 right_3_1_N_7_8
+C0TOFCO_DE  ---     0.447   SLICE_237.B0 to  SLICE_237.FCO SLICE_237
+ROUTE         1   e 0.001  SLICE_237.FCO to  SLICE_238.FCI n1288
+FCITOF0_DE  ---     0.443  SLICE_238.FCI to   SLICE_238.F0 SLICE_238
+ROUTE         1   e 0.573   SLICE_238.F0 to   SLICE_196.C1 right_4_1_N_12_3
+C1TOFCO_DE  ---     0.447   SLICE_196.C1 to  SLICE_196.FCO SLICE_196
+ROUTE         1   e 0.001  SLICE_196.FCO to  SLICE_195.FCI n1076
+FCITOFCO_D  ---     0.071  SLICE_195.FCI to  SLICE_195.FCO SLICE_195
+ROUTE         1   e 0.001  SLICE_195.FCO to  SLICE_194.FCI n1077
+FCITOFCO_D  ---     0.071  SLICE_194.FCI to  SLICE_194.FCO SLICE_194
+ROUTE         1   e 0.001  SLICE_194.FCO to  SLICE_193.FCI n1078
+FCITOFCO_D  ---     0.071  SLICE_193.FCI to  SLICE_193.FCO SLICE_193
+ROUTE         1   e 0.001  SLICE_193.FCO to  SLICE_192.FCI n1079
+FCITOF1_DE  ---     0.474  SLICE_192.FCI to   SLICE_192.F1 SLICE_192
+ROUTE        53   e 0.573   SLICE_192.F1 to   SLICE_190.B0 right_4_1_N_11_11
+C0TOFCO_DE  ---     0.447   SLICE_190.B0 to  SLICE_190.FCO SLICE_190
+ROUTE         1   e 0.001  SLICE_190.FCO to  SLICE_189.FCI n1082
+FCITOFCO_D  ---     0.071  SLICE_189.FCI to  SLICE_189.FCO SLICE_189
+ROUTE         1   e 0.001  SLICE_189.FCO to  SLICE_188.FCI n1083
+FCITOFCO_D  ---     0.071  SLICE_188.FCI to  SLICE_188.FCO SLICE_188
+ROUTE         1   e 0.001  SLICE_188.FCO to  SLICE_187.FCI n1084
+FCITOFCO_D  ---     0.071  SLICE_187.FCI to  SLICE_187.FCO SLICE_187
+ROUTE         1   e 0.001  SLICE_187.FCO to  SLICE_186.FCI n1085
+FCITOFCO_D  ---     0.071  SLICE_186.FCI to  SLICE_186.FCO SLICE_186
+ROUTE         1   e 0.001  SLICE_186.FCO to  SLICE_185.FCI n1086
+FCITOFCO_D  ---     0.071  SLICE_185.FCI to  SLICE_185.FCO SLICE_185
+ROUTE         1   e 0.001  SLICE_185.FCO to  SLICE_184.FCI n1087
+FCITOF1_DE  ---     0.474  SLICE_184.FCI to   SLICE_184.F1 SLICE_184
+ROUTE         4   e 0.573   SLICE_184.F1 to   SLICE_250.B1 right_5_1_N_16_14
+CTOF_DEL    ---     0.236   SLICE_250.B1 to   SLICE_250.F1 SLICE_250
+ROUTE        48   e 0.573   SLICE_250.F1 to   SLICE_165.A1 right_5_1
+C1TOFCO_DE  ---     0.447   SLICE_165.A1 to  SLICE_165.FCO SLICE_165
+ROUTE         1   e 0.001  SLICE_165.FCO to  SLICE_164.FCI n1107
+FCITOFCO_D  ---     0.071  SLICE_164.FCI to  SLICE_164.FCO SLICE_164
+ROUTE         1   e 0.001  SLICE_164.FCO to  SLICE_163.FCI n1108
+FCITOFCO_D  ---     0.071  SLICE_163.FCI to  SLICE_163.FCO SLICE_163
+ROUTE         1   e 0.001  SLICE_163.FCO to  SLICE_162.FCI n1109
+FCITOFCO_D  ---     0.071  SLICE_162.FCI to  SLICE_162.FCO SLICE_162
+ROUTE         1   e 0.001  SLICE_162.FCO to  SLICE_161.FCI n1110
+FCITOFCO_D  ---     0.071  SLICE_161.FCI to  SLICE_161.FCO SLICE_161
+ROUTE         1   e 0.001  SLICE_161.FCO to  SLICE_160.FCI n1111
+FCITOFCO_D  ---     0.071  SLICE_160.FCI to  SLICE_160.FCO SLICE_160
+ROUTE         1   e 0.001  SLICE_160.FCO to  SLICE_159.FCI n1112
+FCITOFCO_D  ---     0.071  SLICE_159.FCI to  SLICE_159.FCO SLICE_159
+ROUTE         1   e 0.001  SLICE_159.FCO to  SLICE_158.FCI n1113
+FCITOF1_DE  ---     0.474  SLICE_158.FCI to   SLICE_158.F1 SLICE_158
+ROUTE         4   e 0.573   SLICE_158.F1 to   SLICE_245.B0 right_6_1_N_20_16
+CTOF_DEL    ---     0.236   SLICE_245.B0 to   SLICE_245.F0 SLICE_245
+ROUTE        45   e 0.573   SLICE_245.F0 to   SLICE_151.A1 right_6_1
+C1TOFCO_DE  ---     0.447   SLICE_151.A1 to  SLICE_151.FCO SLICE_151
+ROUTE         1   e 0.001  SLICE_151.FCO to  SLICE_150.FCI n1121
+FCITOFCO_D  ---     0.071  SLICE_150.FCI to  SLICE_150.FCO SLICE_150
+ROUTE         1   e 0.001  SLICE_150.FCO to  SLICE_149.FCI n1122
+FCITOFCO_D  ---     0.071  SLICE_149.FCI to  SLICE_149.FCO SLICE_149
+ROUTE         1   e 0.001  SLICE_149.FCO to  SLICE_148.FCI n1123
+FCITOFCO_D  ---     0.071  SLICE_148.FCI to  SLICE_148.FCO SLICE_148
+ROUTE         1   e 0.001  SLICE_148.FCO to  SLICE_147.FCI n1124
+FCITOFCO_D  ---     0.071  SLICE_147.FCI to  SLICE_147.FCO SLICE_147
+ROUTE         1   e 0.001  SLICE_147.FCO to  SLICE_146.FCI n1125
+FCITOFCO_D  ---     0.071  SLICE_146.FCI to  SLICE_146.FCO SLICE_146
+ROUTE         1   e 0.001  SLICE_146.FCO to  SLICE_145.FCI n1126
+FCITOFCO_D  ---     0.071  SLICE_145.FCI to  SLICE_145.FCO SLICE_145
+ROUTE         1   e 0.001  SLICE_145.FCO to  SLICE_144.FCI n1127
+FCITOF1_DE  ---     0.474  SLICE_144.FCI to   SLICE_144.F1 SLICE_144
+ROUTE         4   e 0.573   SLICE_144.F1 to   SLICE_246.B0 right_7_1_N_24_16
+CTOF_DEL    ---     0.236   SLICE_246.B0 to   SLICE_246.F0 SLICE_246
+ROUTE        44   e 0.573   SLICE_246.F0 to   SLICE_142.A1 right_7_1
+C1TOFCO_DE  ---     0.447   SLICE_142.A1 to  SLICE_142.FCO SLICE_142
+ROUTE         1   e 0.001  SLICE_142.FCO to  SLICE_141.FCI n1130
+FCITOFCO_D  ---     0.071  SLICE_141.FCI to  SLICE_141.FCO SLICE_141
+ROUTE         1   e 0.001  SLICE_141.FCO to  SLICE_140.FCI n1131
+FCITOFCO_D  ---     0.071  SLICE_140.FCI to  SLICE_140.FCO SLICE_140
+ROUTE         1   e 0.001  SLICE_140.FCO to  SLICE_139.FCI n1132
+FCITOFCO_D  ---     0.071  SLICE_139.FCI to  SLICE_139.FCO SLICE_139
+ROUTE         1   e 0.001  SLICE_139.FCO to  SLICE_138.FCI n1133
+FCITOFCO_D  ---     0.071  SLICE_138.FCI to  SLICE_138.FCO SLICE_138
+ROUTE         1   e 0.001  SLICE_138.FCO to  SLICE_137.FCI n1134
+FCITOFCO_D  ---     0.071  SLICE_137.FCI to  SLICE_137.FCO SLICE_137
+ROUTE         1   e 0.001  SLICE_137.FCO to  SLICE_136.FCI n1135
+FCITOFCO_D  ---     0.071  SLICE_136.FCI to  SLICE_136.FCO SLICE_136
+ROUTE         1   e 0.001  SLICE_136.FCO to  SLICE_135.FCI n1136
+FCITOF1_DE  ---     0.474  SLICE_135.FCI to   SLICE_135.F1 SLICE_135
+ROUTE         4   e 0.573   SLICE_135.F1 to   SLICE_249.B0 right_8_1_N_28_16
+CTOF_DEL    ---     0.236   SLICE_249.B0 to   SLICE_249.F0 SLICE_249
+ROUTE        43   e 0.573   SLICE_249.F0 to   SLICE_133.A1 right_8_1
+C1TOFCO_DE  ---     0.447   SLICE_133.A1 to  SLICE_133.FCO SLICE_133
+ROUTE         1   e 0.001  SLICE_133.FCO to  SLICE_132.FCI n1139
+FCITOFCO_D  ---     0.071  SLICE_132.FCI to  SLICE_132.FCO SLICE_132
+ROUTE         1   e 0.001  SLICE_132.FCO to  SLICE_131.FCI n1140
+FCITOFCO_D  ---     0.071  SLICE_131.FCI to  SLICE_131.FCO SLICE_131
+ROUTE         1   e 0.001  SLICE_131.FCO to  SLICE_130.FCI n1141
+FCITOFCO_D  ---     0.071  SLICE_130.FCI to  SLICE_130.FCO SLICE_130
+ROUTE         1   e 0.001  SLICE_130.FCO to  SLICE_129.FCI n1142
+FCITOFCO_D  ---     0.071  SLICE_129.FCI to  SLICE_129.FCO SLICE_129
+ROUTE         1   e 0.001  SLICE_129.FCO to  SLICE_128.FCI n1143
+FCITOFCO_D  ---     0.071  SLICE_128.FCI to  SLICE_128.FCO SLICE_128
+ROUTE         1   e 0.001  SLICE_128.FCO to  SLICE_127.FCI n1144
+FCITOFCO_D  ---     0.071  SLICE_127.FCI to  SLICE_127.FCO SLICE_127
+ROUTE         1   e 0.001  SLICE_127.FCO to  SLICE_126.FCI n1145
+FCITOF1_DE  ---     0.474  SLICE_126.FCI to   SLICE_126.F1 SLICE_126
+ROUTE         4   e 0.573   SLICE_126.F1 to   SLICE_248.B0 right_9_1_N_32_16
+CTOF_DEL    ---     0.236   SLICE_248.B0 to   SLICE_248.F0 SLICE_248
+ROUTE        42   e 0.573   SLICE_248.F0 to   SLICE_124.A1 right_9_1
+C1TOFCO_DE  ---     0.447   SLICE_124.A1 to  SLICE_124.FCO SLICE_124
+ROUTE         1   e 0.001  SLICE_124.FCO to  SLICE_123.FCI n1148
+FCITOFCO_D  ---     0.071  SLICE_123.FCI to  SLICE_123.FCO SLICE_123
+ROUTE         1   e 0.001  SLICE_123.FCO to  SLICE_122.FCI n1149
+FCITOFCO_D  ---     0.071  SLICE_122.FCI to  SLICE_122.FCO SLICE_122
+ROUTE         1   e 0.001  SLICE_122.FCO to  SLICE_121.FCI n1150
+FCITOFCO_D  ---     0.071  SLICE_121.FCI to  SLICE_121.FCO SLICE_121
+ROUTE         1   e 0.001  SLICE_121.FCO to  SLICE_120.FCI n1151
+FCITOFCO_D  ---     0.071  SLICE_120.FCI to  SLICE_120.FCO SLICE_120
+ROUTE         1   e 0.001  SLICE_120.FCO to  SLICE_119.FCI n1152
+FCITOFCO_D  ---     0.071  SLICE_119.FCI to  SLICE_119.FCO SLICE_119
+ROUTE         1   e 0.001  SLICE_119.FCO to  SLICE_118.FCI n1153
+FCITOFCO_D  ---     0.071  SLICE_118.FCI to  SLICE_118.FCO SLICE_118
+ROUTE         1   e 0.001  SLICE_118.FCO to  SLICE_117.FCI n1154
+FCITOF1_DE  ---     0.474  SLICE_117.FCI to   SLICE_117.F1 SLICE_117
+ROUTE         4   e 0.573   SLICE_117.F1 to   SLICE_247.B0 right_10_1_N_36_16
+CTOF_DEL    ---     0.236   SLICE_247.B0 to   SLICE_247.F0 SLICE_247
+ROUTE        41   e 0.573   SLICE_247.F0 to   SLICE_115.A1 right_10_1
+C1TOFCO_DE  ---     0.447   SLICE_115.A1 to  SLICE_115.FCO SLICE_115
+ROUTE         1   e 0.001  SLICE_115.FCO to  SLICE_114.FCI n1157
+FCITOFCO_D  ---     0.071  SLICE_114.FCI to  SLICE_114.FCO SLICE_114
+ROUTE         1   e 0.001  SLICE_114.FCO to  SLICE_113.FCI n1158
+FCITOFCO_D  ---     0.071  SLICE_113.FCI to  SLICE_113.FCO SLICE_113
+ROUTE         1   e 0.001  SLICE_113.FCO to  SLICE_112.FCI n1159
+FCITOFCO_D  ---     0.071  SLICE_112.FCI to  SLICE_112.FCO SLICE_112
+ROUTE         1   e 0.001  SLICE_112.FCO to  SLICE_111.FCI n1160
+FCITOFCO_D  ---     0.071  SLICE_111.FCI to  SLICE_111.FCO SLICE_111
+ROUTE         1   e 0.001  SLICE_111.FCO to  SLICE_110.FCI n1161
+FCITOFCO_D  ---     0.071  SLICE_110.FCI to  SLICE_110.FCO SLICE_110
+ROUTE         1   e 0.001  SLICE_110.FCO to  SLICE_109.FCI n1162
+FCITOFCO_D  ---     0.071  SLICE_109.FCI to  SLICE_109.FCO SLICE_109
+ROUTE         1   e 0.001  SLICE_109.FCO to  SLICE_108.FCI n1163
+FCITOF1_DE  ---     0.474  SLICE_108.FCI to   SLICE_108.F1 SLICE_108
+ROUTE         4   e 0.573   SLICE_108.F1 to   SLICE_243.B1 right_11_1_N_40_16
+CTOF_DEL    ---     0.236   SLICE_243.B1 to   SLICE_243.F1 SLICE_243
+ROUTE        40   e 0.573   SLICE_243.F1 to   SLICE_106.A1 right_11_1
+C1TOFCO_DE  ---     0.447   SLICE_106.A1 to  SLICE_106.FCO SLICE_106
+ROUTE         1   e 0.001  SLICE_106.FCO to  SLICE_105.FCI n1166
+FCITOFCO_D  ---     0.071  SLICE_105.FCI to  SLICE_105.FCO SLICE_105
+ROUTE         1   e 0.001  SLICE_105.FCO to  SLICE_104.FCI n1167
+FCITOFCO_D  ---     0.071  SLICE_104.FCI to  SLICE_104.FCO SLICE_104
+ROUTE         1   e 0.001  SLICE_104.FCO to  SLICE_103.FCI n1168
+FCITOFCO_D  ---     0.071  SLICE_103.FCI to  SLICE_103.FCO SLICE_103
+ROUTE         1   e 0.001  SLICE_103.FCO to  SLICE_102.FCI n1169
+FCITOFCO_D  ---     0.071  SLICE_102.FCI to  SLICE_102.FCO SLICE_102
+ROUTE         1   e 0.001  SLICE_102.FCO to  SLICE_101.FCI n1170
+FCITOFCO_D  ---     0.071  SLICE_101.FCI to  SLICE_101.FCO SLICE_101
+ROUTE         1   e 0.001  SLICE_101.FCO to  SLICE_100.FCI n1171
+FCITOFCO_D  ---     0.071  SLICE_100.FCI to  SLICE_100.FCO SLICE_100
+ROUTE         1   e 0.001  SLICE_100.FCO to   SLICE_99.FCI n1172
+FCITOF1_DE  ---     0.474   SLICE_99.FCI to    SLICE_99.F1 SLICE_99
+ROUTE         4   e 0.573    SLICE_99.F1 to   SLICE_244.B1 right_12_1_N_44_16
+CTOF_DEL    ---     0.236   SLICE_244.B1 to   SLICE_244.F1 SLICE_244
+ROUTE        39   e 0.573   SLICE_244.F1 to    SLICE_93.A1 right_12_1
+C1TOFCO_DE  ---     0.447    SLICE_93.A1 to   SLICE_93.FCO SLICE_93
+ROUTE         1   e 0.001   SLICE_93.FCO to   SLICE_92.FCI n1182
+FCITOFCO_D  ---     0.071   SLICE_92.FCI to   SLICE_92.FCO SLICE_92
+ROUTE         1   e 0.001   SLICE_92.FCO to   SLICE_91.FCI n1183
+FCITOFCO_D  ---     0.071   SLICE_91.FCI to   SLICE_91.FCO SLICE_91
+ROUTE         1   e 0.001   SLICE_91.FCO to   SLICE_90.FCI n1184
+FCITOFCO_D  ---     0.071   SLICE_90.FCI to   SLICE_90.FCO SLICE_90
+ROUTE         1   e 0.001   SLICE_90.FCO to   SLICE_89.FCI n1185
+FCITOFCO_D  ---     0.071   SLICE_89.FCI to   SLICE_89.FCO SLICE_89
+ROUTE         1   e 0.001   SLICE_89.FCO to   SLICE_88.FCI n1186
+FCITOFCO_D  ---     0.071   SLICE_88.FCI to   SLICE_88.FCO SLICE_88
+ROUTE         1   e 0.001   SLICE_88.FCO to   SLICE_87.FCI n1187
+FCITOFCO_D  ---     0.071   SLICE_87.FCI to   SLICE_87.FCO SLICE_87
+ROUTE         1   e 0.001   SLICE_87.FCO to   SLICE_86.FCI n1188
+FCITOF1_DE  ---     0.474   SLICE_86.FCI to    SLICE_86.F1 SLICE_86
+ROUTE         4   e 0.573    SLICE_86.F1 to   SLICE_252.B0 right_13_1_N_48_16
+CTOF_DEL    ---     0.236   SLICE_252.B0 to   SLICE_252.F0 SLICE_252
+ROUTE        38   e 0.573   SLICE_252.F0 to    SLICE_84.A1 right_13_1
+C1TOFCO_DE  ---     0.447    SLICE_84.A1 to   SLICE_84.FCO SLICE_84
+ROUTE         1   e 0.001   SLICE_84.FCO to   SLICE_83.FCI n1191
+FCITOFCO_D  ---     0.071   SLICE_83.FCI to   SLICE_83.FCO SLICE_83
+ROUTE         1   e 0.001   SLICE_83.FCO to   SLICE_82.FCI n1192
+FCITOFCO_D  ---     0.071   SLICE_82.FCI to   SLICE_82.FCO SLICE_82
+ROUTE         1   e 0.001   SLICE_82.FCO to   SLICE_81.FCI n1193
+FCITOFCO_D  ---     0.071   SLICE_81.FCI to   SLICE_81.FCO SLICE_81
+ROUTE         1   e 0.001   SLICE_81.FCO to   SLICE_80.FCI n1194
+FCITOFCO_D  ---     0.071   SLICE_80.FCI to   SLICE_80.FCO SLICE_80
+ROUTE         1   e 0.001   SLICE_80.FCO to   SLICE_79.FCI n1195
+FCITOFCO_D  ---     0.071   SLICE_79.FCI to   SLICE_79.FCO SLICE_79
+ROUTE         1   e 0.001   SLICE_79.FCO to   SLICE_78.FCI n1196
+FCITOFCO_D  ---     0.071   SLICE_78.FCI to   SLICE_78.FCO SLICE_78
+ROUTE         1   e 0.001   SLICE_78.FCO to   SLICE_77.FCI n1197
+FCITOF1_DE  ---     0.474   SLICE_77.FCI to    SLICE_77.F1 SLICE_77
+ROUTE         4   e 0.573    SLICE_77.F1 to   SLICE_251.B0 right_14_1_N_52_16
+CTOF_DEL    ---     0.236   SLICE_251.B0 to   SLICE_251.F0 SLICE_251
+ROUTE        36   e 0.573   SLICE_251.F0 to    SLICE_75.A1 right_14_1
+C1TOFCO_DE  ---     0.447    SLICE_75.A1 to   SLICE_75.FCO SLICE_75
+ROUTE         1   e 0.001   SLICE_75.FCO to   SLICE_74.FCI n1200
+FCITOFCO_D  ---     0.071   SLICE_74.FCI to   SLICE_74.FCO SLICE_74
+ROUTE         1   e 0.001   SLICE_74.FCO to   SLICE_73.FCI n1201
+FCITOFCO_D  ---     0.071   SLICE_73.FCI to   SLICE_73.FCO SLICE_73
+ROUTE         1   e 0.001   SLICE_73.FCO to   SLICE_72.FCI n1202
+FCITOFCO_D  ---     0.071   SLICE_72.FCI to   SLICE_72.FCO SLICE_72
+ROUTE         1   e 0.001   SLICE_72.FCO to   SLICE_71.FCI n1203
+FCITOFCO_D  ---     0.071   SLICE_71.FCI to   SLICE_71.FCO SLICE_71
+ROUTE         1   e 0.001   SLICE_71.FCO to   SLICE_70.FCI n1204
+FCITOFCO_D  ---     0.071   SLICE_70.FCI to   SLICE_70.FCO SLICE_70
+ROUTE         1   e 0.001   SLICE_70.FCO to   SLICE_69.FCI n1205
+FCITOFCO_D  ---     0.071   SLICE_69.FCI to   SLICE_69.FCO SLICE_69
+ROUTE         1   e 0.001   SLICE_69.FCO to   SLICE_68.FCI n1206
+FCITOF1_DE  ---     0.474   SLICE_68.FCI to    SLICE_68.F1 SLICE_68
+ROUTE         3   e 0.573    SLICE_68.F1 to   SLICE_253.B0 right_15_1_N_56_16
+CTOF_DEL    ---     0.236   SLICE_253.B0 to   SLICE_253.F0 SLICE_253
+ROUTE         4   e 0.573   SLICE_253.F0 to   SLICE_227.B1 right_15_1
+C1TOFCO_DE  ---     0.447   SLICE_227.B1 to  SLICE_227.FCO SLICE_227
+ROUTE         1   e 0.001  SLICE_227.FCO to  SLICE_228.FCI n1279
+FCITOFCO_D  ---     0.071  SLICE_228.FCI to  SLICE_228.FCO SLICE_228
+ROUTE         1   e 0.001  SLICE_228.FCO to  SLICE_229.FCI n1280
+FCITOFCO_D  ---     0.071  SLICE_229.FCI to  SLICE_229.FCO SLICE_229
+ROUTE         1   e 0.001  SLICE_229.FCO to  SLICE_230.FCI n1281
+FCITOFCO_D  ---     0.071  SLICE_230.FCI to  SLICE_230.FCO SLICE_230
+ROUTE         1   e 0.001  SLICE_230.FCO to  SLICE_231.FCI n1282
+FCITOFCO_D  ---     0.071  SLICE_231.FCI to  SLICE_231.FCO SLICE_231
+ROUTE         1   e 0.001  SLICE_231.FCO to  SLICE_232.FCI n1283
+FCITOFCO_D  ---     0.071  SLICE_232.FCI to  SLICE_232.FCO SLICE_232
+ROUTE         1   e 0.001  SLICE_232.FCO to  SLICE_233.FCI n1284
+FCITOFCO_D  ---     0.071  SLICE_233.FCI to  SLICE_233.FCO SLICE_233
+ROUTE         1   e 0.001  SLICE_233.FCO to  SLICE_234.FCI n1285
+FCITOFCO_D  ---     0.071  SLICE_234.FCI to  SLICE_234.FCO SLICE_234
+ROUTE         1   e 0.001  SLICE_234.FCO to  SLICE_235.FCI n1286
+FCITOF0_DE  ---     0.443  SLICE_235.FCI to   SLICE_235.F0 SLICE_235
+ROUTE         1   e 0.573   SLICE_235.F0 to   SLICE_253.A1 r_16_16_N_59_16
+CTOF_DEL    ---     0.236   SLICE_253.A1 to   SLICE_253.F1 SLICE_253
+ROUTE         1   e 0.573   SLICE_253.F1 to *sult[0].PADDO r_16_16
+DOPAD_DEL   ---     1.951 *sult[0].PADDO to  result[0].PAD result[0]
+                  --------
+                   44.953   (60.3% logic, 39.7% route), 127 logic levels.
+
+Report:   44.953ns is the maximum delay for this preference.
+
+
+================================================================================
+Preference: Default net enumeration
+            745 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    0.573ns maximum delay on right_4_1_N_12_1
+
+           Delays             Connection(s)
+         e 0.573ns     SLICE_237.F0 to SLICE_197.C1    
+
+Report:    0.573ns is the maximum delay for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|    44.953 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     0.573 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 0 clocks:
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3925149531 paths, 745 nets, and 1772 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+

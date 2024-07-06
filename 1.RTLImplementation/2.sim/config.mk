@@ -3,7 +3,7 @@
 # Simulator configuration
 SIM ?= icarus          # Selects which simulator Makefile to use. Attempts to include a simulator specific makefile from cocotb/share/makefiles/simulators/makefile.$(SIM)
 WAVES ?= 1             # Set this to 1 to enable wave traces dump for the Aldec Riviera-PRO, Mentor Graphics Questa, and Icarus Verilog simulators. To get wave traces in Verilator see Waveforms.
-
+#EXTRA_ARGS += --Wno-WIDTHEXPAND
 # Used to inform the makefile scripts which HDL language the top-level design element is written in. Currently it supports the values verilog for Verilog or SystemVerilog tops, and vhdl for VHDL tops. This is used by simulators that support more than one interface (VPI, VHPI, or FLI) to select the appropriate interface to start cocotb.
 TOPLEVEL_LANG ?= verilog  # Language of the top-level module (verilog/vhdl) 
 

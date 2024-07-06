@@ -1,0 +1,2 @@
+@E: CS187 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv":68:19:68:19|Expecting )
+

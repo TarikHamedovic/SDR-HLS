@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1719919837" />
-    <testcase name="square_root_test" classname="square_root_tb" file="/home/user/SDR-HLS/2.HLSImplementation/AMDemod/sqrt/method3/amaranth/square_root_tb.py" lineno="17" time="0.00526881217956543" sim_time_ns="87.501" ratio_time="16607.348491062945" />
-  </testsuite>
-</testsuites>

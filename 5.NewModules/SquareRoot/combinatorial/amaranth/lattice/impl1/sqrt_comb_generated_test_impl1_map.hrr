@@ -1,0 +1,9 @@
+---------------------------------------------------
+Report for cell sqrt_combinatorial
+   Instance path: sqrt_combinatorial
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     325.00        100.0
+                                  LUT4	      99.00        100.0
+                                 IOBUF	         48        100.0
+                                RIPPLE	        243        100.0

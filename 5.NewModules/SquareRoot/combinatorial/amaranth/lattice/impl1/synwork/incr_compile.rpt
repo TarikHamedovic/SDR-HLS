@@ -1,0 +1,41 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: unlimited (bytes)
+
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+8        /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv (2024-07-05 15:16:40, 2024-07-06 03:27:40)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 1
+MID:  lib.cell.view
+2        work.sqrt_sequential.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv (2024-07-05 15:16:40, 2024-07-06 03:27:40) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 5
+FID:  path (timestamp)
+0        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v (2023-08-10 19:00:08)
+1        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v (2023-08-10 19:00:09)
+2        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v (2023-08-10 18:51:57)
+3        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v (2023-08-10 18:51:57)
+4        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh (2023-08-10 18:51:57)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

@@ -10,11 +10,11 @@ module AMDemodulator
     clk,
     I_in ,
     Q_in ,
-    d_out); 
-  //	   PUR PUR_INST(.PUR (1'b1));
+    d_out);
+  // PUR PUR_INST(.PUR (1'b1));
 
 
-  input clk;  
+  input clk;
   input signed [11:0] I_in;
   input signed [11:0] Q_in;
   reg signed [15:0] d_out_d;
@@ -34,12 +34,12 @@ module AMDemodulator
   reg signed [11:0] MultDataD;
   wire signed [23:0] MultResult2;
 
-  function [15:0] sqrt;
+  function automatic [15:0] sqrt;
     input [31:0] num;  //declare input
     //intermediate signals.
     reg [31:0] a;
     reg [15:0] q;
-    reg [17:0] left,right,r;    
+    reg [17:0] left,right,r;
     integer i;
     begin
       //initialize all the variables.
@@ -50,7 +50,7 @@ module AMDemodulator
       right = 0;  //input to adder/sub
       r = 0;  //remainder
       //run the calculations for 16 iterations.
-      for(i=0;i<16;i=i+1) begin 
+      for(i=0;i<16;i=i+1) begin
         right = {q,r[17],1'b1};
         left = {r[15:0],a[31:30]};
         a = {a[29:0],2'b00};    //left shift by 2 bits.
@@ -58,7 +58,7 @@ module AMDemodulator
           r = left + right;
         else    //subtract if r is positive
           r = left - right;
-        q = {q[14:0],!r[17]};       
+        q = {q[14:0],!r[17]};
       end
       sqrt = q;   //final assignment of output.
     end

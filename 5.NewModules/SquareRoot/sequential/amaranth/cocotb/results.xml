@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1720182590" />
+    <testcase name="sqrt_test" classname="sqrt_sequential_tb" file="/home/user/SDR-HLS/5.NewModules/SquareRoot/sequential/amaranth/cocotb/sqrt_sequential_tb.py" lineno="28" time="0.02666306495666504" sim_time_ns="250.001" ratio_time="9376.303902282869">
+      <failure message="Test failed with RANDOM_SEED=1720182590" />
+    </testcase>
+  </testsuite>
+</testsuites>

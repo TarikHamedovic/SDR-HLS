@@ -1,0 +1,21 @@
+Resource Usage Report
+Part: lfe5u_85f-6
+
+Register bits: 72 of 83640 (0%)
+PIC Latch:       0
+I/O cells:       52
+
+Details:
+CCU2C:          20
+FD1P3AX:        1
+FD1P3IX:        64
+FD1S3AX:        3
+FD1S3IX:        4
+GSR:            1
+IB:             35
+INV:            2
+OB:             17
+ORCALUT4:       62
+PUR:            1
+VHI:            1
+VLO:            1

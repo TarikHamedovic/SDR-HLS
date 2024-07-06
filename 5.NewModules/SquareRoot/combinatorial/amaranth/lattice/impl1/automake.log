@@ -1,0 +1,327 @@
+
+synthesis -f "sqrt_comb_generated_test_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Jul  6 03:45:25 2024
+
+
+Command Line:  synthesis -f sqrt_comb_generated_test_impl1_lattice.synproj -gui 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Area
+Top-level module name = sqrt_combinatorial.
+Target frequency = 1.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = false
+    <postMsg mid="35001416" type="Warning" dynamic="0" navigation="0"  />
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice (searchpath added)
+-p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
+-p /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1 (searchpath added)
+-p /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice (searchpath added)
+Verilog design file = /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v
+NGD file = sqrt_comb_generated_test_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): sqrt_combinatorial
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v(1): " arg1="sqrt_combinatorial" arg2="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v" arg3="1"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v(44): " arg1="dumpfile" arg2="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v" arg3="44"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v(45): " arg1="dumpvars" arg2="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v" arg3="45"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v(25): " arg1="18" arg2="17" arg3="/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_combinatorial_t.v" arg4="25"  />
+Last elaborated design is sqrt_combinatorial()
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = sqrt_combinatorial.
+
+
+
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Applying 1.000000 MHz constraint to all clocks
+
+Results of NGD DRC are available in sqrt_combinatorial_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+    394 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file sqrt_comb_generated_test_impl1.ngd.
+
+################### Begin Area Report (sqrt_combinatorial)######################
+Number of register bits => 0 of 84255 (0 % )
+CCU2C => 243
+GSR => 1
+IB => 32
+LUT4 => 99
+OB => 16
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : right_4_1_N_11_11, loads : 52
+  Net : right_5_1, loads : 48
+  Net : right_6_1, loads : 45
+  Net : right_7_1, loads : 44
+  Net : right_8_1, loads : 43
+  Net : right_9_1, loads : 42
+  Net : right_3_1_N_7_8, loads : 42
+  Net : right_10_1, loads : 41
+  Net : right_2_1_N_3_5, loads : 41
+  Net : right_11_1, loads : 40
+################### End Clock Report ##################
+
+Peak Memory Usage: 261.965  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.811  secs
+--------------------------------------------------------------
+
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "sqrt_comb_generated_test_impl1.ngd" -o "sqrt_comb_generated_test_impl1_map.ncd" -pr "sqrt_comb_generated_test_impl1.prf" -mp "sqrt_comb_generated_test_impl1.mrp" -lpf "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/sqrt_comb_generated_test_impl1.lpf" -lpf "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/sqrt_comb_generated_test.lpf"             
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: sqrt_comb_generated_test_impl1.ngd
+   Picdevice="LFE5U-85F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-85FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+486 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:      0 out of 84255 (0%)
+      PFU registers:            0 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:       325 out of 41820 (1%)
+      SLICEs as Logic/ROM:    325 out of 41820 (1%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        243 out of 41820 (1%)
+   Number of LUT4s:        585 out of 83640 (1%)
+      Number used as logic LUTs:         99
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      486
+      Number used as shift registers:     0
+   Number of PIO sites used: 48 out of 205 (23%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  0
+   Number of Clock Enables:  0
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net right_4_1_N_11_11: 53 loads
+     Net right_5_1: 48 loads
+     Net right_6_1: 45 loads
+     Net right_7_1: 44 loads
+     Net right_8_1: 43 loads
+     Net right_3_1_N_7_8: 42 loads
+     Net right_9_1: 42 loads
+     Net right_10_1: 41 loads
+     Net right_2_1_N_3_5: 41 loads
+     Net right_11_1: 40 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 236 MB
+
+Dumping design to file sqrt_comb_generated_test_impl1_map.ncd.
+
+ncd2vdb "sqrt_comb_generated_test_impl1_map.ncd" ".vdbs/sqrt_comb_generated_test_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+
+trce -f "sqrt_comb_generated_test_impl1.mt" -o "sqrt_comb_generated_test_impl1.tw1" "sqrt_comb_generated_test_impl1_map.ncd" "sqrt_comb_generated_test_impl1.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file sqrt_comb_generated_test_impl1_map.ncd.
+Design name: sqrt_combinatorial
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Sat Jul  6 03:45:34 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o sqrt_comb_generated_test_impl1.tw1 -gui sqrt_comb_generated_test_impl1_map.ncd sqrt_comb_generated_test_impl1.prf 
+Design file:     sqrt_comb_generated_test_impl1_map.ncd
+Preference file: sqrt_comb_generated_test_impl1.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3925149531 paths, 745 nets, and 1772 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 493 MB
+

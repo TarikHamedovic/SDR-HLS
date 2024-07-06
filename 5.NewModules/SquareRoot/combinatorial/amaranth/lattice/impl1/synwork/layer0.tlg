@@ -1,0 +1,19 @@
+Selecting top level module sqrt_sequential
+@N: CG364 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv":1:7:1:21|Synthesizing module sqrt_sequential in library work.
+Running optimization stage 1 on sqrt_sequential .......
+@W: CL265 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv":51:2:51:10|Removing unused bit 16 of r_reg[17:0]. Either assign all bits or reduce the width of the signal.
+Finished optimization stage 1 on sqrt_sequential (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+Running optimization stage 2 on sqrt_sequential .......
+@N: CL201 :"/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/source/sqrt_sequential.sv":26:2:26:10|Trying to extract state machine for register sqrt_state.
+Extracted state machine for register sqrt_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+Finished optimization stage 2 on sqrt_sequential (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/impl1/synwork/layer0.duruntime
+
+

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "sqrt_comb_generated_test_impl1.log"
+-o "sqrt_comb_generated_test_impl1.csv"
+-pr "sqrt_comb_generated_test_impl1.prf"

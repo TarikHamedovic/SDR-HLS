@@ -1,0 +1,23 @@
+----------------------------------------------------------------------
+Report for cell sqrt_sequential.verilog
+
+Register bits: 72 of 83640 (0%)
+PIC Latch:       0
+I/O cells:       52
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       20       100.0
+                            FD1P3AX        1       100.0
+                            FD1P3IX       64       100.0
+                            FD1S3AX        3       100.0
+                            FD1S3IX        4       100.0
+                                GSR        1       100.0
+                                 IB       35       100.0
+                                INV        2       100.0
+                                 OB       17       100.0
+                           ORCALUT4       62       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL           212           

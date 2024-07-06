@@ -1,0 +1,1 @@
+run_tcl -fg sqrt_comb_generated_test_impl1_synplify.tcl

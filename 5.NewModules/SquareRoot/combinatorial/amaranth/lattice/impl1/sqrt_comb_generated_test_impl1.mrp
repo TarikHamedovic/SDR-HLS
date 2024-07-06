@@ -1,0 +1,534 @@
+
+      Lattice Mapping Report File for Design Module 'sqrt_combinatorial'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     sqrt_comb_generated_test_impl1.ngd -o
+     sqrt_comb_generated_test_impl1_map.ncd -pr
+     sqrt_comb_generated_test_impl1.prf -mp sqrt_comb_generated_test_impl1.mrp
+     -lpf /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/latt
+     ice/impl1/sqrt_comb_generated_test_impl1.lpf -lpf /home/user/SDR-HLS/5.NewM
+     odules/SquareRoot/combinatorial/amaranth/lattice/sqrt_comb_generated_test.l
+     pf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  07/06/24  03:45:27
+
+Design Summary
+--------------
+
+   Number of registers:      0 out of 84255 (0%)
+      PFU registers:            0 out of 83640 (0%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:       325 out of 41820 (1%)
+      SLICEs as Logic/ROM:    325 out of 41820 (1%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        243 out of 41820 (1%)
+   Number of LUT4s:        585 out of 83640 (1%)
+      Number used as logic LUTs:         99
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      486
+      Number used as shift registers:     0
+   Number of PIO sites used: 48 out of 205 (23%)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+
+                                    Page 1
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+Design Summary (cont)
+---------------------
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 312 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  0
+   Number of Clock Enables:  0
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net right_4_1_N_11_11: 53 loads
+     Net right_5_1: 48 loads
+     Net right_6_1: 45 loads
+     Net right_7_1: 44 loads
+     Net right_8_1: 43 loads
+     Net right_3_1_N_7_8: 42 loads
+     Net right_9_1: 42 loads
+     Net right_10_1: 41 loads
+     Net right_2_1_N_3_5: 41 loads
+     Net right_11_1: 40 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| num[9]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[10]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[11]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[12]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[13]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[14]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+IO (PIO) Attributes (cont)
+--------------------------
+| num[15]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[16]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[17]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[18]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[0]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[1]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[2]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[3]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[4]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[5]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[6]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[7]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[8]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[19]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[20]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[21]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[22]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[23]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[24]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[25]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[26]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[27]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[28]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[29]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[30]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| num[31]             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[0]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[1]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+IO (PIO) Attributes (cont)
+--------------------------
+| result[2]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[3]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[4]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[5]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[6]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[7]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[8]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[9]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[10]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[11]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[12]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[13]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[14]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| result[15]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal left_3__16__I_0_354_13/S1 undriven or does not drive anything - clipped.
+Signal left_3__16__I_0_354_13/CO undriven or does not drive anything - clipped.
+Signal left_3__16__I_0_354_1/S0 undriven or does not drive anything - clipped.
+Signal left_3__16__I_0_354_1/CI undriven or does not drive anything - clipped.
+Signal left_15__16__I_0_add_2_18/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_18/CO undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_16/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_16/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_14/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_14/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_12/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_12/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_10/S1 undriven or does not drive anything -
+     clipped.
+
+                                    Page 4
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+Removed logic (cont)
+--------------------
+Signal left_15__16__I_0_add_2_10/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_8/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_8/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_6/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_6/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_4/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_4/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_2/S1 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_2/S0 undriven or does not drive anything -
+     clipped.
+Signal left_15__16__I_0_add_2_2/CI undriven or does not drive anything -
+     clipped.
+Signal left_14__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_14__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_14__16__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal left_14__16__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal left_13__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_13__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_13__16__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal left_13__16__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal left_12__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_12__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_12__16__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal left_12__16__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal left_11__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_11__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_3__16__I_0_add_2_13/CO undriven or does not drive anything -
+     clipped.
+Signal left_4__16__I_0_355_1/S0 undriven or does not drive anything - clipped.
+Signal left_4__16__I_0_355_1/CI undriven or does not drive anything - clipped.
+Signal left_4__16__I_0_355_15/CO undriven or does not drive anything - clipped.
+Signal left_5__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_5__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+Removed logic (cont)
+--------------------
+     
+Signal left_5__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_5__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_4__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_4__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_4__16__I_0_add_2_15/CO undriven or does not drive anything -
+     clipped.
+Signal left_5__16__I_0_356_1/S0 undriven or does not drive anything - clipped.
+Signal left_5__16__I_0_356_1/CI undriven or does not drive anything - clipped.
+Signal left_5__16__I_0_356_17/S0 undriven or does not drive anything - clipped.
+Signal left_5__16__I_0_356_17/CO undriven or does not drive anything - clipped.
+Signal left_2__16__I_0_353_1/S0 undriven or does not drive anything - clipped.
+Signal left_2__16__I_0_353_1/CI undriven or does not drive anything - clipped.
+Signal left_2__16__I_0_353_9/CO undriven or does not drive anything - clipped.
+Signal left_6__16__I_0_357_1/S0 undriven or does not drive anything - clipped.
+Signal left_6__16__I_0_357_1/CI undriven or does not drive anything - clipped.
+Signal left_6__16__I_0_357_17/S0 undriven or does not drive anything - clipped.
+Signal left_6__16__I_0_357_17/CO undriven or does not drive anything - clipped.
+Signal left_7__16__I_0_358_1/S0 undriven or does not drive anything - clipped.
+Signal left_7__16__I_0_358_1/CI undriven or does not drive anything - clipped.
+Signal left_7__16__I_0_358_17/S0 undriven or does not drive anything - clipped.
+Signal left_7__16__I_0_358_17/CO undriven or does not drive anything - clipped.
+Signal left_8__16__I_0_359_1/S0 undriven or does not drive anything - clipped.
+Signal left_8__16__I_0_359_1/CI undriven or does not drive anything - clipped.
+Signal left_8__16__I_0_359_17/S0 undriven or does not drive anything - clipped.
+Signal left_8__16__I_0_359_17/CO undriven or does not drive anything - clipped.
+Signal left_9__16__I_0_360_1/S0 undriven or does not drive anything - clipped.
+Signal left_9__16__I_0_360_1/CI undriven or does not drive anything - clipped.
+Signal left_9__16__I_0_360_17/S0 undriven or does not drive anything - clipped.
+Signal left_9__16__I_0_360_17/CO undriven or does not drive anything - clipped.
+Signal left_10__16__I_0_361_1/S0 undriven or does not drive anything - clipped.
+Signal left_10__16__I_0_361_1/CI undriven or does not drive anything - clipped.
+Signal left_10__16__I_0_361_17/S0 undriven or does not drive anything - clipped.
+     
+Signal left_10__16__I_0_361_17/CO undriven or does not drive anything - clipped.
+     
+Signal left_11__16__I_0_362_1/S0 undriven or does not drive anything - clipped.
+Signal left_11__16__I_0_362_1/CI undriven or does not drive anything - clipped.
+Signal left_11__16__I_0_362_17/S0 undriven or does not drive anything - clipped.
+     
+Signal left_11__16__I_0_362_17/CO undriven or does not drive anything - clipped.
+     
+Signal left_1__16__I_0_add_2_1/S1 undriven or does not drive anything - clipped.
+     
+Signal left_1__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_1__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_1__16__I_0_add_2_7/CO undriven or does not drive anything - clipped.
+     
+Signal left_12__16__I_0_363_1/S0 undriven or does not drive anything - clipped.
+Signal left_12__16__I_0_363_1/CI undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+Removed logic (cont)
+--------------------
+Signal left_12__16__I_0_363_17/S0 undriven or does not drive anything - clipped.
+     
+Signal left_12__16__I_0_363_17/CO undriven or does not drive anything - clipped.
+     
+Signal left_13__16__I_0_364_1/S0 undriven or does not drive anything - clipped.
+Signal left_13__16__I_0_364_1/CI undriven or does not drive anything - clipped.
+Signal left_13__16__I_0_364_17/S0 undriven or does not drive anything - clipped.
+     
+Signal left_13__16__I_0_364_17/CO undriven or does not drive anything - clipped.
+     
+Signal left_14__16__I_0_365_1/S0 undriven or does not drive anything - clipped.
+Signal left_14__16__I_0_365_1/CI undriven or does not drive anything - clipped.
+Signal left_14__16__I_0_365_17/S0 undriven or does not drive anything - clipped.
+     
+Signal left_14__16__I_0_365_17/CO undriven or does not drive anything - clipped.
+     
+Signal left_8__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_8__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_8__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_8__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal add_383_1/S1 undriven or does not drive anything - clipped.
+Signal add_383_1/S0 undriven or does not drive anything - clipped.
+Signal add_383_1/CI undriven or does not drive anything - clipped.
+Signal add_383_3/S1 undriven or does not drive anything - clipped.
+Signal add_383_3/S0 undriven or does not drive anything - clipped.
+Signal add_383_5/S1 undriven or does not drive anything - clipped.
+Signal add_383_5/S0 undriven or does not drive anything - clipped.
+Signal add_383_7/S1 undriven or does not drive anything - clipped.
+Signal add_383_7/S0 undriven or does not drive anything - clipped.
+Signal add_383_9/S1 undriven or does not drive anything - clipped.
+Signal add_383_9/S0 undriven or does not drive anything - clipped.
+Signal add_383_11/S1 undriven or does not drive anything - clipped.
+Signal add_383_11/S0 undriven or does not drive anything - clipped.
+Signal add_383_13/S1 undriven or does not drive anything - clipped.
+Signal add_383_13/S0 undriven or does not drive anything - clipped.
+Signal add_383_15/S1 undriven or does not drive anything - clipped.
+Signal add_383_15/S0 undriven or does not drive anything - clipped.
+Signal add_383_17/S1 undriven or does not drive anything - clipped.
+Signal add_383_17/CO undriven or does not drive anything - clipped.
+Signal left_9__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_9__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_9__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_9__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_10__16__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal left_10__16__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal left_10__16__I_0_add_2_17/S0 undriven or does not drive anything -
+
+                                    Page 7
+
+
+
+
+Design:  sqrt_combinatorial                            Date:  07/06/24  03:45:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal left_10__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_11__16__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal left_11__16__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal left_7__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_7__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_7__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_7__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_6__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_6__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_6__16__I_0_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal left_6__16__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal left_2__16__I_0_add_2_1/S1 undriven or does not drive anything - clipped.
+     
+Signal left_2__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_2__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Signal left_2__16__I_0_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal left_2__16__I_0_add_2_11/CO undriven or does not drive anything -
+     clipped.
+Signal left_3__16__I_0_add_2_1/S1 undriven or does not drive anything - clipped.
+     
+Signal left_3__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
+     
+Signal left_3__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
+     
+Block i2 was optimized away.
+
+     
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 236 MB
+        
+
+
+
+
+
+
+
+                                    Page 8
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
