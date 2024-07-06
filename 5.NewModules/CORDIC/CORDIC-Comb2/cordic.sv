@@ -151,7 +151,7 @@
                   });
 
          pre_yval = yv[NSTAGES]
-                  + $signed({ 
+                  + $signed({
                      {OW{1'b0}},
                      yv[NSTAGES][WW-OW],
                      {WW-OW-1{~yv[NSTAGES][WW-OW]}}
@@ -165,7 +165,7 @@
          if (i_reset) begin
             o_xval <= '0;
             o_yval <= '0;
-         end 
+         end
          else begin
             o_xval <= pre_xval[(WW-1):(WW-OW)];
             o_yval <= pre_yval[(WW-1):(WW-OW)];

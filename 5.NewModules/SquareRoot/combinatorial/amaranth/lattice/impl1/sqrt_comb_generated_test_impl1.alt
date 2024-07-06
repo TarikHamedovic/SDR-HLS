@@ -1,56 +1,56 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Sat Jul  6 02:54:29 2024 *
-NOTE DESIGN NAME: top *
+NOTE DATE CREATED: Sat Jul  6 04:00:23 2024 *
+NOTE DESIGN NAME: sqrt_combinatorial *
 NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS result[0] : E19 : out *
-NOTE PINS num[0] : G20 : in *
-NOTE PINS num[31] : A14 : in *
-NOTE PINS num[30] : C14 : in *
-NOTE PINS num[29] : G16 : in *
-NOTE PINS num[28] : E15 : in *
-NOTE PINS num[27] : D18 : in *
-NOTE PINS num[26] : G18 : in *
-NOTE PINS num[25] : F17 : in *
-NOTE PINS num[24] : E17 : in *
-NOTE PINS num[23] : F18 : in *
-NOTE PINS num[22] : D15 : in *
-NOTE PINS num[21] : B16 : in *
-NOTE PINS num[20] : H17 : in *
-NOTE PINS num[19] : B15 : in *
-NOTE PINS num[18] : J17 : in *
-NOTE PINS num[17] : E14 : in *
-NOTE PINS num[16] : B12 : in *
-NOTE PINS num[15] : E11 : in *
-NOTE PINS num[14] : C11 : in *
-NOTE PINS num[13] : D12 : in *
-NOTE PINS num[12] : E12 : in *
-NOTE PINS num[11] : C12 : in *
-NOTE PINS num[10] : C13 : in *
-NOTE PINS num[9] : B11 : in *
-NOTE PINS num[8] : D11 : in *
-NOTE PINS num[7] : E13 : in *
-NOTE PINS num[6] : F19 : in *
-NOTE PINS num[5] : F20 : in *
-NOTE PINS num[4] : H20 : in *
-NOTE PINS num[3] : D19 : in *
-NOTE PINS num[2] : K18 : in *
-NOTE PINS num[1] : C20 : in *
-NOTE PINS result[15] : A15 : out *
-NOTE PINS result[14] : D14 : out *
-NOTE PINS result[13] : A16 : out *
-NOTE PINS result[12] : J16 : out *
-NOTE PINS result[11] : C15 : out *
-NOTE PINS result[10] : H16 : out *
-NOTE PINS result[9] : H18 : out *
-NOTE PINS result[8] : B13 : out *
-NOTE PINS result[7] : A12 : out *
-NOTE PINS result[6] : A13 : out *
-NOTE PINS result[5] : D13 : out *
-NOTE PINS result[4] : E20 : out *
-NOTE PINS result[3] : K16 : out *
-NOTE PINS result[2] : D20 : out *
-NOTE PINS result[1] : K17 : out *
+NOTE PINS num[9] : R17 : in *
+NOTE PINS num[10] : N16 : in *
+NOTE PINS num[11] : N17 : in *
+NOTE PINS num[12] : M17 : in *
+NOTE PINS num[13] : R16 : in *
+NOTE PINS num[14] : K20 : in *
+NOTE PINS num[15] : P16 : in *
+NOTE PINS num[16] : M20 : in *
+NOTE PINS num[17] : L20 : in *
+NOTE PINS num[18] : A15 : in *
+NOTE PINS num[0] : D14 : in *
+NOTE PINS num[1] : E14 : in *
+NOTE PINS num[2] : C15 : in *
+NOTE PINS num[3] : E19 : in *
+NOTE PINS num[4] : L17 : in *
+NOTE PINS num[5] : J19 : in *
+NOTE PINS num[6] : L16 : in *
+NOTE PINS num[7] : P17 : in *
+NOTE PINS num[8] : K18 : in *
+NOTE PINS num[19] : J16 : in *
+NOTE PINS num[20] : G18 : in *
+NOTE PINS num[21] : G16 : in *
+NOTE PINS num[22] : H17 : in *
+NOTE PINS num[23] : E15 : in *
+NOTE PINS num[24] : D15 : in *
+NOTE PINS num[25] : H18 : in *
+NOTE PINS num[26] : J17 : in *
+NOTE PINS num[27] : B15 : in *
+NOTE PINS num[28] : K17 : in *
+NOTE PINS num[29] : K16 : in *
+NOTE PINS num[30] : C20 : in *
+NOTE PINS num[31] : D19 : in *
+NOTE PINS result[0] : D20 : out *
+NOTE PINS result[1] : H16 : out *
+NOTE PINS result[2] : G20 : out *
+NOTE PINS result[3] : K19 : out *
+NOTE PINS result[4] : G19 : out *
+NOTE PINS result[5] : M18 : out *
+NOTE PINS result[6] : H20 : out *
+NOTE PINS result[7] : N18 : out *
+NOTE PINS result[8] : L18 : out *
+NOTE PINS result[9] : M19 : out *
+NOTE PINS result[10] : L19 : out *
+NOTE PINS result[11] : J18 : out *
+NOTE PINS result[12] : F20 : out *
+NOTE PINS result[13] : E20 : out *
+NOTE PINS result[14] : F19 : out *
+NOTE PINS result[15] : J20 : out *
 NOTE CONFIGURATION MODE: JTAG *
 NOTE COMPRESSION: off *

@@ -16,19 +16,19 @@ Outputs:
 -----------------------------------------------------------------------------
 */
 
-module nco_sig #(
-    parameter WIDTH = 64
+module nco_sig #( // TODO: Change name so it matches module file name
+    parameter int WIDTH = 64
 )(
-    input clk,
-    input [WIDTH-1:0] phase_inc_carr,
-    output sin_out,
-    output cos_out,
+    input                  clk,
+    input      [WIDTH-1:0] phase_inc_carr,
+    output                 sin_out,
+    output                 cos_out,
     output reg [WIDTH-1:0] phase_accum
 );
 
     // Internal state parameter
-    parameter IDLE_nco = 0, START_nco = 1;
-    reg state_nco_carr = IDLE_nco;
+    //parameter IDLE_nco = 0, START_nco = 1;
+    //reg state_nco_carr = IDLE_nco;
 
     // Generate sin_out and cos_out based on phase accumulator
     assign sin_out = (phase_accum[WIDTH-1] == 1'b1) ? 1'b0 : 1'b1;
@@ -39,9 +39,9 @@ module nco_sig #(
         phase_accum <= phase_accum + phase_inc_carr;
     end
 
-    //----------------------------- 
+    //-----------------------------
     // For simulation only
-    //----------------------------- 
+    //-----------------------------
     initial begin
         $dumpfile("nco_sig_waves.vcd");
         $dumpvars;
@@ -52,6 +52,6 @@ endmodule
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
- 2024/5/26 TH: initial creation    
+ 2024/5/26 TH: initial creation
  2024/5/26 TH: revision
 */

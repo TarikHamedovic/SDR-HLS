@@ -181,7 +181,7 @@ if __name__ == "__main__":
         if args.simulate:
             
             async def testbench(ctx):
-
+                # TODO: Write a better Amaranth simulation
                 print(f"Test: Starting CIC Amaranth Simulation with clock frequency of {clock_frequency} MHz") # TODO:Make it generic
                 ctx.set(dut.d_in, 1000)
                 for _ in range(runtime):                    

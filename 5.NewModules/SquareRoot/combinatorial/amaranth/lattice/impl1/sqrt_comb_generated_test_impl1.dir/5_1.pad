@@ -6,69 +6,69 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Sat Jul  6 02:53:26 2024
+Sat Jul  6 03:59:31 2024
 
 Pinout by Port Name:
 +------------+----------+--------------+--------+-----------+-----------------------------------+
 | Port Name  | Pin/Bank | Buffer Type  | Site   | BC Enable | Properties                        |
 +------------+----------+--------------+--------+-----------+-----------------------------------+
-| num[0]     | G20/2    | LVCMOS25_IN  | PR38D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[10]    | C13/1    | LVCMOS25_IN  | PT78B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[11]    | C12/1    | LVCMOS25_IN  | PT71B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[12]    | E12/1    | LVCMOS25_IN  | PT74B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[13]    | D12/1    | LVCMOS25_IN  | PT74A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[14]    | C11/0    | LVCMOS25_IN  | PT65B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[15]    | E11/1    | LVCMOS25_IN  | PT69B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[16]    | B12/1    | LVCMOS25_IN  | PT71A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[17]    | E14/1    | LVCMOS25_IN  | PT85B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[18]    | J17/2    | LVCMOS25_IN  | PR20C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[19]    | B15/1    | LVCMOS25_IN  | PT105A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[1]     | C20/2    | LVCMOS25_IN  | PR35A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[20]    | H17/2    | LVCMOS25_IN  | PR20B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[21]    | B16/1    | LVCMOS25_IN  | PT110B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[22]    | D15/1    | LVCMOS25_IN  | PT107A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[23]    | F18/2    | LVCMOS25_IN  | PR14D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[24]    | E17/2    | LVCMOS25_IN  | PR14B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[25]    | F17/2    | LVCMOS25_IN  | PR17A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[26]    | G18/2    | LVCMOS25_IN  | PR17B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[27]    | D18/2    | LVCMOS25_IN  | PR14A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[28]    | E15/1    | LVCMOS25_IN  | PT107B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[29]    | G16/2    | LVCMOS25_IN  | PR17C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[2]     | K18/2    | LVCMOS25_IN  | PR41D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[30]    | C14/1    | LVCMOS25_IN  | PT83B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[31]    | A14/1    | LVCMOS25_IN  | PT83A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[3]     | D19/2    | LVCMOS25_IN  | PR35B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[4]     | H20/2    | LVCMOS25_IN  | PR41B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[5]     | F20/2    | LVCMOS25_IN  | PR38C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[6]     | F19/2    | LVCMOS25_IN  | PR38B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[7]     | E13/1    | LVCMOS25_IN  | PT80B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[8]     | D11/1    | LVCMOS25_IN  | PT69A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| num[9]     | B11/0    | LVCMOS25_IN  | PT65A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| result[0]  | E19/2    | LVCMOS25_OUT | PR35D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[10] | H16/2    | LVCMOS25_OUT | PR17D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[11] | C15/1    | LVCMOS25_OUT | PT105B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[12] | J16/2    | LVCMOS25_OUT | PR20D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[13] | A16/1    | LVCMOS25_OUT | PT110A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[14] | D14/1    | LVCMOS25_OUT | PT85A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[15] | A15/1    | LVCMOS25_OUT | PT103A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[1]  | K17/2    | LVCMOS25_OUT | PR29B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[2]  | D20/2    | LVCMOS25_OUT | PR35C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[3]  | K16/2    | LVCMOS25_OUT | PR29A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[4]  | E20/2    | LVCMOS25_OUT | PR38A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[5]  | D13/1    | LVCMOS25_OUT | PT80A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[6]  | A13/1    | LVCMOS25_OUT | PT76B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[7]  | A12/1    | LVCMOS25_OUT | PT76A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[8]  | B13/1    | LVCMOS25_OUT | PT78A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| result[9]  | H18/2    | LVCMOS25_OUT | PR20A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| num[0]     | D14/1    | LVCMOS25_IN  | PT85A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[10]    | N16/3    | LVCMOS25_IN  | PR53A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[11]    | N17/3    | LVCMOS25_IN  | PR56A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[12]    | M17/3    | LVCMOS25_IN  | PR53B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[13]    | R16/3    | LVCMOS25_IN  | PR56C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[14]    | K20/2    | LVCMOS25_IN  | PR44D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[15]    | P16/3    | LVCMOS25_IN  | PR56B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[16]    | M20/3    | LVCMOS25_IN  | PR47B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[17]    | L20/3    | LVCMOS25_IN  | PR47A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[18]    | A15/1    | LVCMOS25_IN  | PT103A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[19]    | J16/2    | LVCMOS25_IN  | PR20D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[1]     | E14/1    | LVCMOS25_IN  | PT85B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[20]    | G18/2    | LVCMOS25_IN  | PR17B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[21]    | G16/2    | LVCMOS25_IN  | PR17C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[22]    | H17/2    | LVCMOS25_IN  | PR20B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[23]    | E15/1    | LVCMOS25_IN  | PT107B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[24]    | D15/1    | LVCMOS25_IN  | PT107A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[25]    | H18/2    | LVCMOS25_IN  | PR20A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[26]    | J17/2    | LVCMOS25_IN  | PR20C  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[27]    | B15/1    | LVCMOS25_IN  | PT105A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[28]    | K17/2    | LVCMOS25_IN  | PR29B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[29]    | K16/2    | LVCMOS25_IN  | PR29A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[2]     | C15/1    | LVCMOS25_IN  | PT105B |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[30]    | C20/2    | LVCMOS25_IN  | PR35A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[31]    | D19/2    | LVCMOS25_IN  | PR35B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[3]     | E19/2    | LVCMOS25_IN  | PR35D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[4]     | L17/3    | LVCMOS25_IN  | PR50B  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[5]     | J19/2    | LVCMOS25_IN  | PR44A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[6]     | L16/3    | LVCMOS25_IN  | PR50A  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[7]     | P17/3    | LVCMOS25_IN  | PR53D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[8]     | K18/2    | LVCMOS25_IN  | PR41D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| num[9]     | R17/3    | LVCMOS25_IN  | PR56D  |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| result[0]  | D20/2    | LVCMOS25_OUT | PR35C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[10] | L19/3    | LVCMOS25_OUT | PR47C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[11] | J18/2    | LVCMOS25_OUT | PR41C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[12] | F20/2    | LVCMOS25_OUT | PR38C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[13] | E20/2    | LVCMOS25_OUT | PR38A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[14] | F19/2    | LVCMOS25_OUT | PR38B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[15] | J20/2    | LVCMOS25_OUT | PR44C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[1]  | H16/2    | LVCMOS25_OUT | PR17D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[2]  | G20/2    | LVCMOS25_OUT | PR38D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[3]  | K19/2    | LVCMOS25_OUT | PR44B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[4]  | G19/2    | LVCMOS25_OUT | PR41A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[5]  | M18/3    | LVCMOS25_OUT | PR50D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[6]  | H20/2    | LVCMOS25_OUT | PR41B  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[7]  | N18/3    | LVCMOS25_OUT | PR53C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[8]  | L18/3    | LVCMOS25_OUT | PR50C  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| result[9]  | M19/3    | LVCMOS25_OUT | PR47D  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
 +------------+----------+--------------+--------+-----------+-----------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 0    | 2.5V  |
 | 1    | 2.5V  |
 | 2    | 2.5V  |
+| 3    | 2.5V  |
 +------+-------+
 
 Vref by Bank:
@@ -91,11 +91,11 @@ Pinout by Pin Number:
 | A9/0     |     unused, PULL:DOWN |            |              | PT60A  | GR_PCLK0_1               |           |
 | A10/0    |     unused, PULL:DOWN |            |              | PT63A  | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |              | PT63B  |                          |           |
-| A12/1    | result[7]             |            | LVCMOS25_OUT | PT76A  |                          |           |
-| A13/1    | result[6]             |            | LVCMOS25_OUT | PT76B  |                          |           |
-| A14/1    | num[31]               |            | LVCMOS25_IN  | PT83A  |                          |           |
-| A15/1    | result[15]            |            | LVCMOS25_OUT | PT103A |                          |           |
-| A16/1    | result[13]            |            | LVCMOS25_OUT | PT110A |                          |           |
+| A12/1    |     unused, PULL:DOWN |            |              | PT76A  |                          |           |
+| A13/1    |     unused, PULL:DOWN |            |              | PT76B  |                          |           |
+| A14/1    |     unused, PULL:DOWN |            |              | PT83A  |                          |           |
+| A15/1    | num[18]               |            | LVCMOS25_IN  | PT103A |                          |           |
+| A16/1    |     unused, PULL:DOWN |            |              | PT110A |                          |           |
 | A17/1    |     unused, PULL:DOWN |            |              | PT116A |                          |           |
 | A18/1    |     unused, PULL:DOWN |            |              | PT119A |                          |           |
 | A19/1    |     unused, PULL:DOWN |            |              | PT121A | URC_GPLL1T_IN            |           |
@@ -108,11 +108,11 @@ Pinout by Pin Number:
 | B8/0     |     unused, PULL:DOWN |            |              | PT15B  |                          |           |
 | B9/0     |     unused, PULL:DOWN |            |              | PT58A  |                          |           |
 | B10/0    |     unused, PULL:DOWN |            |              | PT60B  | GR_PCLK0_0               |           |
-| B11/0    | num[9]                |            | LVCMOS25_IN  | PT65A  | PCLKT0_0                 |           |
-| B12/1    | num[16]               |            | LVCMOS25_IN  | PT71A  | PCLKT1_0                 |           |
-| B13/1    | result[8]             |            | LVCMOS25_OUT | PT78A  |                          |           |
-| B15/1    | num[19]               |            | LVCMOS25_IN  | PT105A |                          |           |
-| B16/1    | num[21]               |            | LVCMOS25_IN  | PT110B |                          |           |
+| B11/0    |     unused, PULL:DOWN |            |              | PT65A  | PCLKT0_0                 |           |
+| B12/1    |     unused, PULL:DOWN |            |              | PT71A  | PCLKT1_0                 |           |
+| B13/1    |     unused, PULL:DOWN |            |              | PT78A  |                          |           |
+| B15/1    | num[27]               |            | LVCMOS25_IN  | PT105A |                          |           |
+| B16/1    |     unused, PULL:DOWN |            |              | PT110B |                          |           |
 | B17/1    |     unused, PULL:DOWN |            |              | PT114A |                          |           |
 | B18/1    |     unused, PULL:DOWN |            |              | PT116B |                          |           |
 | B19/1    |     unused, PULL:DOWN |            |              | PT119B |                          |           |
@@ -127,15 +127,15 @@ Pinout by Pin Number:
 | C8/0     |     unused, PULL:DOWN |            |              | PT15A  |                          |           |
 | C9/0     |     unused, PULL:DOWN |            |              | PT54A  |                          |           |
 | C10/0    |     unused, PULL:DOWN |            |              | PT58B  |                          |           |
-| C11/0    | num[14]               |            | LVCMOS25_IN  | PT65B  |                          |           |
-| C12/1    | num[11]               |            | LVCMOS25_IN  | PT71B  |                          |           |
-| C13/1    | num[10]               |            | LVCMOS25_IN  | PT78B  |                          |           |
-| C14/1    | num[30]               |            | LVCMOS25_IN  | PT83B  |                          |           |
-| C15/1    | result[11]            |            | LVCMOS25_OUT | PT105B |                          |           |
+| C11/0    |     unused, PULL:DOWN |            |              | PT65B  |                          |           |
+| C12/1    |     unused, PULL:DOWN |            |              | PT71B  |                          |           |
+| C13/1    |     unused, PULL:DOWN |            |              | PT78B  |                          |           |
+| C14/1    |     unused, PULL:DOWN |            |              | PT83B  |                          |           |
+| C15/1    | num[2]                |            | LVCMOS25_IN  | PT105B |                          |           |
 | C16/1    |     unused, PULL:DOWN |            |              | PT112A |                          |           |
 | C17/1    |     unused, PULL:DOWN |            |              | PT114B |                          |           |
 | C18/2    |     unused, PULL:DOWN |            |              | PR11A  | URC_GPLL0T_IN/RDQ17      |           |
-| C20/2    | num[1]                |            | LVCMOS25_IN  | PR35A  | RDQ41                    |           |
+| C20/2    | num[30]               |            | LVCMOS25_IN  | PR35A  | RDQ41                    |           |
 | CCLK/8   |                       |            |              | CCLK   | MCLK/SCK                 |           |
 | D1/7     |     unused, PULL:DOWN |            |              | PL38B  | LDQ41                    |           |
 | D2/7     |     unused, PULL:DOWN |            |              | PL38C  | LDQ41                    |           |
@@ -146,16 +146,16 @@ Pinout by Pin Number:
 | D8/0     |     unused, PULL:DOWN |            |              | PT13B  |                          |           |
 | D9/0     |     unused, PULL:DOWN |            |              | PT20A  |                          |           |
 | D10/0    |     unused, PULL:DOWN |            |              | PT56A  |                          |           |
-| D11/1    | num[8]                |            | LVCMOS25_IN  | PT69A  | PCLKT1_1                 |           |
-| D12/1    | num[13]               |            | LVCMOS25_IN  | PT74A  | GR_PCLK1_0               |           |
-| D13/1    | result[5]             |            | LVCMOS25_OUT | PT80A  |                          |           |
-| D14/1    | result[14]            |            | LVCMOS25_OUT | PT85A  |                          |           |
-| D15/1    | num[22]               |            | LVCMOS25_IN  | PT107A |                          |           |
+| D11/1    |     unused, PULL:DOWN |            |              | PT69A  | PCLKT1_1                 |           |
+| D12/1    |     unused, PULL:DOWN |            |              | PT74A  | GR_PCLK1_0               |           |
+| D13/1    |     unused, PULL:DOWN |            |              | PT80A  |                          |           |
+| D14/1    | num[0]                |            | LVCMOS25_IN  | PT85A  |                          |           |
+| D15/1    | num[24]               |            | LVCMOS25_IN  | PT107A |                          |           |
 | D16/1    |     unused, PULL:DOWN |            |              | PT112B |                          |           |
 | D17/2    |     unused, PULL:DOWN |            |              | PR11B  | URC_GPLL0C_IN/RDQ17      |           |
-| D18/2    | num[27]               |            | LVCMOS25_IN  | PR14A  | RDQ17                    |           |
-| D19/2    | num[3]                |            | LVCMOS25_IN  | PR35B  | RDQ41                    |           |
-| D20/2    | result[2]             |            | LVCMOS25_OUT | PR35C  | VREF1_2/RDQ41            |           |
+| D18/2    |     unused, PULL:DOWN |            |              | PR14A  | RDQ17                    |           |
+| D19/2    | num[31]               |            | LVCMOS25_IN  | PR35B  | RDQ41                    |           |
+| D20/2    | result[0]             |            | LVCMOS25_OUT | PR35C  | VREF1_2/RDQ41            |           |
 | E1/7     |     unused, PULL:DOWN |            |              | PL38D  | LDQ41                    |           |
 | E2/7     |     unused, PULL:DOWN |            |              | PL44D  | PCLKC7_0/LDQ41           |           |
 | E3/7     |     unused, PULL:DOWN |            |              | PL20B  | LDQ17                    |           |
@@ -166,88 +166,88 @@ Pinout by Pin Number:
 | E8/0     |     unused, PULL:DOWN |            |              | PT13A  |                          |           |
 | E9/0     |     unused, PULL:DOWN |            |              | PT20B  |                          |           |
 | E10/0    |     unused, PULL:DOWN |            |              | PT56B  |                          |           |
-| E11/1    | num[15]               |            | LVCMOS25_IN  | PT69B  |                          |           |
-| E12/1    | num[12]               |            | LVCMOS25_IN  | PT74B  | GR_PCLK1_1               |           |
-| E13/1    | num[7]                |            | LVCMOS25_IN  | PT80B  |                          |           |
-| E14/1    | num[17]               |            | LVCMOS25_IN  | PT85B  |                          |           |
-| E15/1    | num[28]               |            | LVCMOS25_IN  | PT107B |                          |           |
+| E11/1    |     unused, PULL:DOWN |            |              | PT69B  |                          |           |
+| E12/1    |     unused, PULL:DOWN |            |              | PT74B  | GR_PCLK1_1               |           |
+| E13/1    |     unused, PULL:DOWN |            |              | PT80B  |                          |           |
+| E14/1    | num[1]                |            | LVCMOS25_IN  | PT85B  |                          |           |
+| E15/1    | num[23]               |            | LVCMOS25_IN  | PT107B |                          |           |
 | E16/2    |     unused, PULL:DOWN |            |              | PR11C  | RDQ17                    |           |
-| E17/2    | num[24]               |            | LVCMOS25_IN  | PR14B  | RDQ17                    |           |
+| E17/2    |     unused, PULL:DOWN |            |              | PR14B  | RDQ17                    |           |
 | E18/2    |     unused, PULL:DOWN |            |              | PR14C  | RDQ17                    |           |
-| E19/2    | result[0]             |            | LVCMOS25_OUT | PR35D  | RDQ41                    |           |
-| E20/2    | result[4]             |            | LVCMOS25_OUT | PR38A  | RDQ41                    |           |
+| E19/2    | num[3]                |            | LVCMOS25_IN  | PR35D  | RDQ41                    |           |
+| E20/2    | result[13]            |            | LVCMOS25_OUT | PR38A  | RDQ41                    |           |
 | F1/6     |     unused, PULL:DOWN |            |              | PL47B  | PCLKC6_1/LDQ53           |           |
 | F2/7     |     unused, PULL:DOWN |            |              | PL44C  | PCLKT7_0/LDQ41           |           |
 | F3/7     |     unused, PULL:DOWN |            |              | PL44B  | PCLKC7_1/LDQ41           |           |
 | F4/7     |     unused, PULL:DOWN |            |              | PL20A  | LDQ17                    |           |
 | F5/7     |     unused, PULL:DOWN |            |              | PL20D  | LDQ17                    |           |
 | F16/2    |     unused, PULL:DOWN |            |              | PR11D  | RDQ17                    |           |
-| F17/2    | num[25]               |            | LVCMOS25_IN  | PR17A  | RDQS17                   |           |
-| F18/2    | num[23]               |            | LVCMOS25_IN  | PR14D  | RDQ17                    |           |
-| F19/2    | num[6]                |            | LVCMOS25_IN  | PR38B  | RDQ41                    |           |
-| F20/2    | num[5]                |            | LVCMOS25_IN  | PR38C  | RDQ41                    |           |
+| F17/2    |     unused, PULL:DOWN |            |              | PR17A  | RDQS17                   |           |
+| F18/2    |     unused, PULL:DOWN |            |              | PR14D  | RDQ17                    |           |
+| F19/2    | result[14]            |            | LVCMOS25_OUT | PR38B  | RDQ41                    |           |
+| F20/2    | result[12]            |            | LVCMOS25_OUT | PR38C  | RDQ41                    |           |
 | G1/6     |     unused, PULL:DOWN |            |              | PL47D  | PCLKC6_0/LDQ53           |           |
 | G2/6     |     unused, PULL:DOWN |            |              | PL47A  | PCLKT6_1/LDQ53           |           |
 | G3/7     |     unused, PULL:DOWN |            |              | PL44A  | PCLKT7_1/LDQ41           |           |
 | G5/7     |     unused, PULL:DOWN |            |              | PL41B  | LDQSN41                  |           |
-| G16/2    | num[29]               |            | LVCMOS25_IN  | PR17C  | RDQ17                    |           |
-| G18/2    | num[26]               |            | LVCMOS25_IN  | PR17B  | RDQSN17                  |           |
-| G19/2    |     unused, PULL:DOWN |            |              | PR41A  | GR_PCLK2_1/RDQS41        |           |
-| G20/2    | num[0]                |            | LVCMOS25_IN  | PR38D  | RDQ41                    |           |
+| G16/2    | num[21]               |            | LVCMOS25_IN  | PR17C  | RDQ17                    |           |
+| G18/2    | num[20]               |            | LVCMOS25_IN  | PR17B  | RDQSN17                  |           |
+| G19/2    | result[4]             |            | LVCMOS25_OUT | PR41A  | GR_PCLK2_1/RDQS41        |           |
+| G20/2    | result[2]             |            | LVCMOS25_OUT | PR38D  | RDQ41                    |           |
 | H1/6     |     unused, PULL:DOWN |            |              | PL53C  | LDQ53                    |           |
 | H2/6     |     unused, PULL:DOWN |            |              | PL47C  | PCLKT6_0/LDQ53           |           |
 | H3/7     |     unused, PULL:DOWN |            |              | PL41D  | LDQ41                    |           |
 | H4/7     |     unused, PULL:DOWN |            |              | PL41A  | GR_PCLK7_1/LDQS41        |           |
 | H5/7     |     unused, PULL:DOWN |            |              | PL41C  | GR_PCLK7_0/LDQ41         |           |
-| H16/2    | result[10]            |            | LVCMOS25_OUT | PR17D  | RDQ17                    |           |
-| H17/2    | num[20]               |            | LVCMOS25_IN  | PR20B  | RDQ17                    |           |
-| H18/2    | result[9]             |            | LVCMOS25_OUT | PR20A  | RDQ17                    |           |
-| H20/2    | num[4]                |            | LVCMOS25_IN  | PR41B  | RDQSN41                  |           |
+| H16/2    | result[1]             |            | LVCMOS25_OUT | PR17D  | RDQ17                    |           |
+| H17/2    | num[22]               |            | LVCMOS25_IN  | PR20B  | RDQ17                    |           |
+| H18/2    | num[25]               |            | LVCMOS25_IN  | PR20A  | RDQ17                    |           |
+| H20/2    | result[6]             |            | LVCMOS25_OUT | PR41B  | RDQSN41                  |           |
 | J1/6     |     unused, PULL:DOWN |            |              | PL53B  | LDQSN53                  |           |
 | J3/6     |     unused, PULL:DOWN |            |              | PL50C  | GR_PCLK6_1/LDQ53         |           |
 | J4/6     |     unused, PULL:DOWN |            |              | PL50A  | GR_PCLK6_0/LDQ53         |           |
 | J5/6     |     unused, PULL:DOWN |            |              | PL50B  | LDQ53                    |           |
-| J16/2    | result[12]            |            | LVCMOS25_OUT | PR20D  | RDQ17                    |           |
-| J17/2    | num[18]               |            | LVCMOS25_IN  | PR20C  | RDQ17                    |           |
-| J18/2    |     unused, PULL:DOWN |            |              | PR41C  | GR_PCLK2_0/RDQ41         |           |
-| J19/2    |     unused, PULL:DOWN |            |              | PR44A  | PCLKT2_1/RDQ41           |           |
-| J20/2    |     unused, PULL:DOWN |            |              | PR44C  | PCLKT2_0/RDQ41           |           |
+| J16/2    | num[19]               |            | LVCMOS25_IN  | PR20D  | RDQ17                    |           |
+| J17/2    | num[26]               |            | LVCMOS25_IN  | PR20C  | RDQ17                    |           |
+| J18/2    | result[11]            |            | LVCMOS25_OUT | PR41C  | GR_PCLK2_0/RDQ41         |           |
+| J19/2    | num[5]                |            | LVCMOS25_IN  | PR44A  | PCLKT2_1/RDQ41           |           |
+| J20/2    | result[15]            |            | LVCMOS25_OUT | PR44C  | PCLKT2_0/RDQ41           |           |
 | K1/6     |     unused, PULL:DOWN |            |              | PL53D  | LDQ53                    |           |
 | K2/6     |     unused, PULL:DOWN |            |              | PL53A  | LDQS53                   |           |
 | K3/6     |     unused, PULL:DOWN |            |              | PL50D  | LDQ53                    |           |
 | K4/6     |     unused, PULL:DOWN |            |              | PL56A  | LDQ53                    |           |
 | K5/6     |     unused, PULL:DOWN |            |              | PL56B  | VREF1_6/LDQ53            |           |
-| K16/2    | result[3]             |            | LVCMOS25_OUT | PR29A  | RDQS29                   |           |
-| K17/2    | result[1]             |            | LVCMOS25_OUT | PR29B  | RDQSN29                  |           |
-| K18/2    | num[2]                |            | LVCMOS25_IN  | PR41D  | RDQ41                    |           |
-| K19/2    |     unused, PULL:DOWN |            |              | PR44B  | PCLKC2_1/RDQ41           |           |
-| K20/2    |     unused, PULL:DOWN |            |              | PR44D  | PCLKC2_0/RDQ41           |           |
+| K16/2    | num[29]               |            | LVCMOS25_IN  | PR29A  | RDQS29                   |           |
+| K17/2    | num[28]               |            | LVCMOS25_IN  | PR29B  | RDQSN29                  |           |
+| K18/2    | num[8]                |            | LVCMOS25_IN  | PR41D  | RDQ41                    |           |
+| K19/2    | result[3]             |            | LVCMOS25_OUT | PR44B  | PCLKC2_1/RDQ41           |           |
+| K20/2    | num[14]               |            | LVCMOS25_IN  | PR44D  | PCLKC2_0/RDQ41           |           |
 | L1/6     |     unused, PULL:DOWN |            |              | PL89C  | LDQ89                    |           |
 | L2/6     |     unused, PULL:DOWN |            |              | PL86D  | LDQ89                    |           |
 | L3/6     |     unused, PULL:DOWN |            |              | PL86C  | LDQ89                    |           |
 | L4/6     |     unused, PULL:DOWN |            |              | PL56C  | LDQ53                    |           |
 | L5/6     |     unused, PULL:DOWN |            |              | PL56D  | LDQ53                    |           |
-| L16/3    |     unused, PULL:DOWN |            |              | PR50A  | GR_PCLK3_0/RDQ53         |           |
-| L17/3    |     unused, PULL:DOWN |            |              | PR50B  | RDQ53                    |           |
-| L18/3    |     unused, PULL:DOWN |            |              | PR50C  | GR_PCLK3_1/RDQ53         |           |
-| L19/3    |     unused, PULL:DOWN |            |              | PR47C  | PCLKT3_0/RDQ53           |           |
-| L20/3    |     unused, PULL:DOWN |            |              | PR47A  | PCLKT3_1/RDQ53           |           |
+| L16/3    | num[6]                |            | LVCMOS25_IN  | PR50A  | GR_PCLK3_0/RDQ53         |           |
+| L17/3    | num[4]                |            | LVCMOS25_IN  | PR50B  | RDQ53                    |           |
+| L18/3    | result[8]             |            | LVCMOS25_OUT | PR50C  | GR_PCLK3_1/RDQ53         |           |
+| L19/3    | result[10]            |            | LVCMOS25_OUT | PR47C  | PCLKT3_0/RDQ53           |           |
+| L20/3    | num[17]               |            | LVCMOS25_IN  | PR47A  | PCLKT3_1/RDQ53           |           |
 | M1/6     |     unused, PULL:DOWN |            |              | PL89B  | LDQSN89                  |           |
 | M3/6     |     unused, PULL:DOWN |            |              | PL86B  | LDQ89                    |           |
 | M4/6     |     unused, PULL:DOWN |            |              | PL83A  | LDQ89                    |           |
 | M5/6     |     unused, PULL:DOWN |            |              | PL77A  | LDQS77                   |           |
-| M17/3    |     unused, PULL:DOWN |            |              | PR53B  | RDQSN53                  |           |
-| M18/3    |     unused, PULL:DOWN |            |              | PR50D  | RDQ53                    |           |
-| M19/3    |     unused, PULL:DOWN |            |              | PR47D  | PCLKC3_0/RDQ53           |           |
-| M20/3    |     unused, PULL:DOWN |            |              | PR47B  | PCLKC3_1/RDQ53           |           |
+| M17/3    | num[12]               |            | LVCMOS25_IN  | PR53B  | RDQSN53                  |           |
+| M18/3    | result[5]             |            | LVCMOS25_OUT | PR50D  | RDQ53                    |           |
+| M19/3    | result[9]             |            | LVCMOS25_OUT | PR47D  | PCLKC3_0/RDQ53           |           |
+| M20/3    | num[16]               |            | LVCMOS25_IN  | PR47B  | PCLKC3_1/RDQ53           |           |
 | N1/6     |     unused, PULL:DOWN |            |              | PL89D  | LDQ89                    |           |
 | N2/6     |     unused, PULL:DOWN |            |              | PL89A  | LDQS89                   |           |
 | N3/6     |     unused, PULL:DOWN |            |              | PL86A  | LDQ89                    |           |
 | N4/6     |     unused, PULL:DOWN |            |              | PL83C  | LDQ89                    |           |
 | N5/6     |     unused, PULL:DOWN |            |              | PL83B  | LDQ89                    |           |
-| N16/3    |     unused, PULL:DOWN |            |              | PR53A  | RDQS53                   |           |
-| N17/3    |     unused, PULL:DOWN |            |              | PR56A  | RDQ53                    |           |
-| N18/3    |     unused, PULL:DOWN |            |              | PR53C  | RDQ53                    |           |
+| N16/3    | num[10]               |            | LVCMOS25_IN  | PR53A  | RDQS53                   |           |
+| N17/3    | num[11]               |            | LVCMOS25_IN  | PR56A  | RDQ53                    |           |
+| N18/3    | result[7]             |            | LVCMOS25_OUT | PR53C  | RDQ53                    |           |
 | N19/3    |     unused, PULL:DOWN |            |              | PR83A  | RDQ89                    |           |
 | N20/3    |     unused, PULL:DOWN |            |              | PR83B  | RDQ89                    |           |
 | P1/6     |     unused, PULL:DOWN |            |              | PL92A  | LDQ89                    |           |
@@ -255,8 +255,8 @@ Pinout by Pin Number:
 | P3/6     |     unused, PULL:DOWN |            |              | PL92C  | LLC_GPLL0T_IN/LDQ89      |           |
 | P4/6     |     unused, PULL:DOWN |            |              | PL92D  | LLC_GPLL0C_IN/LDQ89      |           |
 | P5/6     |     unused, PULL:DOWN |            |              | PL83D  | LDQ89                    |           |
-| P16/3    |     unused, PULL:DOWN |            |              | PR56B  | VREF1_3/RDQ53            |           |
-| P17/3    |     unused, PULL:DOWN |            |              | PR53D  | RDQ53                    |           |
+| P16/3    | num[15]               |            | LVCMOS25_IN  | PR56B  | VREF1_3/RDQ53            |           |
+| P17/3    | num[7]                |            | LVCMOS25_IN  | PR53D  | RDQ53                    |           |
 | P18/3    |     unused, PULL:DOWN |            |              | PR83D  | RDQ89                    |           |
 | P19/3    |     unused, PULL:DOWN |            |              | PR83C  | RDQ89                    |           |
 | P20/3    |     unused, PULL:DOWN |            |              | PR86A  | RDQ89                    |           |
@@ -423,8 +423,8 @@ Pinout by Pin Number:
 | R1/8     |     unused, PULL:DOWN |            |              | PB4A   | D7/IO7                   |           |
 | R2/8     |     unused, PULL:DOWN |            |              | PB15A  | HOLDN/DI/BUSY/CSSPIN/CEN |           |
 | R3/8     |     unused, PULL:DOWN |            |              | PB15B  | DOUT/CSON                |           |
-| R16/3    |     unused, PULL:DOWN |            |              | PR56C  | RDQ53                    |           |
-| R17/3    |     unused, PULL:DOWN |            |              | PR56D  | RDQ53                    |           |
+| R16/3    | num[13]               |            | LVCMOS25_IN  | PR56C  | RDQ53                    |           |
+| R17/3    | num[9]                |            | LVCMOS25_IN  | PR56D  | RDQ53                    |           |
 | R18/3    |     unused, PULL:DOWN |            |              | PR89B  | RDQSN89                  |           |
 | R20/3    |     unused, PULL:DOWN |            |              | PR86B  | RDQ89                    |           |
 | T1/8     |     unused, PULL:DOWN |            |              | PB4B   | D6/IO6                   |           |
@@ -457,54 +457,54 @@ Pinout by Pin Number:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "num[0]"  SITE  "G20";
-LOCATE  COMP  "num[10]"  SITE  "C13";
-LOCATE  COMP  "num[11]"  SITE  "C12";
-LOCATE  COMP  "num[12]"  SITE  "E12";
-LOCATE  COMP  "num[13]"  SITE  "D12";
-LOCATE  COMP  "num[14]"  SITE  "C11";
-LOCATE  COMP  "num[15]"  SITE  "E11";
-LOCATE  COMP  "num[16]"  SITE  "B12";
-LOCATE  COMP  "num[17]"  SITE  "E14";
-LOCATE  COMP  "num[18]"  SITE  "J17";
-LOCATE  COMP  "num[19]"  SITE  "B15";
-LOCATE  COMP  "num[1]"  SITE  "C20";
-LOCATE  COMP  "num[20]"  SITE  "H17";
-LOCATE  COMP  "num[21]"  SITE  "B16";
-LOCATE  COMP  "num[22]"  SITE  "D15";
-LOCATE  COMP  "num[23]"  SITE  "F18";
-LOCATE  COMP  "num[24]"  SITE  "E17";
-LOCATE  COMP  "num[25]"  SITE  "F17";
-LOCATE  COMP  "num[26]"  SITE  "G18";
-LOCATE  COMP  "num[27]"  SITE  "D18";
-LOCATE  COMP  "num[28]"  SITE  "E15";
-LOCATE  COMP  "num[29]"  SITE  "G16";
-LOCATE  COMP  "num[2]"  SITE  "K18";
-LOCATE  COMP  "num[30]"  SITE  "C14";
-LOCATE  COMP  "num[31]"  SITE  "A14";
-LOCATE  COMP  "num[3]"  SITE  "D19";
-LOCATE  COMP  "num[4]"  SITE  "H20";
-LOCATE  COMP  "num[5]"  SITE  "F20";
-LOCATE  COMP  "num[6]"  SITE  "F19";
-LOCATE  COMP  "num[7]"  SITE  "E13";
-LOCATE  COMP  "num[8]"  SITE  "D11";
-LOCATE  COMP  "num[9]"  SITE  "B11";
-LOCATE  COMP  "result[0]"  SITE  "E19";
-LOCATE  COMP  "result[10]"  SITE  "H16";
-LOCATE  COMP  "result[11]"  SITE  "C15";
-LOCATE  COMP  "result[12]"  SITE  "J16";
-LOCATE  COMP  "result[13]"  SITE  "A16";
-LOCATE  COMP  "result[14]"  SITE  "D14";
-LOCATE  COMP  "result[15]"  SITE  "A15";
-LOCATE  COMP  "result[1]"  SITE  "K17";
-LOCATE  COMP  "result[2]"  SITE  "D20";
-LOCATE  COMP  "result[3]"  SITE  "K16";
-LOCATE  COMP  "result[4]"  SITE  "E20";
-LOCATE  COMP  "result[5]"  SITE  "D13";
-LOCATE  COMP  "result[6]"  SITE  "A13";
-LOCATE  COMP  "result[7]"  SITE  "A12";
-LOCATE  COMP  "result[8]"  SITE  "B13";
-LOCATE  COMP  "result[9]"  SITE  "H18";
+LOCATE  COMP  "num[0]"  SITE  "D14";
+LOCATE  COMP  "num[10]"  SITE  "N16";
+LOCATE  COMP  "num[11]"  SITE  "N17";
+LOCATE  COMP  "num[12]"  SITE  "M17";
+LOCATE  COMP  "num[13]"  SITE  "R16";
+LOCATE  COMP  "num[14]"  SITE  "K20";
+LOCATE  COMP  "num[15]"  SITE  "P16";
+LOCATE  COMP  "num[16]"  SITE  "M20";
+LOCATE  COMP  "num[17]"  SITE  "L20";
+LOCATE  COMP  "num[18]"  SITE  "A15";
+LOCATE  COMP  "num[19]"  SITE  "J16";
+LOCATE  COMP  "num[1]"  SITE  "E14";
+LOCATE  COMP  "num[20]"  SITE  "G18";
+LOCATE  COMP  "num[21]"  SITE  "G16";
+LOCATE  COMP  "num[22]"  SITE  "H17";
+LOCATE  COMP  "num[23]"  SITE  "E15";
+LOCATE  COMP  "num[24]"  SITE  "D15";
+LOCATE  COMP  "num[25]"  SITE  "H18";
+LOCATE  COMP  "num[26]"  SITE  "J17";
+LOCATE  COMP  "num[27]"  SITE  "B15";
+LOCATE  COMP  "num[28]"  SITE  "K17";
+LOCATE  COMP  "num[29]"  SITE  "K16";
+LOCATE  COMP  "num[2]"  SITE  "C15";
+LOCATE  COMP  "num[30]"  SITE  "C20";
+LOCATE  COMP  "num[31]"  SITE  "D19";
+LOCATE  COMP  "num[3]"  SITE  "E19";
+LOCATE  COMP  "num[4]"  SITE  "L17";
+LOCATE  COMP  "num[5]"  SITE  "J19";
+LOCATE  COMP  "num[6]"  SITE  "L16";
+LOCATE  COMP  "num[7]"  SITE  "P17";
+LOCATE  COMP  "num[8]"  SITE  "K18";
+LOCATE  COMP  "num[9]"  SITE  "R17";
+LOCATE  COMP  "result[0]"  SITE  "D20";
+LOCATE  COMP  "result[10]"  SITE  "L19";
+LOCATE  COMP  "result[11]"  SITE  "J18";
+LOCATE  COMP  "result[12]"  SITE  "F20";
+LOCATE  COMP  "result[13]"  SITE  "E20";
+LOCATE  COMP  "result[14]"  SITE  "F19";
+LOCATE  COMP  "result[15]"  SITE  "J20";
+LOCATE  COMP  "result[1]"  SITE  "H16";
+LOCATE  COMP  "result[2]"  SITE  "G20";
+LOCATE  COMP  "result[3]"  SITE  "K19";
+LOCATE  COMP  "result[4]"  SITE  "G19";
+LOCATE  COMP  "result[5]"  SITE  "M18";
+LOCATE  COMP  "result[6]"  SITE  "H20";
+LOCATE  COMP  "result[7]"  SITE  "N18";
+LOCATE  COMP  "result[8]"  SITE  "L18";
+LOCATE  COMP  "result[9]"  SITE  "M19";
 
 
 
@@ -516,5 +516,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jul  6 02:53:26 2024
+Sat Jul  6 03:59:32 2024
 

@@ -26,48 +26,47 @@ Operation:
 - The PWM output signal is generated based on the comparison between the counter and DataInReg.
 -----------------------------------------------------------------------------
 */
-module PWM
-(
-   input         clk,
-   input  [11:0] DataIn,
-   output reg    PWMOut
+module PWM #(
+    parameter int DATA_WIDTH = 12,
+    parameter int COUNTER_WIDTH = 10,
+    parameter int OFFSET = 512
+) (
+    input                       clk,
+    input      [DATA_WIDTH-1:0] DataIn,
+    output reg                  PWMOut
 );
 
-reg [9:0]  counter;
-reg [11:0] SimIn;
-reg [11:0] DataInNoSign;
-reg [11:0] DataInReg;
+  reg [COUNTER_WIDTH-1:0] counter;
+  reg [DATA_WIDTH-1:0] DataInReg;
 
-always @(posedge clk)
-   begin
-		    counter <= counter + 1'b 1;
-		    if (counter == 0) begin
-			      DataInReg <= DataIn+  10'd 512;
-      end
-
-		    if (counter > (DataInReg[9:0])) begin
-		        PWMOut   <= 1'b 0;
-      end else begin
-		        PWMOut   <= 1'b 1;
-      end
-	  end
-
-
-    //----------------------------- 
-    // For simulation only
-    //----------------------------- 
-    initial begin
-        $dumpfile("pwm_waves.vcd");
-        $dumpvars;
+  always @(posedge clk) begin
+    counter <= counter + 1'b1;
+    if (counter == 0) begin
+      DataInReg <= DataIn + OFFSET;
     end
-	
+
+    if (counter > (DataInReg[COUNTER_WIDTH-1:0])) begin
+      PWMOut <= 1'b0;
+    end else begin
+      PWMOut <= 1'b1;
+    end
+  end
+
+
+  //-----------------------------
+  // For simulation only
+  //-----------------------------
+  initial begin
+    $dumpfile("pwm_waves.vcd");
+    $dumpvars;
+  end
+
 endmodule
 
 /*
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
- 2024/5/28 TH: initial creation
-	2024/5/29 TH: Created SV file
-
+2024/5/28 TH: initial creation
+2024/5/29 TH: Created SV file
 */

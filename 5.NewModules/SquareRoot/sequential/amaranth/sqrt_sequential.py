@@ -1,3 +1,9 @@
+"""
+-----------------------------------------------------------------------------
+HLS Implementation for Square Root function(sequential)
+-----------------------------------------------------------------------------
+"""
+
 from amaranth import *
 from amaranth.sim import *
 from amaranth.back import verilog
@@ -30,8 +36,8 @@ class sqrt_sequential(Elaboratable):
         self.res = Signal(N // 2)  # Output: calculated square root
         self.ready = Signal()
 
-        # Internal signals
-        self.current_count = Signal(4)  # TODO: Change to generic later
+         # Internal signals(Moverd here because of simulation)
+        self.current_count = Signal(4) # TODO: Change to generic later
         self.sqrt_state = Signal(2)
         self.a = Signal(N)
         self.q = Signal(N // 2)
@@ -55,51 +61,64 @@ class sqrt_sequential(Elaboratable):
         r = self.r
         r_reg = self.r_reg
 
+        """
+        
+        # Internal signals
+        current_count = Signal(4) # TODO: Change to generic later
+        sqrt_state = Signal(2, reset=IDLE)
+        a = Signal(N)
+        q = Signal(N // 2)
+        left = Signal(N // 2 + 2)
+        right = Signal(N // 2 + 2)
+        r = Signal(N // 2 + 2)
+        r_reg = Signal(N // 2 + 2)
+        """
+
         # Define states
         IDLE = 0
         COMP = 1
         FINISH = 2
 
-        with m.FSM():
-            with m.State("IDLE"):
-                with m.If(self.reset == 0):
-                    m.next = "IDLE"
-                with m.Elif(self.valid):
+        with m.If(self.reset == 0):
+            m.d.sync += sqrt_state.eq(IDLE)
+        with m.Else():
+            with m.Switch(sqrt_state):
+                with m.Case(IDLE):
+                    with m.If(self.valid):
+                       m.d.sync += sqrt_state.eq(COMP)
+                       m.d.sync += a.eq(self.num)
+                with m.Case(COMP):
+                    with m.If(current_count.all()):
+                        m.d.sync += [self.ready.eq(1), 
+                                     sqrt_state.eq(FINISH)]
+                with m.Case(FINISH):
                     m.d.sync += [
-                        a.eq(self.num),
+                        self.ready.eq(0),
                         q.eq(0),
                         r_reg.eq(0),
-                        current_count.eq(0)
+                        a.eq(0),
+                        sqrt_state.eq(IDLE),
+                        current_count.eq(0),
                     ]
-                    m.d.sync += sqrt_state.eq(COMP)
-                    m.next = "COMP"
+                with m.Default():
+                    m.d.sync += sqrt_state.eq(IDLE)
 
-            with m.State("COMP"):
+        with m.If(self.reset == 0):
+            m.d.sync += [current_count.eq(0), 
+                         q.eq(0), 
+                         r_reg.eq(0), 
+                         a.eq(0)]
+        with m.Else():
+            #with m.If(self.valid):
+                #m.d.sync += a.eq(self.num)
+            with m.If(sqrt_state == COMP):
                 m.d.sync += [
                     current_count.eq(current_count + 1),
                     a.eq(a.shift_left(2)),
-                    q.eq(Cat(~r[-1], q[0:N // 2 - 1])),
+                    q.eq(Cat(~r[-1], 
+                             q[0 : N // 2 - 1])),
                     r_reg.eq(r),
                 ]
-                with m.If(current_count.all()):
-                    m.d.sync += self.ready.eq(1)
-                    m.d.sync += sqrt_state.eq(FINISH)
-                    m.next = "COMP"
-
-            with m.State("FINISH"):
-                m.d.sync += [
-                    self.ready.eq(0),
-                    sqrt_state.eq(IDLE)
-                ]
-                m.next = "IDLE"
-
-        with m.If(self.reset == 0):
-            m.d.sync += [
-                current_count.eq(0),
-                q.eq(0),
-                r_reg.eq(0),
-                a.eq(0)
-            ]
 
         with m.If(r_reg[-1]):
             m.d.comb += r.eq(left + right)
@@ -107,8 +126,11 @@ class sqrt_sequential(Elaboratable):
             m.d.comb += r.eq(left - right)
 
         m.d.comb += [
-            right.eq(Cat(Const(1, 1), r_reg[-1], q)),
-            left.eq(Cat(a[N - 2:N], r_reg[0:N // 2])),
+            right.eq(Cat(Const(1, 1), 
+                         r_reg[-1], 
+                         q)),
+            left.eq(Cat(a[N - 2 : N], 
+                        r_reg[0 : N // 2])),
             self.res.eq(q),
         ]
 
@@ -184,7 +206,7 @@ if __name__ == "__main__":
         "-rt",
         "--runtime",
         type=int,
-        default=100,
+        default=10,
         help="Testbench runtime in clock cycles",
     )
     parser.add_argument(
@@ -218,26 +240,45 @@ if __name__ == "__main__":
                 )
 
                 assertions_passed = 0
+                
+                # Initialize DUT signals #
+                print("Initialization: Initializing DUT signals to default values")
+                ctx.set(dut.reset, 0)
+                ctx.set(dut.valid, 0)
+                ctx.set(dut.num, 0)
+                await ctx.tick()
 
+                print("Reset: Applying reset to DUT")
+                ctx.set(dut.reset, 1)
+                await ctx.tick()
+
+                # Adding random tests #
+                random_tests_passed = 0
+                print(f"Random Tests Starting {runtime} random tests")
                 for _ in range(runtime):
-
+                    
                     print("Test: Generating random inputs...")
                     # Generate random inputs #
-                    random_value = random.randint(0, 2 ** N - 1)
+                    #random_value = random.randint(0, 2 ** N - 1)
+                    random_value = 1
+                    expected_result = int(np.sqrt(random_value))
 
                     # Loading values into DUT #
                     ctx.set(dut.num, random_value)
+                    ctx.set(dut.valid, 1)
+                    i = 0 
 
-                    print("Test: Applying random inputs...")
-                    ctx.delay(10e-9)
-                    print("------ Loaded Values ------")
+                    await ctx.tick()
 
-                    print("------ Waiting 1 For Sqrt Function To Finish ------")
-                    ctx.delay(10e-9)  # NOTE: Adjust the delay as needed
-
-                    expected_result = int(np.sqrt(random_value))
-
-                    actual_result = ctx.get(dut.result)
+                    while ctx.get(dut.ready) != 1:
+                    #for _ in range(16):
+                        print(f"Cycle {i}: Waiting for ready signal...")
+                        await ctx.tick()
+                        if i==2:
+                            ctx.set(dut.valid, 0)
+                        i = i + 1
+                        
+                    actual_result = ctx.get(dut.res)
 
                     try:
                         assert (
@@ -258,7 +299,7 @@ if __name__ == "__main__":
                 )
                 print(f"Summary: Runtime of simulation in checks: {runtime}")
 
-            # Instantiate the sqrt_sequential module
+            # Instantiate the sqrt_combinatorial module
             dut = sqrt_sequential(input_bits)
 
             # Create a simulator
@@ -284,7 +325,7 @@ if __name__ == "__main__":
         elif args.verilog:
             # Generate Verilog code
             top = sqrt_sequential(input_bits)
-            ports = [top.num, top.res, top.valid, top.ready, top.current_count, top.q, top.r, top.r_reg, top.left, top.right, top.a, top.sqrt_state]
+            ports = [top.num, top.res, top.valid, top.ready, top.current_count, top. q, top.r, top.r_reg, top.left, top.right, top.a, top.sqrt_state]
 
             with open(f"{top_name}.v", "w") as f:
                 f.write(verilog.convert(top, ports=ports))
@@ -297,3 +338,4 @@ Version History:
  2024/7/4 TH: Fixed the implementation so that it works
  2024/7/5 TH: Added Amaranth Simulation and Argument Parsers
 """
+

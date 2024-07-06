@@ -15,25 +15,25 @@ Outputs:
 */
 
 module Mixer#
-(  parameter WIDTH = 12
+(  parameter int WIDTH = 12
 )(
-   input clk,
-   input signed [WIDTH-1:0] sin_in,
-   input signed [WIDTH-1:0] cos_in,
-   input RFIn,
-   output RFOut,
+   input                         clk,
+   input signed      [WIDTH-1:0] sin_in,
+   input signed      [WIDTH-1:0] cos_in,
+   input                         RFIn,
+   output                        RFOut,
    output reg signed [WIDTH-1:0] MixerOutSin,
    output reg signed [WIDTH-1:0] MixerOutCos
   );
 
   // Internal registers to hold delayed RFIn signal
   reg RFInR1 = 1'b1;
-  reg RFInR = 1'b1;
+  reg RFInR  = 1'b1;
 
   // Delay the RFIn signal by two clock cycles
-  always @(posedge clk) begin 
+  always @(posedge clk) begin
     RFInR1 <= RFIn;
-    RFInR <= RFInR1;	
+    RFInR  <= RFInR1;
   end
 
   // Assign the delayed RFIn signal to RFOut
@@ -41,22 +41,22 @@ module Mixer#
 
   // Mixing process: multiply RF input with sine and cosine inputs
   always @(posedge clk) begin
-    if (RFInR == 1'b 0) begin
-      MixerOutSin <= sin_in;
-      MixerOutCos <= cos_in;
+    if (RFInR == 1'b0) begin
+      MixerOutSin <=  sin_in;
+      MixerOutCos <=  cos_in;
     end else begin
       MixerOutSin <= -sin_in;
-      MixerOutCos <= -cos_in;				
+      MixerOutCos <= -cos_in;
     end
   end
 
-  //----------------------------- 
+  //-----------------------------
   // For simulation only
-  //----------------------------- 
-  //initial begin
-  //  $dumpfile("mixer_waves.vcd");
-  //  $dumpvars;
-  //end
+  //-----------------------------
+  initial begin
+    $dumpfile("mixer_waves.vcd");
+    $dumpvars;
+  end
 endmodule
 
 /*

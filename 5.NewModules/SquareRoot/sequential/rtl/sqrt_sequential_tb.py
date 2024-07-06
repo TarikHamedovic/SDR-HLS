@@ -25,7 +25,7 @@ def print_vars(dut):
 async def sqrt_test(dut):
     """Test the square root calculation in the sqrt_sequential module."""
 
-    input_bits = int(os.environ.get('INPUT_BITS', 32)) # TODO: Figure out how to change input bits i n .v file aswell
+    input_bits = int(os.environ.get('INPUT_BITS', 16)) # TODO: Figure out how to change input bits i n .v file aswell
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
     num_test_values = int(os.environ.get('NUM_TEST_VALUES', 10))
 
@@ -69,7 +69,7 @@ async def sqrt_test(dut):
         while dut.ready.value != 1:
             cocotb.log.info(f"Cycle {i}: Waiting for ready signal...")
             await RisingEdge(dut.clk)
-            if i == 1:
+            if i == 2:
                 dut.valid.value = 0
             print_vars(dut)
             i += 1

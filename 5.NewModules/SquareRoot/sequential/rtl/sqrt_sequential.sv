@@ -1,6 +1,6 @@
 module sqrt_sequential #(
    // Parameter N must be an even number
-    parameter int N = 32
+    parameter int N = 16
 ) (
     input logic clk,
     input logic reset,
@@ -16,7 +16,8 @@ module sqrt_sequential #(
     FINISH = 2'b10
   } sqrt_state_t;
 
-  logic [3:0] current_count;
+  localparam int CountWidth = $clog2(N/2);
+  logic [CountWidth-1:0] current_count;
   sqrt_state_t sqrt_state;
   logic [N-1:0] a;
   logic [N/2+1:0] r;
@@ -79,5 +80,13 @@ module sqrt_sequential #(
   end
 
   assign res = q;
+
+  //-----------------------------
+  // For simulation only
+  //-----------------------------
+  initial begin
+     $dumpfile("sqrt_sequential.vcd");
+     $dumpvars(0, sqrt_sequential);
+  end
 
 endmodule

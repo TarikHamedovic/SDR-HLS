@@ -1,0 +1,42 @@
+Device Family,ECP5U
+Device,LFE5U-85F
+Package,CABGA381
+Setup Performance Grade,Default
+Hold Performance Grade,Default
+Preference File,/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth/lattice/Untitled.tpf
+Check Unconstrained Connections,Yes
+Check Unconstrained Paths,Yes
+Report Asynchronous Timing Loops,Yes
+Report Style,Verbose Timing Report
+Full Name,Yes
+Clock Domain,No
+Worst-Case Paths,10
+Number of Unconstrained Paths,0
+
+
+Preference,
+
+
+Preference,Unconstrained: CLOCK_DOMAIN
+
+
+Delay Table
+
+Start Point,End Point,Classification,Clocks
+
+
+Data Path Details
+
+Name,Fanout,Delay,Source,Destination,Resource
+
+
+Source Clock
+
+Name,Fanout,Delay,Source,Destination,Resource
+
+
+Destination Clock
+
+Name,Fanout,Delay,Source,Destination,Resource
+
+

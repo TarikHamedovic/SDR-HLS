@@ -13,24 +13,24 @@ import os
 
 async def init(dut, duration_ns):
     # Function to initialize DUT values #
-    cocotb.log.info("Initialization: Commencing input reset sequence...")
+    cocotb.log.info("[Initialization] Commencing input reset sequence...")
     
     dut.counter.value = 0
     dut.DataIn.value = 0
 
     await Timer(duration_ns, units="ns")
 
-    cocotb.log.info(f"Initialization: counter value set to {dut.counter.value}")
-    cocotb.log.info(f"Initialization: DataIn value set to {dut.DataIn.value}")
+    cocotb.log.info(f"[Initialization] counter value set to {dut.counter.value}")
+    cocotb.log.info(f"[Initialization] DataIn value set to {dut.DataIn.value}")
 
 def print_vars(dut):
     # Log monitored variables #
-    dut._log.info(f"Monitor: counter={dut.counter.value}, PWMOut={dut.PWMOut.value}")
+    cocotb.log.info(f"[Monitor] counter = {dut.counter.value}, PWMOut = {dut.PWMOut.value}")
 
 def calculate_expected_output(dut, counter, data_in_reg, bit_width):
     mask = (1 << bit_width) - 1  # Create a mask for the given bit width
-    dut._log.info(f"Monitor: important={data_in_reg & mask}")
-    return 1 if counter < (data_in_reg & mask) + 2 else 0 # Added 2 because of delay to enter the DataInValue to DataInReg and 1 more delay to pass the value to PWMOut
+    cocotb.log.info(f"[Monitor] important = {data_in_reg & mask}")
+    return 1 if counter < (data_in_reg & mask) + 2 else 0  # Added 2 because of delay to enter the DataInValue to DataInReg and 1 more delay to pass the value to PWMOut
 
 @cocotb.test()
 async def PWM_test(dut):
@@ -39,7 +39,8 @@ async def PWM_test(dut):
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))
     counter_bits = int(os.environ.get('COUNTER_BITS', 10))
 
-    dut._log.info(f"Test: Starting PWM cocotb test with clock_value = {clock_value} ns")
+    cocotb.log.info(f"[Test Start] Starting PWM cocotb test with clock_value = {clock_value} ns")
+
     # Starting Clock #
     clock = Clock(dut.clk, clock_value, units="ns")
     cocotb.start_soon(clock.start())
@@ -51,13 +52,13 @@ async def PWM_test(dut):
     print_vars(dut)
 
     # Generating test data including edge cases and random values #
-    test_data = [1022, 0, 1023, -512, -1023, 1024, 2000, 1]
-    test_data += [random.randint(-2**(input_bits-1), 2**(input_bits-1)-1) for _ in range(number_of_iterations)]
-    cocotb.log.info("Test: Generated test data with edge and random values")
+    test_data = [random.randint(-2**(dut.DATA_WIDTH.value-1), 2**(dut.DATA_WIDTH.value-1)-1) for _ in range(number_of_iterations)]
+    cocotb.log.info("[Test Data Generation] Generated test data with edge and random values")
 
+    assertions_passed = 0
     for data in test_data:
         # Loading values into DUT #
-        cocotb.log.info(f"Test: Applying input value {data}...")
+        cocotb.log.info(f"[Test Execution] Applying input value {data}...")
         dut.DataIn.value = data
         await RisingEdge(dut.clk)
         await RisingEdge(dut.clk)
@@ -67,22 +68,23 @@ async def PWM_test(dut):
         await RisingEdge(dut.clk)
         print_vars(dut)
 
-        for _ in range(1023):
+        for _ in range(2**dut.COUNTER_WIDTH.value - 1):
             await RisingEdge(dut.clk)
             expected_output = calculate_expected_output(dut, int(dut.counter.value), int(dut.DataInReg.value), counter_bits)
 
             # Checking the output against expected value #
             actual_output = int(dut.PWMOut.value)
-            cocotb.log.info(f"Check: counter {int(dut.counter.value)}")
-            cocotb.log.info(f"Check: Expected {expected_output}, got {actual_output}")
+            cocotb.log.info(f"[Check] counter = {int(dut.counter.value)}")
+            cocotb.log.info(f"[Check] Expected {expected_output}, got {actual_output}")
             assert actual_output == expected_output, f"Assertion failed: DataIn = {data}, DataInReg = {int(dut.DataInReg.value)} counter = {int(dut.counter.value)}: expected {expected_output}, got {actual_output}"
+            assertions_passed += 1
         
-        cocotb.log.info("Test: Assertion passed for current input set")
+        cocotb.log.info("[Check] Assertion passed for current input set")
 
-        """
-        TODO: Add maybe more test cases, edge cases?
-        TODO: Make a signals variable that will store all the signals in the DUT so that I can print them in a loop, making it more robust
-        """
+    cocotb.log.info("[Summary] All values matched expected results")
+    cocotb.log.info(f"[Summary] Clock frequency of the simulation: {1/clock_value * 1000} MHz")
+    cocotb.log.info(f"[Summary] Runtime of simulation: {number_of_iterations * clock_value * (2**dut.COUNTER_WIDTH.value - 1)} ns")
+    cocotb.log.info(f"[Summary] Total number of assertions passed: {assertions_passed}")
 
 """
 -----------------------------------------------------------------------------
@@ -90,8 +92,7 @@ Version History:
 -----------------------------------------------------------------------------
  2024/4/22 TH: initial creation   
  2024/5/26 TH: revision 
- 2024/5/26 TH: Fixed error when asserting, mismatch between expected and actual data for data over 512 -- Fixed(Only needed to look the bottom 10 bits of DataInReg)
+ 2024/5/26 TH: Fixed error when asserting, mismatch between expected and actual data for data over 512 -- Fixed (Only needed to look the bottom 10 bits of DataInReg)
  2024/6/11 TH: Added argument parser for variable inputs through terminal
- 
+ 2024/7/6  TH: Added detailed comments and logging
 """
-

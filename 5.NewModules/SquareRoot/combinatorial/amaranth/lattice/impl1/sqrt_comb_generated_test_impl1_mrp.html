@@ -25,7 +25,7 @@ Target Vendor:  LATTICE
 Target Device:  LFE5U-85FCABGA381
 Target Performance:   6
 Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  07/06/24  03:45:27
+Mapped on:  07/06/24  03:59:17
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
@@ -96,7 +96,7 @@ Mapped on:  07/06/24  03:45:27
 
 
 
-   Number of warnings:  0
+   Number of warnings:  3
    Number of errors:    0
      
 
@@ -105,7 +105,18 @@ Mapped on:  07/06/24  03:45:27
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-   No errors or warnings present.
+WARNING - map: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth
+     /lattice/sqrt_comb_generated_test.lpf(6): Semantic error in "FREQUENCY PORT
+     "clk_25mhz" 25.000000 MHz ;": "clk_25mhz" matches no ports in the design.
+     This preference has been disabled.
+WARNING - map: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth
+     /lattice/sqrt_comb_generated_test.lpf(4): Semantic error in "LOCATE COMP
+     "clk_25mhz" SITE "G2" ;": COMP "clk_25mhz" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/amaranth
+     /lattice/sqrt_comb_generated_test.lpf(5): Semantic error in "IOBUF PORT
+     "clk_25mhz" PULLMODE=NONE IO_TYPE=LVCMOS33 ;": Port "clk_25mhz" does not
+     exist in the design. This preference has been disabled.
 
 
 
@@ -116,6 +127,7 @@ Mapped on:  07/06/24  03:45:27
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
 | num[9]              | INPUT     | LVCMOS25  |            |
+
 +---------------------+-----------+-----------+------------+
 | num[10]             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -127,7 +139,6 @@ Mapped on:  07/06/24  03:45:27
 +---------------------+-----------+-----------+------------+
 | num[14]             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-
 | num[15]             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | num[16]             | INPUT     | LVCMOS25  |            |
@@ -173,6 +184,7 @@ Mapped on:  07/06/24  03:45:27
 | num[27]             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | num[28]             | INPUT     | LVCMOS25  |            |
+
 +---------------------+-----------+-----------+------------+
 | num[29]             | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -184,7 +196,6 @@ Mapped on:  07/06/24  03:45:27
 +---------------------+-----------+-----------+------------+
 | result[1]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-
 | result[2]           | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | result[3]           | OUTPUT    | LVCMOS25  |            |
@@ -231,6 +242,7 @@ Signal left_15__16__I_0_add_2_18/CO undriven or does not drive anything -
 Signal left_15__16__I_0_add_2_16/S1 undriven or does not drive anything -
      clipped.
 Signal left_15__16__I_0_add_2_16/S0 undriven or does not drive anything -
+
      clipped.
 Signal left_15__16__I_0_add_2_14/S1 undriven or does not drive anything -
      clipped.
@@ -242,7 +254,6 @@ Signal left_15__16__I_0_add_2_12/S0 undriven or does not drive anything -
      clipped.
 Signal left_15__16__I_0_add_2_10/S1 undriven or does not drive anything -
      clipped.
-
 Signal left_15__16__I_0_add_2_10/S0 undriven or does not drive anything -
      clipped.
 Signal left_15__16__I_0_add_2_8/S1 undriven or does not drive anything -
@@ -288,6 +299,7 @@ Signal left_12__16__I_0_add_2_1/S0 undriven or does not drive anything -
 Signal left_12__16__I_0_add_2_1/CI undriven or does not drive anything -
      clipped.
 Signal left_11__16__I_0_add_2_17/S0 undriven or does not drive anything -
+
      clipped.
 Signal left_11__16__I_0_add_2_17/CO undriven or does not drive anything -
      clipped.
@@ -299,7 +311,6 @@ Signal left_4__16__I_0_355_15/CO undriven or does not drive anything - clipped.
 Signal left_5__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
      
 Signal left_5__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
-
      
 Signal left_5__16__I_0_add_2_17/S0 undriven or does not drive anything -
      clipped.
@@ -345,6 +356,7 @@ Signal left_11__16__I_0_362_1/CI undriven or does not drive anything - clipped.
 Signal left_11__16__I_0_362_17/S0 undriven or does not drive anything - clipped.
      
 Signal left_11__16__I_0_362_17/CO undriven or does not drive anything - clipped.
+
      
 Signal left_1__16__I_0_add_2_1/S1 undriven or does not drive anything - clipped.
      
@@ -356,7 +368,6 @@ Signal left_1__16__I_0_add_2_7/CO undriven or does not drive anything - clipped.
      
 Signal left_12__16__I_0_363_1/S0 undriven or does not drive anything - clipped.
 Signal left_12__16__I_0_363_1/CI undriven or does not drive anything - clipped.
-
 Signal left_12__16__I_0_363_17/S0 undriven or does not drive anything - clipped.
      
 Signal left_12__16__I_0_363_17/CO undriven or does not drive anything - clipped.
@@ -402,6 +413,7 @@ Signal add_383_17/S1 undriven or does not drive anything - clipped.
 Signal add_383_17/CO undriven or does not drive anything - clipped.
 Signal left_9__16__I_0_add_2_1/S0 undriven or does not drive anything - clipped.
      
+
 Signal left_9__16__I_0_add_2_1/CI undriven or does not drive anything - clipped.
      
 Signal left_9__16__I_0_add_2_17/S0 undriven or does not drive anything -
@@ -413,7 +425,6 @@ Signal left_10__16__I_0_add_2_1/S0 undriven or does not drive anything -
 Signal left_10__16__I_0_add_2_1/CI undriven or does not drive anything -
      clipped.
 Signal left_10__16__I_0_add_2_17/S0 undriven or does not drive anything -
-
      clipped.
 Signal left_10__16__I_0_add_2_17/CO undriven or does not drive anything -
      clipped.
@@ -459,6 +470,9 @@ Block i2 was optimized away.
 
 
 
+
+
+
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
@@ -466,6 +480,51 @@ Block i2 was optimized away.
    Total REAL Time: 0 secs  
    Peak Memory Usage: 236 MB
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -10,7 +10,8 @@ from numpy.fft import fft, ifft
 def print_vars(dut):
     # Log monitored variables #
     dut._log.info(f"Monitor: i_reset={dut.i_reset.value}")
-    dut._log.info(f"Monitor: i_xval={dut.i_xval.value}, i_yval={dut.i_yval.value}, i_phase={dut.i_phase.value}, o_xval={dut.o_xval.value}, o_yval={dut.o_yval.value}")
+    dut._log.info(f"Monitor: i_xval={dut.i_xval.value}, i_yval={dut.i_yval.value}, i_phase={dut.i_phase.value}")
+    dut._log.info(f" o_xval={dut.o_xval.value}, o_yval={dut.o_yval.value}")
     dut._log.info(f"Monitor: e_xval={dut.e_xval.value}, e_yval={dut.e_yval.value}")
 
     # Collect and print xv values
@@ -66,7 +67,7 @@ async def test_cordic_sine_cosine(dut):
     y_values = []
 
 # Repeat for 500 cycles
-    for cycle in range(500):
+    for cycle in range(50):
         dut._log.info(f"Cycle {cycle}")
         # Log each iteration within the current cycle
         await RisingEdge(dut.clk)

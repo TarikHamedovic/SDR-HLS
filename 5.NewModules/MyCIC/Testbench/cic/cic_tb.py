@@ -20,6 +20,7 @@ async def init(dut):
     dut.i_ce.value = 0
     dut.i_reset.value = 1
     await RisingEdge(dut.i_clk)
+    await RisingEdge(dut.i_clk)
 
     cocotb.log.info(f"[Initialization] {dut.i_data._name} value changed from {original_i_data} to {dut.i_data.value}")
     cocotb.log.info(f"[Initialization] {dut.i_ce._name} value changed from {original_i_ce} to {dut.i_ce.value}")

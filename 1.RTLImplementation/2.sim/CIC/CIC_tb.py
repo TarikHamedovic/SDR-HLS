@@ -1,11 +1,15 @@
+"""
+-----------------------------------------------------------------------------
+CocoTB Testbench for CIC Filter
+-----------------------------------------------------------------------------
+"""
+
 import cocotb
 from cocotb.triggers import RisingEdge, Timer
 from cocotb.clock import Clock
 import os
-
-# TODO: Write Comments
-# TODO: Try to write more concise functions with the use of lists
-# TODO: Fix comb test 
+import random
+import numpy as np
 
 signals = [
     'd_in', 'count', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8',
@@ -13,16 +17,23 @@ signals = [
     'd_clk_tmp', 'd_scaled', 'd_out', 'Gain'
 ]
 
-def print_vars(dut):
-    for signal in signals:
-        dut._log.info(f"Monitor: {signal}={getattr(dut, signal).value}")
-
 def initialize_dut(dut):
     for signal in signals:
         setattr(dut, signal, 0)
 
     dut.d_in.value = 1000
     dut.Gain.value = 1  # Ensure Gain is initialized to a valid value
+
+def print_vars(dut):
+    cocotb.log.info("----- Monitoring Variables -----")
+    for signal in signals:
+        cocotb.log.info(f"[Monitor] {signal} = {getattr(dut, signal).value}")
+
+def check_signals(dut, expected_values, signals_to_check):
+    for signal_name, expected_value in zip(signals_to_check, expected_values):
+        actual_value = int(getattr(dut, signal_name).value)
+        cocotb.log.info(f"[Check] {signal_name}_actual = {actual_value}, {signal_name}_expected = {expected_value}")
+        assert actual_value == expected_value, f"Assertion failed for {signal_name}: expected {expected_value}, got {actual_value}"
 
 def integrator(dut, d1, d2, d3, d4, d5):
     d_in = dut.d_in.value
@@ -34,33 +45,27 @@ def integrator(dut, d1, d2, d3, d4, d5):
 
     return d1, d2, d3, d4, d5
 
-def check_signals(dut, expected_values, signals_to_check):
-    for signal_name, expected_value in zip(signals_to_check, expected_values):
-        actual_value = int(getattr(dut, signal_name).value)
-        cocotb.log.info(f"Check: {signal_name}_actual={actual_value}, {signal_name}_expected={expected_value}")
-        assert actual_value == expected_value, f"Assertion failed for {signal_name}: expected {expected_value}, got {actual_value}"
-
 def integrator_check(dut, d1_e, d2_e, d3_e, d4_e, d5_e):
     expected_values = [d1_e, d2_e, d3_e, d4_e, d5_e]
     signals_to_check = ['d1', 'd2', 'd3', 'd4', 'd5']
     check_signals(dut, expected_values, signals_to_check)
 
 def decimation(count, v_comb, d_tmp, d_clk_tmp, d5, decimation_ratio, save_d5):
-    if(count == decimation_ratio - 2):
+    if count == decimation_ratio - 2:
         save_d5 = d5
-        count = count + 1
+        count += 1
         v_comb = 0
-    elif(count == decimation_ratio-1):
+    elif count == decimation_ratio - 1:
         count = 0
         d_clk_tmp = 1
         d_tmp = save_d5
         v_comb = 1
-    elif(count == decimation_ratio // 2):  # use // for integer division
+    elif count == decimation_ratio // 2:
         d_clk_tmp = 0
-        count = count + 1
+        count += 1
         v_comb = 0
     else:
-        count = count + 1
+        count += 1
         v_comb = 0
     return count, v_comb, d_tmp, d_clk_tmp, save_d5
 
@@ -70,9 +75,8 @@ def decimation_check(dut, count_e, v_comb_e, d_tmp_e, d_clk_tmp_e):
     check_signals(dut, expected_values, signals_to_check)
 
 def comb(dut, v_comb_e, d_tmp_e, d_clk_tmp_e, d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out, v_comb_sim):
-    d_clk = d_clk_tmp_e
-    if(v_comb_sim):
-        d_out = d10 >> (64 - 12 - int(dut.Gain.value))  # Ensure Gain is an integer
+    if v_comb_sim:
+        d_out = d10 >> (64 - 12 - int(dut.Gain.value))
         d_scaled = d10
 
         d10 = d9 - d_d9
@@ -87,7 +91,7 @@ def comb(dut, v_comb_e, d_tmp_e, d_clk_tmp_e, d_d_tmp, d6, d_d6, d7, d_d7, d8, d
         d_d_tmp = d_tmp_e
 
         v_comb_sim = 0
-    if(v_comb_e):
+    if v_comb_e:
         v_comb_sim = 1
 
     return d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out, v_comb_sim
@@ -153,23 +157,22 @@ async def comb_process(dut, shared_state, number_of_iterations):
 
 @cocotb.test()
 async def CIC_test(dut):
-
     # Configuration from environment variables
     input_bits = int(os.environ.get("INPUT_BITS", 12))
     decimation_ratio = int(os.environ.get("DECIMATION_RATIO", 16))
     number_of_iterations = int(os.environ.get("ITERATIONS", 50))
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
 
+    cocotb.log.info(f"[Test Start] Starting CIC cocotb test with clock_value = {clock_value} ns")
+
     # Starting the clock
-    cocotb.log.info(f"Test: Starting CIC cocotb test with clock_value = {clock_value} ns")
-    cocotb.start_soon(Clock(dut.clk, clock_value, units="ns").start())
+    clock = Clock(dut.clk, clock_value, units="ns")
+    cocotb.start_soon(clock.start())
 
     # Initializing DUT signals
     initialize_dut(dut)
-
     await RisingEdge(dut.clk)
-
-    cocotb.log.info("Test: Initialized variables")
+    cocotb.log.info("[Test Initialization] Initialized input variables")
 
     # Shared state dictionary
     shared_state = {
@@ -197,6 +200,7 @@ async def CIC_test(dut):
         'v_comb_simulation': 0
     }
     print_vars(dut)
+
     # Start coroutines for integrator, decimation, and comb processes
     cocotb.start_soon(integrator_process(dut, shared_state, number_of_iterations))
     cocotb.start_soon(decimation_process(dut, shared_state, decimation_ratio, number_of_iterations))
@@ -205,4 +209,15 @@ async def CIC_test(dut):
     # Wait for all coroutines to complete
     await Timer(number_of_iterations * clock_value, units="ns")
 
-    cocotb.log.info("Test: All values matched expected results")
+    cocotb.log.info("[Summary] All values matched expected results")
+    cocotb.log.info(f"[Summary] Clock frequency of the simulation: {1/clock_value * 1000} MHz")
+    cocotb.log.info(f"[Summary] Runtime of simulation in checks: {number_of_iterations}")
+    cocotb.log.info(f"[Summary] Total number of assertions passed: All")
+
+"""
+-----------------------------------------------------------------------------
+Version History:
+-----------------------------------------------------------------------------
+ 2024/4/18  TH: Initial Creation   
+ 2024/7/6   TH: Added detailed comments and logging
+"""

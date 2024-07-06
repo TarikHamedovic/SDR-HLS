@@ -5,7 +5,7 @@ CocoTB Testbench for AMDemod.v module
 """
 
 import cocotb
-from cocotb.triggers import RisingEdge, Timer
+from cocotb.triggers import RisingEdge
 from cocotb.clock import Clock
 import numpy as np
 import random
@@ -64,6 +64,7 @@ async def AMDemod_test(dut):
     ]
     cocotb.log.info("[Test Data Generation] Generated test data with edge and random values")
 
+    assertions_passed = 0
     for I_in, Q_in in test_data:
         # Loading values into DUT #
         cocotb.log.info("[Test Execution] Applying input values...")
@@ -87,8 +88,14 @@ async def AMDemod_test(dut):
         actual_output = int(dut.d_out.value)
         cocotb.log.info(f"[Check] Expected {expected_output}, got {actual_output}")
         assert actual_output == expected_output, f"Assertion failed: I_in = {I_in}, Q_in = {Q_in}: expected {expected_output}, got {actual_output}"
+        assertions_passed += 1
         cocotb.log.info("[Check] Assertion passed for current input set")
-        
+    
+    cocotb.log.info(f"[Summary]: Width: {dut.WIDTH}")
+    cocotb.log.info(f"[Summary]: Clock frequency of the simulation: {1/clock_value * 1000} MHz")
+    cocotb.log.info(f"[Summary]: Runtime of simulation in checks : {num_test_values + 5} (The +5 is because of edge cases I added)")
+    cocotb.log.info(f"[Summary]: Total number of assertions passed: {assertions_passed}")
+
 """
 -----------------------------------------------------------------------------
 Version History:

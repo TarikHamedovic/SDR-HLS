@@ -4,7 +4,7 @@ from amaranth.sim import Simulator, Settle
 class SignalTest(Elaboratable):
     def __init__(self):
         self.test = Signal(8)
-        self.slice = Signal(2)
+        self.slice = Signal(3)
 
         self.q = Signal(16)
         self.r = Signal(18)
@@ -19,7 +19,7 @@ class SignalTest(Elaboratable):
         ]
 
         m.d.comb += self.test.eq(121)
-        m.d.comb += self.slice.eq(self.test[7:8])
+        m.d.comb += self.slice.eq(self.test[5:8])
         m.d.comb += self.index.eq(self.test[7])
         m.d.comb += self.right.eq(Cat(Const(1,1), self.r[17], self.q))
         return m

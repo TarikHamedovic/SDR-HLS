@@ -47,11 +47,9 @@ async def sqrt_test(dut):
     dut.reset.value = 0
     dut.valid.value = 0
     dut.num.value = 0
-    #dut.ready.value = 0
     await RisingEdge(dut.clk)
     print_vars(dut)
 
-    await RisingEdge(dut.clk)
     cocotb.log.info("[Reset] Applying reset to DUT")
     dut.reset.value = 1
     await RisingEdge(dut.clk)
@@ -68,15 +66,17 @@ async def sqrt_test(dut):
             f"[Random Test Case] Testing with random input num = {num}")
 
         dut.valid.value = 1
+        dut.reset.value = 1
+        dut.rst.value = 0
         dut.num.value = num
         i = 0
-
         await RisingEdge(dut.clk)
+
         #while dut.ready.value != 1:
-        for _ in range(17):
+        for _ in range(16):
             cocotb.log.info(f"Cycle {i}: Waiting for ready signal...")
             await RisingEdge(dut.clk)
-            if i == 3:
+            if i == 1:
                 dut.valid.value = 0
             print_vars(dut)
             i += 1
