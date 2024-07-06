@@ -5,6 +5,60 @@ of receiving AM broadcasts with minimal analog components. The project underscor
 
 In the forthcoming sections, we will go into the operational principles of the project, alongside potential enhancements, alterations, and comprehensive discussions on the DSP Modules integral to the SDR Receiver. Additionally, the project’s transition to a different platform, specifically the ULX3S board, will be outlined. Furthermore, the performance and functionality of the SDR Receiver will be evaluated through both Verilog and High-Level Synthesis (HLS) testing methodologies.
 
+## Repository Structure
+
+### 0. Documentation
+
+This folder contains:
+
+- A detailed theoretical analysis of the concepts introduced in this project (currently in progress).
+- A presentation file shared with the FPGA research team at Infineon Technologies.
+- Papers closely related to the work done on this project.
+
+### 1. RTL Implementation
+
+Contains the Register Transfer Level (RTL) implementations of the project's designs, organized into three subfolders:
+
+1. **hw**: Includes Verilog and SystemVerilog files for the following modules:
+   - AM Demodulator
+   - CIC Filter
+   - Mixer
+   - NCO (Numerically Controlled Oscillator)
+   - PWM (Pulse Width Modulation)
+   - UART Receiver
+   - Top module
+
+2. **sim**: Contains cocotb simulations for the Verilog/SystemVerilog files.
+
+3. **lattice**: Includes Lattice Diamond synthesis files, place and route files, constraint files, and other related files.
+
+### 2. HLS Implementation
+
+Houses the High-Level Synthesis (HLS) implementations of the modules in the RTL Implementation. Each file includes:
+- Amaranth HLS code
+- Amaranth simulations
+- Cocotb simulations of the generated Verilog files for verification
+
+### 3. Testing
+
+Contains testing modules for the following components:
+- Speaker
+- UART
+- 1-bit ADC
+- LVDS (Low-Voltage Differential Signaling)
+
+### 4. Scripts
+
+Includes various scripts for generating Python and Matlab graph files and simulations.
+
+### 5. New Modules
+
+Newly developed modules that are part of the project, written in both RTL and Amaranth HLS, including:
+- Sine LUT NCO
+- Sine CORDIC NCO
+- Improved CIC Filter
+- Square Root Module
+
 # Software Defined Radio(SDR)
 
 A Software-Defined Radio (SDR) system is a sophisticated device designed to enable efficient data transmission and reception. At its core, an SDR system transforms infor- mation—whether speech, music, or video—into a digital format, processes it, and then transmits it as an electromagnetic wave with specific characteristics like amplitude, frequency, and phase. This digital communication process involves converting analog signals
