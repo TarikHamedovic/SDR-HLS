@@ -16,8 +16,9 @@ def print_vars(dut):
     """Helper function to print the current state of the DUT signals."""
     cocotb.log.info("----- Monitoring Variables -----")
     cocotb.log.info(f"[Monitor] num = {dut.num.value}, res = {dut.res.value}")
+    cocotb.log.info(f"[Monitor] reset = {dut.reset.value}")
     cocotb.log.info(
-        f"[Monitor] valid = {dut.valid.value}, reset = {dut.reset.value}, ready = {dut.ready.value}"
+        f"[Monitor] i_valid = {dut.i_valid.value}, o_ready = {dut.o_ready.value}, o_valid = {dut.o_valid.value}, i_ready = {dut.i_ready.value}"
     )
 
 
@@ -41,14 +42,19 @@ async def sqrt_test(dut):
     cocotb.log.info(
         "[Initialization] Initializing DUT signals to default values")
     dut.reset.value = 0
-    dut.valid.value = 0
     dut.num.value = 0
-    dut.ready.value = 0
+    dut.i_valid.value = 0
+    dut.i_ready.value = 0
+    #dut.o_valid.value = 0
+    #dut.o_ready.value = 0
 
     # Apply reset to the DUT #
     cocotb.log.info("[Reset] Applying reset to DUT")
     await RisingEdge(dut.clk)
+
+    # Remove reset bit #
     dut.reset.value = 1
+    dut.i_ready.value = 1
     await RisingEdge(dut.clk)
 
     # Adding random tests #
@@ -61,16 +67,16 @@ async def sqrt_test(dut):
         cocotb.log.info(
             f"[Random Test Case] Testing with random input num = {num}")
 
-        dut.valid.value = 1
+        dut.i_valid.value = 1
         dut.num.value = num
         i = 0
 
         await RisingEdge(dut.clk)
-        while dut.ready.value != 1:
+        while dut.o_valid.value != 1:
             cocotb.log.info(f"Cycle {i}: Waiting for ready signal...")
             await RisingEdge(dut.clk)
             if i == 2:
-                dut.valid.value = 0
+                dut.i_valid.value = 0
             print_vars(dut)
             i += 1
 

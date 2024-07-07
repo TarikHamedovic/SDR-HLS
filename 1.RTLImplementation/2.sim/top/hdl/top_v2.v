@@ -38,55 +38,63 @@ Outputs:
 
 module top (
    input  wire       clk_25mhz,
-   input  wire       i_Rx_Serial,
-   input  wire       RFIn,
-   output wire       o_Tx_Serial,
+   input  wire       i_rx_serial,
+   input  wire       rf_in,
+   output wire       o_tx_serial,
    output wire [7:0] led,
-   output wire       XOut,
-   output wire       DiffOut,
-   output wire       PWMOut,
-   output wire       PWMOutP1,
-   output wire       PWMOutP2,
-   output wire       PWMOutP3,
-   output wire       PWMOutP4,
-   output wire       PWMOutN1,
-   output wire       PWMOutN2,
-   output wire       PWMOutN3,
-   output wire       PWMOutN4,
-   output wire       CIC_out_clkSin
+   output wire       x_out,
+   output wire       diff_Out,
+   output wire       pwm_out,
+   output wire       pwm_out_p1,
+   output wire       pwm_out_p2,
+   output wire       pwm_out_p3,
+   output wire       pwm_out_p4,
+   output wire       pwm_out_n1,
+   output wire       pwm_out_n2,
+   output wire       pwm_out_n3,
+   output wire       pwm_out_n4,
+   output wire       sin_gen,
+   output wire       sin_out,
+   output wire       cic_out_clk_sin
 );
 
    wire               clk_80mhz;
-   reg                o_Rx_DV;
-   reg         [7:0]  o_Rx_Byte;
-   wire               o_Rx_DV1;
-   wire        [7:0]  o_Rx_Byte1;
+   reg         [31:0] delay_counter;
+   wire        [7:0]  i_tx_byte;
+   reg                o_rx_dv;
+   reg         [7:0]  o_rx_byte;
+   wire               o_rx_dv1;
+   wire        [7:0]  o_Rx_byte1;
    reg         [63:0] phase_inc_carr;
-   wire               cosGen;
-   wire               sinGen;
-   wire signed [11:0] MixerOutSin;
-   wire signed [11:0] MixerOutCos;
-   wire signed [11:0] CIC1_outSin;
-   wire               CIC1_out_clkSin;
-   wire signed [11:0] CIC1_outCos;
-   wire               CIC1_out_clkCos;
+   wire               cos_gen;
+   wire signed [11:0] mixer_out_sin;
+   wire signed [11:0] mixer_out_cos;
+   wire signed [11:0] cic_out_sin;
+   wire signed [11:0] cic1_out_sin;
+   wire               cic1_out_clk_sin;
+   wire signed [11:0] cic_out_cos;
+   wire signed [11:0] cic1_out_cos;
+   wire               cic1_out_clk_cos;
    wire        [63:0] phase_accum;
-   wire signed [12:0] LOSine;
-   wire signed [12:0] LOCosine;
-   reg  signed [63:0] phase_inc_carrGen;
-   reg  signed [63:0] phase_inc_carrGen1;
-   wire signed [11:0] DemodOut;
-   reg         [7:0]  CICGain;
+   wire signed [12:0] lo_sine;
+   wire signed [12:0] lo_cosine;
+   reg  signed [63:0] nco_pll_accum;
+   reg  signed [63:0] phase_inc_carr_gen;
+   reg  signed [63:0] phase_inc_carr_gen1;
+   wire signed [31:0] carrier_pLL_out;
+   wire signed [11:0] demod_out;
+   reg         [7:0]  cic_gain;
 
-   assign PWMOutP1 =  PWMOut;
-   assign PWMOutP2 =  PWMOut;
-   assign PWMOutP3 =  PWMOut;
-   assign PWMOutP4 =  PWMOut;
-   assign PWMOutN1 = !PWMOut;
-   assign PWMOutN2 = !PWMOut;
-   assign PWMOutN3 = !PWMOut;
-   assign PWMOutN4 = !PWMOut;
+   assign pwm_out_p1 =  pwm_out;
+   assign pwm_out_p2 =  pwm_out;
+   assign pwm_out_p3 =  pwm_out;
+   assign pwm_out_p4 =  pwm_out;
+   assign pwm_out_n1 = !pwm_out;
+   assign pwm_out_n2 = !pwm_out;
+   assign pwm_out_n3 = !pwm_out;
+   assign pwm_out_n4 = !pwm_out;
 
+   // ... Continue changing names
    PLL PLL_inst (
        .CLKI (clk_25mhz),
        .CLKOP (clk_80mhz)
@@ -214,4 +222,5 @@ Version History:
  2024/5/26 TH: initial creation
  2024/5/26 TH: revision
 */
+
 
