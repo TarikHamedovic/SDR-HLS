@@ -1,0 +1,9 @@
+#Start recording tcl command: 8/5/2024 19:08:54
+#Project Location: /home/user/SDR-HLS/3.Testing/Button Test; Project name: button_test
+prj_project new -name "button_test" -impl "impl1" -dev LFE5U-85F-6BG381C -synthesis "lse"
+prj_project save
+prj_src add "/home/user/SDR-HLS/3.Testing/Button Test/top.v"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 8/5/2024 19:16:36

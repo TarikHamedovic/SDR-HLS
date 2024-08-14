@@ -1,1 +1,1 @@
-top_rtl.vdb
+top_tx_only_rtl.vdb

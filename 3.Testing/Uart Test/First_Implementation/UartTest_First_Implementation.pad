@@ -6,30 +6,28 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Sat Jun  8 13:40:33 2024
+Sun Jul 21 17:48:02 2024
 
 Pinout by Port Name:
-+-------------+----------+--------------+-------+-----------+---------------------------------+
-| Port Name   | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                      |
-+-------------+----------+--------------+-------+-----------+---------------------------------+
-| clk_25mhz   | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON          |
-| i_Rx_Serial | A8/0     | LVCMOS33_IN  | PT18B |           | PULL:UP CLAMP:ON HYSTERESIS:ON  |
-| led[0]      | B2/7     | LVCMOS33_OUT | PL35C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[1]      | C2/7     | LVCMOS33_OUT | PL35D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[2]      | C1/7     | LVCMOS33_OUT | PL38A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[3]      | D2/7     | LVCMOS33_OUT | PL38C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[4]      | D1/7     | LVCMOS33_OUT | PL38B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[5]      | E2/7     | LVCMOS33_OUT | PL44D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[6]      | E1/7     | LVCMOS33_OUT | PL38D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[7]      | H3/7     | LVCMOS33_OUT | PL41D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| o_Tx_Serial | C10/0    | LVCMOS33_OUT | PT58B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-+-------------+----------+--------------+-------+-----------+---------------------------------+
++-------------+----------+--------------+-------+-----------+-------------------------------+
+| Port Name   | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                    |
++-------------+----------+--------------+-------+-----------+-------------------------------+
+| clk_25mhz   | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON        |
+| led[0]      | B2/7     | LVCMOS33_OUT | PL35C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[1]      | C2/7     | LVCMOS33_OUT | PL35D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[2]      | C1/7     | LVCMOS33_OUT | PL38A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[3]      | D2/7     | LVCMOS33_OUT | PL38C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[4]      | D1/7     | LVCMOS33_OUT | PL38B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[5]      | E2/7     | LVCMOS33_OUT | PL44D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[6]      | E1/7     | LVCMOS33_OUT | PL38D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| led[7]      | H3/7     | LVCMOS33_OUT | PL41D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
+| o_Tx_Serial | L4/6     | LVCMOS33_OUT | PL56C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW  |
++-------------+----------+--------------+-------+-----------+-------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 0    | 3.3V  |
 | 6    | 3.3V  |
 | 7    | 3.3V  |
 | 8    | 3.3V  |
@@ -51,7 +49,7 @@ Pinout by Pin Number:
 | A5/7     |     unused, PULL:DOWN |            |               | PL11B  | ULC_GPLL0C_IN/LDQ17      |           |
 | A6/0     |     unused, PULL:DOWN |            |               | PT4A   | ULC_GPLL1T_IN            |           |
 | A7/0     |     unused, PULL:DOWN |            |               | PT18A  |                          |           |
-| A8/0     | i_Rx_Serial           | LOCATED    | LVCMOS33_IN   | PT18B  |                          |           |
+| A8/0     |     unused, PULL:DOWN |            |               | PT18B  |                          |           |
 | A9/0     |     unused, PULL:DOWN |            |               | PT60A  | GR_PCLK0_1               |           |
 | A10/0    |     unused, PULL:DOWN |            |               | PT63A  | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |               | PT63B  |                          |           |
@@ -90,7 +88,7 @@ Pinout by Pin Number:
 | C7/0     |     unused, PULL:DOWN |            |               | PT11B  |                          |           |
 | C8/0     |     unused, PULL:DOWN |            |               | PT15A  |                          |           |
 | C9/0     |     unused, PULL:DOWN |            |               | PT54A  |                          |           |
-| C10/0    | o_Tx_Serial           | LOCATED    | LVCMOS33_OUT  | PT58B  |                          |           |
+| C10/0    |     unused, PULL:DOWN |            |               | PT58B  |                          |           |
 | C11/0    |     unused, PULL:DOWN |            |               | PT65B  |                          |           |
 | C12/1    |     unused, PULL:DOWN |            |               | PT71B  |                          |           |
 | C13/1    |     unused, PULL:DOWN |            |               | PT78B  |                          |           |
@@ -189,7 +187,7 @@ Pinout by Pin Number:
 | L1/6     |     unused, PULL:DOWN |            |               | PL89C  | LDQ89                    |           |
 | L2/6     |     unused, PULL:DOWN |            |               | PL86D  | LDQ89                    |           |
 | L3/6     |     unused, PULL:DOWN |            |               | PL86C  | LDQ89                    |           |
-| L4/6     |     unused, PULL:DOWN |            |               | PL56C  | LDQ53                    |           |
+| L4/6     | o_Tx_Serial           | LOCATED    | LVCMOS33_OUT  | PL56C  | LDQ53                    |           |
 | L5/6     |     unused, PULL:DOWN |            |               | PL56D  | LDQ53                    |           |
 | L16/3    |     unused, PULL:DOWN |            |               | PR50A  | GR_PCLK3_0/RDQ53         |           |
 | L17/3    |     unused, PULL:DOWN |            |               | PR50B  | RDQ53                    |           |
@@ -444,7 +442,6 @@ List of All Pins' Locate Preferences Based on Final Placement After PAR
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
 LOCATE  COMP  "clk_25mhz"  SITE  "G2";
-LOCATE  COMP  "i_Rx_Serial"  SITE  "A8";
 LOCATE  COMP  "led[0]"  SITE  "B2";
 LOCATE  COMP  "led[1]"  SITE  "C2";
 LOCATE  COMP  "led[2]"  SITE  "C1";
@@ -453,7 +450,7 @@ LOCATE  COMP  "led[4]"  SITE  "D1";
 LOCATE  COMP  "led[5]"  SITE  "E2";
 LOCATE  COMP  "led[6]"  SITE  "E1";
 LOCATE  COMP  "led[7]"  SITE  "H3";
-LOCATE  COMP  "o_Tx_Serial"  SITE  "C10";
+LOCATE  COMP  "o_Tx_Serial"  SITE  "L4";
 
 
 
@@ -465,5 +462,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun  8 13:40:33 2024
+Sun Jul 21 17:48:02 2024
 

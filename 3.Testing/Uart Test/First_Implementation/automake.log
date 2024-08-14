@@ -7,10 +7,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun  8 13:40:11 2024
+Sun Jul 21 17:47:46 2024
 
 
-Command Line:  synthesis -f UartTest_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml 
+Command Line:  synthesis -f UartTest_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/3.Testing/Uart Test/promote.xml 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -38,7 +38,7 @@ Using performance grade 6.
 
     <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
 Optimization goal = Timing
-Top-level module name = top.
+Top-level module name = top_tx_only.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -64,13 +64,13 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p /home/user/SDR-HLS/Testing/Uart Test (searchpath added)
+-p /home/user/SDR-HLS/3.Testing/Uart Test (searchpath added)
 -p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
--p /home/user/SDR-HLS/Testing/Uart Test/First_Implementation (searchpath added)
--p /home/user/SDR-HLS/Testing/Uart Test (searchpath added)
-Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v
-Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v
-Verilog design file = /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v
+-p /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation (searchpath added)
+-p /home/user/SDR-HLS/3.Testing/Uart Test (searchpath added)
+Verilog design file = /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v
+Verilog design file = /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v
+Verilog design file = /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartRX.v
 NGD file = UartTest_First_Implementation.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -81,30 +81,39 @@ Technology check ok...
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartRX.v. VERI-1482
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
-Top module name (Verilog): top
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v(1): " arg1="top" arg2="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/top.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v(19): " arg1="uart_rx(CLKS_PER_BIT=2604)" arg2="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartRX.v" arg3="19"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v(14): " arg1="uart_tx(CLKS_PER_BIT=2604)" arg2="/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/source/UartTX.v" arg3="14"  />
-Last elaborated design is top()
+Top module name (Verilog): top_tx_only
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v(1): " arg1="top_tx_only" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v(14): " arg1="uart_tx(CLKS_PER_BIT=217)" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v" arg3="14"  />
+Last elaborated design is top_tx_only()
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
-Top-level module name = top.
+Top-level module name = top_tx_only.
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001748" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="i_Tx_Byte"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="i_Tx_Byte"  />
 
 
 
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v(149): " arg1="\uart_tx1/r_Tx_Data_i6" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v" arg3="149"  />
 GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \uart_tx1/r_Tx_Data_i4 is a one-to-one match with \uart_tx1/r_Tx_Data_i5.
 Applying 200.000000 MHz constraint to all clocks
 
     <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
-Results of NGD DRC are available in top_drc.log.
+Results of NGD DRC are available in top_tx_only_drc.log.
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -116,57 +125,48 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-    225 blocks expanded
+     78 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file UartTest_First_Implementation.ngd.
 
-################### Begin Area Report (top)######################
-Number of register bits => 93 of 84255 (0 % )
-CCU2C => 18
-FD1P3AX => 41
-FD1P3IX => 32
-FD1S3AX => 10
-FD1S3AY => 2
-FD1S3IX => 7
-FD1S3JX => 1
+################### Begin Area Report (top_tx_only)######################
+Number of register bits => 26 of 84255 (0 % )
+CCU2C => 9
+FD1P3AX => 6
+FD1P3IX => 16
+FD1S3AX => 1
+FD1S3IX => 3
 GSR => 1
-IB => 2
-L6MUX21 => 1
-LUT4 => 95
+IB => 1
+LUT4 => 28
 OB => 9
-PFUMX => 3
+PFUMX => 1
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_25mhz_c, loads : 93
+  Net : clk_25mhz_c, loads : 26
 Clock Enable Nets
-Number of Clock Enables: 17
-Top 10 highest fanout Clock Enables:
-  Net : uart_tx1/clk_25mhz_c_enable_60, loads : 17
-  Net : uart_rx1/clk_25mhz_c_enable_57, loads : 16
-  Net : i_Tx_DV_N_9, loads : 9
-  Net : uart_rx1/clk_25mhz_c_enable_21, loads : 9
-  Net : uart_tx1/clk_25mhz_c_enable_44, loads : 8
-  Net : uart_rx1/clk_25mhz_c_enable_64, loads : 3
-  Net : uart_tx1/clk_25mhz_c_enable_62, loads : 3
-  Net : uart_rx1/clk_25mhz_c_enable_5, loads : 1
-  Net : uart_rx1/clk_25mhz_c_enable_33, loads : 1
-  Net : uart_rx1/clk_25mhz_c_enable_3, loads : 1
+Number of Clock Enables: 4
+Top 4 highest fanout Clock Enables:
+  Net : uart_tx1/clk_25mhz_c_enable_22, loads : 17
+  Net : uart_tx1/clk_25mhz_c_enable_8, loads : 3
+  Net : uart_tx1/clk_25mhz_c_enable_9, loads : 2
+  Net : uart_tx1/clk_25mhz_c_enable_15, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : uart_tx1/clk_25mhz_c_enable_60, loads : 17
-  Net : uart_tx1/n913, loads : 16
-  Net : uart_rx1/clk_25mhz_c_enable_57, loads : 16
-  Net : uart_rx1/n929, loads : 16
-  Net : uart_rx1/r_SM_Main_1, loads : 16
-  Net : uart_rx1/r_SM_Main_0, loads : 16
-  Net : uart_rx1/r_SM_Main_2, loads : 12
-  Net : uart_rx1/r_Rx_Data, loads : 12
-  Net : uart_tx1/r_SM_Main_0, loads : 11
+  Net : uart_tx1/clk_25mhz_c_enable_22, loads : 17
+  Net : uart_tx1/n343, loads : 16
+  Net : uart_tx1/r_SM_Main_0, loads : 12
   Net : uart_tx1/r_SM_Main_1, loads : 11
+  Net : uart_tx1/r_SM_Main_2, loads : 8
+  Net : uart_tx1/n537, loads : 6
+  Net : uart_tx1/n468, loads : 6
+  Net : uart_tx1/n626, loads : 6
+  Net : uart_tx1/r_Bit_Index_0, loads : 4
+  Net : uart_tx1/r_Bit_Index_1, loads : 4
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -176,7 +176,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  107.759 MHz|     7 *
+clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  142.776 MHz|     5 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -184,13 +184,13 @@ clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  107.759 MHz|     7 *
 1 constraints not met.
 
 
-Peak Memory Usage: 261.965  MB
+Peak Memory Usage: 259.613  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.506  secs
+Elapsed CPU time for LSE flow : 1.252  secs
 --------------------------------------------------------------
 
-map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "UartTest_First_Implementation.ngd" -o "UartTest_First_Implementation_map.ncd" -pr "UartTest_First_Implementation.prf" -mp "UartTest_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/Testing/Uart Test/First_Implementation/UartTest_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/Testing/Uart Test/UartTest.lpf"             
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "UartTest_First_Implementation.ngd" -o "UartTest_First_Implementation_map.ncd" -pr "UartTest_First_Implementation.prf" -mp "UartTest_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/UartTest_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf"             
 map:  version Diamond (64-bit) 3.13.0.56.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -211,6 +211,10 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Part used: LFE5U-85FCABGA381, Performance used: 6.
 
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf(18): Semantic error in &quot;LOCATE COMP &quot;i_Rx_Serial&quot; SITE &quot;M1&quot; ;&quot;: " arg1="i_Rx_Serial" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf" arg3="18"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf(24): Semantic error in &quot;IOBUF PORT &quot;i_Rx_Serial&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_Rx_Serial" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf" arg3="24"  />
+    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf(57): Semantic error in &quot;LOCATE COMP &quot;reset_n&quot; SITE &quot;R1&quot; ;&quot;: " arg1="reset_n" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf" arg3="57"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf(64): Semantic error in &quot;IOBUF PORT &quot;reset_n&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 DRIVE=4 ;&quot;: " arg1="reset_n" arg2="/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.lpf" arg3="64"  />
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 
@@ -221,25 +225,25 @@ Removing unused logic...
 
 Optimizing...
 
-80 CCU2 constant inputs absorbed.
+40 CCU2 constant inputs absorbed.
 
 
 
 
 Design Summary:
-   Number of registers:     93 out of 84255 (0%)
-      PFU registers:           93 out of 83640 (0%)
+   Number of registers:     26 out of 84255 (0%)
+      PFU registers:           26 out of 83640 (0%)
       PIO registers:            0 out of   615 (0%)
-   Number of SLICEs:        98 out of 41820 (0%)
-      SLICEs as Logic/ROM:     98 out of 41820 (0%)
+   Number of SLICEs:        24 out of 41820 (0%)
+      SLICEs as Logic/ROM:     24 out of 41820 (0%)
       SLICEs as RAM:            0 out of 31365 (0%)
-      SLICEs as Carry:         18 out of 41820 (0%)
-   Number of LUT4s:        129 out of 83640 (0%)
-      Number used as logic LUTs:         93
+      SLICEs as Carry:          9 out of 41820 (0%)
+   Number of LUT4s:         45 out of 83640 (0%)
+      Number used as logic LUTs:         27
       Number used as distributed RAM:     0
-      Number used as ripple logic:       36
+      Number used as ripple logic:       18
       Number used as shift registers:     0
-   Number of PIO sites used: 11 out of 205 (5%)
+   Number of PIO sites used: 10 out of 205 (5%)
    Number of block RAMs:  0 out of 208 (0%)
    Number of GSRs:  0 out of 1 (0%)
    JTAG used :      No
@@ -273,56 +277,38 @@ Design Summary:
    Number of Used DSP ALU Sites:  0 out of 156 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
    Number of clocks:  1
-     Net clk_25mhz_c: 59 loads, 59 rising, 0 falling (Driver: PIO clk_25mhz )
-   Number of Clock Enables:  17
-     Net uart_tx1/clk_25mhz_c_enable_32: 1 loads, 1 LSLICEs
+     Net clk_25mhz_c: 18 loads, 18 rising, 0 falling (Driver: PIO clk_25mhz )
+   Number of Clock Enables:  4
+     Net uart_tx1/clk_25mhz_c_enable_8: 2 loads, 2 LSLICEs
+     Net uart_tx1/clk_25mhz_c_enable_9: 1 loads, 1 LSLICEs
      Net uart_tx1/r_SM_Main_2: 10 loads, 10 LSLICEs
-     Net uart_tx1/clk_25mhz_c_enable_62: 2 loads, 2 LSLICEs
-     Net uart_tx1/clk_25mhz_c_enable_44: 4 loads, 4 LSLICEs
-     Net i_Tx_DV_N_9: 4 loads, 4 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_57: 9 loads, 9 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_34: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_3: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_21: 4 loads, 4 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_5: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_64: 2 loads, 2 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_35: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_28: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_45: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_33: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_29: 1 loads, 1 LSLICEs
-     Net uart_rx1/clk_25mhz_c_enable_65: 1 loads, 1 LSLICEs
-   Number of LSRs:  8
-     Net uart_tx1/n1738: 1 loads, 1 LSLICEs
-     Net uart_tx1/r_SM_Main_2: 1 loads, 1 LSLICEs
-     Net uart_tx1/n913: 9 loads, 9 LSLICEs
-     Net i_Tx_DV_N_9: 1 loads, 1 LSLICEs
-     Net uart_rx1/n929: 9 loads, 9 LSLICEs
-     Net uart_rx1/r_SM_Main_2: 2 loads, 2 LSLICEs
-     Net uart_rx1/r_Rx_DV: 1 loads, 1 LSLICEs
-     Net uart_rx1/n1940: 1 loads, 1 LSLICEs
+     Net uart_tx1/clk_25mhz_c_enable_15: 1 loads, 1 LSLICEs
+   Number of LSRs:  3
+     Net uart_tx1/n343: 9 loads, 9 LSLICEs
+     Net uart_tx1/r_SM_Main_2: 2 loads, 2 LSLICEs
+     Net uart_tx1/n513: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net uart_rx1/r_SM_Main_0: 16 loads
-     Net uart_rx1/r_SM_Main_1: 16 loads
-     Net uart_tx1/r_SM_Main_2: 16 loads
-     Net uart_rx1/r_Rx_Data: 12 loads
-     Net uart_rx1/r_SM_Main_2: 12 loads
-     Net uart_tx1/r_SM_Main_0: 11 loads
-     Net uart_tx1/r_SM_Main_1: 11 loads
-     Net uart_rx1/n1721: 10 loads
-     Net uart_rx1/n2319: 10 loads
-     Net uart_rx1/r_Bit_Index_0: 10 loads
+     Net uart_tx1/r_SM_Main_2: 17 loads
+     Net r_SM_Main_1: 12 loads
+     Net uart_tx1/r_SM_Main_0: 12 loads
+     Net uart_tx1/n343: 9 loads
+     Net uart_tx1/n468: 6 loads
+     Net uart_tx1/n537: 6 loads
+     Net uart_tx1/n626: 6 loads
+     Net uart_tx1/r_Bit_Index_0: 4 loads
+     Net uart_tx1/r_Bit_Index_1: 4 loads
+     Net uart_tx1/r_Bit_Index_2: 3 loads
  
 
-   Number of warnings:  1
+   Number of warnings:  5
    Number of errors:    0
 
 
 
 Total CPU Time: 2 secs  
 Total REAL Time: 2 secs  
-Peak Memory Usage: 452 MB
+Peak Memory Usage: 451 MB
 
 Dumping design to file UartTest_First_Implementation_map.ncd.
 
@@ -337,16 +323,16 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "UartTest_First_Implementation_map.ncd"
-Sat Jun  8 13:40:18 2024
+Sun Jul 21 17:47:53 2024
 
 PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "/home/user/SDR-HLS/Testing/Uart Test/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 UartTest_First_Implementation_map.ncd UartTest_First_Implementation.dir/5_1.ncd UartTest_First_Implementation.prf
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "/home/user/SDR-HLS/3.Testing/Uart Test/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 UartTest_First_Implementation_map.ncd UartTest_First_Implementation.dir/5_1.ncd UartTest_First_Implementation.prf
 Preference file: UartTest_First_Implementation.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
 
 Loading design for application par from file UartTest_First_Implementation_map.ncd.
-Design name: top
+Design name: top_tx_only
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-85F
@@ -361,38 +347,38 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)      11/365           3% used
-                     11/205           5% bonded
+   PIO (prelim)      10/365           2% used
+                     10/205           4% bonded
 
-   SLICE             98/41820        <1% used
+   SLICE             24/41820        <1% used
 
 
 
-Number of Signals: 234
-Number of Connections: 592
+Number of Signals: 77
+Number of Connections: 181
 
 Pin Constraint Summary:
-   11 out of 11 pins locked (100% locked).
+   10 out of 10 pins locked (100% locked).
 
 The following 2 signals are selected to use the primary clock routing resources:
-    clk_25mhz_c (driver: clk_25mhz, clk/ce/sr load #: 59/0/0)
-    uart_tx1/r_SM_Main_2 (driver: uart_tx1/SLICE_55, clk/ce/sr load #: 0/10/1)
+    clk_25mhz_c (driver: clk_25mhz, clk/ce/sr load #: 18/0/0)
+    uart_tx1/r_SM_Main_2 (driver: uart_tx1/SLICE_17, clk/ce/sr load #: 0/10/2)
 
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
 ..........
-Finished Placer Phase 0.  REAL time: 7 secs 
+Finished Placer Phase 0.  REAL time: 6 secs 
 
 Starting Placer Phase 1.
-......................
-Placer score = 33462.
-Finished Placer Phase 1.  REAL time: 14 secs 
+..................
+Placer score = 3713.
+Finished Placer Phase 1.  REAL time: 9 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  33333
-Finished Placer Phase 2.  REAL time: 14 secs 
+Placer score =  3660
+Finished Placer Phase 2.  REAL time: 9 secs 
 
 
 ------------------ Clock Report ------------------
@@ -406,19 +392,18 @@ Global Clock Resources:
   CLKDIV     : 0 out of 4 (0%)
 
 Quadrant TL Clocks:
-  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 29
-  PRIMARY "uart_tx1/r_SM_Main_2" from Q0 on comp "uart_tx1/SLICE_55" on site "R42C15D", CLK/CE/SR load = 11
 
-  PRIMARY  : 2 out of 16 (12%)
+  PRIMARY  : 0 out of 16 (0%)
 
 Quadrant TR Clocks:
 
   PRIMARY  : 0 out of 16 (0%)
 
 Quadrant BL Clocks:
-  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 30
+  PRIMARY "clk_25mhz_c" from comp "clk_25mhz" on CLK_PIN site "G2 (PL47A)", CLK/CE/SR load = 18
+  PRIMARY "uart_tx1/r_SM_Main_2" from Q0 on comp "uart_tx1/SLICE_17" on site "R54C32D", CLK/CE/SR load = 12
 
-  PRIMARY  : 1 out of 16 (6%)
+  PRIMARY  : 2 out of 16 (12%)
 
 Quadrant BR Clocks:
 
@@ -434,34 +419,34 @@ Edge Clocks:
 
 +
 I/O Usage Summary (final):
-   11 out of 365 (3.0%) PIO sites used.
-   11 out of 205 (5.4%) bonded PIO sites used.
-   Number of PIO comps: 11; differential: 0.
+   10 out of 365 (2.7%) PIO sites used.
+   10 out of 205 (4.9%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
 +----------+---------------+------------+------------+------------+
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
-| 0        | 2 / 27 (  7%) | 3.3V       | -          | -          |
+| 0        | 0 / 27 (  0%) | -          | -          | -          |
 | 1        | 0 / 33 (  0%) | -          | -          | -          |
 | 2        | 0 / 34 (  0%) | -          | -          | -          |
 | 3        | 0 / 33 (  0%) | -          | -          | -          |
-| 6        | 1 / 33 (  3%) | 3.3V       | -          | -          |
+| 6        | 2 / 33 (  6%) | 3.3V       | -          | -          |
 | 7        | 8 / 32 ( 25%) | 3.3V       | -          | -          |
 | 8        | 0 / 13 (  0%) | -          | -          | -          |
 +----------+---------------+------------+------------+------------+
 
-Total placer CPU time: 14 secs 
+Total placer CPU time: 9 secs 
 
 Dumping design to file UartTest_First_Implementation.dir/5_1.ncd.
 
-0 connections routed; 592 unrouted.
+0 connections routed; 181 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 36 secs 
+Completed router resource preassignment. Real time: 23 secs 
 
-Start NBR router at Sat Jun 08 13:40:54 CEST 2024
+Start NBR router at Sun Jul 21 17:48:16 CEST 2024
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -476,41 +461,29 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at Sat Jun 08 13:40:54 CEST 2024
+Start NBR special constraint process at Sun Jul 21 17:48:17 CEST 2024
 
-Start NBR section for initial routing at Sat Jun 08 13:40:54 CEST 2024
+Start NBR section for initial routing at Sun Jul 21 17:48:17 CEST 2024
 Level 4, iteration 1
-17(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 37 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 33.665ns/0.000ns; real time: 24 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at Sat Jun 08 13:40:55 CEST 2024
-Level 4, iteration 1
-8(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 37 secs 
-Level 4, iteration 2
-4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 37 secs 
-Level 4, iteration 3
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 37 secs 
-Level 4, iteration 4
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 37 secs 
-Level 4, iteration 5
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 38 secs 
-
-Start NBR section for setup/hold timing optimization with effort level 3 at Sat Jun 08 13:40:56 CEST 2024
-
-Start NBR section for re-routing at Sat Jun 08 13:40:57 CEST 2024
+Start NBR section for normal routing at Sun Jul 21 17:48:17 CEST 2024
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 32.216ns/0.000ns; real time: 39 secs 
+Estimated worst slack/total negative slack<setup>: 33.665ns/0.000ns; real time: 24 secs 
 
-Start NBR section for post-routing at Sat Jun 08 13:40:57 CEST 2024
+Start NBR section for setup/hold timing optimization with effort level 3 at Sun Jul 21 17:48:17 CEST 2024
+
+Start NBR section for re-routing at Sun Jul 21 17:48:18 CEST 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 33.665ns/0.000ns; real time: 25 secs 
+
+Start NBR section for post-routing at Sun Jul 21 17:48:18 CEST 2024
 
 End NBR router with 0 unrouted connection
 
@@ -518,17 +491,17 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 32.216ns
+  Estimated worst slack<setup> : 33.665ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 38 secs 
-Total REAL time: 40 secs 
+Total CPU time 25 secs 
+Total REAL time: 25 secs 
 Completely routed.
-End of route.  592 routed (100.00%); 0 unrouted.
+End of route.  181 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -539,14 +512,14 @@ Dumping design to file UartTest_First_Implementation.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 32.216
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 33.665
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.175
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.192
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 39 secs 
-Total REAL time to completion: 41 secs 
+Total CPU  time to completion: 26 secs 
+Total REAL time to completion: 26 secs 
 
 par done!
 
@@ -570,7 +543,7 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Loading design for application trce from file UartTest_First_Implementation.ncd.
-Design name: top
+Design name: top_tx_only
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-85F
@@ -583,7 +556,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Sat Jun  8 13:41:05 2024
+Sun Jul 21 17:48:22 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -593,7 +566,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/3.Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
 Design file:     UartTest_First_Implementation.ncd
 Preference file: UartTest_First_Implementation.prf
 Device,speed:    LFE5U-85F,6
@@ -612,11 +585,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1729 paths, 1 nets, and 582 connections (98.31% coverage)
+Constraints cover 485 paths, 1 nets, and 180 connections (99.45% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Sat Jun  8 13:41:06 2024
+Sun Jul 21 17:48:23 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -626,7 +599,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UartTest_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/3.Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
 Design file:     UartTest_First_Implementation.ncd
 Preference file: UartTest_First_Implementation.prf
 Device,speed:    LFE5U-85F,m
@@ -645,7 +618,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1729 paths, 1 nets, and 582 connections (98.31% coverage)
+Constraints cover 485 paths, 1 nets, and 180 connections (99.45% coverage)
 
 
 
@@ -659,14 +632,14 @@ Cumulative negative slack: 0 (0+0)
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 5 secs 
-Total REAL Time: 7 secs 
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
 Peak Memory Usage: 483 MB
 
 
 tmcheck -par "UartTest_First_Implementation.par" 
 
-bitgen -w "UartTest_First_Implementation.ncd" -f "UartTest_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/Testing/Uart Test/UartTest.sec" -k "/home/user/SDR-HLS/Testing/Uart Test/UartTest.bek" "UartTest_First_Implementation.prf"
+bitgen -w "UartTest_First_Implementation.ncd" -f "UartTest_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.sec" -k "/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.bek" "UartTest_First_Implementation.prf"
 
 
 BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
@@ -678,7 +651,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 
 Loading design for application Bitgen from file UartTest_First_Implementation.ncd.
-Design name: top
+Design name: top_tx_only
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-85F
@@ -745,6 +718,6 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "UartTest_First_Implementation.bit".
-Total CPU Time: 30 secs 
-Total REAL Time: 42 secs 
-Peak Memory Usage: 799 MB
+Total CPU Time: 16 secs 
+Total REAL Time: 17 secs 
+Peak Memory Usage: 798 MB

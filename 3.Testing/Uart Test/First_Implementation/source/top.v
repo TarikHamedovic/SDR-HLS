@@ -1,4 +1,4 @@
-module top 
+module top
 (
    input  i_Rx_Serial,
    input clk_25mhz,

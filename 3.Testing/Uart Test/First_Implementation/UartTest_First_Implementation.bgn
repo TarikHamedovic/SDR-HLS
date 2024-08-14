@@ -4,13 +4,13 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun  8 13:41:07 2024
+Sun Jul 21 17:48:24 2024
 
 
-Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -g DisableUES:FALSE -g ES:No -e -s /home/user/SDR-HLS/Testing/Uart Test/UartTest.sec -k /home/user/SDR-HLS/Testing/Uart Test/UartTest.bek -gui -msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
+Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -g DisableUES:FALSE -g ES:No -e -s /home/user/SDR-HLS/3.Testing/Uart Test/UartTest.sec -k /home/user/SDR-HLS/3.Testing/Uart Test/UartTest.bek -gui -msgset /home/user/SDR-HLS/3.Testing/Uart Test/promote.xml UartTest_First_Implementation.ncd UartTest_First_Implementation.prf 
 
 Loading design for application Bitgen from file UartTest_First_Implementation.ncd.
-Design name: top
+Design name: top_tx_only
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-85F
@@ -77,6 +77,6 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "UartTest_First_Implementation.bit".
-Total CPU Time: 30 secs 
-Total REAL Time: 42 secs 
-Peak Memory Usage: 799 MB
+Total CPU Time: 16 secs 
+Total REAL Time: 17 secs 
+Peak Memory Usage: 798 MB

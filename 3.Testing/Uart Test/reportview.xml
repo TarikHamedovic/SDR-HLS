@@ -3,7 +3,7 @@
 <ReportView version="2.0">
     <Implement name="First_Implementation">
         <ToolReport id="tooldec" path="" status="0"/>
-        <ToolReport id="toolhle_genhierarchy" path="/home/user/Master Thesis/Uart Test/First_Implementation/hdla_gen_hierarchy.html" status="1"/>
+        <ToolReport id="toolhle_genhierarchy" path="/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/hdla_gen_hierarchy.html" status="1"/>
         <ToolReport id="toolpio" path="" status="0"/>
         <ToolReport id="toolsso" path="" status="0"/>
     </Implement>

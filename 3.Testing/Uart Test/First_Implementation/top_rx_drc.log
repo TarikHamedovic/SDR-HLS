@@ -1,0 +1,39 @@
+Results of NGD DRC are available in top_rx_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'led[7]' has no load.
+WARNING - synthesis: input pad net 'led[7]' has no legal load.
+WARNING - synthesis: logical net 'led[6]' has no load.
+WARNING - synthesis: input pad net 'led[6]' has no legal load.
+WARNING - synthesis: logical net 'led[5]' has no load.
+WARNING - synthesis: input pad net 'led[5]' has no legal load.
+WARNING - synthesis: logical net 'led[4]' has no load.
+WARNING - synthesis: input pad net 'led[4]' has no legal load.
+WARNING - synthesis: logical net 'led[3]' has no load.
+WARNING - synthesis: input pad net 'led[3]' has no legal load.
+WARNING - synthesis: logical net 'led[2]' has no load.
+WARNING - synthesis: input pad net 'led[2]' has no legal load.
+WARNING - synthesis: logical net 'led[1]' has no load.
+WARNING - synthesis: input pad net 'led[1]' has no legal load.
+WARNING - synthesis: logical net 'led[0]' has no load.
+WARNING - synthesis: input pad net 'led[0]' has no legal load.
+WARNING - synthesis: logical net 'clk' has no load.
+WARNING - synthesis: input pad net 'clk' has no legal load.
+WARNING - synthesis: logical net 'rst' has no load.
+WARNING - synthesis: input pad net 'rst' has no legal load.
+WARNING - synthesis: logical net 'i_Rx_Serial' has no load.
+WARNING - synthesis: input pad net 'i_Rx_Serial' has no legal load.
+WARNING - synthesis: logical net 'GND_net' has no load.
+WARNING - synthesis: DRC complete with 23 warnings.
+
+Design Results:
+      4 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file UartTest_First_Implementation.ngd.

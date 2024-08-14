@@ -28,6 +28,30 @@ prj_project close
 
 
 
+<A name="pn240711134338"></A><B><U><big>pn240711134338</big></U></B>
+#Start recording tcl command: 7/11/2024 12:18:52
+#Project Location: /home/user/SDR-HLS/3.Testing/Uart Test; Project name: UartTest
+prj_project open "/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.ldf"
+prj_src add "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top.v"
+prj_run Export -impl First_Implementation -task Bitgen
+file copy -force -- "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/Amaranth/top_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/Amaranth/uart_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source"
+prj_src add "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/uart_rx.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src enable "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartRX.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v"
+prj_src remove "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx.v"
+prj_src remove "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/uart_rx.v"
+file copy -force -- "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/Amaranth/top_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/Amaranth/uart_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source"
+prj_src add "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx.v" "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/uart_rx.v"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+#Stop recording: 7/11/2024 13:43:38
+
+
+
 <BR>
 <BR>
 <BR>

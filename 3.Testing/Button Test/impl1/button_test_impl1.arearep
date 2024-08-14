@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  1 of 84255 (0.001%)
+I/O cells:      3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         1          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                               LUT4         1          100.0
+                                 OB         1          100.0
+                              TOTAL         6

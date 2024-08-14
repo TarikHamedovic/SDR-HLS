@@ -2,11 +2,20 @@
 <BaliProject version="3.2" title="UartTest" device="LFE5U-85F-6BG381C" default_implementation="First_Implementation">
     <Options/>
     <Implementation title="First_Implementation" dir="First_Implementation" description="First_Implementation" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="top" top="top"/>
-        <Source name="First_Implementation/source/top.v" type="Verilog" type_short="Verilog">
-            <Options top_module="top"/>
+        <Options def_top="uart_rx" top="top_tx_only"/>
+        <Source name="First_Implementation/source/top_tx_only.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top_tx_only"/>
+        </Source>
+        <Source name="First_Implementation/source/UartTX.v" type="Verilog" type_short="Verilog">
+            <Options/>
         </Source>
         <Source name="First_Implementation/source/UartRX.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="First_Implementation/source/top_rx_only.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="First_Implementation/source/top.v" type="Verilog" type_short="Verilog" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="UartTest.lpf" type="Logic Preference" type_short="LPF">

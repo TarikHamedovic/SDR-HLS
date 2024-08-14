@@ -4,12 +4,12 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun  8 13:40:18 2024
+Sun Jul 21 17:47:53 2024
 
 /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
 UartTest_First_Implementation.p2t UartTest_First_Implementation_map.ncd
 UartTest_First_Implementation.dir UartTest_First_Implementation.prf -gui
--msgset /home/user/SDR-HLS/Testing/Uart Test/promote.xml
+-msgset /home/user/SDR-HLS/3.Testing/Uart Test/promote.xml
 
 
 Preference file: UartTest_First_Implementation.prf.
@@ -17,11 +17,11 @@ Preference file: UartTest_First_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            32.216       0            0.175        0            41           Completed
+5_1   *      0            33.665       0            0.192        0            26           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 41 secs 
+Total (real) run time for 1-seed: 26 secs 
 
 par done!
 

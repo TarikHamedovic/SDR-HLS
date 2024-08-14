@@ -1,0 +1,27 @@
+#Start recording tcl command: 7/21/2024 17:23:38
+#Project Location: /home/user/SDR-HLS/3.Testing/Uart Test; Project name: UartTest
+prj_project open "/home/user/SDR-HLS/3.Testing/Uart Test/UartTest.ldf"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/uart_rx.v"
+prj_src remove "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/uart_rx.v"
+prj_src remove "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx.v"
+prj_src add "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v"
+prj_src enable "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartTX.v"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_src enable "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/UartRX.v"
+prj_src enable "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_src exclude "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_rx_only.v"
+prj_src enable "/home/user/SDR-HLS/3.Testing/Uart Test/First_Implementation/source/top_tx_only.v"
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+prj_run Export -impl First_Implementation -task Bitgen
+#Stop recording: 7/21/2024 18:43:01

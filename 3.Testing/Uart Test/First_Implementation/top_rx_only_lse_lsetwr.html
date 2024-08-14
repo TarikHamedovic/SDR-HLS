@@ -1,0 +1,242 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Jul 21 17:28:25 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     top_rx_only
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_25mhz_c]
+            1460 items scored, 946 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.152ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx1/r_Clock_Count_91__i13  (from clk_25mhz_c +)
+   Destination:    FD1P3IX    CD             \uart_rx1/r_Clock_Count_91__i15  (to clk_25mhz_c +)
+
+   Delay:                   8.327ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.327ns data_path \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i15 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.152ns
+
+ Path Details: \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx1/r_Clock_Count_91__i13 (from clk_25mhz_c)
+Route         6   e 1.478                                  \uart_rx1/r_Clock_Count[13]
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_2_lut_adj_20
+Route         1   e 1.020                                  \uart_rx1/n917
+LUT4        ---     0.166              C to Z              \uart_rx1/i1_4_lut_adj_16
+Route         1   e 1.020                                  \uart_rx1/n929
+LUT4        ---     0.166              A to Z              \uart_rx1/i1_4_lut_adj_15
+Route         1   e 1.020                                  \uart_rx1/n931
+LUT4        ---     0.166              D to Z              \uart_rx1/i699_4_lut
+Route         1   e 1.020                                  \uart_rx1/n759
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_4_lut_adj_14
+Route        16   e 1.574                                  \uart_rx1/n492
+                  --------
+                    8.327  (14.4% logic, 85.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.152ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx1/r_Clock_Count_91__i13  (from clk_25mhz_c +)
+   Destination:    FD1P3IX    CD             \uart_rx1/r_Clock_Count_91__i14  (to clk_25mhz_c +)
+
+   Delay:                   8.327ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.327ns data_path \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i14 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.152ns
+
+ Path Details: \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx1/r_Clock_Count_91__i13 (from clk_25mhz_c)
+Route         6   e 1.478                                  \uart_rx1/r_Clock_Count[13]
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_2_lut_adj_20
+Route         1   e 1.020                                  \uart_rx1/n917
+LUT4        ---     0.166              C to Z              \uart_rx1/i1_4_lut_adj_16
+Route         1   e 1.020                                  \uart_rx1/n929
+LUT4        ---     0.166              A to Z              \uart_rx1/i1_4_lut_adj_15
+Route         1   e 1.020                                  \uart_rx1/n931
+LUT4        ---     0.166              D to Z              \uart_rx1/i699_4_lut
+Route         1   e 1.020                                  \uart_rx1/n759
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_4_lut_adj_14
+Route        16   e 1.574                                  \uart_rx1/n492
+                  --------
+                    8.327  (14.4% logic, 85.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.152ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx1/r_Clock_Count_91__i13  (from clk_25mhz_c +)
+   Destination:    FD1P3IX    CD             \uart_rx1/r_Clock_Count_91__i13  (to clk_25mhz_c +)
+
+   Delay:                   8.327ns  (14.4% logic, 85.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.327ns data_path \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i13 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 3.152ns
+
+ Path Details: \uart_rx1/r_Clock_Count_91__i13 to \uart_rx1/r_Clock_Count_91__i13
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx1/r_Clock_Count_91__i13 (from clk_25mhz_c)
+Route         6   e 1.478                                  \uart_rx1/r_Clock_Count[13]
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_2_lut_adj_20
+Route         1   e 1.020                                  \uart_rx1/n917
+LUT4        ---     0.166              C to Z              \uart_rx1/i1_4_lut_adj_16
+Route         1   e 1.020                                  \uart_rx1/n929
+LUT4        ---     0.166              A to Z              \uart_rx1/i1_4_lut_adj_15
+Route         1   e 1.020                                  \uart_rx1/n931
+LUT4        ---     0.166              D to Z              \uart_rx1/i699_4_lut
+Route         1   e 1.020                                  \uart_rx1/n759
+LUT4        ---     0.166              B to Z              \uart_rx1/i1_4_lut_adj_14
+Route        16   e 1.574                                  \uart_rx1/n492
+                  --------
+                    8.327  (14.4% logic, 85.6% route), 6 logic levels.
+
+Warning: 8.152 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_25mhz_c]             |     5.000 ns|     8.152 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\uart_rx1/n492                          |      16|     480|     50.74%
+                                        |        |        |
+\uart_rx1/r_SM_Main_2__N_39[2]          |      16|     467|     49.37%
+                                        |        |        |
+\uart_rx1/n721                          |       1|     318|     33.62%
+                                        |        |        |
+\uart_rx1/n759                          |       1|     272|     28.75%
+                                        |        |        |
+\uart_rx1/clk_25mhz_c_enable_33         |      16|     176|     18.60%
+                                        |        |        |
+\uart_rx1/n931                          |       1|     176|     18.60%
+                                        |        |        |
+\uart_rx1/n1013                         |       1|     176|     18.60%
+                                        |        |        |
+\uart_rx1/n1029                         |       1|     160|     16.91%
+                                        |        |        |
+\uart_rx1/n109                          |       1|     117|     12.37%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 946  Score: 1424298
+
+Constraints cover  1460 paths, 116 nets, and 349 connections (97.5% coverage)
+
+
+Peak memory: 271495168 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

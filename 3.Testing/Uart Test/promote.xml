@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="/home/user/Master Thesis/Uart Test/promote.xml" version="Diamond (64-bit) 3.13.0.56.2" date="Mon Mar 18 03:24:50 2024" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="/home/user/SDR-HLS/3.Testing/Uart Test/promote.xml" version="Diamond (64-bit) 3.13.0.56.2" date="Sun Jul 21 18:43:01 2024" vendor="Lattice Semiconductor Corporation" >
   <msg mid="35931002" type="Warning" />
+  <msg mid="35901220" type="Warning" />
   <msg mid="35901138" type="Error" />
 </userSetting>
