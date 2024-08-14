@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1720770619" />
+    <testcase name="sqrt_test" classname="sqrt_sequential_v3_tb" file="/home/user/SDR-HLS/5.NewModules/SquareRoot/sequential/rtl/version3/sqrt_sequential_v3_tb.py" lineno="34" time="0.06875157356262207" sim_time_ns="162.501" ratio_time="2363.5968106531654" />
+  </testsuite>
+</testsuites>

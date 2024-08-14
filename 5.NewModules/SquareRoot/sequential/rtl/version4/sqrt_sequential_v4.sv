@@ -15,10 +15,9 @@ module sqrt_sequential #(
     input logic i_ready
 );
 
-  typedef enum logic [1:0] {
-    IDLE   = 2'b00,
-    COMP   = 2'b01,
-    FINISH = 2'b10
+  typedef enum logic {
+    COMP   = 1'b0,
+    FINISH = 1'b1
   } sqrt_state_t;
 
   localparam int COUNTWIDTH = $clog2(N / 2);
@@ -28,69 +27,54 @@ module sqrt_sequential #(
   logic [N/2+1:0] r;
   logic [N/2-1:0] q;
   logic [N/2+1:0] r_reg, left, right;
-
+  logic temp;
   always_ff @(posedge clk) begin
     if (reset_n == 1'b0) begin
-      sqrt_state <= IDLE;
-      o_valid <= 1'b0;
-    end else begin
-      unique case (sqrt_state)
-        IDLE: begin
-          if (i_valid && o_ready) begin
-            sqrt_state <= COMP;
-          end
-        end
-        COMP: begin
-          if (current_count == '1) begin
-            o_valid    <= 1'b1;
-            sqrt_state <= FINISH;
-          end
-        end
-        FINISH: begin
-          o_valid    <= 1'b0;
-          sqrt_state <= IDLE;
-        end
-        default: sqrt_state <= IDLE;
-      endcase
-    end
-  end
-
-  always_ff @(posedge clk) begin
-    if (reset_n == 1'b0) begin
+      o_valid       <= 1'b0;
+      o_ready       <= 1'b0;
       current_count <= '0;
       q             <= '0;
       r_reg         <= '0;
       a             <= '0;
-      o_ready       <= 1'b0;
+      sqrt_state <= COMP;
     end else begin
+      unique case (sqrt_state)
+        COMP: begin
+          if(i_valid == 1'b1)begin
+             o_ready <= 1'b1;
+             a <= num;
+          end
 
-      if (i_valid && o_ready) begin
-        a <= num;
-      end
+          if (current_count == '1) begin
+            temp <= 1'b1;
+          end
 
-      if (sqrt_state == IDLE) begin
-        o_ready <= 1'b1;
-      end
+          if (temp == 1'b1) begin
+            o_valid    <= 1'b1;
+            sqrt_state <= FINISH;
+          end else begin
+            current_count <= current_count + 1'b1;
+            a             <= a << 2;
+            q             <= {q[N/2-2:0], ~r[N/2+1]};
+            r_reg         <= r;
+            o_ready       <= 1'b0;
+          end
 
-      if (sqrt_state == COMP) begin
-        current_count <= current_count + 1'b1;
-        a             <= a << 2;
-        q             <= {q[N/2-2:0], ~r[N/2+1]};
-        r_reg         <= r;
-        o_ready       <= 1'b0;
-      end
-
-      if (sqrt_state == FINISH) begin
-        current_count <= '0;
-        q             <= '0;
-        r_reg         <= '0;
-        a             <= '0;
-      end
-
-      if(o_valid && i_ready) begin
-        res <= q;
-      end
-
+        end
+        FINISH: begin
+          if(i_ready == 1'b1) begin
+             res <= q;
+          end
+          o_valid       <= 1'b0;
+          current_count <= '0;
+          q             <= '0;
+          r_reg         <= '0;
+          a             <= '0;
+          temp          <= 1'b0;
+            sqrt_state    <= COMP;
+        end
+        default: sqrt_state <= COMP;
+      endcase
     end
   end
 
@@ -109,4 +93,5 @@ module sqrt_sequential #(
   end
 
 endmodule
+
 
