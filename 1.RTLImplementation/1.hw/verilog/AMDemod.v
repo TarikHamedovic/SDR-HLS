@@ -1,60 +1,52 @@
 /*
 Performs AM Demodulation: sqrt(I^2 + Q^2)
-Square root code is taken from https://verilogcodes.blogspot.com/2017/11/a-verilog-function-for-finding-square-root.html, but the code given on the site isn't the same for the given photo
-The block instantiates itself N/2 times and uses a lot of resources.
-
+Square root code is taken from https://verilogcodes.blogspot.com/2017/11/a-verilog-function-for-finding-square-root.html
 
 TODO: use only one multiplier with TDM
 TODO: minimize rounding errors of sqrt, get fractional result by scaling input
 
 Module Description:
-I - In Phase
-Q - Quadrature Signal
-
-This module performs AM demodulation by computing the square root of the sum of the squares of the I and Q input signals (i.e., sqrt(I^2 + Q^2)).
-It uses two multipliers in Lattice Diamond, but here it uses the normal multiplication within an FPGA(*), which is slower, to compute the squares of the I and Q signals and then sums these squares.
-The square root function is implemented as a Verilog function within the module and is purely combinatorial.
+This module performs AM demodulation by computing the square root of the sum of the squares of the in-phase (I) and quadrature (Q) input signals (i.e., sqrt(I^2 + Q^2)). It uses two multipliers to compute the squares of the I and Q signals and then sums these squares. The square root function is implemented as a Verilog function within the module.
 
 Inputs:
 - clk: Clock signal.
-- I_in: Signed 12-bit input signal representing the I component.
-- Q_in: Signed 12-bit input signal representing the Q component.
+- inphase: Signed 12-bit input signal representing the in-phase component (I).
+- quadrature: Signed 12-bit input signal representing the quadrature component (Q).
 
 Output:
-- d_out: 12-bit output signal representing the demodulated AM signal.
+- amdemod_out: 12-bit output signal representing the demodulated AM signal.
 */
-// TODO: Check if input is wire or reg?
 module AMDemodulator #(
-    parameter int WIDTH = 12
+    parameter  INPUT_WIDTH = 12
 ) (
-    input                     clk,
-    input  signed [WIDTH-1:0] I_in,
-    input  signed [WIDTH-1:0] Q_in,
-    output reg    [WIDTH-1:0] d_out
+    input  wire                     clk,
+    input  signed [INPUT_WIDTH-1:0] inphase,
+    input  signed [INPUT_WIDTH-1:0] quadrature,
+    output reg    [INPUT_WIDTH-1:0] amdemod_out
 );
 
-  localparam int N = 2 * WIDTH;
+  localparam N = 2 * INPUT_WIDTH;
 
-  reg signed [(N+1)/2:0]       d_out_d;
-  reg        [N+1:0]           ISquare;
+  reg signed [(N+1)/2:0]             amdemod_d;
+  reg        [N+1:0]                 square_sum;
 
-  reg signed [WIDTH-1:0]       MultDataA;
-  reg signed [WIDTH-1:0]       MultDataB;
-  reg signed [N-1:0]           MultResult1;
+  reg signed [INPUT_WIDTH-1:0]       mult_i_a;
+  reg signed [INPUT_WIDTH-1:0]       mult_i_b;
+  reg signed [N-1:0]                 mult_result_i;
 
-  reg signed [WIDTH:0]         MultDataC;
-  reg signed [WIDTH:0]         MultDataD;
-  reg signed [N-1:0]           MultResult2;
+  reg signed [INPUT_WIDTH:0]         mult_q_a;
+  reg signed [INPUT_WIDTH:0]         mult_q_b;
+  reg signed [N-1:0]                 mult_result_q;
 
   function automatic [N/2:0] sqrt;
 
     input   [N:0] num;
-    reg     [N:0] a         [N/2+1];
-    reg     [N/2-1:0] q     [N/2+1];
-    reg     [N/2+1:0] left  [N/2];
-    reg     [N/2+1:0] right [N/2];
-    reg     [N/2+1:0] r     [N/2+1];
-    integer           i;
+    reg     [N:0] a         [N/2  :0];
+    reg     [N/2-1:0] q     [N/2  :0];
+    reg     [N/2+1:0] left  [N/2-1:0];
+    reg     [N/2+1:0] right [N/2-1:0];
+    reg     [N/2+1:0] r     [N/2  :0];
+    integer            i;
     begin
 
       a[0] = num;
@@ -86,22 +78,22 @@ module AMDemodulator #(
   always @(posedge clk) begin
 
     // Load inputs to multipliers
-    MultDataA <= I_in;
-    MultDataB <= I_in;
-    MultDataC <= Q_in;
-    MultDataD <= Q_in;
+    mult_i_a      <= inphase;
+    mult_i_b      <= inphase;
+    mult_q_a      <= quadrature;
+    mult_q_b      <= quadrature;
 
-    MultResult1 <= MultDataA * MultDataB;
-    MultResult2 <= MultDataC * MultDataD;
+    mult_result_i <= mult_i_a * mult_i_b;
+    mult_result_q <= mult_q_a * mult_q_b;
 
     // Calculate I^2 + Q^2
-    ISquare <= MultResult1 + MultResult2;
+    square_sum    <= mult_result_i + mult_result_q;
 
     // Compute the square root of the sum of squares
-    d_out_d <= sqrt(ISquare);
+    amdemod_d     <= sqrt(square_sum);
 
     // Assign the lower WIDTH bits to the output
-    d_out <= d_out_d[WIDTH-1:0];
+    amdemod_out   <= amdemod_d[INPUT_WIDTH-1:0];
   end
 
   //-----------------------------

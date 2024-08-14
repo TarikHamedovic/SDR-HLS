@@ -38,72 +38,65 @@ For a 5-stage CIC decimation filter with a decimation factor of 16384 (14 bits):
 */
 
 module CIC #(
-    parameter  INPUT_WIDTH      = 12,
-    parameter  REGISTER_WIDTH   = 64,
-    parameter  DECIMATION_RATIO = 16,
-    parameter  GAIN_WIDTH       = 8
+    parameter int INPUT_WIDTH = 12,
+    parameter int WIDTH = 64,
+    parameter int DECIMATION_RATIO = 16,
+    parameter int GAIN_WIDTH = 8,
+    parameter int N_STAGES = 5
 ) (
     input  logic                          clk,
-    input  logic        [GAIN_WIDTH-1:0]  gain,
-    input  logic signed [INPUT_WIDTH-1:0] data_in,
-    output logic signed [INPUT_WIDTH-1:0] data_out,
-    output logic                          data_clk
+    input  logic        [ GAIN_WIDTH-1:0] Gain,
+    input  logic signed [INPUT_WIDTH-1:0] d_in,
+    output logic signed [INPUT_WIDTH-1:0] d_out,
+    output logic                          d_clk
 );
 
-  localparam COUNT_WIDTH = $clog2(DECIMATION_RATIO);
+  localparam int COUNT_WIDTH = $clog2(DECIMATION_RATIO);
 
   // Internal registers
-  logic signed [REGISTER_WIDTH-1:0] integrator_tmp, integrator_d_tmp;
-  logic signed [REGISTER_WIDTH-1:0] integrator1, integrator2, integrator3, integrator4, integrator5;
-  logic signed [REGISTER_WIDTH-1:0] comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10;
-  logic signed [REGISTER_WIDTH-1:0] scaled_output;
+  logic signed [WIDTH-1:0]       integrator [N_STAGES];
+  logic signed [WIDTH-1:0]       comb       [N_STAGES];
+  logic signed [WIDTH-1:0]       comb_delay [N_STAGES];
   logic        [COUNT_WIDTH-1:0] count;
-  logic                          valid_comb;
-  logic                          decimation_clk;
+  logic                          v_comb;
+  logic                          d_clk_tmp;
+  logic signed [WIDTH-1:0]       d_tmp;
 
-  // Integrator section
+  //Integrator section
   always_ff @(posedge clk) begin
-    integrator1 <= data_in     + integrator1;
-    integrator2 <= integrator1 + integrator2;
-    integrator3 <= integrator2 + integrator3;
-    integrator4 <= integrator3 + integrator4;
-    integrator5 <= integrator4 + integrator5;
-
-    // Decimation
-    if (count == DECIMATION_RATIO - 1) begin
-      count          <= 0;
-      integrator_tmp <= integrator5;
-      decimation_clk <= 1'b1;
-      valid_comb     <= 1'b1;
-    end else if (count == DECIMATION_RATIO >> 1) begin
-      decimation_clk <= 1'b0;
-      count          <= count + 1;
-      valid_comb     <= 1'b0;
+    integrator[0] <= d_in + integrator[0];
+    for (int i = 1; i < N_STAGES; i++) begin
+      integrator[i] <= integrator[i-1] + integrator[i];
+    end
+    //Decimation
+    if(count == DECIMATION_RATIO-1) begin
+       count <= 0;
+       d_tmp <= integrator[N_STAGES-1];
+       d_clk_tmp <= 1'b1;
+       v_comb <= 1'b1;
+    end else if(count == DECIMATION_RATIO >> 1) begin
+      d_clk_tmp <= 1'b0;
+      count <= count + 1;
+      v_comb <= 1'b0;
     end else begin
-      count          <= count + 1;
-      valid_comb     <= 1'b0;
+      count <= count + 1;
+      v_comb <= 1'b0;
     end
   end
 
   // Comb section running at output rate
   always_ff @(posedge clk) begin
-    data_clk <= decimation_clk;
+    d_clk <= d_clk_tmp;
 
-    if (valid_comb) begin
-      // Comb section
-      integrator_d_tmp  <= integrator_tmp;
-      comb6             <= integrator_tmp - integrator_d_tmp;
-      comb_d6           <= comb6;
-      comb7             <= comb6 - comb_d6;
-      comb_d7           <= comb7;
-      comb8             <= comb7 - comb_d7;
-      comb_d8           <= comb8;
-      comb9             <= comb8 - comb_d8;
-      comb_d9           <= comb9;
-      comb10            <= comb9 - comb_d9;
+    if(v_comb) begin
+      comb_delay[0] <= d_tmp;
+      comb[0] <= d_tmp - comb_delay[0];
+      for(int i = 1; i < N_STAGES; i++) begin
+        comb_delay[i] <= comb[i-1];
+        comb[i] <= comb[i-1] - comb_delay[i];
+      end
 
-      scaled_output     <= comb10;
-      data_out          <= comb10 >>> (REGISTER_WIDTH - INPUT_WIDTH - gain);
+      d_out <= comb[N_STAGES-1] >>> (WIDTH - INPUT_WIDTH - Gain);
     end
   end
 
@@ -122,5 +115,6 @@ Version History:
 -----------------------------------------------------------------------------
  2024/5/26 TH: Initial Creation
  2024/5/26 TH: Revision
- 2024/7/10 TH: Made It Generic
+ 2024/7/10 TH: Made it Generic
 */
+

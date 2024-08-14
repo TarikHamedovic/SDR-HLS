@@ -18,40 +18,40 @@ Outputs:
 
 module nco_sig #(
     parameter WIDTH = 64
-)(
+) (
     input  logic             clk,
     input  logic [WIDTH-1:0] phase_inc_carr,
-    output logic             sin_out,
-    output logic             cos_out,
+    output logic             sinewave_out,
+    output logic             cosinewave_out,
     output logic [WIDTH-1:0] phase_accum
 );
-    
-    // Internal state parameter
-    parameter IDLE_nco = 0, START_nco = 1;
-    logic     state_nco_carr = IDLE_nco;
 
-    // Generate sin_out and cos_out based on phase accumulator
-    always_comb sin_out = (phase_accum[WIDTH-1] == 1'b1) ? 1'b0 : 1'b1;
-    always_comb cos_out = ((phase_accum[WIDTH-1] ^ phase_accum[WIDTH-2]) == 1'b1) ? 1'b0 : 1'b1;
+  // Internal state parameter
+  localparameter IDLE_nco = 0, START_nco = 1;
+  logic state_nco_carr = IDLE_nco;
 
-    // Update phase accumulator on each clock cycle
-    always_ff @(posedge clk) begin
-        phase_accum <= phase_accum + phase_inc_carr; // TODO: Maybe add typedef definition
-    end
+  // Generate sin_out and cos_out based on phase accumulator
+  always_comb sin_out = (phase_accum[WIDTH-1] == 1'b1) ? 1'b0 : 1'b1;
+  always_comb cos_out = ((phase_accum[WIDTH-1] ^ phase_accum[WIDTH-2]) == 1'b1) ? 1'b0 : 1'b1;
 
-    //----------------------------- 
-    // For simulation only
-    //----------------------------- 
-    initial begin
-        $dumpfile("nco_sig_waves.vcd");
-        $dumpvars;
-    end
+  // Update phase accumulator on each clock cycle
+  always_ff @(posedge clk) begin
+    phase_accum <= phase_accum + phase_inc_carr;  // TODO: Maybe add typedef definition
+  end
+
+  //-----------------------------
+  // For simulation only
+  //-----------------------------
+  initial begin
+    $dumpfile("nco_sig_waves.vcd");
+    $dumpvars;
+  end
 endmodule
 
 /*
 -----------------------------------------------------------------------------
 Version History:
 -----------------------------------------------------------------------------
- 2024/5/26 TH: initial creation    
+ 2024/5/26 TH: initial creation
  2024/5/26 TH: revision
 */
