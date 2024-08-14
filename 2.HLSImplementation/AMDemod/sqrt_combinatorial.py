@@ -1,6 +1,6 @@
 """
 -----------------------------------------------------------------------------
-HLS Implementation for Square Root function(combinatorial)
+Amaranth Implementation for Square Root function(combinatorial)
 -----------------------------------------------------------------------------
 """
 
@@ -34,7 +34,7 @@ class sqrt_combinatorial(Elaboratable):
         self.result = Signal(N // 2) # Output: calculated square root
 
 
-    def elaborate(self, platform) -> Module:  # TODO: Check what this -> Module does?
+    def elaborate(self, platform) -> Module:  
         """Elaborate the hardware description for the square root function."""
         
         m = Module()

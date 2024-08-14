@@ -2,7 +2,7 @@
 
 """
 -----------------------------------------------------------------------------
-HLS Implementation for sine/cosine generator using LUT
+Amaranth Implementation for sine generator using LUT
 -----------------------------------------------------------------------------
 """
 
@@ -18,6 +18,7 @@ import os
 import shutil
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 top_name = "sine_generator_lut"
 
@@ -105,7 +106,7 @@ def clean():
             print(f"Error removing {build_dir}: {e}")
 
 if __name__ == "__main__":
-    
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-sb", "--sine-bits", type=int, default=12, help="Number of sinewave bits")
     parser.add_argument("-lb", "--lut-bits", type=int, default=8, help="Number of lookup table bits")
@@ -114,14 +115,16 @@ if __name__ == "__main__":
     parser.add_argument("-s",  "--simulate", action="store_true", help="Simulate Blinky Example")
     parser.add_argument("-gw", "--gtkwave", action="store_true", help="Open GTKWave after simulation")
     parser.add_argument("-cf", "--clock-frequency", type=float, default=80.0, help="Clock frequency in MHz for simulation")
-    parser.add_argument("-b",  "--build", action="store_true", help="Build The Blinky Example")
+    parser.add_argument("-b",  "--build", action="store_true", help="Build The Program")
     parser.add_argument("-dp", "--do-program", action="store_true", help="Program the device after building")
-    parser.add_argument("-v",  "--verilog", action="store_true", help="Generate Verilog for Blinky Example")
+    parser.add_argument("-v",  "--verilog", action="store_true", help="Generate Verilog for sine_generator_lut")
     parser.add_argument("-p",  "--platform", type=str, required=False, help="Platform module (e.g., amaranth_boards.ulx3s.ULX3S_85F_Platform)")
     parser.add_argument("-rt", "--runtime", type=int, default=1000, help="Testbench runtime in clock cycles")
     parser.add_argument("-c",  "--clean", action="store_true", help="Clean generated files and build directory")
+    parser.add_argument("-pt",  "--plot", action="store_true", help="Plot the generated wave using matplotlib")
 
     args = parser.parse_args()
+
 
     if args.clean:
         clean()
@@ -136,10 +139,31 @@ if __name__ == "__main__":
         runtime = args.runtime if args.runtime is not None else 1000
         do_program = args.do_program
 
+    if args.plot:
+        def convert_to_signed(values, bit_width):
+            signed_values = []
+            for value in values:
+                if value >= (1 << (bit_width - 1)):
+                    signed_value = value - (1 << bit_width)
+                else:
+                    signed_value = value
+                signed_values.append(signed_value)
+            return signed_values
+
+        sinewave_values = sine_table_generator(lut_bits, sine_bits, phase_bits)
+        signed_sinewave_values = convert_to_signed(sinewave_values, sine_bits)
+        plt.figure()
+        plt.plot(signed_sinewave_values)
+        plt.title("Generated Sine Wave")
+        plt.xlabel("Sample")
+        plt.ylabel("Amplitude")
+        plt.grid(True)
+        plt.show()
+
     if args.simulate:
 
         async def testbench(ctx):
-            print(f"Test: Starting Sinewave LUT Amaranth Simulation with clock frequency of {clock_frequency} MHz") # TODO:Make it generic
+            print(f"Test: Starting Sinewave LUT Amaranth Simulation with clock frequency of {clock_frequency} MHz")
             # TODO: Write a better simulation
 
             # Reset Signal as initialization 
@@ -177,32 +201,13 @@ if __name__ == "__main__":
 
         plat = platform_class()
         plat.build(sine_generator_lut(sine_bits, lut_bits, phase_bits), do_program=do_program)
-    elif args.verilog: # TODO: Maybe change from top ---> mixer for clarity?
+    elif args.verilog: 
         top = sine_generator_lut(sine_bits, lut_bits, phase_bits)
         ports = [top.DataIn, top.PWMOut]
 
         with open(f"{top_name}.v", "w") as f:
             f.write(verilog.convert(top, ports=ports)) # Append simulation-only lines to the Verilog file
-            # Read the generated Verilog file and insert the simulation code before the endmodule
-        with open(f"{top_name}.v", "r") as f:
-            lines = f.readlines()
 
-        # Find the line with endmodule
-        with open(f"{top_name}.v", "w") as f:
-            for line in lines:
-                if line.strip() == "endmodule":
-                    f.write(f"""
-  //----------------------------- 
-  // For simulation only
-  //----------------------------- 
-  initial begin
-    $dumpfile("{top_name}_waves.vcd");
-    $dumpvars;
-  end
-""")
-                    f.write(line)
-
-# TODO: Figure out why cocoTB .vcd files won't generate after running make 
 
 """
 -----------------------------------------------------------------------------
