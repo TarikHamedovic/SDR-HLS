@@ -1,0 +1,1854 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     OneBitSDR_impl1.ngd -o OneBitSDR_impl1_map.ncd -pr OneBitSDR_impl1.prf -mp
+     OneBitSDR_impl1.mrp -lpf /home/user/SDR-HLS/1.RTLImplementation/3.lattice/V
+     ersion2/systemverilog/impl1/OneBitSDR_impl1_synplify.lpf -lpf /home/user/SD
+     R-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/OneBitSDR.lpf
+     -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  08/07/24  16:23:39
+
+Design Summary
+--------------
+
+   Number of registers:   2664 out of 84255 (3%)
+      PFU registers:         2659 out of 83640 (3%)
+      PIO registers:            5 out of   615 (1%)
+   Number of SLICEs:      1738 out of 41820 (4%)
+      SLICEs as Logic/ROM:   1738 out of 41820 (4%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        950 out of 41820 (2%)
+   Number of LUT4s:        2357 out of 83640 (3%)
+      Number used as logic LUTs:        457
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      1900
+      Number used as shift registers:     0
+   Number of PIO sites used: 22 out of 205 (11%)
+      Number of PIO sites used for single ended IOs: 20
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
+     comps in NCD)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 4 (25%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Design Summary (cont)
+---------------------
+   MULT18X18D          2
+   MULT9X9D            0
+   ALU54B              1
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  4 out of 312 (1 %)
+   Number of Used DSP ALU Sites:  2 out of 156 (1 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  4
+     Net clk_25mhz_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_25mhz )
+     Net clk_80mhz: 1349 loads, 1349 rising, 0 falling (Driver:
+     PLL_inst/PLLInst_0 )
+     Net uart_rx_inst.UartClk_1[2]: 27 loads, 27 rising, 0 falling (Driver:
+     uart_rx_inst/UartClk[2] )
+     Net cic_sine_clk: 51 loads, 51 rising, 0 falling (Driver:
+     cic_sine_inst/data_clk )
+   Number of Clock Enables:  15
+     Net rx_data_valid: 45 loads, 45 LSLICEs
+     Net uart_rx_inst/r_Rx_Byte_RNO[7]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/o_Rx_Byte_1_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[0]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[1]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[2]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[3]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[4]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[5]: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_Bytece[6]: 1 loads, 1 LSLICEs
+     Net pwm_inst.data_in_reg10: 9 loads, 9 LSLICEs
+     Net cic_sine_inst.count19: 74 loads, 74 LSLICEs
+     Net cic_sine_inst.valid_comb: 346 loads, 346 LSLICEs
+     Net cic_sine_inst.valid_comb_1: 346 loads, 346 LSLICEs
+     Net cic_sine_inst/decimation_clk_eena: 1 loads, 1 LSLICEs
+   Number of LSRs:  5
+     Net rx_data_valid_RNI3TF83: 8 loads, 8 LSLICEs
+     Net uart_rx_inst/r_Rx_DV_last: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/r_Rx_DV9: 10 loads, 10 LSLICEs
+     Net AMDemodulator_inst/CO0_1: 2 loads, 2 LSLICEs
+     Net cic_sine_inst.count[5]: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cic_sine_inst.valid_comb: 346 loads
+     Net cic_sine_inst.valid_comb_1: 346 loads
+     Net SinCos_inst/rom_addr0_r_10: 86 loads
+     Net SinCos_inst/rom_addr0_r_8: 86 loads
+     Net SinCos_inst/rom_addr0_r_9: 86 loads
+     Net SinCos_inst/rom_addr0_r_7: 83 loads
+     Net cic_sine_inst.count19: 75 loads
+     Net mix_cosinewave[11]: 61 loads
+     Net mix_sinewave[11]: 61 loads
+     Net un1_rx_byte_10f: 56 loads
+
+
+
+
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+
+
+
+   Number of warnings:  6
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : removed the input signal
+     of SIGNEDCIN pin because it's not legal.
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : OUTPUT0 & OUTPUT1
+     register should use the same controls as OUTPUT register of multiplier
+     driving ALU.
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : OUTPUT0 & OUTPUT1
+     register should use the same controls as OUTPUT register of multiplier
+     driving ALU.
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : A/B data pipe not
+     consistent with non-pipelined OPCODEOP0 control.
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : A/B data pipe not
+     consistent with non-pipelined OPCODEOP1 control.
+WARNING - map: AMDemodulator_inst/square_sum_1[23:0] : A/B data pipe not
+     consistent with non-pipelined OPCODEIN control.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| diff_out            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_n4          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_n3          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_n2          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+IO (PIO) Attributes (cont)
+--------------------------
+| pwm_out_n1          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_p4          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_p3          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_p2          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out_p1          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_out             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rf_in               | INPUT     | LVDS      | IN         |
++---------------------+-----------+-----------+------------+
+| rx_serial           | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block GND undriven or does not drive anything - clipped.
+Block PLL_inst/VCC undriven or does not drive anything - clipped.
+Block nco_sig_inst/GND undriven or does not drive anything - clipped.
+Block mixer_inst/GND undriven or does not drive anything - clipped.
+Block cic_sine_inst/GND undriven or does not drive anything - clipped.
+Block cic_cosine_inst/GND undriven or does not drive anything - clipped.
+Block pwm_inst/GND undriven or does not drive anything - clipped.
+Block uart_rx_inst/GND undriven or does not drive anything - clipped.
+Signal SinCos_inst/lx_ne0_inv was merged into signal SinCos_inst/lx_ne0
+Signal cic_sine_inst/count_i[5] was merged into signal cic_sine_inst.count[5]
+Signal AMDemodulator_inst/un1_r_5_rn_0[4] was merged into signal
+     AMDemodulator_inst/un42_r_0[4]
+Signal VCC undriven or does not drive anything - clipped.
+Signal nco_sig_inst/VCC undriven or does not drive anything - clipped.
+Signal SinCos_inst/VCC undriven or does not drive anything - clipped.
+Signal mixer_inst/VCC undriven or does not drive anything - clipped.
+Signal cic_sine_inst/VCC undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/VCC undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/GND undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/VCC undriven or does not drive anything - clipped.
+Signal pwm_inst/VCC undriven or does not drive anything - clipped.
+Signal uart_rx_inst/VCC undriven or does not drive anything - clipped.
+Signal GND undriven or does not drive anything - clipped.
+Signal un1_phase_inc_gen_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_phase_inc_gen_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal PLL_inst/CLKINTFB undriven or does not drive anything - clipped.
+Signal PLL_inst/REFCLK undriven or does not drive anything - clipped.
+Signal PLL_inst/INTLOCK undriven or does not drive anything - clipped.
+Signal PLL_inst/LOCK undriven or does not drive anything - clipped.
+Signal PLL_inst/CLKOS3 undriven or does not drive anything - clipped.
+Signal PLL_inst/CLKOS2 undriven or does not drive anything - clipped.
+Signal PLL_inst/CLKOS undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal nco_sig_inst/phase_accum_1_s_63_0_S1 undriven or does not drive anything
+     - clipped.
+Signal nco_sig_inst/phase_accum_1_s_63_0_COUT undriven or does not drive
+     anything - clipped.
+Signal nco_sig_inst/phase_accum_1_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal nco_sig_inst/phase_accum_1_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal nco_sig_inst/N_1 undriven or does not drive anything - clipped.
+Signal SinCos_inst/co6_1 undriven or does not drive anything - clipped.
+Signal SinCos_inst/rom_dout_c_n undriven or does not drive anything - clipped.
+Signal SinCos_inst/neg_rom_dout_c_n_0_S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos_inst/CIN undriven or does not drive anything - clipped.
+Signal SinCos_inst/co6 undriven or does not drive anything - clipped.
+Signal SinCos_inst/rom_dout_s_n undriven or does not drive anything - clipped.
+Signal SinCos_inst/neg_rom_dout_s_n_0_S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos_inst/CIN_0 undriven or does not drive anything - clipped.
+Signal SinCos_inst/neg_rom_addr0_r_n_3_S1 undriven or does not drive anything -
+     clipped.
+Signal SinCos_inst/neg_rom_addr0_r_n_3_COUT undriven or does not drive anything
+     - clipped.
+Signal SinCos_inst/neg_rom_addr0_r_n_0_S0 undriven or does not drive anything -
+     clipped.
+Signal SinCos_inst/CIN_1 undriven or does not drive anything - clipped.
+Signal mixer_inst/cosinewave_out_4_s_11_0_S1 undriven or does not drive anything
+     - clipped.
+Signal mixer_inst/cosinewave_out_4_s_11_0_COUT undriven or does not drive
+     anything - clipped.
+Signal mixer_inst/cosinewave_out_4_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal mixer_inst/N_1 undriven or does not drive anything - clipped.
+Signal mixer_inst/sinewave_out_4_s_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal mixer_inst/sinewave_out_4_s_11_0_COUT undriven or does not drive anything
+     - clipped.
+Signal mixer_inst/sinewave_out_4_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal mixer_inst/N_2 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/comb10_1_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_s_71_0_COUT_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_55_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_55_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_53_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_53_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_51_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_51_0_S0_0 undriven or does not drive anything
+     - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal cic_sine_inst/comb10_1_cry_49_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_49_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_47_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_47_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_45_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_45_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_43_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_43_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_41_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_41_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_39_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_39_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_37_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_37_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_35_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_35_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_33_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_33_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_31_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_31_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_29_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_29_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_27_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_27_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_25_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_25_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_23_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_23_0_S0_0 undriven or does not drive anything
+     - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal cic_sine_inst/comb10_1_cry_21_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_21_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_19_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_19_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_17_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_17_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_15_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_15_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_13_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_13_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_11_0_S1_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_11_0_S0_0 undriven or does not drive anything
+     - clipped.
+Signal cic_sine_inst/comb10_1_cry_9_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_9_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_7_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_7_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_5_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_5_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_3_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_3_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_1_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_1_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb10_1_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/N_1 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/comb9_1_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb9_1_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb9_1_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb9_1_cry_0_0_S0_0 undriven or does not drive anything -
+
+                                    Page 7
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal cic_sine_inst/N_2 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/comb8_1_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb8_1_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb8_1_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb8_1_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/N_3 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/comb7_1_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb7_1_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb7_1_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb7_1_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/N_4 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/comb6_1_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb6_1_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb6_1_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/comb6_1_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/N_5 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/integrator5_1_s_71_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator5_1_s_71_0_COUT_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator5_1_cry_0_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator5_1_cry_0_0_S0_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/N_6 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/integrator4_1_s_71_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator4_1_s_71_0_COUT_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator4_1_cry_0_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator4_1_cry_0_0_S0_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/N_7 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/integrator3_1_s_71_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator3_1_s_71_0_COUT_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator3_1_cry_0_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator3_1_cry_0_0_S0_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/N_8 undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal cic_sine_inst/integrator2_1_s_71_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator2_1_s_71_0_COUT_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator2_1_cry_0_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator2_1_cry_0_0_S0_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/N_9 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/integrator1_1_s_71_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator1_1_s_71_0_COUT_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator1_1_cry_0_0_S1_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/integrator1_1_cry_0_0_S0_0 undriven or does not drive
+     anything - clipped.
+Signal cic_sine_inst/N_10 undriven or does not drive anything - clipped.
+Signal cic_sine_inst/count_s_0_S1[11] undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/count_s_0_COUT[11] undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/count_cry_0_S0_0[0] undriven or does not drive anything -
+     clipped.
+Signal cic_sine_inst/N_11 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/comb10_1_s_71_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_s_71_0_COUT undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_55_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_55_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_53_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_53_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_51_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_51_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_49_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_49_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_47_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_47_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_45_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_45_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_43_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_43_0_S0 undriven or does not drive anything
+
+                                    Page 9
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_41_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_41_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_39_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_39_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_37_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_37_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_35_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_35_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_33_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_33_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_31_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_31_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_29_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_29_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_27_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_27_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_25_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_25_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_23_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_23_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_21_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_21_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_19_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_19_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_17_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_17_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_15_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_15_0_S0 undriven or does not drive anything
+
+                                   Page 10
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_13_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_13_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_11_0_S1 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_11_0_S0 undriven or does not drive anything
+     - clipped.
+Signal cic_cosine_inst/comb10_1_cry_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_9_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_7_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_5_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_5_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_3_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_3_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb10_1_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/N_1 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/comb9_1_s_71_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb9_1_s_71_0_COUT undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb9_1_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb9_1_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/N_2 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/comb8_1_s_71_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb8_1_s_71_0_COUT undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb8_1_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb8_1_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/N_3 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/comb7_1_s_71_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb7_1_s_71_0_COUT undriven or does not drive anything -
+     clipped.
+
+                                   Page 11
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal cic_cosine_inst/comb7_1_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb7_1_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/N_4 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/comb6_1_s_71_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb6_1_s_71_0_COUT undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb6_1_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/comb6_1_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine_inst/N_5 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/integrator5_1_s_71_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator5_1_s_71_0_COUT undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator5_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator5_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/N_6 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/integrator4_1_s_71_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator4_1_s_71_0_COUT undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator4_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator4_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/N_9 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/integrator3_1_s_71_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator3_1_s_71_0_COUT undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator3_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator3_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/N_10 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/integrator2_1_s_71_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator2_1_s_71_0_COUT undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator2_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator2_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/N_11 undriven or does not drive anything - clipped.
+Signal cic_cosine_inst/integrator1_1_s_71_0_S1 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator1_1_s_71_0_COUT undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/integrator1_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal cic_cosine_inst/integrator1_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal cic_cosine_inst/N_12 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC8 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC16 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_ROC17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB8 undriven or does not drive
+
+                                   Page 13
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB16 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROB17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA8 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA16 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_i_2_SROA17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un38_r_cry_7_0_COUT undriven or does not drive
+
+                                   Page 14
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal AMDemodulator_inst/un38_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un38_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un36_r_i undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un38_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_1 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_11_0_S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_11_0_COUT undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_9_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_5_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_5_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_3_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_3_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/N_2 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un20_r_s_5_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un20_r_s_5_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un20_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un20_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un20_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un20_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_3 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un26_r_cry_5_0_COUT undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un26_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/un26_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un24_r_i undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un26_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_4 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un32_r_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un32_r_s_7_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un32_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un32_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un32_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un32_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_5 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_11_0_S0 undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_11_0_COUT undriven or does not
+     drive anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_9_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_5_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_5_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_3_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_3_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un1_square_sum_0_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/N_6 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un56_r_s_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un56_r_s_11_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un56_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un56_r_cry_1_0_S0 undriven or does not drive anything
+
+                                   Page 16
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal AMDemodulator_inst/un56_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un56_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_7 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un50_r_cry_9_0_COUT undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un50_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un50_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un50_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un50_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_8 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un44_r_s_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un44_r_s_9_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un44_r_cry_1_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un44_r_cry_1_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un44_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un44_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_9 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un24_r_cry_5_0_COUT undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un24_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un24_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_10 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un42_r_s_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un42_r_s_9_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un42_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un42_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_11 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un36_r_cry_7_0_COUT undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un36_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un36_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_12 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un30_r_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un30_r_s_7_0_COUT undriven or does not drive anything
+
+                                   Page 17
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal AMDemodulator_inst/un30_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un30_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_13 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un54_r_s_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/un54_r_s_11_0_COUT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un54_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un54_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_14 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/un48_r_cry_9_0_COUT undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/un48_r_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/un48_r_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/N_15 undriven or does not drive anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC8 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_ROC16 undriven or does not drive
+     anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/mult_result_q_2_ROC17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB8 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB16 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROB17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA0 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA1 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA2 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA3 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA4 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA5 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA6 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA7 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA8 undriven or does not drive
+     anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/mult_result_q_2_SROA9 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA10 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA11 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA12 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA13 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA14 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA15 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA16 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/mult_result_q_2_SROA17 undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/square_sum_1_OVERUNDER undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/square_sum_1_UNDER undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_OVER undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_EQPATB undriven or does not drive
+     anything - clipped.
+Signal AMDemodulator_inst/square_sum_1_EQPAT undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_EQOM undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_EQZM undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_EQZ undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO0 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO1 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO2 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO3 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO4 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO5 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO6 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO7 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO8 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO9 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_CO10 undriven or does not drive anything
+     - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/square_sum_1_CO11 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO12 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO13 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO14 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO15 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO16 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO17 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO18 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO19 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO20 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO21 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO22 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO23 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO24 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO25 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO26 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO27 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO28 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO29 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO30 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO31 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO32 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO33 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO34 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO35 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO36 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO37 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO38 undriven or does not drive anything
+     - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/square_sum_1_CO39 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO40 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO41 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO42 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO43 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO44 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO45 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO46 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO47 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO48 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO49 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO50 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO51 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO52 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1_CO53 undriven or does not drive anything
+     - clipped.
+Signal AMDemodulator_inst/square_sum_1[0] undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1[1] undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R24 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R25 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R26 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R27 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R28 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R29 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R30 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R31 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R32 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R33 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R34 undriven or does not drive anything -
+     clipped.
+
+                                   Page 22
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal AMDemodulator_inst/square_sum_1_R35 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R36 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R37 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R38 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R39 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R40 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R41 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R42 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R43 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R44 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R45 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R46 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R47 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R48 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R49 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R50 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R51 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R52 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_R53 undriven or does not drive anything -
+     clipped.
+Signal AMDemodulator_inst/square_sum_1_SIGNEDR undriven or does not drive
+     anything - clipped.
+Signal pwm_inst/pwm_out4_cry_9_0_S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_7_0_S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_5_0_S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_5_0_S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_3_0_S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_3_0_S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 23
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+Removed logic (cont)
+--------------------
+Signal pwm_inst/pwm_out4_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/pwm_out4_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal pwm_inst/N_1 undriven or does not drive anything - clipped.
+Signal pwm_inst/count_s_0_S1[9] undriven or does not drive anything - clipped.
+Signal pwm_inst/count_s_0_COUT[9] undriven or does not drive anything - clipped.
+     
+Signal pwm_inst/count_cry_0_S0[0] undriven or does not drive anything - clipped.
+     
+Signal pwm_inst/N_2 undriven or does not drive anything - clipped.
+Signal uart_rx_inst/un1_r_Clock_Count_12_s_15_0_S1 undriven or does not drive
+     anything - clipped.
+Signal uart_rx_inst/un1_r_Clock_Count_12_s_15_0_COUT undriven or does not drive
+     anything - clipped.
+Signal uart_rx_inst/un1_r_Clock_Count_12_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal uart_rx_inst/N_1 undriven or does not drive anything - clipped.
+Signal un1_phase_inc_gen_s_63_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_phase_inc_gen_s_63_0_COUT undriven or does not drive anything -
+     clipped.
+Block SinCos_inst/INV_1 was optimized away.
+Block cic_sine_inst/count_RNIURP1[5] was optimized away.
+Block AMDemodulator_inst/un1_r_5_rn[4] was optimized away.
+Block VCC was optimized away.
+Block nco_sig_inst/VCC was optimized away.
+Block SinCos_inst/VCC was optimized away.
+Block mixer_inst/VCC was optimized away.
+Block cic_sine_inst/VCC was optimized away.
+Block cic_cosine_inst/VCC was optimized away.
+Block AMDemodulator_inst/GND was optimized away.
+Block AMDemodulator_inst/VCC was optimized away.
+Block pwm_inst/VCC was optimized away.
+Block uart_rx_inst/VCC was optimized away.
+
+DSP Component Details
+---------------------
+
+
+     . ALU54B  AMDemodulator_inst/square_sum_1[23:0]:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		1
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+
+                                   Page 24
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+DSP Component Details (cont)
+----------------------------
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		CLK0	CE0	RST0
+		Output1		CLK0	CE0	RST0
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	SYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . MULT18X18D  AMDemodulator_inst/mult_result_q_2[23:0]:
+
+     Multiplier
+
+                                   Page 25
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+DSP Component Details (cont)
+----------------------------
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK0	CE0	RST0	A Data In
+		B		CLK0	CE0	RST0	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		CLK0	CE0	RST0
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  AMDemodulator_inst/mult_result_i_2[23:0]:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+
+                                   Page 26
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+DSP Component Details (cont)
+----------------------------
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK0	CE0	RST0	A Data In
+		B		CLK0	CE0	RST0	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		CLK0	CE0	RST0
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                PLL_inst/PLLInst_0
+  PLL Type:                                         EHXPLLL
+  Input Clock:                             PIN      clk_25mhz_c
+  Input Clock2:                                     NONE
+  Input Clock select:                               NONE
+  Output Clock(P):                         NODE     clk_80mhz
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_80mhz
+  Reset Signal:                                     NONE
+  Standby Signal:                          NODE     PLL_inst/GND
+  PLL LOCK signal:                                  NONE
+  PLL Internal LOCK Signal:                         NONE
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  83.3333
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+
+                                   Page 27
+
+
+
+
+Design:  top                                           Date:  08/07/24  16:23:39
+
+PLL/DLL Summary (cont)
+----------------------
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     3
+  CLKFB Divider:                                    10
+  CLKOP Divider:                                    7
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
+
+ASIC Components
+---------------
+
+Instance Name: AMDemodulator_inst/square_sum_1[23:0]
+         Type: ALU54B
+Instance Name: AMDemodulator_inst/mult_result_q_2[23:0]
+         Type: MULT18X18D
+Instance Name: AMDemodulator_inst/mult_result_i_2[23:0]
+         Type: MULT18X18D
+Instance Name: PLL_inst/PLLInst_0
+         Type: EHXPLLL
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 3 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 476 MB
+        
+
+
+
+
+
+
+
+
+
+                                   Page 28
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

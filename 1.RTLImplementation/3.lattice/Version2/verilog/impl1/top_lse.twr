@@ -1,0 +1,1291 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Aug  7 15:42:08 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets \uart_rx_inst/UartClk[2]]
+            1595 items scored, 1089 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.824ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx_inst/r_Clock_Count_505__i15  (from \uart_rx_inst/UartClk[2] +)
+   Destination:    FD1P3IX    SP             \uart_rx_inst/r_Clock_Count_505__i4  (to \uart_rx_inst/UartClk[2] +)
+
+   Delay:                   8.903ns  (13.4% logic, 86.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.903ns data_path \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i4 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 3.824ns
+
+ Path Details: \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i4
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx_inst/r_Clock_Count_505__i15 (from \uart_rx_inst/UartClk[2])
+Route         2   e 1.258                                  \uart_rx_inst/r_Clock_Count[15]
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_4_lut_adj_193
+Route         1   e 1.020                                  \uart_rx_inst/n16315
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_191
+Route         9   e 1.459                                  \uart_rx_inst/n16212
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_190
+Route         3   e 1.239                                  \uart_rx_inst/n15925
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_2_lut_rep_348_4_lut
+Route         2   e 1.158                                  \uart_rx_inst/n17145
+LUT4        ---     0.166              C to Z              \uart_rx_inst/i5722_4_lut
+Route        16   e 1.574                                  \uart_rx_inst/UartClk[2]_enable_36
+                  --------
+                    8.903  (13.4% logic, 86.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.824ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx_inst/r_Clock_Count_505__i15  (from \uart_rx_inst/UartClk[2] +)
+   Destination:    FD1P3IX    SP             \uart_rx_inst/r_Clock_Count_505__i3  (to \uart_rx_inst/UartClk[2] +)
+
+   Delay:                   8.903ns  (13.4% logic, 86.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.903ns data_path \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i3 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 3.824ns
+
+ Path Details: \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx_inst/r_Clock_Count_505__i15 (from \uart_rx_inst/UartClk[2])
+Route         2   e 1.258                                  \uart_rx_inst/r_Clock_Count[15]
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_4_lut_adj_193
+Route         1   e 1.020                                  \uart_rx_inst/n16315
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_191
+Route         9   e 1.459                                  \uart_rx_inst/n16212
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_190
+Route         3   e 1.239                                  \uart_rx_inst/n15925
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_2_lut_rep_348_4_lut
+Route         2   e 1.158                                  \uart_rx_inst/n17145
+LUT4        ---     0.166              C to Z              \uart_rx_inst/i5722_4_lut
+Route        16   e 1.574                                  \uart_rx_inst/UartClk[2]_enable_36
+                  --------
+                    8.903  (13.4% logic, 86.6% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.824ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \uart_rx_inst/r_Clock_Count_505__i15  (from \uart_rx_inst/UartClk[2] +)
+   Destination:    FD1P3IX    SP             \uart_rx_inst/r_Clock_Count_505__i2  (to \uart_rx_inst/UartClk[2] +)
+
+   Delay:                   8.903ns  (13.4% logic, 86.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.903ns data_path \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i2 violates
+      5.000ns delay constraint less
+     -0.079ns LCE_S requirement (totaling 5.079ns) by 3.824ns
+
+ Path Details: \uart_rx_inst/r_Clock_Count_505__i15 to \uart_rx_inst/r_Clock_Count_505__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              \uart_rx_inst/r_Clock_Count_505__i15 (from \uart_rx_inst/UartClk[2])
+Route         2   e 1.258                                  \uart_rx_inst/r_Clock_Count[15]
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_4_lut_adj_193
+Route         1   e 1.020                                  \uart_rx_inst/n16315
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_191
+Route         9   e 1.459                                  \uart_rx_inst/n16212
+LUT4        ---     0.166              B to Z              \uart_rx_inst/i1_4_lut_adj_190
+Route         3   e 1.239                                  \uart_rx_inst/n15925
+LUT4        ---     0.166              D to Z              \uart_rx_inst/i1_2_lut_rep_348_4_lut
+Route         2   e 1.158                                  \uart_rx_inst/n17145
+LUT4        ---     0.166              C to Z              \uart_rx_inst/i5722_4_lut
+Route        16   e 1.574                                  \uart_rx_inst/UartClk[2]_enable_36
+                  --------
+                    8.903  (13.4% logic, 86.6% route), 6 logic levels.
+
+Warning: 8.824 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk_80mhz]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.631ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             rx_byte_i6  (from clk_80mhz +)
+   Destination:    FD1P3AX    D              phase_inc_gen_i0_i63  (to clk_80mhz +)
+
+   Delay:                  12.806ns  (26.4% logic, 73.6% route), 38 logic levels.
+
+ Constraint Details:
+
+     12.806ns data_path rx_byte_i6 to phase_inc_gen_i0_i63 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.631ns
+
+ Path Details: rx_byte_i6 to phase_inc_gen_i0_i63
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              rx_byte_i6 (from clk_80mhz)
+Route         4   e 1.397                                  led_c_5
+LUT4        ---     0.166              A to Z              i1_3_lut_rep_358
+Route         5   e 1.341                                  n17155
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_342_3_lut_4_lut_4_lut
+Route         1   e 1.020                                  n17139
+LUT4        ---     0.166              A to Z              n16254_bdd_4_lut
+Route         1   e 1.020                                  n17043
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_201
+Route         2   e 1.158                                  n16409
+LUT4        ---     0.166              B to Z              i1_4_lut_2_lut_rep_367
+Route        65   e 1.854                                  n17278
+A1_TO_FCO   ---     0.329           B[2] to COUT           add_3222_3
+Route         1   e 0.020                                  n15812
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_5
+Route         1   e 0.020                                  n15813
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_7
+Route         1   e 0.020                                  n15814
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_9
+Route         1   e 0.020                                  n15815
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_11
+Route         1   e 0.020                                  n15816
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_13
+Route         1   e 0.020                                  n15817
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_15
+Route         1   e 0.020                                  n15818
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_17
+Route         1   e 0.020                                  n15819
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_19
+Route         1   e 0.020                                  n15820
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_21
+Route         1   e 0.020                                  n15821
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_23
+Route         1   e 0.020                                  n15822
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_25
+Route         1   e 0.020                                  n15823
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_27
+Route         1   e 0.020                                  n15824
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_29
+Route         1   e 0.020                                  n15825
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_31
+Route         1   e 0.020                                  n15826
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_33
+Route         1   e 0.020                                  n15827
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_35
+Route         1   e 0.020                                  n15828
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_37
+Route         1   e 0.020                                  n15829
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_39
+Route         1   e 0.020                                  n15830
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_41
+Route         1   e 0.020                                  n15831
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_43
+Route         1   e 0.020                                  n15832
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_45
+Route         1   e 0.020                                  n15833
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_47
+Route         1   e 0.020                                  n15834
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_49
+Route         1   e 0.020                                  n15835
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_51
+Route         1   e 0.020                                  n15836
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_53
+Route         1   e 0.020                                  n15837
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_55
+Route         1   e 0.020                                  n15838
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_57
+Route         1   e 0.020                                  n15839
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_59
+Route         1   e 0.020                                  n15840
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_61
+Route         1   e 0.020                                  n15841
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_63
+Route         1   e 0.020                                  n15842
+FCI_TO_F    ---     0.322            CIN to S[2]           add_3222_65
+Route         1   e 1.020                                  n134
+                  --------
+                   12.806  (26.4% logic, 73.6% route), 38 logic levels.
+
+
+Error:  The following path violates requirements by 7.631ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             rx_byte_i6  (from clk_80mhz +)
+   Destination:    FD1P3AX    D              phase_inc_gen_i0_i63  (to clk_80mhz +)
+
+   Delay:                  12.806ns  (26.4% logic, 73.6% route), 38 logic levels.
+
+ Constraint Details:
+
+     12.806ns data_path rx_byte_i6 to phase_inc_gen_i0_i63 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.631ns
+
+ Path Details: rx_byte_i6 to phase_inc_gen_i0_i63
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              rx_byte_i6 (from clk_80mhz)
+Route         4   e 1.397                                  led_c_5
+LUT4        ---     0.166              A to Z              i1_3_lut_rep_358
+Route         5   e 1.341                                  n17155
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_342_3_lut_4_lut_4_lut
+Route         1   e 1.020                                  n17139
+LUT4        ---     0.166              A to Z              n16254_bdd_4_lut
+Route         1   e 1.020                                  n17043
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_201
+Route         2   e 1.158                                  n16409
+LUT4        ---     0.166              B to Z              i1_4_lut_2_lut_rep_367
+Route        65   e 1.854                                  n17278
+A1_TO_FCO   ---     0.329           B[2] to COUT           add_3222_3
+Route         1   e 0.020                                  n15812
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_5
+Route         1   e 0.020                                  n15813
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_7
+Route         1   e 0.020                                  n15814
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_9
+Route         1   e 0.020                                  n15815
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_11
+Route         1   e 0.020                                  n15816
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_13
+Route         1   e 0.020                                  n15817
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_15
+Route         1   e 0.020                                  n15818
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_17
+Route         1   e 0.020                                  n15819
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_19
+Route         1   e 0.020                                  n15820
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_21
+Route         1   e 0.020                                  n15821
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_23
+Route         1   e 0.020                                  n15822
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_25
+Route         1   e 0.020                                  n15823
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_27
+Route         1   e 0.020                                  n15824
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_29
+Route         1   e 0.020                                  n15825
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_31
+Route         1   e 0.020                                  n15826
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_33
+Route         1   e 0.020                                  n15827
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_35
+Route         1   e 0.020                                  n15828
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_37
+Route         1   e 0.020                                  n15829
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_39
+Route         1   e 0.020                                  n15830
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_41
+Route         1   e 0.020                                  n15831
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_43
+Route         1   e 0.020                                  n15832
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_45
+Route         1   e 0.020                                  n15833
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_47
+Route         1   e 0.020                                  n15834
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_49
+Route         1   e 0.020                                  n15835
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_51
+Route         1   e 0.020                                  n15836
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_53
+Route         1   e 0.020                                  n15837
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_55
+Route         1   e 0.020                                  n15838
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_57
+Route         1   e 0.020                                  n15839
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_59
+Route         1   e 0.020                                  n15840
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_61
+Route         1   e 0.020                                  n15841
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_63
+Route         1   e 0.020                                  n15842
+FCI_TO_F    ---     0.322            CIN to S[2]           add_3222_65
+Route         1   e 1.020                                  n134
+                  --------
+                   12.806  (26.4% logic, 73.6% route), 38 logic levels.
+
+
+Error:  The following path violates requirements by 7.631ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             rx_byte_i6  (from clk_80mhz +)
+   Destination:    FD1P3AX    D              phase_inc_gen_i0_i62  (to clk_80mhz +)
+
+   Delay:                  12.806ns  (26.4% logic, 73.6% route), 38 logic levels.
+
+ Constraint Details:
+
+     12.806ns data_path rx_byte_i6 to phase_inc_gen_i0_i62 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 7.631ns
+
+ Path Details: rx_byte_i6 to phase_inc_gen_i0_i62
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              rx_byte_i6 (from clk_80mhz)
+Route         4   e 1.397                                  led_c_5
+LUT4        ---     0.166              A to Z              i1_3_lut_rep_358
+Route         5   e 1.341                                  n17155
+LUT4        ---     0.166              C to Z              i1_2_lut_rep_342_3_lut_4_lut_4_lut
+Route         1   e 1.020                                  n17139
+LUT4        ---     0.166              A to Z              n16254_bdd_4_lut
+Route         1   e 1.020                                  n17043
+LUT4        ---     0.166              A to Z              i1_4_lut_adj_201
+Route         2   e 1.158                                  n16409
+LUT4        ---     0.166              B to Z              i1_4_lut_2_lut_rep_367
+Route        65   e 1.854                                  n17278
+A1_TO_FCO   ---     0.329           B[2] to COUT           add_3222_3
+Route         1   e 0.020                                  n15812
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_5
+Route         1   e 0.020                                  n15813
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_7
+Route         1   e 0.020                                  n15814
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_9
+Route         1   e 0.020                                  n15815
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_11
+Route         1   e 0.020                                  n15816
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_13
+Route         1   e 0.020                                  n15817
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_15
+Route         1   e 0.020                                  n15818
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_17
+Route         1   e 0.020                                  n15819
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_19
+Route         1   e 0.020                                  n15820
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_21
+Route         1   e 0.020                                  n15821
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_23
+Route         1   e 0.020                                  n15822
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_25
+Route         1   e 0.020                                  n15823
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_27
+Route         1   e 0.020                                  n15824
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_29
+Route         1   e 0.020                                  n15825
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_31
+Route         1   e 0.020                                  n15826
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_33
+Route         1   e 0.020                                  n15827
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_35
+Route         1   e 0.020                                  n15828
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_37
+Route         1   e 0.020                                  n15829
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_39
+Route         1   e 0.020                                  n15830
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_41
+Route         1   e 0.020                                  n15831
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_43
+Route         1   e 0.020                                  n15832
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_45
+Route         1   e 0.020                                  n15833
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_47
+Route         1   e 0.020                                  n15834
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_49
+Route         1   e 0.020                                  n15835
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_51
+Route         1   e 0.020                                  n15836
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_53
+Route         1   e 0.020                                  n15837
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_55
+Route         1   e 0.020                                  n15838
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_57
+Route         1   e 0.020                                  n15839
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_59
+Route         1   e 0.020                                  n15840
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_61
+Route         1   e 0.020                                  n15841
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3222_63
+Route         1   e 0.020                                  n15842
+FCI_TO_F    ---     0.322            CIN to S[2]           add_3222_65
+Route         1   e 1.020                                  n137
+                  --------
+                   12.806  (26.4% logic, 73.6% route), 38 logic levels.
+
+Warning: 12.631 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets cic_sine_clk]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 45.997ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             square_sum_e3__i24  (from cic_sine_clk +)
+   Destination:    FD1S3AX    D              \AMDemodulator_inst/amdemod_d__0_i1  (to cic_sine_clk +)
+
+   Delay:                  51.172ns  (23.4% logic, 76.6% route), 84 logic levels.
+
+ Constraint Details:
+
+     51.172ns data_path square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 45.997ns
+
+ Path Details: square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              square_sum_e3__i24 (from cic_sine_clk)
+Route        61   e 1.942                                  square_sum[23]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/square_sum[23]_bdd_4_lut_5868
+Route         4   e 1.297                                  n17163
+LUT4        ---     0.166              D to Z              \AMDemodulator_inst/i11_3_lut_rep_340_4_lut_4_lut_4_lut
+Route        19   e 1.608                                  n17137
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1214_add_4_4
+Route         1   e 0.020                                  n14363
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_6
+Route         1   e 0.020                                  n14364
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_8
+Route         1   e 0.020                                  n14365
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1214_add_4_10
+Route         1   e 1.020                                  n24_adj_5461
+LUT4        ---     0.166              C to Z              \AMDemodulator_inst/i5626_3_lut_4_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16837
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5628_3_lut_rep_337
+Route        76   e 1.886                                  n17134
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1238_add_4_3
+Route         1   e 0.020                                  n15796
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1238_add_4_5
+Route         1   e 0.020                                  n15797
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1238_add_4_7
+Route         1   e 0.020                                  n15798
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1238_add_4_9
+Route         1   e 0.020                                  n15799
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1238_add_4_11
+Route         1   e 0.020                                  n15800
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1238_add_4_13
+Route        20   e 1.719                                  amdemod_d_11__N_1841[11]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_6_rep_336
+Route        20   e 1.619                                  n17133
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1232_add_4_4
+Route         1   e 0.020                                  n15568
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_6
+Route         1   e 0.020                                  n15569
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_8
+Route         1   e 0.020                                  n15570
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_10
+Route         1   e 0.020                                  n15571
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_12
+Route         1   e 0.020                                  n15572
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_14
+Route         1   e 0.020                                  n15573
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1232_add_4_16
+Route         1   e 1.020                                  n34_adj_5835
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5560_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16771
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5562_3_lut_rep_335
+Route        63   e 1.848                                  n17132
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1020_add_4_3
+Route         1   e 0.020                                  n14422
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_5
+Route         1   e 0.020                                  n14423
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_7
+Route         1   e 0.020                                  n14424
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_9
+Route         1   e 0.020                                  n14425
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_11
+Route         1   e 0.020                                  n14426
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_13
+Route         1   e 0.020                                  n14427
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1020_add_4_15
+Route        15   e 1.661                                  amdemod_d_11__N_1851[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_10_3_lut_rep_334
+Route        17   e 1.586                                  n17131
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1250_add_4_3
+Route         1   e 0.020                                  n15463
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1250_add_4_5
+Route         1   e 0.020                                  n15464
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1250_add_4_7
+Route         1   e 0.020                                  n15465
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1250_add_4_9
+Route         1   e 0.020                                  n15466
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1250_add_4_11
+Route         1   e 0.020                                  n15467
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1250_add_4_13
+Route         1   e 0.020                                  n15468
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1250_add_4_15
+Route         1   e 1.020                                  n32_adj_4715
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5555_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16766
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5556_3_lut_rep_333
+Route        54   e 1.817                                  n17130
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1193_add_4_4
+Route         1   e 0.020                                  n15285
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_6
+Route         1   e 0.020                                  n15286
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_8
+Route         1   e 0.020                                  n15287
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_10
+Route         1   e 0.020                                  n15288
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_12
+Route         1   e 0.020                                  n15289
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_14
+Route         1   e 0.020                                  n15290
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1193_add_4_16
+Route        12   e 1.616                                  amdemod_d_11__N_1860[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_14_rep_332
+Route        14   e 1.547                                  n17129
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1064_add_4_3
+Route         1   e 0.020                                  n15593
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1064_add_4_5
+Route         1   e 0.020                                  n15594
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1064_add_4_7
+Route         1   e 0.020                                  n15595
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1064_add_4_9
+Route         1   e 0.020                                  n15596
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1064_add_4_11
+Route         1   e 0.020                                  n15597
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1064_add_4_13
+Route         1   e 0.020                                  n15598
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1064_add_4_15
+Route         1   e 1.020                                  n32_adj_5863
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5516_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16727
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5517_3_lut_rep_331
+Route        46   e 1.785                                  n17128
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1028_add_4_3
+Route         1   e 0.020                                  n15072
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_5
+Route         1   e 0.020                                  n15073
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_7
+Route         1   e 0.020                                  n15074
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_9
+Route         1   e 0.020                                  n15075
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_11
+Route         1   e 0.020                                  n15076
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_13
+Route         1   e 0.020                                  n15077
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1028_add_4_15
+Route        10   e 1.580                                  amdemod_d_11__N_1871[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_18_rep_330
+Route         6   e 1.378                                  n17127
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1058_add_4_3
+Route         1   e 0.020                                  n14302
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_5
+Route         1   e 0.020                                  n14303
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_7
+Route         1   e 0.020                                  n14304
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_9
+Route         1   e 0.020                                  n14305
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_11
+Route         1   e 0.020                                  n14306
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_13
+Route         1   e 0.020                                  n14307
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1058_add_4_15
+Route         1   e 1.020                                  n32_adj_5598
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5477_3_lut
+Route         1   e 0.020                                  \AMDemodulator_inst/n16688
+MUXL5       ---     0.116           ALUT to Z              \AMDemodulator_inst/i5478
+Route         6   e 1.378                                  amdemod_d_11__N_1874
+A1_TO_FCO   ---     0.329           A[2] to COUT           add_3221_1
+Route         1   e 0.020                                  n15844
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3221_3
+Route         1   e 0.020                                  n15845
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3221_5
+Route         1   e 0.020                                  n15846
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3221_7
+Route         1   e 0.020                                  n15847
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3221_9
+Route         1   e 0.020                                  n15848
+FCI_TO_FCO  ---     0.051            CIN to COUT           add_3221_11
+Route         1   e 0.020                                  n15849
+FCI_TO_F    ---     0.322            CIN to S[2]           add_3221_13
+Route         1   e 1.020                                  amdemod_d_11__N_1881[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_22_3_lut
+Route         1   e 1.020                                  \AMDemodulator_inst/amdemod_d_11__N_1879
+                  --------
+                   51.172  (23.4% logic, 76.6% route), 84 logic levels.
+
+
+Error:  The following path violates requirements by 45.997ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             square_sum_e3__i24  (from cic_sine_clk +)
+   Destination:    FD1S3AX    D              \AMDemodulator_inst/amdemod_d__0_i1  (to cic_sine_clk +)
+
+   Delay:                  51.172ns  (23.4% logic, 76.6% route), 84 logic levels.
+
+ Constraint Details:
+
+     51.172ns data_path square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 45.997ns
+
+ Path Details: square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              square_sum_e3__i24 (from cic_sine_clk)
+Route        61   e 1.942                                  square_sum[23]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/square_sum[23]_bdd_4_lut_5868
+Route         4   e 1.297                                  n17163
+LUT4        ---     0.166              D to Z              \AMDemodulator_inst/i11_3_lut_rep_340_4_lut_4_lut_4_lut
+Route        19   e 1.608                                  n17137
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1214_add_4_4
+Route         1   e 0.020                                  n14363
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_6
+Route         1   e 0.020                                  n14364
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_8
+Route         1   e 0.020                                  n14365
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1214_add_4_10
+Route         1   e 1.020                                  n24_adj_5461
+LUT4        ---     0.166              C to Z              \AMDemodulator_inst/i5626_3_lut_4_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16837
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5628_3_lut_rep_337
+Route        76   e 1.886                                  n17134
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1262_add_4_4
+Route         1   e 0.020                                  n15279
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_6
+Route         1   e 0.020                                  n15280
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_8
+Route         1   e 0.020                                  n15281
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_10
+Route         1   e 0.020                                  n15282
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_12
+Route         1   e 0.020                                  n15283
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1262_add_4_14
+Route        20   e 1.719                                  amdemod_d_11__N_1840[11]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_6_rep_336
+Route        20   e 1.619                                  n17133
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1232_add_4_4
+Route         1   e 0.020                                  n15568
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_6
+Route         1   e 0.020                                  n15569
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_8
+Route         1   e 0.020                                  n15570
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_10
+Route         1   e 0.020                                  n15571
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_12
+Route         1   e 0.020                                  n15572
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1232_add_4_14
+Route         1   e 0.020                                  n15573
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1232_add_4_16
+Route         1   e 1.020                                  n34_adj_5835
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5560_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16771
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5562_3_lut_rep_335
+Route        63   e 1.848                                  n17132
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1020_add_4_3
+Route         1   e 0.020                                  n14422
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_5
+Route         1   e 0.020                                  n14423
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_7
+Route         1   e 0.020                                  n14424
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_9
+Route         1   e 0.020                                  n14425
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_11
+Route         1   e 0.020                                  n14426
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_13
+Route         1   e 0.020                                  n14427
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1020_add_4_15
+Route        15   e 1.661                                  amdemod_d_11__N_1851[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_10_3_lut_rep_334
+Route        17   e 1.586                                  n17131
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1226_add_4_4
+Route         1   e 0.020                                  n15802
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1226_add_4_6
+Route         1   e 0.020                                  n15803
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1226_add_4_8
+Route         1   e 0.020                                  n15804
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1226_add_4_10
+Route         1   e 0.020                                  n15805
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1226_add_4_12
+Route         1   e 0.020                                  n15806
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1226_add_4_14
+Route         1   e 0.020                                  n15807
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1226_add_4_16
+Route         1   e 1.020                                  n34_adj_6002
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5554_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16765
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5556_3_lut_rep_333
+Route        54   e 1.817                                  n17130
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1193_add_4_4
+Route         1   e 0.020                                  n15285
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_6
+Route         1   e 0.020                                  n15286
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_8
+Route         1   e 0.020                                  n15287
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_10
+Route         1   e 0.020                                  n15288
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_12
+Route         1   e 0.020                                  n15289
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_14
+Route         1   e 0.020                                  n15290
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1193_add_4_16
+Route        12   e 1.616                                  amdemod_d_11__N_1860[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_14_rep_332
+Route        14   e 1.547                                  n17129
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1220_add_4_4
+Route         1   e 0.020                                  n14490
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1220_add_4_6
+Route         1   e 0.020                                  n14491
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1220_add_4_8
+Route         1   e 0.020                                  n14492
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1220_add_4_10
+Route         1   e 0.020                                  n14493
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1220_add_4_12
+Route         1   e 0.020                                  n14494
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1220_add_4_14
+Route         1   e 0.020                                  n14495
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1220_add_4_16
+Route         1   e 1.020                                  n34_adj_5483
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5515_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16726
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5517_3_lut_rep_331
+Route        46   e 1.785                                  n17128
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1196_add_4_4
+Route         1   e 0.020                                  n14982
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1196_add_4_6
+Route         1   e 0.020                                  n14983
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1196_add_4_8
+Route         1   e 0.020                                  n14984
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1196_add_4_10
+Route         1   e 0.020                                  n14985
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1196_add_4_12
+Route         1   e 0.020                                  n14986
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1196_add_4_14
+Route         1   e 0.020                                  n14987
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1196_add_4_16
+Route        10   e 1.580                                  amdemod_d_11__N_1870[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_18_rep_330
+Route         6   e 1.378                                  n17127
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1058_add_4_3
+Route         1   e 0.020                                  n14302
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_5
+Route         1   e 0.020                                  n14303
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_7
+Route         1   e 0.020                                  n14304
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_9
+Route         1   e 0.020                                  n14305
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_11
+Route         1   e 0.020                                  n14306
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_13
+Route         1   e 0.020                                  n14307
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1058_add_4_15
+Route         1   e 1.020                                  n32_adj_5598
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5477_3_lut
+Route         1   e 0.020                                  \AMDemodulator_inst/n16688
+MUXL5       ---     0.116           ALUT to Z              \AMDemodulator_inst/i5478
+Route         6   e 1.378                                  amdemod_d_11__N_1874
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1199_add_4_4
+Route         1   e 0.020                                  n14826
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_6
+Route         1   e 0.020                                  n14827
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_8
+Route         1   e 0.020                                  n14828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_10
+Route         1   e 0.020                                  n14829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_12
+Route         1   e 0.020                                  n14830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_14
+Route         1   e 0.020                                  n14831
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1199_add_4_16
+Route         1   e 1.020                                  amdemod_d_11__N_1880[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_22_3_lut
+Route         1   e 1.020                                  \AMDemodulator_inst/amdemod_d_11__N_1879
+                  --------
+                   51.172  (23.4% logic, 76.6% route), 84 logic levels.
+
+
+Error:  The following path violates requirements by 45.997ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             square_sum_e3__i24  (from cic_sine_clk +)
+   Destination:    FD1S3AX    D              \AMDemodulator_inst/amdemod_d__0_i1  (to cic_sine_clk +)
+
+   Delay:                  51.172ns  (23.4% logic, 76.6% route), 84 logic levels.
+
+ Constraint Details:
+
+     51.172ns data_path square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1 violates
+      5.000ns delay constraint less
+     -0.175ns L_S requirement (totaling 5.175ns) by 45.997ns
+
+ Path Details: square_sum_e3__i24 to \AMDemodulator_inst/amdemod_d__0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.365             CK to Q              square_sum_e3__i24 (from cic_sine_clk)
+Route        61   e 1.942                                  square_sum[23]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/square_sum[23]_bdd_4_lut_5868
+Route         4   e 1.297                                  n17163
+LUT4        ---     0.166              D to Z              \AMDemodulator_inst/i11_3_lut_rep_340_4_lut_4_lut_4_lut
+Route        19   e 1.608                                  n17137
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1214_add_4_4
+Route         1   e 0.020                                  n14363
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_6
+Route         1   e 0.020                                  n14364
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1214_add_4_8
+Route         1   e 0.020                                  n14365
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1214_add_4_10
+Route         1   e 1.020                                  n24_adj_5461
+LUT4        ---     0.166              C to Z              \AMDemodulator_inst/i5626_3_lut_4_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16837
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5628_3_lut_rep_337
+Route        76   e 1.886                                  n17134
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1262_add_4_4
+Route         1   e 0.020                                  n15279
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_6
+Route         1   e 0.020                                  n15280
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_8
+Route         1   e 0.020                                  n15281
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_10
+Route         1   e 0.020                                  n15282
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1262_add_4_12
+Route         1   e 0.020                                  n15283
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1262_add_4_14
+Route        20   e 1.719                                  amdemod_d_11__N_1840[11]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_6_rep_336
+Route        20   e 1.619                                  n17133
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1256_add_4_3
+Route         1   e 0.020                                  n15101
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1256_add_4_5
+Route         1   e 0.020                                  n15102
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1256_add_4_7
+Route         1   e 0.020                                  n15103
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1256_add_4_9
+Route         1   e 0.020                                  n15104
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1256_add_4_11
+Route         1   e 0.020                                  n15105
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1256_add_4_13
+Route         1   e 0.020                                  n15106
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1256_add_4_15
+Route         1   e 1.020                                  n32_adj_4742
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5561_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16772
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5562_3_lut_rep_335
+Route        63   e 1.848                                  n17132
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1020_add_4_3
+Route         1   e 0.020                                  n14422
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_5
+Route         1   e 0.020                                  n14423
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_7
+Route         1   e 0.020                                  n14424
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_9
+Route         1   e 0.020                                  n14425
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_11
+Route         1   e 0.020                                  n14426
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1020_add_4_13
+Route         1   e 0.020                                  n14427
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1020_add_4_15
+Route        15   e 1.661                                  amdemod_d_11__N_1851[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_10_3_lut_rep_334
+Route        17   e 1.586                                  n17131
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1247_add_4_3
+Route         1   e 0.020                                  n15709
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1247_add_4_5
+Route         1   e 0.020                                  n15710
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1247_add_4_7
+Route         1   e 0.020                                  n15711
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1247_add_4_9
+Route         1   e 0.020                                  n15712
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1247_add_4_11
+Route         1   e 0.020                                  n15713
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1247_add_4_13
+Route         1   e 0.020                                  n15714
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1247_add_4_15
+Route         1   e 1.020                                  n32_adj_5962
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5555_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16766
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/i5556_3_lut_rep_333
+Route        54   e 1.817                                  n17130
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1193_add_4_4
+Route         1   e 0.020                                  n15285
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_6
+Route         1   e 0.020                                  n15286
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_8
+Route         1   e 0.020                                  n15287
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_10
+Route         1   e 0.020                                  n15288
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_12
+Route         1   e 0.020                                  n15289
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1193_add_4_14
+Route         1   e 0.020                                  n15290
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1193_add_4_16
+Route        12   e 1.616                                  amdemod_d_11__N_1860[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_14_rep_332
+Route        14   e 1.547                                  n17129
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1223_add_4_4
+Route         1   e 0.020                                  n15622
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1223_add_4_6
+Route         1   e 0.020                                  n15623
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1223_add_4_8
+Route         1   e 0.020                                  n15624
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1223_add_4_10
+Route         1   e 0.020                                  n15625
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1223_add_4_12
+Route         1   e 0.020                                  n15626
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1223_add_4_14
+Route         1   e 0.020                                  n15627
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1223_add_4_16
+Route         1   e 1.020                                  n34_adj_5876
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5515_3_lut
+Route         2   e 1.158                                  \AMDemodulator_inst/n16726
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5517_3_lut_rep_331
+Route        46   e 1.785                                  n17128
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1028_add_4_3
+Route         1   e 0.020                                  n15072
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_5
+Route         1   e 0.020                                  n15073
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_7
+Route         1   e 0.020                                  n15074
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_9
+Route         1   e 0.020                                  n15075
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_11
+Route         1   e 0.020                                  n15076
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1028_add_4_13
+Route         1   e 0.020                                  n15077
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1028_add_4_15
+Route        10   e 1.580                                  amdemod_d_11__N_1871[13]
+LUT4        ---     0.166              B to Z              \AMDemodulator_inst/amdemod_d_11__I_18_rep_330
+Route         6   e 1.378                                  n17127
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1058_add_4_3
+Route         1   e 0.020                                  n14302
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_5
+Route         1   e 0.020                                  n14303
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_7
+Route         1   e 0.020                                  n14304
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_9
+Route         1   e 0.020                                  n14305
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_11
+Route         1   e 0.020                                  n14306
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1058_add_4_13
+Route         1   e 0.020                                  n14307
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1058_add_4_15
+Route         1   e 1.020                                  n32_adj_5598
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/i5477_3_lut
+Route         1   e 0.020                                  \AMDemodulator_inst/n16688
+MUXL5       ---     0.116           ALUT to Z              \AMDemodulator_inst/i5478
+Route         6   e 1.378                                  amdemod_d_11__N_1874
+A1_TO_FCO   ---     0.329           A[2] to COUT           _add_1_1199_add_4_4
+Route         1   e 0.020                                  n14826
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_6
+Route         1   e 0.020                                  n14827
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_8
+Route         1   e 0.020                                  n14828
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_10
+Route         1   e 0.020                                  n14829
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_12
+Route         1   e 0.020                                  n14830
+FCI_TO_FCO  ---     0.051            CIN to COUT           _add_1_1199_add_4_14
+Route         1   e 0.020                                  n14831
+FCI_TO_F    ---     0.322            CIN to S[2]           _add_1_1199_add_4_16
+Route         1   e 1.020                                  amdemod_d_11__N_1880[13]
+LUT4        ---     0.166              A to Z              \AMDemodulator_inst/amdemod_d_11__I_22_3_lut
+Route         1   e 1.020                                  \AMDemodulator_inst/amdemod_d_11__N_1879
+                  --------
+                   51.172  (23.4% logic, 76.6% route), 84 logic levels.
+
+Warning: 50.997 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets \uart_rx_inst/UartClk[2]]|     5.000 ns|     8.824 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_80mhz]               |     5.000 ns|    12.631 ns|    38 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets cic_sine_clk]            |     5.000 ns|    50.997 ns|    84 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\AMDemodulator_inst/amdemod_d_11__N_1879|       1|    4096|     44.13%
+                                        |        |        |
+amdemod_d_11__N_1874                    |       6|    4096|     44.13%
+                                        |        |        |
+n17127                                  |       6|    4096|     44.13%
+                                        |        |        |
+n17128                                  |      46|    4096|     44.13%
+                                        |        |        |
+n17129                                  |      14|    4096|     44.13%
+                                        |        |        |
+n17130                                  |      54|    4096|     44.13%
+                                        |        |        |
+n17131                                  |      17|    4096|     44.13%
+                                        |        |        |
+n17132                                  |      63|    4096|     44.13%
+                                        |        |        |
+n17133                                  |      20|    4096|     44.13%
+                                        |        |        |
+n17134                                  |      76|    4096|     44.13%
+                                        |        |        |
+n17137                                  |      19|    4096|     44.13%
+                                        |        |        |
+n17163                                  |       4|    4096|     44.13%
+                                        |        |        |
+n15827                                  |       1|    3888|     41.89%
+                                        |        |        |
+n15826                                  |       1|    3876|     41.76%
+                                        |        |        |
+n15828                                  |       1|    3876|     41.76%
+                                        |        |        |
+n15825                                  |       1|    3840|     41.37%
+                                        |        |        |
+n15829                                  |       1|    3840|     41.37%
+                                        |        |        |
+n15824                                  |       1|    3780|     40.73%
+                                        |        |        |
+n15830                                  |       1|    3780|     40.73%
+                                        |        |        |
+n15823                                  |       1|    3696|     39.82%
+                                        |        |        |
+n15831                                  |       1|    3696|     39.82%
+                                        |        |        |
+amdemod_d_11__N_1880[13]                |       1|    3690|     39.76%
+                                        |        |        |
+n14826                                  |       1|    3690|     39.76%
+                                        |        |        |
+n14827                                  |       1|    3690|     39.76%
+                                        |        |        |
+n14828                                  |       1|    3690|     39.76%
+                                        |        |        |
+n14829                                  |       1|    3690|     39.76%
+                                        |        |        |
+n14830                                  |       1|    3690|     39.76%
+                                        |        |        |
+n14831                                  |       1|    3690|     39.76%
+                                        |        |        |
+n17278                                  |      65|    3660|     39.44%
+                                        |        |        |
+n15822                                  |       1|    3592|     38.70%
+                                        |        |        |
+n15832                                  |       1|    3592|     38.70%
+                                        |        |        |
+n15821                                  |       1|    3476|     37.45%
+                                        |        |        |
+n15833                                  |       1|    3476|     37.45%
+                                        |        |        |
+n16409                                  |       2|    3352|     36.12%
+                                        |        |        |
+n15820                                  |       1|    3348|     36.07%
+                                        |        |        |
+n15834                                  |       1|    3348|     36.07%
+                                        |        |        |
+\AMDemodulator_inst/n16688              |       1|    3338|     35.97%
+                                        |        |        |
+\AMDemodulator_inst/n16727              |       2|    3336|     35.94%
+                                        |        |        |
+\AMDemodulator_inst/n16766              |       2|    3336|     35.94%
+                                        |        |        |
+\AMDemodulator_inst/n16771              |       2|    3336|     35.94%
+                                        |        |        |
+amdemod_d_11__N_1851[13]                |      15|    3336|     35.94%
+                                        |        |        |
+amdemod_d_11__N_1860[13]                |      12|    3336|     35.94%
+                                        |        |        |
+amdemod_d_11__N_1871[13]                |      10|    3336|     35.94%
+                                        |        |        |
+n14422                                  |       1|    3336|     35.94%
+                                        |        |        |
+n14423                                  |       1|    3336|     35.94%
+                                        |        |        |
+n14424                                  |       1|    3336|     35.94%
+                                        |        |        |
+n14425                                  |       1|    3336|     35.94%
+                                        |        |        |
+n14426                                  |       1|    3336|     35.94%
+                                        |        |        |
+n14427                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15072                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15073                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15074                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15075                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15076                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15077                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15285                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15286                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15287                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15288                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15289                                  |       1|    3336|     35.94%
+                                        |        |        |
+n15290                                  |       1|    3336|     35.94%
+                                        |        |        |
+square_sum[23]                          |      61|    3324|     35.82%
+                                        |        |        |
+amdemod_d_11__N_1840[11]                |      20|    3301|     35.57%
+                                        |        |        |
+n15279                                  |       1|    3301|     35.57%
+                                        |        |        |
+n15280                                  |       1|    3301|     35.57%
+                                        |        |        |
+n15281                                  |       1|    3301|     35.57%
+                                        |        |        |
+n15282                                  |       1|    3301|     35.57%
+                                        |        |        |
+n15283                                  |       1|    3301|     35.57%
+                                        |        |        |
+n15835                                  |       1|    3208|     34.57%
+                                        |        |        |
+n15819                                  |       1|    3204|     34.52%
+                                        |        |        |
+n17155                                  |       5|    3164|     34.09%
+                                        |        |        |
+\AMDemodulator_inst/n16837              |       2|    3088|     33.27%
+                                        |        |        |
+n15836                                  |       1|    3048|     32.84%
+                                        |        |        |
+n15818                                  |       1|    3034|     32.69%
+                                        |        |        |
+n32_adj_5598                            |       1|    2959|     31.88%
+                                        |        |        |
+n14302                                  |       1|    2959|     31.88%
+                                        |        |        |
+n14303                                  |       1|    2959|     31.88%
+                                        |        |        |
+n14304                                  |       1|    2959|     31.88%
+                                        |        |        |
+n14305                                  |       1|    2959|     31.88%
+                                        |        |        |
+n14306                                  |       1|    2959|     31.88%
+                                        |        |        |
+n14307                                  |       1|    2959|     31.88%
+                                        |        |        |
+n32_adj_5863                            |       1|    2956|     31.85%
+                                        |        |        |
+n32_adj_5962                            |       1|    2956|     31.85%
+                                        |        |        |
+n34_adj_5835                            |       1|    2956|     31.85%
+                                        |        |        |
+n15568                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15569                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15570                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15571                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15572                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15573                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15593                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15594                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15595                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15596                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15597                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15598                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15709                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15710                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15711                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15712                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15713                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15714                                  |       1|    2956|     31.85%
+                                        |        |        |
+n15837                                  |       1|    2856|     30.77%
+                                        |        |        |
+n15817                                  |       1|    2822|     30.41%
+                                        |        |        |
+n24_adj_5461                            |       1|    2670|     28.77%
+                                        |        |        |
+n14363                                  |       1|    2670|     28.77%
+                                        |        |        |
+n14364                                  |       1|    2670|     28.77%
+                                        |        |        |
+n14365                                  |       1|    2670|     28.77%
+                                        |        |        |
+n15838                                  |       1|    2608|     28.10%
+                                        |        |        |
+n15816                                  |       1|    2556|     27.54%
+                                        |        |        |
+n17043                                  |       1|    2496|     26.89%
+                                        |        |        |
+n17139                                  |       1|    2496|     26.89%
+                                        |        |        |
+n15839                                  |       1|    2282|     24.59%
+                                        |        |        |
+n15815                                  |       1|    2172|     23.40%
+                                        |        |        |
+n15840                                  |       1|    1858|     20.02%
+                                        |        |        |
+n15814                                  |       1|    1684|     18.14%
+                                        |        |        |
+n15841                                  |       1|    1336|     14.40%
+                                        |        |        |
+led_c_5                                 |       4|    1186|     12.78%
+                                        |        |        |
+led_c_7                                 |       4|    1186|     12.78%
+                                        |        |        |
+n15813                                  |       1|    1092|     11.77%
+                                        |        |        |
+rx_data_valid                           |       3|    1038|     11.18%
+                                        |        |        |
+\AMDemodulator_inst/n16838              |       2|    1008|     10.86%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 9281  Score: 217712957
+
+Constraints cover >4294967295 paths, 7917 nets, and 15618 connections (85.2% coverage)
+
+
+Peak memory: 369602560 bytes, TRCE: 30220288 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 2 secs 

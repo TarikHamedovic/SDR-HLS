@@ -1,0 +1,34 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":8:7:8:9|Synthesizing module PLL in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":19:7:19:13|Synthesizing module nco_sig in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":367:7:367:9|Synthesizing module INV in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":810:7:810:10|Synthesizing module XOR2 in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":710:7:710:14|Synthesizing module ROM16X1A in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":25:7:25:10|Synthesizing module AND2 in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":119:7:119:13|Synthesizing module FD1P3DX in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":458:7:458:11|Synthesizing module MUX21 in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":76:7:76:11|Synthesizing module CCU2C in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":742:7:742:14|Synthesizing module ROM64X1A in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":8:7:8:12|Synthesizing module SinCos in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv":17:7:17:11|Synthesizing module Mixer in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":40:7:40:9|Synthesizing module CIC in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":19:7:19:19|Synthesizing module AMDemodulator in library work.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_d[11] is always 0.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":29:7:29:9|Synthesizing module PWM in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":19:7:19:13|Synthesizing module uart_rx in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":35:7:35:9|Synthesizing module top in library work.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[2] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[3] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[4] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[5] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[6] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[7] is always 0.
+@N: CL201 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":66:2:66:7|Trying to extract state machine for register r_SM_Main.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_out[11] is always 0.
+@N|Running in 64-bit mode
+

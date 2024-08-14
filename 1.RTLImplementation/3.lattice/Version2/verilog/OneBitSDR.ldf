@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="OneBitSDR" device="LFE5U-85F-6BG381C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options VerilogStandard="Verilog 2001" def_top="top" top="top"/>
+        <Source name="impl1/source/top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top"/>
+        </Source>
+        <Source name="impl1/source/AMDemod.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/CIC.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/CIC_v2.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/Mixer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/NCO.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/PWM.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/UartRX.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/SinCos.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/PLL.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="OneBitSDR.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="OneBitSDR1.sty"/>
+</BaliProject>

@@ -1,0 +1,108 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+
+# Written on Wed Aug  7 16:20:26 2024
+
+##### DESIGN INFO #######################################################
+
+Top View:                "top"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                              Ending                                                |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                System                                                |     5.000            |     No paths         |     No paths         |     No paths                         
+System                                                PLL|CLKOP_inferred_clock                              |     5.000            |     No paths         |     No paths         |     No paths                         
+PLL|CLKOP_inferred_clock                              System                                                |     5.000            |     No paths         |     No paths         |     No paths                         
+PLL|CLKOP_inferred_clock                              PLL|CLKOP_inferred_clock                              |     5.000            |     No paths         |     No paths         |     No paths                         
+PLL|CLKOP_inferred_clock                              CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     |     5.000            |     No paths         |     No paths         |     No paths                         
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     PLL|CLKOP_inferred_clock                              |     5.000            |     No paths         |     No paths         |     No paths                         
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     |     5.000            |     No paths         |     No paths         |     No paths                         
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        |     5.000            |     No paths         |     No paths         |     No paths                         
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      |     5.000            |     No paths         |     No paths         |     No paths                         
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      PLL|CLKOP_inferred_clock                              |     5.000            |     No paths         |     No paths         |     No paths                         
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        |     5.000            |     No paths         |     No paths         |     No paths                         
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      |     5.000            |     No paths         |     No paths         |     No paths                         
+=======================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:clk_25mhz
+p:diff_out
+p:led[0]
+p:led[1]
+p:led[2]
+p:led[3]
+p:led[4]
+p:led[5]
+p:led[6]
+p:led[7]
+p:pwm_out
+p:pwm_out_n1
+p:pwm_out_n2
+p:pwm_out_n3
+p:pwm_out_n4
+p:pwm_out_p1
+p:pwm_out_p2
+p:pwm_out_p3
+p:pwm_out_p4
+p:rf_in
+p:rx_serial
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

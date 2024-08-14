@@ -1,0 +1,57 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: unlimited (bytes)
+
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+5        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv (2024-08-07 16:04:35, 2024-08-07 16:20:13)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 1
+MID:  lib.cell.view
+0        work.AMDemodulator.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv (2024-08-07 16:04:35, 2024-08-07 16:20:13) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 13
+FID:  path (timestamp)
+0        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v (2023-08-10 19:00:08)
+1        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v (2023-08-10 19:00:09)
+2        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v (2023-08-10 18:51:57)
+3        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v (2023-08-10 18:51:57)
+4        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh (2023-08-10 18:51:57)
+6        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv (2024-08-07 16:06:00)
+7        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv (2024-08-07 16:04:35)
+8        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv (2024-08-07 16:04:35)
+9        /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v (2024-02-29 19:39:22)
+10       /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv (2024-08-07 16:04:35)
+11       /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v (2024-02-28 16:19:56)
+14       /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v (2024-05-29 22:38:29)
+13       /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv (2024-08-07 16:04:30)
+
+*******************************************************************
+Unchanged modules: 8
+MID:  lib.cell.view
+1        work.CIC.verilog
+2        work.Mixer.verilog
+3        work.PLL.verilog
+4        work.PWM.verilog
+5        work.SinCos.verilog
+6        work.nco_sig.verilog
+7        work.top.verilog
+8        work.uart_rx.verilog

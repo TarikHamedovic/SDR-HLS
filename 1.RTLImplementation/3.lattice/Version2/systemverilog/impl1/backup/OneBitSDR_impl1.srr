@@ -1,0 +1,145 @@
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Wed Aug  7 15:57:19 2024
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv" (library work)
+@E: CS109 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":30:26:30:26|Expecting module level statement
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v" (library work)
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":8:37:8:48|Ignoring property NGD_DRC_MASK
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":60:26:60:44|Ignoring property FREQUENCY_PIN_CLKOP
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":61:26:61:43|Ignoring property FREQUENCY_PIN_CLKI
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":62:26:62:36|Ignoring property ICP_CURRENT
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":63:26:63:37|Ignoring property LPF_RESISTOR
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v" (library work)
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":8:69:8:80|Ignoring property NGD_DRC_MASK
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":310:26:310:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":313:26:313:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":316:26:316:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":319:26:319:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":322:26:322:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":325:26:325:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":328:26:328:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":331:26:331:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":353:26:353:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":357:26:357:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":361:26:361:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":365:26:365:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":369:26:369:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":373:26:373:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":377:26:377:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":381:26:381:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":385:26:385:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":389:26:389:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":393:26:393:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":397:26:397:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":401:26:401:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":405:26:405:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":409:26:409:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":413:26:413:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":417:26:417:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":421:26:421:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":425:26:425:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":429:26:429:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":433:26:433:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":437:26:437:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":441:26:441:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":445:26:445:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":449:26:449:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":453:26:453:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":457:26:457:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":461:26:461:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":542:26:542:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":597:26:597:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":601:26:601:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":605:26:605:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":609:26:609:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":613:26:613:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":617:26:617:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":621:26:621:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":625:26:625:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":629:26:629:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":633:26:633:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":637:26:637:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":641:26:641:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":645:26:645:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":648:26:648:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":652:26:652:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":656:26:656:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":660:26:660:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":664:26:664:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":668:26:668:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":672:26:672:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":676:26:676:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":680:26:680:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":684:26:684:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":688:26:688:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":692:26:692:28|Ignoring property GSR
+@W: CS133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":696:26:696:28|Ignoring property GSR
+@N|stack limit increased to max
+1 syntax errors
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Aug  7 15:57:19 2024
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Aug  7 15:57:19 2024
+
+###########################################################]

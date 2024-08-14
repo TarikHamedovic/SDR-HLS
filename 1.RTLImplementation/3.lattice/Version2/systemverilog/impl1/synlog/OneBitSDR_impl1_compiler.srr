@@ -1,0 +1,288 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v" (library work)
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":8:7:8:9|Synthesizing module PLL in library work.
+Running optimization stage 1 on PLL .......
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":18:8:18:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on PLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":19:7:19:13|Synthesizing module nco_sig in library work.
+
+	WIDTH=32'b00000000000000000000000001000000
+   Generated name = nco_sig_64s
+Running optimization stage 1 on nco_sig_64s .......
+Finished optimization stage 1 on nco_sig_64s (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":367:7:367:9|Synthesizing module INV in library work.
+Running optimization stage 1 on INV .......
+Finished optimization stage 1 on INV (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":810:7:810:10|Synthesizing module XOR2 in library work.
+Running optimization stage 1 on XOR2 .......
+Finished optimization stage 1 on XOR2 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":710:7:710:14|Synthesizing module ROM16X1A in library work.
+Running optimization stage 1 on ROM16X1A .......
+Finished optimization stage 1 on ROM16X1A (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":25:7:25:10|Synthesizing module AND2 in library work.
+Running optimization stage 1 on AND2 .......
+Finished optimization stage 1 on AND2 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":119:7:119:13|Synthesizing module FD1P3DX in library work.
+Running optimization stage 1 on FD1P3DX .......
+Finished optimization stage 1 on FD1P3DX (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":458:7:458:11|Synthesizing module MUX21 in library work.
+Running optimization stage 1 on MUX21 .......
+Finished optimization stage 1 on MUX21 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":76:7:76:11|Synthesizing module CCU2C in library work.
+Running optimization stage 1 on CCU2C .......
+Finished optimization stage 1 on CCU2C (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":742:7:742:14|Synthesizing module ROM64X1A in library work.
+Running optimization stage 1 on ROM64X1A .......
+Finished optimization stage 1 on ROM64X1A (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":8:7:8:12|Synthesizing module SinCos in library work.
+Running optimization stage 1 on SinCos .......
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":1002:10:1002:26|Removing instance neg_rom_dout_c_nd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":928:10:928:26|Removing instance neg_rom_dout_s_nd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":307:8:307:12|Removing instance INV_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on SinCos (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv":17:7:17:11|Synthesizing module Mixer in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+   Generated name = Mixer_12s
+Running optimization stage 1 on Mixer_12s .......
+Finished optimization stage 1 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":40:7:40:9|Synthesizing module CIC in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	REGISTER_WIDTH=32'b00000000000000000000000001001000
+	DECIMATION_RATIO=32'b00000000000000000001000000000000
+	GAIN_WIDTH=32'b00000000000000000000000000001000
+	COUNT_WIDTH=32'b00000000000000000000000000001100
+   Generated name = CIC_12s_72s_4096s_8s_12s
+Running optimization stage 1 on CIC_12s_72s_4096s_8s_12s .......
+Finished optimization stage 1 on CIC_12s_72s_4096s_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":19:7:19:19|Synthesizing module AMDemodulator in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	N=32'b00000000000000000000000000011000
+   Generated name = AMDemodulator_12s_24s
+Running optimization stage 1 on AMDemodulator_12s_24s .......
+@W: CL265 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Removing unused bit 24 of square_sum[24:0]. Either assign all bits or reduce the width of the signal.
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused bits 1 to 0 of square_sum[24:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_d[11] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 11 of amdemod_d[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 12 of mult_q_a[12:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused register mult_q_b[12:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused register mult_i_b[11:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on AMDemodulator_12s_24s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":29:7:29:9|Synthesizing module PWM in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	COUNTER_WIDTH=32'b00000000000000000000000000001010
+	OFFSET=32'b00000000000000000000001000000000
+   Generated name = PWM_12s_10s_512s
+Running optimization stage 1 on PWM_12s_10s_512s .......
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":42:2:42:10|Pruning unused bits 11 to 10 of data_in_reg[11:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on PWM_12s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":19:7:19:13|Synthesizing module uart_rx in library work.
+
+	CLKS_PER_BIT=32'b00000000000000000000000001010111
+	s_IDLE=3'b000
+	s_RX_START_BIT=3'b001
+	s_RX_DATA_BITS=3'b010
+	s_RX_STOP_BIT=3'b011
+	s_CLEANUP=3'b100
+   Generated name = uart_rx_87s_0_1_2_3_4
+Running optimization stage 1 on uart_rx_87s_0_1_2_3_4 .......
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on uart_rx_87s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":35:7:35:9|Synthesizing module top in library work.
+@W: CG133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":67:22:67:30|Object phase_inc is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":83:22:83:28|Object cic_clk is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on top .......
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[2] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[3] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[4] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[5] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[6] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[7] is always 0.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Pruning register bits 7 to 2 of cic_gain[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on top .......
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on uart_rx_87s_0_1_2_3_4 .......
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@N: CL201 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":66:2:66:7|Trying to extract state machine for register r_SM_Main.
+Finished optimization stage 2 on uart_rx_87s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on PWM_12s_10s_512s .......
+@W: CL246 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":35:35:35:41|Input port bits 11 to 10 of data_in[11:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on PWM_12s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on AMDemodulator_12s_24s .......
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_out[11] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 11 of amdemod_out[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on AMDemodulator_12s_24s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on CIC_12s_72s_4096s_8s_12s .......
+Finished optimization stage 2 on CIC_12s_72s_4096s_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on Mixer_12s .......
+Finished optimization stage 2 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on SinCos .......
+Finished optimization stage 2 on SinCos (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on ROM64X1A .......
+Finished optimization stage 2 on ROM64X1A (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on CCU2C .......
+Finished optimization stage 2 on CCU2C (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on MUX21 .......
+Finished optimization stage 2 on MUX21 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on FD1P3DX .......
+Finished optimization stage 2 on FD1P3DX (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on AND2 .......
+Finished optimization stage 2 on AND2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on ROM16X1A .......
+Finished optimization stage 2 on ROM16X1A (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on XOR2 .......
+Finished optimization stage 2 on XOR2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on INV .......
+Finished optimization stage 2 on INV (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on nco_sig_64s .......
+Finished optimization stage 2 on nco_sig_64s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on PLL .......
+Finished optimization stage 2 on PLL (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on EHXPLLL .......
+Finished optimization stage 2 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on VLO .......
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 147MB peak: 147MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 136MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/OneBitSDR_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]

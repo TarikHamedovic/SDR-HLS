@@ -1,0 +1,60 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+
+# Written on Wed Aug  7 16:20:25 2024
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      (none)
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                                   Requested     Requested     Clock                                       Clock               Clock
+Level     Clock                                                   Frequency     Period        Type                                        Group               Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                  200.0 MHz     5.000         system                                      system_clkgroup     0    
+                                                                                                                                                                   
+0 -       PLL|CLKOP_inferred_clock                                200.0 MHz     5.000         inferred                                    (multiple)          2675 
+1 .         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          116  
+1 .         uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          38   
+1 .         uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          3    
+===================================================================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                      Clock     Source                                    Clock Pin                               Non-clock Pin     Non-clock Pin
+Clock                                                 Load      Pin                                       Seq Example                             Seq Example       Comb Example 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                0         -                                         -                                       -                 -            
+                                                                                                                                                                                 
+PLL|CLKOP_inferred_clock                              2675      PLL_inst.PLLInst_0.CLKOP(EHXPLLL)         phase_inc_gen1[63:0].C                  -                 -            
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     116       cic_sine_inst.data_clk.Q[0](dff)          AMDemodulator_inst.mult_i_a[11:0].C     -                 -            
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      38        uart_rx_inst.UartClk_1[2:0].Q[2](dff)     uart_rx_inst.o_Rx_Byte[7:0].C           -                 -            
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        3         uart_rx_inst.UartClk[2:0].Q[2](dff)       uart_rx_inst.r_SM_Main[0].C             -                 -            
+=================================================================================================================================================================================

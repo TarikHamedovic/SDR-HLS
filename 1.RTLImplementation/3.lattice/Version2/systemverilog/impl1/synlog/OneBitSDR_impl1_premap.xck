@@ -1,0 +1,4 @@
+ckid0_0:@|S:uart_rx_inst.UartClk_1[2:0].Q[2]@|E:uart_rx_inst.r_Rx_DV@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_1:@|S:uart_rx_inst.UartClk[2:0].Q[2]@|E:uart_rx_inst.r_SM_Main[2]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_2:@|S:PLL_inst.PLLInst_0.CLKOP@|E:SinCos_inst.FF_62@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2
+ckid0_3:@|S:cic_sine_inst.data_clk.Q[0]@|E:AMDemodulator_inst.amdemod_d[10:0]@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3

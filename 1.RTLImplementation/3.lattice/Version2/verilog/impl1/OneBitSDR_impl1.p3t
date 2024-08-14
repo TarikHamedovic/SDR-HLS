@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "OneBitSDR_impl1.log"
+-o "OneBitSDR_impl1.csv"
+-pr "OneBitSDR_impl1.prf"

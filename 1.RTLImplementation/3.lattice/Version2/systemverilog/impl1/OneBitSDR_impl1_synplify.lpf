@@ -1,0 +1,30 @@
+#
+# Logical Preferences generated for Lattice by Synplify map202303lat, Build 132R.
+#
+
+# Period Constraints 
+#FREQUENCY NET "PLL_inst/clk_80mhz" 200.0 MHz;
+#FREQUENCY NET "cic_sine_inst/cic_sine_clk" 200.0 MHz;
+#FREQUENCY NET "uart_rx_inst/UartClk[2]" 200.0 MHz;
+#FREQUENCY NET "uart_rx_inst/UartClk_1[2]" 200.0 MHz;
+
+
+# Output Constraints 
+
+# Input Constraints 
+
+# Point-to-point Delay Constraints 
+
+#MULTICYCLE FROM CLKNET "cic_sine_inst/cic_sine_clk"  TO CLKNET "cic_sine_inst/cic_sine_clk"  2X;
+#MULTICYCLE FROM CLKNET "cic_sine_inst/cic_sine_clk"  TO CLKNET "cic_sine_inst/cic_sine_clk"  1X;
+#MULTICYCLE FROM CLKNET "uart_rx[0]"  TO CLKNET "uart_rx[0]"  2X;
+#MULTICYCLE FROM CLKNET "uart_rx[0]"  TO CLKNET "uart_rx[0]"  1X;
+#MULTICYCLE FROM CLKNET "uart_rx_i[0]"  TO CLKNET "uart_rx_i[0]"  2X;
+#MULTICYCLE FROM CLKNET "uart_rx_i[0]"  TO CLKNET "uart_rx_i[0]"  1X;
+
+
+# Block Path Constraints 
+
+BLOCK ASYNCPATHS;
+
+# End of generated Logical Preferences.

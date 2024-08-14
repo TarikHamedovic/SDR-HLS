@@ -1,0 +1,28 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+4 gated/generated clock tree(s) driving 2832 clock pin(s) of sequential element(s)
+0 instances converted, 2832 sequential instances remain driven by gated/generated clocks
+
+================================================================================================== Gated/Generated Clocks ===================================================================================================
+Clock Tree ID     Driving Element                      Drive Element Type     Unconverted Fanout     Sample Instance                        Explanation                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       uart_rx_inst.UartClk_1[2:0].Q[2]     dff                    38                     uart_rx_inst.r_Rx_DV                   Derived clock on input (not legal for GCC)                                       
+@KP:ckid0_1       uart_rx_inst.UartClk[2:0].Q[2]       dff                    3                      uart_rx_inst.r_SM_Main[2]              Derived clock on input (not legal for GCC)                                       
+@KP:ckid0_2       PLL_inst.PLLInst_0.CLKOP             EHXPLLL                2675                   SinCos_inst.FF_62                      Synplify Pro Clock optimization on technology cells not supported in this product
+@KP:ckid0_3       cic_sine_inst.data_clk.Q[0]          dff                    116                    AMDemodulator_inst.amdemod_d[10:0]     Derived clock on input (not legal for GCC)                                       
+=============================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+

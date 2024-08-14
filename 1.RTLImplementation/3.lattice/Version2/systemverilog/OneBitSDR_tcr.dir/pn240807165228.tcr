@@ -1,0 +1,27 @@
+#Start recording tcl command: 8/7/2024 15:55:47
+#Project Location: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog; Project name: OneBitSDR
+prj_project new -name "OneBitSDR" -impl "impl1" -dev LFE5U-85F-6BG381C -synthesis "synplify"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/NCO.sv" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/UartRX.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.sv"
+prj_project save
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version1/IP/PLL/PLL.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version1/IP/SinCos/SinCos.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v"
+prj_run Export -impl impl1 -task Promgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/PLL2.v"
+prj_src remove "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/PLL2.v"
+prj_run Synthesis -impl impl1
+prj_src remove "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.sv"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version1/First_Implementation/source/UartRX.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v"
+prj_run Synthesis -impl impl1 -task Synplify_Synthesis
+prj_run Map -impl impl1 -task MapVerilogSimFile
+launch_synplify_prj impl1
+prj_run Synthesis -impl impl1 -task Synplify_Synthesis
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 8/7/2024 16:52:28

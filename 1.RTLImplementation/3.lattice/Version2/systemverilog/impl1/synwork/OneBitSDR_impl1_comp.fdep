@@ -1,0 +1,55 @@
+#OPTIONS:"|-layerid|0|-orig_srs|/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/OneBitSDR_impl1_comp.srs|-top|top|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-lattice|-I|/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog|-I|/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/|-I|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib|-v2001|-devicelib|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v|-devicelib|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001"
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/c_ver":1691686800
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1691686808
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v":1691686809
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v":1691686317
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v":1691686317
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh":1691686317
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":1723039470
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv":1723039475
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":1723040413
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":1723039560
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":1723039475
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":1723039475
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":1709231962
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":1709133596
+#CUR:"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":1717015109
+0			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv" verilog
+1			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv" verilog
+2			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv" verilog
+3			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv" verilog
+4			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv" verilog
+5			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv" verilog
+6			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v" verilog
+7			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v" verilog
+8			"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v" verilog
+#Dependency Lists(Uses List)
+0 8 5 2 3 1 7 4 6
+1 -1
+2 -1
+3 -1
+4 -1
+5 -1
+6 -1
+7 -1
+8 -1
+#Dependency Lists(Users Of)
+0 -1
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+#Design Unit to File Association
+module work uart_rx 8
+module work PWM 5
+module work AMDemodulator 2
+module work CIC 3
+module work Mixer 1
+module work SinCos 7
+module work nco_sig 4
+module work PLL 6
+module work top 0

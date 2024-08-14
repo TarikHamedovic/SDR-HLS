@@ -1,0 +1,36 @@
+#Start recording tcl command: 8/7/2024 15:13:38
+#Project Location: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2; Project name: OneBitSDR
+prj_project new -name "OneBitSDR" -impl "impl1" -dev LFE5U-85F-6BG381C -synthesis "lse"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/AMDemod.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/CIC.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/CIC_v2.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/Mixer.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/NCO.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source"
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/PWM.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/top.v" "/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/AMDemod.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/CIC.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/CIC_v2.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/Mixer.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/NCO.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/PWM.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/top.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/UartRX.v"
+prj_project save
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task TimingSimFileVHD
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task TimingSimFileVHD
+prj_run Export -impl impl1 -task Bitgen
+prj_src exclude "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/CIC_v2.v"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version1/IP/SinCos/SinCos.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/SinCos.v"
+prj_run Export -impl impl1 -task Bitgen
+file copy -force -- "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version1/IP/PLL/PLL.v" "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/impl1/source/PLL.v"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 8/7/2024 15:54:32

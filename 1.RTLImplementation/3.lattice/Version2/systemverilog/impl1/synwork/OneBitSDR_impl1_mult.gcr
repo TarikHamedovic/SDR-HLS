@@ -1,0 +1,30 @@
+i uart_rx_inst.UartClk_1_i[2]
+m 0 0
+u 14 38
+n ckid0_0 {t:uart_rx_inst.r_Rx_DV.C} Derived clock on input (not legal for GCC)
+p {t:uart_rx_inst.UartClk_1_derived_clock[2].OUT[0]}{t:uart_rx_inst.r_Rx_DV.C}
+e ckid0_0 {t:uart_rx_inst.r_Rx_DV.C} dffr
+d ckid0_0 {t:uart_rx_inst.UartClk_1[2:0].Q[2]} dff Derived clock on input (not legal for GCC)
+i uart_rx_inst.UartClk_i[2]
+m 0 0
+u 3 3
+n ckid0_1 {t:uart_rx_inst.r_SM_Main[2].C} Derived clock on input (not legal for GCC)
+p {t:uart_rx_inst.UartClk_derived_clock[2].OUT[0]}{t:uart_rx_inst.r_SM_Main[2].C}
+e ckid0_1 {t:uart_rx_inst.r_SM_Main[2].C} dffr
+d ckid0_1 {t:uart_rx_inst.UartClk[2:0].Q[2]} dff Derived clock on input (not legal for GCC)
+i PLL_inst.CLKOP_i
+m 0 0
+u 118 2675
+n ckid0_2 {t:SinCos_inst.FF_62.CK} Synplify Pro Clock optimization on technology cells not supported in this product
+p {t:PLL_inst.PLLInst_0.CLKOP}{t:PLL_inst.CLKOP_inferred_clock.I[0]}{t:PLL_inst.CLKOP_inferred_clock.OUT[0]}{p:PLL_inst.CLKOP}{t:PLL_inst.CLKOP}{t:SinCos_inst.Clock}{p:SinCos_inst.Clock}{t:SinCos_inst.FF_62.CK}
+e ckid0_2 {t:SinCos_inst.FF_62.CK} FD1P3DX
+d ckid0_2 {t:PLL_inst.PLLInst_0.CLKOP} EHXPLLL Clock source is constant
+i cic_sine_inst.data_clk_i
+m 0 0
+u 7 116
+n ckid0_3 {t:AMDemodulator_inst.amdemod_d[10:0].C} Derived clock on input (not legal for GCC)
+p {t:cic_sine_inst.data_clk_derived_clock.OUT[0]}{p:cic_sine_inst.data_clk}{t:cic_sine_inst.data_clk}{t:AMDemodulator_inst.clk}{p:AMDemodulator_inst.clk}{t:AMDemodulator_inst.amdemod_d[10:0].C}
+e ckid0_3 {t:AMDemodulator_inst.amdemod_d[10:0].C} dff
+d ckid0_3 {t:cic_sine_inst.data_clk.Q[0]} dff Derived clock on input (not legal for GCC)
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

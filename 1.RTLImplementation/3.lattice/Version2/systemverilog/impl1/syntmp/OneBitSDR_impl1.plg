@@ -1,0 +1,37 @@
+@P:  Worst Slack : -2.802
+@P:  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock - Estimated Frequency : 128.2 MHz
+@P:  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock - Requested Frequency : 200.0 MHz
+@P:  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock - Estimated Period : 7.802
+@P:  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock - Requested Period : 5.000
+@P:  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock - Slack : -2.802
+@P:  PLL|CLKOP_inferred_clock - Estimated Frequency : 128.2 MHz
+@P:  PLL|CLKOP_inferred_clock - Requested Frequency : 200.0 MHz
+@P:  PLL|CLKOP_inferred_clock - Estimated Period : 7.802
+@P:  PLL|CLKOP_inferred_clock - Requested Period : 5.000
+@P:  PLL|CLKOP_inferred_clock - Slack : -0.391
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] - Estimated Frequency : 202.1 MHz
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] - Requested Frequency : 200.0 MHz
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] - Estimated Period : 4.947
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] - Requested Period : 5.000
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] - Slack : 0.612
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] - Estimated Frequency : 202.1 MHz
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] - Requested Frequency : 200.0 MHz
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] - Estimated Period : 4.947
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] - Requested Period : 5.000
+@P:  uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] - Slack : 0.052
+@P:  System - Estimated Frequency : 610.5 MHz
+@P:  System - Requested Frequency : 200.0 MHz
+@P:  System - Estimated Period : 1.638
+@P:  System - Requested Period : 5.000
+@P:  System - Slack : 3.362
+@P:  Total Area : 333.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:18s

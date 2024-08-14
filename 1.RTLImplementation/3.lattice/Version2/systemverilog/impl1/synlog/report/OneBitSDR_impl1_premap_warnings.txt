@@ -1,0 +1,5 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data uart_rx_inst.UartClk_1[2]; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data uart_rx_inst.UartClk[2]; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data cic_sine_inst.data_clk; this will likely lead to failure to convert
+@W: MT529 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":35:2:35:10|Found inferred clock PLL|CLKOP_inferred_clock which controls 2675 sequential elements including nco_sig_inst.phase_accum[63:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

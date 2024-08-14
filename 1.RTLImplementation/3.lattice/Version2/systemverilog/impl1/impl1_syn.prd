@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version U-2023.03L-SP1
+#--  Project file /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/impl1_syn.prd
+#--  Written on Wed Aug  7 18:42:44 2024
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

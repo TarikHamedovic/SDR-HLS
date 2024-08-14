@@ -1,0 +1,2246 @@
+<HTML>
+<HEAD><TITLE>Synthesis Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Wed Aug  7 16:20:21 2024
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v" (library work)
+@I::"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v" (library work)
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":8:7:8:9|Synthesizing module PLL in library work.
+Running optimization stage 1 on PLL .......
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":18:8:18:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on PLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":19:7:19:13|Synthesizing module nco_sig in library work.
+
+	WIDTH=32'b00000000000000000000000001000000
+   Generated name = nco_sig_64s
+Running optimization stage 1 on nco_sig_64s .......
+Finished optimization stage 1 on nco_sig_64s (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":367:7:367:9|Synthesizing module INV in library work.
+Running optimization stage 1 on INV .......
+Finished optimization stage 1 on INV (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":810:7:810:10|Synthesizing module XOR2 in library work.
+Running optimization stage 1 on XOR2 .......
+Finished optimization stage 1 on XOR2 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":710:7:710:14|Synthesizing module ROM16X1A in library work.
+Running optimization stage 1 on ROM16X1A .......
+Finished optimization stage 1 on ROM16X1A (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":25:7:25:10|Synthesizing module AND2 in library work.
+Running optimization stage 1 on AND2 .......
+Finished optimization stage 1 on AND2 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":119:7:119:13|Synthesizing module FD1P3DX in library work.
+Running optimization stage 1 on FD1P3DX .......
+Finished optimization stage 1 on FD1P3DX (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":458:7:458:11|Synthesizing module MUX21 in library work.
+Running optimization stage 1 on MUX21 .......
+Finished optimization stage 1 on MUX21 (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":76:7:76:11|Synthesizing module CCU2C in library work.
+Running optimization stage 1 on CCU2C .......
+Finished optimization stage 1 on CCU2C (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":742:7:742:14|Synthesizing module ROM64X1A in library work.
+Running optimization stage 1 on ROM64X1A .......
+Finished optimization stage 1 on ROM64X1A (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":8:7:8:12|Synthesizing module SinCos in library work.
+Running optimization stage 1 on SinCos .......
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":1002:10:1002:26|Removing instance neg_rom_dout_c_nd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":928:10:928:26|Removing instance neg_rom_dout_s_nd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":307:8:307:12|Removing instance INV_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on SinCos (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/Mixer.sv":17:7:17:11|Synthesizing module Mixer in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+   Generated name = Mixer_12s
+Running optimization stage 1 on Mixer_12s .......
+Finished optimization stage 1 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":40:7:40:9|Synthesizing module CIC in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	REGISTER_WIDTH=32'b00000000000000000000000001001000
+	DECIMATION_RATIO=32'b00000000000000000001000000000000
+	GAIN_WIDTH=32'b00000000000000000000000000001000
+	COUNT_WIDTH=32'b00000000000000000000000000001100
+   Generated name = CIC_12s_72s_4096s_8s_12s
+Running optimization stage 1 on CIC_12s_72s_4096s_8s_12s .......
+Finished optimization stage 1 on CIC_12s_72s_4096s_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":19:7:19:19|Synthesizing module AMDemodulator in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	N=32'b00000000000000000000000000011000
+   Generated name = AMDemodulator_12s_24s
+Running optimization stage 1 on AMDemodulator_12s_24s .......
+@W: CL265 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Removing unused bit 24 of square_sum[24:0]. Either assign all bits or reduce the width of the signal.
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused bits 1 to 0 of square_sum[24:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_d[11] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 11 of amdemod_d[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 12 of mult_q_a[12:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused register mult_q_b[12:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning unused register mult_i_b[11:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on AMDemodulator_12s_24s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":29:7:29:9|Synthesizing module PWM in library work.
+
+	INPUT_WIDTH=32'b00000000000000000000000000001100
+	COUNTER_WIDTH=32'b00000000000000000000000000001010
+	OFFSET=32'b00000000000000000000001000000000
+   Generated name = PWM_12s_10s_512s
+Running optimization stage 1 on PWM_12s_10s_512s .......
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":42:2:42:10|Pruning unused bits 11 to 10 of data_in_reg[11:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on PWM_12s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":19:7:19:13|Synthesizing module uart_rx in library work.
+
+	CLKS_PER_BIT=32'b00000000000000000000000001010111
+	s_IDLE=3'b000
+	s_RX_START_BIT=3'b001
+	s_RX_DATA_BITS=3'b010
+	s_RX_STOP_BIT=3'b011
+	s_CLEANUP=3'b100
+   Generated name = uart_rx_87s_0_1_2_3_4
+Running optimization stage 1 on uart_rx_87s_0_1_2_3_4 .......
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on uart_rx_87s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":35:7:35:9|Synthesizing module top in library work.
+@W: CG133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":67:22:67:30|Object phase_inc is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":83:22:83:28|Object cic_clk is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on top .......
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[2] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[3] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[4] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[5] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[6] is always 0.
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Register bit cic_gain[7] is always 0.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Pruning register bits 7 to 2 of cic_gain[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on top .......
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on uart_rx_87s_0_1_2_3_4 .......
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@W: CL279 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning register bits 7 to 3 of UartClk[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Pruning unused register UartClk[2:0]. Make sure that there are no unused intermediate registers.
+@N: CL201 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":66:2:66:7|Trying to extract state machine for register r_SM_Main.
+Finished optimization stage 2 on uart_rx_87s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on PWM_12s_10s_512s .......
+@W: CL246 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":35:35:35:41|Input port bits 11 to 10 of data_in[11:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on PWM_12s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on AMDemodulator_12s_24s .......
+@N: CL189 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Register bit amdemod_out[11] is always 0.
+@W: CL260 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pruning register bit 11 of amdemod_out[11:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on AMDemodulator_12s_24s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on CIC_12s_72s_4096s_8s_12s .......
+Finished optimization stage 2 on CIC_12s_72s_4096s_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on Mixer_12s .......
+Finished optimization stage 2 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on SinCos .......
+Finished optimization stage 2 on SinCos (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on ROM64X1A .......
+Finished optimization stage 2 on ROM64X1A (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on CCU2C .......
+Finished optimization stage 2 on CCU2C (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on MUX21 .......
+Finished optimization stage 2 on MUX21 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on FD1P3DX .......
+Finished optimization stage 2 on FD1P3DX (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on AND2 .......
+Finished optimization stage 2 on AND2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on ROM16X1A .......
+Finished optimization stage 2 on ROM16X1A (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on XOR2 .......
+Finished optimization stage 2 on XOR2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on INV .......
+Finished optimization stage 2 on INV (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on nco_sig_64s .......
+Finished optimization stage 2 on nco_sig_64s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on PLL .......
+Finished optimization stage 2 on PLL (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on EHXPLLL .......
+Finished optimization stage 2 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on VLO .......
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 147MB peak: 147MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 136MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/OneBitSDR_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:24 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug  7 16:20:25 2024
+
+###########################################################]
+Premap Report
+
+# Wed Aug  7 16:20:25 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 213MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/OneBitSDR_impl1_scck.rpt 
+See clock summary report "/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/OneBitSDR_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 241MB peak: 241MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 243MB peak: 243MB)
+
+NConnInternalConnection caching is on
+@N: FX493 |Applying initial value "1" on instance rf_in_delayed_1.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "1" on instance rf_in_delayed_2.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data_R.
+@N: FX493 |Applying initial value "00000000" on instance r_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "000" on instance r_SM_Main[2:0].
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV.
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 294MB peak: 294MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 294MB peak: 294MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 294MB peak: 294MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 294MB peak: 294MB)
+
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":596:12:596:16|Removing sequential instance FF_25 (in view: work.SinCos(verilog)) of type view:LUCENT.FD1P3DX(PRIM) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/SinCos.v":647:12:647:16|Removing sequential instance FF_12 (in view: work.SinCos(verilog)) of type view:LUCENT.FD1P3DX(PRIM) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance data_clk (in view: work.CIC_12s_72s_4096s_8s_12s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":64:2:64:10|Removing sequential instance decimation_clk (in view: work.CIC_12s_72s_4096s_8s_12s_0(verilog)) of type view:PrimLib.sdffse(prim) because it does not drive other instances.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+
+mixed edge conversion for GCC is OFF
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data uart_rx_inst.UartClk_1[2]; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data uart_rx_inst.UartClk[2]; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data cic_sine_inst.data_clk; this will likely lead to failure to convert
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                                   Requested     Requested     Clock                                       Clock               Clock
+Level     Clock                                                   Frequency     Period        Type                                        Group               Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                  200.0 MHz     5.000         system                                      system_clkgroup     0    
+                                                                                                                                                                   
+0 -       PLL|CLKOP_inferred_clock                                200.0 MHz     5.000         inferred                                    (multiple)          2675 
+1 .         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          116  
+1 .         uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          38   
+1 .         uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        200.0 MHz     5.000         derived (from PLL|CLKOP_inferred_clock)     (multiple)          3    
+===================================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                      Clock     Source                                    Clock Pin                               Non-clock Pin     Non-clock Pin
+Clock                                                 Load      Pin                                       Seq Example                             Seq Example       Comb Example 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                0         -                                         -                                       -                 -            
+                                                                                                                                                                                 
+PLL|CLKOP_inferred_clock                              2675      PLL_inst.PLLInst_0.CLKOP(EHXPLLL)         phase_inc_gen1[63:0].C                  -                 -            
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     116       cic_sine_inst.data_clk.Q[0](dff)          AMDemodulator_inst.mult_i_a[11:0].C     -                 -            
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      38        uart_rx_inst.UartClk_1[2:0].Q[2](dff)     uart_rx_inst.o_Rx_Byte[7:0].C           -                 -            
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        3         uart_rx_inst.UartClk[2:0].Q[2](dff)       uart_rx_inst.r_SM_Main[0].C             -                 -            
+=================================================================================================================================================================================
+
+@W: MT529 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":35:2:35:10|Found inferred clock PLL|CLKOP_inferred_clock which controls 2675 sequential elements including nco_sig_inst.phase_accum[63:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+4 gated/generated clock tree(s) driving 2832 clock pin(s) of sequential element(s)
+0 instances converted, 2832 sequential instances remain driven by gated/generated clocks
+
+================================================================================================== Gated/Generated Clocks ===================================================================================================
+Clock Tree ID     Driving Element                      Drive Element Type     Unconverted Fanout     Sample Instance                        Explanation                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       uart_rx_inst.UartClk_1[2:0].Q[2]     dff                    38                     uart_rx_inst.r_Rx_DV                   Derived clock on input (not legal for GCC)                                       
+@KP:ckid0_1       uart_rx_inst.UartClk[2:0].Q[2]       dff                    3                      uart_rx_inst.r_SM_Main[2]              Derived clock on input (not legal for GCC)                                       
+@KP:ckid0_2       PLL_inst.PLLInst_0.CLKOP             EHXPLLL                2675                   SinCos_inst.FF_62                      Synplify Pro Clock optimization on technology cells not supported in this product
+@KP:ckid0_3       cic_sine_inst.data_clk.Q[0]          dff                    116                    AMDemodulator_inst.amdemod_d[10:0]     Derived clock on input (not legal for GCC)                                       
+=============================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 297MB peak: 297MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 297MB peak: 297MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 298MB peak: 298MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 298MB peak: 298MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Aug  7 16:20:26 2024
+
+###########################################################]
+Map & Optimize Report
+
+# Wed Aug  7 16:20:27 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.4 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47066
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 213MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 229MB peak: 229MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 240MB peak: 240MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 291MB peak: 291MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: BN132 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":49:14:49:28|Removing user instance uart_rx_inst.UartClk_0[2:0] because it is equivalent to instance uart_rx_inst.UartClk_2[2:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/UartRX.v":47:3:47:8|Removing sequential instance uart_rx_inst.UartClk_1[2:0] because it is equivalent to instance uart_rx_inst.UartClk[2:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":79:24:79:33|Removing user instance cic_cosine_inst.un2_count[11:0] because it is equivalent to instance cic_sine_inst.un2_count[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":64:2:64:10|Removing sequential instance cic_cosine_inst.count[11:0] because it is equivalent to instance cic_sine_inst.count[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":64:2:64:10|Removing sequential instance cic_cosine_inst.valid_comb because it is equivalent to instance cic_sine_inst.valid_comb. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 298MB peak: 298MB)
+
+@N: MO231 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":42:2:42:10|Found counter in view:work.top(verilog) instance pwm_inst.count[9:0] 
+@N: MO231 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":64:2:64:10|Found counter in view:work.top(verilog) instance cic_sine_inst.count[11:0] 
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[11] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[10] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[9] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[8] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[7] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[6] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[5] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[4] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[3] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[2] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[1] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_sine_inst.comb10[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/CIC.sv":88:2:88:10|Removing sequential instance cic_cosine_inst.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synlog/OneBitSDR_impl1_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance UartClk[0].
+@N: FX493 |Applying initial value "0" on instance UartClk[1].
+@N: FX493 |Applying initial value "0" on instance UartClk[2].
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 305MB peak: 305MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 305MB peak: 305MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 305MB peak: 305MB)
+
+@N: FA113 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":250:13:250:16|Pipelining module un1_phase_inc_gen[63:0]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Pushed in register phase_inc_gen[63:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/top.sv":237:2:237:10|Pushed in register phase_inc_gen1[63:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/NCO.sv":35:2:35:10|Pushed in register phase_accum[63:0].
+@N: FA113 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":62:19:62:37|Pipelining module un12_r[4:0]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pushed in register amdemod_d[10:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pushed in register amdemod_out_1[10:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":42:2:42:10|Pushed in register data_in_reg[9:0].
+@N: FA113 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":62:19:62:37|Pipelining module un12_r[4:0]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :|Pushed in register NoName.
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pushed in register amdemod_d[10:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/AMDemod.sv":78:2:78:10|Pushed in register amdemod_out_1[10:0].
+@N: MF169 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PWM.sv":42:2:42:10|Pushed in register data_in_reg[9:0].
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 316MB peak: 316MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 317MB peak: 317MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 318MB peak: 318MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 318MB peak: 318MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 324MB peak: 324MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:09s		    -2.19ns		 291 /      2601
+   2		0h:00m:09s		    -2.19ns		 290 /      2601
+   3		0h:00m:09s		    -2.19ns		 291 /      2601
+@N: FX271 :|Replicating instance AMDemodulator_inst.amdemod_out_1_pipe_1 (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
+Timing driven replication report
+Added 1 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   4		0h:00m:10s		    -2.00ns		 292 /      2602
+   5		0h:00m:11s		    -2.27ns		 297 /      2602
+   6		0h:00m:11s		    -2.87ns		 299 /      2602
+
+
+   7		0h:00m:11s		    -2.38ns		 301 /      2602
+Net buffering Report for view:work.top(verilog):
+Added 0 Buffers
+Added 1 Registers via replication
+Added 1 LUTs via replication
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 324MB peak: 324MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 324MB peak: 324MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 324MB peak: 324MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 324MB peak: 324MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 324MB peak: 324MB)
+
+Writing Analyst data base /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/synwork/OneBitSDR_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 324MB peak: 324MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/OneBitSDR_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 324MB peak: 324MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 324MB peak: 324MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 324MB peak: 324MB)
+
+@W: MT246 :"/home/user/SDR-HLS/1.RTLImplementation/3.lattice/Version2/systemverilog/impl1/source/PLL.v":54:12:54:20|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock PLL|CLKOP_inferred_clock with period 5.00ns. Please declare a user-defined clock on net PLL_inst.clk_80mhz.
+@N: MT615 |Found clock CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock with period 5.00ns 
+@N: MT615 |Found clock uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] with period 5.00ns 
+@N: MT615 |Found clock uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] with period 5.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Wed Aug  7 16:20:45 2024
+#
+
+
+Top view:               top
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -2.802
+
+                                                      Requested     Estimated     Requested     Estimated                Clock                                       Clock          
+Starting Clock                                        Frequency     Frequency     Period        Period        Slack      Type                                        Group          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     200.0 MHz     128.2 MHz     5.000         7.802         -2.802     derived (from PLL|CLKOP_inferred_clock)     (multiple)     
+PLL|CLKOP_inferred_clock                              200.0 MHz     128.2 MHz     5.000         7.802         -0.391     inferred                                    (multiple)     
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]      200.0 MHz     202.1 MHz     5.000         4.947         0.612      derived (from PLL|CLKOP_inferred_clock)     (multiple)     
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]        200.0 MHz     202.1 MHz     5.000         4.947         0.052      derived (from PLL|CLKOP_inferred_clock)     (multiple)     
+System                                                200.0 MHz     610.5 MHz     5.000         1.638         3.362      system                                      system_clkgroup
+====================================================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                           Ending                                             |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                             System                                             |  5.000       3.362   |  No paths    -      |  No paths    -      |  No paths    -    
+System                                             PLL|CLKOP_inferred_clock                           |  5.000       3.534   |  No paths    -      |  No paths    -      |  No paths    -    
+System                                             CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock  |  5.000       2.408   |  No paths    -      |  No paths    -      |  No paths    -    
+PLL|CLKOP_inferred_clock                           System                                             |  5.000       1.819   |  No paths    -      |  No paths    -      |  No paths    -    
+PLL|CLKOP_inferred_clock                           PLL|CLKOP_inferred_clock                           |  5.000       -0.391  |  No paths    -      |  No paths    -      |  No paths    -    
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock  PLL|CLKOP_inferred_clock                           |  5.000       -2.802  |  No paths    -      |  No paths    -      |  No paths    -    
+CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock  CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock  |  5.000       1.925   |  No paths    -      |  No paths    -      |  No paths    -    
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     |  5.000       7.242   |  No paths    -      |  No paths    -      |  No paths    -    
+uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]   |  5.000       0.053   |  No paths    -      |  No paths    -      |  No paths    -    
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]   PLL|CLKOP_inferred_clock                           |  5.000       3.991   |  No paths    -      |  No paths    -      |  No paths    -    
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]   uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     |  5.000       0.612   |  No paths    -      |  No paths    -      |  No paths    -    
+uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]   uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]   |  5.000       3.768   |  No paths    -      |  No paths    -      |  No paths    -    
+=============================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                 Starting                                                                                                Arrival           
+Instance                                         Reference                                             Type        Pin     Net                           Time        Slack 
+                                                 Clock                                                                                                                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_1_fast     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       amdemod_out_1_pipe_1_fast     1.039       -2.802
+AMDemodulator_inst.amdemod_out_1_pipe_31         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un38_r_0[8]                   1.027       -2.790
+AMDemodulator_inst.amdemod_out_1_pipe_40         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un36_r_0[8]                   1.027       -2.790
+AMDemodulator_inst.amdemod_out_1_pipe_46         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un42_r_0[4]                   0.853       -2.677
+AMDemodulator_inst.amdemod_out_1_pipe_80         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un48_r                        0.985       -2.603
+AMDemodulator_inst.amdemod_out_1_pipe_37         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un42_r_0[0]                   0.907       -2.463
+AMDemodulator_inst.amdemod_out_1_pipe_104        CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un48_r_axb_1_i                0.907       -2.463
+AMDemodulator_inst.amdemod_out_1_pipe_26         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un44_r_0[4]                   0.907       -2.305
+AMDemodulator_inst.amdemod_out_1_pipe_27         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un44_r_0[5]                   0.907       -2.244
+AMDemodulator_inst.amdemod_out_1_pipe_28         CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     Q       un44_r_0[6]                   0.907       -2.244
+===========================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                             Starting                                                                                           Required           
+Instance                                     Reference                                             Type        Pin     Net                      Time         Slack 
+                                             Clock                                                                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.data_in_reg_pipe_8        CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1P3AX     D       un1_square_sum_0[12]     4.946        -2.802
+AMDemodulator_inst.data_in_reg_pipe_7        CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1P3AX     D       un1_r_7_0[11]            4.946        -1.820
+AMDemodulator_inst.data_in_reg_pipe_6        CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1P3AX     D       un1_r_6_0[10]            4.946        -0.154
+AMDemodulator_inst.amdemod_out_1_pipe_36     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un44_r_0_0[9]            9.946        1.925 
+AMDemodulator_inst.amdemod_out_1_pipe_51     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un42_r_0_0[9]            9.946        1.925 
+AMDemodulator_inst.amdemod_out_1_pipe_30     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un44_r_0_0[7]            9.946        1.986 
+AMDemodulator_inst.amdemod_out_1_pipe_35     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un44_r_0_0[8]            9.946        1.986 
+AMDemodulator_inst.amdemod_out_1_pipe_49     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un42_r_0_0[7]            9.946        1.986 
+AMDemodulator_inst.amdemod_out_1_pipe_50     CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1S3AX     D       un42_r_0_0[8]            9.946        1.986 
+AMDemodulator_inst.data_in_reg_pipe_5        CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock     FD1P3AX     D       un1_r_5_0[9]             4.946        2.266 
+===================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      7.748
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.802
+
+    Number of logic level(s):                10
+    Starting point:                          AMDemodulator_inst.amdemod_out_1_pipe_1_fast / Q
+    Ending point:                            AMDemodulator_inst.data_in_reg_pipe_8 / D
+    The start point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_1_fast     FD1S3AX      Q        Out     1.039     1.039 r     -         
+amdemod_out_1_pipe_1_fast                        Net          -        -       -         -           8         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     A        In      0.000     1.039 r     -         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     Z        Out     0.822     1.861 r     -         
+un1_r_4_0[8]                                     Net          -        -       -         -           15        
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     B        In      0.000     1.861 r     -         
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     Z        Out     0.606     2.467 r     -         
+un48_r_axb_5                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        A0       In      0.000     2.467 r     -         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        COUT     Out     0.900     3.367 r     -         
+un48_r_cry_6                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        CIN      In      0.000     3.367 r     -         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        COUT     Out     0.061     3.428 r     -         
+un48_r_cry_8                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        CIN      In      0.000     3.428 r     -         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        S1       Out     0.872     4.300 r     -         
+un48_r_0[10]                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     B        In      0.000     4.300 r     -         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     Z        Out     0.801     5.101 r     -         
+un1_r_6_0[10]                                    Net          -        -       -         -           10        
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     A        In      0.000     5.101 r     -         
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     Z        Out     0.660     5.761 r     -         
+un1_r_7_0[7]                                     Net          -        -       -         -           2         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        B0       In      0.000     5.761 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        COUT     Out     0.900     6.660 r     -         
+un1_square_sum_0_cry_10                          Net          -        -       -         -           1         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        CIN      In      0.000     6.660 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        S1       Out     0.698     7.358 r     -         
+un1_square_sum0_0[12]                            Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     A        In      0.000     7.358 r     -         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     Z        Out     0.390     7.748 r     -         
+un1_square_sum_0[12]                             Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8            FD1P3AX      D        In      0.000     7.748 r     -         
+===============================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      7.748
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.802
+
+    Number of logic level(s):                10
+    Starting point:                          AMDemodulator_inst.amdemod_out_1_pipe_1_fast / Q
+    Ending point:                            AMDemodulator_inst.data_in_reg_pipe_8 / D
+    The start point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_1_fast     FD1S3AX      Q        Out     1.039     1.039 r     -         
+amdemod_out_1_pipe_1_fast                        Net          -        -       -         -           8         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     A        In      0.000     1.039 r     -         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     Z        Out     0.822     1.861 r     -         
+un1_r_4_0[8]                                     Net          -        -       -         -           15        
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     B        In      0.000     1.861 r     -         
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     Z        Out     0.606     2.467 r     -         
+un48_r_axb_5                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        A0       In      0.000     2.467 r     -         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        COUT     Out     0.900     3.367 r     -         
+un48_r_cry_6                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        CIN      In      0.000     3.367 r     -         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        COUT     Out     0.061     3.428 r     -         
+un48_r_cry_8                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        CIN      In      0.000     3.428 r     -         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        S1       Out     0.872     4.300 r     -         
+un48_r_0[10]                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     B        In      0.000     4.300 r     -         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     Z        Out     0.801     5.101 r     -         
+un1_r_6_0[10]                                    Net          -        -       -         -           10        
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6_0      ORCALUT4     A        In      0.000     5.101 r     -         
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6_0      ORCALUT4     Z        Out     0.660     5.761 r     -         
+un1_r_7_0[8]                                     Net          -        -       -         -           2         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        B1       In      0.000     5.761 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        COUT     Out     0.900     6.660 r     -         
+un1_square_sum_0_cry_10                          Net          -        -       -         -           1         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        CIN      In      0.000     6.660 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        S1       Out     0.698     7.358 r     -         
+un1_square_sum0_0[12]                            Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     A        In      0.000     7.358 r     -         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     Z        Out     0.390     7.748 r     -         
+un1_square_sum_0[12]                             Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8            FD1P3AX      D        In      0.000     7.748 r     -         
+===============================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      7.748
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.802
+
+    Number of logic level(s):                10
+    Starting point:                          AMDemodulator_inst.amdemod_out_1_pipe_1_fast / Q
+    Ending point:                            AMDemodulator_inst.data_in_reg_pipe_8 / D
+    The start point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_1_fast     FD1S3AX      Q        Out     1.039     1.039 r     -         
+amdemod_out_1_pipe_1_fast                        Net          -        -       -         -           8         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     A        In      0.000     1.039 r     -         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     Z        Out     0.822     1.861 r     -         
+un1_r_4_0[8]                                     Net          -        -       -         -           15        
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     B        In      0.000     1.861 r     -         
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     Z        Out     0.606     2.467 r     -         
+un48_r_axb_5                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        A0       In      0.000     2.467 r     -         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        COUT     Out     0.900     3.367 r     -         
+un48_r_cry_6                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        CIN      In      0.000     3.367 r     -         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        COUT     Out     0.061     3.428 r     -         
+un48_r_cry_8                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        CIN      In      0.000     3.428 r     -         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        S1       Out     0.872     4.300 r     -         
+un48_r_0[10]                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     B        In      0.000     4.300 r     -         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     Z        Out     0.801     5.101 r     -         
+un1_r_6_0[10]                                    Net          -        -       -         -           10        
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     A        In      0.000     5.101 r     -         
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     Z        Out     0.660     5.761 r     -         
+un1_r_7_0[7]                                     Net          -        -       -         -           2         
+AMDemodulator_inst.un1_square_sum_1_cry_9_0      CCU2C        B0       In      0.000     5.761 r     -         
+AMDemodulator_inst.un1_square_sum_1_cry_9_0      CCU2C        COUT     Out     0.900     6.660 r     -         
+un1_square_sum_1_cry_10                          Net          -        -       -         -           1         
+AMDemodulator_inst.un1_square_sum_1_cry_11_0     CCU2C        CIN      In      0.000     6.660 r     -         
+AMDemodulator_inst.un1_square_sum_1_cry_11_0     CCU2C        S1       Out     0.698     7.358 r     -         
+un1_square_sum1_0[12]                            Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     B        In      0.000     7.358 r     -         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     Z        Out     0.390     7.748 r     -         
+un1_square_sum_0[12]                             Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8            FD1P3AX      D        In      0.000     7.748 r     -         
+===============================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      7.748
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.802
+
+    Number of logic level(s):                10
+    Starting point:                          AMDemodulator_inst.amdemod_out_1_pipe_1_fast / Q
+    Ending point:                            AMDemodulator_inst.data_in_reg_pipe_8 / D
+    The start point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_1_fast     FD1S3AX      Q        Out     1.039     1.039 r     -         
+amdemod_out_1_pipe_1_fast                        Net          -        -       -         -           8         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     A        In      0.000     1.039 r     -         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     Z        Out     0.822     1.861 r     -         
+un1_r_4_0[8]                                     Net          -        -       -         -           15        
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     B        In      0.000     1.861 r     -         
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     Z        Out     0.606     2.467 r     -         
+un48_r_axb_5                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        A0       In      0.000     2.467 r     -         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        COUT     Out     0.900     3.367 r     -         
+un48_r_cry_6                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        CIN      In      0.000     3.367 r     -         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        COUT     Out     0.061     3.428 r     -         
+un48_r_cry_8                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        CIN      In      0.000     3.428 r     -         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        S1       Out     0.872     4.300 r     -         
+un48_r_0[10]                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     B        In      0.000     4.300 r     -         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     Z        Out     0.801     5.101 r     -         
+un1_r_6_0[10]                                    Net          -        -       -         -           10        
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6_0      ORCALUT4     A        In      0.000     5.101 r     -         
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6_0      ORCALUT4     Z        Out     0.660     5.761 r     -         
+un1_r_7_0[8]                                     Net          -        -       -         -           2         
+AMDemodulator_inst.un1_square_sum_1_cry_9_0      CCU2C        B1       In      0.000     5.761 r     -         
+AMDemodulator_inst.un1_square_sum_1_cry_9_0      CCU2C        COUT     Out     0.900     6.660 r     -         
+un1_square_sum_1_cry_10                          Net          -        -       -         -           1         
+AMDemodulator_inst.un1_square_sum_1_cry_11_0     CCU2C        CIN      In      0.000     6.660 r     -         
+AMDemodulator_inst.un1_square_sum_1_cry_11_0     CCU2C        S1       Out     0.698     7.358 r     -         
+un1_square_sum1_0[12]                            Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     B        In      0.000     7.358 r     -         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     Z        Out     0.390     7.748 r     -         
+un1_square_sum_0[12]                             Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8            FD1P3AX      D        In      0.000     7.748 r     -         
+===============================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      7.736
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.790
+
+    Number of logic level(s):                10
+    Starting point:                          AMDemodulator_inst.amdemod_out_1_pipe_31 / Q
+    Ending point:                            AMDemodulator_inst.data_in_reg_pipe_8 / D
+    The start point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_out_1_pipe_31         FD1S3AX      Q        Out     1.027     1.027 r     -         
+un38_r_0[8]                                      Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     C        In      0.000     1.027 r     -         
+AMDemodulator_inst.un1_r_4[8]                    ORCALUT4     Z        Out     0.822     1.849 r     -         
+un1_r_4_0[8]                                     Net          -        -       -         -           15        
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     B        In      0.000     1.849 r     -         
+AMDemodulator_inst.un48_r_cry_5_0_RNO            ORCALUT4     Z        Out     0.606     2.455 r     -         
+un48_r_axb_5                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        A0       In      0.000     2.455 r     -         
+AMDemodulator_inst.un48_r_cry_5_0                CCU2C        COUT     Out     0.900     3.355 r     -         
+un48_r_cry_6                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        CIN      In      0.000     3.355 r     -         
+AMDemodulator_inst.un48_r_cry_7_0                CCU2C        COUT     Out     0.061     3.416 r     -         
+un48_r_cry_8                                     Net          -        -       -         -           1         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        CIN      In      0.000     3.416 r     -         
+AMDemodulator_inst.un48_r_cry_9_0                CCU2C        S1       Out     0.872     4.287 r     -         
+un48_r_0[10]                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     B        In      0.000     4.287 r     -         
+AMDemodulator_inst.un1_r_6_mb[10]                ORCALUT4     Z        Out     0.801     5.088 r     -         
+un1_r_6_0[10]                                    Net          -        -       -         -           10        
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     A        In      0.000     5.088 r     -         
+AMDemodulator_inst.un54_r_cry_7_0_RNIC4I6        ORCALUT4     Z        Out     0.660     5.748 r     -         
+un1_r_7_0[7]                                     Net          -        -       -         -           2         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        B0       In      0.000     5.748 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_9_0      CCU2C        COUT     Out     0.900     6.649 r     -         
+un1_square_sum_0_cry_10                          Net          -        -       -         -           1         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        CIN      In      0.000     6.649 r     -         
+AMDemodulator_inst.un1_square_sum_0_cry_11_0     CCU2C        S1       Out     0.698     7.346 r     -         
+un1_square_sum0_0[12]                            Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     A        In      0.000     7.346 r     -         
+AMDemodulator_inst.data_in_reg_pipe_8_RNO        ORCALUT4     Z        Out     0.390     7.736 r     -         
+un1_square_sum_0[12]                             Net          -        -       -         -           1         
+AMDemodulator_inst.data_in_reg_pipe_8            FD1P3AX      D        In      0.000     7.736 r     -         
+===============================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: PLL|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                                       Arrival           
+Instance                  Reference                    Type        Pin     Net                           Time        Slack 
+                          Clock                                                                                            
+---------------------------------------------------------------------------------------------------------------------------
+rx_byte[4]                PLL|CLKOP_inferred_clock     FD1S3AX     Q       led_c[4]                      1.108       -0.391
+phase_inc_gen_pipe_2      PLL|CLKOP_inferred_clock     FD1P3AX     Q       un1_rx_byte_10f               1.146       -0.349
+rx_byte[2]                PLL|CLKOP_inferred_clock     FD1S3AX     Q       led_c[2]                      1.078       -0.340
+rx_byte[1]                PLL|CLKOP_inferred_clock     FD1S3AX     Q       led_c[1]                      1.048       -0.331
+rx_byte[0]                PLL|CLKOP_inferred_clock     FD1S3AX     Q       led_c[0]                      1.101       -0.321
+rx_byte[3]                PLL|CLKOP_inferred_clock     FD1S3AX     Q       led_c[3]                      1.027       -0.288
+phase_inc_gen_pipe_1      PLL|CLKOP_inferred_clock     FD1P3AX     Q       phase_inc_gen_cnstf[0]        1.027       -0.230
+phase_inc_gen_pipe_4      PLL|CLKOP_inferred_clock     FD1P3AX     Q       phase_inc_gen_cnstf[1]        0.985       -0.127
+phase_inc_gen_pipe_7      PLL|CLKOP_inferred_clock     FD1P3AX     Q       phase_inc_gen_cnst_if[13]     0.985       -0.127
+phase_inc_gen_pipe_13     PLL|CLKOP_inferred_clock     FD1P3AX     Q       phase_inc_gen_pipe_13         1.039       -0.119
+===========================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                                                   Required           
+Instance                   Reference                    Type        Pin     Net                       Time         Slack 
+                           Clock                                                                                         
+-------------------------------------------------------------------------------------------------------------------------
+phase_inc_gen[63]          PLL|CLKOP_inferred_clock     FD1P3IX     D       phase_inc_gen_8[63]       4.946        -0.391
+phase_inc_gen[61]          PLL|CLKOP_inferred_clock     FD1P3IX     D       phase_inc_gen_8[61]       4.946        -0.330
+phase_inc_gen[62]          PLL|CLKOP_inferred_clock     FD1P3IX     D       phase_inc_gen_8[62]       4.946        -0.330
+phase_inc_gen_pipe_159     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[59]     4.946        -0.269
+phase_inc_gen_pipe_162     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[60]     4.946        -0.269
+phase_inc_gen[57]          PLL|CLKOP_inferred_clock     FD1P3IX     D       phase_inc_gen_8[57]       4.946        -0.208
+phase_inc_gen_pipe_156     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[58]     4.946        -0.208
+phase_inc_gen_pipe_150     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[55]     4.946        -0.147
+phase_inc_gen_pipe_153     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[56]     4.946        -0.147
+phase_inc_gen_pipe_144     PLL|CLKOP_inferred_clock     FD1P3AX     D       un1_phase_inc_gen[53]     4.946        -0.086
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      5.337
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.391
+
+    Number of logic level(s):                32
+    Starting point:                          rx_byte[4] / Q
+    Ending point:                            phase_inc_gen[63] / D
+    The start point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+rx_byte[4]                     FD1S3AX      Q        Out     1.108     1.108 r     -         
+led_c[4]                       Net          -        -       -         -           29        
+un11_0_a2[4]                   ORCALUT4     B        In      0.000     1.108 r     -         
+un11_0_a2[4]                   ORCALUT4     Z        Out     0.863     1.971 f     -         
+N_165                          Net          -        -       -         -           30        
+un1_phase_inc_gen_cry_3_0      CCU2C        C1       In      0.000     1.971 f     -         
+un1_phase_inc_gen_cry_3_0      CCU2C        COUT     Out     0.900     2.871 r     -         
+un1_phase_inc_gen_cry_4        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_5_0      CCU2C        CIN      In      0.000     2.871 r     -         
+un1_phase_inc_gen_cry_5_0      CCU2C        COUT     Out     0.061     2.932 r     -         
+un1_phase_inc_gen_cry_6        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_7_0      CCU2C        CIN      In      0.000     2.932 r     -         
+un1_phase_inc_gen_cry_7_0      CCU2C        COUT     Out     0.061     2.993 r     -         
+un1_phase_inc_gen_cry_8        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_9_0      CCU2C        CIN      In      0.000     2.993 r     -         
+un1_phase_inc_gen_cry_9_0      CCU2C        COUT     Out     0.061     3.054 r     -         
+un1_phase_inc_gen_cry_10       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_11_0     CCU2C        CIN      In      0.000     3.054 r     -         
+un1_phase_inc_gen_cry_11_0     CCU2C        COUT     Out     0.061     3.115 r     -         
+un1_phase_inc_gen_cry_12       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_13_0     CCU2C        CIN      In      0.000     3.115 r     -         
+un1_phase_inc_gen_cry_13_0     CCU2C        COUT     Out     0.061     3.176 r     -         
+un1_phase_inc_gen_cry_14       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_15_0     CCU2C        CIN      In      0.000     3.176 r     -         
+un1_phase_inc_gen_cry_15_0     CCU2C        COUT     Out     0.061     3.237 r     -         
+un1_phase_inc_gen_cry_16       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_17_0     CCU2C        CIN      In      0.000     3.237 r     -         
+un1_phase_inc_gen_cry_17_0     CCU2C        COUT     Out     0.061     3.298 r     -         
+un1_phase_inc_gen_cry_18       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_19_0     CCU2C        CIN      In      0.000     3.298 r     -         
+un1_phase_inc_gen_cry_19_0     CCU2C        COUT     Out     0.061     3.359 r     -         
+un1_phase_inc_gen_cry_20       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_21_0     CCU2C        CIN      In      0.000     3.359 r     -         
+un1_phase_inc_gen_cry_21_0     CCU2C        COUT     Out     0.061     3.420 r     -         
+un1_phase_inc_gen_cry_22       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_23_0     CCU2C        CIN      In      0.000     3.420 r     -         
+un1_phase_inc_gen_cry_23_0     CCU2C        COUT     Out     0.061     3.481 r     -         
+un1_phase_inc_gen_cry_24       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_25_0     CCU2C        CIN      In      0.000     3.481 r     -         
+un1_phase_inc_gen_cry_25_0     CCU2C        COUT     Out     0.061     3.542 r     -         
+un1_phase_inc_gen_cry_26       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_27_0     CCU2C        CIN      In      0.000     3.542 r     -         
+un1_phase_inc_gen_cry_27_0     CCU2C        COUT     Out     0.061     3.603 r     -         
+un1_phase_inc_gen_cry_28       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_29_0     CCU2C        CIN      In      0.000     3.603 r     -         
+un1_phase_inc_gen_cry_29_0     CCU2C        COUT     Out     0.061     3.664 r     -         
+un1_phase_inc_gen_cry_30       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_31_0     CCU2C        CIN      In      0.000     3.664 r     -         
+un1_phase_inc_gen_cry_31_0     CCU2C        COUT     Out     0.061     3.725 r     -         
+un1_phase_inc_gen_cry_32       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_33_0     CCU2C        CIN      In      0.000     3.725 r     -         
+un1_phase_inc_gen_cry_33_0     CCU2C        COUT     Out     0.061     3.786 r     -         
+un1_phase_inc_gen_cry_34       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_35_0     CCU2C        CIN      In      0.000     3.786 r     -         
+un1_phase_inc_gen_cry_35_0     CCU2C        COUT     Out     0.061     3.847 r     -         
+un1_phase_inc_gen_cry_36       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_37_0     CCU2C        CIN      In      0.000     3.847 r     -         
+un1_phase_inc_gen_cry_37_0     CCU2C        COUT     Out     0.061     3.908 r     -         
+un1_phase_inc_gen_cry_38       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_39_0     CCU2C        CIN      In      0.000     3.908 r     -         
+un1_phase_inc_gen_cry_39_0     CCU2C        COUT     Out     0.061     3.969 r     -         
+un1_phase_inc_gen_cry_40       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_41_0     CCU2C        CIN      In      0.000     3.969 r     -         
+un1_phase_inc_gen_cry_41_0     CCU2C        COUT     Out     0.061     4.030 r     -         
+un1_phase_inc_gen_cry_42       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_43_0     CCU2C        CIN      In      0.000     4.030 r     -         
+un1_phase_inc_gen_cry_43_0     CCU2C        COUT     Out     0.061     4.091 r     -         
+un1_phase_inc_gen_cry_44       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_45_0     CCU2C        CIN      In      0.000     4.091 r     -         
+un1_phase_inc_gen_cry_45_0     CCU2C        COUT     Out     0.061     4.152 r     -         
+un1_phase_inc_gen_cry_46       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_47_0     CCU2C        CIN      In      0.000     4.152 r     -         
+un1_phase_inc_gen_cry_47_0     CCU2C        COUT     Out     0.061     4.213 r     -         
+un1_phase_inc_gen_cry_48       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_49_0     CCU2C        CIN      In      0.000     4.213 r     -         
+un1_phase_inc_gen_cry_49_0     CCU2C        COUT     Out     0.061     4.274 r     -         
+un1_phase_inc_gen_cry_50       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_51_0     CCU2C        CIN      In      0.000     4.274 r     -         
+un1_phase_inc_gen_cry_51_0     CCU2C        COUT     Out     0.061     4.335 r     -         
+un1_phase_inc_gen_cry_52       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_53_0     CCU2C        CIN      In      0.000     4.335 r     -         
+un1_phase_inc_gen_cry_53_0     CCU2C        COUT     Out     0.061     4.396 r     -         
+un1_phase_inc_gen_cry_54       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_55_0     CCU2C        CIN      In      0.000     4.396 r     -         
+un1_phase_inc_gen_cry_55_0     CCU2C        COUT     Out     0.061     4.457 r     -         
+un1_phase_inc_gen_cry_56       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_57_0     CCU2C        CIN      In      0.000     4.457 r     -         
+un1_phase_inc_gen_cry_57_0     CCU2C        COUT     Out     0.061     4.518 r     -         
+un1_phase_inc_gen_cry_58       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_59_0     CCU2C        CIN      In      0.000     4.518 r     -         
+un1_phase_inc_gen_cry_59_0     CCU2C        COUT     Out     0.061     4.579 r     -         
+un1_phase_inc_gen_cry_60       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_61_0     CCU2C        CIN      In      0.000     4.579 r     -         
+un1_phase_inc_gen_cry_61_0     CCU2C        COUT     Out     0.061     4.640 r     -         
+un1_phase_inc_gen_cry_62       Net          -        -       -         -           1         
+un1_phase_inc_gen_s_63_0       CCU2C        CIN      In      0.000     4.640 r     -         
+un1_phase_inc_gen_s_63_0       CCU2C        S0       Out     0.698     5.337 r     -         
+phase_inc_gen_8[63]            Net          -        -       -         -           1         
+phase_inc_gen[63]              FD1P3IX      D        In      0.000     5.337 r     -         
+=============================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      5.295
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.349
+
+    Number of logic level(s):                34
+    Starting point:                          phase_inc_gen_pipe_2 / Q
+    Ending point:                            phase_inc_gen[63] / D
+    The start point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+phase_inc_gen_pipe_2           FD1P3AX      Q        Out     1.146     1.146 r     -         
+un1_rx_byte_10f                Net          -        -       -         -           56        
+phase_inc_gen_8[0]             ORCALUT4     C        In      0.000     1.146 r     -         
+phase_inc_gen_8[0]             ORCALUT4     Z        Out     0.660     1.806 r     -         
+phase_inc_gen[0]               Net          -        -       -         -           2         
+un1_phase_inc_gen_cry_0_0      CCU2C        A1       In      0.000     1.806 r     -         
+un1_phase_inc_gen_cry_0_0      CCU2C        COUT     Out     0.900     2.706 r     -         
+un1_phase_inc_gen_cry_0        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_1_0      CCU2C        CIN      In      0.000     2.706 r     -         
+un1_phase_inc_gen_cry_1_0      CCU2C        COUT     Out     0.061     2.767 r     -         
+un1_phase_inc_gen_cry_2        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_3_0      CCU2C        CIN      In      0.000     2.767 r     -         
+un1_phase_inc_gen_cry_3_0      CCU2C        COUT     Out     0.061     2.828 r     -         
+un1_phase_inc_gen_cry_4        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_5_0      CCU2C        CIN      In      0.000     2.828 r     -         
+un1_phase_inc_gen_cry_5_0      CCU2C        COUT     Out     0.061     2.889 r     -         
+un1_phase_inc_gen_cry_6        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_7_0      CCU2C        CIN      In      0.000     2.889 r     -         
+un1_phase_inc_gen_cry_7_0      CCU2C        COUT     Out     0.061     2.950 r     -         
+un1_phase_inc_gen_cry_8        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_9_0      CCU2C        CIN      In      0.000     2.950 r     -         
+un1_phase_inc_gen_cry_9_0      CCU2C        COUT     Out     0.061     3.011 r     -         
+un1_phase_inc_gen_cry_10       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_11_0     CCU2C        CIN      In      0.000     3.011 r     -         
+un1_phase_inc_gen_cry_11_0     CCU2C        COUT     Out     0.061     3.072 r     -         
+un1_phase_inc_gen_cry_12       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_13_0     CCU2C        CIN      In      0.000     3.072 r     -         
+un1_phase_inc_gen_cry_13_0     CCU2C        COUT     Out     0.061     3.133 r     -         
+un1_phase_inc_gen_cry_14       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_15_0     CCU2C        CIN      In      0.000     3.133 r     -         
+un1_phase_inc_gen_cry_15_0     CCU2C        COUT     Out     0.061     3.194 r     -         
+un1_phase_inc_gen_cry_16       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_17_0     CCU2C        CIN      In      0.000     3.194 r     -         
+un1_phase_inc_gen_cry_17_0     CCU2C        COUT     Out     0.061     3.255 r     -         
+un1_phase_inc_gen_cry_18       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_19_0     CCU2C        CIN      In      0.000     3.255 r     -         
+un1_phase_inc_gen_cry_19_0     CCU2C        COUT     Out     0.061     3.316 r     -         
+un1_phase_inc_gen_cry_20       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_21_0     CCU2C        CIN      In      0.000     3.316 r     -         
+un1_phase_inc_gen_cry_21_0     CCU2C        COUT     Out     0.061     3.377 r     -         
+un1_phase_inc_gen_cry_22       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_23_0     CCU2C        CIN      In      0.000     3.377 r     -         
+un1_phase_inc_gen_cry_23_0     CCU2C        COUT     Out     0.061     3.438 r     -         
+un1_phase_inc_gen_cry_24       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_25_0     CCU2C        CIN      In      0.000     3.438 r     -         
+un1_phase_inc_gen_cry_25_0     CCU2C        COUT     Out     0.061     3.499 r     -         
+un1_phase_inc_gen_cry_26       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_27_0     CCU2C        CIN      In      0.000     3.499 r     -         
+un1_phase_inc_gen_cry_27_0     CCU2C        COUT     Out     0.061     3.560 r     -         
+un1_phase_inc_gen_cry_28       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_29_0     CCU2C        CIN      In      0.000     3.560 r     -         
+un1_phase_inc_gen_cry_29_0     CCU2C        COUT     Out     0.061     3.621 r     -         
+un1_phase_inc_gen_cry_30       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_31_0     CCU2C        CIN      In      0.000     3.621 r     -         
+un1_phase_inc_gen_cry_31_0     CCU2C        COUT     Out     0.061     3.682 r     -         
+un1_phase_inc_gen_cry_32       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_33_0     CCU2C        CIN      In      0.000     3.682 r     -         
+un1_phase_inc_gen_cry_33_0     CCU2C        COUT     Out     0.061     3.743 r     -         
+un1_phase_inc_gen_cry_34       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_35_0     CCU2C        CIN      In      0.000     3.743 r     -         
+un1_phase_inc_gen_cry_35_0     CCU2C        COUT     Out     0.061     3.804 r     -         
+un1_phase_inc_gen_cry_36       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_37_0     CCU2C        CIN      In      0.000     3.804 r     -         
+un1_phase_inc_gen_cry_37_0     CCU2C        COUT     Out     0.061     3.865 r     -         
+un1_phase_inc_gen_cry_38       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_39_0     CCU2C        CIN      In      0.000     3.865 r     -         
+un1_phase_inc_gen_cry_39_0     CCU2C        COUT     Out     0.061     3.926 r     -         
+un1_phase_inc_gen_cry_40       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_41_0     CCU2C        CIN      In      0.000     3.926 r     -         
+un1_phase_inc_gen_cry_41_0     CCU2C        COUT     Out     0.061     3.987 r     -         
+un1_phase_inc_gen_cry_42       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_43_0     CCU2C        CIN      In      0.000     3.987 r     -         
+un1_phase_inc_gen_cry_43_0     CCU2C        COUT     Out     0.061     4.048 r     -         
+un1_phase_inc_gen_cry_44       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_45_0     CCU2C        CIN      In      0.000     4.048 r     -         
+un1_phase_inc_gen_cry_45_0     CCU2C        COUT     Out     0.061     4.109 r     -         
+un1_phase_inc_gen_cry_46       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_47_0     CCU2C        CIN      In      0.000     4.109 r     -         
+un1_phase_inc_gen_cry_47_0     CCU2C        COUT     Out     0.061     4.170 r     -         
+un1_phase_inc_gen_cry_48       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_49_0     CCU2C        CIN      In      0.000     4.170 r     -         
+un1_phase_inc_gen_cry_49_0     CCU2C        COUT     Out     0.061     4.231 r     -         
+un1_phase_inc_gen_cry_50       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_51_0     CCU2C        CIN      In      0.000     4.231 r     -         
+un1_phase_inc_gen_cry_51_0     CCU2C        COUT     Out     0.061     4.292 r     -         
+un1_phase_inc_gen_cry_52       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_53_0     CCU2C        CIN      In      0.000     4.292 r     -         
+un1_phase_inc_gen_cry_53_0     CCU2C        COUT     Out     0.061     4.353 r     -         
+un1_phase_inc_gen_cry_54       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_55_0     CCU2C        CIN      In      0.000     4.353 r     -         
+un1_phase_inc_gen_cry_55_0     CCU2C        COUT     Out     0.061     4.414 r     -         
+un1_phase_inc_gen_cry_56       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_57_0     CCU2C        CIN      In      0.000     4.414 r     -         
+un1_phase_inc_gen_cry_57_0     CCU2C        COUT     Out     0.061     4.475 r     -         
+un1_phase_inc_gen_cry_58       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_59_0     CCU2C        CIN      In      0.000     4.475 r     -         
+un1_phase_inc_gen_cry_59_0     CCU2C        COUT     Out     0.061     4.536 r     -         
+un1_phase_inc_gen_cry_60       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_61_0     CCU2C        CIN      In      0.000     4.536 r     -         
+un1_phase_inc_gen_cry_61_0     CCU2C        COUT     Out     0.061     4.597 r     -         
+un1_phase_inc_gen_cry_62       Net          -        -       -         -           1         
+un1_phase_inc_gen_s_63_0       CCU2C        CIN      In      0.000     4.597 r     -         
+un1_phase_inc_gen_s_63_0       CCU2C        S0       Out     0.698     5.295 r     -         
+phase_inc_gen_8[63]            Net          -        -       -         -           1         
+phase_inc_gen[63]              FD1P3IX      D        In      0.000     5.295 r     -         
+=============================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      5.285
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.340
+
+    Number of logic level(s):                33
+    Starting point:                          rx_byte[2] / Q
+    Ending point:                            phase_inc_gen[63] / D
+    The start point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+rx_byte[2]                     FD1S3AX      Q        Out     1.078     1.078 r     -         
+led_c[2]                       Net          -        -       -         -           18        
+un11_0_a2[1]                   ORCALUT4     A        In      0.000     1.078 r     -         
+un11_0_a2[1]                   ORCALUT4     Z        Out     0.780     1.858 f     -         
+N_158                          Net          -        -       -         -           7         
+un1_phase_inc_gen_cry_1_0      CCU2C        C0       In      0.000     1.858 f     -         
+un1_phase_inc_gen_cry_1_0      CCU2C        COUT     Out     0.900     2.758 r     -         
+un1_phase_inc_gen_cry_2        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_3_0      CCU2C        CIN      In      0.000     2.758 r     -         
+un1_phase_inc_gen_cry_3_0      CCU2C        COUT     Out     0.061     2.819 r     -         
+un1_phase_inc_gen_cry_4        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_5_0      CCU2C        CIN      In      0.000     2.819 r     -         
+un1_phase_inc_gen_cry_5_0      CCU2C        COUT     Out     0.061     2.880 r     -         
+un1_phase_inc_gen_cry_6        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_7_0      CCU2C        CIN      In      0.000     2.880 r     -         
+un1_phase_inc_gen_cry_7_0      CCU2C        COUT     Out     0.061     2.941 r     -         
+un1_phase_inc_gen_cry_8        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_9_0      CCU2C        CIN      In      0.000     2.941 r     -         
+un1_phase_inc_gen_cry_9_0      CCU2C        COUT     Out     0.061     3.002 r     -         
+un1_phase_inc_gen_cry_10       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_11_0     CCU2C        CIN      In      0.000     3.002 r     -         
+un1_phase_inc_gen_cry_11_0     CCU2C        COUT     Out     0.061     3.063 r     -         
+un1_phase_inc_gen_cry_12       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_13_0     CCU2C        CIN      In      0.000     3.063 r     -         
+un1_phase_inc_gen_cry_13_0     CCU2C        COUT     Out     0.061     3.124 r     -         
+un1_phase_inc_gen_cry_14       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_15_0     CCU2C        CIN      In      0.000     3.124 r     -         
+un1_phase_inc_gen_cry_15_0     CCU2C        COUT     Out     0.061     3.185 r     -         
+un1_phase_inc_gen_cry_16       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_17_0     CCU2C        CIN      In      0.000     3.185 r     -         
+un1_phase_inc_gen_cry_17_0     CCU2C        COUT     Out     0.061     3.246 r     -         
+un1_phase_inc_gen_cry_18       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_19_0     CCU2C        CIN      In      0.000     3.246 r     -         
+un1_phase_inc_gen_cry_19_0     CCU2C        COUT     Out     0.061     3.307 r     -         
+un1_phase_inc_gen_cry_20       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_21_0     CCU2C        CIN      In      0.000     3.307 r     -         
+un1_phase_inc_gen_cry_21_0     CCU2C        COUT     Out     0.061     3.368 r     -         
+un1_phase_inc_gen_cry_22       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_23_0     CCU2C        CIN      In      0.000     3.368 r     -         
+un1_phase_inc_gen_cry_23_0     CCU2C        COUT     Out     0.061     3.429 r     -         
+un1_phase_inc_gen_cry_24       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_25_0     CCU2C        CIN      In      0.000     3.429 r     -         
+un1_phase_inc_gen_cry_25_0     CCU2C        COUT     Out     0.061     3.490 r     -         
+un1_phase_inc_gen_cry_26       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_27_0     CCU2C        CIN      In      0.000     3.490 r     -         
+un1_phase_inc_gen_cry_27_0     CCU2C        COUT     Out     0.061     3.551 r     -         
+un1_phase_inc_gen_cry_28       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_29_0     CCU2C        CIN      In      0.000     3.551 r     -         
+un1_phase_inc_gen_cry_29_0     CCU2C        COUT     Out     0.061     3.612 r     -         
+un1_phase_inc_gen_cry_30       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_31_0     CCU2C        CIN      In      0.000     3.612 r     -         
+un1_phase_inc_gen_cry_31_0     CCU2C        COUT     Out     0.061     3.673 r     -         
+un1_phase_inc_gen_cry_32       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_33_0     CCU2C        CIN      In      0.000     3.673 r     -         
+un1_phase_inc_gen_cry_33_0     CCU2C        COUT     Out     0.061     3.734 r     -         
+un1_phase_inc_gen_cry_34       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_35_0     CCU2C        CIN      In      0.000     3.734 r     -         
+un1_phase_inc_gen_cry_35_0     CCU2C        COUT     Out     0.061     3.795 r     -         
+un1_phase_inc_gen_cry_36       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_37_0     CCU2C        CIN      In      0.000     3.795 r     -         
+un1_phase_inc_gen_cry_37_0     CCU2C        COUT     Out     0.061     3.856 r     -         
+un1_phase_inc_gen_cry_38       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_39_0     CCU2C        CIN      In      0.000     3.856 r     -         
+un1_phase_inc_gen_cry_39_0     CCU2C        COUT     Out     0.061     3.917 r     -         
+un1_phase_inc_gen_cry_40       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_41_0     CCU2C        CIN      In      0.000     3.917 r     -         
+un1_phase_inc_gen_cry_41_0     CCU2C        COUT     Out     0.061     3.978 r     -         
+un1_phase_inc_gen_cry_42       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_43_0     CCU2C        CIN      In      0.000     3.978 r     -         
+un1_phase_inc_gen_cry_43_0     CCU2C        COUT     Out     0.061     4.039 r     -         
+un1_phase_inc_gen_cry_44       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_45_0     CCU2C        CIN      In      0.000     4.039 r     -         
+un1_phase_inc_gen_cry_45_0     CCU2C        COUT     Out     0.061     4.100 r     -         
+un1_phase_inc_gen_cry_46       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_47_0     CCU2C        CIN      In      0.000     4.100 r     -         
+un1_phase_inc_gen_cry_47_0     CCU2C        COUT     Out     0.061     4.161 r     -         
+un1_phase_inc_gen_cry_48       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_49_0     CCU2C        CIN      In      0.000     4.161 r     -         
+un1_phase_inc_gen_cry_49_0     CCU2C        COUT     Out     0.061     4.222 r     -         
+un1_phase_inc_gen_cry_50       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_51_0     CCU2C        CIN      In      0.000     4.222 r     -         
+un1_phase_inc_gen_cry_51_0     CCU2C        COUT     Out     0.061     4.283 r     -         
+un1_phase_inc_gen_cry_52       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_53_0     CCU2C        CIN      In      0.000     4.283 r     -         
+un1_phase_inc_gen_cry_53_0     CCU2C        COUT     Out     0.061     4.344 r     -         
+un1_phase_inc_gen_cry_54       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_55_0     CCU2C        CIN      In      0.000     4.344 r     -         
+un1_phase_inc_gen_cry_55_0     CCU2C        COUT     Out     0.061     4.405 r     -         
+un1_phase_inc_gen_cry_56       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_57_0     CCU2C        CIN      In      0.000     4.405 r     -         
+un1_phase_inc_gen_cry_57_0     CCU2C        COUT     Out     0.061     4.466 r     -         
+un1_phase_inc_gen_cry_58       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_59_0     CCU2C        CIN      In      0.000     4.466 r     -         
+un1_phase_inc_gen_cry_59_0     CCU2C        COUT     Out     0.061     4.527 r     -         
+un1_phase_inc_gen_cry_60       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_61_0     CCU2C        CIN      In      0.000     4.527 r     -         
+un1_phase_inc_gen_cry_61_0     CCU2C        COUT     Out     0.061     4.588 r     -         
+un1_phase_inc_gen_cry_62       Net          -        -       -         -           1         
+un1_phase_inc_gen_s_63_0       CCU2C        CIN      In      0.000     4.588 r     -         
+un1_phase_inc_gen_s_63_0       CCU2C        S0       Out     0.698     5.285 r     -         
+phase_inc_gen_8[63]            Net          -        -       -         -           1         
+phase_inc_gen[63]              FD1P3IX      D        In      0.000     5.285 r     -         
+=============================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      5.285
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.340
+
+    Number of logic level(s):                33
+    Starting point:                          rx_byte[2] / Q
+    Ending point:                            phase_inc_gen[63] / D
+    The start point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+rx_byte[2]                     FD1S3AX      Q        Out     1.078     1.078 r     -         
+led_c[2]                       Net          -        -       -         -           18        
+un11_0_a2[1]                   ORCALUT4     A        In      0.000     1.078 r     -         
+un11_0_a2[1]                   ORCALUT4     Z        Out     0.780     1.858 f     -         
+N_158                          Net          -        -       -         -           7         
+un1_phase_inc_gen_cry_1_0      CCU2C        C1       In      0.000     1.858 f     -         
+un1_phase_inc_gen_cry_1_0      CCU2C        COUT     Out     0.900     2.758 r     -         
+un1_phase_inc_gen_cry_2        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_3_0      CCU2C        CIN      In      0.000     2.758 r     -         
+un1_phase_inc_gen_cry_3_0      CCU2C        COUT     Out     0.061     2.819 r     -         
+un1_phase_inc_gen_cry_4        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_5_0      CCU2C        CIN      In      0.000     2.819 r     -         
+un1_phase_inc_gen_cry_5_0      CCU2C        COUT     Out     0.061     2.880 r     -         
+un1_phase_inc_gen_cry_6        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_7_0      CCU2C        CIN      In      0.000     2.880 r     -         
+un1_phase_inc_gen_cry_7_0      CCU2C        COUT     Out     0.061     2.941 r     -         
+un1_phase_inc_gen_cry_8        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_9_0      CCU2C        CIN      In      0.000     2.941 r     -         
+un1_phase_inc_gen_cry_9_0      CCU2C        COUT     Out     0.061     3.002 r     -         
+un1_phase_inc_gen_cry_10       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_11_0     CCU2C        CIN      In      0.000     3.002 r     -         
+un1_phase_inc_gen_cry_11_0     CCU2C        COUT     Out     0.061     3.063 r     -         
+un1_phase_inc_gen_cry_12       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_13_0     CCU2C        CIN      In      0.000     3.063 r     -         
+un1_phase_inc_gen_cry_13_0     CCU2C        COUT     Out     0.061     3.124 r     -         
+un1_phase_inc_gen_cry_14       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_15_0     CCU2C        CIN      In      0.000     3.124 r     -         
+un1_phase_inc_gen_cry_15_0     CCU2C        COUT     Out     0.061     3.185 r     -         
+un1_phase_inc_gen_cry_16       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_17_0     CCU2C        CIN      In      0.000     3.185 r     -         
+un1_phase_inc_gen_cry_17_0     CCU2C        COUT     Out     0.061     3.246 r     -         
+un1_phase_inc_gen_cry_18       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_19_0     CCU2C        CIN      In      0.000     3.246 r     -         
+un1_phase_inc_gen_cry_19_0     CCU2C        COUT     Out     0.061     3.307 r     -         
+un1_phase_inc_gen_cry_20       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_21_0     CCU2C        CIN      In      0.000     3.307 r     -         
+un1_phase_inc_gen_cry_21_0     CCU2C        COUT     Out     0.061     3.368 r     -         
+un1_phase_inc_gen_cry_22       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_23_0     CCU2C        CIN      In      0.000     3.368 r     -         
+un1_phase_inc_gen_cry_23_0     CCU2C        COUT     Out     0.061     3.429 r     -         
+un1_phase_inc_gen_cry_24       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_25_0     CCU2C        CIN      In      0.000     3.429 r     -         
+un1_phase_inc_gen_cry_25_0     CCU2C        COUT     Out     0.061     3.490 r     -         
+un1_phase_inc_gen_cry_26       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_27_0     CCU2C        CIN      In      0.000     3.490 r     -         
+un1_phase_inc_gen_cry_27_0     CCU2C        COUT     Out     0.061     3.551 r     -         
+un1_phase_inc_gen_cry_28       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_29_0     CCU2C        CIN      In      0.000     3.551 r     -         
+un1_phase_inc_gen_cry_29_0     CCU2C        COUT     Out     0.061     3.612 r     -         
+un1_phase_inc_gen_cry_30       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_31_0     CCU2C        CIN      In      0.000     3.612 r     -         
+un1_phase_inc_gen_cry_31_0     CCU2C        COUT     Out     0.061     3.673 r     -         
+un1_phase_inc_gen_cry_32       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_33_0     CCU2C        CIN      In      0.000     3.673 r     -         
+un1_phase_inc_gen_cry_33_0     CCU2C        COUT     Out     0.061     3.734 r     -         
+un1_phase_inc_gen_cry_34       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_35_0     CCU2C        CIN      In      0.000     3.734 r     -         
+un1_phase_inc_gen_cry_35_0     CCU2C        COUT     Out     0.061     3.795 r     -         
+un1_phase_inc_gen_cry_36       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_37_0     CCU2C        CIN      In      0.000     3.795 r     -         
+un1_phase_inc_gen_cry_37_0     CCU2C        COUT     Out     0.061     3.856 r     -         
+un1_phase_inc_gen_cry_38       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_39_0     CCU2C        CIN      In      0.000     3.856 r     -         
+un1_phase_inc_gen_cry_39_0     CCU2C        COUT     Out     0.061     3.917 r     -         
+un1_phase_inc_gen_cry_40       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_41_0     CCU2C        CIN      In      0.000     3.917 r     -         
+un1_phase_inc_gen_cry_41_0     CCU2C        COUT     Out     0.061     3.978 r     -         
+un1_phase_inc_gen_cry_42       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_43_0     CCU2C        CIN      In      0.000     3.978 r     -         
+un1_phase_inc_gen_cry_43_0     CCU2C        COUT     Out     0.061     4.039 r     -         
+un1_phase_inc_gen_cry_44       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_45_0     CCU2C        CIN      In      0.000     4.039 r     -         
+un1_phase_inc_gen_cry_45_0     CCU2C        COUT     Out     0.061     4.100 r     -         
+un1_phase_inc_gen_cry_46       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_47_0     CCU2C        CIN      In      0.000     4.100 r     -         
+un1_phase_inc_gen_cry_47_0     CCU2C        COUT     Out     0.061     4.161 r     -         
+un1_phase_inc_gen_cry_48       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_49_0     CCU2C        CIN      In      0.000     4.161 r     -         
+un1_phase_inc_gen_cry_49_0     CCU2C        COUT     Out     0.061     4.222 r     -         
+un1_phase_inc_gen_cry_50       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_51_0     CCU2C        CIN      In      0.000     4.222 r     -         
+un1_phase_inc_gen_cry_51_0     CCU2C        COUT     Out     0.061     4.283 r     -         
+un1_phase_inc_gen_cry_52       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_53_0     CCU2C        CIN      In      0.000     4.283 r     -         
+un1_phase_inc_gen_cry_53_0     CCU2C        COUT     Out     0.061     4.344 r     -         
+un1_phase_inc_gen_cry_54       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_55_0     CCU2C        CIN      In      0.000     4.344 r     -         
+un1_phase_inc_gen_cry_55_0     CCU2C        COUT     Out     0.061     4.405 r     -         
+un1_phase_inc_gen_cry_56       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_57_0     CCU2C        CIN      In      0.000     4.405 r     -         
+un1_phase_inc_gen_cry_57_0     CCU2C        COUT     Out     0.061     4.466 r     -         
+un1_phase_inc_gen_cry_58       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_59_0     CCU2C        CIN      In      0.000     4.466 r     -         
+un1_phase_inc_gen_cry_59_0     CCU2C        COUT     Out     0.061     4.527 r     -         
+un1_phase_inc_gen_cry_60       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_61_0     CCU2C        CIN      In      0.000     4.527 r     -         
+un1_phase_inc_gen_cry_61_0     CCU2C        COUT     Out     0.061     4.588 r     -         
+un1_phase_inc_gen_cry_62       Net          -        -       -         -           1         
+un1_phase_inc_gen_s_63_0       CCU2C        CIN      In      0.000     4.588 r     -         
+un1_phase_inc_gen_s_63_0       CCU2C        S0       Out     0.698     5.285 r     -         
+phase_inc_gen_8[63]            Net          -        -       -         -           1         
+phase_inc_gen[63]              FD1P3IX      D        In      0.000     5.285 r     -         
+=============================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      5.277
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.331
+
+    Number of logic level(s):                32
+    Starting point:                          rx_byte[1] / Q
+    Ending point:                            phase_inc_gen[63] / D
+    The start point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            PLL|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+rx_byte[1]                     FD1S3AX      Q        Out     1.048     1.048 r     -         
+led_c[1]                       Net          -        -       -         -           10        
+un11_0_a2[4]                   ORCALUT4     A        In      0.000     1.048 r     -         
+un11_0_a2[4]                   ORCALUT4     Z        Out     0.863     1.911 f     -         
+N_165                          Net          -        -       -         -           30        
+un1_phase_inc_gen_cry_3_0      CCU2C        C1       In      0.000     1.911 f     -         
+un1_phase_inc_gen_cry_3_0      CCU2C        COUT     Out     0.900     2.811 r     -         
+un1_phase_inc_gen_cry_4        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_5_0      CCU2C        CIN      In      0.000     2.811 r     -         
+un1_phase_inc_gen_cry_5_0      CCU2C        COUT     Out     0.061     2.872 r     -         
+un1_phase_inc_gen_cry_6        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_7_0      CCU2C        CIN      In      0.000     2.872 r     -         
+un1_phase_inc_gen_cry_7_0      CCU2C        COUT     Out     0.061     2.933 r     -         
+un1_phase_inc_gen_cry_8        Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_9_0      CCU2C        CIN      In      0.000     2.933 r     -         
+un1_phase_inc_gen_cry_9_0      CCU2C        COUT     Out     0.061     2.994 r     -         
+un1_phase_inc_gen_cry_10       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_11_0     CCU2C        CIN      In      0.000     2.994 r     -         
+un1_phase_inc_gen_cry_11_0     CCU2C        COUT     Out     0.061     3.055 r     -         
+un1_phase_inc_gen_cry_12       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_13_0     CCU2C        CIN      In      0.000     3.055 r     -         
+un1_phase_inc_gen_cry_13_0     CCU2C        COUT     Out     0.061     3.116 r     -         
+un1_phase_inc_gen_cry_14       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_15_0     CCU2C        CIN      In      0.000     3.116 r     -         
+un1_phase_inc_gen_cry_15_0     CCU2C        COUT     Out     0.061     3.177 r     -         
+un1_phase_inc_gen_cry_16       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_17_0     CCU2C        CIN      In      0.000     3.177 r     -         
+un1_phase_inc_gen_cry_17_0     CCU2C        COUT     Out     0.061     3.238 r     -         
+un1_phase_inc_gen_cry_18       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_19_0     CCU2C        CIN      In      0.000     3.238 r     -         
+un1_phase_inc_gen_cry_19_0     CCU2C        COUT     Out     0.061     3.299 r     -         
+un1_phase_inc_gen_cry_20       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_21_0     CCU2C        CIN      In      0.000     3.299 r     -         
+un1_phase_inc_gen_cry_21_0     CCU2C        COUT     Out     0.061     3.360 r     -         
+un1_phase_inc_gen_cry_22       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_23_0     CCU2C        CIN      In      0.000     3.360 r     -         
+un1_phase_inc_gen_cry_23_0     CCU2C        COUT     Out     0.061     3.421 r     -         
+un1_phase_inc_gen_cry_24       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_25_0     CCU2C        CIN      In      0.000     3.421 r     -         
+un1_phase_inc_gen_cry_25_0     CCU2C        COUT     Out     0.061     3.482 r     -         
+un1_phase_inc_gen_cry_26       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_27_0     CCU2C        CIN      In      0.000     3.482 r     -         
+un1_phase_inc_gen_cry_27_0     CCU2C        COUT     Out     0.061     3.543 r     -         
+un1_phase_inc_gen_cry_28       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_29_0     CCU2C        CIN      In      0.000     3.543 r     -         
+un1_phase_inc_gen_cry_29_0     CCU2C        COUT     Out     0.061     3.604 r     -         
+un1_phase_inc_gen_cry_30       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_31_0     CCU2C        CIN      In      0.000     3.604 r     -         
+un1_phase_inc_gen_cry_31_0     CCU2C        COUT     Out     0.061     3.665 r     -         
+un1_phase_inc_gen_cry_32       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_33_0     CCU2C        CIN      In      0.000     3.665 r     -         
+un1_phase_inc_gen_cry_33_0     CCU2C        COUT     Out     0.061     3.726 r     -         
+un1_phase_inc_gen_cry_34       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_35_0     CCU2C        CIN      In      0.000     3.726 r     -         
+un1_phase_inc_gen_cry_35_0     CCU2C        COUT     Out     0.061     3.787 r     -         
+un1_phase_inc_gen_cry_36       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_37_0     CCU2C        CIN      In      0.000     3.787 r     -         
+un1_phase_inc_gen_cry_37_0     CCU2C        COUT     Out     0.061     3.848 r     -         
+un1_phase_inc_gen_cry_38       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_39_0     CCU2C        CIN      In      0.000     3.848 r     -         
+un1_phase_inc_gen_cry_39_0     CCU2C        COUT     Out     0.061     3.909 r     -         
+un1_phase_inc_gen_cry_40       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_41_0     CCU2C        CIN      In      0.000     3.909 r     -         
+un1_phase_inc_gen_cry_41_0     CCU2C        COUT     Out     0.061     3.970 r     -         
+un1_phase_inc_gen_cry_42       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_43_0     CCU2C        CIN      In      0.000     3.970 r     -         
+un1_phase_inc_gen_cry_43_0     CCU2C        COUT     Out     0.061     4.031 r     -         
+un1_phase_inc_gen_cry_44       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_45_0     CCU2C        CIN      In      0.000     4.031 r     -         
+un1_phase_inc_gen_cry_45_0     CCU2C        COUT     Out     0.061     4.092 r     -         
+un1_phase_inc_gen_cry_46       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_47_0     CCU2C        CIN      In      0.000     4.092 r     -         
+un1_phase_inc_gen_cry_47_0     CCU2C        COUT     Out     0.061     4.153 r     -         
+un1_phase_inc_gen_cry_48       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_49_0     CCU2C        CIN      In      0.000     4.153 r     -         
+un1_phase_inc_gen_cry_49_0     CCU2C        COUT     Out     0.061     4.214 r     -         
+un1_phase_inc_gen_cry_50       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_51_0     CCU2C        CIN      In      0.000     4.214 r     -         
+un1_phase_inc_gen_cry_51_0     CCU2C        COUT     Out     0.061     4.275 r     -         
+un1_phase_inc_gen_cry_52       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_53_0     CCU2C        CIN      In      0.000     4.275 r     -         
+un1_phase_inc_gen_cry_53_0     CCU2C        COUT     Out     0.061     4.336 r     -         
+un1_phase_inc_gen_cry_54       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_55_0     CCU2C        CIN      In      0.000     4.336 r     -         
+un1_phase_inc_gen_cry_55_0     CCU2C        COUT     Out     0.061     4.397 r     -         
+un1_phase_inc_gen_cry_56       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_57_0     CCU2C        CIN      In      0.000     4.397 r     -         
+un1_phase_inc_gen_cry_57_0     CCU2C        COUT     Out     0.061     4.458 r     -         
+un1_phase_inc_gen_cry_58       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_59_0     CCU2C        CIN      In      0.000     4.458 r     -         
+un1_phase_inc_gen_cry_59_0     CCU2C        COUT     Out     0.061     4.519 r     -         
+un1_phase_inc_gen_cry_60       Net          -        -       -         -           1         
+un1_phase_inc_gen_cry_61_0     CCU2C        CIN      In      0.000     4.519 r     -         
+un1_phase_inc_gen_cry_61_0     CCU2C        COUT     Out     0.061     4.580 r     -         
+un1_phase_inc_gen_cry_62       Net          -        -       -         -           1         
+un1_phase_inc_gen_s_63_0       CCU2C        CIN      In      0.000     4.580 r     -         
+un1_phase_inc_gen_s_63_0       CCU2C        S0       Out     0.698     5.277 r     -         
+phase_inc_gen_8[63]            Net          -        -       -         -           1         
+phase_inc_gen[63]              FD1P3IX      D        In      0.000     5.277 r     -         
+=============================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                   Starting                                                                                       Arrival          
+Instance                           Reference                                            Type        Pin     Net                   Time        Slack
+                                   Clock                                                                                                           
+---------------------------------------------------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_Clock_Count[1]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[1]      0.955       0.612
+uart_rx_inst.r_Clock_Count[2]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[2]      0.955       0.612
+uart_rx_inst.r_Clock_Count[12]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[12]     0.955       0.612
+uart_rx_inst.r_Clock_Count[13]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[13]     0.955       0.612
+uart_rx_inst.r_Clock_Count[3]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[3]      0.955       1.218
+uart_rx_inst.r_Clock_Count[4]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[4]      0.955       1.218
+uart_rx_inst.r_Clock_Count[5]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[5]      0.955       1.218
+uart_rx_inst.r_Clock_Count[7]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[7]      0.955       1.218
+uart_rx_inst.r_Clock_Count[8]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[8]      0.955       1.218
+uart_rx_inst.r_Clock_Count[9]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     Q       r_Clock_Count[9]      0.955       1.218
+===================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                                                         Required          
+Instance                           Reference                                            Type        Pin     Net                     Time         Slack
+                                   Clock                                                                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_SM_Main[0]          uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3AX     D       r_SM_Main_8[0]          4.946        0.612
+uart_rx_inst.r_SM_Main[1]          uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3AX     D       r_SM_Main_8[1]          4.946        0.820
+uart_rx_inst.r_SM_Main[2]          uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3AX     D       o_Rx_Byte_1_sqmuxa      4.946        1.210
+uart_rx_inst.r_Clock_Count[15]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[15]     9.946        3.768
+uart_rx_inst.r_Clock_Count[13]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[13]     9.946        3.829
+uart_rx_inst.r_Clock_Count[14]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[14]     9.946        3.829
+uart_rx_inst.r_Clock_Count[11]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[11]     9.946        3.890
+uart_rx_inst.r_Clock_Count[12]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[12]     9.946        3.890
+uart_rx_inst.r_Clock_Count[9]      uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[9]      9.946        3.951
+uart_rx_inst.r_Clock_Count[10]     uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[10]     9.946        3.951
+======================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      4.334
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 0.612
+
+    Number of logic level(s):                6
+    Starting point:                          uart_rx_inst.r_Clock_Count[1] / Q
+    Ending point:                            uart_rx_inst.r_SM_Main[0] / D
+    The start point is clocked by            uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_Clock_Count[1]            FD1S3IX      Q        Out     0.955     0.955 r     -         
+r_Clock_Count[1]                         Net          -        -       -         -           3         
+uart_rx_inst.r_Clock_Count23lto4_d_0     ORCALUT4     A        In      0.000     0.955 r     -         
+uart_rx_inst.r_Clock_Count23lto4_d_0     ORCALUT4     Z        Out     0.606     1.561 f     -         
+r_Clock_Count23lto4_d_0                  Net          -        -       -         -           1         
+uart_rx_inst.r_Clock_Count23lto4_0       ORCALUT4     A        In      0.000     1.561 f     -         
+uart_rx_inst.r_Clock_Count23lto4_0       ORCALUT4     Z        Out     0.606     2.167 f     -         
+r_Clock_Count23lt6                       Net          -        -       -         -           1         
+uart_rx_inst.r_Clock_Count23lto15        ORCALUT4     A        In      0.000     2.167 f     -         
+uart_rx_inst.r_Clock_Count23lto15        ORCALUT4     Z        Out     0.768     2.935 f     -         
+r_Clock_Count23                          Net          -        -       -         -           6         
+uart_rx_inst.r_SM_Main_8_1_0_.m6_bm      ORCALUT4     A        In      0.000     2.935 f     -         
+uart_rx_inst.r_SM_Main_8_1_0_.m6_bm      ORCALUT4     Z        Out     0.606     3.541 r     -         
+m6_bm                                    Net          -        -       -         -           1         
+uart_rx_inst.r_SM_Main_8_1_0_.m6         PFUMX        ALUT     In      0.000     3.541 r     -         
+uart_rx_inst.r_SM_Main_8_1_0_.m6         PFUMX        Z        Out     0.403     3.944 r     -         
+N_7                                      Net          -        -       -         -           1         
+uart_rx_inst.r_SM_Main_8_1_0_.m7         ORCALUT4     B        In      0.000     3.944 r     -         
+uart_rx_inst.r_SM_Main_8_1_0_.m7         ORCALUT4     Z        Out     0.390     4.334 f     -         
+r_SM_Main_8[0]                           Net          -        -       -         -           1         
+uart_rx_inst.r_SM_Main[0]                FD1S3AX      D        In      0.000     4.334 f     -         
+=======================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                              Starting                                                                                Arrival          
+Instance                      Reference                                          Type        Pin     Net              Time        Slack
+                              Clock                                                                                                    
+---------------------------------------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_SM_Main[0]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3AX     Q       r_SM_Main[0]     1.045       0.052
+uart_rx_inst.r_SM_Main[2]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3AX     Q       r_SM_Main[2]     1.106       0.598
+uart_rx_inst.r_SM_Main[1]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3AX     Q       r_SM_Main[1]     1.048       0.655
+=======================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                                                       Required          
+Instance                           Reference                                          Type        Pin     Net                     Time         Slack
+                                   Clock                                                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_Clock_Count[15]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[15]     4.946        0.052
+uart_rx_inst.r_Clock_Count[13]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[13]     4.946        0.114
+uart_rx_inst.r_Clock_Count[14]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[14]     4.946        0.114
+uart_rx_inst.r_Clock_Count[11]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[11]     4.946        0.174
+uart_rx_inst.r_Clock_Count[12]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[12]     4.946        0.174
+uart_rx_inst.r_Clock_Count[9]      uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[9]      4.946        0.235
+uart_rx_inst.r_Clock_Count[10]     uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[10]     4.946        0.235
+uart_rx_inst.r_Clock_Count[7]      uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[7]      4.946        0.296
+uart_rx_inst.r_Clock_Count[8]      uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[8]      4.946        0.296
+uart_rx_inst.r_Clock_Count[5]      uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2]     FD1S3IX     D       r_Clock_Count_8[5]      4.946        0.357
+====================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      4.894
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 0.052
+
+    Number of logic level(s):                12
+    Starting point:                          uart_rx_inst.r_SM_Main[0] / Q
+    Ending point:                            uart_rx_inst.r_Clock_Count[15] / D
+    The start point is clocked by            uart_rx_87s_0_1_2_3_4|UartClk_derived_clock[2] [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            uart_rx_87s_0_1_2_3_4|UartClk_1_derived_clock[2] [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+uart_rx_inst.r_SM_Main[0]                        FD1S3AX      Q        Out     1.045     1.045 r     -         
+r_SM_Main[0]                                     Net          -        -       -         -           9         
+uart_rx_inst.un1_r_Clock_Count_2_sqmuxa_mb_1     ORCALUT4     B        In      0.000     1.045 r     -         
+uart_rx_inst.un1_r_Clock_Count_2_sqmuxa_mb_1     ORCALUT4     Z        Out     0.606     1.651 r     -         
+un1_r_Clock_Count_2_sqmuxa_mb_1                  Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_2_sqmuxa_mb       ORCALUT4     D        In      0.000     1.651 r     -         
+uart_rx_inst.un1_r_Clock_Count_2_sqmuxa_mb       ORCALUT4     Z        Out     0.828     2.479 r     -         
+un1_r_Clock_Count_2_sqmuxa_mb                    Net          -        -       -         -           17        
+uart_rx_inst.un1_r_Clock_Count_12_cry_0_0        CCU2C        B0       In      0.000     2.479 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_0_0        CCU2C        COUT     Out     0.900     3.379 r     -         
+un1_r_Clock_Count_12_cry_0                       Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_1_0        CCU2C        CIN      In      0.000     3.379 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_1_0        CCU2C        COUT     Out     0.061     3.440 r     -         
+un1_r_Clock_Count_12_cry_2                       Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_3_0        CCU2C        CIN      In      0.000     3.440 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_3_0        CCU2C        COUT     Out     0.061     3.501 r     -         
+un1_r_Clock_Count_12_cry_4                       Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_5_0        CCU2C        CIN      In      0.000     3.501 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_5_0        CCU2C        COUT     Out     0.061     3.562 r     -         
+un1_r_Clock_Count_12_cry_6                       Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_7_0        CCU2C        CIN      In      0.000     3.562 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_7_0        CCU2C        COUT     Out     0.061     3.623 r     -         
+un1_r_Clock_Count_12_cry_8                       Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_9_0        CCU2C        CIN      In      0.000     3.623 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_9_0        CCU2C        COUT     Out     0.061     3.684 r     -         
+un1_r_Clock_Count_12_cry_10                      Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_11_0       CCU2C        CIN      In      0.000     3.684 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_11_0       CCU2C        COUT     Out     0.061     3.745 r     -         
+un1_r_Clock_Count_12_cry_12                      Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_cry_13_0       CCU2C        CIN      In      0.000     3.745 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_cry_13_0       CCU2C        COUT     Out     0.061     3.806 r     -         
+un1_r_Clock_Count_12_cry_14                      Net          -        -       -         -           1         
+uart_rx_inst.un1_r_Clock_Count_12_s_15_0         CCU2C        CIN      In      0.000     3.806 r     -         
+uart_rx_inst.un1_r_Clock_Count_12_s_15_0         CCU2C        S0       Out     0.698     4.503 r     -         
+un1_r_Clock_Count_12_s_15_0_S0                   Net          -        -       -         -           1         
+uart_rx_inst.r_Clock_Count_RNO[15]               ORCALUT4     A        In      0.000     4.503 r     -         
+uart_rx_inst.r_Clock_Count_RNO[15]               ORCALUT4     Z        Out     0.390     4.894 r     -         
+r_Clock_Count_8[15]                              Net          -        -       -         -           1         
+uart_rx_inst.r_Clock_Count[15]                   FD1S3IX      D        In      0.000     4.894 r     -         
+===============================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                          Starting                                          Arrival          
+Instance                                  Reference     Type       Pin     Net              Time        Slack
+                                          Clock                                                              
+-------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R22     CO0_1            0.000       2.408
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R22     CO0_1            0.000       2.408
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R23     ANB1_1           0.000       2.408
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R23     ANB1_1           0.000       2.408
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R18     un12_r_c1        0.000       2.420
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R18     un12_r_c1        0.000       2.420
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R19     un12_r_ac0_2     0.000       2.420
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R19     un12_r_ac0_2     0.000       2.420
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R20     CO0              0.000       2.498
+AMDemodulator_inst.square_sum_1[23:0]     System        ALU54B     R20     CO0              0.000       2.498
+=============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                          Starting                                               Required          
+Instance                                  Reference     Type        Pin     Net                  Time         Slack
+                                          Clock                                                                    
+-------------------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.amdemod_d_pipe_251     System        FD1S3AX     D       un1_r_1[3]           4.946        2.408
+AMDemodulator_inst.amdemod_d_pipe_252     System        FD1S3AX     D       un1_r_1[4]           4.946        2.408
+AMDemodulator_inst.amdemod_d_pipe_245     System        FD1S3AX     D       un18_r[5]            4.946        2.498
+AMDemodulator_inst.amdemod_d_pipe_244     System        FD1S3AX     D       un20_r[5]            4.946        2.557
+AMDemodulator_inst.amdemod_d_pipe_118     System        FD1S3AX     D       un1_r[4]             4.946        2.798
+AMDemodulator_inst.amdemod_d[8]           System        FD1S3AX     D       un1_r_i[4]           4.946        3.116
+SinCos_inst.AND2_t0                       System        AND2        B       lx_ne0_inv           5.000        3.362
+SinCos_inst.FF_29                         System        FD1P3DX     D       rom_dout_13_ffin     4.946        3.534
+SinCos_inst.FF_30                         System        FD1P3DX     D       rom_dout_14_ffin     4.946        3.534
+SinCos_inst.FF_31                         System        FD1P3DX     D       rom_dout_15_ffin     4.946        3.534
+===================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      2.538
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 2.408
+
+    Number of logic level(s):                4
+    Starting point:                          AMDemodulator_inst.square_sum_1[23:0] / R22
+    Ending point:                            AMDemodulator_inst.amdemod_d_pipe_251 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CIC_12s_72s_4096s_8s_12s_1|data_clk_derived_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                         Pin      Pin               Arrival     No. of    
+Name                                      Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------
+AMDemodulator_inst.square_sum_1[23:0]     ALU54B       R22      Out     0.000     0.000 r     -         
+CO0_1                                     Net          -        -       -         -           6         
+AMDemodulator_inst.CO1_0                  ORCALUT4     B        In      0.000     0.000 r     -         
+AMDemodulator_inst.CO1_0                  ORCALUT4     Z        Out     0.780     0.780 r     -         
+CO1_1                                     Net          -        -       -         -           7         
+AMDemodulator_inst.un12_r_c4              ORCALUT4     C        In      0.000     0.780 r     -         
+AMDemodulator_inst.un12_r_c4              ORCALUT4     Z        Out     0.660     1.440 r     -         
+un12_r_c4                                 Net          -        -       -         -           2         
+AMDemodulator_inst.un1_r_0[4]             ORCALUT4     B        In      0.000     1.440 r     -         
+AMDemodulator_inst.un1_r_0[4]             ORCALUT4     Z        Out     0.708     2.148 r     -         
+un1_r[4]                                  Net          -        -       -         -           3         
+AMDemodulator_inst.un1_r_1[3]             ORCALUT4     A        In      0.000     2.148 r     -         
+AMDemodulator_inst.un1_r_1[3]             ORCALUT4     Z        Out     0.390     2.538 r     -         
+un1_r_1[3]                                Net          -        -       -         -           1         
+AMDemodulator_inst.amdemod_d_pipe_251     FD1S3AX      D        In      0.000     2.538 r     -         
+========================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 324MB peak: 324MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 324MB peak: 324MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe5u_85f-6
+
+Register bits: 2664 of 83640 (3%)
+PIC Latch:       0
+I/O cells:       21
+
+DSP primitives:       3 of 234 (1%)
+
+Details:
+ALU54B:         1
+AND2:           1
+CCU2C:          950
+EHXPLLL:        1
+FD1P3AX:        1592
+FD1P3DX:        61
+FD1P3IX:        9
+FD1S3AX:        971
+FD1S3AY:        2
+FD1S3IX:        23
+FD1S3JX:        1
+GSR:            1
+IB:             3
+IFS1P3BX:       2
+INV:            41
+MULT18X18D:     2
+MUX21:          54
+OB:             18
+OFS1P3DX:       3
+ORCALUT4:       292
+PFUMX:          7
+PUR:            1
+ROM16X1A:       2
+ROM64X1A:       26
+VHI:            10
+VLO:            10
+XOR2:           1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:19s; Memory used current: 324MB peak: 324MB)
+
+Process took 0h:00m:18s realtime, 0h:00m:19s cputime
+# Wed Aug  7 16:20:46 2024
+
+###########################################################]
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
