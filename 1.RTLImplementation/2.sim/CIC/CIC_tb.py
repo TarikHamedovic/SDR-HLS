@@ -12,157 +12,209 @@ import random
 import numpy as np
 
 signals = [
-    'd_in', 'count', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8',
-    'd9', 'd10', 'd_d6', 'd_d7', 'd_d8', 'd_d9', 'd_tmp', 'd_d_tmp', 'v_comb',
-    'd_clk_tmp', 'd_scaled', 'd_out', 'Gain'
+    'data_in', 'count', 'integrator1', 'integrator2', 'integrator3', 'integrator4', 'integrator5',
+    'comb6', 'comb7', 'comb8', 'comb9', 'comb10', 'comb_d6', 'comb_d7', 'comb_d8', 'comb_d9',
+    'integrator_tmp', 'integrator_d_tmp', 'valid_comb', 'decimation_clk', 'scaled_output', 'data_out', 'gain'
 ]
 
 def initialize_dut(dut):
     for signal in signals:
         setattr(dut, signal, 0)
 
-    dut.d_in.value = 1000
-    dut.Gain.value = 1  # Ensure Gain is initialized to a valid value
+    dut.data_in.value = 1000
+    dut.gain.value = 1  # Ensure gain is initialized to a valid value
+
+def format_table(title, table_data):
+    col_widths = [max(len(str(item)) for item in col) for col in zip(*table_data)]
+    table_width = sum(col_widths) + 3 * len(col_widths) + 1
+    title_str = '| ' + title.center(table_width - 4) + ' |'
+    border = '+' + '+'.join('-' * (width + 2) for width in col_widths) + '+'
+    title_border = '+' + '-' * (table_width - 2) + '+'
+    table_str = [title_border, title_str, border]
+    for row in table_data:
+        row_str = '| ' + ' | '.join(str(item).ljust(width) for item, width in zip(row, col_widths)) + ' |'
+        table_str.append(row_str)
+        table_str.append(border)
+    return '\n'.join(table_str)
 
 def print_vars(dut):
-    cocotb.log.info("----- Monitoring Variables -----")
-    for signal in signals:
-        cocotb.log.info(f"[Monitor] {signal} = {getattr(dut, signal).value}")
+    table_data = [
+        ["Variable", "Value"],
+        ["data_in", str(dut.data_in.value)],
+        ["count", str(dut.count.value)],
+        ["integrator1", str(dut.integrator1.value)],
+        ["integrator2", str(dut.integrator2.value)],
+        ["integrator3", str(dut.integrator3.value)],
+        ["integrator4", str(dut.integrator4.value)],
+        ["integrator5", str(dut.integrator5.value)],
+        ["comb6", str(dut.comb6.value)],
+        ["comb7", str(dut.comb7.value)],
+        ["comb8", str(dut.comb8.value)],
+        ["comb9", str(dut.comb9.value)],
+        ["comb10", str(dut.comb10.value)],
+        ["comb_d6", str(dut.comb_d6.value)],
+        ["comb_d7", str(dut.comb_d7.value)],
+        ["comb_d8", str(dut.comb_d8.value)],
+        ["comb_d9", str(dut.comb_d9.value)],
+        ["integrator_tmp", str(dut.integrator_tmp.value)],
+        ["integrator_d_tmp", str(dut.integrator_d_tmp.value)],
+        ["valid_comb", str(dut.valid_comb.value)],
+        ["decimation_clk", str(dut.decimation_clk.value)],
+        ["scaled_output", str(dut.scaled_output.value)],
+        ["data_out", str(dut.data_out.value)],
+        ["gain", str(dut.gain.value)]
+    ]
+    cocotb.log.info("\n" + format_table("Monitoring Variables", table_data))
 
-def check_signals(dut, expected_values, signals_to_check):
+def check_signals(dut, expected_values, signals_to_check, iteration):
+    table_data = [["Signal", "Actual", "Expected", "Correct"]]
+    all_correct = True
+    
     for signal_name, expected_value in zip(signals_to_check, expected_values):
         actual_value = int(getattr(dut, signal_name).value)
-        cocotb.log.info(f"[Check] {signal_name}_actual = {actual_value}, {signal_name}_expected = {expected_value}")
-        assert actual_value == expected_value, f"Assertion failed for {signal_name}: expected {expected_value}, got {actual_value}"
+        correct = actual_value == expected_value
+        if not correct:
+            all_correct = False
+        result = '✓' if correct else '✗'
+        table_data.append([signal_name, actual_value, expected_value, result])
+    
+    table_title = f"Checking Table Iteration {iteration}"
+    cocotb.log.info("\n" + format_table(table_title, table_data))
+    assert all_correct, "Some signals did not match expected values"
 
-def integrator(dut, d1, d2, d3, d4, d5):
-    d_in = dut.d_in.value
-    d5 = d4 + d5
-    d4 = d3 + d4
-    d3 = d2 + d3
-    d2 = d1 + d2
-    d1 = d_in + d1
+def integrator(dut, integrator1, integrator2, integrator3, integrator4, integrator5):
+    data_in = dut.data_in.value
+    integrator5 = integrator4 + integrator5
+    integrator4 = integrator3 + integrator4
+    integrator3 = integrator2 + integrator3
+    integrator2 = integrator1 + integrator2
+    integrator1 = data_in + integrator1
 
-    return d1, d2, d3, d4, d5
+    return integrator1, integrator2, integrator3, integrator4, integrator5
 
-def integrator_check(dut, d1_e, d2_e, d3_e, d4_e, d5_e):
-    expected_values = [d1_e, d2_e, d3_e, d4_e, d5_e]
-    signals_to_check = ['d1', 'd2', 'd3', 'd4', 'd5']
-    check_signals(dut, expected_values, signals_to_check)
+def integrator_check(dut, integrator1_e, integrator2_e, integrator3_e, integrator4_e, integrator5_e, iteration):
+    expected_values = [integrator1_e, integrator2_e, integrator3_e, integrator4_e, integrator5_e]
+    signals_to_check = ['integrator1', 'integrator2', 'integrator3', 'integrator4', 'integrator5']
+    cocotb.log.info("----------------Checking integrator signals---------------------")
+    check_signals(dut, expected_values, signals_to_check, iteration)
 
-def decimation(count, v_comb, d_tmp, d_clk_tmp, d5, decimation_ratio, save_d5):
+def decimation(count, valid_comb, integrator_tmp, decimation_clk, integrator5, decimation_ratio, save_integrator5):
     if count == decimation_ratio - 2:
-        save_d5 = d5
+        save_integrator5 = integrator5
         count += 1
-        v_comb = 0
+        valid_comb = 0
     elif count == decimation_ratio - 1:
         count = 0
-        d_clk_tmp = 1
-        d_tmp = save_d5
-        v_comb = 1
+        decimation_clk = 1
+        integrator_tmp = save_integrator5
+        valid_comb = 1
     elif count == decimation_ratio // 2:
-        d_clk_tmp = 0
+        decimation_clk = 0
         count += 1
-        v_comb = 0
+        valid_comb = 0
     else:
         count += 1
-        v_comb = 0
-    return count, v_comb, d_tmp, d_clk_tmp, save_d5
+        valid_comb = 0
+    return count, valid_comb, integrator_tmp, decimation_clk, save_integrator5
 
-def decimation_check(dut, count_e, v_comb_e, d_tmp_e, d_clk_tmp_e):
-    expected_values = [count_e, v_comb_e, d_tmp_e, d_clk_tmp_e]
-    signals_to_check = ['count', 'v_comb', 'd_tmp', 'd_clk_tmp']
-    check_signals(dut, expected_values, signals_to_check)
+def decimation_check(dut, count_e, valid_comb_e, integrator_tmp_e, decimation_clk_e, iteration):
+    expected_values = [count_e, valid_comb_e, integrator_tmp_e, decimation_clk_e]
+    signals_to_check = ['count', 'valid_comb', 'integrator_tmp', 'decimation_clk']
+    cocotb.log.info("----------------Checking decimation signals---------------------")
+    check_signals(dut, expected_values, signals_to_check, iteration)
 
-def comb(dut, v_comb_e, d_tmp_e, d_clk_tmp_e, d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out, v_comb_sim):
-    if v_comb_sim:
-        d_out = d10 >> (64 - 12 - int(dut.Gain.value))
-        d_scaled = d10
+def comb(dut, valid_comb_e, integrator_tmp_e, decimation_clk_e, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim):
+    if valid_comb_sim:
+        data_out = comb10 >> (64 - 12 - int(dut.gain.value))
+        scaled_output = comb10
 
-        d10 = d9 - d_d9
-        d_d9 = d9
-        d9 = d8 - d_d8
-        d_d8 = d8
-        d8 = d7 - d_d7
-        d_d7 = d7
-        d7 = d6 - d_d6
-        d_d6 = d6
-        d6 = d_tmp_e - d_d_tmp
-        d_d_tmp = d_tmp_e
+        comb10 = comb9 - comb_d9
+        comb_d9 = comb9
+        comb9 = comb8 - comb_d8
+        comb_d8 = comb8
+        comb8 = comb7 - comb_d7
+        comb_d7 = comb7
+        comb7 = comb6 - comb_d6
+        comb_d6 = comb6
+        comb6 = integrator_tmp_e - integrator_d_tmp
+        integrator_d_tmp = integrator_tmp_e
 
-        v_comb_sim = 0
-    if v_comb_e:
-        v_comb_sim = 1
+        valid_comb_sim = 0
+    if valid_comb_e:
+        valid_comb_sim = 1
 
-    return d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out, v_comb_sim
+    return integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim
 
-def comb_check(dut, d_d_tmp_e, d6_e, d_d6_e, d7_e, d_d7_e, d8_e, d_d8_e, d9_e, d_d9_e, d10_e, d_scaled_e, d_out_e):
-    expected_values = [d_d_tmp_e, d6_e, d_d6_e, d7_e, d_d7_e, d8_e, d_d8_e, d9_e, d_d9_e, d10_e, d_scaled_e, d_out_e]
-    signals_to_check = ['d_d_tmp', 'd6', 'd_d6', 'd7', 'd_d7', 'd8', 'd_d8', 'd9', 'd_d9', 'd10', 'd_scaled', 'd_out']
-    check_signals(dut, expected_values, signals_to_check)
+def comb_check(dut, integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, scaled_output_e, data_out_e, iteration):
+    expected_values = [integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, scaled_output_e, data_out_e]
+    signals_to_check = ['integrator_d_tmp', 'comb6', 'comb_d6', 'comb7', 'comb_d7', 'comb8', 'comb_d8', 'comb9', 'comb_d9', 'comb10', 'scaled_output', 'data_out']
+    cocotb.log.info("----------------Checking comb signals---------------------")
+    check_signals(dut, expected_values, signals_to_check, iteration)
 
 @cocotb.coroutine
 async def integrator_process(dut, shared_state, number_of_iterations):
-    for _ in range(number_of_iterations):
-        d1, d2, d3, d4, d5 = integrator(
-            dut, shared_state['d1_e'], shared_state['d2_e'], shared_state['d3_e'], shared_state['d4_e'], shared_state['d5_e'])
+    for iteration in range(number_of_iterations):
+        integrator1, integrator2, integrator3, integrator4, integrator5 = integrator(
+            dut, shared_state['integrator1_e'], shared_state['integrator2_e'], shared_state['integrator3_e'], shared_state['integrator4_e'], shared_state['integrator5_e'])
         shared_state.update({
-            'd1_e': d1,
-            'd2_e': d2,
-            'd3_e': d3,
-            'd4_e': d4,
-            'd5_e': d5
+            'integrator1_e': integrator1,
+            'integrator2_e': integrator2,
+            'integrator3_e': integrator3,
+            'integrator4_e': integrator4,
+            'integrator5_e': integrator5
         })
         await RisingEdge(dut.clk)
-        integrator_check(dut, d1, d2, d3, d4, d5)
+        cocotb.log.info("================================================================")
+        integrator_check(dut, integrator1, integrator2, integrator3, integrator4, integrator5, iteration + 1)
 
 @cocotb.coroutine
 async def decimation_process(dut, shared_state, decimation_ratio, number_of_iterations):
-    save_d5 = 0
-    for _ in range(number_of_iterations):
-        count, v_comb, d_tmp, d_clk_tmp, save_d5 = decimation(
-            shared_state['count_e'], shared_state['v_comb_e'], shared_state['d_tmp_e'], shared_state['d_clk_tmp_e'], shared_state['d5_e'], decimation_ratio, save_d5)
+    save_integrator5 = 0
+    for iteration in range(number_of_iterations):
+        count, valid_comb, integrator_tmp, decimation_clk, save_integrator5 = decimation(
+            shared_state['count_e'], shared_state['valid_comb_e'], shared_state['integrator_tmp_e'], shared_state['decimation_clk_e'], shared_state['integrator5_e'], decimation_ratio, save_integrator5)
         shared_state.update({
             'count_e': count,
-            'v_comb_e': v_comb,
-            'd_tmp_e': d_tmp,
-            'd_clk_tmp_e': d_clk_tmp
+            'valid_comb_e': valid_comb,
+            'integrator_tmp_e': integrator_tmp,
+            'decimation_clk_e': decimation_clk
         })
         await RisingEdge(dut.clk)
-        decimation_check(dut, count, v_comb, d_tmp, d_clk_tmp)
+        decimation_check(dut, count, valid_comb, integrator_tmp, decimation_clk, iteration + 1)
 
 @cocotb.coroutine
 async def comb_process(dut, shared_state, number_of_iterations):
-    v_comb_sim = 0
-    for _ in range(number_of_iterations):
-        d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out, v_comb_sim = comb(
-            dut, shared_state['v_comb_e'], shared_state['d_tmp_e'], shared_state['d_clk_tmp_e'], shared_state['d_d_tmp_e'], shared_state['d6_e'], shared_state['d_d6_e'], shared_state['d7_e'], shared_state['d_d7_e'], shared_state['d8_e'], shared_state['d_d8_e'], shared_state['d9_e'], shared_state['d_d9_e'], shared_state['d10_e'], shared_state['d_scaled_e'], shared_state['d_out_e'], v_comb_sim)
+    valid_comb_sim = 0
+    for iteration in range(number_of_iterations):
+        integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim = comb(
+            dut, shared_state['valid_comb_e'], shared_state['integrator_tmp_e'], shared_state['decimation_clk_e'], shared_state['integrator_d_tmp_e'], shared_state['comb6_e'], shared_state['comb_d6_e'], shared_state['comb7_e'], shared_state['comb_d7_e'], shared_state['comb8_e'], shared_state['comb_d8_e'], shared_state['comb9_e'], shared_state['comb_d9_e'], shared_state['comb10_e'], shared_state['scaled_output_e'], shared_state['data_out_e'], valid_comb_sim)
         shared_state.update({
-            'd_d_tmp_e': d_d_tmp,
-            'd6_e': d6,
-            'd_d6_e': d_d6,
-            'd7_e': d7,
-            'd_d7_e': d_d7,
-            'd8_e': d8,
-            'd_d8_e': d_d8,
-            'd9_e': d9,
-            'd_d9_e': d_d9,
-            'd10_e': d10,
-            'd_scaled_e': d_scaled,
-            'd_out_e': d_out,
-            'v_comb_simulation': v_comb_sim
+            'integrator_d_tmp_e': integrator_d_tmp,
+            'comb6_e': comb6,
+            'comb_d6_e': comb_d6,
+            'comb7_e': comb7,
+            'comb_d7_e': comb_d7,
+            'comb8_e': comb8,
+            'comb_d8_e': comb_d8,
+            'comb9_e': comb9,
+            'comb_d9_e': comb_d9,
+            'comb10_e': comb10,
+            'scaled_output_e': scaled_output,
+            'data_out_e': data_out,
+            'valid_comb_simulation': valid_comb_sim
         })
         await RisingEdge(dut.clk)
-        comb_check(dut, d_d_tmp, d6, d_d6, d7, d_d7, d8, d_d8, d9, d_d9, d10, d_scaled, d_out)
+        comb_check(dut, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, iteration + 1)
+        cocotb.log.info("================================================================")
 
 @cocotb.test()
 async def CIC_test(dut):
     # Configuration from environment variables
-    input_bits = int(os.environ.get("INPUT_BITS", 12))
-    decimation_ratio = int(os.environ.get("DECIMATION_RATIO", 16))
+    input_bits = dut.INPUT_WIDTH.value
+    register_width = dut.REGISTER_WIDTH.value
+    decimation_ratio = dut.DECIMATION_RATIO.value
     number_of_iterations = int(os.environ.get("ITERATIONS", 50))
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
-
     cocotb.log.info(f"[Test Start] Starting CIC cocotb test with clock_value = {clock_value} ns")
 
     # Starting the clock
@@ -176,28 +228,28 @@ async def CIC_test(dut):
 
     # Shared state dictionary
     shared_state = {
-        'd1_e': 0,
-        'd2_e': 0,
-        'd3_e': 0,
-        'd4_e': 0,
-        'd5_e': 0,
+        'integrator1_e': 0,
+        'integrator2_e': 0,
+        'integrator3_e': 0,
+        'integrator4_e': 0,
+        'integrator5_e': 0,
         'count_e': 0,
-        'v_comb_e': 0,
-        'd_tmp_e': 0,
-        'd_clk_tmp_e': 0,
-        'd_d_tmp_e': 0,
-        'd6_e': 0,
-        'd_d6_e': 0,
-        'd7_e': 0,
-        'd_d7_e': 0,
-        'd8_e': 0,
-        'd_d8_e': 0,
-        'd9_e': 0,
-        'd_d9_e': 0,
-        'd10_e': 0,
-        'd_scaled_e': 0,
-        'd_out_e': 0,
-        'v_comb_simulation': 0
+        'valid_comb_e': 0,
+        'integrator_tmp_e': 0,
+        'decimation_clk_e': 0,
+        'integrator_d_tmp_e': 0,
+        'comb6_e': 0,
+        'comb_d6_e': 0,
+        'comb7_e': 0,
+        'comb_d7_e': 0,
+        'comb8_e': 0,
+        'comb_d8_e': 0,
+        'comb9_e': 0,
+        'comb_d9_e': 0,
+        'comb10_e': 0,
+        'scaled_output_e': 0,
+        'data_out_e': 0,
+        'valid_comb_simulation': 0
     }
     print_vars(dut)
 
@@ -209,10 +261,19 @@ async def CIC_test(dut):
     # Wait for all coroutines to complete
     await Timer(number_of_iterations * clock_value, units="ns")
 
+    # Summary Table
+    summary_table = [
+        ["Metric", "Value"],
+        ["Input Width", input_bits],
+        ["Register Width", register_width],
+        ["Decimation Ratio", decimation_ratio],
+        ["Clock frequency (MHz)", f"{1/clock_value * 1000}"],
+        ["Runtime of simulation (ns)", f"{number_of_iterations * clock_value}"],
+        ["Total number of iterations", number_of_iterations]
+    ]
+    cocotb.log.info("\n" + format_table("Summary", summary_table))
+    
     cocotb.log.info("[Summary] All values matched expected results")
-    cocotb.log.info(f"[Summary] Clock frequency of the simulation: {1/clock_value * 1000} MHz")
-    cocotb.log.info(f"[Summary] Runtime of simulation in checks: {number_of_iterations}")
-    cocotb.log.info(f"[Summary] Total number of assertions passed: All")
 
 """
 -----------------------------------------------------------------------------
@@ -220,4 +281,6 @@ Version History:
 -----------------------------------------------------------------------------
  2024/4/18  TH: Initial Creation   
  2024/7/6   TH: Added detailed comments and logging
+ 2024/8/5   TH: Added formatted tables for monitoring and checking with titles and outlines
+ 2024/8/5   TH: Added summary table and iteration count in checking table
 """
