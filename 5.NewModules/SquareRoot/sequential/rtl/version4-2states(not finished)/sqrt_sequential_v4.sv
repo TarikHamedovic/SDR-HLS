@@ -71,7 +71,7 @@ module sqrt_sequential #(
           r_reg         <= '0;
           a             <= '0;
           temp          <= 1'b0;
-            sqrt_state    <= COMP;
+          sqrt_state    <= COMP;
         end
         default: sqrt_state <= COMP;
       endcase
@@ -94,4 +94,7 @@ module sqrt_sequential #(
 
 endmodule
 
+/*
+J: Ako imas vremena, zarad ucenja, razmisli kako bi napravio hibridno rjesenje, tako rezultate dobijes nakon 8, 4, ili 2 kloka. To je vezano za onaj gore loop folding/unfolding
+*/
 

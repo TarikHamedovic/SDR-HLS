@@ -28,7 +28,8 @@ module sqrt_sequential #(
   logic [N/2+1:0] r;
   logic [N/2-1:0] q;
   logic [N/2+1:0] r_reg, left, right;
-  logic temp;
+
+
   always_ff @(posedge clk) begin
     if (reset_n == 1'b0) begin
       o_valid       <= 1'b0;
@@ -69,7 +70,6 @@ module sqrt_sequential #(
           q             <= '0;
           r_reg         <= '0;
           a             <= '0;
-          temp          <= 1'b0;
           sqrt_state    <= IDLE;
         end
         default: sqrt_state <= IDLE;
@@ -92,3 +92,8 @@ module sqrt_sequential #(
   end
 
 endmodule
+
+
+/*
+J: Ako imas vremena, zarad ucenja, razmisli kako bi napravio hibridno rjesenje, tako rezultate dobijes nakon 8, 4, ili 2 kloka. To je vezano za onaj gore loop folding/unfolding
+*/

@@ -1,5 +1,5 @@
 # Include the general configuration file
-include /home/user/SDR-HLS/1.RTLImplementation/2.sim/config.mk
+include ../../../1.RTLImplementation/2.sim/config.mk
 
 # Verilog sources
 VERILOG_SOURCES += uart_rx.v
