@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1713210359" />
-    <testcase name="simpleSine_test" classname="simpleSine_tb" file="/home/user/SDR-HLS/New Modules/SineGenerator/Testbench/simpleSine_tb.py" lineno="8" time="0.045258522033691406" sim_time_ns="2487.501" ratio_time="54962.04666489665" />
-  </testsuite>
-</testsuites>
