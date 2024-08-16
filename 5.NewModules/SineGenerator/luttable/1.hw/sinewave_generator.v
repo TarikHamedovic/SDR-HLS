@@ -10,9 +10,9 @@ parameter SINE_WIDTH  = 12,
           LUT_WIDTH   = 8,
           PHASE_WIDTH = 64;
 
-input  wire                  clk;
-input  wire                  arst;
-input  wire                  sample_clk_ce;
+input  wire                          clk;
+input  wire                          arst;
+input  wire                          sample_clk_ce;
 input  wire signed [PHASE_WIDTH-1:0] phase_increment;
 output reg  signed [SINE_WIDTH-1:0]  sinewave;
 
@@ -27,7 +27,7 @@ end
 
 always @(posedge clk) begin
     if (sample_clk_ce) begin
-        case (phase_accumulator[PHASE_WIDTH-1:PHASE_WIDTH-LUT_WIDTH])
+        unique case (phase_accumulator[PHASE_WIDTH-1:PHASE_WIDTH-LUT_WIDTH])
             8'h00: sinewave <= 12'h000;
             8'h01: sinewave <= 12'h032;
             8'h02: sinewave <= 12'h064;

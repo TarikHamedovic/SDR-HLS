@@ -3,16 +3,17 @@ CONFIG_ROOT = ../../../../1.RTLImplementation/2.sim
 include $(CONFIG_ROOT)/config.mk
 
 # Verilog sources
-VERILOG_SOURCES += ../1.hw/sinewave_generator.v
+VERILOG_SOURCES += ../1.hw/quarterwave_generator.v
+VERILOG_SOURCES += ../1.hw/quarterwave_table.v
 
 # VHDL sources (if any)
 VHDL_SOURCES = 
 
 # Top-level module name
-TOPLEVEL = sinewave_generator
+TOPLEVEL = quarterwave_generator
 
-# Python test module(s)	
-MODULE = sinewave_generator_tb
+# Python test module(s)
+MODULE = quarterwave_generator_tb
 
 # Define the clean target
 .PHONY: clean
