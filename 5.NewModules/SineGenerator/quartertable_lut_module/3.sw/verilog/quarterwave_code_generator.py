@@ -82,10 +82,10 @@ endmodule
     with open(f"{generator_filename}.v", "w") as verilog_file:
         verilog_file.write(verilog_code)
 
-def generate_quarterwave_lut_module(qlut_width, data_width, lut_filename):
+def generate_quarterwave_lut_module(qlut_depth, data_width, lut_filename):
     subprocess.run([
         "python3", "quarterwave_lut_generator.py",
-        "-qlw", str(qlut_width),
+        "-qld", str(qlut_depth),
         "-dw", str(data_width),
         "-f", lut_filename
     ])
@@ -93,7 +93,7 @@ def generate_quarterwave_lut_module(qlut_width, data_width, lut_filename):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate a Verilog quarter wave generator with a corresponding LUT module.')
     parser.add_argument('-dw', '--data_width', type=int, default=7, help='Width of the sine wave output in bits')
-    parser.add_argument('-qlw', '--qlut_width', type=int, default=8, help='Number of bits for the Look-Up Table (LUT)')
+    parser.add_argument('-qld', '--qlut_depth', type=int, default=8, help='Number of bits for the Look-Up Table (LUT)')
     parser.add_argument('-pw', '--phase_width', type=int, default=64, help='Width of the phase accumulator in bits')
     parser.add_argument('-gf', '--generator_filename', type=str, default="quarterwave_generator", help='Filename for the Verilog quarterwave generator')
     parser.add_argument('-lf', '--lut_filename', type=str, default="quarterwave_table.v", help='Filename for the LUT module')
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Generate the LUT module first
-    generate_quarterwave_lut_module(args.qlut_width, args.data_width, args.lut_filename)
+    generate_quarterwave_lut_module(args.qlut_depth, args.data_width, args.lut_filename)
 
     # Generate the Verilog quarterwave generator file
-    generate_verilog_file(args.phase_width, args.data_width, args.qlut_width, args.generator_filename)
+    generate_verilog_file(args.phase_width, args.data_width, args.qlut_depth, args.generator_filename)

@@ -1,12 +1,12 @@
 
 module quarterwave_generator #(
-    parameter DATA_WIDTH  = 7,
+    parameter DATA_WIDTH  = 12,
               QLUT_DEPTH  = 8,
               PHASE_WIDTH = 64
 ) (
-    input  logic                            clk,
-    input  logic                            arst,
-    input  logic                            sample_clk_ce,
+    input  logic                             clk,
+    input  logic                             arst,
+    input  logic                             sample_clk_ce,
     input  logic         [PHASE_WIDTH-1:0]   phase_increment,
     output logic  signed [DATA_WIDTH -1:0]   sinewave,
     output logic  signed [DATA_WIDTH -1:0]   cosinewave

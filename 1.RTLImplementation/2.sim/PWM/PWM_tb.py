@@ -52,7 +52,7 @@ def calculate_expected_output(dut, count, data_in_reg, bit_width):
 @cocotb.test()
 async def PWM_test(dut):
     input_bits = dut.INPUT_WIDTH.value
-    counter_bits = dut.COUNTER_WIDTH.value
+    counter_bits = dut.COUNT_WIDTH.value
     offset = dut.OFFSET.value
     number_of_iterations = int(os.environ.get("ITERATIONS", 10))
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))

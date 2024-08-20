@@ -54,7 +54,7 @@ module AMDemodulator #(
       q[0] = 0;
       r[0] = 0;
 
-      for (i = 0; i < 16; i = i + 1) begin
+      for (i = 0; i < N/2; i = i + 1) begin
         right[i] = {q[i], r[i][N/2+1], 1'b1};
         left[i]  = {r[i][N/2-1:0], a[i][N-1:N-2]};
         a[i+1]   = {a[i][N-3:0], 2'b00};
@@ -88,7 +88,7 @@ module AMDemodulator #(
     square_sum    <= {2'b00, mult_result_i + mult_result_q};
 
     // Compute the square root of the sum of squares
-    amdemod_out <= DATA_WIDTH'(sqrt(square_sum));
+    amdemod_out   <= sqrt(square_sum);
   end
 
   //=============================//

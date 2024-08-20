@@ -7,9 +7,9 @@ module sinewave_generator #(
     input  wire                          clk,
     input  wire                          arst,
     input  wire                          sample_clk_ce,
-    input  reg signed [PHASE_WIDTH-1:0] phase_increment,
-    output reg signed [DATA_WIDTH -1:0] sinewave,
-    output reg signed [DATA_WIDTH -1:0] cosinewave
+    input  reg signed [PHASE_WIDTH-1:0]  phase_increment,
+    output reg signed [DATA_WIDTH -1:0]  sinewave,
+    output reg signed [DATA_WIDTH -1:0]  cosinewave
 );
 
   reg [PHASE_WIDTH-1:0] phase_accumulator;
@@ -31,10 +31,19 @@ module sinewave_generator #(
   );
 
   always @(posedge clk or posedge arst) begin
-    if (arst)
+    if (arst == 1'b1)
       phase_accumulator <= 0;
-    else if (sample_clk_ce)
-      phase_accumulator <= phase_accumulator + phase_increment;
+    else if (sample_clk_ce == 1'b1)
+      phase_accumulator <= PHASE_WIDTH'(phase_accumulator + phase_increment);
   end
 
+  //=============================//
+  //       For sim only          //
+  //=============================//
+  //`ifdef SIMULATION
+  initial begin
+    $dumpfile("sinewave_waves.vcd");
+    $dumpvars(0, sinewave_generator);
+  end
+  //`endif
 endmodule

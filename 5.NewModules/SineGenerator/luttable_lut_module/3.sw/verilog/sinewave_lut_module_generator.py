@@ -20,15 +20,15 @@ def generate_verilog_module(lut_width, data_width, filename):
     
     verilog_code = f"""
 module sinewave_table #(
-    parameter QLUT_DEPTH = {lut_width},
+    parameter LUT_DEPTH = {lut_width},
     parameter DATA_WIDTH = {data_width}
 )(
-    input logic [QLUT_DEPTH-1:0] address, // {lut_width}-bit address signal for {table_entries} values
-    output logic signed [DATA_WIDTH-1:0] value    // {data_width}-bit output signal
+    input  reg        [LUT_DEPTH -1:0] address, // {lut_width}-bit address signal for {table_entries} values
+    output reg signed [DATA_WIDTH-1:0] value    // {data_width}-bit output signal
 );
 
     always_comb begin
-        case(address)
+        unique case(address)
 """
     for i, value in enumerate(sine_data):
         # Convert the value to its 2's complement form if it's negative, and represent it in hex
@@ -50,14 +50,14 @@ endmodule
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Verilog sinewave table module")
-    parser.add_argument("--lut_width", "-lw", type=int, default=8, help="Number of address bits for the LUT (default: 8)")
+    parser.add_argument("--lut_depth", "-ld", type=int, default=8, help="Number of address bits for the LUT (default: 8)")
     parser.add_argument("--data_width", "-dw", type=int, default=7, help="Number of output bits for the sine wave (default: 7)")
     parser.add_argument("--filename", "-fn", type=str, default="sinewave_table.v", help="Output filename (default: sinewave_table.v)")
 
     args = parser.parse_args()
 
     # Generate the Verilog module
-    verilog_module = generate_verilog_module(args.lut_width, args.data_width, args.filename)
+    verilog_module = generate_verilog_module(args.lut_depth, args.data_width, args.filename)
 
     # Print the generated Verilog code
     print(verilog_module)

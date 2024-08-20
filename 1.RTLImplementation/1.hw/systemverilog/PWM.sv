@@ -30,17 +30,17 @@ Simulation:
 -----------------------------------------------------------------------------
 */
 module PWM #(
-    parameter  DATA_WIDTH = 12,
-    parameter  COUNTER_WIDTH = 10,
-    parameter  OFFSET = 512
+    parameter  DATA_WIDTH  = 12,
+    parameter  COUNT_WIDTH = 10,
+    parameter  OFFSET      = 512
 ) (
     input  logic                   clk,
     input  logic [DATA_WIDTH-1:0]  data_in,
     output logic                   pwm_out
 );
 
-  logic [COUNTER_WIDTH-1:0] count;
-  logic [  DATA_WIDTH-1:0]  data_in_reg;
+  logic [COUNT_WIDTH-1:0] count;
+  logic [DATA_WIDTH-1 :0] data_in_reg;
 
   always_ff @(posedge clk) begin
     // Increment the count
@@ -52,7 +52,7 @@ module PWM #(
     end
 
     // Generate the PWM output signal
-    if (count > data_in_reg[COUNTER_WIDTH-1:0]) begin
+    if (count > data_in_reg[COUNT_WIDTH-1:0]) begin
       pwm_out <= 1'b0;
     end else begin
       pwm_out <= 1'b1;
@@ -62,12 +62,12 @@ module PWM #(
   //=============================//
   //       For sim only          //
   //=============================//
-  //`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("pwm_waves.vcd");
     $dumpvars;
   end
-  //`endif
+  `endif
 
 endmodule
 

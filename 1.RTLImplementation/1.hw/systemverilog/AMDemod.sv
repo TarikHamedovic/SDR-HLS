@@ -49,14 +49,14 @@ module AMDemodulator #(
     logic   [N/2+1:0] left [  N/2];
     logic   [N/2+1:0] right[  N/2];
     logic   [N/2+1:0] r    [N/2+1];
-    integer           i;
+    integer            i;
     begin
 
       a[0] = num;
       q[0] = 0;
       r[0] = 0;
 
-      for (i = 0; i < 16; i = i + 1) begin
+      for (i = 0; i < N/2; i = i + 1) begin
         right[i] = {q[i], r[i][N/2+1], 1'b1};
         left[i]  = {r[i][N/2-1:0], a[i][N-1:N-2]};
         a[i+1]   = {a[i][N-3:0], 2'b00};
@@ -99,12 +99,12 @@ module AMDemodulator #(
   //=============================//
   //       For sim only          //
   //=============================//
-//`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("AMDemod_waves.vcd");
     $dumpvars;
   end
-//`endif
+ `endif
 endmodule
 
 /*

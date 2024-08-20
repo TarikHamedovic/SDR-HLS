@@ -70,7 +70,8 @@ module CIC #(
   //=============================//
   always_ff @(posedge clk) begin
 
-    integrator1 <= integrator1 + s_register_t'(data_in);
+    //integrator1 <= integrator1 + s_register_t'(data_in); // YOSYS: ERROR: syntax error, unexpected TOK_USER_TYPE
+    integrator1 <= integrator1 + data_in;
     integrator2 <= integrator1 + integrator2;
     integrator3 <= integrator2 + integrator3;
     integrator4 <= integrator3 + integrator4;
@@ -119,12 +120,12 @@ module CIC #(
   //============================//
   //    For simulation only     //
   //============================//
-  //`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("CIC_waves.vcd");
     $dumpvars;
   end
-//`endif
+ `endif
 endmodule
 
 

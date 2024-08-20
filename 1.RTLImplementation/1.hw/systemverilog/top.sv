@@ -14,6 +14,8 @@ Features:
 - Control of RX frequency and RF gain via USB to UART interface
 - Internal oscillator with optional external crystal oscillator for better performance
 - Integration of PLL, NCO, Mixer, CIC filters, AM demodulator, and PWM modules
+- Utilizes an array for phase increment control
+- Uses open-source or Lattice IP PLL for clock generation
 
 Inputs:
 - rx_serial: Serial data input for UART communication
@@ -21,21 +23,20 @@ Inputs:
 - clk_25mhz: 25 MHz clock input
 
 Outputs:
-- tx_serial: Serial data output for UART communication
 - led: 8-bit output to control LEDs
 - diff_out: Differential output for RF signal
 - pwm_out: Pulse Width Modulation output for demodulated audio
-- pwm_out_p1, pwm_out_p2, pwm_out_p3, pwm_out_p4: Positive PWM outputs for audio
-- pwm_out_n1, pwm_out_n2, pwm_out_n3, pwm_out_n4: Negative PWM outputs for audio
+- pwm_out_p: 4-bit Positive PWM outputs for audio
+- pwm_out_n: 4-bit Negative PWM outputs for audio
 
 -----------------------------------------------------------------------------
 
 */
 
 module top (
-    input logic        clk_25mhz,
-    input logic        rx_serial,
-    input logic        rf_in,
+    input  logic       clk_25mhz,
+    input  logic       rx_serial,
+    input  logic       rf_in,
 
     output logic       diff_out,
     output logic       pwm_out,
@@ -50,22 +51,21 @@ module top (
   localparam CIC_REGISTER_WIDTH   = 72;
   localparam CIC_GAIN_WIDTH       = 8;
   localparam CIC_DECIMATION_RATIO = 4096;
-  localparam PWM_COUNTER_WIDTH    = 10;
+  localparam PWM_COUNT_WIDTH      = 10;
   localparam PWM_OFFSET           = 512;
-  localparam PHASE_ARRAY_SIZE     = 2;  // Size of phase increment array
+  localparam PHASE_ARRAY_SIZE     = 2;
 
+  //----- Typedefs for convenience ---//
+  typedef logic signed [DATA_WIDTH-1 :0] s_data_t;
+
+  // ------ PLL Signals ------ //
   logic               clk_80mhz;
 
-  // Typedefs for convenience
-  typedef logic signed [PHASE_WIDTH-1:0] s_phase_t;
-  typedef logic signed [PHASE_WIDTH-1:0] u_phase_t;
-  typedef logic signed [DATA_WIDTH-1 :0]  s_data_t;
-
   // ------ NCO Signals ------ //
-  s_phase_t phase_increment[PHASE_ARRAY_SIZE];  // Array for phase increments
-  logic     nco_cosinewave;
-  logic     nco_sinewave;
-  u_phase_t phase_accumulator;
+  logic signed [PHASE_WIDTH-1:0] phase_increment[PHASE_ARRAY_SIZE];
+  //logic                           nco_cosinewave;
+  //logic                           nco_sinewave;
+  //logic        [PHASE_WIDTH-1:0] phase_accumulator;
 
   // ------ SinCos Signals ---- //
   s_data_t lo_sinewave;
@@ -76,7 +76,7 @@ module top (
   s_data_t mix_cosinewave;
 
   // ------ CIC Signals ---- //
-  logic    [ CIC_GAIN_WIDTH-1:0] cic_gain;
+  logic [CIC_GAIN_WIDTH-1:0] cic_gain;
   s_data_t cic_sine_out;
   logic    cic_sine_clk;
   s_data_t cic_cosine_out;
@@ -86,21 +86,48 @@ module top (
   s_data_t amdemod_out;
 
   // ----- UART Signals ------ //
-  logic               rx_data_valid;
-  logic        [ 7:0] rx_byte;
-  logic               rx_data_valid1;
-  logic        [ 7:0] rx_byte1;
+  logic       rx_data_valid;
+  logic [7:0] rx_byte;
+  logic       rx_data_valid1;
+  logic [7:0] rx_byte1;
 
-  //===========================//
-  //          PLL              //
-  //===========================//
   /*
+  // NOTE: This is Lattice IP PLL
+  //===========================//
+  //          PLL IP           //
+  //===========================//
   PLL PLL_inst (
       .CLKI (clk_25mhz),
       .CLKOP(clk_80mhz)
   );
   */
 
+
+  // NOTE: This is open-source PLL
+  //===========================//
+  //          ECP5PLL          //
+  //===========================//
+  logic [3:0] clocks; // NOTE: Only clocks[0] is needed
+  always_comb clk_80mhz = clocks[0];
+  ecp5pll
+  #(
+      .in_hz(25000000),
+    .out0_hz(80000000),                 .out0_tol_hz(0),
+    .out1_hz(25000000), .out1_deg( 90), .out1_tol_hz(0),
+    .out2_hz(25000000), .out2_deg(180), .out2_tol_hz(0),
+    .out3_hz(25000000), .out3_deg(300), .out3_tol_hz(0)
+  //.reset_en(),        .standby_en(),   .dynamic_en()
+  )
+  ecp5pll_inst
+  (
+    .clk_i(clk_25mhz),
+    .clk_o(clocks),
+    .reset()
+  );
+
+
+  /*
+  //NOTE: If using SinCos IP uncomment
   //===========================//
   //          NCO              //
   //===========================//
@@ -117,7 +144,7 @@ module top (
   //===========================//
   //          SinCos           //
   //===========================//
-  /*
+
   SinCos SinCos_inst (
       .Clock (clk_80mhz),
       .ClkEn (1'b1),
@@ -127,6 +154,43 @@ module top (
       .Cosine(lo_cosinewave)
   );
   */
+
+  /*
+  // NOTE: Written sinewave_generator module
+  //===========================//
+  //          NCO              //
+  //===========================//
+  sinewave_generator#(
+     .DATA_WIDTH (DATA_WIDTH),
+     .LUT_DEPTH  (LUT_DEPTH),
+     .PHASE_WIDTH(PHASE_WIDTH)
+  ) nco_inst (
+     .clk            (clk_80mhz),
+     .arst           (1'b0),
+     .sample_clk_ce  (1'b1),
+     .phase_increment(phase_increment[1]),
+     .sinewave       (lo_sinewave),
+     .cosinewave     (lo_cosinewave)
+  );
+  */
+
+  //===========================//
+  //          NCO              //
+  //===========================//
+  quarterwave_generator#(
+     .DATA_WIDTH (DATA_WIDTH),
+     .QLUT_DEPTH (LUT_DEPTH),
+     .PHASE_WIDTH(PHASE_WIDTH)
+  ) nco_inst (
+     .clk            (clk_80mhz),
+     .arst           (1'b0),
+     .sample_clk_ce  (1'b1),
+     .phase_increment(phase_increment[1]),
+     .sinewave       (lo_sinewave),
+     .cosinewave     (lo_cosinewave)
+  );
+
+
   //===========================//
   //          Mixer            //
   //===========================//
@@ -143,7 +207,7 @@ module top (
   );
 
   //===========================//
-  //          CIC (Sine)       //
+  //       CIC (Sine)          //
   //===========================//
   CIC #(
       .DATA_WIDTH      (DATA_WIDTH),
@@ -191,7 +255,7 @@ module top (
   //===========================//
   PWM #(
       .DATA_WIDTH   (DATA_WIDTH),
-      .COUNTER_WIDTH(PWM_COUNTER_WIDTH),
+      .COUNT_WIDTH  (PWM_COUNT_WIDTH),
       .OFFSET       (PWM_OFFSET)
   ) pwm_inst (
       .clk    (clk_80mhz),
@@ -219,9 +283,9 @@ module top (
   end
 
   always_ff @(posedge clk_80mhz) begin
-    phase_increment[1] <= phase_increment[0];  // Update the phase increment
-    rx_data_valid  <= rx_data_valid1;
-    rx_byte        <= rx_byte1;
+    phase_increment[1] <= phase_increment[0];
+    rx_data_valid      <= rx_data_valid1;
+    rx_byte            <= rx_byte1;
 
     if (rx_data_valid) begin
       unique case (rx_byte)

@@ -61,12 +61,12 @@ module Mixer #(
   //============================//
   //    For simulation only     //
   //============================//
-  //`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("mixer_waves.vcd");
     $dumpvars;
   end
-  //`endif
+  `endif
 endmodule
 
 /*

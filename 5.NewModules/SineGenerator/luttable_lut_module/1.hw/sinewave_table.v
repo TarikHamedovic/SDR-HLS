@@ -1,14 +1,14 @@
 
 module sinewave_table #(
-    parameter LUT_DEPTH = 8,
+    parameter LUT_DEPTH  = 8,
     parameter DATA_WIDTH = 7
 )(
-    input wire [LUT_DEPTH-1:0] address, // 8-bit address signal for 256 values
+    input  wire       [LUT_DEPTH-1 :0] address, // 8-bit address signal for 256 values
     output reg signed [DATA_WIDTH-1:0] value    // 7-bit output signal
 );
 
     always @(*) begin
-        case (address)
+        unique case (address)
             8'd0: value = 7'h0;
             8'd1: value = 7'h1;
             8'd2: value = 7'h3;

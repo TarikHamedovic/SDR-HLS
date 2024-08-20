@@ -18,10 +18,10 @@ module Mixer #(
     parameter DATA_WIDTH = 12
 ) (
     input  wire                            clk,
-    input  reg signed     [DATA_WIDTH-1:0] sinewave_in,
-    input  reg signed     [DATA_WIDTH-1:0] cosinewave_in,
-    input  reg                             rf_in,
-    output reg                             rf_out,
+    input  wire signed    [DATA_WIDTH-1:0] sinewave_in,
+    input  wire signed    [DATA_WIDTH-1:0] cosinewave_in,
+    input  wire                            rf_in,
+    output wire                            rf_out,
     output reg signed     [DATA_WIDTH-1:0] sinewave_out,
     output reg signed     [DATA_WIDTH-1:0] cosinewave_out
 );

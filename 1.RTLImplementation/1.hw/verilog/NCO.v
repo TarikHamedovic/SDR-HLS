@@ -35,7 +35,7 @@ module nco_sig #(
 
   // Update phase accumulator on each clock cycle
   always @(posedge clk) begin
-    phase_accumulator <= REGISTER_WIDTH'(phase_accumulator + phase_increment);
+    phase_accumulator <= phase_accumulator + phase_increment;
   end
 
   //============================//

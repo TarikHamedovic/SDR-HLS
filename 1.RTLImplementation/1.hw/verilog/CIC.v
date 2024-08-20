@@ -40,30 +40,29 @@ For a 5-stage CIC decimation filter with a decimation factor of 16384 (14 bits):
 */
 
 module CIC #(
-    parameter  DATA_WIDTH      = 12,
+    parameter  DATA_WIDTH       = 12,
     parameter  REGISTER_WIDTH   = 64,
     parameter  DECIMATION_RATIO = 16,
     parameter  GAIN_WIDTH       = 8
 ) (
     input  wire                          clk,
-    input  wire        [ GAIN_WIDTH-1:0] gain,
-    input  wire signed [DATA_WIDTH-1:0] data_in,
-    output reg  signed [DATA_WIDTH-1:0] data_out,
+    input  wire        [GAIN_WIDTH-1:0]  gain,
+    input  wire signed [DATA_WIDTH-1:0]  data_in,
+    output wire signed [DATA_WIDTH-1:0]  data_out,
     output reg                           data_clk
 );
 
-  typedef reg signed [REGISTER_WIDTH-1:0] s_register_t;
   localparam COUNT_WIDTH = $clog2(DECIMATION_RATIO);
 
   //=============================//
   //       Internal signals      //
   //=============================//
-  s_register_t                 integrator_tmp, integrator_d_tmp;
-  s_register_t                 integrator1, integrator2, integrator3, integrator4, integrator5;
-  s_register_t                 comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10;
-  reg                          valid_comb;
-  reg                          decimation_clk;
-  reg        [COUNT_WIDTH-1:0] count;
+  reg signed [REGISTER_WIDTH-1:0] integrator_tmp, integrator_d_tmp;
+  reg signed [REGISTER_WIDTH-1:0] integrator1, integrator2, integrator3, integrator4, integrator5;
+  reg signed [REGISTER_WIDTH-1:0] comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10;
+  reg                             valid_comb;
+  reg                             decimation_clk;
+  reg        [COUNT_WIDTH-1:0]    count;
 
 
   //=============================//
@@ -71,22 +70,22 @@ module CIC #(
   //=============================//
   always @(posedge clk) begin
 
-    integrator1 <= s_register_t'(integrator1 + s_register_t'(data_in));
-    integrator2 <= s_register_t'(integrator1 + integrator2);
-    integrator3 <= s_register_t'(integrator2 + integrator3);
-    integrator4 <= s_register_t'(integrator3 + integrator4);
-    integrator5 <= s_register_t'(integrator4 + integrator5);
+    integrator1 <= integrator1 + data_in;
+    integrator2 <= integrator1 + integrator2;
+    integrator3 <= integrator2 + integrator3;
+    integrator4 <= integrator3 + integrator4;
+    integrator5 <= integrator4 + integrator5;
 
 
     //=============================//
     //        Decimation           //
     //=============================//
-    if (count == COUNT_WIDTH'(DECIMATION_RATIO - 1)) begin
-      count          <= '0;
+    if (count == DECIMATION_RATIO - 1) begin
+      count          <= {COUNT_WIDTH{1'b0}};
       integrator_tmp <= integrator5;
       decimation_clk <= 1'b1;
       valid_comb     <= 1'b1;
-    end else if (count == COUNT_WIDTH'(DECIMATION_RATIO >> 1)) begin
+    end else if (count == DECIMATION_RATIO >> 1) begin
       decimation_clk <= 1'b0;
       count          <= count + 1;
       valid_comb     <= 1'b0;
@@ -116,7 +115,7 @@ module CIC #(
     end
   end
 
-  assign data_out = DATA_WIDTH'(comb10 >>> (REGISTER_WIDTH - DATA_WIDTH - gain));
+  assign data_out = (comb10 >>> (REGISTER_WIDTH - DATA_WIDTH - gain));
 
   //============================//
   //    For simulation only     //

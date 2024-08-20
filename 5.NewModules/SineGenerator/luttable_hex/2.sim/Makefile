@@ -1,7 +1,6 @@
 # Include the general configuration file
-CONFIG_ROOT = /home/user/SDR-HLS/1.RTLImplementation/2.sim
+CONFIG_ROOT = ../../../../1.RTLImplementation/2.sim
 include $(CONFIG_ROOT)/config.mk
-
 
 # Verilog sources
 VERILOG_SOURCES += ../1.hw/sinewave_generator.v

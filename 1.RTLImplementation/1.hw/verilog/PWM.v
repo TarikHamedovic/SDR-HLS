@@ -31,29 +31,29 @@ Simulation:
 */
 
 module PWM #(
-    parameter DATA_WIDTH = 12,
-    parameter COUNTER_WIDTH = 10,
-    parameter OFFSET = 512
+    parameter DATA_WIDTH    = 12,
+    parameter COUNT_WIDTH   = 10,
+    parameter OFFSET        = 512
 ) (
     input                        clk,
-    input      [DATA_WIDTH-1:0] data_in,
+    input      [DATA_WIDTH-1:0]  data_in,
     output reg                   pwm_out
 );
 
-  reg [COUNTER_WIDTH-1:0] count;
-  reg [  DATA_WIDTH-1:0] data_in_reg;
+  reg [COUNT_WIDTH-1:0] count;
+  reg [DATA_WIDTH-1 :0] data_in_reg;
 
   always @(posedge clk) begin
     // Increment the count
     count <= count + 1'b1;
 
     // On count overflow, adjust the input data and store it in data_in_reg
-    if (count == '0) begin
+    if (count == {COUNT_WIDTH{1'b0}}) begin
       data_in_reg <= data_in + OFFSET;
     end
 
     // Generate the PWM output signal
-    if (count > data_in_reg[COUNTER_WIDTH-1:0]) begin
+    if (count > data_in_reg[COUNT_WIDTH-1:0]) begin
       pwm_out <= 1'b0;
     end else begin
       pwm_out <= 1'b1;

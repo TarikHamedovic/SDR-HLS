@@ -41,12 +41,12 @@ module nco_sig #(
   //============================//
   //    For simulation only     //
   //============================//
-  //`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("nco_sig_waves.vcd");
     $dumpvars;
   end
-  //`endif
+  `endif
 endmodule
 
 /*

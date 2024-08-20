@@ -1,6 +1,6 @@
 
 module quarterwave_generator #(
-    parameter DATA_WIDTH  = 7,
+    parameter DATA_WIDTH  = 12,
               QLUT_DEPTH  = 8,
               PHASE_WIDTH = 64
 ) (
@@ -47,7 +47,7 @@ module quarterwave_generator #(
       cosine_negate      <= 2'b00;
       cosine_index       <= '0;
       cosinewave         <= '0;
-    end else if (sample_clk_ce) begin
+    end else if (sample_clk_ce == 1'b1) begin
       // Clock #1
       sine_negate[0]     <= phase_accumulator[PHASE_WIDTH-1];
       cosine_negate [0]  <= phase_accumulator[PHASE_WIDTH-1] ^ phase_accumulator[PHASE_WIDTH-2];

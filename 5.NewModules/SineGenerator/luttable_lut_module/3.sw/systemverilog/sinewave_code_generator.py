@@ -20,15 +20,15 @@ def generate_verilog_lut_module(lut_depth, data_width, filename):
     
     verilog_code = f"""
 module sinewave_table #(
-    parameter LUT_DEPTH = {lut_depth},
+    parameter LUT_DEPTH  = {lut_depth},
     parameter DATA_WIDTH = {data_width}
 )(
-    input wire [LUT_DEPTH-1:0] address, // {lut_depth}-bit address signal for {table_entries} values
-    output reg signed [DATA_WIDTH-1:0] value    // {data_width}-bit output signal
+    input  logic        [LUT_DEPTH-1 :0] address, // {lut_depth}-bit address signal for {table_entries} values
+    output logic signed [DATA_WIDTH-1:0] value    // {data_width}-bit output signal
 );
 
     always @(*) begin
-        case (address)
+        unique case (address)
 """
     for i, value in enumerate(sine_data):
         if value < 0:
@@ -53,15 +53,15 @@ module sinewave_generator #(
               LUT_DEPTH   = {lut_depth},
               PHASE_WIDTH = {phase_width}
 ) (
-    input  wire                          clk,
-    input  wire                          arst,
-    input  wire                          sample_clk_ce,
-    input  reg signed [PHASE_WIDTH-1:0] phase_increment,
-    output reg signed [DATA_WIDTH -1:0] sinewave,
-    output reg signed [DATA_WIDTH -1:0] cosinewave
+    input  logic                          clk,
+    input  logic                          arst,
+    input  logic                          sample_clk_ce,
+    input  logic signed [PHASE_WIDTH-1:0] phase_increment,
+    output logic signed [DATA_WIDTH -1:0] sinewave,
+    output logic signed [DATA_WIDTH -1:0] cosinewave
 );
 
-  reg [PHASE_WIDTH-1:0] phase_accumulator;
+  logic [PHASE_WIDTH-1:0] phase_accumulator;
 
   sinewave_table #(
     .DATA_WIDTH(DATA_WIDTH),
@@ -80,11 +80,22 @@ module sinewave_generator #(
   );
 
   always @(posedge clk or posedge arst) begin
-    if (arst)
-      phase_accumulator <= 0;
-    else if (sample_clk_ce)
-      phase_accumulator <= phase_accumulator + phase_increment;
+    if (arst == 1'b1)
+      phase_accumulator <= '0;
+    else if (sample_clk_ce == 1'b1)
+      phase_accumulator <= PHASE_WIDTH'(phase_accumulator + phase_increment);
   end
+
+  //=============================//
+  //       For sim only          //
+  //=============================//
+  //`ifdef SIMULATION
+  initial begin
+    $dumpfile("sinewave_waves.vcd");
+    $dumpvars(0, sinewave_generator);
+  end
+  //`endif
+
 
 endmodule
 """
@@ -95,16 +106,16 @@ endmodule
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Verilog sinewave modules")
-    parser.add_argument("--lut_width", "-lw", type=int, default=8, help="Number of address bits for the LUT (default: 8)")
-    parser.add_argument("--sine_width", "-sw", type=int, default=7, help="Number of output bits for the sine wave (default: 7)")
+    parser.add_argument("--lut_depth", "-ld", type=int, default=8, help="Number of address bits for the LUT (default: 8)")
+    parser.add_argument("--data_width", "-dw", type=int, default=7, help="Number of output bits for the sine wave (default: 7)")
     parser.add_argument("--phase_width", "-pw", type=int, default=64, help="Number of bits for the phase accumulator (default: 64)")
-    parser.add_argument("--lut_filename", "-lf", type=str, default="sinewave_table.v", help="Output filename for the LUT module (default: sinewave_table.v)")
-    parser.add_argument("--generator_filename", "-gf", type=str, default="sinewave_generator.v", help="Output filename for the sinewave generator module (default: sinewave_generator.v)")
+    parser.add_argument("--lut_filename", "-lf", type=str, default="sinewave_table.sv", help="Output filename for the LUT module (default: sinewave_table.sv)")
+    parser.add_argument("--generator_filename", "-gf", type=str, default="sinewave_generator.sv", help="Output filename for the sinewave generator module (default: sinewave_generator.sv)")
 
     args = parser.parse_args()
 
     # Generate the LUT Verilog module
-    generate_verilog_lut_module(args.lut_width, args.sine_width, args.lut_filename)
+    generate_verilog_lut_module(args.lut_depth, args.data_width, args.lut_filename)
 
     # Generate the sinewave generator Verilog module
-    generate_verilog_sinewave_generator(args.lut_width, args.sine_width, args.phase_width, args.generator_filename)
+    generate_verilog_sinewave_generator(args.lut_depth, args.data_width, args.phase_width, args.generator_filename)
