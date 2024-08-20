@@ -36,9 +36,9 @@ Outputs:
 */
 
 module top (
-    input wire clk_25mhz,
-    input wire rx_serial,
-    input wire rf_in,
+    input wire        clk_25mhz,
+    input wire        rx_serial,
+    input wire        rf_in,
 
     output wire       diff_out,
     output wire       pwm_out,
@@ -65,36 +65,36 @@ module top (
 
     // Internal Registers
 
-    // ------ NCO Signals ------ //
-    reg signed [63:0] phase_inc_gen;
-    reg signed [63:0] phase_inc_gen1;
-    wire cos_output;
-    wire sin_output;
-    wire [63:0] phase_acc;
+    // ------------- NCO Signals ---------------- //
+    reg signed [PHASE_WIDTH-1:0]     phase_inc_gen;
+    reg signed [PHASE_WIDTH-1:0]     phase_inc_gen1;
+    wire                             cos_output;
+    wire                             sin_output;
+    wire       [PHASE_WIDTH-1:0]     phase_acc;
 
-    // ------ SinCos Signals ---- //
-    wire signed [12:0] lo_sinewave;
-    wire signed [12:0] lo_cosinewave;
+    // ------------- SinCos Signals ------------- //
+    wire signed [DATA_WIDTH:0]       lo_sinewave;
+    wire signed [DATA_WIDTH:0]       lo_cosinewave;
 
-    // ------ Mixer Signals ---- //
-    wire signed [11:0] mix_sinewave;
-    wire signed [11:0] mix_cosinewave;
+    // ------------- Mixer Signals -------------- //
+    wire signed [DATA_WIDTH-1:0]     mix_sinewave;
+    wire signed [DATA_WIDTH-1:0]     mix_cosinewave;
 
-    // ------ CIC Signals ---- //
-    reg [7:0] cic_gain;
-    wire signed [11:0] cic_sine_out;
-    wire cic_sine_clk;
-    wire signed [11:0] cic_cosine_out;
-    wire cic_cosine_clk;
+    // ------------- CIC Signals ---------------- //
+    reg         [CIC_GAIN_WIDTH-1:0] cic_gain;
+    wire signed [DATA_WIDTH-1:0]     cic_sine_out;
+    wire                             cic_sine_clk;
+    wire signed [DATA_WIDTH-1:0]     cic_cosine_out;
+    wire                             cic_cosine_clk;
 
-    // ------- AMDem Signals-- //
-    wire signed [11:0] amdemod_out;
+    // ------------- AMDem Signals -------------- //
+    wire signed [DATA_WIDTH-1:0]     amdemod_out;
 
-    // ----- UART Signals ------ //
-    reg rx_data_valid;
-    reg [7:0] rx_byte;
-    wire rx_data_valid1;
-    wire [7:0] rx_byte1;
+    // ------------- UART Signals --------------- //
+    reg                              rx_data_valid;
+    reg         [7:0]                rx_byte;
+    wire                             rx_data_valid1;
+    wire        [7:0]                rx_byte1;
 
     //===========================//
     //          PLL              //

@@ -2,20 +2,23 @@
 -----------------------------------------------------------------------------
 Module: CIC
 Description:
-This module implements a Cascaded Integrator-Comb (CIC) filter, which is commonly used for decimation (reducing the sampling rate) and interpolation (increasing the sampling rate) in digital signal processing.
+This module implements a Cascaded Integrator-Comb (CIC) filter, commonly used for decimation (reducing the sampling rate) and interpolation (increasing the sampling rate) in digital signal processing.
 
 Inputs:
 - clk: Clock signal.
-- Gain: 8-bit gain control signal.
-- d_in: 12-bit signed input data signal.
+- gain: 8-bit gain control signal.
+- data_in: 12-bit signed input data signal.
 
 Outputs:
-- d_out: 12-bit signed output data signal.
-- d_clk: Output clock signal for the decimated data.
+- data_out: 12-bit signed output data signal.
+- data_clk: Output clock signal for the decimated data.
 
 Parameters:
-- width: Bit width for internal registers (default is 64).
-- decimation_ratio: Decimation factor (default is 16).
+- DATA_WIDTH: Bit width for input and output data signals (default is 12).
+- REGISTER_WIDTH: Bit width for internal registers (default is 64).
+- DECIMATION_RATIO: Decimation factor (default is 16).
+- GAIN_WIDTH: Bit width for gain control signal (default is 8).
+- N_STAGES: Number of stages in the CIC filter (default is 5).
 
 Bit Width Calculation to Avoid Overflow:
 For a Q-stage CIC decimation-by-D filter (diff delay = 1), overflow errors are avoided if the number of integrator and comb register bit widths is at least:
@@ -38,77 +41,90 @@ For a 5-stage CIC decimation filter with a decimation factor of 16384 (14 bits):
 */
 
 module CIC #(
-    parameter int INPUT_WIDTH = 12,
-    parameter int WIDTH = 64,
-    parameter int DECIMATION_RATIO = 16,
-    parameter int GAIN_WIDTH = 8,
-    parameter int N_STAGES = 5
+    parameter  DATA_WIDTH       = 12,
+    parameter  REGISTER_WIDTH   = 64,
+    parameter  DECIMATION_RATIO = 16,
+    parameter  GAIN_WIDTH       = 8,
+    parameter  N_STAGES         = 4
 ) (
     input  logic                          clk,
-    input  logic        [ GAIN_WIDTH-1:0] Gain,
-    input  logic signed [INPUT_WIDTH-1:0] d_in,
-    output logic signed [INPUT_WIDTH-1:0] d_out,
-    output logic                          d_clk
+    input  logic        [GAIN_WIDTH-1:0]  gain,
+    input  logic signed [DATA_WIDTH-1:0]  data_in,
+    output logic signed [DATA_WIDTH-1:0]  data_out,
+    output logic                          data_clk
 );
 
+  typedef logic signed [REGISTER_WIDTH-1:0] s_register_t;
   localparam int COUNT_WIDTH = $clog2(DECIMATION_RATIO);
 
-  // Internal registers
-  logic signed [WIDTH-1:0]       integrator [N_STAGES];
-  logic signed [WIDTH-1:0]       comb       [N_STAGES];
-  logic signed [WIDTH-1:0]       comb_delay [N_STAGES];
-  logic        [COUNT_WIDTH-1:0] count;
-  logic                          v_comb;
-  logic                          d_clk_tmp;
-  logic signed [WIDTH-1:0]       d_tmp;
+  //=============================//
+  //       Internal signals      //
+  //=============================//
+  s_register_t            integrator [N_STAGES];
+  s_register_t            comb       [N_STAGES];
+  s_register_t            comb_delay [N_STAGES];
+  s_register_t            integrator_tmp, integrator_d_tmp;
+  logic                   valid_comb;
+  logic                   decimation_clk;
+  logic [COUNT_WIDTH-1:0] count;
 
-  //Integrator section
+
+  //=============================//
+  //    Integrator section       //
+  //=============================//
   always_ff @(posedge clk) begin
-    integrator[0] <= d_in + integrator[0];
+    integrator[0] <= s_register_t'(data_in) + integrator[0];
     for (int i = 1; i < N_STAGES; i++) begin
       integrator[i] <= integrator[i-1] + integrator[i];
     end
-    //Decimation
-    if(count == DECIMATION_RATIO-1) begin
-       count <= 0;
-       d_tmp <= integrator[N_STAGES-1];
-       d_clk_tmp <= 1'b1;
-       v_comb <= 1'b1;
-    end else if(count == DECIMATION_RATIO >> 1) begin
-      d_clk_tmp <= 1'b0;
-      count <= count + 1;
-      v_comb <= 1'b0;
+
+    //=============================//
+    //        Decimation           //
+    //=============================//
+    if(count == COUNT_WIDTH'(DECIMATION_RATIO-1)) begin
+       count          <= '0;
+       integrator_tmp <= integrator[N_STAGES-1];
+       decimation_clk <= 1'b1;
+       valid_comb     <= 1'b1;
+    end else if(count == COUNT_WIDTH'(DECIMATION_RATIO >> 1)) begin
+       decimation_clk <= 1'b0;
+       count          <= count + 1'b1;
+       valid_comb     <= 1'b0;
     end else begin
-      count <= count + 1;
-      v_comb <= 1'b0;
+       count          <= count + 1'b1;
+       valid_comb     <= 1'b0;
     end
   end
 
-  // Comb section running at output rate
+  //=============================//
+  //       Comb section          //
+  //=============================//
   always_ff @(posedge clk) begin
-    d_clk <= d_clk_tmp;
+    data_clk <= decimation_clk;
 
-    if(v_comb) begin
-      comb_delay[0] <= d_tmp;
-      comb[0] <= d_tmp - comb_delay[0];
+    if(valid_comb == 1'b1) begin
+      integrator_d_tmp <= integrator_tmp;
+      comb[0]          <= integrator_tmp - integrator_d_tmp;
+      comb_delay[0]    <= comb[0];
       for(int i = 1; i < N_STAGES; i++) begin
-        comb_delay[i] <= comb[i-1];
-        comb[i] <= comb[i-1] - comb_delay[i];
+        comb[i]       <= comb[i-1] - comb_delay[i-1];
+        comb_delay[i] <= comb[i];
       end
 
-      d_out <= comb[N_STAGES-1] >>> (WIDTH - INPUT_WIDTH - Gain);
+      data_out <= DATA_WIDTH'(comb[N_STAGES-1] >>> (REGISTER_WIDTH - DATA_WIDTH - (REGISTER_WIDTH/2)'(gain)));
     end
   end
 
-  //-----------------------------
-  // For simulation only
-  //-----------------------------
+  //============================//
+  //    For simulation only     //
+  //============================//
+  //`ifdef SIMULATION
   initial begin
     $dumpfile("CIC_waves.vcd");
     $dumpvars;
   end
+//`endif
 endmodule
-
 /*
 -----------------------------------------------------------------------------
 Version History:

@@ -1,82 +1,81 @@
 
 module quarterwave_table #(
-    parameter LUT_WIDTH = 8,
-    parameter SINE_WIDTH = 7
+    parameter QLUT_WIDTH = 8,
+    parameter DATA_WIDTH = 7
 )(
-    input logic [LUT_WIDTH-3:0] address, // 6-bit address signal for 64 values
-    output logic signed [SINE_WIDTH-1:0] value    // 7-bit output signal
+    input logic [QLUT_WIDTH-3:0] address, // 6-bit address signal for 64 values
+    output logic signed [DATA_WIDTH-1:0] value    // 7-bit output signal
 );
 
-    logic signed [SINE_WIDTH-1:0] quarterwave_table [64];
+    always_comb begin
+        unique case(address)
+            6'd0: value = 7'h0;
+            6'd1: value = 7'h2;
+            6'd2: value = 7'h3;
+            6'd3: value = 7'h5;
+            6'd4: value = 7'h6;
+            6'd5: value = 7'h8;
+            6'd6: value = 7'hA;
+            6'd7: value = 7'hB;
+            6'd8: value = 7'hD;
+            6'd9: value = 7'hE;
+            6'd10: value = 7'h10;
+            6'd11: value = 7'h11;
+            6'd12: value = 7'h13;
+            6'd13: value = 7'h14;
+            6'd14: value = 7'h15;
+            6'd15: value = 7'h17;
+            6'd16: value = 7'h18;
+            6'd17: value = 7'h1A;
+            6'd18: value = 7'h1B;
+            6'd19: value = 7'h1D;
+            6'd20: value = 7'h1E;
+            6'd21: value = 7'h1F;
+            6'd22: value = 7'h21;
+            6'd23: value = 7'h22;
+            6'd24: value = 7'h23;
+            6'd25: value = 7'h24;
+            6'd26: value = 7'h26;
+            6'd27: value = 7'h27;
+            6'd28: value = 7'h28;
+            6'd29: value = 7'h29;
+            6'd30: value = 7'h2A;
+            6'd31: value = 7'h2B;
+            6'd32: value = 7'h2D;
+            6'd33: value = 7'h2E;
+            6'd34: value = 7'h2F;
+            6'd35: value = 7'h30;
+            6'd36: value = 7'h31;
+            6'd37: value = 7'h32;
+            6'd38: value = 7'h33;
+            6'd39: value = 7'h33;
+            6'd40: value = 7'h34;
+            6'd41: value = 7'h35;
+            6'd42: value = 7'h36;
+            6'd43: value = 7'h37;
+            6'd44: value = 7'h37;
+            6'd45: value = 7'h38;
+            6'd46: value = 7'h39;
+            6'd47: value = 7'h39;
+            6'd48: value = 7'h3A;
+            6'd49: value = 7'h3B;
+            6'd50: value = 7'h3B;
+            6'd51: value = 7'h3C;
+            6'd52: value = 7'h3C;
+            6'd53: value = 7'h3C;
+            6'd54: value = 7'h3D;
+            6'd55: value = 7'h3D;
+            6'd56: value = 7'h3D;
+            6'd57: value = 7'h3E;
+            6'd58: value = 7'h3E;
+            6'd59: value = 7'h3E;
+            6'd60: value = 7'h3E;
+            6'd61: value = 7'h3E;
+            6'd62: value = 7'h3E;
+            6'd63: value = 7'h3E;
 
-    assign value = quarterwave_table[address];
-
-    initial begin
-        quarterwave_table[0] = 7'h0;
-        quarterwave_table[1] = 7'h2;
-        quarterwave_table[2] = 7'h3;
-        quarterwave_table[3] = 7'h5;
-        quarterwave_table[4] = 7'h6;
-        quarterwave_table[5] = 7'h8;
-        quarterwave_table[6] = 7'hA;
-        quarterwave_table[7] = 7'hB;
-        quarterwave_table[8] = 7'hD;
-        quarterwave_table[9] = 7'hE;
-        quarterwave_table[10] = 7'h10;
-        quarterwave_table[11] = 7'h11;
-        quarterwave_table[12] = 7'h13;
-        quarterwave_table[13] = 7'h14;
-        quarterwave_table[14] = 7'h15;
-        quarterwave_table[15] = 7'h17;
-        quarterwave_table[16] = 7'h18;
-        quarterwave_table[17] = 7'h1A;
-        quarterwave_table[18] = 7'h1B;
-        quarterwave_table[19] = 7'h1D;
-        quarterwave_table[20] = 7'h1E;
-        quarterwave_table[21] = 7'h1F;
-        quarterwave_table[22] = 7'h21;
-        quarterwave_table[23] = 7'h22;
-        quarterwave_table[24] = 7'h23;
-        quarterwave_table[25] = 7'h24;
-        quarterwave_table[26] = 7'h26;
-        quarterwave_table[27] = 7'h27;
-        quarterwave_table[28] = 7'h28;
-        quarterwave_table[29] = 7'h29;
-        quarterwave_table[30] = 7'h2A;
-        quarterwave_table[31] = 7'h2B;
-        quarterwave_table[32] = 7'h2D;
-        quarterwave_table[33] = 7'h2E;
-        quarterwave_table[34] = 7'h2F;
-        quarterwave_table[35] = 7'h30;
-        quarterwave_table[36] = 7'h31;
-        quarterwave_table[37] = 7'h32;
-        quarterwave_table[38] = 7'h33;
-        quarterwave_table[39] = 7'h33;
-        quarterwave_table[40] = 7'h34;
-        quarterwave_table[41] = 7'h35;
-        quarterwave_table[42] = 7'h36;
-        quarterwave_table[43] = 7'h37;
-        quarterwave_table[44] = 7'h37;
-        quarterwave_table[45] = 7'h38;
-        quarterwave_table[46] = 7'h39;
-        quarterwave_table[47] = 7'h39;
-        quarterwave_table[48] = 7'h3A;
-        quarterwave_table[49] = 7'h3B;
-        quarterwave_table[50] = 7'h3B;
-        quarterwave_table[51] = 7'h3C;
-        quarterwave_table[52] = 7'h3C;
-        quarterwave_table[53] = 7'h3C;
-        quarterwave_table[54] = 7'h3D;
-        quarterwave_table[55] = 7'h3D;
-        quarterwave_table[56] = 7'h3D;
-        quarterwave_table[57] = 7'h3E;
-        quarterwave_table[58] = 7'h3E;
-        quarterwave_table[59] = 7'h3E;
-        quarterwave_table[60] = 7'h3E;
-        quarterwave_table[61] = 7'h3E;
-        quarterwave_table[62] = 7'h3E;
-        quarterwave_table[63] = 7'h3E;
-
+            default: value = 7'd0;
+        endcase
     end
 
 endmodule

@@ -1,11 +1,7 @@
 /*
-Performs AM Demodulation: sqrt(I^2 + Q^2)
-Square root code is taken from https://verilogcodes.blogspot.com/2017/11/a-verilog-function-for-finding-square-root.html
-
-TODO: use only one multiplier with TDM
-TODO: minimize rounding errors of sqrt, get fractional result by scaling input
-
-Module Description:
+-----------------------------------------------------------------------------
+Module: AMDemodulator
+Description:
 This module performs AM demodulation by computing the square root of the sum of the squares of the in-phase (I) and quadrature (Q) input signals (i.e., sqrt(I^2 + Q^2)). It uses two multipliers to compute the squares of the I and Q signals and then sums these squares. The square root function is implemented as a Verilog function within the module.
 
 Inputs:
@@ -15,38 +11,43 @@ Inputs:
 
 Output:
 - amdemod_out: 12-bit output signal representing the demodulated AM signal.
+
+Parameters:
+- DATA_WIDTH: Bit width of the input/output data (default is 12).
+
+Notes:
+- The square root function expects even bit-width inputs, so the sum of squares is adjusted by adding extra unused bits for proper operation.
 */
 module AMDemodulator #(
-    parameter  INPUT_WIDTH = 12
+    parameter  DATA_WIDTH = 12
 ) (
-    input  wire                     clk,
-    input  signed [INPUT_WIDTH-1:0] inphase,
-    input  signed [INPUT_WIDTH-1:0] quadrature,
-    output reg    [INPUT_WIDTH-1:0] amdemod_out
+    input  wire                    clk,
+    input  signed [DATA_WIDTH-1:0] inphase,
+    input  signed [DATA_WIDTH-1:0] quadrature,
+    output reg    [DATA_WIDTH-1:0] amdemod_out
 );
 
-  localparam N = 2 * INPUT_WIDTH;
+  reg        [2*DATA_WIDTH+1:0] square_sum;
+  reg signed [2*DATA_WIDTH-1:0] mult_result_i;
+  reg signed [2*DATA_WIDTH-1:0] mult_result_q;
 
-  reg signed [(N+1)/2:0]             amdemod_d;
-  reg        [N+1:0]                 square_sum;
+  // NOTE: 1 bit is added because the sqrt function only works with even numbers, that is why sqrt_sum
+  //       has 1 extra unused bit
+  localparam N = 2 * DATA_WIDTH + 2;
 
-  reg signed [INPUT_WIDTH-1:0]       mult_i_a;
-  reg signed [INPUT_WIDTH-1:0]       mult_i_b;
-  reg signed [N-1:0]                 mult_result_i;
+  //=============================//
+  //       Sqrt function         //
+  //=============================//
+  function automatic [N/2-1:0] sqrt(
+    input reg [N-1:0] num
+  );
 
-  reg signed [INPUT_WIDTH:0]         mult_q_a;
-  reg signed [INPUT_WIDTH:0]         mult_q_b;
-  reg signed [N-1:0]                 mult_result_q;
-
-  function automatic [N/2:0] sqrt;
-
-    input   [N:0] num;
-    reg     [N:0] a         [N/2  :0];
+    reg     [  N-1:0] a     [N/2  :0];
     reg     [N/2-1:0] q     [N/2  :0];
     reg     [N/2+1:0] left  [N/2-1:0];
     reg     [N/2+1:0] right [N/2-1:0];
     reg     [N/2+1:0] r     [N/2  :0];
-    integer            i;
+    integer           i;
     begin
 
       a[0] = num;
@@ -74,36 +75,31 @@ module AMDemodulator #(
   endfunction
 
 
-  // Main processing block
+  //=============================//
+  //    Main processing block    //
+  //=============================//
   always @(posedge clk) begin
 
-    // Load inputs to multipliers
-    mult_i_a      <= inphase;
-    mult_i_b      <= inphase;
-    mult_q_a      <= quadrature;
-    mult_q_b      <= quadrature;
-
-    mult_result_i <= mult_i_a * mult_i_b;
-    mult_result_q <= mult_q_a * mult_q_b;
+    // Load multiplication results
+    mult_result_i <= inphase    * inphase;
+    mult_result_q <= quadrature * quadrature;
 
     // Calculate I^2 + Q^2
-    square_sum    <= mult_result_i + mult_result_q;
+    square_sum    <= {2'b00, mult_result_i + mult_result_q};
 
     // Compute the square root of the sum of squares
-    amdemod_d     <= sqrt(square_sum);
-
-    // Assign the lower WIDTH bits to the output
-    amdemod_out   <= amdemod_d[INPUT_WIDTH-1:0];
+    amdemod_out <= DATA_WIDTH'(sqrt(square_sum));
   end
 
-  //-----------------------------
-  // For sim only
-  //-----------------------------
+  //=============================//
+  //       For sim only          //
+  //=============================//
+  //`ifdef SIMULATION
   initial begin
     $dumpfile("AMDemod_waves.vcd");
     $dumpvars;
   end
-
+//`endif
 endmodule
 
 /*

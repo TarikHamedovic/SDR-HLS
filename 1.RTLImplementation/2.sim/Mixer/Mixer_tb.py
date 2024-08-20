@@ -55,8 +55,8 @@ def print_vars(dut):
         ["sinewave_in", str(dut.sinewave_in.value)],
         ["cosinewave_in", str(dut.cosinewave_in.value)],
         ["rf_in", str(dut.rf_in.value)],
-        ["rf_in_delayed_1", str(dut.rf_in_delayed_1.value)],
-        ["rf_in_delayed_2", str(dut.rf_in_delayed_2.value)],
+        ["rf_in_d[0]", str(dut.rf_in_d[0].value)],
+        ["rf_in_d[1]", str(dut.rf_in_d[1].value)],
         ["sinewave_out", str(dut.sinewave_out.value)],
         ["cosinewave_out", str(dut.cosinewave_out.value)]
     ]
@@ -71,7 +71,7 @@ async def wait(dut, n_cycles):
 @cocotb.test()
 async def Mixer_test(dut):
 
-    input_bits = dut.INPUT_WIDTH.value
+    input_bits = dut.DATA_WIDTH.value
     number_of_iterations = int(os.environ.get("ITERATIONS", 100))
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
 
@@ -112,8 +112,8 @@ async def Mixer_test(dut):
         cocotb.log.info("------ Waiting 1 Clock Cycle ------")
         await RisingEdge(dut.clk)
 
-        expected_sinewave = sinewave_random_value if dut.rf_in_delayed_2.value == 0 else -sinewave_random_value
-        expected_cosinewave = cosinewave_random_value if dut.rf_in_delayed_2.value == 0 else -cosinewave_random_value
+        expected_sinewave = sinewave_random_value if dut.rf_in_d[1].value == 0 else -sinewave_random_value
+        expected_cosinewave = cosinewave_random_value if dut.rf_in_d[1].value == 0 else -cosinewave_random_value
 
         expected_sinewave_bin = BinaryValue(
             value=expected_sinewave, n_bits=input_bits, bigEndian=False, binaryRepresentation=2
@@ -161,4 +161,5 @@ Version History:
  2024/6/7  TH: Fixed assertions
  2024/8/5  TH: Added check marks for correctness and table titles
  2024/8/5  TH: Added iteration count in table title and swapped actual/expected in checking table
+ 2024/8/20 TH: Updated for new Mixer module with rf_in_d array
 """

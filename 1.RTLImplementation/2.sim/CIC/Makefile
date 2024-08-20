@@ -30,7 +30,7 @@ clean::
 	$(RM) *.vcd
 
 # Set default values for the environment variables
-INPUT_WIDTH ?= 12
+DATA_WIDTH ?= 12
 REGISTER_WIDTH ?= 64
 CLOCK_VALUE ?= 12.5
 DECIMATION_RATIO ?= 16
@@ -38,28 +38,28 @@ ITERATIONS ?= 50
 
 # Simulator and Parameter declaration
 SIMULATOR ?= icarus
-COMPILE_ARGS += -P$(TOPLEVEL).INPUT_WIDTH=$(INPUT_WIDTH)
+COMPILE_ARGS += -P$(TOPLEVEL).DATA_WIDTH=$(DATA_WIDTH)
 COMPILE_ARGS += -P$(TOPLEVEL).REGISTER_WIDTH=$(REGISTER_WIDTH)
 COMPILE_ARGS += -P$(TOPLEVEL).DECIMATION_RATIO=$(DECIMATION_RATIO)
 
 # Define the test target
 .PHONY: test
 test:
-	@INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
+	@DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
 	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) \
 	make SIM=$(SIMULATOR) TOPLEVEL_LANG=verilog TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Run the simulation
 .PHONY: run
 run:
-	INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
+	DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
 	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) $(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Define the help target
 .PHONY: help_tb
 help_tb:
 	@echo "Usage:"
-	@echo "  make run [INPUT_BITS=<bits>] [CLOCK_VALUE=<value>] [DECIMATION_RATIO=<value>] [WIDTH=<width>] [ITERATIONS=<values>] [SIMULATOR=<simulator>]"
+	@echo "  make run [DATA_WIDTH=<bits>] [CLOCK_VALUE=<value>] [DECIMATION_RATIO=<value>] [REGISTER_WIDTH=<width>] [ITERATIONS=<values>] [SIMULATOR=<simulator>]"
 	@echo ""
 	@echo "Targets:"
 	@echo "  clean       - Remove generated files and directories"
@@ -68,7 +68,7 @@ help_tb:
 	@echo "  help_tb     - Display this help message"
 	@echo ""
 	@echo "Variables:"
-	@echo "  INPUT_WIDTH      - Number of input bits (default: 12)"
+	@echo "  DATA_WIDTH       - Number of input bits (default: 12)"
 	@echo "  CLOCK_VALUE      - Clock value in ns (default: 12.5 or 80 MHz)"
 	@echo "  DECIMATION_RATIO - Decimation ratio (default: 16)"
 	@echo "  REGISTER_WIDTH   - Bit width for internal registers (default: 64)"
@@ -76,4 +76,4 @@ help_tb:
 	@echo "  SIMULATOR        - Simulator to use (default: icarus)"
 
 # Usage:
-# make run INPUT_BITS=12 CLOCK_VALUE=12.5 DECIMATION_RATIO=16 WIDTH=64 ITERATIONS=50
+# make run DATA_WIDTH=12 CLOCK_VALUE=12.5 DECIMATION_RATIO=16 REGISTER_WIDTH=64 ITERATIONS=50

@@ -11,20 +11,20 @@ import random
 import os
 
 
-async def init(phase_inc_carr, phase_accum, duration_ns):
-    # Function to initialize phase_inc_carr and phase_accum values #
+async def init(phase_increment, phase_accumulator, duration_ns):
+    # Function to initialize phase_increment and phase_accumulator values #
     cocotb.log.info("[Initialization] Commencing input reset sequence...")
 
-    original_phase_inc_carr = phase_inc_carr.value
-    original_phase_accum = phase_accum.value
+    original_phase_increment = phase_increment.value
+    original_phase_accumulator = phase_accumulator.value
 
-    phase_inc_carr.value = 0
-    phase_accum.value = 0
+    phase_increment.value = 0
+    phase_accumulator.value = 0
 
     await Timer(duration_ns, units="ns")
 
-    cocotb.log.info(f"[Initialization] {phase_inc_carr._name} value changed from {original_phase_inc_carr} to {phase_inc_carr.value}")
-    cocotb.log.info(f"[Initialization] {phase_accum._name} value changed from {original_phase_accum} to {phase_accum.value}")
+    cocotb.log.info(f"[Initialization] {phase_increment._name} value changed from {original_phase_increment} to {phase_increment.value}")
+    cocotb.log.info(f"[Initialization] {phase_accumulator._name} value changed from {original_phase_accumulator} to {phase_accumulator.value}")
 
 def format_table(title, table_data):
     col_widths = [max(len(str(item)) for item in col) for col in zip(*table_data)]
@@ -42,10 +42,10 @@ def format_table(title, table_data):
 def print_vars(dut):
     table_data = [
         ["Variable", "Value"],
-        ["phase_inc_carr", str(dut.phase_inc_carr.value)],
-        ["phase_accum", str(dut.phase_accum.value)],
-        ["sin_out", str(dut.sin_out.value)],
-        ["cos_out", str(dut.cos_out.value)]
+        ["phase_increment", str(dut.phase_increment.value)],
+        ["phase_accumulator", str(dut.phase_accumulator.value)],
+        ["sinewave_out", str(dut.sinewave_out.value)],
+        ["cosinewave_out", str(dut.cosinewave_out.value)]
     ]
     cocotb.log.info("\n" + format_table("Monitoring Variables", table_data))
 
@@ -61,7 +61,7 @@ async def nco_test(dut):
     cocotb.start_soon(clock.start())
 
     # Initializing Input Variables to 0 #
-    await init(dut.phase_inc_carr, dut.phase_accum, clock_value)
+    await init(dut.phase_increment, dut.phase_accumulator, clock_value)
 
     # Printing to Monitor to check if the variable change is OK #
     print_vars(dut)
@@ -72,14 +72,14 @@ async def nco_test(dut):
     cocotb.log.info("[Test Data Generation] Generated test data with edge and random values")
 
     assertions_passed = 0
-    for iteration, phase_inc_carr in enumerate(test_data):
+    for iteration, phase_increment in enumerate(test_data):
         # Loading values into DUT #
-        cocotb.log.info(f"[Test Execution] Applying input value phase_inc_carr = {phase_inc_carr}...")
-        dut.phase_inc_carr.value = phase_inc_carr
-        await RisingEdge(dut.clk)  # Waiting to load phase_inc_carr value
+        cocotb.log.info(f"[Test Execution] Applying input value phase_increment = {phase_increment}...")
+        dut.phase_increment.value = phase_increment
+        await RisingEdge(dut.clk)  # Waiting to load phase_increment value
         cocotb.log.info("----- Loaded Values -----")
 
-        # Allow some time for the phase_accum to update #
+        # Allow some time for the phase_accumulator to update #
         cocotb.log.info("[Test Execution] Waiting 1 clock cycle for the phase accumulation...")
 
         await RisingEdge(dut.clk)
@@ -87,28 +87,28 @@ async def nco_test(dut):
         # Monitoring variables after operation #
         print_vars(dut)
 
-        # Checking the sin_out and cos_out values #
-        expected_sin_out = 0 if (dut.phase_accum.value >> (width - 1)) & 1 else 1
-        expected_cos_out = 0 if ((dut.phase_accum.value >> (width - 1)) ^ (dut.phase_accum.value >> (width - 2))) & 1 else 1
-        actual_sin_out = int(dut.sin_out.value)
-        actual_cos_out = int(dut.cos_out.value)
+        # Checking the sinewave_out and cosinewave_out values #
+        expected_sinewave_out = 0 if (dut.phase_accumulator.value >> (width - 1)) & 1 else 1
+        expected_cosinewave_out = 0 if ((dut.phase_accumulator.value >> (width - 1)) ^ (dut.phase_accumulator.value >> (width - 2))) & 1 else 1
+        actual_sinewave_out = int(dut.sinewave_out.value)
+        actual_cosinewave_out = int(dut.cosinewave_out.value)
 
-        sin_correct = '✓' if actual_sin_out == expected_sin_out else '✗'
-        cos_correct = '✓' if actual_cos_out == expected_cos_out else '✗'
+        sinewave_correct = '✓' if actual_sinewave_out == expected_sinewave_out else '✗'
+        cosinewave_correct = '✓' if actual_cosinewave_out == expected_cosinewave_out else '✗'
 
         table_data = [
             ["Variable", "Actual", "Expected", "Correct"],
-            ["phase_inc_carr", phase_inc_carr, phase_inc_carr, "✓"],
-            ["phase_accum", int(dut.phase_accum.value), "-", "-"],
-            ["sin_out", actual_sin_out, expected_sin_out, sin_correct],
-            ["cos_out", actual_cos_out, expected_cos_out, cos_correct]
+            ["phase_increment", phase_increment, phase_increment, "✓"],
+            ["phase_accumulator", int(dut.phase_accumulator.value), "-", "-"],
+            ["sinewave_out", actual_sinewave_out, expected_sinewave_out, sinewave_correct],
+            ["cosinewave_out", actual_cosinewave_out, expected_cosinewave_out, cosinewave_correct]
         ]
         cocotb.log.info("\n" + format_table(f"Checking Table Iteration {iteration + 1}", table_data))
 
-        assert actual_sin_out == expected_sin_out, f"Assertion failed: phase_inc_carr = {phase_inc_carr}: expected sin_out = {expected_sin_out}, got {actual_sin_out}"
+        assert actual_sinewave_out == expected_sinewave_out, f"Assertion failed: phase_increment = {phase_increment}: expected sinewave_out = {expected_sinewave_out}, got {actual_sinewave_out}"
         assertions_passed += 1
 
-        assert actual_cos_out == expected_cos_out, f"Assertion failed: phase_inc_carr = {phase_inc_carr}: expected cos_out = {expected_cos_out}, got {actual_cos_out}"
+        assert actual_cosinewave_out == expected_cosinewave_out, f"Assertion failed: phase_increment = {phase_increment}: expected cosinewave_out = {expected_cosinewave_out}, got {actual_cosinewave_out}"
         assertions_passed += 1
 
         cocotb.log.info("[Check] Assertion passed for current input set")
@@ -132,4 +132,5 @@ Version History:
  2024/7/6 : Added detailed comments and logging
  2024/8/5 : Added formatted tables for monitoring and checking with titles and outlines
  2024/8/5 : Added iteration count in table title and swapped actual/expected in checking table
+ 2024/8/20: Modified for the nco_sig module
 """

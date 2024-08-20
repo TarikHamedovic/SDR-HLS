@@ -8,8 +8,8 @@ V_SRC = $(HW_SRC)/verilog
 SV_SRC = $(HW_SRC)/systemverilog
 
 # Verilog sources
-VERILOG_SOURCES += $(V_SRC)/NCO.v
-#SYSTEMVERILOG_SOURCES += $(SV_SRC)/NCO.sv
+#VERILOG_SOURCES += $(V_SRC)/NCO.v
+VERILOG_SOURCES += $(SV_SRC)/NCO.sv
 
 # VHDL sources (if any)
 VHDL_SOURCES = 
@@ -30,31 +30,31 @@ clean::
 	$(RM) *.vcd
 
 # Set default values for the environment variables
-WIDTH ?= 64
+REGISTER_WIDTH ?= 64
 CLOCK_VALUE ?= 12.5
 NUM_TEST_VALUES ?= 100
 
 # Simulator and Parameter declaration
 SIMULATOR ?= icarus
-COMPILE_ARGS += -P$(TOPLEVEL).WIDTH=$(WIDTH)
+COMPILE_ARGS += -P$(TOPLEVEL).REGISTER_WIDTH=$(REGISTER_WIDTH)
 
 # Define the test target
 .PHONY: test
 test:
-	@WIDTH=$(WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) NUM_TEST_VALUES=$(NUM_TEST_VALUES) \
+	@REGISTER_WIDTH=$(REGISTER_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) NUM_TEST_VALUES=$(NUM_TEST_VALUES) \
 	make SIM=$(SIMULATOR) TOPLEVEL_LANG=verilog TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Run the simulation
 .PHONY: run
 run:
-	WIDTH=$(WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) NUM_TEST_VALUES=$(NUM_TEST_VALUES) \
+	REGISTER_WIDTH=$(REGISTER_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) NUM_TEST_VALUES=$(NUM_TEST_VALUES) \
 	$(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Define the help target
 .PHONY: help_tb
 help_tb:
 	@echo "Usage:"
-	@echo "  make run [WIDTH =<bits>] [CLOCK_VALUE=<value>] [NUM_TEST_VALUES=<values>] [SIMULATOR=<simulator>]"
+	@echo "  make run [REGISTER_WIDTH =<bits>] [CLOCK_VALUE=<value>] [NUM_TEST_VALUES=<values>] [SIMULATOR=<simulator>]"
 	@echo ""
 	@echo "Targets:"
 	@echo "  clean       - Remove generated files and directories"
@@ -63,11 +63,11 @@ help_tb:
 	@echo "  help_tb     - Display this help message"
 	@echo ""
 	@echo "Variables:"
-	@echo "  WIDTH            - Number of input bits (default: 64)"
+	@echo "  REGISTER_WIDTH            - Number of input bits (default: 64)"
 	@echo "  CLOCK_VALUE      - Clock value in ns (default: 12.5 or 80 MHz)"
 	@echo "  NUM_TEST_VALUES  - Number of test values (default: 100)"
 	@echo "  SIMULATOR        - Simulator to use (default: icarus)"
 
 # Usage:
-# make run INPUT_BITS=12 CLOCK_VALUE=12.5 NUM_TEST_VALUES=100
+# make run REGISTER_WIDTH=12 CLOCK_VALUE=12.5 NUM_TEST_VALUES=100
 

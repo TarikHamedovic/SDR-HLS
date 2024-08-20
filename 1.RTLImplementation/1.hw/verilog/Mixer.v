@@ -15,48 +15,52 @@ Outputs:
 */
 
 module Mixer #(
-    parameter INPUT_WIDTH = 12
+    parameter DATA_WIDTH = 12
 ) (
-    input                         clk,
-    input  signed     [INPUT_WIDTH-1:0] sinewave_in,
-    input  signed     [INPUT_WIDTH-1:0] cosinewave_in,
-    input                         rf_in,
-    output                        rf_out,
-    output reg signed [INPUT_WIDTH-1:0] sinewave_out,
-    output reg signed [INPUT_WIDTH-1:0] cosinewave_out
+    input  wire                            clk,
+    input  reg signed     [DATA_WIDTH-1:0] sinewave_in,
+    input  reg signed     [DATA_WIDTH-1:0] cosinewave_in,
+    input  reg                             rf_in,
+    output reg                             rf_out,
+    output reg signed     [DATA_WIDTH-1:0] sinewave_out,
+    output reg signed     [DATA_WIDTH-1:0] cosinewave_out
 );
 
-  // Internal registers to hold delayed rf_in signal
-  reg rf_in_delayed_1 = 1'b1;
-  reg rf_in_delayed_2  = 1'b1;
+  //=============================//
+  //       Internal signals      //
+  //=============================//
+  reg [1:0] rf_in_d = 2'b11;
 
   // Delay the rf_in signal by two clock cycles
   always @(posedge clk) begin
-    rf_in_delayed_1 <= rf_in;
-    rf_in_delayed_2 <= rf_in_delayed_1;
+    rf_in_d[0] <= rf_in;
+    rf_in_d[1] <= rf_in_d[0];
   end
 
   // Assign the delayed rf_in signal to rf_out
-  assign rf_out = rf_in_delayed_1;
+  assign rf_out = rf_in_d[0];
 
-  // Mixing process: multiply RF input with sine and cosine inputs
+  //=============================//
+  //       Mixing process        //
+  //=============================//
   always @(posedge clk) begin
-    if (rf_in_delayed_2 == 1'b0) begin
-      sinewave_out <= sinewave_in;
+    if (rf_in_d[1] == 1'b0) begin
+      sinewave_out   <= sinewave_in;
       cosinewave_out <= cosinewave_in;
-    end else begin
-      sinewave_out <= -sinewave_in;
+    end else if (rf_in_d[1] == 1'b1)begin
+      sinewave_out   <= -sinewave_in;
       cosinewave_out <= -cosinewave_in;
     end
   end
-
-  //-----------------------------
-  // For simulation only
-  //-----------------------------
+  //============================//
+  //    For simulation only     //
+  //============================//
+  //`ifdef SIMULATION
   initial begin
     $dumpfile("mixer_waves.vcd");
     $dumpvars;
   end
+  //`endif
 endmodule
 
 /*

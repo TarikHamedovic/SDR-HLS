@@ -1,29 +1,29 @@
 import argparse
 import subprocess
 
-def generate_verilog_file(phase_width, sine_width, filename):
+def generate_verilog_file(phase_width, data_width, filename):
     verilog_code = f"""
 module quarterwave_generator #(
     parameter PHASE_WIDTH = {phase_width},
-              SINE_WIDTH  = {sine_width}
+              DATA_WIDTH  = {data_width}
 ) (
     input  wire                     clk,
     input  wire                     arst,
     input  wire                     sample_clk_ce,
     input  wire [PHASE_WIDTH-1:0]   phase_increment,
-    output reg  [SINE_WIDTH -1:0]   sinewave,
-    output reg  [SINE_WIDTH -1:0]   cosinewave
+    output reg  [DATA_WIDTH -1:0]   sinewave,
+    output reg  [DATA_WIDTH -1:0]   cosinewave
 );
 
-  reg [(SINE_WIDTH-1):0]  quartertable[0:((1<<(PHASE_WIDTH-2))-1)];
+  reg [(DATA_WIDTH-1):0]  quartertable[0:((1<<(PHASE_WIDTH-2))-1)];
 
   reg [1:0]               sine_negate;
   reg [PHASE_WIDTH-3:0]   sine_index;
-  reg [SINE_WIDTH-1 :0]   sine_table_value;
+  reg [DATA_WIDTH-1 :0]   sine_table_value;
 
   reg [1:0]               cosine_negate;
   reg [PHASE_WIDTH-3:0]   cosine_index;
-  reg [SINE_WIDTH-1 :0]   cosine_table_value;
+  reg [DATA_WIDTH-1 :0]   cosine_table_value;
 
   reg [PHASE_WIDTH-1:0]   phase_accumulator;
 
@@ -42,13 +42,13 @@ module quarterwave_generator #(
      cosinewave             = '0;
   end
 
-  always @(posedge clk) begin
-    if      (arst)          phase_accumulator <= '0;
-    else if (sample_clk_ce) phase_accumulator <= phase_accumulator + phase_increment;
+  always @(posedge clk or posedge arst) begin
+    if      (arst == 1'b1)          phase_accumulator <= '0;
+    else if (sample_clk_ce == 1'b1) phase_accumulator <= phase_accumulator + phase_increment;
   end
 
-  always @(posedge clk) begin
-    if (arst) begin
+  always @(posedge clk or posedge arst) begin
+    if (arst == 1'b1) begin
       sine_negate        <= 2'b00;
       sine_index         <= '0;
       sine_table_value   <= '0;
@@ -58,7 +58,7 @@ module quarterwave_generator #(
       cosine_index       <= '0;
       cosine_table_value <= '0;
       cosinewave         <= '0;
-    end else if (sample_clk_ce) begin
+    end else if (sample_clk_ce == 1'b1) begin
       // Clock #1
       sine_negate[0]     <= phase_accumulator[PHASE_WIDTH-1];
       cosine_negate [0]  <= phase_accumulator[PHASE_WIDTH-1] ^ phase_accumulator[PHASE_WIDTH-2];
