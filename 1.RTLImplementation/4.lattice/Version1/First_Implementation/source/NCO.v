@@ -17,7 +17,7 @@ Outputs:
 */
 
 module nco_sig #( // TODO: Change name so it matches module file name
-    parameter int WIDTH = 64
+    parameter WIDTH = 64
 )(
     input                  clk,
     input      [WIDTH-1:0] phase_inc_carr,

@@ -1,7 +1,7 @@
 
 module quarterwave_generator #(
-    parameter DATA_WIDTH  = 12,
-              QLUT_DEPTH  = 8,
+    parameter DATA_WIDTH  = 16,
+              QLUT_DEPTH  = 11,
               PHASE_WIDTH = 64
 ) (
     input  logic                             clk,

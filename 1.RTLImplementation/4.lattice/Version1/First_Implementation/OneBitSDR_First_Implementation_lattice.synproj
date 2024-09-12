@@ -31,22 +31,22 @@
 
 
 -lpf 1
--p "/home/user/SDR-HLS/1bitSDRLattice"
--ver "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v"
-"/home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v"
-"/home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v"
-"/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v"
-"/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v"
-"/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v"
+-p "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1"
+-ver "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/Multiplier/Multiplier.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/NCOAdder/NCOAdder.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v"
+"/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v"
 -top top
 
 
--p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation" "/home/user/SDR-HLS/1bitSDRLattice"
+-p "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data" "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation" "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1"
 
 -ngd "OneBitSDR_First_Implementation.ngd"
 

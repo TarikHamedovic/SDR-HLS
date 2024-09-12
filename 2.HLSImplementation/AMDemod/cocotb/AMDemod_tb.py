@@ -49,7 +49,8 @@ def print_vars(dut):
 
 @cocotb.test()
 async def AMDemod_test(dut):
-    input_width = 12
+    #data_width = dut.DATA_WIDTH.value
+    data_width = 12
     clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))    
     num_test_values = int(os.environ.get('NUM_TEST_VALUES', 100))
     
@@ -70,14 +71,14 @@ async def AMDemod_test(dut):
     cocotb.log.info("[Test Data Generation] Generating test data")
     test_data = [
         [0, 0], 
-        [2**(input_width-1)-1, 2**(input_width-1)-1], 
-        [-2**(input_width-1), -2**(input_width-1)], 
-        [2**(input_width-1)-1, -2**(input_width-1)], 
-        [-2**(input_width-1), 2**(input_width-1)-1]
+        [2**(data_width-1)-1, 2**(data_width-1)-1], 
+        [-2**(data_width-1), -2**(data_width-1)], 
+        [2**(data_width-1)-1, -2**(data_width-1)], 
+        [-2**(data_width-1), 2**(data_width-1)-1]
     ]
     test_data += [
-        [random.randint(-2**(input_width-1), 2**(input_width-1)-1), 
-         random.randint(-2**(input_width-1), 2**(input_width-1)-1)] 
+        [random.randint(-2**(data_width-1), 2**(data_width-1)-1), 
+         random.randint(-2**(data_width-1), 2**(data_width-1)-1)] 
         for _ in range(num_test_values)
     ]
     cocotb.log.info("[Test Data Generation] Generated test data with edge and random values")
@@ -122,7 +123,7 @@ async def AMDemod_test(dut):
     # Summary Table
     summary_table = [
         ["Metric", "Value"],
-        ["Input Width", input_width],
+        ["Data Width", data_width],
         ["Clock frequency (MHz)", f"{1/clock_value * 1000}"],
         ["Runtime of simulation (ns)", f"{(num_test_values + 5) * clock_value}"],
         ["Total number of assertions passed", assertions_passed]

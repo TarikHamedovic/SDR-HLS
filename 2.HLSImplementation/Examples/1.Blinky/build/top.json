@@ -1,5 +1,5 @@
 {
-  "creator": "Yosys 0.43+22 (git sha1 118b2829d, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)",
+  "creator": "Yosys 0.40+22 (git sha1 fa0c5c1d4, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)",
   "modules": {
     "$__ABC9_DELAY": {
       "attributes": {
@@ -21,7 +21,7 @@
         }
       },
       "cells": {
-        "$specify$1013": {
+        "$specify$1012": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -21610,73 +21610,44 @@
         "generator": "Amaranth"
       },
       "ports": {
-        "led_1__io": {
+        "led_0__io": {
           "direction": "output",
           "bits": [ 2 ]
         },
-        "led_2__io": {
+        "led_1__io": {
           "direction": "output",
           "bits": [ 3 ]
         },
-        "led_3__io": {
+        "led_2__io": {
           "direction": "output",
           "bits": [ 4 ]
         },
-        "led_4__io": {
+        "led_3__io": {
           "direction": "output",
           "bits": [ 5 ]
         },
-        "led_5__io": {
+        "led_4__io": {
           "direction": "output",
           "bits": [ 6 ]
         },
-        "led_6__io": {
+        "led_5__io": {
           "direction": "output",
           "bits": [ 7 ]
         },
-        "led_7__io": {
+        "led_6__io": {
           "direction": "output",
           "bits": [ 8 ]
         },
-        "clk25_0__io": {
-          "direction": "input",
+        "led_7__io": {
+          "direction": "output",
           "bits": [ 9 ]
         },
-        "led_0__io": {
-          "direction": "output",
+        "clk25_0__io": {
+          "direction": "input",
           "bits": [ 10 ]
         }
       },
       "cells": {
-        "cd_sync.U$0": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "ASYNC"
-          },
-          "attributes": {
-            "hdlname": "cd_sync U$0",
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:998|/usr/local/bin/../share/yosys/ecp5/cells_ff.vh:8.188-8.250"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 11 ],
-            "DI": [ "1" ],
-            "LSR": [ "0" ],
-            "Q": [ 12 ]
-          }
-        },
         "cd_sync.U$1": {
           "hide_name": 0,
           "type": "TRELLIS_FF",
@@ -21691,7 +21662,36 @@
           "attributes": {
             "hdlname": "cd_sync U$1",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:999|/usr/local/bin/../share/yosys/ecp5/cells_ff.vh:8.188-8.250"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:999|/usr/local/bin/../share/yosys/ecp5/cells_ff.vh:8.188-8.250"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 11 ],
+            "DI": [ "1" ],
+            "LSR": [ "0" ],
+            "Q": [ 12 ]
+          }
+        },
+        "cd_sync.U$2": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "ASYNC"
+          },
+          "attributes": {
+            "hdlname": "cd_sync U$2",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:1000|/usr/local/bin/../share/yosys/ecp5/cells_ff.vh:8.188-8.250"
           },
           "port_directions": {
             "CLK": "input",
@@ -21706,14 +21706,14 @@
             "Q": [ 13 ]
           }
         },
-        "cd_sync.U$2": {
+        "cd_sync.U$3": {
           "hide_name": 0,
           "type": "SGSR",
           "parameters": {
           },
           "attributes": {
-            "hdlname": "cd_sync U$2",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:1003"
+            "hdlname": "cd_sync U$3",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:1004"
           },
           "port_directions": {
             "CLK": "input",
@@ -21722,6 +21722,27 @@
           "connections": {
             "CLK": [ 11 ],
             "GSR": [ 13 ]
+          }
+        },
+        "cd_sync.clk_buf.buf.buf0": {
+          "hide_name": 0,
+          "type": "TRELLIS_IO",
+          "parameters": {
+            "DIR": "INPUT"
+          },
+          "attributes": {
+            "PULLMODE": "NONE",
+            "hdlname": "cd_sync clk_buf buf buf0",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:41|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:2.114-2.146"
+          },
+          "port_directions": {
+            "B": "inout",
+            "O": "output"
+          },
+          "connections": {
+            "B": [ 10 ],
+            "O": [ 11 ]
           }
         },
         "count_CCU2C_B0": {
@@ -22943,7 +22964,7 @@
           "connections": {
             "D0": [ 80 ],
             "D1": [ 81 ],
-            "SD": [ 82 ],
+            "SD": [ 25 ],
             "Z": [ 72 ]
           }
         },
@@ -22963,9 +22984,9 @@
             "Z": "output"
           },
           "connections": {
-            "ALUT": [ 83 ],
-            "BLUT": [ 84 ],
-            "C0": [ 25 ],
+            "ALUT": [ 82 ],
+            "BLUT": [ 83 ],
+            "C0": [ 84 ],
             "Z": [ 80 ]
           }
         },
@@ -22973,7 +22994,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1000000000000000"
+            "INIT": "0000000000000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -22987,11 +23008,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 30 ],
-            "B": [ 36 ],
-            "C": [ 35 ],
-            "D": [ 26 ],
-            "Z": [ 83 ]
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 82 ]
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D0_PFUMX_Z_BLUT_LUT4_Z": {
@@ -23016,6 +23037,31 @@
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
+            "Z": [ 83 ]
+          }
+        },
+        "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D0_PFUMX_Z_C0_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:114.33-115.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ 39 ],
             "Z": [ 84 ]
           }
         },
@@ -23037,7 +23083,7 @@
           "connections": {
             "ALUT": [ 85 ],
             "BLUT": [ 86 ],
-            "C0": [ 25 ],
+            "C0": [ 84 ],
             "Z": [ 81 ]
           }
         },
@@ -23070,7 +23116,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000000000000"
+            "INIT": "1000000000000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -23084,36 +23130,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
+            "A": [ 30 ],
+            "B": [ 36 ],
+            "C": [ 35 ],
+            "D": [ 26 ],
             "Z": [ 86 ]
-          }
-        },
-        "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_SD_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000011111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:114.33-115.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ 39 ],
-            "Z": [ 82 ]
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_D0_L6MUX21_Z": {
@@ -23901,27 +23922,6 @@
             "Q": [ 111 ]
           }
         },
-        "pin_clk25_0.buf.buf.buf0": {
-          "hide_name": 0,
-          "type": "TRELLIS_IO",
-          "parameters": {
-            "DIR": "INPUT"
-          },
-          "attributes": {
-            "PULLMODE": "NONE",
-            "hdlname": "pin_clk25_0 buf buf buf0",
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:41|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:2.114-2.146"
-          },
-          "port_directions": {
-            "B": "inout",
-            "O": "output"
-          },
-          "connections": {
-            "B": [ 9 ],
-            "O": [ 11 ]
-          }
-        },
         "pin_led_0.buf.buf.buf0": {
           "hide_name": 0,
           "type": "TRELLIS_IO",
@@ -23932,7 +23932,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_0 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -23940,7 +23940,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 10 ],
+            "B": [ 2 ],
             "I": [ 74 ],
             "T": [ "0" ]
           }
@@ -23955,7 +23955,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_1 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -23963,7 +23963,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 2 ],
+            "B": [ 3 ],
             "I": [ 99 ],
             "T": [ "0" ]
           }
@@ -23978,7 +23978,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_2 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -23986,7 +23986,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 3 ],
+            "B": [ 4 ],
             "I": [ 101 ],
             "T": [ "0" ]
           }
@@ -24001,7 +24001,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_3 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -24009,7 +24009,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 4 ],
+            "B": [ 5 ],
             "I": [ 103 ],
             "T": [ "0" ]
           }
@@ -24024,7 +24024,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_4 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -24032,7 +24032,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 5 ],
+            "B": [ 6 ],
             "I": [ 105 ],
             "T": [ "0" ]
           }
@@ -24047,7 +24047,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_5 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -24055,7 +24055,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 6 ],
+            "B": [ 7 ],
             "I": [ 107 ],
             "T": [ "0" ]
           }
@@ -24070,7 +24070,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_6 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -24078,7 +24078,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 7 ],
+            "B": [ 8 ],
             "I": [ 109 ],
             "T": [ "0" ]
           }
@@ -24093,7 +24093,7 @@
             "PULLMODE": "NONE",
             "hdlname": "pin_led_7 buf buf buf0",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:46|/usr/local/bin/../share/yosys/ecp5/cells_io.vh:6.114-6.153"
           },
           "port_directions": {
             "B": "inout",
@@ -24101,7 +24101,7 @@
             "T": "input"
           },
           "connections": {
-            "B": [ 8 ],
+            "B": [ 9 ],
             "I": [ 111 ],
             "T": [ "0" ]
           }
@@ -24113,15 +24113,55 @@
           "bits": [ 11 ],
           "attributes": {
             "hdlname": "cd_sync clk",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:918"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
-        "cd_sync.clk25_0__i": {
+        "cd_sync.clk25_0__io": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "cd_sync clk25_0__io",
+            "unused_bits": "0 "
+          }
+        },
+        "cd_sync.clk_buf.buf.clk25_0__io": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "cd_sync clk_buf buf clk25_0__io",
+            "unused_bits": "0 "
+          }
+        },
+        "cd_sync.clk_buf.buf.i": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "hdlname": "cd_sync clk25_0__i",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:918"
+            "hdlname": "cd_sync clk_buf buf i",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
+          }
+        },
+        "cd_sync.clk_buf.clk25_0__io": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "cd_sync clk_buf clk25_0__io",
+            "unused_bits": "0 "
+          }
+        },
+        "cd_sync.clk_buf.i": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "cd_sync clk_buf i",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
+          }
+        },
+        "cd_sync.clk_buf.i$1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "cd_sync clk_buf i$1",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "cd_sync.gsr0": {
@@ -24129,7 +24169,7 @@
           "bits": [ 12 ],
           "attributes": {
             "hdlname": "cd_sync gsr0",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:969"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:970"
           }
         },
         "cd_sync.gsr1": {
@@ -24137,28 +24177,29 @@
           "bits": [ 13 ],
           "attributes": {
             "hdlname": "cd_sync gsr1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:970"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:971"
+          }
+        },
+        "cd_sync.i": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "cd_sync i",
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "clk": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/vendor/_lattice.py:1008"
-          }
-        },
-        "clk25_0__i": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:918"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:1009"
           }
         },
         "clk25_0__io": {
           "hide_name": 0,
-          "bits": [ 9 ],
+          "bits": [ 10 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "count": {
@@ -24287,16 +24328,16 @@
         },
         "led_0__io": {
           "hide_name": 0,
-          "bits": [ 10 ],
+          "bits": [ 2 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_0__o": {
           "hide_name": 0,
           "bits": [ 74 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE": {
@@ -24322,16 +24363,24 @@
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D0_PFUMX_Z_ALUT": {
           "hide_name": 0,
-          "bits": [ 83 ],
+          "bits": [ 82 ],
           "attributes": {
             "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:141.22-141.24"
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D0_PFUMX_Z_BLUT": {
           "hide_name": 0,
-          "bits": [ 84 ],
+          "bits": [ 83 ],
           "attributes": {
             "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:141.18-141.20"
+          }
+        },
+        "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D0_PFUMX_Z_C0": {
+          "hide_name": 0,
+          "bits": [ 30, 36, 35, 26, 84, 25 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D1": {
@@ -24353,14 +24402,6 @@
           "bits": [ 86 ],
           "attributes": {
             "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:141.26-141.28"
-          }
-        },
-        "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_SD": {
-          "hide_name": 0,
-          "bits": [ 30, 36, 35, 26, 25, 82 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_D0": {
@@ -24471,30 +24512,30 @@
         },
         "led_1__io": {
           "hide_name": 0,
-          "bits": [ 2 ],
+          "bits": [ 3 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_1__o": {
           "hide_name": 0,
           "bits": [ 99 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_2__io": {
           "hide_name": 0,
-          "bits": [ 3 ],
+          "bits": [ 4 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_2__o": {
           "hide_name": 0,
           "bits": [ 101 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_2__o_LUT4_D_Z": {
@@ -24505,72 +24546,72 @@
         },
         "led_3__io": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 5 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_3__o": {
           "hide_name": 0,
           "bits": [ 103 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_4__io": {
           "hide_name": 0,
-          "bits": [ 5 ],
+          "bits": [ 6 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_4__o": {
           "hide_name": 0,
           "bits": [ 105 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_5__io": {
           "hide_name": 0,
-          "bits": [ 6 ],
+          "bits": [ 7 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_5__o": {
           "hide_name": 0,
           "bits": [ 107 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_6__io": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ 8 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_6__o": {
           "hide_name": 0,
           "bits": [ 109 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "led_7__io": {
           "hide_name": 0,
-          "bits": [ 8 ],
+          "bits": [ 9 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/build/res.py:217"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/build/res.py:218"
           }
         },
         "led_7__o": {
           "hide_name": 0,
           "bits": [ 111 ],
           "attributes": {
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "leds": {
@@ -24580,73 +24621,9 @@
             "src": "/home/user/SDR-HLS/2.HLSImplementation/Examples/1.Blinky/Blinky.py:20"
           }
         },
-        "pin_clk25_0.buf.buf.clk25_0__io": {
-          "hide_name": 0,
-          "bits": [ 9 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 buf buf clk25_0__io",
-            "unused_bits": "0 "
-          }
-        },
-        "pin_clk25_0.buf.buf.i": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 buf buf i",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
-          }
-        },
-        "pin_clk25_0.buf.clk25_0__io": {
-          "hide_name": 0,
-          "bits": [ 9 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 buf clk25_0__io",
-            "unused_bits": "0 "
-          }
-        },
-        "pin_clk25_0.buf.i": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 buf i",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
-          }
-        },
-        "pin_clk25_0.buf.i$1": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 buf i$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
-          }
-        },
-        "pin_clk25_0.clk25_0__i": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 clk25_0__i",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
-          }
-        },
-        "pin_clk25_0.clk25_0__io": {
-          "hide_name": 0,
-          "bits": [ 9 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 clk25_0__io",
-            "unused_bits": "0 "
-          }
-        },
-        "pin_clk25_0.i": {
-          "hide_name": 0,
-          "bits": [ 11 ],
-          "attributes": {
-            "hdlname": "pin_clk25_0 i",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
-          }
-        },
         "pin_led_0.buf.buf.led_0__io": {
           "hide_name": 0,
-          "bits": [ 10 ],
+          "bits": [ 2 ],
           "attributes": {
             "hdlname": "pin_led_0 buf buf led_0__io"
           }
@@ -24656,7 +24633,7 @@
           "bits": [ 74 ],
           "attributes": {
             "hdlname": "pin_led_0 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.buf.buf.t": {
@@ -24664,12 +24641,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_0 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.buf.led_0__io": {
           "hide_name": 0,
-          "bits": [ 10 ],
+          "bits": [ 2 ],
           "attributes": {
             "hdlname": "pin_led_0 buf led_0__io"
           }
@@ -24679,7 +24656,7 @@
           "bits": [ 74 ],
           "attributes": {
             "hdlname": "pin_led_0 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.buf.o$1": {
@@ -24687,7 +24664,7 @@
           "bits": [ 74 ],
           "attributes": {
             "hdlname": "pin_led_0 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.buf.oe": {
@@ -24695,7 +24672,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_0 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.buf.t": {
@@ -24703,12 +24680,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_0 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_0.led_0__io": {
           "hide_name": 0,
-          "bits": [ 10 ],
+          "bits": [ 2 ],
           "attributes": {
             "hdlname": "pin_led_0 led_0__io"
           }
@@ -24718,7 +24695,7 @@
           "bits": [ 74 ],
           "attributes": {
             "hdlname": "pin_led_0 led_0__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_0.o": {
@@ -24726,12 +24703,12 @@
           "bits": [ 74 ],
           "attributes": {
             "hdlname": "pin_led_0 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_1.buf.buf.led_1__io": {
           "hide_name": 0,
-          "bits": [ 2 ],
+          "bits": [ 3 ],
           "attributes": {
             "hdlname": "pin_led_1 buf buf led_1__io"
           }
@@ -24741,7 +24718,7 @@
           "bits": [ 99 ],
           "attributes": {
             "hdlname": "pin_led_1 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.buf.buf.t": {
@@ -24749,12 +24726,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_1 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.buf.led_1__io": {
           "hide_name": 0,
-          "bits": [ 2 ],
+          "bits": [ 3 ],
           "attributes": {
             "hdlname": "pin_led_1 buf led_1__io"
           }
@@ -24764,7 +24741,7 @@
           "bits": [ 99 ],
           "attributes": {
             "hdlname": "pin_led_1 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.buf.o$1": {
@@ -24772,7 +24749,7 @@
           "bits": [ 99 ],
           "attributes": {
             "hdlname": "pin_led_1 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.buf.oe": {
@@ -24780,7 +24757,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_1 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.buf.t": {
@@ -24788,12 +24765,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_1 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_1.led_1__io": {
           "hide_name": 0,
-          "bits": [ 2 ],
+          "bits": [ 3 ],
           "attributes": {
             "hdlname": "pin_led_1 led_1__io"
           }
@@ -24803,7 +24780,7 @@
           "bits": [ 99 ],
           "attributes": {
             "hdlname": "pin_led_1 led_1__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_1.o": {
@@ -24811,12 +24788,12 @@
           "bits": [ 99 ],
           "attributes": {
             "hdlname": "pin_led_1 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_2.buf.buf.led_2__io": {
           "hide_name": 0,
-          "bits": [ 3 ],
+          "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_led_2 buf buf led_2__io"
           }
@@ -24826,7 +24803,7 @@
           "bits": [ 101 ],
           "attributes": {
             "hdlname": "pin_led_2 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.buf.buf.t": {
@@ -24834,12 +24811,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_2 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.buf.led_2__io": {
           "hide_name": 0,
-          "bits": [ 3 ],
+          "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_led_2 buf led_2__io"
           }
@@ -24849,7 +24826,7 @@
           "bits": [ 101 ],
           "attributes": {
             "hdlname": "pin_led_2 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.buf.o$1": {
@@ -24857,7 +24834,7 @@
           "bits": [ 101 ],
           "attributes": {
             "hdlname": "pin_led_2 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.buf.oe": {
@@ -24865,7 +24842,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_2 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.buf.t": {
@@ -24873,12 +24850,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_2 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_2.led_2__io": {
           "hide_name": 0,
-          "bits": [ 3 ],
+          "bits": [ 4 ],
           "attributes": {
             "hdlname": "pin_led_2 led_2__io"
           }
@@ -24888,7 +24865,7 @@
           "bits": [ 101 ],
           "attributes": {
             "hdlname": "pin_led_2 led_2__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_2.o": {
@@ -24896,12 +24873,12 @@
           "bits": [ 101 ],
           "attributes": {
             "hdlname": "pin_led_2 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_3.buf.buf.led_3__io": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 5 ],
           "attributes": {
             "hdlname": "pin_led_3 buf buf led_3__io"
           }
@@ -24911,7 +24888,7 @@
           "bits": [ 103 ],
           "attributes": {
             "hdlname": "pin_led_3 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.buf.buf.t": {
@@ -24919,12 +24896,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_3 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.buf.led_3__io": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 5 ],
           "attributes": {
             "hdlname": "pin_led_3 buf led_3__io"
           }
@@ -24934,7 +24911,7 @@
           "bits": [ 103 ],
           "attributes": {
             "hdlname": "pin_led_3 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.buf.o$1": {
@@ -24942,7 +24919,7 @@
           "bits": [ 103 ],
           "attributes": {
             "hdlname": "pin_led_3 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.buf.oe": {
@@ -24950,7 +24927,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_3 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.buf.t": {
@@ -24958,12 +24935,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_3 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_3.led_3__io": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 5 ],
           "attributes": {
             "hdlname": "pin_led_3 led_3__io"
           }
@@ -24973,7 +24950,7 @@
           "bits": [ 103 ],
           "attributes": {
             "hdlname": "pin_led_3 led_3__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_3.o": {
@@ -24981,12 +24958,12 @@
           "bits": [ 103 ],
           "attributes": {
             "hdlname": "pin_led_3 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_4.buf.buf.led_4__io": {
           "hide_name": 0,
-          "bits": [ 5 ],
+          "bits": [ 6 ],
           "attributes": {
             "hdlname": "pin_led_4 buf buf led_4__io"
           }
@@ -24996,7 +24973,7 @@
           "bits": [ 105 ],
           "attributes": {
             "hdlname": "pin_led_4 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.buf.buf.t": {
@@ -25004,12 +24981,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_4 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.buf.led_4__io": {
           "hide_name": 0,
-          "bits": [ 5 ],
+          "bits": [ 6 ],
           "attributes": {
             "hdlname": "pin_led_4 buf led_4__io"
           }
@@ -25019,7 +24996,7 @@
           "bits": [ 105 ],
           "attributes": {
             "hdlname": "pin_led_4 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.buf.o$1": {
@@ -25027,7 +25004,7 @@
           "bits": [ 105 ],
           "attributes": {
             "hdlname": "pin_led_4 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.buf.oe": {
@@ -25035,7 +25012,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_4 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.buf.t": {
@@ -25043,12 +25020,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_4 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_4.led_4__io": {
           "hide_name": 0,
-          "bits": [ 5 ],
+          "bits": [ 6 ],
           "attributes": {
             "hdlname": "pin_led_4 led_4__io"
           }
@@ -25058,7 +25035,7 @@
           "bits": [ 105 ],
           "attributes": {
             "hdlname": "pin_led_4 led_4__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_4.o": {
@@ -25066,12 +25043,12 @@
           "bits": [ 105 ],
           "attributes": {
             "hdlname": "pin_led_4 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_5.buf.buf.led_5__io": {
           "hide_name": 0,
-          "bits": [ 6 ],
+          "bits": [ 7 ],
           "attributes": {
             "hdlname": "pin_led_5 buf buf led_5__io"
           }
@@ -25081,7 +25058,7 @@
           "bits": [ 107 ],
           "attributes": {
             "hdlname": "pin_led_5 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.buf.buf.t": {
@@ -25089,12 +25066,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_5 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.buf.led_5__io": {
           "hide_name": 0,
-          "bits": [ 6 ],
+          "bits": [ 7 ],
           "attributes": {
             "hdlname": "pin_led_5 buf led_5__io"
           }
@@ -25104,7 +25081,7 @@
           "bits": [ 107 ],
           "attributes": {
             "hdlname": "pin_led_5 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.buf.o$1": {
@@ -25112,7 +25089,7 @@
           "bits": [ 107 ],
           "attributes": {
             "hdlname": "pin_led_5 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.buf.oe": {
@@ -25120,7 +25097,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_5 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.buf.t": {
@@ -25128,12 +25105,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_5 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_5.led_5__io": {
           "hide_name": 0,
-          "bits": [ 6 ],
+          "bits": [ 7 ],
           "attributes": {
             "hdlname": "pin_led_5 led_5__io"
           }
@@ -25143,7 +25120,7 @@
           "bits": [ 107 ],
           "attributes": {
             "hdlname": "pin_led_5 led_5__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_5.o": {
@@ -25151,12 +25128,12 @@
           "bits": [ 107 ],
           "attributes": {
             "hdlname": "pin_led_5 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_6.buf.buf.led_6__io": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ 8 ],
           "attributes": {
             "hdlname": "pin_led_6 buf buf led_6__io"
           }
@@ -25166,7 +25143,7 @@
           "bits": [ 109 ],
           "attributes": {
             "hdlname": "pin_led_6 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.buf.buf.t": {
@@ -25174,12 +25151,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_6 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.buf.led_6__io": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ 8 ],
           "attributes": {
             "hdlname": "pin_led_6 buf led_6__io"
           }
@@ -25189,7 +25166,7 @@
           "bits": [ 109 ],
           "attributes": {
             "hdlname": "pin_led_6 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.buf.o$1": {
@@ -25197,7 +25174,7 @@
           "bits": [ 109 ],
           "attributes": {
             "hdlname": "pin_led_6 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.buf.oe": {
@@ -25205,7 +25182,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_6 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.buf.t": {
@@ -25213,12 +25190,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_6 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_6.led_6__io": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ 8 ],
           "attributes": {
             "hdlname": "pin_led_6 led_6__io"
           }
@@ -25228,7 +25205,7 @@
           "bits": [ 109 ],
           "attributes": {
             "hdlname": "pin_led_6 led_6__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_6.o": {
@@ -25236,12 +25213,12 @@
           "bits": [ 109 ],
           "attributes": {
             "hdlname": "pin_led_6 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_7.buf.buf.led_7__io": {
           "hide_name": 0,
-          "bits": [ 8 ],
+          "bits": [ 9 ],
           "attributes": {
             "hdlname": "pin_led_7 buf buf led_7__io"
           }
@@ -25251,7 +25228,7 @@
           "bits": [ 111 ],
           "attributes": {
             "hdlname": "pin_led_7 buf buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.buf.buf.t": {
@@ -25259,12 +25236,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_7 buf buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.buf.led_7__io": {
           "hide_name": 0,
-          "bits": [ 8 ],
+          "bits": [ 9 ],
           "attributes": {
             "hdlname": "pin_led_7 buf led_7__io"
           }
@@ -25274,7 +25251,7 @@
           "bits": [ 111 ],
           "attributes": {
             "hdlname": "pin_led_7 buf o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.buf.o$1": {
@@ -25282,7 +25259,7 @@
           "bits": [ 111 ],
           "attributes": {
             "hdlname": "pin_led_7 buf o$1",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.buf.oe": {
@@ -25290,7 +25267,7 @@
           "bits": [ "1" ],
           "attributes": {
             "hdlname": "pin_led_7 buf oe",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.buf.t": {
@@ -25298,12 +25275,12 @@
           "bits": [ "0" ],
           "attributes": {
             "hdlname": "pin_led_7 buf t",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/wiring.py:167"
           }
         },
         "pin_led_7.led_7__io": {
           "hide_name": 0,
-          "bits": [ 8 ],
+          "bits": [ 9 ],
           "attributes": {
             "hdlname": "pin_led_7 led_7__io"
           }
@@ -25313,7 +25290,7 @@
           "bits": [ 111 ],
           "attributes": {
             "hdlname": "pin_led_7 led_7__o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         },
         "pin_led_7.o": {
@@ -25321,7 +25298,7 @@
           "bits": [ 111 ],
           "attributes": {
             "hdlname": "pin_led_7 o",
-            "src": "/home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928"
+            "src": "/home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101"
           }
         }
       }

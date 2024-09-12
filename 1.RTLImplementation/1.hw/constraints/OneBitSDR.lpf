@@ -62,14 +62,14 @@ IOBUF PORT "pwm_out_n[3]" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4;
 LOCATE COMP "pwm_out" SITE "A4";
 IOBUF PORT "pwm_out" PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4; 
 
-#======================= 2.5V =========================#
+
 #---------------------- BANK 3 ------------------------#
 LOCATE COMP "diff_out"  SITE "U18";  
-IOBUF PORT "diff_out" SLEWRATE=SLOW IO_TYPE=LVCMOS25; 
+IOBUF PORT "diff_out" SLEWRATE=SLOW IO_TYPE=LVCMOS33; 
 OUTPUT PORT "diff_out" LOAD 0.000000pF;
 
 #====================== LVDS  =======================#
 #---------------------  BANK 2 ------------------------#
 LOCATE COMP "rf_in" SITE "H18"; 
-IOBUF PORT "rf_in" IO_TYPE=LVDS HYSTERESIS=NA DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF;
+IOBUF PORT "rf_in" IO_TYPE=LVDS33 HYSTERESIS=NA DIFFRESISTOR=OFF PULLMODE=NONE OPENDRAIN=OFF;
 

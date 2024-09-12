@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 00:33:49 2024
+Sun Aug 25 17:34:51 2024
 
 
-Command Line:  synthesis -f OneBitSDR_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml 
+Command Line:  synthesis -f OneBitSDR_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml 
 
 Synthesis options:
 The -a option is ECP5U.
@@ -61,21 +61,21 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p /home/user/SDR-HLS/1bitSDRLattice (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1 (searchpath added)
 -p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
--p /home/user/SDR-HLS/1bitSDRLattice/First_Implementation (searchpath added)
--p /home/user/SDR-HLS/1bitSDRLattice (searchpath added)
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1 (searchpath added)
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/Multiplier/Multiplier.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/NCOAdder/NCOAdder.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v
 NGD file = OneBitSDR_First_Implementation.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -86,25 +86,25 @@ Technology check ok...
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/Multiplier/Multiplier.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/NCOAdder/NCOAdder.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v. VERI-1482
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): top
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v(39): compiling module top. VERI-1018
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v(8): compiling module PLL. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v(39): compiling module top. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v(8): compiling module PLL. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(8): compiling module SinCos. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(8): compiling module SinCos. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(367): compiling module INV. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(810): compiling module XOR2. VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b1111111111111110). VERI-1018
@@ -136,30 +136,30 @@ INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/u
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): compiling module ROM64X1A(initval=64'b0110011000000000110101000110011001111101011110011000101000010110). VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): compiling module ROM64X1A(initval=64'b1010101001111100100000011001110010111011101101001000111011011110). VERI-1018
 INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): compiling module ROM64X1A(initval=64'b011110010010010001111001001010011111101010011001010010100100010). VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): input port CIN is not connected on this instance. VDB-1013
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): input port CIN is not connected on this instance. VDB-1013
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): input port CIN is not connected on this instance. VDB-1013
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(19): compiling module nco_sig. VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(46): system task dumpfile ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(47): system task dumpvars ignored for synthesis. VERI-1142
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(17): compiling module Mixer. VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(57): system task dumpfile ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(58): system task dumpvars ignored for synthesis. VERI-1142
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(40): compiling module CIC(WIDTH=72,DECIMATION_RATIO=4096). VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(110): system task dumpfile ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(111): system task dumpvars ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(102): expression size 72 truncated to fit in target size 12. VERI-1209
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(29): compiling module PWM. VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(60): system task dumpfile ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(61): system task dumpvars ignored for synthesis. VERI-1142
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(21): compiling module AMDemodulator. VERI-1018
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(103): system task dumpfile ignored for synthesis. VERI-1142
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(104): system task dumpvars ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): input port CIN is not connected on this instance. VDB-1013
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(19): compiling module nco_sig. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(46): system task dumpfile ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(47): system task dumpvars ignored for synthesis. VERI-1142
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(17): compiling module Mixer. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(57): system task dumpfile ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(58): system task dumpvars ignored for synthesis. VERI-1142
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(40): compiling module CIC(WIDTH=72,DECIMATION_RATIO=4096). VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(110): system task dumpfile ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(111): system task dumpvars ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(102): expression size 72 truncated to fit in target size 12. VERI-1209
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(29): compiling module PWM. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(59): system task dumpfile ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(60): system task dumpvars ignored for synthesis. VERI-1142
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(21): compiling module AMDemodulator. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(103): system task dumpfile ignored for synthesis. VERI-1142
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(104): system task dumpvars ignored for synthesis. VERI-1142
 Removed duplicate sequential element MultDataD(13 bit), because it is equivalent to MultDataC
 
 Removed duplicate sequential element MultDataA(12 bit), because it is equivalent to MultDataB
 
-INFO - synthesis: /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v(19): compiling module uart_rx(CLKS_PER_BIT=87). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v(19): compiling module uart_rx(CLKS_PER_BIT=87). VERI-1018
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -167,9 +167,9 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 Top-level module name = top.
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): input port CIN is not connected on this instance. VDB-1013
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): input port CIN is not connected on this instance. VDB-1013
-WARNING - synthesis: /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): input port CIN is not connected on this instance. VDB-1013
 WARNING - synthesis: I/O Port o_Tx_Serial 's net has no driver and is unused.
 WARNING - synthesis: I/O Port XOut 's net has no driver and is unused.
 WARNING - synthesis: I/O Port sin_out 's net has no driver and is unused.
@@ -205,25 +205,25 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file OneBitSDR_First_Implementation.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 2728 of 84255 (3 % )
+Number of register bits => 2729 of 84255 (3 % )
 AND2 => 1
 CCU2C => 1463
 EHXPLLL => 1
-FD1P3AX => 1590
+FD1P3AX => 1551
 FD1P3DX => 61
-FD1P3IX => 16
-FD1S3AX => 1020
+FD1P3IX => 55
+FD1S3AX => 1021
 FD1S3AY => 4
 FD1S3IX => 36
 FD1S3JX => 1
 GSR => 1
 IB => 3
 INV => 33
-LUT4 => 682
+LUT4 => 724
 MULT18X18D => 2
 MUX21 => 54
 OB => 23
-PFUMX => 16
+PFUMX => 23
 ROM16X1A => 2
 ROM64X1A => 26
 XOR2 => 1
@@ -232,35 +232,35 @@ XOR2 => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 4
-  Net : clk_80mhz, loads : 2607
+  Net : clk_80mhz, loads : 2608
   Net : CIC_Sin_inst/CIC1_out_clkSin, loads : 82
   Net : uart_rx_inst/UartClk_2, loads : 42
   Net : clk_25mhz_c, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 62
 Top 10 highest fanout Clock Enables:
-  Net : CIC_Sin_inst/clk_80mhz_enable_129, loads : 63
-  Net : CIC_cos_inst/clk_80mhz_enable_757, loads : 63
-  Net : CIC_cos_inst/clk_80mhz_enable_1297, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_1397, loads : 50
-  Net : clk_80mhz_enable_1459, loads : 50
-  Net : CIC_Sin_inst/clk_80mhz_enable_65, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_797, loads : 50
-  Net : CIC_Sin_inst/clk_80mhz_enable_149, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_897, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_947, loads : 50
+  Net : CIC_cos_inst/count_15__N_1458, loads : 88
+  Net : CIC_Sin_inst/clk_80mhz_enable_134, loads : 63
+  Net : CIC_cos_inst/clk_80mhz_enable_1256, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_1356, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_1306, loads : 50
+  Net : clk_80mhz_enable_1411, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_705, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_70, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_756, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_155, loads : 50
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : CIC_cos_inst/clk_80mhz_enable_847, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_997, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1047, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1097, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1147, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1197, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1247, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1347, loads : 100
-  Net : CIC_Sin_inst/clk_80mhz_enable_199, loads : 100
-  Net : CIC_Sin_inst/clk_80mhz_enable_249, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_806, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_856, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_906, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_956, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1006, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1056, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1106, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1156, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1206, loads : 100
+  Net : CIC_Sin_inst/clk_80mhz_enable_205, loads : 100
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -270,13 +270,13 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets \uart_rx_inst/UartClk[2]]|  200.000 MHz|  105.175 MHz|     7 *
+clk2 [get_nets \uart_rx_inst/UartClk[2]]|  200.000 MHz|  113.636 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk1 [get_nets CIC1_out_clkSin]         |  200.000 MHz|   26.749 MHz|    76 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_80mhz]               |  200.000 MHz|   85.419 MHz|    35 *
+clk0 [get_nets clk_80mhz]               |  200.000 MHz|   91.216 MHz|    37 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -284,8 +284,8 @@ clk0 [get_nets clk_80mhz]               |  200.000 MHz|   85.419 MHz|    35 *
 3 constraints not met.
 
 
-Peak Memory Usage: 332.988  MB
+Peak Memory Usage: 333.602  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 21.623  secs
+Elapsed CPU time for LSE flow : 30.044  secs
 --------------------------------------------------------------

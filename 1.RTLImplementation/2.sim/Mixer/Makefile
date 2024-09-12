@@ -35,7 +35,8 @@ CLOCK_VALUE ?= 12.5
 ITERATIONS ?= 100
 
 # Simulator and Parameter declaration
-SIMULATOR ?= icarus
+#SIMULATOR ?= icarus
+SIMULATOR ?= modelsim
 COMPILE_ARGS += -P$(TOPLEVEL).DATA_WIDTH=$(DATA_WIDTH)
 
 # Define the test target

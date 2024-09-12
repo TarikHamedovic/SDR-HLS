@@ -6,26 +6,44 @@ from amaranth.back import verilog
 import argparse
 import subprocess
 import importlib
+import sys
 import os
 import shutil
 
 import random
 
-from sine_cosine_generator_lut import SineCosineGeneratorLUT
-from mixer import Mixer
-from cic import CIC
-from amdemod import AMDemod
-from pwm import PWM
-from uart_rx import UartRx
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # Needed for paths
+
+from SineLUT.sine_cosine_generator_lut import SineCosineGeneratorLUT
+from Mixer.mixer                       import Mixer
+from CIC.cic                           import CIC
+from AMDemod.amdemod                   import AMDemod
+from PWM.pwm                           import PWM
+from Uart.UartRX.uart_rx               import UartRX
+
+
 top_name = "top"
 
 
 class Top(Elaboratable):
-    def __init__(self):
+    def __init__(self, DATA_WIDTH = 12, PHASE_WIDTH = 64, LUT_DEPTH = 8, 
+                 CIC_REGISTER_WIDTH = 72, CIC_DECIMATION_RATIO = 4096, CIC_GAIN_WIDTH = 8,
+                 PWM_COUNT_WIDTH = 10, PWM_OFFSET = 512):
+
+        # Parameters #
+        self.DATA_WIDTH           = DATA_WIDTH
+        self.PHASE_WIDTH          = PHASE_WIDTH
+        self.LUT_DEPTH            = LUT_DEPTH
+        self.CIC_REGISTER_WIDTH   = CIC_REGISTER_WIDTH
+        self.CIC_DECIMATION_RATIO = CIC_DECIMATION_RATIO
+        self.CIC_GAIN_WIDTH       = CIC_GAIN_WIDTH
+        self.PWM_COUNT_WIDTH      = PWM_COUNT_WIDTH
+        self.PWM_OFFSET           = PWM_OFFSET
 
         # Inputs #
-        self.rx_serial = Signal()
-        self.rf_in     = Signal()
+        self.rx_serial            = Signal()
+        self.rf_in                = Signal()
+
         # Outputs #
         self.leds       = Signal(8)
         self.pwm_out    = Signal()
@@ -42,12 +60,15 @@ class Top(Elaboratable):
 
         m = Module()
 
-
+        #m.domains.sync = ClockDomain()
+        
         # ============================================#
         #                    pll                      #
         # ============================================#
-        """
-        clocks = Signal(4)
+        
+        clocks    = Signal(4)
+        clk_80mhz = Signal()
+        platform.add_file("ecp5pll.sv", open("ecp5pll.sv", "r").read())
         m.submodules.ecp5pll = Instance("ecp5pll",
             ("p", "in_hz",   25000000),
             ("p", "out0_hz", 80000000),
@@ -55,24 +76,21 @@ class Top(Elaboratable):
             ("o", "clk_o",   clocks)
         )
 
-        clk_80mhz = Signal()
-        m.d.comb += clk_80mhz.eq(clocks[0])
-        
-        # Change the sync clock to be 80 mhz with pll
-        m.d.comb += [
-            ClockSignal().eq(clk_80mhz)
+        m.d.comb += [clk_80mhz.eq    (clocks[0]),
+                     ClockSignal().eq(clk_80mhz)
         ]
-        """
+        
+        
         # ============================================#
         #         sine & cosine generator             #
         # ============================================#
         m.submodules.sine_cosine_generator = sine_cosine_generator = (
-            SineCosineGeneratorLUT(SINE_WIDTH=12, LUT_WIDTH=8, PHASE_WIDTH=64)
+            SineCosineGeneratorLUT(DATA_WIDTH = self.DATA_WIDTH, LUT_DEPTH = self.LUT_DEPTH, PHASE_WIDTH = self.PHASE_WIDTH)
         )
 
-        phase_increment = Signal(signed(64))
-        lo_sinewave     = Signal(signed(12))
-        lo_cosinewave   = Signal(signed(12))
+        phase_increment = Signal(signed(self.PHASE_WIDTH))
+        lo_sinewave     = Signal(signed(self.DATA_WIDTH))
+        lo_cosinewave   = Signal(signed(self.DATA_WIDTH))
 
         m.d.comb += [
             # Inputs #
@@ -87,10 +105,10 @@ class Top(Elaboratable):
         # ============================================#
         #                  mixer                      #
         # ============================================#
-        m.submodules.mixer = mixer = Mixer(INPUT_BITS=12)
+        m.submodules.mixer = mixer = Mixer(DATA_WIDTH=self.DATA_WIDTH)
 
-        mix_sinewave   = Signal(signed(12))
-        mix_cosinewave = Signal(signed(12))
+        mix_sinewave   = Signal(signed(self.DATA_WIDTH))
+        mix_cosinewave = Signal(signed(self.DATA_WIDTH))
         diff_out       = Signal()
 
         m.d.comb += [
@@ -125,7 +143,7 @@ class Top(Elaboratable):
 
             platform.add_resources(antenna_resource)
 
-            antenna = platform.request("antenna")
+            antenna   = platform.request("antenna")
             m.d.comb += self.rf_in.eq(antenna.rf_in.i)
 
         # ============================================#
@@ -133,11 +151,12 @@ class Top(Elaboratable):
         # ============================================#
 
         m.submodules.cic_sine = cic_sine = CIC(
-            INPUT_WIDTH=12, REGISTER_WIDTH=64, DECIMATION_RATIO=4096, GAIN_WIDTH=8
+            DATA_WIDTH       = self.DATA_WIDTH,           REGISTER_WIDTH = self.CIC_REGISTER_WIDTH, 
+            DECIMATION_RATIO = self.CIC_DECIMATION_RATIO, GAIN_WIDTH     = self.CIC_GAIN_WIDTH
         )
-        cic_gain    = Signal(8)
+        cic_gain     = Signal(self.CIC_GAIN_WIDTH)
 
-        cic_sine_out = Signal(12)
+        cic_sine_out = Signal(signed(self.CIC_REGISTER_WIDTH))
         cic_sine_clk = Signal()
 
         m.d.comb += [
@@ -149,11 +168,11 @@ class Top(Elaboratable):
             cic_sine_clk.eq    (cic_sine.data_clk),
         ]
 
-        m.submodules.cic_cosine = cic_cosine = CIC(
-            INPUT_WIDTH=12, REGISTER_WIDTH=64, DECIMATION_RATIO=4096, GAIN_WIDTH=8
+        m.submodules.cic_cosine = cic_cosine =  CIC(
+            DATA_WIDTH       = self.DATA_WIDTH,           REGISTER_WIDTH = self.CIC_REGISTER_WIDTH, 
+            DECIMATION_RATIO = self.CIC_DECIMATION_RATIO, GAIN_WIDTH     = self.CIC_GAIN_WIDTH
         )
-
-        cic_cosine_out = Signal(12)
+        cic_cosine_out = Signal(signed(self.CIC_REGISTER_WIDTH))
         cic_cosine_clk = Signal()
 
         m.d.comb += [
@@ -168,9 +187,9 @@ class Top(Elaboratable):
         # ============================================#
         #                  am demodulator             #
         # ============================================#
-        m.submodules.amdemod = amdemod = AMDemod(INPUT_WIDTH=12)
+        m.submodules.amdemod = amdemod = AMDemod(DATA_WIDTH=self.DATA_WIDTH)
 
-        amdemod_out = Signal(12)
+        amdemod_out = Signal(self.DATA_WIDTH)
 
         m.d.comb += [
             # Inputs #
@@ -184,13 +203,13 @@ class Top(Elaboratable):
         # ============================================#
         #                     pwm                     #
         # ============================================#
-        m.submodules.pwm = pwm = PWM(INPUT_WIDTH=12, COUNTER_WIDTH=10, OFFSET=512)
+        m.submodules.pwm = pwm = PWM(DATA_WIDTH=self.DATA_WIDTH, COUNT_WIDTH=self.PWM_COUNT_WIDTH, OFFSET=self.PWM_OFFSET)
 
         m.d.comb += [
             pwm.data_in.eq (amdemod_out), 
             self.pwm_out.eq(pwm.pwm_out)
         ]
-        
+
         if platform is not None:
             pwm_resource = [
                 Resource(
@@ -294,11 +313,14 @@ class Top(Elaboratable):
                 pwm_pins.pwm_out_n4.o.eq(self.pwm_out_n4),
                 pwm_pins.pwm_out.o.eq(self.pwm_out),                                
             ]
+
         
         # ============================================#
         #               uart reciever                #
         # ============================================#
-        m.submodules.uart_rx = uart_rx = UartRx(CLKS_PER_BIT=217)
+        # 694
+        # 217
+        m.submodules.uart_rx = uart_rx = UartRX(CLKS_PER_BIT=217)
 
         rx_data_valid1 = Signal()
         rx_byte1       = Signal(8)
@@ -323,12 +345,21 @@ class Top(Elaboratable):
 
         return m
 
-
 def clean():
     """Remove generated files and directories."""
     files_to_remove = [f"{top_name}.vcd", f"{top_name}.gtkw", f"{top_name}.v"]
     build_dir = "build"
+    folders_to_clean = [
+        "../top",
+        "../SineLUT",
+        "../Mixer",
+        "../CIC",
+        "../AMDemod",
+        "../PWM",
+        "../Uart/UartRX",
+    ]
 
+    # Remove specific files
     for file in files_to_remove:
         try:
             os.remove(file)
@@ -336,12 +367,25 @@ def clean():
         except FileNotFoundError:
             print(f"{file} not found, skipping")
 
+    # Remove build directory
     if os.path.isdir(build_dir):
         try:
             shutil.rmtree(build_dir)
             print(f"Removed {build_dir} directory")
         except OSError as e:
             print(f"Error removing {build_dir}: {e}")
+
+    # Remove __pycache__ directories in specified folders
+    for folder in folders_to_clean:
+        folder_path = os.path.abspath(os.path.join(os.path.dirname(__file__), folder))
+        for root, dirs, files in os.walk(folder_path):
+            if "__pycache__" in dirs:
+                pycache_path = os.path.join(root, "__pycache__")
+                try:
+                    shutil.rmtree(pycache_path)
+                    print(f"Removed {pycache_path} directory")
+                except OSError as e:
+                    print(f"Error removing {pycache_path}: {e}")
 
 
 if __name__ == "__main__":
@@ -410,8 +454,6 @@ if __name__ == "__main__":
         if args.simulate:
 
             async def testbench(ctx):
-
-                N = ctx.get(dut.N)
 
                 print("Test: Starting Uart Top Amaranth Simulation")
 

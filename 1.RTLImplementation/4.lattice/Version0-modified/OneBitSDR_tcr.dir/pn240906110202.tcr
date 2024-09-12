@@ -1,0 +1,16 @@
+#Start recording tcl command: 9/6/2024 09:10:30
+#Project Location: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified; Project name: OneBitSDR
+prj_project open "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/OneBitSDR.ldf"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v" "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v"
+prj_src exclude "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/SinCos.v"
+prj_src exclude "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/NCO.v"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 9/6/2024 11:02:02

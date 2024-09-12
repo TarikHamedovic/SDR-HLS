@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1724779366" />
+    <testcase name="simpleSine_test" classname="quarterwave_generator_tb" file="/home/user/SDR-HLS/5.NewModules/SineGenerator/quartertable_lut_module/2.sim/quarterwave_generator_tb.py" lineno="8" time="0.116363525390625" sim_time_ns="2537.501" ratio_time="21806.670015211123" />
+  </testsuite>
+</testsuites>

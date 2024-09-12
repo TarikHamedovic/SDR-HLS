@@ -4,12 +4,12 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 00:34:22 2024
+Sun Aug 25 17:35:35 2024
 
 /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
 OneBitSDR_First_Implementation.p2t OneBitSDR_First_Implementation_map.ncd
 OneBitSDR_First_Implementation.dir OneBitSDR_First_Implementation.prf -gui
--msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml
+-msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml
 
 
 Preference file: OneBitSDR_First_Implementation.prf.
@@ -17,11 +17,11 @@ Preference file: OneBitSDR_First_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -3.762       48690        -0.867       32421        01:52        Completed
+5_1   *      0            -4.647       114436       -0.720       27516        03:23        Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 1 mins 52 secs 
+Total (real) run time for 1-seed: 3 mins 24 secs 
 
 par done!
 

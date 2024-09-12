@@ -24,17 +24,17 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v(39): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v(39): </Dynamic>
             <Dynamic>top</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v</Navigation>
             <Navigation>39</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v(8): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v(8): </Dynamic>
             <Dynamic>PLL</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -64,9 +64,9 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(8): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(8): </Dynamic>
             <Dynamic>SinCos</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>8</Navigation>
         </Message>
         <Message>
@@ -320,186 +320,186 @@
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>704</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>868</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>938</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(19): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(19): </Dynamic>
             <Dynamic>nco_sig</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v</Navigation>
             <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(46): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(46): </Dynamic>
             <Dynamic>dumpfile</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v</Navigation>
             <Navigation>46</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(47): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(47): </Dynamic>
             <Dynamic>dumpvars</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v</Navigation>
             <Navigation>47</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(17): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(17): </Dynamic>
             <Dynamic>Mixer</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v</Navigation>
             <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(57): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(57): </Dynamic>
             <Dynamic>dumpfile</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v</Navigation>
             <Navigation>57</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(58): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(58): </Dynamic>
             <Dynamic>dumpvars</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v</Navigation>
             <Navigation>58</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(40): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(40): </Dynamic>
             <Dynamic>CIC(WIDTH=72,DECIMATION_RATIO=4096)</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v</Navigation>
             <Navigation>40</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(110): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(110): </Dynamic>
             <Dynamic>dumpfile</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v</Navigation>
             <Navigation>110</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(111): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(111): </Dynamic>
             <Dynamic>dumpvars</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v</Navigation>
             <Navigation>111</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(102): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(102): </Dynamic>
             <Dynamic>72</Dynamic>
             <Dynamic>12</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v</Navigation>
             <Navigation>102</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(29): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(29): </Dynamic>
             <Dynamic>PWM</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v</Navigation>
             <Navigation>29</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(60): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(59): </Dynamic>
             <Dynamic>dumpfile</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
-            <Navigation>60</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>59</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(61): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(60): </Dynamic>
             <Dynamic>dumpvars</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v</Navigation>
-            <Navigation>61</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v</Navigation>
+            <Navigation>60</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(21): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(21): </Dynamic>
             <Dynamic>AMDemodulator</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v</Navigation>
             <Navigation>21</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(103): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(103): </Dynamic>
             <Dynamic>dumpfile</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v</Navigation>
             <Navigation>103</Navigation>
         </Message>
         <Message>
             <ID>35901142</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(104): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(104): </Dynamic>
             <Dynamic>dumpvars</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v</Navigation>
             <Navigation>104</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v(19): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v(19): </Dynamic>
             <Dynamic>uart_rx(CLKS_PER_BIT=87)</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v</Navigation>
             <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>704</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>868</Navigation>
         </Message>
         <Message>
             <ID>35931013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): </Dynamic>
+            <Dynamic>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): </Dynamic>
             <Dynamic>CIN</Dynamic>
-            <Navigation>/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v</Navigation>
+            <Navigation>/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v</Navigation>
             <Navigation>938</Navigation>
         </Message>
         <Message>

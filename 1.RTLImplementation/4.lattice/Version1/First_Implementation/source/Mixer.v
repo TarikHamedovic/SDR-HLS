@@ -15,7 +15,7 @@ Outputs:
 */
 
 module Mixer#
-(  parameter int WIDTH = 12
+(  parameter WIDTH = 12
 )(
    input                         clk,
    input signed      [WIDTH-1:0] sin_in,

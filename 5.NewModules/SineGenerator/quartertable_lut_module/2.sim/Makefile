@@ -3,8 +3,11 @@ CONFIG_ROOT = ../../../../1.RTLImplementation/2.sim
 include $(CONFIG_ROOT)/config.mk
 
 # Verilog sources
-VERILOG_SOURCES += ../1.hw/quarterwave_generator.v
-VERILOG_SOURCES += ../1.hw/quarterwave_table.v
+VERILOG_SOURCES += ../1.hw/quarterwave_generator.sv
+VERILOG_SOURCES += ../1.hw/quarterwave_table.sv
+
+#VERILOG_SOURCES += ../1.hw/quarterwave_generator.v
+#VERILOG_SOURCES += ../1.hw/quarterwave_table.v
 
 # VHDL sources (if any)
 VHDL_SOURCES = 

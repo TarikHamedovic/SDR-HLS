@@ -8,7 +8,7 @@ VERILOG_SOURCES += Mixer.v
 VHDL_SOURCES = 
 
 # Top-level module name
-TOPLEVEL = top
+TOPLEVEL = Mixer
 
 # Python test module(s)
 MODULE = mixer_tb
@@ -23,7 +23,7 @@ clean::
 	$(RM) *.vcd
 
 # Set default values for the environment variables
-INPUT_WIDTH ?= 12
+DATA_WIDTH ?= 12
 CLOCK_VALUE ?= 12.5
 ITERATIONS ?= 100
 
@@ -33,13 +33,13 @@ SIMULATOR ?= icarus
 # Define the test target
 .PHONY: test
 test:
-	@INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) ITERATIONS=$(ITERATIONS) \
+	@DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) ITERATIONS=$(ITERATIONS) \
 		make SIM=$(SIMULATOR) TOPLEVEL_LANG=verilog TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE) 
 
 # Run the simulation
 .PHONY: run
 run:
-	INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) ITERATIONS=$(ITERATIONS) $(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
+	DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) ITERATIONS=$(ITERATIONS) $(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Define the help target
 .PHONY: help_tb
@@ -54,11 +54,11 @@ help_tb:
 	@echo "  help_tb     - Display this help message"
 	@echo ""
 	@echo "Variables:"
-	@echo "  INPUT_WIDTH      - Number of input bits (default: 12)"
+	@echo "  DATA_WIDTH      - Number of input bits (default: 12)"
 	@echo "  CLOCK_VALUE      - Clock value in ns (default: 12.5 or 80 MHz)"
 	@echo "  ITERATIONS       - Number of iterations for the test (default: 100)"
 	@echo "  SIMULATOR        - Simulator to use (default: icarus)"
 
 # Usage:
-# make run INPUT_WIDT=12 CLOCK_VALUE=12.5 ITERATIONS=100
+# make run DATA_WIDTH=12 CLOCK_VALUE=12.5 ITERATIONS=100
 

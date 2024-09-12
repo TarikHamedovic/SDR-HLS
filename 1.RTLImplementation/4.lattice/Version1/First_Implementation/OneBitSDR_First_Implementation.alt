@@ -1,35 +1,35 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Thu May 30 00:36:48 2024 *
+NOTE DATE CREATED: Sun Aug 25 17:41:03 2024 *
 NOTE DESIGN NAME: top *
 NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
 NOTE PIN ASSIGNMENTS *
 NOTE PINS led[6] : E1 : out *
-NOTE PINS led[7] : H3 : out *
-NOTE PINS o_Tx_Serial : D15 : out *
-NOTE PINS led[5] : E2 : out *
-NOTE PINS led[4] : D1 : out *
-NOTE PINS led[3] : D2 : out *
-NOTE PINS led[2] : C1 : out *
-NOTE PINS led[1] : C2 : out *
-NOTE PINS led[0] : B2 : out *
-NOTE PINS XOut : N16 : out *
-NOTE PINS DiffOut : U18 : out *
-NOTE PINS PWMOut : A4 : out *
-NOTE PINS PWMOutP1 : B11 : out *
-NOTE PINS PWMOutP2 : A10 : out *
-NOTE PINS PWMOutP3 : A9 : out *
-NOTE PINS PWMOutP4 : B9 : out *
-NOTE PINS PWMOutN1 : A7 : out *
-NOTE PINS PWMOutN2 : C8 : out *
-NOTE PINS PWMOutN3 : C6 : out *
-NOTE PINS PWMOutN4 : A6 : out *
-NOTE PINS sinGen : N17 : out *
-NOTE PINS sin_out : G3 : out *
-NOTE PINS CIC_out_clkSin : A12 : out *
-NOTE PINS clk_25mhz : G2 : in *
-NOTE PINS i_Rx_Serial : M1 : in *
 NOTE PINS RFIn : H18 : in *
+NOTE PINS i_Rx_Serial : M1 : in *
+NOTE PINS clk_25mhz : G2 : in *
+NOTE PINS CIC_out_clkSin : E18 : out *
+NOTE PINS sin_out : G3 : out *
+NOTE PINS sinGen : N17 : out *
+NOTE PINS PWMOutN4 : A6 : out *
+NOTE PINS PWMOutN3 : C6 : out *
+NOTE PINS PWMOutN2 : C8 : out *
+NOTE PINS PWMOutN1 : A7 : out *
+NOTE PINS PWMOutP4 : B9 : out *
+NOTE PINS PWMOutP3 : A9 : out *
+NOTE PINS PWMOutP2 : A10 : out *
+NOTE PINS PWMOutP1 : B11 : out *
+NOTE PINS PWMOut : A4 : out *
+NOTE PINS DiffOut : U18 : out *
+NOTE PINS XOut : N16 : out *
+NOTE PINS led[0] : B2 : out *
+NOTE PINS led[1] : C2 : out *
+NOTE PINS led[2] : C1 : out *
+NOTE PINS led[3] : D2 : out *
+NOTE PINS led[4] : D1 : out *
+NOTE PINS led[7] : H3 : out *
+NOTE PINS led[5] : E2 : out *
+NOTE PINS o_Tx_Serial : G20 : out *
 NOTE PINS SYSCONFIG_PIN_D1 : V2 : inout *
 NOTE PINS SYSCONFIG_PIN_D0 : W2 : inout *
 NOTE PINS SYSCONFIG_PIN_HOLDN : R2 : inout *

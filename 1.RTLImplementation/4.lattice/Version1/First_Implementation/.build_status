@@ -5,23 +5,23 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1717022208"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1724600463"/>
             <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1717022062">
-            <Task name="Map" build_result="2" update_result="0" update_time="1717022062"/>
+        <Milestone name="Map" build_result="2" build_time="1724600135">
+            <Task name="Map" build_result="2" update_result="0" update_time="1724600135"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1717022176">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1717022176"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1717022183"/>
+        <Milestone name="PAR" build_result="2" build_time="1724600342">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1724600342"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1724600351"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1717022051">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1717022051"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1717022208"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1724600121">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1724600121"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1724600463"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="2" update_result="0" update_time="1717021963"/>
@@ -30,13 +30,13 @@
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/OneBitSDR_First_Implementation_map.vdb" last_build_time="1717022061" last_build_size="1389191"/>
-        <Report name="OneBitSDR_First_Implementation.bgn" last_build_time="1717022208" last_build_size="4616"/>
-        <Report name="OneBitSDR_First_Implementation.bit" last_build_time="1717022208" last_build_size="343279"/>
-        <Report name="OneBitSDR_First_Implementation.lsedata" last_build_time="1717022030" last_build_size="2862082"/>
-        <Report name="OneBitSDR_First_Implementation.ncd" last_build_time="1717022176" last_build_size="4374354"/>
-        <Report name="OneBitSDR_First_Implementation.ngd" last_build_time="1717022051" last_build_size="3525315"/>
-        <Report name="OneBitSDR_First_Implementation.twr" last_build_time="1717022182" last_build_size="177730"/>
-        <Report name="OneBitSDR_First_Implementation_map.ncd" last_build_time="1717022056" last_build_size="3120074"/>
+        <Report name=".vdbs/OneBitSDR_First_Implementation_map.vdb" last_build_time="1724600134" last_build_size="1513219"/>
+        <Report name="OneBitSDR_First_Implementation.bgn" last_build_time="1724600463" last_build_size="4688"/>
+        <Report name="OneBitSDR_First_Implementation.bit" last_build_time="1724600463" last_build_size="347731"/>
+        <Report name="OneBitSDR_First_Implementation.lsedata" last_build_time="1724600092" last_build_size="2858508"/>
+        <Report name="OneBitSDR_First_Implementation.ncd" last_build_time="1724600342" last_build_size="4437547"/>
+        <Report name="OneBitSDR_First_Implementation.ngd" last_build_time="1724600121" last_build_size="3549118"/>
+        <Report name="OneBitSDR_First_Implementation.twr" last_build_time="1724600351" last_build_size="206366"/>
+        <Report name="OneBitSDR_First_Implementation_map.ncd" last_build_time="1724600129" last_build_size="3151799"/>
     </Strategy>
 </BuildStatus>

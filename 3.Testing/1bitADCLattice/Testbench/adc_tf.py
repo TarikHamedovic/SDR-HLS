@@ -111,10 +111,11 @@ async def adc_tf(dut):
     await RisingEdge(dut.clk_in)
     
     # Start the sinewave generator
-    #cocotb.start_soon(generate_input_sine_wave(dut))
+    cocotb.start_soon(generate_input_sine_wave(dut))
+    #dut.analog_input.value = 100
 
     # Start the sawtooth generator
-    cocotb.start_soon(generate_input_sawtooth_ramp(dut))
+    #cocotb.start_soon(generate_input_sawtooth_ramp(dut))
 
     # Start the integrate feedback
     cocotb.start_soon(integrate_feedback(dut))
@@ -128,5 +129,7 @@ async def adc_tf(dut):
     # Optionally add checks and validation here
     #await RisingEdge(dut.clk_in)  # Add a wait to let the simulation run for at least one clock cycle
     cocotb.log.info("Simulation started")
-    await cocotb.triggers.Timer(2199967, units='ns')  # Run simulation for a specified time
+    #await cocotb.triggers.Timer(2199967, units='ns')  # Run simulation for a specified time
+    await cocotb.triggers.Timer(4299967, units='ns')  # Run simulation for a specified time
+
     cocotb.log.info("Simulation completed")

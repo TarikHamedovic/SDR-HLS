@@ -10,48 +10,49 @@ from cocotb.clock import Clock
 import random
 import os
 
+from uart_handler import UartHandler
 
 async def init(dut):
     # Function to initialize DUT values #
     cocotb.log.info("[Initialization] Commencing input reset sequence...")
 
     # I/O #
-    dut.rx_serial.value      = 0
-    dut.rf_in.value          = 0
-    dut.diff_out.value       = 0
-    dut.pwm_out.value        = 0
-    dut.pwm_out_p1.value     = 0
-    dut.pwm_out_p2.value     = 0
-    dut.pwm_out_p3.value     = 0
-    dut.pwm_out_p4.value     = 0
-    dut.pwm_out_n1.value     = 0
-    dut.pwm_out_n2.value     = 0
-    dut.pwm_out_n3.value     = 0
-    dut.pwm_out_n4.value     = 0
+    dut.rx_serial.value          = 0
+    dut.rf_in.value              = 0
+    dut.diff_out.value           = 0
+    dut.pwm_out.value            = 0
+    dut.pwm_out_p[0].value       = 0
+    dut.pwm_out_p[1].value       = 0
+    dut.pwm_out_p[2].value       = 0
+    dut.pwm_out_p[3].value       = 0
+    dut.pwm_out_n[0].value       = 0
+    dut.pwm_out_n[1].value       = 0
+    dut.pwm_out_n[2].value       = 0
+    dut.pwm_out_n[3].value       = 0
 
     # Internal Values #
-    dut.phase_inc_gen.value  = 0
-    dut.phase_inc_gen1.value = 0
-    dut.lo_sinewave.value    = 0
-    dut.lo_cosinewave.value  = 0
+    dut.phase_increment[0].value = 0
+    dut.phase_increment[1].value = 0
+    dut.lo_sinewave.value        = 0
+    dut.lo_cosinewave.value      = 0
 
-    dut.mix_sinewave.value   = 0
-    dut.mix_cosinewave.value = 0
+    dut.mix_sinewave.value       = 0
+    dut.mix_cosinewave.value     = 0
 
-    dut.cic_gain.value       = 0
-    dut.cic_sine_out.value   = 0
-    dut.cic_sine_clk.value   = 0
-    dut.cic_cosine_out.value = 0
-    dut.cic_cosine_clk.value = 0
+    dut.cic_gain.value           = 0
+    dut.cic_sine_out.value       = 0
+    dut.cic_sine_clk.value       = 0
+    dut.cic_cosine_out.value     = 0
+    dut.cic_cosine_clk.value     = 0
 
-    dut.amdemod_out.value    = 0
+    dut.amdemod_out.value        = 0
 
-    dut.rx_data_valid.value  = 0
-    dut.rx_byte.value        = 0
-    dut.rx_data_valid1.value = 0
-    dut.rx_byte1.value       = 0
+    dut.rx_data_valid.value      = 0
+    dut.rx_byte.value            = 0
+    dut.rx_data_valid1.value     = 0
+    dut.rx_byte1.value           = 0
 
-    await RisingEdge(dut.clk)
+    await RisingEdge(dut.clk_25mhz)
 
     cocotb.log.info("[Initialization] Initialized...")
 
@@ -69,29 +70,59 @@ def format_table(title, table_data):
         table_str.append(border)
     return '\n'.join(table_str)
 
-def print_vars(dut):
-    table_data = [
-        ["Variable", "Value"],
-        ["count", str(dut.count.value)],
-        ["pwm_out", str(dut.pwm_out.value)]
-    ]
-    cocotb.log.info("\n" + format_table("Monitoring Variables", table_data))
-
 
 @cocotb.test()
 async def top_test(dut):
     
-    number_of_iterations = int(os.environ.get("ITERATIONS", 10))
-    clock_value = float(os.environ.get('CLOCK_VALUE', 12.5))
+    clock_value = float(os.environ.get('CLOCK_VALUE', 40))
 
     cocotb.log.info(f"[Test Start] Starting top cocotb test with clock_value = {clock_value} ns")
 
     # Starting Clock #
-    clock = Clock(dut.clk, clock_value, units="ns")
+    clock       = Clock(dut.clk_25mhz, clock_value, units="ns")
     cocotb.start_soon(clock.start())
 
+    # Wait for PLL lock to go high
+    cocotb.log.info("[PLL Lock] Waiting for PLL to lock...")
+    while not dut.pll_lock.value:
+        await RisingEdge(dut.clk_25mhz)
+    cocotb.log.info("[PLL Lock] PLL is locked. Continuing with the test.")
+
     # Initializing Variables to 0 #
-    await init(dut)
+    #await init(dut)
+
+    # Asynchronous Reset #
+    cocotb.log.info("[ARST] Setting asynchronous reset value to 1")
+    dut.arst.value = 1
+
+    await RisingEdge(dut.clk_25mhz)
+    cocotb.log.info("[WAIT] Waiting one clock cycle")
+
+    cocotb.log.info("[ARST] Setting asynchronous reset value to 0")
+    dut.arst.value = 0
+
+    # Rf_in value #
+    dut.rf_in.value = 0
+    await RisingEdge(dut.clk_25mhz)
+
+    # Start the UART handler in the background
+    uart_handler = UartHandler(
+        dut           = dut,
+        clk           = dut.clk_80mhz,
+        baud_rate     = int(os.environ.get('BAUD_RATE', 115200)),
+        clocks_per_bit= int(os.environ.get('CLOCKS_PER_BIT',694))
+    )
+
+    # Set the data to send over UART
+    uart_handler.set_data(97)  # Example data to send 'a' in ASCII
+
+    # Start the UART handling in the background
+    cocotb.start_soon(uart_handler.run())
+
+    # Continue with the rest of your testbench
+    for _ in range(40000):
+        await RisingEdge(dut.clk_80mhz)
+
 """
     # Printing to Monitor to check if the variable change is OK #
     print_vars(dut)

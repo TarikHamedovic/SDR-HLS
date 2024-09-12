@@ -55,8 +55,8 @@ def print_vars(dut):
         ["sinewave_in", str(dut.sinewave_in.value)],
         ["cosinewave_in", str(dut.cosinewave_in.value)],
         ["rf_in", str(dut.rf_in.value)],
-        ["rf_in_delayed_1", str(dut.rf_in_delayed_1.value)],
-        ["rf_in_delayed_2", str(dut.rf_in_delayed_2.value)],
+        ["rf_in_d_1", str(dut.rf_in_d_1.value)],
+        ["rf_in_d_2", str(dut.rf_in_d_2.value)],
         ["sinewave_out", str(dut.sinewave_out.value)],
         ["cosinewave_out", str(dut.cosinewave_out.value)]
     ]
@@ -96,14 +96,14 @@ async def Mixer_test(dut):
         cocotb.log.info(f"[Test Execution] Iteration: {iteration+1}")
         cocotb.log.info("[Test Execution] Generating random inputs...")
         # Generate random inputs
-        sinewave_random_value = random.randint(-(2 ** (input_bits - 1)), 2 ** (input_bits - 1) - 1)
+        sinewave_random_value   = random.randint(-(2 ** (input_bits - 1)), 2 ** (input_bits - 1) - 1)
         cosinewave_random_value = random.randint(-(2 ** (input_bits - 1)), 2 ** (input_bits - 1) - 1)
-        rf_in_random_value = random.randint(0, 1)
+        rf_in_random_value      = random.randint(0, 1)
 
         # Loading values into DUT #
-        dut.sinewave_in.value = sinewave_random_value
+        dut.sinewave_in.value   = sinewave_random_value
         dut.cosinewave_in.value = cosinewave_random_value
-        dut.rf_in.value = rf_in_random_value
+        dut.rf_in.value         = rf_in_random_value
 
         cocotb.log.info("[Test Execution] Applying random inputs...")
         await RisingEdge(dut.clk)
@@ -112,20 +112,20 @@ async def Mixer_test(dut):
         cocotb.log.info("------ Waiting 1 Clock Cycle ------")
         await RisingEdge(dut.clk)
 
-        expected_sinewave = sinewave_random_value if dut.rf_in_delayed_2.value == 0 else -sinewave_random_value
-        expected_cosinewave = cosinewave_random_value if dut.rf_in_delayed_2.value == 0 else -cosinewave_random_value
+        expected_sinewave   = sinewave_random_value   if dut.rf_in_d_2.value == 0 else -sinewave_random_value
+        expected_cosinewave = cosinewave_random_value if dut.rf_in_d_2.value == 0 else -cosinewave_random_value
 
-        expected_sinewave_bin = BinaryValue(
+        expected_sinewave_bin   = BinaryValue(
             value=expected_sinewave, n_bits=input_bits, bigEndian=False, binaryRepresentation=2
         )
         expected_cosinewave_bin = BinaryValue(
             value=expected_cosinewave, n_bits=input_bits, bigEndian=False, binaryRepresentation=2
         )
 
-        sinewave_correct = '✓' if sinewave_random_value == dut.sinewave_in.value.signed_integer else '✗'
-        cosinewave_correct = '✓' if cosinewave_random_value == dut.cosinewave_in.value.signed_integer else '✗'
-        rf_in_correct = '✓' if rf_in_random_value == dut.rf_in.value else '✗'
-        sinewave_out_correct = '✓' if expected_sinewave_bin == dut.sinewave_out.value.signed_integer else '✗'
+        sinewave_correct       = '✓' if sinewave_random_value   == dut.sinewave_in.value.signed_integer else '✗'
+        cosinewave_correct     = '✓' if cosinewave_random_value == dut.cosinewave_in.value.signed_integer else '✗'
+        rf_in_correct          = '✓' if rf_in_random_value      == dut.rf_in.value else '✗'
+        sinewave_out_correct   = '✓' if expected_sinewave_bin   == dut.sinewave_out.value.signed_integer else '✗'
         cosinewave_out_correct = '✓' if expected_cosinewave_bin == dut.cosinewave_out.value.signed_integer else '✗'
 
         table_data = [

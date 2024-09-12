@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1724778486" />
+    <testcase name="simpleSine_test" classname="nco_tb" file="/home/user/SDR-HLS/1.RTLImplementation/1.hw/version2/systemverilog/sim/nco_tb.py" lineno="8" time="0.08700108528137207" sim_time_ns="2512.501" ratio_time="28878.96158851659" />
+  </testsuite>
+</testsuites>

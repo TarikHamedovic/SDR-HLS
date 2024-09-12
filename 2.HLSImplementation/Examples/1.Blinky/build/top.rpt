@@ -4,7 +4,7 @@
  |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
  |  Distributed under an ISC-like license, type "license" to see terms        |
  \----------------------------------------------------------------------------/
- Yosys 0.43+22 (git sha1 118b2829d, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)
+ Yosys 0.40+22 (git sha1 fa0c5c1d4, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)
 
 -- Executing script file `top.ys' --
 
@@ -110,9 +110,6 @@ Successfully finished Verilog frontend.
 
 2.3.1. Analyzing design hierarchy..
 Top module:  \top
-Used module:     \top.pin_clk25_0
-Used module:         \top.pin_clk25_0.buf
-Used module:             \top.pin_clk25_0.buf.buf
 Used module:     \top.pin_led_7
 Used module:         \top.pin_led_7.buf
 Used module:             \top.pin_led_7.buf.buf
@@ -138,12 +135,11 @@ Used module:     \top.pin_led_0
 Used module:         \top.pin_led_0.buf
 Used module:             \top.pin_led_0.buf.buf
 Used module:     \top.cd_sync
+Used module:         \top.cd_sync.clk_buf
+Used module:             \top.cd_sync.clk_buf.buf
 
 2.3.2. Analyzing design hierarchy..
 Top module:  \top
-Used module:     \top.pin_clk25_0
-Used module:         \top.pin_clk25_0.buf
-Used module:             \top.pin_clk25_0.buf.buf
 Used module:     \top.pin_led_7
 Used module:         \top.pin_led_7.buf
 Used module:             \top.pin_led_7.buf.buf
@@ -169,6 +165,8 @@ Used module:     \top.pin_led_0
 Used module:         \top.pin_led_0.buf
 Used module:             \top.pin_led_0.buf.buf
 Used module:     \top.cd_sync
+Used module:         \top.cd_sync.clk_buf
+Used module:             \top.cd_sync.clk_buf.buf
 Removed 0 unused modules.
 
 2.4. Executing PROC pass (convert processes to netlists).
@@ -321,10 +319,6 @@ Removing empty process `top.$9'.
 Cleaned up 6 empty switches.
 
 2.4.12. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.pin_clk25_0.buf.buf.
-Optimizing module top.pin_clk25_0.buf.
-<suppressed ~1 debug messages>
-Optimizing module top.pin_clk25_0.
 Optimizing module top.pin_led_7.buf.buf.
 Optimizing module top.pin_led_7.buf.
 <suppressed ~2 debug messages>
@@ -357,14 +351,14 @@ Optimizing module top.pin_led_0.buf.buf.
 Optimizing module top.pin_led_0.buf.
 <suppressed ~2 debug messages>
 Optimizing module top.pin_led_0.
+Optimizing module top.cd_sync.clk_buf.buf.
+Optimizing module top.cd_sync.clk_buf.
+<suppressed ~1 debug messages>
 Optimizing module top.cd_sync.
 <suppressed ~1 debug messages>
 Optimizing module top.
 
 2.5. Executing FLATTEN pass (flatten design).
-Deleting now unused module top.pin_clk25_0.buf.buf.
-Deleting now unused module top.pin_clk25_0.buf.
-Deleting now unused module top.pin_clk25_0.
 Deleting now unused module top.pin_led_7.buf.buf.
 Deleting now unused module top.pin_led_7.buf.
 Deleting now unused module top.pin_led_7.
@@ -389,8 +383,10 @@ Deleting now unused module top.pin_led_1.
 Deleting now unused module top.pin_led_0.buf.buf.
 Deleting now unused module top.pin_led_0.buf.
 Deleting now unused module top.pin_led_0.
+Deleting now unused module top.cd_sync.clk_buf.buf.
+Deleting now unused module top.cd_sync.clk_buf.
 Deleting now unused module top.cd_sync.
-<suppressed ~28 debug messages>
+<suppressed ~27 debug messages>
 
 2.6. Executing TRIBUF pass.
 
@@ -576,7 +572,7 @@ No more expansions possible.
 Extracting $alu and $macc cells in module top:
   creating $macc model for $6 ($add).
   creating $alu model for $macc $6.
-  creating $alu cell for $6: $auto$alumacc.cc:485:replace_alu$292
+  creating $alu cell for $6: $auto$alumacc.cc:485:replace_alu$291
   created 1 $alu and 0 $macc cells.
 
 2.23. Executing OPT pass (performing simple optimizations).
@@ -910,7 +906,7 @@ No more expansions possible.
 Cleaned up 0 empty switches.
 
 2.42.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
 Removed a total of 0 dead cases.
 
 2.42.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -918,39 +914,39 @@ Removed 0 redundant assignments.
 Promoted 1 assignment to connection.
 
 2.42.3.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$927'.
+Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$926'.
   Set init value: \Q = 1'0
 
 2.42.3.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926'.
+Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925'.
 
 2.42.3.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~1 debug messages>
 
 2.42.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$927'.
-Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$926'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925'.
      1/1: $0\Q[0:0]
 
 2.42.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 2.42.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926'.
-  created $adff cell `$procdff$930' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925'.
+  created $adff cell `$procdff$929' with positive edge clock and positive level reset.
 
 2.42.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.42.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$927'.
-Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926'.
-Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$926'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:0$926'.
+Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/usr/local/bin/../share/yosys/ecp5/cells_sim.v:344$925'.
 Cleaned up 1 empty switch.
 
 2.42.3.12. Executing OPT_EXPR pass (perform const folding).
 
 2.42.4. Executing SCC pass (detecting logic loops).
-Found an SCC: $auto$ff.cc:266:slice$592 $auto$dfflegalize.cc:941:flip_pol$845 $auto$simplemap.cc:38:simplemap_not$758 $auto$ff.cc:266:slice$591 $auto$dfflegalize.cc:941:flip_pol$843 $auto$simplemap.cc:126:simplemap_reduce$547 $auto$opt_expr.cc:617:replace_const_cells$797 $auto$ff.cc:266:slice$590 $auto$dfflegalize.cc:941:flip_pol$841 $auto$simplemap.cc:38:simplemap_not$756 $auto$ff.cc:266:slice$589 $auto$dfflegalize.cc:941:flip_pol$839 $auto$simplemap.cc:126:simplemap_reduce$553 $auto$simplemap.cc:126:simplemap_reduce$546 $auto$simplemap.cc:38:simplemap_not$755 $auto$ff.cc:266:slice$588 $auto$dfflegalize.cc:941:flip_pol$837 $auto$simplemap.cc:38:simplemap_not$754 $auto$ff.cc:266:slice$587 $auto$dfflegalize.cc:941:flip_pol$835 $auto$simplemap.cc:126:simplemap_reduce$545 $auto$simplemap.cc:38:simplemap_not$753 $auto$ff.cc:266:slice$586 $auto$dfflegalize.cc:941:flip_pol$833 $auto$simplemap.cc:38:simplemap_not$752 $auto$ff.cc:266:slice$585 $auto$dfflegalize.cc:941:flip_pol$831 $auto$simplemap.cc:126:simplemap_reduce$552 $auto$simplemap.cc:126:simplemap_reduce$544 $auto$simplemap.cc:38:simplemap_not$751 $auto$ff.cc:266:slice$584 $auto$dfflegalize.cc:941:flip_pol$829 $auto$simplemap.cc:38:simplemap_not$750 $auto$ff.cc:266:slice$583 $auto$dfflegalize.cc:941:flip_pol$827 $auto$simplemap.cc:126:simplemap_reduce$543 $auto$simplemap.cc:38:simplemap_not$749 $auto$ff.cc:266:slice$582 $auto$dfflegalize.cc:941:flip_pol$825 $auto$simplemap.cc:38:simplemap_not$748 $auto$ff.cc:266:slice$581 $auto$dfflegalize.cc:941:flip_pol$823 $auto$simplemap.cc:126:simplemap_reduce$556 $auto$simplemap.cc:126:simplemap_reduce$551 $auto$simplemap.cc:126:simplemap_reduce$542 $auto$simplemap.cc:38:simplemap_not$747 $auto$ff.cc:266:slice$580 $auto$dfflegalize.cc:941:flip_pol$821 $auto$simplemap.cc:38:simplemap_not$746 $auto$ff.cc:266:slice$579 $auto$dfflegalize.cc:941:flip_pol$819 $auto$simplemap.cc:126:simplemap_reduce$541 $auto$simplemap.cc:38:simplemap_not$745 $auto$ff.cc:266:slice$578 $auto$dfflegalize.cc:941:flip_pol$817 $auto$simplemap.cc:38:simplemap_not$744 $auto$ff.cc:266:slice$577 $auto$dfflegalize.cc:941:flip_pol$815 $auto$simplemap.cc:126:simplemap_reduce$550 $auto$simplemap.cc:126:simplemap_reduce$540 $auto$simplemap.cc:38:simplemap_not$743 $auto$ff.cc:266:slice$576 $auto$dfflegalize.cc:941:flip_pol$813 $auto$simplemap.cc:38:simplemap_not$742 $auto$ff.cc:266:slice$575 $auto$dfflegalize.cc:941:flip_pol$811 $auto$simplemap.cc:126:simplemap_reduce$539 $auto$simplemap.cc:38:simplemap_not$741 $auto$ff.cc:266:slice$574 $auto$dfflegalize.cc:941:flip_pol$809 $auto$simplemap.cc:38:simplemap_not$740 $auto$ff.cc:266:slice$573 $auto$dfflegalize.cc:941:flip_pol$807 $auto$simplemap.cc:126:simplemap_reduce$559 $auto$simplemap.cc:126:simplemap_reduce$555 $auto$simplemap.cc:126:simplemap_reduce$549 $auto$simplemap.cc:126:simplemap_reduce$538 $auto$opt_expr.cc:617:replace_const_cells$803 $auto$ff.cc:266:slice$572 $auto$dfflegalize.cc:941:flip_pol$805 $auto$simplemap.cc:126:simplemap_reduce$561 $auto$simplemap.cc:126:simplemap_reduce$557 $auto$simplemap.cc:38:simplemap_not$759
+Found an SCC: $auto$ff.cc:266:slice$591 $auto$dfflegalize.cc:941:flip_pol$844 $auto$simplemap.cc:38:simplemap_not$757 $auto$ff.cc:266:slice$590 $auto$dfflegalize.cc:941:flip_pol$842 $auto$simplemap.cc:126:simplemap_reduce$546 $auto$opt_expr.cc:613:replace_const_cells$796 $auto$ff.cc:266:slice$589 $auto$dfflegalize.cc:941:flip_pol$840 $auto$simplemap.cc:38:simplemap_not$755 $auto$ff.cc:266:slice$588 $auto$dfflegalize.cc:941:flip_pol$838 $auto$simplemap.cc:126:simplemap_reduce$552 $auto$simplemap.cc:126:simplemap_reduce$545 $auto$simplemap.cc:38:simplemap_not$754 $auto$ff.cc:266:slice$587 $auto$dfflegalize.cc:941:flip_pol$836 $auto$simplemap.cc:38:simplemap_not$753 $auto$ff.cc:266:slice$586 $auto$dfflegalize.cc:941:flip_pol$834 $auto$simplemap.cc:126:simplemap_reduce$544 $auto$simplemap.cc:38:simplemap_not$752 $auto$ff.cc:266:slice$585 $auto$dfflegalize.cc:941:flip_pol$832 $auto$simplemap.cc:38:simplemap_not$751 $auto$ff.cc:266:slice$584 $auto$dfflegalize.cc:941:flip_pol$830 $auto$simplemap.cc:126:simplemap_reduce$551 $auto$simplemap.cc:126:simplemap_reduce$543 $auto$simplemap.cc:38:simplemap_not$750 $auto$ff.cc:266:slice$583 $auto$dfflegalize.cc:941:flip_pol$828 $auto$simplemap.cc:38:simplemap_not$749 $auto$ff.cc:266:slice$582 $auto$dfflegalize.cc:941:flip_pol$826 $auto$simplemap.cc:126:simplemap_reduce$542 $auto$simplemap.cc:38:simplemap_not$748 $auto$ff.cc:266:slice$581 $auto$dfflegalize.cc:941:flip_pol$824 $auto$simplemap.cc:38:simplemap_not$747 $auto$ff.cc:266:slice$580 $auto$dfflegalize.cc:941:flip_pol$822 $auto$simplemap.cc:126:simplemap_reduce$555 $auto$simplemap.cc:126:simplemap_reduce$550 $auto$simplemap.cc:126:simplemap_reduce$541 $auto$simplemap.cc:38:simplemap_not$746 $auto$ff.cc:266:slice$579 $auto$dfflegalize.cc:941:flip_pol$820 $auto$simplemap.cc:38:simplemap_not$745 $auto$ff.cc:266:slice$578 $auto$dfflegalize.cc:941:flip_pol$818 $auto$simplemap.cc:126:simplemap_reduce$540 $auto$simplemap.cc:38:simplemap_not$744 $auto$ff.cc:266:slice$577 $auto$dfflegalize.cc:941:flip_pol$816 $auto$simplemap.cc:38:simplemap_not$743 $auto$ff.cc:266:slice$576 $auto$dfflegalize.cc:941:flip_pol$814 $auto$simplemap.cc:126:simplemap_reduce$549 $auto$simplemap.cc:126:simplemap_reduce$539 $auto$simplemap.cc:38:simplemap_not$742 $auto$ff.cc:266:slice$575 $auto$dfflegalize.cc:941:flip_pol$812 $auto$simplemap.cc:38:simplemap_not$741 $auto$ff.cc:266:slice$574 $auto$dfflegalize.cc:941:flip_pol$810 $auto$simplemap.cc:126:simplemap_reduce$538 $auto$simplemap.cc:38:simplemap_not$740 $auto$ff.cc:266:slice$573 $auto$dfflegalize.cc:941:flip_pol$808 $auto$simplemap.cc:38:simplemap_not$739 $auto$ff.cc:266:slice$572 $auto$dfflegalize.cc:941:flip_pol$806 $auto$simplemap.cc:126:simplemap_reduce$558 $auto$simplemap.cc:126:simplemap_reduce$554 $auto$simplemap.cc:126:simplemap_reduce$548 $auto$simplemap.cc:126:simplemap_reduce$537 $auto$opt_expr.cc:613:replace_const_cells$802 $auto$ff.cc:266:slice$571 $auto$dfflegalize.cc:941:flip_pol$804 $auto$simplemap.cc:126:simplemap_reduce$560 $auto$simplemap.cc:126:simplemap_reduce$556 $auto$simplemap.cc:38:simplemap_not$758
 Found 1 SCCs in module top.
 Found 1 SCCs.
 
@@ -1197,14 +1193,14 @@ Module top: replaced 18 cells with 120 new cells, skipped 39 cells.
        4 $_AND_
 
 2.42.17. Executing AIGMAP pass (map logic to AIG).
-Module top: replaced 20 cells with 80 new cells, skipped 133 cells.
+Module top: replaced 20 cells with 80 new cells, skipped 132 cells.
   replaced 1 cell types:
       20 $_OR_
   not replaced 9 cell types:
-      28 $scopeinfo
+      27 $scopeinfo
       50 $_NOT_
-       1 SGSR
        2 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF
+       1 SGSR
       29 TRELLIS_FF
        9 TRELLIS_IO
       11 $paramod$838872d5a4bab89607f53482b205c0fd50d8b82e\CCU2C
@@ -1238,8 +1234,8 @@ ABC: + &dch -f
 ABC: + &ps 
 ABC: <abc-temp-dir>/input : i/o =     42/     79  and =      30  lev =    5 (0.60)  mem = 0.01 MB  ch =    3  box = 13  bb = 2
 ABC: + &if -W 300 -v 
-ABC: K = 7. Memory (bytes): Truth =    0. Cut =   64. Obj =  148. Set =  672. CutMin = no
-ABC: Node =      30.  Ch =     3.  Total mem =    0.05 MB. Peak cut mem =    0.00 MB.
+ABC: K = 7. Memory (bytes): Truth =    0. Cut =   60. Obj =  140. Set =  636. CutMin = no
+ABC: Node =      30.  Ch =     3.  Total mem =    0.04 MB. Peak cut mem =    0.00 MB.
 ABC: P:  Del = 1507.00.  Ar =      23.0.  Edge =       26.  Cut =      173.  T =     0.00 sec
 ABC: P:  Del = 1507.00.  Ar =      23.0.  Edge =       26.  Cut =      173.  T =     0.00 sec
 ABC: P:  Del = 1507.00.  Ar =      23.0.  Edge =       26.  Cut =      214.  T =     0.00 sec
@@ -1369,27 +1365,27 @@ Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells 
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
 Using template $paramod$525425bfbe66d72ee88210d059d9a74f55ab8de8\$lut for cells of type $lut.
-Using template $paramod$6ef53c3eb59292308f15a55a4b3be12ef10f5287\$lut for cells of type $lut.
+Using template $paramod$4dfa26e736f9800d377c839a343d7cf750e306a6\$lut for cells of type $lut.
 Using template $paramod$a15fd389a2f54cb7b94707b25934d226e68d9e2e\$lut for cells of type $lut.
 No more expansions possible.
 <suppressed ~180 debug messages>
 
 2.44. Executing OPT_LUT_INS pass (discard unused LUT inputs).
 Optimizing LUTs in top.
-  Optimizing lut $abc$1551$lut$aiger1550$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $abc$1551$lut$aiger1550$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$89.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$1550$lut$aiger1549$82.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
 Removed 0 unused cells and 37 unused wires.
 
 2.45. Executing AUTONAME pass.
-Renamed 422 objects in module top (16 iterations).
+Renamed 414 objects in module top (16 iterations).
 <suppressed ~117 debug messages>
 
 2.46. Executing HIERARCHY pass (managing design hierarchy).
@@ -1405,17 +1401,17 @@ Removed 0 unused modules.
 
 === top ===
 
-   Number of wires:                161
-   Number of wire bits:            229
-   Number of public wires:         161
-   Number of public wire bits:     229
+   Number of wires:                158
+   Number of wire bits:            226
+   Number of public wires:         158
+   Number of public wire bits:     226
    Number of ports:                  9
    Number of port bits:              9
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                117
-     $scopeinfo                     28
+   Number of cells:                116
+     $scopeinfo                     27
      CCU2C                          11
      L6MUX21                         4
      LUT4                           27
@@ -1430,6 +1426,6 @@ Found and reported 0 problems.
 
 3. Executing JSON backend.
 
-End of script. Logfile hash: aff0afe567, CPU: user 0.82s system 0.01s, MEM: 27.25 MB peak
-Yosys 0.43+22 (git sha1 118b2829d, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)
-Time spent: 48% 19x read_verilog (0 sec), 7% 22x opt_expr (0 sec), ...
+End of script. Logfile hash: e788f5493f, CPU: user 0.82s system 0.02s, MEM: 27.06 MB peak
+Yosys 0.40+22 (git sha1 fa0c5c1d4, clang++ 14.0.0-1ubuntu1.1 -fPIC -Os)
+Time spent: 50% 19x read_verilog (0 sec), 6% 19x opt_clean (0 sec), ...

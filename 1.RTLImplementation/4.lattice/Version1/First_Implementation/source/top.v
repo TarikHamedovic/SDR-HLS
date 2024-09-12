@@ -208,7 +208,7 @@ module top (
               112 : phase_inc_carrGen <= phase_inc_carrGen + 64'h1436a8cdf6f3;   // p + 100 Hz
               113 : phase_inc_carrGen <= phase_inc_carrGen - 64'hca22980ba57e;   // q - 1KHz
               104 : phase_inc_carrGen <= phase_inc_carrGen + 64'hca22980ba57e;   // r + 1 KHz
-              default: phase_inc_carrGen <= 64'0;
+              default: phase_inc_carrGen <= 0;
          endcase
       end
   end

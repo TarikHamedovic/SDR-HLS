@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 18 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/sim
+vMultiplier
+2/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v
+!s110 1725959786
+!i10b 1
+!s100 OoeRAhUVeB32dn3Ug];Ac0
+I1[VCG4aCD7nVh1<1z<o2^0
+R0
+w1724626827
+8/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v
+F/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v
+!i122 0
+L0 8 164
+VDg1SIo80bB@j0V0VzS_@n1
+OT;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1725959785.000000
+!s107 /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v|
+!s90 -reportprogress|300|+incdir+/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source|-work|work|/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v|
+!s101 -O0
+!i113 1
+o-work work -O0
+!s92 +incdir+/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source -work work -O0
+tCvgOpt 0
+n@multiplier

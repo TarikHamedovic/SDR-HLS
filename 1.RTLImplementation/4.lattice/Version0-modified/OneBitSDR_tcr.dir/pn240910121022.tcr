@@ -1,0 +1,7 @@
+#Start recording tcl command: 9/10/2024 11:05:09
+#Project Location: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified; Project name: OneBitSDR
+prj_project open "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/OneBitSDR.ldf"
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v"
+prj_run Map -impl impl1
+prj_src add "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/sim/sim.spf"
+#Stop recording: 9/10/2024 12:10:22

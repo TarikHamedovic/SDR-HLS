@@ -45,7 +45,7 @@ module CIC #(
     parameter  REGISTER_WIDTH   = 64,
     parameter  DECIMATION_RATIO = 16,
     parameter  GAIN_WIDTH       = 8,
-    parameter  N_STAGES         = 4
+    parameter  N_STAGES         = 5
 ) (
     input  logic                          clk,
     input  logic        [GAIN_WIDTH-1:0]  gain,

@@ -1,0 +1,10 @@
+----------------------------------------------------------------------
+Report for cell Multiplier.TECH
+Register bits:  0 of 84255 (0.000%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                GSR         1          100.0
+                         MULT18X18D         1          100.0
+                        VERIFIC_PWR         1          100.0
+                              TOTAL         3

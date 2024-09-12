@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="/home/user/SDR-HLS/1bitSDRLattice/promote.xml" version="Diamond (64-bit) 3.13.0.56.2" date="Thu May 30 01:04:08 2024" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml" version="Diamond (64-bit) 3.13.0.56.2" date="Sun Aug 25 21:02:06 2024" vendor="Lattice Semiconductor Corporation" >
   <msg mid="35931002" type="Warning" />
   <msg mid="35901209" type="Warning" />
   <msg mid="35901142" type="Warning" />

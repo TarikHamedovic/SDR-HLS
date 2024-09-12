@@ -1,0 +1,246 @@
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Sep 10 11:08:10 2024
+
+
+Command Line:  synthesis -f OneBitSDR_impl1_lattice.synproj -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/promote.xml 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified (searchpath added)
+-p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1 (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified (searchpath added)
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v
+NGD file = OneBitSDR_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v. VERI-1482
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(125): /* in comment. VERI-1049
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(37): compiling module top. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v(8): compiling module PLL. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,FEEDBK_PATH="INT_OP",CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v(2): compiling module quarterwave_generator. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v(2): compiling module quarterwave_table. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(163): actual bit length 13 differs from formal bit length 12 for port sinewave. VERI-1330
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(164): actual bit length 13 differs from formal bit length 12 for port cosinewave. VERI-1330
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v(17): compiling module Mixer. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(175): actual bit length 13 differs from formal bit length 12 for port sinewave_in. VERI-1330
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v(176): actual bit length 13 differs from formal bit length 12 for port cosinewave_in. VERI-1330
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v(42): compiling module CIC(REGISTER_WIDTH=72,DECIMATION_RATIO=4096). VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v(93): expression size 32 truncated to fit in target size 12. VERI-1209
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v(118): expression size 72 truncated to fit in target size 12. VERI-1209
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v(8): compiling module AMDemodulator. VERI-1018
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v(8): compiling module Multiplier. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1184): compiling module MULT18X18D(REG_INPUTA_CLK="CLK0",REG_INPUTB_CLK="CLK0",REG_PIPELINE_CLK="CLK0",REG_OUTPUT_CLK="CLK0",RESETMODE="ASYNC"). VERI-1018
+Removed duplicate sequential element q_data_b(12 bit), because it is equivalent to q_data_a
+
+Removed duplicate sequential element i_data_a(12 bit), because it is equivalent to i_data_b
+
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v(33): compiling module PWM. VERI-1018
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v(52): expression size 32 truncated to fit in target size 12. VERI-1209
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v(19): compiling module uart_rx(CLKS_PER_BIT=87). VERI-1018
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = top.
+WARNING - synthesis: I/O Port pwm_out_n[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port pwm_out_n[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port pwm_out_n[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port pwm_out_n[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[7] 's net has no driver and is unused.
+######## Missing driver on net pwm_out_n[3]. Patching with GND.
+######## Missing driver on net pwm_out_n[2]. Patching with GND.
+######## Missing driver on net pwm_out_n[1]. Patching with GND.
+######## Missing driver on net pwm_out_n[0]. Patching with GND.
+######## Missing driver on net led[7]. Patching with GND.
+
+
+
+WARNING - synthesis: Bit 7 of Register cic_gain is stuck at Zero
+WARNING - synthesis: Bit 6 of Register cic_gain is stuck at Zero
+WARNING - synthesis: Bit 5 of Register cic_gain is stuck at Zero
+WARNING - synthesis: Bit 4 of Register cic_gain is stuck at Zero
+WARNING - synthesis: Bit 3 of Register cic_gain is stuck at Zero
+WARNING - synthesis: Bit 2 of Register cic_gain is stuck at Zero
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file OneBitSDR_impl1.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 2637 of 84255 (3 % )
+CCU2C => 1694
+EHXPLLL => 1
+FD1P3AX => 1566
+FD1P3IX => 16
+FD1S3AX => 1022
+FD1S3AY => 4
+FD1S3IX => 28
+FD1S3JX => 1
+GSR => 1
+IB => 3
+L6MUX21 => 10
+LUT4 => 1058
+MULT18X18D => 2
+MUX21 => 23
+OB => 18
+PDPW16KD => 2
+PFUMX => 190
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk_80mhz, loads : 2529
+  Net : cic_sine_inst/cic_sine_clk, loads : 71
+  Net : uart_rx_inst/UartClk_2, loads : 42
+  Net : clk_25mhz_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 50
+Top 10 highest fanout Clock Enables:
+  Net : cic_cosine_inst/clk_80mhz_enable_850, loads : 63
+  Net : cic_sine_inst/clk_80mhz_enable_1173, loads : 50
+  Net : cic_sine_inst/clk_80mhz_enable_1223, loads : 50
+  Net : cic_sine_inst/clk_80mhz_enable_1273, loads : 50
+  Net : cic_sine_inst/clk_80mhz_enable_1456, loads : 50
+  Net : cic_cosine_inst/clk_80mhz_enable_802, loads : 50
+  Net : cic_cosine_inst/clk_80mhz_enable_71, loads : 50
+  Net : cic_sine_inst/clk_80mhz_enable_873, loads : 50
+  Net : cic_cosine_inst/clk_80mhz_enable_136, loads : 50
+  Net : cic_sine_inst/clk_80mhz_enable_973, loads : 50
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : rx_byte_0, loads : 198
+  Net : led_0_6, loads : 116
+  Net : rx_byte_2, loads : 110
+  Net : square_sum_25, loads : 107
+  Net : clk_80mhz_enable_223, loads : 100
+  Net : cic_sine_inst/clk_80mhz_enable_291, loads : 100
+  Net : cic_sine_inst/clk_80mhz_enable_923, loads : 100
+  Net : cic_sine_inst/clk_80mhz_enable_1023, loads : 100
+  Net : cic_sine_inst/clk_80mhz_enable_1073, loads : 100
+  Net : cic_sine_inst/clk_80mhz_enable_1123, loads : 100
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets \uart_rx_inst/UartClk[2]]|  200.000 MHz|  113.327 MHz|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_80mhz]               |  200.000 MHz|  113.237 MHz|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets cic_sine_clk]            |  200.000 MHz|   17.971 MHz|    92 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 376.027  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 29.450  secs
+--------------------------------------------------------------

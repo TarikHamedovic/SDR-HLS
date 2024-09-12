@@ -33,9 +33,19 @@ Outputs:
 
 */
 
-module top (
+module top #(
+  parameter int DATA_WIDTH           = 12,
+  parameter int PHASE_WIDTH          = 64,
+  parameter int LUT_DEPTH            = 8,
+  parameter int CIC_REGISTER_WIDTH   = 72,
+  parameter int CIC_DECIMATION_RATIO = 4096,
+  parameter int CIC_GAIN_WIDTH       = 2,
+  parameter int PWM_COUNT_WIDTH      = 10,
+  parameter int PWM_OFFSET           = 512,
+  parameter int PHASE_ARRAY_SIZE     = 2
+)(
     input  logic       clk_25mhz,
-    input  logic       rx_serial,
+    input  logic       uart_rx_serial,
     input  logic       rf_in,
 
     output logic       diff_out,
@@ -45,69 +55,59 @@ module top (
     output logic [7:0] led
 );
 
-  localparam DATA_WIDTH           = 12;
-  localparam PHASE_WIDTH          = 64;
-  localparam LUT_DEPTH            = 8;
-  localparam CIC_REGISTER_WIDTH   = 72;
-  localparam CIC_GAIN_WIDTH       = 8;
-  localparam CIC_DECIMATION_RATIO = 4096;
-  localparam PWM_COUNT_WIDTH      = 10;
-  localparam PWM_OFFSET           = 512;
-  localparam PHASE_ARRAY_SIZE     = 2;
-
-  //----- Typedefs for convenience ---//
+  //------------ Typedefs for convenience ------------//
   typedef logic signed [DATA_WIDTH-1 :0] s_data_t;
 
-  // ------ PLL Signals ------ //
+  // ---------------- PLL Signals ------------------- //
   logic               clk_80mhz;
-
-  // ------ NCO Signals ------ //
+  logic               pll_lock;
+  // ---------------- NCO Signals ------------------- //
   logic signed [PHASE_WIDTH-1:0] phase_increment[PHASE_ARRAY_SIZE];
   //logic                           nco_cosinewave;
   //logic                           nco_sinewave;
   //logic        [PHASE_WIDTH-1:0] phase_accumulator;
 
-  // ------ SinCos Signals ---- //
+  // ---------------- SinCos Signals ---------------- //
   s_data_t lo_sinewave;
   s_data_t lo_cosinewave;
 
-  // ------ Mixer Signals ---- //
+  // ---------------- Mixer Signals ----------------- //
   s_data_t mix_sinewave;
   s_data_t mix_cosinewave;
 
-  // ------ CIC Signals ---- //
+  // ---------------- CIC Signals ------------------- //
   logic [CIC_GAIN_WIDTH-1:0] cic_gain;
   s_data_t cic_sine_out;
   logic    cic_sine_clk;
   s_data_t cic_cosine_out;
   logic    cic_cosine_clk;
 
-  // ------- AMDem Signals-- //
+  // --------------- AMDem Signals ------------------ //
   s_data_t amdemod_out;
 
-  // ----- UART Signals ------ //
-  logic       rx_data_valid;
-  logic [7:0] rx_byte;
-  logic       rx_data_valid1;
-  logic [7:0] rx_byte1;
+  // ---------------- UART Signals ------------------ //
+  logic       uart_rx_data_valid;
+  logic [7:0] uart_rx_byte;
+  logic       uart_rx_data_valid1;
+  logic [7:0] uart_rx_byte1;
 
-  /*
+
   // NOTE: This is Lattice IP PLL
   //===========================//
   //          PLL IP           //
   //===========================//
   PLL PLL_inst (
       .CLKI (clk_25mhz),
-      .CLKOP(clk_80mhz)
+      .CLKOP(clk_80mhz),
+      .LOCK (pll_lock)
   );
-  */
 
 
   // NOTE: This is open-source PLL
   //===========================//
   //          ECP5PLL          //
   //===========================//
-  logic [3:0] clocks; // NOTE: Only clocks[0] is needed
+  /*logic [3:0] clocks; // NOTE: Only clocks[0] is needed
   always_comb clk_80mhz = clocks[0];
   ecp5pll
   #(
@@ -124,10 +124,10 @@ module top (
     .clk_o(clocks),
     .reset()
   );
-
+  */
 
   /*
-  //NOTE: If using SinCos IP uncomment
+  //NOTE: Uncomment If using SinCos IP
   //===========================//
   //          NCO              //
   //===========================//
@@ -209,7 +209,7 @@ module top (
   //===========================//
   //       CIC (Sine)          //
   //===========================//
-  CIC #(
+  (* syn_preserve = "true" *) CIC #(
       .DATA_WIDTH      (DATA_WIDTH),
       .REGISTER_WIDTH  (CIC_REGISTER_WIDTH),
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
@@ -225,7 +225,7 @@ module top (
   //===========================//
   //      CIC (Cosine)         //
   //===========================//
-  CIC #(
+  (* syn_preserve = "true" *) CIC #(
       .DATA_WIDTH      (DATA_WIDTH),
       .REGISTER_WIDTH  (CIC_REGISTER_WIDTH),
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
@@ -267,16 +267,16 @@ module top (
   //          UART RX          //
   //===========================//
   uart_rx #(
-      .CLKS_PER_BIT(87)
+      .CLKS_PER_BIT(694) // 87
   ) uart_rx_inst (
       .osc_clk    (clk_80mhz),
-      .i_Rx_Serial(rx_serial),
-      .o_Rx_DV    (rx_data_valid1),
-      .o_Rx_Byte  (rx_byte1)
+      .i_Rx_Serial(uart_rx_serial),
+      .o_Rx_DV    (uart_rx_data_valid1),
+      .o_Rx_Byte  (uart_rx_byte1)
   );
 
   always_comb begin
-    led = rx_byte[7:0];
+    led = uart_rx_byte[7:0];
 
     pwm_out_p = {4{ pwm_out}};
     pwm_out_n = {4{!pwm_out}};
@@ -284,21 +284,21 @@ module top (
 
   always_ff @(posedge clk_80mhz) begin
     phase_increment[1] <= phase_increment[0];
-    rx_data_valid      <= rx_data_valid1;
-    rx_byte            <= rx_byte1;
+    uart_rx_data_valid <= uart_rx_data_valid1;
+    uart_rx_byte       <= uart_rx_byte1;
 
-    if (rx_data_valid) begin
-      unique case (rx_byte)
-        8'd48:  cic_gain <= 8'd0;  // 0
-        8'd49:  cic_gain <= 8'd1;  // 1
-        8'd50:  cic_gain <= 8'd2;  // 2
-        8'd51:  cic_gain <= 8'd3;  // 3
-        default cic_gain <= 8'd0;
+    if (uart_rx_data_valid) begin
+      unique case (uart_rx_byte)
+        8'd48:  cic_gain <= 2'd0;  // 0
+        8'd49:  cic_gain <= 2'd1;  // 1
+        8'd50:  cic_gain <= 2'd2;  // 2
+        8'd51:  cic_gain <= 2'd3;  // 3
+        default cic_gain <= 2'd0;
       endcase
 
-      unique case (rx_byte)
-        97:     phase_increment[0] <= 64'h4CF41F212D77318;  // a Zavidovići 1503 kHz
-        98:     phase_increment[0] <= 64'h1aa60f8b8911654;  // b Kossuth Budapest 540 KHz
+      unique case (uart_rx_byte)
+        97:     phase_increment[0] <= 64'h4CF41F212D77318;   // a Zavidovići 1503 kHz
+        98:     phase_increment[0] <= 64'h1aa60f8b8911654;   // b Kossuth Budapest 540 KHz
         102:    phase_increment[0] <= 64'h1dc38c076704516d;  // f 9650 KHz
         103:    phase_increment[0] <= 64'h1d60d923295482c6;  // g Radio China 9525 KHz
         110:    phase_increment[0] <= phase_increment[0] - 64'h71b375868d170;  // n - 9KHz
@@ -311,6 +311,16 @@ module top (
       endcase
     end
   end
+
+  //============================//
+  //    For simulation only     //
+  //============================//
+  `ifdef SIMULATION
+  initial begin
+    $dumpfile("top.vcd");
+    $dumpvars;
+  end
+  `endif
 endmodule
 
 /*

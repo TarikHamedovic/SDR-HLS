@@ -1,0 +1,14 @@
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/top.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/NCO.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/Mixer.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/AMDemod.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/PWM.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/CIC.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/sinewave_generator.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/sinewave_table.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/quarterwave_generator.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/withreset/verilog/quarterwave_table.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v
+/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v

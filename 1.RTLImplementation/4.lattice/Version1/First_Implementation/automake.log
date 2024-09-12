@@ -7,10 +7,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 00:33:49 2024
+Sun Aug 25 17:34:51 2024
 
 
-Command Line:  synthesis -f OneBitSDR_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml 
+Command Line:  synthesis -f OneBitSDR_First_Implementation_lattice.synproj -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -64,21 +64,21 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p /home/user/SDR-HLS/1bitSDRLattice (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1 (searchpath added)
 -p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
--p /home/user/SDR-HLS/1bitSDRLattice/First_Implementation (searchpath added)
--p /home/user/SDR-HLS/1bitSDRLattice (searchpath added)
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v
-Verilog design file = /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1 (searchpath added)
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/Multiplier/Multiplier.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/NCOAdder/NCOAdder.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v
 NGD file = OneBitSDR_First_Implementation.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -89,25 +89,25 @@ Technology check ok...
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/Multiplier/Multiplier.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/NCOAdder/NCOAdder.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v. VERI-1482
-Analyzing Verilog file /home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/Multiplier/Multiplier.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/NCOAdder/NCOAdder.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v. VERI-1482
 Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
 Top module name (Verilog): top
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v(39): " arg1="top" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/top.v" arg3="39"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v(8): " arg1="PLL" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/PLL/PLL.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v(39): " arg1="top" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/top.v" arg3="39"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v(8): " arg1="PLL" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/PLL/PLL.v" arg3="8"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): " arg1="VHI" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="757"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): " arg1="VLO" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="761"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): " arg1="EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="1696"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(8): " arg1="SinCos" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(8): " arg1="SinCos" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="8"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(367): " arg1="INV" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="367"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(810): " arg1="XOR2" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="810"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(710): " arg1="ROM16X1A(initval=16&apos;b1111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="710"  />
@@ -139,30 +139,30 @@ Top module name (Verilog): top
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b0110011000000000110101000110011001111101011110011000101000010110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1010101001111100100000011001110010111011101101001000111011011110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b011110010010010001111001001010011111101010011001010010100100010)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="704"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="868"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="938"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(19): " arg1="nco_sig" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v" arg3="19"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(46): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v" arg3="46"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v(47): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/NCO.v" arg3="47"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(17): " arg1="Mixer" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v" arg3="17"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(57): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v" arg3="57"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v(58): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/Mixer.v" arg3="58"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(40): " arg1="CIC(WIDTH=72,DECIMATION_RATIO=4096)" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v" arg3="40"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(110): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v" arg3="110"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(111): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v" arg3="111"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v(102): " arg1="72" arg2="12" arg3="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/CIC.v" arg4="102"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(29): " arg1="PWM" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v" arg3="29"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(60): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v" arg3="60"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v(61): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/PWM.v" arg3="61"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(21): " arg1="AMDemodulator" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v" arg3="21"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(103): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v" arg3="103"  />
-    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v(104): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/AMDemod.v" arg3="104"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="704"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="868"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="938"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(19): " arg1="nco_sig" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v" arg3="19"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(46): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v" arg3="46"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v(47): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/NCO.v" arg3="47"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(17): " arg1="Mixer" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v" arg3="17"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(57): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v" arg3="57"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v(58): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/Mixer.v" arg3="58"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(40): " arg1="CIC(WIDTH=72,DECIMATION_RATIO=4096)" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v" arg3="40"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(110): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v" arg3="110"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(111): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v" arg3="111"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v(102): " arg1="72" arg2="12" arg3="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/CIC.v" arg4="102"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(29): " arg1="PWM" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v" arg3="29"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(59): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v" arg3="59"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v(60): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/PWM.v" arg3="60"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(21): " arg1="AMDemodulator" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v" arg3="21"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(103): " arg1="dumpfile" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v" arg3="103"  />
+    <postMsg mid="35901142" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v(104): " arg1="dumpvars" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/AMDemod.v" arg3="104"  />
 Removed duplicate sequential element MultDataD(13 bit), because it is equivalent to MultDataC
 
 Removed duplicate sequential element MultDataA(12 bit), because it is equivalent to MultDataB
 
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v(19): " arg1="uart_rx(CLKS_PER_BIT=87)" arg2="/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/source/UartRX.v" arg3="19"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v(19): " arg1="uart_rx(CLKS_PER_BIT=87)" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/source/UartRX.v" arg3="19"  />
 Last elaborated design is top()
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
 Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -171,9 +171,9 @@ Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpg
 Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
 Package Status:                     Final          Version 1.37.
 Top-level module name = top.
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="704"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="868"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1bitSDRLattice/IP/SinCos/SinCos.v" arg3="938"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="704"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="868"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/IP/SinCos/SinCos.v" arg3="938"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="o_Tx_Serial"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="XOut"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="sin_out"  />
@@ -212,31 +212,31 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-   5039 blocks expanded
+   5089 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file OneBitSDR_First_Implementation.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 2728 of 84255 (3 % )
+Number of register bits => 2729 of 84255 (3 % )
 AND2 => 1
 CCU2C => 1463
 EHXPLLL => 1
-FD1P3AX => 1590
+FD1P3AX => 1551
 FD1P3DX => 61
-FD1P3IX => 16
-FD1S3AX => 1020
+FD1P3IX => 55
+FD1S3AX => 1021
 FD1S3AY => 4
 FD1S3IX => 36
 FD1S3JX => 1
 GSR => 1
 IB => 3
 INV => 33
-LUT4 => 682
+LUT4 => 724
 MULT18X18D => 2
 MUX21 => 54
 OB => 23
-PFUMX => 16
+PFUMX => 23
 ROM16X1A => 2
 ROM64X1A => 26
 XOR2 => 1
@@ -245,35 +245,35 @@ XOR2 => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 4
-  Net : clk_80mhz, loads : 2607
+  Net : clk_80mhz, loads : 2608
   Net : CIC_Sin_inst/CIC1_out_clkSin, loads : 82
   Net : uart_rx_inst/UartClk_2, loads : 42
   Net : clk_25mhz_c, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 62
 Top 10 highest fanout Clock Enables:
-  Net : CIC_Sin_inst/clk_80mhz_enable_129, loads : 63
-  Net : CIC_cos_inst/clk_80mhz_enable_757, loads : 63
-  Net : CIC_cos_inst/clk_80mhz_enable_1297, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_1397, loads : 50
-  Net : clk_80mhz_enable_1459, loads : 50
-  Net : CIC_Sin_inst/clk_80mhz_enable_65, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_797, loads : 50
-  Net : CIC_Sin_inst/clk_80mhz_enable_149, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_897, loads : 50
-  Net : CIC_cos_inst/clk_80mhz_enable_947, loads : 50
+  Net : CIC_cos_inst/count_15__N_1458, loads : 88
+  Net : CIC_Sin_inst/clk_80mhz_enable_134, loads : 63
+  Net : CIC_cos_inst/clk_80mhz_enable_1256, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_1356, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_1306, loads : 50
+  Net : clk_80mhz_enable_1411, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_705, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_70, loads : 50
+  Net : CIC_cos_inst/clk_80mhz_enable_756, loads : 50
+  Net : CIC_Sin_inst/clk_80mhz_enable_155, loads : 50
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : CIC_cos_inst/clk_80mhz_enable_847, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_997, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1047, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1097, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1147, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1197, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1247, loads : 100
-  Net : CIC_cos_inst/clk_80mhz_enable_1347, loads : 100
-  Net : CIC_Sin_inst/clk_80mhz_enable_199, loads : 100
-  Net : CIC_Sin_inst/clk_80mhz_enable_249, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_806, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_856, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_906, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_956, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1006, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1056, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1106, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1156, loads : 100
+  Net : CIC_cos_inst/clk_80mhz_enable_1206, loads : 100
+  Net : CIC_Sin_inst/clk_80mhz_enable_205, loads : 100
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -283,13 +283,13 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets \uart_rx_inst/UartClk[2]]|  200.000 MHz|  105.175 MHz|     7 *
+clk2 [get_nets \uart_rx_inst/UartClk[2]]|  200.000 MHz|  113.636 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk1 [get_nets CIC1_out_clkSin]         |  200.000 MHz|   26.749 MHz|    76 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_80mhz]               |  200.000 MHz|   85.419 MHz|    35 *
+clk0 [get_nets clk_80mhz]               |  200.000 MHz|   91.216 MHz|    37 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -297,13 +297,13 @@ clk0 [get_nets clk_80mhz]               |  200.000 MHz|   85.419 MHz|    35 *
 3 constraints not met.
 
 
-Peak Memory Usage: 332.988  MB
+Peak Memory Usage: 333.602  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 21.623  secs
+Elapsed CPU time for LSE flow : 30.044  secs
 --------------------------------------------------------------
 
-map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "OneBitSDR_First_Implementation.ngd" -o "OneBitSDR_First_Implementation_map.ncd" -pr "OneBitSDR_First_Implementation.prf" -mp "OneBitSDR_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/1bitSDRLattice/First_Implementation/OneBitSDR_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/1bitSDRLattice/OneBitSDR.lpf"             
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "OneBitSDR_First_Implementation.ngd" -o "OneBitSDR_First_Implementation_map.ncd" -pr "OneBitSDR_First_Implementation.prf" -mp "OneBitSDR_First_Implementation.mrp" -lpf "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/First_Implementation/OneBitSDR_First_Implementation.lpf" -lpf "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/OneBitSDR.lpf"             
 map:  version Diamond (64-bit) 3.13.0.56.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -333,21 +333,21 @@ Removing unused logic...
 
 Optimizing...
 
-2728 CCU2 constant inputs absorbed.
+2733 CCU2 constant inputs absorbed.
 
 
 
 
 Design Summary:
-   Number of registers:   2728 out of 84255 (3%)
-      PFU registers:         2728 out of 83640 (3%)
+   Number of registers:   2729 out of 84255 (3%)
+      PFU registers:         2729 out of 83640 (3%)
       PIO registers:            0 out of   615 (0%)
-   Number of SLICEs:      2702 out of 41820 (6%)
-      SLICEs as Logic/ROM:   2702 out of 41820 (6%)
+   Number of SLICEs:      2735 out of 41820 (7%)
+      SLICEs as Logic/ROM:   2735 out of 41820 (7%)
       SLICEs as RAM:            0 out of 31365 (0%)
       SLICEs as Carry:       1463 out of 41820 (3%)
-   Number of LUT4s:        3766 out of 83640 (5%)
-      Number used as logic LUTs:        840
+   Number of LUT4s:        3808 out of 83640 (5%)
+      Number used as logic LUTs:        882
       Number used as distributed RAM:     0
       Number used as ripple logic:      2926
       Number used as shift registers:     0
@@ -387,96 +387,97 @@ Design Summary:
    Number of Used DSP ALU Sites:  0 out of 156 (0 %)
    Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
    Number of clocks:  4
-     Net uart_rx_inst/UartClk[2]: 28 loads, 28 rising, 0 falling (Driver: uart_rx_inst/UartClk_1006_1032__i2 )
-     Net clk_80mhz: 1591 loads, 1591 rising, 0 falling (Driver: PLL_inst/PLLInst_0 )
-     Net CIC1_out_clkSin: 44 loads, 44 rising, 0 falling (Driver: CIC_Sin_inst/d_clk_67 )
+     Net uart_rx_inst/UartClk[2]: 28 loads, 28 rising, 0 falling (Driver: uart_rx_inst/UartClk_956_969__i2 )
+     Net clk_80mhz: 1610 loads, 1610 rising, 0 falling (Driver: PLL_inst/PLLInst_0 )
      Net clk_25mhz_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_25mhz )
+     Net CIC1_out_clkSin: 44 loads, 44 rising, 0 falling (Driver: CIC_Sin_inst/d_clk_67 )
    Number of Clock Enables:  62
-     Net uart_rx_inst/UartClk_2_enable_15: 4 loads, 4 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_2: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_30: 9 loads, 9 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_32: 2 loads, 2 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_4: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_5: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_6: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_7: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/UartClk_2_enable_35: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_27: 4 loads, 4 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_18: 9 loads, 9 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_29: 2 loads, 2 LSLICEs
      Net uart_rx_inst/UartClk_2_enable_36: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_20: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_21: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_31: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_30: 1 loads, 1 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_32: 1 loads, 1 LSLICEs
      Net uart_rx_inst/UartClk_2_enable_33: 1 loads, 1 LSLICEs
      Net uart_rx_inst/UartClk_2_enable_34: 1 loads, 1 LSLICEs
-     Net PWM_inst/clk_80mhz_enable_1406: 6 loads, 6 LSLICEs
-     Net clk_80mhz_enable_1407: 1 loads, 1 LSLICEs
-     Net clk_80mhz_enable_1469: 5 loads, 5 LSLICEs
-     Net clk_80mhz_enable_1471: 2 loads, 2 LSLICEs
-     Net clk_80mhz_enable_1459: 25 loads, 25 LSLICEs
-     Net clk_80mhz_enable_1470: 1 loads, 1 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_757: 48 loads, 48 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_797: 50 loads, 50 LSLICEs
-     Net CIC_cos_inst/v_comb: 17 loads, 17 LSLICEs
-     Net CIC_cos_inst/count_15__N_1458: 24 loads, 24 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_847: 41 loads, 41 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_897: 26 loads, 26 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_947: 49 loads, 49 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_997: 37 loads, 37 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1047: 29 loads, 29 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1097: 50 loads, 50 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1147: 33 loads, 33 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1197: 32 loads, 32 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1247: 50 loads, 50 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1297: 29 loads, 29 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1347: 36 loads, 36 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_1397: 50 loads, 50 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_129: 18 loads, 18 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_65: 30 loads, 30 LSLICEs
-     Net CIC_Sin_inst/v_comb: 7 loads, 7 LSLICEs
+     Net uart_rx_inst/UartClk_2_enable_35: 1 loads, 1 LSLICEs
+     Net o_Rx_DV: 9 loads, 9 LSLICEs
+     Net PWM_inst/clk_80mhz_enable_1365: 6 loads, 6 LSLICEs
+     Net clk_80mhz_enable_23: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_1411: 38 loads, 38 LSLICEs
+     Net clk_80mhz_enable_1388: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_1408: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_1387: 1 loads, 1 LSLICEs
+     Net CIC_cos_inst/count_15__N_1458: 72 loads, 72 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_756: 50 loads, 50 LSLICEs
+     Net CIC_cos_inst/v_comb: 16 loads, 16 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_806: 41 loads, 41 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_856: 26 loads, 26 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_906: 49 loads, 49 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_956: 37 loads, 37 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1006: 29 loads, 29 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1056: 50 loads, 50 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1106: 33 loads, 33 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1156: 32 loads, 32 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1206: 50 loads, 50 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1256: 29 loads, 29 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1306: 36 loads, 36 LSLICEs
+     Net CIC_cos_inst/clk_80mhz_enable_1356: 50 loads, 50 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_134: 18 loads, 18 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_70: 30 loads, 30 LSLICEs
+     Net CIC_Sin_inst/v_comb: 9 loads, 9 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_11: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_155: 25 loads, 25 LSLICEs
      Net CIC_Sin_inst/d_clk_tmp_N_1831: 19 loads, 19 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_205: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_255: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_305: 25 loads, 25 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_355: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_405: 25 loads, 25 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_455: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_505: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_555: 25 loads, 25 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_605: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_655: 26 loads, 26 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_705: 25 loads, 25 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_706: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_149: 25 loads, 25 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_199: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_249: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_299: 25 loads, 25 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_349: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_399: 25 loads, 25 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_449: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_499: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_549: 25 loads, 25 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_599: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_649: 26 loads, 26 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_699: 25 loads, 25 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_700: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_701: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_702: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_703: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_704: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_705: 1 loads, 1 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_707: 1 loads, 1 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_708: 1 loads, 1 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_709: 1 loads, 1 LSLICEs
      Net CIC_Sin_inst/clk_80mhz_enable_710: 1 loads, 1 LSLICEs
-   Number of LSRs:  10
+     Net CIC_Sin_inst/clk_80mhz_enable_711: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_712: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_713: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_714: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_715: 1 loads, 1 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_716: 1 loads, 1 LSLICEs
+   Number of LSRs:  11
      Net uart_rx_inst/r_SM_Main_2: 2 loads, 2 LSLICEs
      Net uart_rx_inst/r_Rx_DV: 1 loads, 1 LSLICEs
-     Net uart_rx_inst/n12696: 9 loads, 9 LSLICEs
-     Net uart_rx_inst/n17107: 1 loads, 1 LSLICEs
-     Net CIC_cos_inst/clk_80mhz_enable_757: 1 loads, 1 LSLICEs
-     Net CIC_cos_inst/count_15__N_1458: 1 loads, 1 LSLICEs
-     Net CIC_cos_inst/n12708: 8 loads, 8 LSLICEs
-     Net CIC_Sin_inst/clk_80mhz_enable_129: 2 loads, 2 LSLICEs
+     Net uart_rx_inst/n12716: 9 loads, 9 LSLICEs
+     Net uart_rx_inst/n16859: 1 loads, 1 LSLICEs
+     Net n17822: 28 loads, 28 LSLICEs
+     Net n12710: 1 loads, 1 LSLICEs
+     Net CIC_cos_inst/count_15__N_1458: 2 loads, 2 LSLICEs
+     Net CIC_cos_inst/n12783: 8 loads, 8 LSLICEs
+     Net CIC_Sin_inst/clk_80mhz_enable_134: 2 loads, 2 LSLICEs
+     Net CIC_Sin_inst/n12717: 8 loads, 8 LSLICEs
      Net CIC_Sin_inst/d_clk_tmp_N_1831: 1 loads, 1 LSLICEs
-     Net CIC_Sin_inst/n12697: 8 loads, 8 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
      Net MixerOutCos_11: 97 loads
      Net MixerOutSin_11: 97 loads
+     Net n18053: 93 loads
+     Net CIC_cos_inst/count_15__N_1458: 88 loads
      Net SinCos_inst/rom_addr0_r_10: 86 loads
      Net SinCos_inst/rom_addr0_r_8: 86 loads
      Net SinCos_inst/rom_addr0_r_9: 86 loads
      Net SinCos_inst/rom_addr0_r_7: 83 loads
-     Net n17926: 65 loads
-     Net CIC_cos_inst/clk_80mhz_enable_757: 63 loads
-     Net led_c_3: 54 loads
-     Net CICGain_0: 53 loads
+     Net CICGain_0: 52 loads
+     Net n12538: 52 loads
  
 
    Number of warnings:  0
@@ -574,8 +575,8 @@ Other
 	C_PSE17		0b00000000000000000
 
 
-Total CPU Time: 4 secs  
-Total REAL Time: 5 secs  
+Total CPU Time: 7 secs  
+Total REAL Time: 7 secs  
 Peak Memory Usage: 484 MB
 
 Dumping design to file OneBitSDR_First_Implementation_map.ncd.
@@ -591,10 +592,10 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "OneBitSDR_First_Implementation_map.ncd"
-Thu May 30 00:34:22 2024
+Sun Aug 25 17:35:35 2024
 
 PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 OneBitSDR_First_Implementation_map.ncd OneBitSDR_First_Implementation.dir/5_1.ncd OneBitSDR_First_Implementation.prf
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 OneBitSDR_First_Implementation_map.ncd OneBitSDR_First_Implementation.dir/5_1.ncd OneBitSDR_First_Implementation.prf
 Preference file: OneBitSDR_First_Implementation.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
@@ -618,48 +619,49 @@ Device utilization summary:
    PIO (prelim)      27/365           7% used
                      27/205          13% bonded
 
-   SLICE           2702/41820         6% used
+   SLICE           2735/41820         6% used
 
    PLL                1/4            25% used
    MULT18             2/156           1% used
 
 
-Number of Signals: 7518
-Number of Connections: 15946
+Number of Signals: 7554
+Number of Connections: 16146
 
 Pin Constraint Summary:
    24 out of 26 pins locked (92% locked).
 
 
-The following 10 signals are selected to use the primary clock routing resources:
-    clk_80mhz (driver: PLL_inst/PLLInst_0, clk/ce/sr load #: 1591/0/0)
+The following 11 signals are selected to use the primary clock routing resources:
+    clk_80mhz (driver: PLL_inst/PLLInst_0, clk/ce/sr load #: 1610/0/0)
     CIC1_out_clkSin (driver: CIC_Sin_inst/SLICE_1483, clk/ce/sr load #: 44/0/0)
-    uart_rx_inst/UartClk[2] (driver: uart_rx_inst/SLICE_2345, clk/ce/sr load #: 28/0/0)
-    CIC_cos_inst/clk_80mhz_enable_797 (driver: CIC_cos_inst/SLICE_1506, clk/ce/sr load #: 0/50/0)
-    CIC_cos_inst/clk_80mhz_enable_1097 (driver: CIC_cos_inst/SLICE_1509, clk/ce/sr load #: 0/50/0)
-    CIC_cos_inst/clk_80mhz_enable_1247 (driver: CIC_cos_inst/SLICE_1510, clk/ce/sr load #: 0/50/0)
-    CIC_cos_inst/clk_80mhz_enable_1397 (driver: CIC_cos_inst/SLICE_1512, clk/ce/sr load #: 0/50/0)
-    CIC_cos_inst/clk_80mhz_enable_757 (driver: CIC_cos_inst/SLICE_1506, clk/ce/sr load #: 0/48/1)
-    CIC_cos_inst/clk_80mhz_enable_947 (driver: CIC_cos_inst/SLICE_1507, clk/ce/sr load #: 0/49/0)
-    CIC_cos_inst/clk_80mhz_enable_847 (driver: CIC_cos_inst/SLICE_1506, clk/ce/sr load #: 0/41/0)
+    uart_rx_inst/UartClk[2] (driver: uart_rx_inst/SLICE_2393, clk/ce/sr load #: 28/0/0)
+    CIC_cos_inst/count_15__N_1458 (driver: CIC_cos_inst/SLICE_1510, clk/ce/sr load #: 0/72/2)
+    CIC_cos_inst/clk_80mhz_enable_756 (driver: CIC_cos_inst/SLICE_1510, clk/ce/sr load #: 0/50/0)
+    CIC_cos_inst/clk_80mhz_enable_1056 (driver: CIC_cos_inst/SLICE_1513, clk/ce/sr load #: 0/50/0)
+    CIC_cos_inst/clk_80mhz_enable_1206 (driver: CIC_cos_inst/SLICE_1514, clk/ce/sr load #: 0/50/0)
+    CIC_cos_inst/clk_80mhz_enable_1356 (driver: CIC_cos_inst/SLICE_1516, clk/ce/sr load #: 0/50/0)
+    CIC_cos_inst/clk_80mhz_enable_906 (driver: CIC_cos_inst/SLICE_1511, clk/ce/sr load #: 0/49/0)
+    CIC_cos_inst/clk_80mhz_enable_806 (driver: CIC_cos_inst/SLICE_1510, clk/ce/sr load #: 0/41/0)
+    n17822 (driver: SLICE_2392, clk/ce/sr load #: 0/0/28)
 
 
 No signal is selected as Global Set/Reset.
 .
 Starting Placer Phase 0.
-..............
-Finished Placer Phase 0.  REAL time: 39 secs 
+...............
+Finished Placer Phase 0.  REAL time: 55 secs 
 
 
 Starting Placer Phase 1.
-.......................
-Placer score = 1230127.
-Finished Placer Phase 1.  REAL time: 54 secs 
+.....................
+Placer score = 1537630.
+Finished Placer Phase 1.  REAL time: 1 mins 18 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  1148040
-Finished Placer Phase 2.  REAL time: 56 secs 
+Placer score =  1385810
+Finished Placer Phase 2.  REAL time: 1 mins 22 secs 
 
 
 ------------------ Clock Report ------------------
@@ -673,43 +675,48 @@ Global Clock Resources:
   CLKDIV     : 0 out of 4 (0%)
 
 Quadrant TL Clocks:
-  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 66
-  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 8
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_797" from Q0 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 1
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1247" from Q1 on comp "CIC_cos_inst/SLICE_1510" on site "R50C51B", CLK/CE/SR load = 6
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1397" from Q0 on comp "CIC_cos_inst/SLICE_1512" on site "R80C89B", CLK/CE/SR load = 37
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 454
+  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 1
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_756" from Q0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 3
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1206" from Q1 on comp "CIC_cos_inst/SLICE_1514" on site "R66C63B", CLK/CE/SR load = 14
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1356" from Q0 on comp "CIC_cos_inst/SLICE_1516" on site "R88C96B", CLK/CE/SR load = 9
 
   PRIMARY  : 5 out of 16 (31%)
 
 Quadrant TR Clocks:
-  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 28
-  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 1
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 194
+  PRIMARY "CIC_cos_inst/count_15__N_1458" from F0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 2
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1206" from Q1 on comp "CIC_cos_inst/SLICE_1514" on site "R66C63B", CLK/CE/SR load = 2
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1356" from Q0 on comp "CIC_cos_inst/SLICE_1516" on site "R88C96B", CLK/CE/SR load = 18
+  PRIMARY "n17822" from F1 on comp "SLICE_2392" on site "R32C112B", CLK/CE/SR load = 28
 
-  PRIMARY  : 2 out of 16 (12%)
+  PRIMARY  : 5 out of 16 (31%)
 
 Quadrant BL Clocks:
-  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 1020
-  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 27
-  PRIMARY "uart_rx_inst/UartClk[2]" from Q0 on comp "uart_rx_inst/SLICE_2345" on site "R59C68A", CLK/CE/SR load = 28
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_797" from Q0 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 44
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1097" from Q0 on comp "CIC_cos_inst/SLICE_1509" on site "R50C55D", CLK/CE/SR load = 50
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1247" from Q1 on comp "CIC_cos_inst/SLICE_1510" on site "R50C51B", CLK/CE/SR load = 44
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1397" from Q0 on comp "CIC_cos_inst/SLICE_1512" on site "R80C89B", CLK/CE/SR load = 13
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_757" from F0 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 37
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_947" from Q1 on comp "CIC_cos_inst/SLICE_1507" on site "R57C52A", CLK/CE/SR load = 48
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_847" from Q1 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 10
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 650
+  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 32
+  PRIMARY "CIC_cos_inst/count_15__N_1458" from F0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 50
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_756" from Q0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 9
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1056" from Q0 on comp "CIC_cos_inst/SLICE_1513" on site "R71C62C", CLK/CE/SR load = 50
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1206" from Q1 on comp "CIC_cos_inst/SLICE_1514" on site "R66C63B", CLK/CE/SR load = 5
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1356" from Q0 on comp "CIC_cos_inst/SLICE_1516" on site "R88C96B", CLK/CE/SR load = 1
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_906" from Q1 on comp "CIC_cos_inst/SLICE_1511" on site "R65C72A", CLK/CE/SR load = 46
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_806" from Q1 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 10
 
-  PRIMARY  : 10 out of 16 (62%)
+  PRIMARY  : 9 out of 16 (56%)
 
 Quadrant BR Clocks:
-  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 477
-  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 8
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_797" from Q0 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 5
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_757" from F0 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 12
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_947" from Q1 on comp "CIC_cos_inst/SLICE_1507" on site "R57C52A", CLK/CE/SR load = 1
-  PRIMARY "CIC_cos_inst/clk_80mhz_enable_847" from Q1 on comp "CIC_cos_inst/SLICE_1506" on site "R56C45B", CLK/CE/SR load = 31
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL_inst/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 312
+  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC_Sin_inst/SLICE_1483" on site "R59C67A", CLK/CE/SR load = 11
+  PRIMARY "uart_rx_inst/UartClk[2]" from Q0 on comp "uart_rx_inst/SLICE_2393" on site "R59C68A", CLK/CE/SR load = 28
+  PRIMARY "CIC_cos_inst/count_15__N_1458" from F0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 22
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_756" from Q0 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 38
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1206" from Q1 on comp "CIC_cos_inst/SLICE_1514" on site "R66C63B", CLK/CE/SR load = 29
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_1356" from Q0 on comp "CIC_cos_inst/SLICE_1516" on site "R88C96B", CLK/CE/SR load = 22
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_906" from Q1 on comp "CIC_cos_inst/SLICE_1511" on site "R65C72A", CLK/CE/SR load = 3
+  PRIMARY "CIC_cos_inst/clk_80mhz_enable_806" from Q1 on comp "CIC_cos_inst/SLICE_1510" on site "R37C73D", CLK/CE/SR load = 31
 
-  PRIMARY  : 6 out of 16 (37%)
+  PRIMARY  : 9 out of 16 (56%)
 
 Edge Clocks:
 
@@ -731,8 +738,8 @@ I/O Bank Usage Summary:
 | I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+----------------+------------+------------+------------+
 | 0        | 8 / 27 ( 29%)  | 3.3V       | -          | -          |
-| 1        | 2 / 33 (  6%)  | 2.5V       | -          | -          |
-| 2        | 2 / 34 (  5%)  | 1.2V       | -          | -          |
+| 1        | 0 / 33 (  0%)  | -          | -          | -          |
+| 2        | 4 / 34 ( 11%)  | 2.5V       | -          | -          |
 | 3        | 3 / 33 (  9%)  | 2.5V       | -          | -          |
 | 6        | 2 / 33 (  6%)  | 3.3V       | -          | -          |
 | 7        | 10 / 32 ( 31%) | 3.3V       | -          | -          |
@@ -751,7 +758,7 @@ DSP Slice #:           1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 2
 
 DSP Slice #:          27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
 # of MULT9                                                                                         
-# of MULT18                                                                                        
+# of MULT18                                             1                                          
 # of ALU24                                                                                         
 # of ALU54                                                                                         
 # of PRADD9                                                                                        
@@ -759,30 +766,30 @@ DSP Slice #:          27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 4
 
 DSP Slice #:          53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
 # of MULT9                                                                                         
-# of MULT18                                                   1  1                                 
+# of MULT18                                             1                                          
 # of ALU24                                                                                         
 # of ALU54                                                                                         
 # of PRADD9                                                                                        
 # of PRADD18                                                                                       
 
-DSP Slice 66         Component_Type       Physical_Type                     Instance_Name                   
- MULT18_R58C63         MULT18X18D             MULT18          AMDemodulator_inst/MultResult2_res2_mult_2    
+DSP Slice 38         Component_Type       Physical_Type                     Instance_Name                   
+ MULT18_R34C54         MULT18X18D             MULT18              AMDemodulator_inst/MultResult1_e3         
 
-DSP Slice 67         Component_Type       Physical_Type                     Instance_Name                   
- MULT18_R58C69         MULT18X18D             MULT18              AMDemodulator_inst/MultResult1_e3         
+DSP Slice 64         Component_Type       Physical_Type                     Instance_Name                   
+ MULT18_R58C54         MULT18X18D             MULT18          AMDemodulator_inst/MultResult2_res2_mult_2    
 
 ------------------------------ End of DSP Report -------------------------------
-Total placer CPU time: 55 secs 
+Total placer CPU time: 1 mins 21 secs 
 
 Dumping design to file OneBitSDR_First_Implementation.dir/5_1.ncd.
 
-0 connections routed; 15946 unrouted.
+0 connections routed; 16146 unrouted.
 Starting router resource preassignment
 DSP info: No dsp pins have been swapped.
 
-Completed router resource preassignment. Real time: 1 mins 24 secs 
+Completed router resource preassignment. Real time: 2 mins 1 secs 
 
-Start NBR router at Thu May 30 00:35:46 CEST 2024
+Start NBR router at Sun Aug 25 17:37:37 CEST 2024
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -797,107 +804,116 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at Thu May 30 00:35:47 CEST 2024
+Start NBR special constraint process at Sun Aug 25 17:37:38 CEST 2024
 
-Start NBR section for initial routing at Thu May 30 00:35:48 CEST 2024
+Start NBR section for initial routing at Sun Aug 25 17:37:40 CEST 2024
 Level 1, iteration 1
-9(0.00%) conflicts; 10829(67.91%) untouched conns; 52122 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-52.122ns; real time: 1 mins 28 secs 
+15(0.00%) conflicts; 10911(67.58%) untouched conns; 65166 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.611ns/-65.166ns; real time: 2 mins 41 secs 
 Level 2, iteration 1
-9(0.00%) conflicts; 10781(67.61%) untouched conns; 52122 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-52.122ns; real time: 1 mins 29 secs 
+8(0.00%) conflicts; 10720(66.39%) untouched conns; 83567 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.611ns/-83.568ns; real time: 2 mins 42 secs 
 Level 3, iteration 1
-93(0.00%) conflicts; 8163(51.19%) untouched conns; 53806 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-53.806ns; real time: 1 mins 30 secs 
+90(0.00%) conflicts; 8547(52.94%) untouched conns; 89957 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.611ns/-89.957ns; real time: 2 mins 44 secs 
 Level 4, iteration 1
-937(0.02%) conflicts; 0(0.00%) untouched conn; 54130 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.130ns; real time: 1 mins 33 secs 
+854(0.02%) conflicts; 0(0.00%) untouched conn; 93284 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.285ns; real time: 2 mins 49 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at Thu May 30 00:35:55 CEST 2024
+Start NBR section for normal routing at Sun Aug 25 17:38:25 CEST 2024
 Level 1, iteration 1
-26(0.00%) conflicts; 1121(7.03%) untouched conns; 52446 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-52.446ns; real time: 1 mins 34 secs 
+24(0.00%) conflicts; 1112(6.89%) untouched conns; 75545 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-75.546ns; real time: 2 mins 51 secs 
 Level 4, iteration 1
-613(0.02%) conflicts; 0(0.00%) untouched conn; 52446 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-52.446ns; real time: 1 mins 36 secs 
+542(0.01%) conflicts; 0(0.00%) untouched conn; 80872 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-80.873ns; real time: 2 mins 54 secs 
 Level 4, iteration 2
-369(0.01%) conflicts; 0(0.00%) untouched conn; 54130 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.130ns; real time: 1 mins 37 secs 
+303(0.01%) conflicts; 0(0.00%) untouched conn; 81082 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-81.083ns; real time: 2 mins 56 secs 
 Level 4, iteration 3
-197(0.00%) conflicts; 0(0.00%) untouched conn; 54130 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.130ns; real time: 1 mins 38 secs 
+169(0.00%) conflicts; 0(0.00%) untouched conn; 87230 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-87.231ns; real time: 2 mins 58 secs 
 Level 4, iteration 4
-92(0.00%) conflicts; 0(0.00%) untouched conn; 54130 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.130ns; real time: 1 mins 39 secs 
+90(0.00%) conflicts; 0(0.00%) untouched conn; 87230 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-87.231ns; real time: 2 mins 58 secs 
 Level 4, iteration 5
-38(0.00%) conflicts; 0(0.00%) untouched conn; 54292 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.293ns; real time: 1 mins 39 secs 
+46(0.00%) conflicts; 0(0.00%) untouched conn; 93455 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.456ns; real time: 3 mins 
 Level 4, iteration 6
-20(0.00%) conflicts; 0(0.00%) untouched conn; 54292 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-54.293ns; real time: 1 mins 40 secs 
+23(0.00%) conflicts; 0(0.00%) untouched conn; 93455 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.456ns; real time: 3 mins 
 Level 4, iteration 7
-11(0.00%) conflicts; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 40 secs 
+17(0.00%) conflicts; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 1 secs 
 Level 4, iteration 8
-6(0.00%) conflicts; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 40 secs 
+15(0.00%) conflicts; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 1 secs 
 Level 4, iteration 9
-3(0.00%) conflicts; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 41 secs 
+5(0.00%) conflicts; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 2 secs 
 Level 4, iteration 10
-0(0.00%) conflict; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 41 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 2 secs 
+Level 4, iteration 11
+4(0.00%) conflicts; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 3 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 3 secs 
+Level 4, iteration 13
+0(0.00%) conflict; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 4 secs 
 
-Start NBR section for performance tuning (iteration 1) at Thu May 30 00:36:03 CEST 2024
+Start NBR section for performance tuning (iteration 1) at Sun Aug 25 17:38:39 CEST 2024
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 41 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 93867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-93.868ns; real time: 3 mins 4 secs 
 
-Start NBR section for re-routing at Thu May 30 00:36:03 CEST 2024
+Start NBR section for re-routing at Sun Aug 25 17:38:39 CEST 2024
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 56404 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -3.762ns/-56.404ns; real time: 1 mins 42 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 92841 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.647ns/-92.842ns; real time: 3 mins 6 secs 
 
-Start NBR section for post-routing at Thu May 30 00:36:04 CEST 2024
+Start NBR section for post-routing at Sun Aug 25 17:38:42 CEST 2024
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 23 (0.14%)
-  Estimated worst slack<setup> : -3.762ns
-  Timing score<setup> : 48690
+  Number of connections with timing violations : 59 (0.37%)
+  Estimated worst slack<setup> : -4.647ns
+  Timing score<setup> : 114436
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 1 mins 48 secs 
-Total REAL time: 1 mins 50 secs 
+Total CPU time 3 mins 17 secs 
+Total REAL time: 3 mins 19 secs 
 Completely routed.
-End of route.  15946 routed (100.00%); 0 unrouted.
+End of route.  16146 routed (100.00%); 0 unrouted.
 
-Hold time timing score: 32, hold timing errors: 48
+Hold time timing score: 27, hold timing errors: 48
 
-Timing score: 48690 
+Timing score: 114436 
 
 Dumping design to file OneBitSDR_First_Implementation.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = -3.762
-PAR_SUMMARY::Timing score<setup/<ns>> = 48.690
-PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.867
-PAR_SUMMARY::Timing score<hold /<ns>> = 32.421
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -4.647
+PAR_SUMMARY::Timing score<setup/<ns>> = 114.436
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.720
+PAR_SUMMARY::Timing score<hold /<ns>> = 27.516
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 1 mins 51 secs 
-Total REAL time to completion: 1 mins 52 secs 
+Total CPU  time to completion: 3 mins 22 secs 
+Total REAL time to completion: 3 mins 24 secs 
 
 par done!
 
@@ -934,7 +950,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Thu May 30 00:36:20 2024
+Sun Aug 25 17:39:08 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -944,7 +960,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml OneBitSDR_First_Implementation.ncd OneBitSDR_First_Implementation.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml OneBitSDR_First_Implementation.ncd OneBitSDR_First_Implementation.prf 
 Design file:     OneBitSDR_First_Implementation.ncd
 Preference file: OneBitSDR_First_Implementation.prf
 Device,speed:    LFE5U-85F,6
@@ -960,14 +976,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 22  Score: 48690
-Cumulative negative slack: 48690
+Timing errors: 161  Score: 114436
+Cumulative negative slack: 114436
 
-Constraints cover 2411341617 paths, 4 nets, and 15923 connections (99.86% coverage)
+Constraints cover 2411179410 paths, 4 nets, and 16123 connections (99.86% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Thu May 30 00:36:21 2024
+Sun Aug 25 17:39:10 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -977,7 +993,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/1bitSDRLattice/promote.xml OneBitSDR_First_Implementation.ncd OneBitSDR_First_Implementation.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_First_Implementation.twr -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/promote.xml OneBitSDR_First_Implementation.ncd OneBitSDR_First_Implementation.prf 
 Design file:     OneBitSDR_First_Implementation.ncd
 Preference file: OneBitSDR_First_Implementation.prf
 Device,speed:    LFE5U-85F,m
@@ -993,31 +1009,31 @@ BLOCK RESETPATHS
 Timing summary (Hold):
 ---------------
 
-Timing errors: 48  Score: 32421
-Cumulative negative slack: 32421
+Timing errors: 48  Score: 27516
+Cumulative negative slack: 27516
 
-Constraints cover 2411341617 paths, 4 nets, and 15923 connections (99.86% coverage)
+Constraints cover 2411179410 paths, 4 nets, and 16123 connections (99.86% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 22 (setup), 48 (hold)
-Score: 48690 (setup), 32421 (hold)
-Cumulative negative slack: 81111 (48690+32421)
+Timing errors: 161 (setup), 48 (hold)
+Score: 114436 (setup), 27516 (hold)
+Cumulative negative slack: 141952 (114436+27516)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 6 secs 
-Total REAL Time: 7 secs 
+Total CPU Time: 9 secs 
+Total REAL Time: 9 secs 
 Peak Memory Usage: 518 MB
 
 
 tmcheck -par "OneBitSDR_First_Implementation.par" 
 
-bitgen -w "OneBitSDR_First_Implementation.ncd" -f "OneBitSDR_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/1bitSDRLattice/OneBitSDR.sec" -k "/home/user/SDR-HLS/1bitSDRLattice/OneBitSDR.bek" "OneBitSDR_First_Implementation.prf"
+bitgen -w "OneBitSDR_First_Implementation.ncd" -f "OneBitSDR_First_Implementation.t2b" -e -s "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/OneBitSDR.sec" -k "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version1/OneBitSDR.bek" "OneBitSDR_First_Implementation.prf"
 
 
 BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
@@ -1096,6 +1112,6 @@ Creating bit map...
 Bitstream Status: Final           Version 10.27.
  
 Saving bit stream in "OneBitSDR_First_Implementation.bit".
-Total CPU Time: 22 secs 
-Total REAL Time: 23 secs 
+Total CPU Time: 29 secs 
+Total REAL Time: 30 secs 
 Peak Memory Usage: 818 MB

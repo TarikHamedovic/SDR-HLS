@@ -19,7 +19,7 @@ import random
 
 top_name = "uart_rx"
 
-class uart_rx(Elaboratable):
+class UartRX(Elaboratable):
     def __init__(self, CLKS_PER_BIT=217):
         # Parameters
         self.CLKS_PER_BIT = CLKS_PER_BIT
@@ -314,7 +314,7 @@ if __name__ == "__main__":
 
                     
 
-            dut = uart_rx(clks_per_bit)
+            dut = UartRX(clks_per_bit)
 
             # Create a simulator
             sim = Simulator(dut)
@@ -334,11 +334,11 @@ if __name__ == "__main__":
             platform_class = getattr(platform_module, platform_class_name)
 
             plat = platform_class()
-            plat.build(uart_rx(clks_per_bit), do_program=do_program)
+            plat.build(UartRX(clks_per_bit), do_program=do_program)
 
         elif args.verilog:
             # Generate Verilog code
-            top = uart_rx(clks_per_bit)
+            top = UartRX(clks_per_bit)
             ports = [top.i_Rx_Serial, top.o_Rx_Byte, top.o_Rx_DV]
 
             with open(f"{top_name}.v", "w") as f:

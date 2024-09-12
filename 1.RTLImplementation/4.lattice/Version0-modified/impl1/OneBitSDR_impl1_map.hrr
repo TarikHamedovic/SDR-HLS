@@ -1,0 +1,115 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    3031.00        100.0
+                                  LUT4	    1081.00        100.0
+                                 IOBUF	         21        100.0
+                                PFUREG	       2637        100.0
+                                RIPPLE	       1694        100.0
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              uart_rx(CLKS_PER_BIT=87)	          1         1.7
+                 quarterwave_generator	          1         0.9
+                                   PWM	          1         0.5
+                                   PLL	          1         0.0
+                                 Mixer	          1         0.4
+CIC(REGISTER_WIDTH=72,DECIMATION_RATIO=4096)	          1        20.9
+CIC(REGISTER_WIDTH=72,DECIMATION_RATIO=4096)_U2	          1        22.7
+                         AMDemodulator	          1         3.2
+---------------------------------------------------
+Report for cell quarterwave_generator
+   Instance path: top/nco_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      26.00         0.9
+                                  LUT4	      37.00         3.4
+                                PFUREG	         28         1.1
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  quarterwave_table_U0	          1         0.0
+                     quarterwave_table	          1         0.0
+---------------------------------------------------
+Report for cell quarterwave_table
+   Instance path: top/nco_inst/sinewave_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1        50.0
+---------------------------------------------------
+Report for cell quarterwave_table_U0
+   Instance path: top/nco_inst/cosinewave_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1        50.0
+---------------------------------------------------
+Report for cell Mixer
+   Instance path: top/mixer_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      13.00         0.4
+                                  LUT4	      24.00         2.2
+                                PFUREG	         26         1.0
+---------------------------------------------------
+Report for cell uart_rx(CLKS_PER_BIT=87)
+   Instance path: top/uart_rx_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      52.00         1.7
+                                  LUT4	      47.00         4.3
+                                PFUREG	         46         1.7
+                                RIPPLE	         11         0.6
+---------------------------------------------------
+Report for cell PLL
+   Instance path: top/pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell AMDemodulator
+   Instance path: top/AMDemodulator_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      97.17         3.2
+                                  LUT4	     166.00        15.4
+                                PFUREG	         44         1.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         Multiplier_U1	          1         0.0
+                            Multiplier	          1         0.0
+---------------------------------------------------
+Report for cell Multiplier
+   Instance path: top/AMDemodulator_inst/Multiplier2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell Multiplier_U1
+   Instance path: top/AMDemodulator_inst/Multiplier1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell CIC(REGISTER_WIDTH=72,DECIMATION_RATIO=4096)
+   Instance path: top/cic_sine_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     634.17        20.9
+                                  LUT4	     228.00        21.1
+                                PFUREG	       1123        42.6
+---------------------------------------------------
+Report for cell PWM
+   Instance path: top/pwm_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.00         0.5
+                                  LUT4	       6.00         0.6
+                                PFUREG	         20         0.8
+                                RIPPLE	          6         0.4
+---------------------------------------------------
+Report for cell CIC(REGISTER_WIDTH=72,DECIMATION_RATIO=4096)_U2
+   Instance path: top/cic_cosine_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     687.17        22.7
+                                  LUT4	     187.00        17.3
+                                PFUREG	       1121        42.5

@@ -35,7 +35,7 @@ module AMDemodulator #(
   //       has 1 extra unused bit
   localparam int N = 2 * DATA_WIDTH + 2; // NOTE:`int` may cause problems with Lattice Diamond
 
-  logic        [2*DATA_WIDTH+1:0]   square_sum;
+  logic        [2*DATA_WIDTH  :0]   square_sum;
   logic signed [2*DATA_WIDTH-1:0]   mult_result_i;
   logic signed [2*DATA_WIDTH-1:0]   mult_result_q;
 
@@ -87,7 +87,6 @@ module AMDemodulator #(
       mult_result_i <= '0;
       mult_result_q <= '0;
       square_sum    <= '0;
-      amdemod_out   <= '0;
     end else begin
       // Load multiplication results
       mult_result_i <= inphase    * inphase;
@@ -100,7 +99,7 @@ module AMDemodulator #(
 
   always_comb begin
     // Compute the square root of the sum of squares
-    amdemod_out = DATA_WIDTH'(sqrt(square_sum));
+      amdemod_out = DATA_WIDTH'(sqrt({1'b0, square_sum}));
   end
 
   //=============================//

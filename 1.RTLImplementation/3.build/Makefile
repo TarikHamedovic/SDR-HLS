@@ -39,6 +39,7 @@ OPENOCD_INTERFACE=$(SCRIPTS)/ft231x.ocd
 # Design Files
 #========================================================================================
 CONSTRAINTS = $(HW_SRC)/constraints/OneBitSDR.lpf
+SDC_FILE = $(HW_SRC)/constraints/OneBitSDR.sdc
 TOP_MODULE = top
 
 # Choose between systemverilog or verilog
@@ -46,10 +47,10 @@ DESIGN_LANG ?= systemverilog# Options: verilog, systemverilog
 
 ifeq ($(DESIGN_LANG), systemverilog)
     TOP_MODULE_FILE = $(HW_SRC)/verilog/top.sv
-    VERILOG_FILES := $(shell cat $(HW_SRC)/rtl_systemverilog.filelist)
+    VERILOG_FILES := $(shell cat $(HW_SRC)/filelists/rtl_systemverilog.filelist)
 else ifeq ($(DESIGN_LANG), verilog)
     TOP_MODULE_FILE = $(HW_SRC)/verilog/top.v
-    VERILOG_FILES := $(shell cat $(HW_SRC)/rtl_verilog.filelist)
+    VERILOG_FILES := $(shell cat $(HW_SRC)/filelists/rtl_verilog.filelist)
 else
     $(error Unknown design language "$(DESIGN_LANG)". Valid options are "verilog" or "systemverilog".)
 endif
@@ -58,14 +59,14 @@ endif
 # Synthesis Options
 #========================================================================================
 # Reference for yosys options: https://yosyshq.readthedocs.io/projects/yosys/en/latest/cmd/synth_ecp5.html
-YOSYS_OPTIONS = 
+YOSYS_OPTIONS = -sdc $(SDC_FILE)
 
 #========================================================================================
 # Placement and Route Options
 #========================================================================================
 # Call nextpnr-ecp5 in terminal for help
-NEXTPNR_OPTIONS = --timing-allow-fail
-
+NEXTPNR_OPTIONS = --read-sdc $(SDC_FILE)
+#--timing-allow-fail
 #========================================================================================
 # Scripts
 #========================================================================================

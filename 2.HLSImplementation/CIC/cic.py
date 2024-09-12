@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 -----------------------------------------------------------------------------
 HLS Implementation for CIC module
@@ -14,34 +16,33 @@ import importlib
 import os
 import shutil
 
-import random
-
 top_name = "CIC"
 
 class CIC(Elaboratable):
 
-    def __init__(self, INPUT_WIDTH = 12, REGISTER_WIDTH = 32, DECIMATION_RATIO = 16):
-        # Define the module's ports
+    def __init__(self, DATA_WIDTH = 12, REGISTER_WIDTH = 32, DECIMATION_RATIO = 16, GAIN_WIDTH = 8):
+        # Define the module's ports #
 
         # Parameters #
-        self.REGISTER_WIDTH = REGISTER_WIDTH
+        self.DATA_WIDTH       = DATA_WIDTH
+        self.REGISTER_WIDTH   = REGISTER_WIDTH
         self.DECIMATION_RATIO = DECIMATION_RATIO
-        self.INPUT_WIDTH = INPUT_WIDTH
+        self.GAIN_WIDTH       = GAIN_WIDTH
 
         # Inputs #
-        self.gain = Signal(8) # TODO: Add GAIN_WIDTH
-        self.data_in = Signal(signed(INPUT_WIDTH))
+        self.data_in          = Signal(signed(DATA_WIDTH))
+        self.gain             = Signal(GAIN_WIDTH)
 
         # Outputs #
-        self.data_out = Signal(signed(INPUT_WIDTH))
-        self.data_clk = Signal()
+        self.data_out         = Signal(signed(DATA_WIDTH))
+        self.data_clk         = Signal()
 
     def elaborate(self, platform):
         m = Module()
 
-        INPUT_WIDTH = self.INPUT_WIDTH
-        REGISTER_WIDTH = self.REGISTER_WIDTH
-        DECIMATION_RATIO = self.DECIMATION_RATIO
+        DATA_WIDTH        = self.DATA_WIDTH
+        REGISTER_WIDTH    = self.REGISTER_WIDTH
+        DECIMATION_RATIO  = self.DECIMATION_RATIO
 
         integrator_tmp    = Signal(signed(REGISTER_WIDTH))
         integrator_d_tmp  = Signal(signed(REGISTER_WIDTH))
@@ -54,32 +55,34 @@ class CIC(Elaboratable):
         integrator5       = Signal(signed(REGISTER_WIDTH))
 
         # Comb stage registers #
-        comb6       = Signal(signed(REGISTER_WIDTH))
-        comb_d6     = Signal(signed(REGISTER_WIDTH))
-        comb7       = Signal(signed(REGISTER_WIDTH))
-        comb_d7     = Signal(signed(REGISTER_WIDTH))
-        comb8       = Signal(signed(REGISTER_WIDTH))
-        comb_d8     = Signal(signed(REGISTER_WIDTH))
-        comb9       = Signal(signed(REGISTER_WIDTH))
-        comb_d9     = Signal(signed(REGISTER_WIDTH))
-        comb10      = Signal(signed(REGISTER_WIDTH))
+        comb6             = Signal(signed(REGISTER_WIDTH))
+        comb_d6           = Signal(signed(REGISTER_WIDTH))
+        comb7             = Signal(signed(REGISTER_WIDTH))
+        comb_d7           = Signal(signed(REGISTER_WIDTH))
+        comb8             = Signal(signed(REGISTER_WIDTH))
+        comb_d8           = Signal(signed(REGISTER_WIDTH))
+        comb9             = Signal(signed(REGISTER_WIDTH))
+        comb_d9           = Signal(signed(REGISTER_WIDTH))
+        comb10            = Signal(signed(REGISTER_WIDTH))
 
-        scaled_output = Signal(signed(REGISTER_WIDTH))
-        count    = Signal(range(DECIMATION_RATIO))
+        count             = Signal(range(DECIMATION_RATIO))
 
-        valid_comb    = Signal()
-        decimation_clk = Signal()
+        valid_comb        = Signal()
+        decimation_clk    = Signal()
 
-        # Integrator section #
+        #=============================================#
+        #            Integrator section               #
+        #=============================================#
         m.d.sync += [
             integrator1.eq(self.data_in + integrator1),
-            integrator2.eq(integrator1 + integrator2),
-            integrator3.eq(integrator2 + integrator3),
-            integrator4.eq(integrator3 + integrator4),
-            integrator5.eq(integrator4 + integrator5)
+            integrator2.eq(integrator1  + integrator2),
+            integrator3.eq(integrator2  + integrator3),
+            integrator4.eq(integrator3  + integrator4),
+            integrator5.eq(integrator4  + integrator5)
         ]
-
-        # Decimation #
+        #============================================#
+        #                Decimation                  #
+        #============================================#
         with m.If(count == DECIMATION_RATIO -1):
             m.d.sync += [
                 count.eq(0),
@@ -103,7 +106,9 @@ class CIC(Elaboratable):
         m.d.sync += self.data_clk.eq(decimation_clk)
 
         with m.If(valid_comb):
-            # Comb Section #
+        #============================================#
+        #               Comb Section                 #
+        #============================================#
             m.d.sync += [
                 integrator_d_tmp.eq(integrator_tmp),
 
@@ -121,11 +126,13 @@ class CIC(Elaboratable):
 
                 comb10.eq(comb9 - comb_d9),
 
-                scaled_output.eq(comb10),
-
-                self.data_out.eq(comb10 >> (REGISTER_WIDTH - INPUT_WIDTH - self.gain).as_unsigned())
+                self.data_out.eq(comb10 >> (REGISTER_WIDTH - DATA_WIDTH - self.gain).as_unsigned())
             ]
         return m
+    
+#===============================================================================#
+#                Simulation and commands via argumentparsers                    #
+#===============================================================================#
 
 def clean():
     files_to_remove = [f"{top_name}.vcd", f"{top_name}.gtkw", f"{top_name}.v"]
@@ -148,18 +155,19 @@ def clean():
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("-iw", "--input-width", type=int, default=12, help="Number of input bits")
-    parser.add_argument("-rw", "--register-width", type=int, default=32, help="Width of register")
-    parser.add_argument("-dr", "--decimation-ratio", type=int, default=16, help="Decimation Ratio")
-    parser.add_argument("-s",  "--simulate", action="store_true", help="Simulate Blinky Example")
-    parser.add_argument("-gw", "--gtkwave", action="store_true", help="Open GTKWave after simulation")
-    parser.add_argument("-cf", "--clock-frequency", type=float, default=80.0, help="Clock frequency in MHz for simulation")
-    parser.add_argument("-b",  "--build", action="store_true", help="Build The Blinky Example")
-    parser.add_argument("-dp", "--do-program", action="store_true", help="Program the device after building")
-    parser.add_argument("-v",  "--verilog", action="store_true", help="Generate Verilog for Blinky Example")
-    parser.add_argument("-p",  "--platform", type=str, required=False, help="Platform module (e.g., amaranth_boards.ulx3s.ULX3S_85F_Platform)")
-    parser.add_argument("-rt", "--runtime", type=int, default=100, help="Testbench runtime in clock cycles")
-    parser.add_argument("-c",  "--clean", action="store_true", help="Clean generated files and build directory")
+    parser.add_argument("-dw", "--data-width",                      type=int, default=12,      help="Number of input bits")
+    parser.add_argument("-rw", "--register-width",                  type=int, default=32,      help="Width of register")
+    parser.add_argument("-dr", "--decimation-ratio",                type=int, default=16,      help="Decimation Ratio")
+    parser.add_argument("-gaw","--gain-width",                      type=int, default=8,       help="Number of bits for input gain")
+    parser.add_argument("-s",  "--simulate",   action="store_true",                            help="Simulate CIC Filter Implementation")
+    parser.add_argument("-gw", "--gtkwave",    action="store_true",                            help="Open GTKWave after simulation")
+    parser.add_argument("-cf", "--clock-frequency",                 type=float, default=80.0,  help="Clock frequency in MHz for simulation")
+    parser.add_argument("-b",  "--build",      action="store_true",                            help="Build The CIC Filter")
+    parser.add_argument("-dp", "--do-program", action="store_true",                            help="Program the device after building")
+    parser.add_argument("-v",  "--verilog",    action="store_true",                            help="Generate Verilog for CIC Filter")
+    parser.add_argument("-p",  "--platform",                        type=str,  required=False, help="Platform module (e.g., amaranth_boards.ulx3s.ULX3S_85F_Platform)")
+    parser.add_argument("-rt", "--runtime",                         type=int,  default=100,    help="Testbench runtime in clock cycles")
+    parser.add_argument("-c",  "--clean",      action="store_true",                            help="Clean generated files and build directory")
 
     args = parser.parse_args()
 
@@ -167,15 +175,20 @@ if __name__ == "__main__":
         clean()
 
     else:
-        input_width = args.input_width if args.input_width is not None else 12
-        register_width = args.register_width if args.register_width is not None else 32
+        data_width       = args.data_width       if args.data_width       is not None else 12
+        register_width   = args.register_width   if args.register_width   is not None else 32
         decimation_ratio = args.decimation_ratio if args.decimation_ratio is not None else 16
-        clock_frequency = args.clock_frequency if args.clock_frequency is not None else 1.0
-        runtime = args.runtime if args.runtime is not None else 100
-        do_program = args.do_program
+        gain_width       = args.gain_width       if args.gain_width       is not None else 8
+        clock_frequency  = args.clock_frequency  if args.clock_frequency  is not None else 1.0
+        runtime          = args.runtime          if args.runtime          is not None else 100
+        do_program       = args.do_program
 
-        # NOTE: This simulation is just to see in a simulator, there are no checks for now
-        # TODO: Make a better simulation with checks and random values
+        #==================================================================================#
+        #                               Simulation                                         #  
+        #                                                                                  #
+        # NOTE: This simulation is just to see in a simulator, there are no checks for now #
+        # TODO: Make a better simulation with checks and random values                     #
+        #==================================================================================#
         if args.simulate:
             
             def format_table(title, table_data):
@@ -192,7 +205,7 @@ if __name__ == "__main__":
                 return '\n'.join(table_str)
 
             async def testbench(ctx):
-                # Initialize inputs
+                # Initialize inputs #
                 print(f"[Test Start] Starting CIC Amaranth Simulation with clock frequency of {clock_frequency} MHz")
                 signals_to_initialize = [
                     dut.gain, dut.data_out, dut.data_clk
@@ -209,33 +222,40 @@ if __name__ == "__main__":
 
                     table_data = [
                         ["Variable", "Value"],
-                        ["data_in", ctx.get(dut.data_in)],
+                        ["data_in",  ctx.get(dut.data_in)],
                         ["data_clk", ctx.get(dut.data_clk)],
                         ["data_out", ctx.get(dut.data_out)],
-                        ["gain", ctx.get(dut.gain)]
+                        ["gain",     ctx.get(dut.gain)]
                     ]
                     table_title = f"Checking Table Iteration {iteration + 1}"
                     print("\n" + format_table(table_title, table_data))
                     print("==================================")
 
                 summary_table = [
-                    ["Metric", "Value"],
-                    ["Register Width", register_width],
-                    ["Clock frequency (MHz)", clock_frequency],
-                    ["Runtime of simulation (ns)", runtime]
+                    ["Metric",                     "Value"         ],
+                    ["Data Width",                 data_width      ],
+                    ["Register Width",             register_width  ],
+                    ["Decimation Ratio",           decimation_ratio],
+                    ["Gain Width",                 gain_width      ],
+                    ["Clock frequency (MHz)",      clock_frequency ],
+                    ["Runtime of simulation (ns)", runtime         ]
                 ]
                 print("\n" + format_table("Summary", summary_table))
                     
-            # Instantiate the CIC module
-            dut = CIC(input_width, register_width, decimation_ratio)
+            dut = CIC(data_width, register_width, decimation_ratio, gain_width) # Instantiate the CIC module 
 
-            # Create a simulator
-            sim = Simulator(dut)
+            sim = Simulator(dut) # Create a simulator
             sim.add_clock(1e-6 / clock_frequency)
             sim.add_testbench(testbench)
             with sim.write_vcd(f"{top_name}.vcd", f"{top_name}.gtkw", traces=[]):
                 sim.run()
+            # Open GTKWave with the generated VCD file if --gtkwave is set #
+            if args.gtkwave:
+                subprocess.run(["gtwkave", f"{top_name}.vcd"])
 
+        #============================#
+        #           Build            #  
+        #============================#
         elif args.build:
             if args.platform is None:
                 raise ValueError("Platform must be specified for building")
@@ -244,14 +264,17 @@ if __name__ == "__main__":
             platform_class = getattr(platform_module, platform_class)
 
             plat = platform_class()
-            plat.build(CIC(register_width, decimation_ratio), do_program=do_program)
+            plat.build(CIC(data_width, register_width, decimation_ratio, gain_width), do_program=do_program)
 
+        #============================#
+        #     Generate Verilog       #  
+        #============================#
         elif args.verilog:
-            cic = CIC(input_width, register_width, decimation_ratio)
+            cic = CIC(data_width, register_width, decimation_ratio, gain_width)
             ports = [cic.gain, cic.data_in, cic.data_out, cic.data_clk]
 
             with open(f"{top_name}.v", "w") as f:
-                f.write(verilog.convert(cic, ports=ports))
+                f.write(verilog.convert(cic, name = "CIC", ports=ports))
 
 """
 -----------------------------------------------------------------------------

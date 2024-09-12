@@ -5,12 +5,13 @@
 
 
 `timescale 1 ns / 1 ps
-module PLL (CLKI, CLKOP)/* synthesis NGD_DRC_MASK=1 */;
+module PLL (CLKI, CLKOP, LOCK)/* synthesis NGD_DRC_MASK=1 */;
     input wire CLKI;
     output wire CLKOP;
+    output wire LOCK;
 
     wire REFCLK;
-    wire LOCK;
+    //wire LOCK;
     wire CLKOP_t;
     wire scuba_vhi;
     wire scuba_vlo;

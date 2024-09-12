@@ -1,0 +1,535 @@
+
+Loading design for application trce from file OneBitSDR_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Tue Sep 10 11:08:57 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o OneBitSDR_impl1.tw1 -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/promote.xml OneBitSDR_impl1_map.ncd OneBitSDR_impl1.prf 
+Design file:     OneBitSDR_impl1_map.ncd
+Preference file: OneBitSDR_impl1.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 3.892ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         PDPW16KD   Port           nco_inst/cosinewave_inst/address_5__I_0(ASIC)  (from clk_80mhz +)
+   Destination:    FF         Data in        nco_inst/cosinewave_i12  (to clk_80mhz +)
+
+   Delay:               8.374ns  (86.2% logic, 13.8% route), 9 logic levels.
+
+ Constraint Details:
+
+      8.374ns physical path delay nco_inst/cosinewave_inst/address_5__I_0 to nco_inst/SLICE_2445 meets
+     12.000ns delay constraint less
+     -0.266ns DIN_SET requirement (totaling 12.266ns) by 3.892ns
+
+ Physical Path Details:
+
+      Data path nco_inst/cosinewave_inst/address_5__I_0 to nco_inst/SLICE_2445:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+C2Q_DEL     ---     5.740 *s_5__I_0.CLKR to *ss_5__I_0.DO0 nco_inst/cosinewave_inst/address_5__I_0 (from clk_80mhz)
+ROUTE         2   e 0.573 *ss_5__I_0.DO0 to  SLICE_1049.A1 cosine_table_value_0
+C1TOFCO_DE  ---     0.447  SLICE_1049.A1 to SLICE_1049.FCO SLICE_1049
+ROUTE         1   e 0.001 SLICE_1049.FCO to SLICE_1048.FCI n17498
+FCITOFCO_D  ---     0.071 SLICE_1048.FCI to SLICE_1048.FCO SLICE_1048
+ROUTE         1   e 0.001 SLICE_1048.FCO to SLICE_1047.FCI n17499
+FCITOFCO_D  ---     0.071 SLICE_1047.FCI to SLICE_1047.FCO SLICE_1047
+ROUTE         1   e 0.001 SLICE_1047.FCO to SLICE_1046.FCI n17500
+FCITOFCO_D  ---     0.071 SLICE_1046.FCI to SLICE_1046.FCO SLICE_1046
+ROUTE         1   e 0.001 SLICE_1046.FCO to SLICE_1045.FCI n17501
+FCITOFCO_D  ---     0.071 SLICE_1045.FCI to SLICE_1045.FCO SLICE_1045
+ROUTE         1   e 0.001 SLICE_1045.FCO to SLICE_1044.FCI n17502
+FCITOFCO_D  ---     0.071 SLICE_1044.FCI to SLICE_1044.FCO SLICE_1044
+ROUTE         1   e 0.001 SLICE_1044.FCO to SLICE_1010.FCI n17503
+FCITOF0_DE  ---     0.443 SLICE_1010.FCI to  SLICE_1010.F0 SLICE_1010
+ROUTE         1   e 0.573  SLICE_1010.F0 to *SLICE_2445.B1 n28_adj_6338
+CTOF_DEL    ---     0.236 *SLICE_2445.B1 to *SLICE_2445.F1 nco_inst/SLICE_2445
+ROUTE         1   e 0.001 *SLICE_2445.F1 to *LICE_2445.DI1 nco_inst/cosinewave_11_N_745_11 (to clk_80mhz)
+                  --------
+                    8.374   (86.2% logic, 13.8% route), 9 logic levels.
+
+Report:  123.335MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25mhz_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 5.730ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              square_sum_e3__i25  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_d__0_i1  (to cic_sine_clk +)
+
+   Delay:              34.530ns  (53.4% logic, 46.6% route), 91 logic levels.
+
+ Constraint Details:
+
+     34.530ns physical path delay SLICE_1050 to AMDemodulator_inst/SLICE_1694 meets
+     40.000ns delay constraint less
+     -0.260ns DIN_SET requirement (totaling 40.260ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_1050 to AMDemodulator_inst/SLICE_1694:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525 SLICE_1050.CLK to  SLICE_1050.Q0 SLICE_1050 (from cic_sine_clk)
+ROUTE       107   e 0.573  SLICE_1050.Q0 to *SLICE_2888.B0 square_sum_25
+CTOF_DEL    ---     0.236 *SLICE_2888.B0 to *SLICE_2888.F0 AMDemodulator_inst/SLICE_2888
+ROUTE        42   e 0.573 *SLICE_2888.F0 to   SLICE_106.B1 n19824
+C1TOFCO_DE  ---     0.447   SLICE_106.B1 to  SLICE_106.FCO SLICE_106
+ROUTE         1   e 0.001  SLICE_106.FCO to  SLICE_105.FCI n17780
+FCITOFCO_D  ---     0.071  SLICE_105.FCI to  SLICE_105.FCO SLICE_105
+ROUTE         1   e 0.001  SLICE_105.FCO to  SLICE_104.FCI n17781
+FCITOFCO_D  ---     0.071  SLICE_104.FCI to  SLICE_104.FCO SLICE_104
+ROUTE         1   e 0.001  SLICE_104.FCO to  SLICE_103.FCI n17782
+FCITOF1_DE  ---     0.474  SLICE_103.FCI to   SLICE_103.F1 SLICE_103
+ROUTE         1   e 0.573   SLICE_103.F1 to *SLICE_2753.C0 amdemod_out_d_11_N_2365_14
+CTOF_DEL    ---     0.236 *SLICE_2753.C0 to *SLICE_2753.F0 AMDemodulator_inst/SLICE_2753
+ROUTE        16   e 0.573 *SLICE_2753.F0 to *SLICE_2747.A1 n13890
+CTOF_DEL    ---     0.236 *SLICE_2747.A1 to *SLICE_2747.F1 AMDemodulator_inst/SLICE_2747
+ROUTE        70   e 0.573 *SLICE_2747.F1 to  SLICE_1225.A0 amdemod_out_d_11__N_2363
+C0TOFCO_DE  ---     0.447  SLICE_1225.A0 to SLICE_1225.FCO SLICE_1225
+ROUTE         1   e 0.001 SLICE_1225.FCO to SLICE_1224.FCI n17052
+FCITOFCO_D  ---     0.071 SLICE_1224.FCI to SLICE_1224.FCO SLICE_1224
+ROUTE         1   e 0.001 SLICE_1224.FCO to SLICE_1223.FCI n17053
+FCITOFCO_D  ---     0.071 SLICE_1223.FCI to SLICE_1223.FCO SLICE_1223
+ROUTE         1   e 0.001 SLICE_1223.FCO to SLICE_1222.FCI n17054
+FCITOFCO_D  ---     0.071 SLICE_1222.FCI to SLICE_1222.FCO SLICE_1222
+ROUTE         1   e 0.001 SLICE_1222.FCO to SLICE_1221.FCI n17055
+FCITOFCO_D  ---     0.071 SLICE_1221.FCI to SLICE_1221.FCO SLICE_1221
+ROUTE         1   e 0.001 SLICE_1221.FCO to SLICE_1220.FCI n17056
+FCITOF0_DE  ---     0.443 SLICE_1220.FCI to  SLICE_1220.F0 SLICE_1220
+ROUTE        25   e 0.573  SLICE_1220.F0 to *SLICE_1699.A1 amdemod_out_d_11_N_2369_11
+CTOF_DEL    ---     0.236 *SLICE_1699.A1 to *SLICE_1699.F1 AMDemodulator_inst/SLICE_1699
+ROUTE        19   e 0.573 *SLICE_1699.F1 to   SLICE_101.A1 n19816
+C1TOFCO_DE  ---     0.447   SLICE_101.A1 to  SLICE_101.FCO SLICE_101
+ROUTE         1   e 0.001  SLICE_101.FCO to  SLICE_100.FCI n17785
+FCITOFCO_D  ---     0.071  SLICE_100.FCI to  SLICE_100.FCO SLICE_100
+ROUTE         1   e 0.001  SLICE_100.FCO to   SLICE_99.FCI n17786
+FCITOFCO_D  ---     0.071   SLICE_99.FCI to   SLICE_99.FCO SLICE_99
+ROUTE         1   e 0.001   SLICE_99.FCO to   SLICE_98.FCI n17787
+FCITOFCO_D  ---     0.071   SLICE_98.FCI to   SLICE_98.FCO SLICE_98
+ROUTE         1   e 0.001   SLICE_98.FCO to   SLICE_97.FCI n17788
+FCITOFCO_D  ---     0.071   SLICE_97.FCI to   SLICE_97.FCO SLICE_97
+ROUTE         1   e 0.001   SLICE_97.FCO to   SLICE_96.FCI n17789
+FCITOFCO_D  ---     0.071   SLICE_96.FCI to   SLICE_96.FCO SLICE_96
+ROUTE         1   e 0.001   SLICE_96.FCO to   SLICE_95.FCI n17790
+FCITOF1_DE  ---     0.474   SLICE_95.FCI to    SLICE_95.F1 SLICE_95
+ROUTE         1   e 0.573    SLICE_95.F1 to *SLICE_2792.A1 n34_adj_6185
+CTOF_DEL    ---     0.236 *SLICE_2792.A1 to *SLICE_2792.F1 AMDemodulator_inst/SLICE_2792
+ROUTE         2   e 0.573 *SLICE_2792.F1 to *SLICE_2746.B0 AMDemodulator_inst/n18900
+CTOF_DEL    ---     0.236 *SLICE_2746.B0 to *SLICE_2746.F0 AMDemodulator_inst/SLICE_2746
+ROUTE        72   e 0.573 *SLICE_2746.F0 to   SLICE_661.A1 n19815
+C1TOFCO_DE  ---     0.447   SLICE_661.A1 to  SLICE_661.FCO SLICE_661
+ROUTE         1   e 0.001  SLICE_661.FCO to  SLICE_660.FCI n16583
+FCITOFCO_D  ---     0.071  SLICE_660.FCI to  SLICE_660.FCO SLICE_660
+ROUTE         1   e 0.001  SLICE_660.FCO to  SLICE_659.FCI n16584
+FCITOFCO_D  ---     0.071  SLICE_659.FCI to  SLICE_659.FCO SLICE_659
+ROUTE         1   e 0.001  SLICE_659.FCO to  SLICE_658.FCI n16585
+FCITOFCO_D  ---     0.071  SLICE_658.FCI to  SLICE_658.FCO SLICE_658
+ROUTE         1   e 0.001  SLICE_658.FCO to  SLICE_657.FCI n16586
+FCITOFCO_D  ---     0.071  SLICE_657.FCI to  SLICE_657.FCO SLICE_657
+ROUTE         1   e 0.001  SLICE_657.FCO to  SLICE_656.FCI n16587
+FCITOFCO_D  ---     0.071  SLICE_656.FCI to  SLICE_656.FCO SLICE_656
+ROUTE         1   e 0.001  SLICE_656.FCO to  SLICE_655.FCI n16588
+FCITOF1_DE  ---     0.474  SLICE_655.FCI to   SLICE_655.F1 SLICE_655
+ROUTE        18   e 0.573   SLICE_655.F1 to *SLICE_2746.A1 amdemod_out_d_11_N_2379_14
+CTOF_DEL    ---     0.236 *SLICE_2746.A1 to *SLICE_2746.F1 AMDemodulator_inst/SLICE_2746
+ROUTE        16   e 0.573 *SLICE_2746.F1 to  SLICE_1627.A1 n19814
+C1TOFCO_DE  ---     0.447  SLICE_1627.A1 to SLICE_1627.FCO SLICE_1627
+ROUTE         1   e 0.001 SLICE_1627.FCO to SLICE_1628.FCI n17855
+FCITOFCO_D  ---     0.071 SLICE_1628.FCI to SLICE_1628.FCO SLICE_1628
+ROUTE         1   e 0.001 SLICE_1628.FCO to SLICE_1629.FCI n17856
+FCITOFCO_D  ---     0.071 SLICE_1629.FCI to SLICE_1629.FCO SLICE_1629
+ROUTE         1   e 0.001 SLICE_1629.FCO to SLICE_1630.FCI n17857
+FCITOFCO_D  ---     0.071 SLICE_1630.FCI to SLICE_1630.FCO SLICE_1630
+ROUTE         1   e 0.001 SLICE_1630.FCO to SLICE_1631.FCI n17858
+FCITOFCO_D  ---     0.071 SLICE_1631.FCI to SLICE_1631.FCO SLICE_1631
+ROUTE         1   e 0.001 SLICE_1631.FCO to SLICE_1632.FCI n17859
+FCITOFCO_D  ---     0.071 SLICE_1632.FCI to SLICE_1632.FCO SLICE_1632
+ROUTE         1   e 0.001 SLICE_1632.FCO to SLICE_1633.FCI n17860
+FCITOF1_DE  ---     0.474 SLICE_1633.FCI to  SLICE_1633.F1 SLICE_1633
+ROUTE         1   e 0.573  SLICE_1633.F1 to *SLICE_2790.A1 n34_adj_6157
+CTOF_DEL    ---     0.236 *SLICE_2790.A1 to *SLICE_2790.F1 AMDemodulator_inst/SLICE_2790
+ROUTE         2   e 0.573 *SLICE_2790.F1 to *SLICE_2748.B1 AMDemodulator_inst/n19017
+CTOF_DEL    ---     0.236 *SLICE_2748.B1 to *SLICE_2748.F1 AMDemodulator_inst/SLICE_2748
+ROUTE        63   e 0.573 *SLICE_2748.F1 to   SLICE_688.A1 n19813
+C1TOFCO_DE  ---     0.447   SLICE_688.A1 to  SLICE_688.FCO SLICE_688
+ROUTE         1   e 0.001  SLICE_688.FCO to  SLICE_687.FCI n16557
+FCITOFCO_D  ---     0.071  SLICE_687.FCI to  SLICE_687.FCO SLICE_687
+ROUTE         1   e 0.001  SLICE_687.FCO to  SLICE_686.FCI n16558
+FCITOFCO_D  ---     0.071  SLICE_686.FCI to  SLICE_686.FCO SLICE_686
+ROUTE         1   e 0.001  SLICE_686.FCO to  SLICE_685.FCI n16559
+FCITOFCO_D  ---     0.071  SLICE_685.FCI to  SLICE_685.FCO SLICE_685
+ROUTE         1   e 0.001  SLICE_685.FCO to  SLICE_684.FCI n16560
+FCITOFCO_D  ---     0.071  SLICE_684.FCI to  SLICE_684.FCO SLICE_684
+ROUTE         1   e 0.001  SLICE_684.FCO to  SLICE_683.FCI n16561
+FCITOFCO_D  ---     0.071  SLICE_683.FCI to  SLICE_683.FCO SLICE_683
+ROUTE         1   e 0.001  SLICE_683.FCO to  SLICE_682.FCI n16562
+FCITOF1_DE  ---     0.474  SLICE_682.FCI to   SLICE_682.F1 SLICE_682
+ROUTE        15   e 0.573   SLICE_682.F1 to *SLICE_2782.A1 amdemod_out_d_11_N_2389_14
+CTOF_DEL    ---     0.236 *SLICE_2782.A1 to *SLICE_2782.F1 AMDemodulator_inst/SLICE_2782
+ROUTE        13   e 0.573 *SLICE_2782.F1 to   SLICE_747.A1 n19812
+C1TOFCO_DE  ---     0.447   SLICE_747.A1 to  SLICE_747.FCO SLICE_747
+ROUTE         1   e 0.001  SLICE_747.FCO to  SLICE_746.FCI n16499
+FCITOFCO_D  ---     0.071  SLICE_746.FCI to  SLICE_746.FCO SLICE_746
+ROUTE         1   e 0.001  SLICE_746.FCO to  SLICE_745.FCI n16500
+FCITOFCO_D  ---     0.071  SLICE_745.FCI to  SLICE_745.FCO SLICE_745
+ROUTE         1   e 0.001  SLICE_745.FCO to  SLICE_744.FCI n16501
+FCITOFCO_D  ---     0.071  SLICE_744.FCI to  SLICE_744.FCO SLICE_744
+ROUTE         1   e 0.001  SLICE_744.FCO to  SLICE_743.FCI n16502
+FCITOFCO_D  ---     0.071  SLICE_743.FCI to  SLICE_743.FCO SLICE_743
+ROUTE         1   e 0.001  SLICE_743.FCO to  SLICE_742.FCI n16503
+FCITOFCO_D  ---     0.071  SLICE_742.FCI to  SLICE_742.FCO SLICE_742
+ROUTE         1   e 0.001  SLICE_742.FCO to  SLICE_741.FCI n16504
+FCITOF1_DE  ---     0.474  SLICE_741.FCI to   SLICE_741.F1 SLICE_741
+ROUTE         1   e 0.573   SLICE_741.F1 to *SLICE_2885.A0 n34_adj_6077
+CTOF_DEL    ---     0.236 *SLICE_2885.A0 to *SLICE_2885.F0 AMDemodulator_inst/SLICE_2885
+ROUTE         2   e 0.573 *SLICE_2885.F0 to *SLICE_2749.B1 AMDemodulator_inst/n18972
+CTOF_DEL    ---     0.236 *SLICE_2749.B1 to *SLICE_2749.F1 AMDemodulator_inst/SLICE_2749
+ROUTE        54   e 0.573 *SLICE_2749.F1 to   SLICE_696.A0 n19811
+C0TOFCO_DE  ---     0.447   SLICE_696.A0 to  SLICE_696.FCO SLICE_696
+ROUTE         1   e 0.001  SLICE_696.FCO to  SLICE_695.FCI n16549
+FCITOFCO_D  ---     0.071  SLICE_695.FCI to  SLICE_695.FCO SLICE_695
+ROUTE         1   e 0.001  SLICE_695.FCO to  SLICE_694.FCI n16550
+FCITOFCO_D  ---     0.071  SLICE_694.FCI to  SLICE_694.FCO SLICE_694
+ROUTE         1   e 0.001  SLICE_694.FCO to  SLICE_693.FCI n16551
+FCITOFCO_D  ---     0.071  SLICE_693.FCI to  SLICE_693.FCO SLICE_693
+ROUTE         1   e 0.001  SLICE_693.FCO to  SLICE_692.FCI n16552
+FCITOFCO_D  ---     0.071  SLICE_692.FCI to  SLICE_692.FCO SLICE_692
+ROUTE         1   e 0.001  SLICE_692.FCO to  SLICE_691.FCI n16553
+FCITOFCO_D  ---     0.071  SLICE_691.FCI to  SLICE_691.FCO SLICE_691
+ROUTE         1   e 0.001  SLICE_691.FCO to  SLICE_690.FCI n16554
+FCITOF1_DE  ---     0.474  SLICE_690.FCI to   SLICE_690.F1 SLICE_690
+ROUTE        12   e 0.573   SLICE_690.F1 to *SLICE_2780.A0 amdemod_out_d_11_N_2399_14
+CTOF_DEL    ---     0.236 *SLICE_2780.A0 to *SLICE_2780.F0 AMDemodulator_inst/SLICE_2780
+ROUTE        10   e 0.573 *SLICE_2780.F0 to   SLICE_723.A1 n19810
+C1TOFCO_DE  ---     0.447   SLICE_723.A1 to  SLICE_723.FCO SLICE_723
+ROUTE         1   e 0.001  SLICE_723.FCO to  SLICE_722.FCI n16523
+FCITOFCO_D  ---     0.071  SLICE_722.FCI to  SLICE_722.FCO SLICE_722
+ROUTE         1   e 0.001  SLICE_722.FCO to  SLICE_721.FCI n16524
+FCITOFCO_D  ---     0.071  SLICE_721.FCI to  SLICE_721.FCO SLICE_721
+ROUTE         1   e 0.001  SLICE_721.FCO to  SLICE_720.FCI n16525
+FCITOFCO_D  ---     0.071  SLICE_720.FCI to  SLICE_720.FCO SLICE_720
+ROUTE         1   e 0.001  SLICE_720.FCO to  SLICE_719.FCI n16526
+FCITOFCO_D  ---     0.071  SLICE_719.FCI to  SLICE_719.FCO SLICE_719
+ROUTE         1   e 0.001  SLICE_719.FCO to  SLICE_718.FCI n16527
+FCITOFCO_D  ---     0.071  SLICE_718.FCI to  SLICE_718.FCO SLICE_718
+ROUTE         1   e 0.001  SLICE_718.FCO to  SLICE_717.FCI n16528
+FCITOF1_DE  ---     0.474  SLICE_717.FCI to   SLICE_717.F1 SLICE_717
+ROUTE         1   e 0.573   SLICE_717.F1 to *SLICE_2785.B1 n34_adj_6036
+CTOF_DEL    ---     0.236 *SLICE_2785.B1 to *SLICE_2785.F1 AMDemodulator_inst/SLICE_2785
+ROUTE         2   e 0.573 *SLICE_2785.F1 to *SLICE_2750.B1 AMDemodulator_inst/n18927
+CTOF_DEL    ---     0.236 *SLICE_2750.B1 to *SLICE_2750.F1 AMDemodulator_inst/SLICE_2750
+ROUTE        16   e 0.573 *SLICE_2750.F1 to    SLICE_93.A0 n19809
+C0TOFCO_DE  ---     0.447    SLICE_93.A0 to   SLICE_93.FCO SLICE_93
+ROUTE         1   e 0.001   SLICE_93.FCO to   SLICE_92.FCI n17793
+FCITOFCO_D  ---     0.071   SLICE_92.FCI to   SLICE_92.FCO SLICE_92
+ROUTE         1   e 0.001   SLICE_92.FCO to   SLICE_91.FCI n17794
+FCITOFCO_D  ---     0.071   SLICE_91.FCI to   SLICE_91.FCO SLICE_91
+ROUTE         1   e 0.001   SLICE_91.FCO to   SLICE_90.FCI n17795
+FCITOFCO_D  ---     0.071   SLICE_90.FCI to   SLICE_90.FCO SLICE_90
+ROUTE         1   e 0.001   SLICE_90.FCO to   SLICE_89.FCI n17796
+FCITOFCO_D  ---     0.071   SLICE_89.FCI to   SLICE_89.FCO SLICE_89
+ROUTE         1   e 0.001   SLICE_89.FCO to   SLICE_88.FCI n17797
+FCITOFCO_D  ---     0.071   SLICE_88.FCI to   SLICE_88.FCO SLICE_88
+ROUTE         1   e 0.001   SLICE_88.FCO to   SLICE_87.FCI n17798
+FCITOF1_DE  ---     0.474   SLICE_87.FCI to    SLICE_87.F1 SLICE_87
+ROUTE         6   e 0.573    SLICE_87.F1 to *SLICE_2785.A0 amdemod_out_d_11_N_2409_14
+CTOF_DEL    ---     0.236 *SLICE_2785.A0 to *SLICE_2785.F0 AMDemodulator_inst/SLICE_2785
+ROUTE         5   e 0.573 *SLICE_2785.F0 to  SLICE_1669.A0 n19808
+C0TOFCO_DE  ---     0.447  SLICE_1669.A0 to SLICE_1669.FCO SLICE_1669
+ROUTE         1   e 0.001 SLICE_1669.FCO to SLICE_1670.FCI n17901
+FCITOFCO_D  ---     0.071 SLICE_1670.FCI to SLICE_1670.FCO SLICE_1670
+ROUTE         1   e 0.001 SLICE_1670.FCO to SLICE_1671.FCI n17902
+FCITOFCO_D  ---     0.071 SLICE_1671.FCI to SLICE_1671.FCO SLICE_1671
+ROUTE         1   e 0.001 SLICE_1671.FCO to SLICE_1672.FCI n17903
+FCITOFCO_D  ---     0.071 SLICE_1672.FCI to SLICE_1672.FCO SLICE_1672
+ROUTE         1   e 0.001 SLICE_1672.FCO to SLICE_1673.FCI n17904
+FCITOFCO_D  ---     0.071 SLICE_1673.FCI to SLICE_1673.FCO SLICE_1673
+ROUTE         1   e 0.001 SLICE_1673.FCO to SLICE_1674.FCI n17905
+FCITOFCO_D  ---     0.071 SLICE_1674.FCI to SLICE_1674.FCO SLICE_1674
+ROUTE         1   e 0.001 SLICE_1674.FCO to SLICE_1675.FCI n17906
+FCITOF1_DE  ---     0.474 SLICE_1675.FCI to  SLICE_1675.F1 SLICE_1675
+ROUTE         1   e 0.573  SLICE_1675.F1 to *SLICE_1694.A0 n36_adj_6130
+CTOOFX_DEL  ---     0.401 *SLICE_1694.A0 to *ICE_1694.OFX0 AMDemodulator_inst/SLICE_1694
+ROUTE         1   e 0.001 *ICE_1694.OFX0 to *LICE_1694.DI0 AMDemodulator_inst/amdemod_out_d_11__N_2412 (to cic_sine_clk)
+                  --------
+                   34.530   (53.4% logic, 46.6% route), 91 logic levels.
+
+Report:   29.180MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |   83.333 MHz|  123.335 MHz|   9  
+                                        |             |             |
+FREQUENCY NET "clk_25mhz_c" 25.000000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |   25.000 MHz|   29.180 MHz|  91  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 5 clocks:
+
+Clock Domain: uart_rx_inst/UartClk[2]   Source: uart_rx_inst/SLICE_2564.Q0   Loads: 29
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: pll_inst/CLKFB_t   Source: pll_inst/PLLInst_0.CLKINTFB   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_80mhz   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1547
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx_inst/UartClk[2]   Source: uart_rx_inst/SLICE_2564.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 9
+
+   Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1727.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 10
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1727.Q0   Loads: 44
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_80mhz   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 32
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1531210506 paths, 5 nets, and 15748 connections (92.10% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Tue Sep 10 11:08:59 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o OneBitSDR_impl1.tw1 -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/promote.xml OneBitSDR_impl1_map.ncd OneBitSDR_impl1.prf 
+Design file:     OneBitSDR_impl1_map.ncd
+Preference file: OneBitSDR_impl1.prf
+Device,speed:    LFE5U-85F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.103ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              mixer_inst/rf_in_d_i1  (from clk_80mhz +)
+   Destination:    FF         Data in        mixer_inst/rf_in_d_i2  (to clk_80mhz +)
+
+   Delay:               0.221ns  (73.8% logic, 26.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.221ns physical path delay mixer_inst/SLICE_2464 to mixer_inst/SLICE_2464 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.103ns
+
+ Physical Path Details:
+
+      Data path mixer_inst/SLICE_2464 to mixer_inst/SLICE_2464:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163 *LICE_2464.CLK to *SLICE_2464.Q1 mixer_inst/SLICE_2464 (from clk_80mhz)
+ROUTE         2   e 0.058 *SLICE_2464.Q1 to *SLICE_2464.M0 diff_out_c (to clk_80mhz)
+                  --------
+                    0.221   (73.8% logic, 26.2% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25mhz_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.104ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx_inst/r_Rx_Data_R_61  (from uart_rx_inst/UartClk[2] +)
+   Destination:    FF         Data in        uart_rx_inst/r_Rx_Data_62  (to uart_rx_inst/UartClk[2] +)
+
+   Delay:               0.222ns  (73.9% logic, 26.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.222ns physical path delay uart_rx_inst/SLICE_2578 to uart_rx_inst/SLICE_2578 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.104ns
+
+ Physical Path Details:
+
+      Data path uart_rx_inst/SLICE_2578 to uart_rx_inst/SLICE_2578:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164 *LICE_2578.CLK to *SLICE_2578.Q0 uart_rx_inst/SLICE_2578 (from uart_rx_inst/UartClk[2])
+ROUTE         1   e 0.058 *SLICE_2578.Q0 to *SLICE_2578.M1 uart_rx_inst/r_Rx_Data_R (to uart_rx_inst/UartClk[2])
+                  --------
+                    0.222   (73.9% logic, 26.1% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |     0.000 ns|     0.103 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_25mhz_c" 25.000000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 5 clocks:
+
+Clock Domain: uart_rx_inst/UartClk[2]   Source: uart_rx_inst/SLICE_2564.Q0   Loads: 29
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+Clock Domain: pll_inst/CLKFB_t   Source: pll_inst/PLLInst_0.CLKINTFB   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_80mhz   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1547
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: uart_rx_inst/UartClk[2]   Source: uart_rx_inst/SLICE_2564.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 9
+
+   Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1727.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 10
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1727.Q0   Loads: 44
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_80mhz   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 32
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1531210506 paths, 5 nets, and 17051 connections (99.73% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

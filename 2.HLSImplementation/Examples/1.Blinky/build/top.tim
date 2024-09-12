@@ -26,8 +26,8 @@ Info: led_1__io feeds TRELLIS_IO pin_led_1.buf.buf.buf0, removing $nextpnr_obuf 
 Info: pin 'pin_led_1.buf.buf.buf0' constrained to Bel 'X0/Y35/PIOD'.
 Info: led_0__io feeds TRELLIS_IO pin_led_0.buf.buf.buf0, removing $nextpnr_obuf led_0__io.
 Info: pin 'pin_led_0.buf.buf.buf0' constrained to Bel 'X0/Y35/PIOC'.
-Info: clk25_0__io feeds TRELLIS_IO pin_clk25_0.buf.buf.buf0, removing $nextpnr_ibuf clk25_0__io.
-Info: pin 'pin_clk25_0.buf.buf.buf0' constrained to Bel 'X0/Y47/PIOA'.
+Info: clk25_0__io feeds TRELLIS_IO cd_sync.clk_buf.buf.buf0, removing $nextpnr_ibuf clk25_0__io.
+Info: pin 'cd_sync.clk_buf.buf.buf0' constrained to Bel 'X0/Y47/PIOA'.
 Info: Packing constants..
 Info: Packing carries...
 Info: Packing LUTs...
@@ -37,99 +37,100 @@ Info:     30 FFs paired with LUTs.
 Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net clk to global network
-Info: Checksum: 0x8dfeda94
+Info: Checksum: 0x0ef7313e
 
 Info: Device utilisation:
-Info: 	          TRELLIS_IO:     9/  365     2%
-Info: 	                DCCA:     1/   56     1%
-Info: 	              DP16KD:     0/  208     0%
-Info: 	          MULT18X18D:     0/  156     0%
-Info: 	              ALU54B:     0/   78     0%
-Info: 	             EHXPLLL:     0/    4     0%
-Info: 	             EXTREFB:     0/    2     0%
-Info: 	                DCUA:     0/    2     0%
-Info: 	           PCSCLKDIV:     0/    2     0%
-Info: 	             IOLOGIC:     0/  224     0%
-Info: 	            SIOLOGIC:     0/  141     0%
-Info: 	                 GSR:     1/    1   100%
-Info: 	               JTAGG:     0/    1     0%
-Info: 	                OSCG:     0/    1     0%
-Info: 	               SEDGA:     0/    1     0%
-Info: 	                 DTR:     0/    1     0%
-Info: 	             USRMCLK:     0/    1     0%
-Info: 	             CLKDIVF:     0/    4     0%
-Info: 	           ECLKSYNCB:     0/   10     0%
-Info: 	             DLLDELD:     0/    8     0%
-Info: 	              DDRDLL:     0/    4     0%
-Info: 	             DQSBUFM:     0/   14     0%
-Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
-Info: 	        ECLKBRIDGECS:     0/    2     0%
-Info: 	                DCSC:     0/    2     0%
-Info: 	          TRELLIS_FF:    31/83640     0%
-Info: 	        TRELLIS_COMB:    55/83640     0%
-Info: 	        TRELLIS_RAMW:     0/10455     0%
+Info: 	          TRELLIS_IO:       9/    365     2%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/    208     0%
+Info: 	          MULT18X18D:       0/    156     0%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       1/      1   100%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:      31/  83640     0%
+Info: 	        TRELLIS_COMB:      55/  83640     0%
+Info: 	        TRELLIS_RAMW:       0/  10455     0%
 
 Info: Placed 10 cells based on constraints.
-Info: Creating initial analytic placement for 21 cells, random placement wirelen = 3382.
+Info: Creating initial analytic placement for 21 cells, random placement wirelen = 3046.
 Info:     at initial placer iter 0, wirelen = 51
-Info:     at initial placer iter 1, wirelen = 52
+Info:     at initial placer iter 1, wirelen = 53
 Info:     at initial placer iter 2, wirelen = 52
-Info:     at initial placer iter 3, wirelen = 57
+Info:     at initial placer iter 3, wirelen = 52
 Info: Running main analytical placer, max placement attempts per cell = 10000.
-Info:     at iteration #1, type ALL: wirelen solved = 57, spread = 145, legal = 194; time = 0.03s
-Info:     at iteration #2, type ALL: wirelen solved = 57, spread = 118, legal = 162; time = 0.00s
-Info:     at iteration #3, type ALL: wirelen solved = 50, spread = 100, legal = 175; time = 0.00s
-Info:     at iteration #4, type ALL: wirelen solved = 48, spread = 95, legal = 157; time = 0.00s
-Info:     at iteration #5, type ALL: wirelen solved = 51, spread = 95, legal = 177; time = 0.00s
-Info:     at iteration #6, type ALL: wirelen solved = 50, spread = 118, legal = 157; time = 0.00s
-Info:     at iteration #7, type ALL: wirelen solved = 58, spread = 107, legal = 140; time = 0.00s
-Info:     at iteration #8, type ALL: wirelen solved = 53, spread = 86, legal = 143; time = 0.00s
-Info:     at iteration #9, type ALL: wirelen solved = 58, spread = 132, legal = 142; time = 0.00s
-Info:     at iteration #10, type ALL: wirelen solved = 65, spread = 118, legal = 149; time = 0.00s
-Info:     at iteration #11, type ALL: wirelen solved = 96, spread = 112, legal = 161; time = 0.00s
-Info:     at iteration #12, type ALL: wirelen solved = 93, spread = 135, legal = 146; time = 0.00s
+Info:     at iteration #1, type ALL: wirelen solved = 57, spread = 144, legal = 190; time = 0.03s
+Info:     at iteration #2, type ALL: wirelen solved = 52, spread = 118, legal = 181; time = 0.00s
+Info:     at iteration #3, type ALL: wirelen solved = 50, spread = 113, legal = 156; time = 0.00s
+Info:     at iteration #4, type ALL: wirelen solved = 49, spread = 133, legal = 195; time = 0.00s
+Info:     at iteration #5, type ALL: wirelen solved = 53, spread = 81, legal = 150; time = 0.00s
+Info:     at iteration #6, type ALL: wirelen solved = 47, spread = 103, legal = 158; time = 0.00s
+Info:     at iteration #7, type ALL: wirelen solved = 46, spread = 132, legal = 161; time = 0.00s
+Info:     at iteration #8, type ALL: wirelen solved = 55, spread = 132, legal = 185; time = 0.00s
+Info:     at iteration #9, type ALL: wirelen solved = 61, spread = 99, legal = 111; time = 0.00s
+Info:     at iteration #10, type ALL: wirelen solved = 61, spread = 114, legal = 126; time = 0.00s
+Info:     at iteration #11, type ALL: wirelen solved = 62, spread = 107, legal = 144; time = 0.00s
+Info:     at iteration #12, type ALL: wirelen solved = 57, spread = 95, legal = 116; time = 0.00s
+Info:     at iteration #13, type ALL: wirelen solved = 62, spread = 127, legal = 130; time = 0.00s
+Info:     at iteration #14, type ALL: wirelen solved = 62, spread = 125, legal = 124; time = 0.00s
 Info: HeAP Placer Time: 0.19s
 Info:   of which solving equations: 0.02s
 Info:   of which spreading cells: 0.03s
 Info:   of which strict legalisation: 0.00s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 36, wirelen = 140
-Info:   at iteration #5: temp = 0.000000, timing cost = 29, wirelen = 99
-Info:   at iteration #10: temp = 0.000000, timing cost = 26, wirelen = 93
-Info:   at iteration #15: temp = 0.000000, timing cost = 30, wirelen = 86
-Info:   at iteration #16: temp = 0.000000, timing cost = 30, wirelen = 85 
-Info: SA placement time 0.04s
+Info:   at iteration #1: temp = 0.000000, timing cost = 29, wirelen = 111
+Info:   at iteration #5: temp = 0.000000, timing cost = 27, wirelen = 90
+Info:   at iteration #10: temp = 0.000000, timing cost = 24, wirelen = 82
+Info:   at iteration #11: temp = 0.000000, timing cost = 24, wirelen = 84 
+Info: SA placement time 0.03s
 
-Info: Max frequency for clock '$glbnet$clk': 205.04 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$clk': 193.57 MHz (PASS at 25.00 MHz)
 
 Info: Max delay <async>             -> <async>: 1.12 ns
-Info: Max delay posedge $glbnet$clk -> <async>: 1.80 ns
+Info: Max delay posedge $glbnet$clk -> <async>: 1.64 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 35123,  35329) |************** 
-Info: [ 35329,  35535) |************ 
-Info: [ 35535,  35741) |*** 
-Info: [ 35741,  35947) | 
-Info: [ 35947,  36153) | 
-Info: [ 36153,  36359) | 
-Info: [ 36359,  36565) | 
-Info: [ 36565,  36771) | 
-Info: [ 36771,  36977) | 
-Info: [ 36977,  37183) |****** 
-Info: [ 37183,  37389) |****** 
-Info: [ 37389,  37595) |****** 
-Info: [ 37595,  37801) |** 
-Info: [ 37801,  38007) | 
-Info: [ 38007,  38213) | 
-Info: [ 38213,  38419) | 
-Info: [ 38419,  38625) | 
-Info: [ 38625,  38831) | 
-Info: [ 38831,  39037) |* 
-Info: [ 39037,  39243) |********* 
-Info: Checksum: 0xf2cbd98d
+Info: [ 34834,  35055) |** 
+Info: [ 35055,  35276) |************ 
+Info: [ 35276,  35497) |************ 
+Info: [ 35497,  35718) |* 
+Info: [ 35718,  35939) |** 
+Info: [ 35939,  36160) | 
+Info: [ 36160,  36381) | 
+Info: [ 36381,  36602) | 
+Info: [ 36602,  36823) | 
+Info: [ 36823,  37044) | 
+Info: [ 37044,  37265) |**** 
+Info: [ 37265,  37486) |****** 
+Info: [ 37486,  37707) |****** 
+Info: [ 37707,  37928) |**** 
+Info: [ 37928,  38149) | 
+Info: [ 38149,  38370) | 
+Info: [ 38370,  38591) | 
+Info: [ 38591,  38812) | 
+Info: [ 38812,  39033) |* 
+Info: [ 39033,  39254) |********* 
+Info: Checksum: 0x726336ec
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk using global 0
 
@@ -138,82 +139,82 @@ Info: Setting up routing queue.
 Info: Routing 173 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        206 |       32        155 |   32   155 |         0|       0.06       0.06|
+Info:        212 |       38        155 |   38   155 |         0|       0.05       0.05|
 Info: Routing complete.
-Info: Router1 time 0.06s
-Info: Checksum: 0xec9b83de
+Info: Router1 time 0.05s
+Info: Checksum: 0xa751d2a9
 
 Info: Critical path report for clock '$glbnet$clk' (posedge -> posedge):
 Info: curr total
-Info:  0.5  0.5  Source count_TRELLIS_FF_Q.Q
-Info:  0.7  1.2    Net count[20] (4,40) -> (4,39)
-Info:                Sink led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_SD_LUT4_Z.D
+Info:  0.5  0.5  Source count_TRELLIS_FF_Q_12.Q
+Info:  0.7  1.2    Net count[8] (3,36) -> (3,35)
+Info:                Sink led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_SD_LUT4_Z.C
 Info:                Defined in:
 Info:                  /home/user/SDR-HLS/2.HLSImplementation/Examples/1.Blinky/Blinky.py:27
-Info:  0.2  1.5  Source led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_SD_LUT4_Z.F
-Info:  0.5  2.0    Net led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_SD[5] (4,39) -> (2,39)
-Info:                Sink led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:  0.2  1.5  Source led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_SD_LUT4_Z.F
+Info:  0.7  2.1    Net led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_SD[6] (3,35) -> (3,37)
+Info:                Sink led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.3  2.2  Source led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
-Info:  0.8  3.0    Net led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A[2] (2,39) -> (4,39)
-Info:                Sink count_TRELLIS_FF_Q_LSR_LUT4_Z.C
+Info:  0.3  2.4  Source led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.7  3.1    Net led_0__o_TRELLIS_FF_Q_CE_LUT4_Z_A[3] (3,37) -> (2,35)
+Info:                Sink led_0__o_TRELLIS_FF_Q_CE_LUT4_Z.D
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.2  3.3  Source count_TRELLIS_FF_Q_LSR_LUT4_Z.F
-Info:  0.6  3.9    Net count_TRELLIS_FF_Q_LSR (4,39) -> (3,38)
-Info:                Sink count_TRELLIS_FF_Q_20.LSR
-Info:  0.4  4.3  Setup count_TRELLIS_FF_Q_20.LSR
-Info: 1.7 ns logic, 2.7 ns routing
+Info:  0.2  3.3  Source led_0__o_TRELLIS_FF_Q_CE_LUT4_Z.F
+Info:  1.1  4.4    Net led_0__o_TRELLIS_FF_Q_CE (2,35) -> (2,41)
+Info:                Sink led_7__o_TRELLIS_FF_Q.CE
+Info:  0.0  4.4  Setup led_7__o_TRELLIS_FF_Q.CE
+Info: 1.3 ns logic, 3.2 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> '<async>':
 Info: curr total
-Info:  0.0  0.0  Source pin_clk25_0.buf.buf.buf0.O
+Info:  0.0  0.0  Source cd_sync.clk_buf.buf.buf0.O
 Info:  0.2  0.2    Net clk (0,47) -> (3,46)
 Info:                Sink $gbuf$clk.CLKI
 Info:                Defined in:
-Info:                  /home/user/FPGA/tools/amaranth/amaranth/lib/wiring.py:166
+Info:                  /home/user/.local/lib/python3.10/site-packages/amaranth/vendor/_lattice.py:1009
 Info:  0.0  0.2  Source $gbuf$clk.CLKO
 Info:  0.0  0.2    Net $glbnet$clk (3,46) -> (4,94)
-Info:                Sink cd_sync.U$2.CLK
+Info:                Sink cd_sync.U$3.CLK
 Info: 0.0 ns logic, 0.2 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk' -> '<async>':
 Info: curr total
-Info:  0.5  0.5  Source led_5__o_TRELLIS_FF_Q.Q
-Info:  1.4  2.0    Net led_5__o (2,41) -> (0,44)
-Info:                Sink pin_led_5.buf.buf.buf0.I
+Info:  0.5  0.5  Source led_3__o_TRELLIS_FF_Q.Q
+Info:  1.2  1.7    Net led_3__o (2,38) -> (0,38)
+Info:                Sink pin_led_3.buf.buf.buf0.I
 Info:                Defined in:
-Info:                  /home/user/FPGA/tools/amaranth/amaranth/lib/io.py:928
-Info: 0.5 ns logic, 1.4 ns routing
+Info:                  /home/user/.local/lib/python3.10/site-packages/amaranth/lib/io.py:1101
+Info: 0.5 ns logic, 1.2 ns routing
 
-Info: Max frequency for clock '$glbnet$clk': 230.31 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$clk': 225.23 MHz (PASS at 25.00 MHz)
 
 Info: Max delay <async>             -> <async>: 0.25 ns
-Info: Max delay posedge $glbnet$clk -> <async>: 1.95 ns
+Info: Max delay posedge $glbnet$clk -> <async>: 1.72 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 35658,  35828) |************************* 
-Info: [ 35828,  35998) |**** 
-Info: [ 35998,  36168) | 
-Info: [ 36168,  36338) | 
-Info: [ 36338,  36508) | 
-Info: [ 36508,  36678) |* 
-Info: [ 36678,  36848) |**** 
-Info: [ 36848,  37018) |**** 
-Info: [ 37018,  37188) |****** 
-Info: [ 37188,  37358) |**** 
-Info: [ 37358,  37528) |* 
-Info: [ 37528,  37698) | 
-Info: [ 37698,  37868) | 
-Info: [ 37868,  38038) | 
-Info: [ 38038,  38208) | 
-Info: [ 38208,  38378) | 
-Info: [ 38378,  38548) | 
-Info: [ 38548,  38718) |**** 
-Info: [ 38718,  38888) |***** 
-Info: [ 38888,  39058) |* 
+Info: [ 35560,  35735) |********************** 
+Info: [ 35735,  35910) |*** 
+Info: [ 35910,  36085) |** 
+Info: [ 36085,  36260) |** 
+Info: [ 36260,  36435) | 
+Info: [ 36435,  36610) | 
+Info: [ 36610,  36785) |** 
+Info: [ 36785,  36960) |****** 
+Info: [ 36960,  37135) |***** 
+Info: [ 37135,  37310) |**** 
+Info: [ 37310,  37485) |*** 
+Info: [ 37485,  37660) | 
+Info: [ 37660,  37835) | 
+Info: [ 37835,  38010) | 
+Info: [ 38010,  38185) | 
+Info: [ 38185,  38360) | 
+Info: [ 38360,  38535) | 
+Info: [ 38535,  38710) |*** 
+Info: [ 38710,  38885) |****** 
+Info: [ 38885,  39060) |* 
 
 Info: Program finished normally.

@@ -38,8 +38,8 @@ module Mixer #(
 
   // Delay the rf_in signal by two clock cycles
   always_ff @(posedge clk) begin
-    rf_in_d[0] <= rf_in;
-    rf_in_d[1] <= rf_in_d[0];
+    rf_in_d[0]    <= rf_in;
+    rf_in_d[1]    <= rf_in_d[0];
   end
 
   // Assign the delayed rf_in signal to rf_out

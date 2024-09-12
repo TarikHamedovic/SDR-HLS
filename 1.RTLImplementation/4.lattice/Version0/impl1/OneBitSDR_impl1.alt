@@ -1,0 +1,37 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Sep  5 13:47:10 2024 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS MYLED[6] : E1 : out *
+NOTE PINS MYLED[7] : H3 : out *
+NOTE PINS o_Tx_Serial : E15 : out *
+NOTE PINS MYLED[5] : E2 : out *
+NOTE PINS MYLED[4] : D1 : out *
+NOTE PINS MYLED[3] : D2 : out *
+NOTE PINS MYLED[2] : C1 : out *
+NOTE PINS MYLED[1] : C2 : out *
+NOTE PINS MYLED[0] : B2 : out *
+NOTE PINS XOut : C15 : out *
+NOTE PINS DiffOut : U18 : out *
+NOTE PINS PWMOut : A4 : out *
+NOTE PINS PWMOutP1 : B11 : out *
+NOTE PINS PWMOutP2 : A10 : out *
+NOTE PINS PWMOutP3 : A9 : out *
+NOTE PINS PWMOutP4 : B9 : out *
+NOTE PINS PWMOutN1 : A7 : out *
+NOTE PINS PWMOutN2 : C8 : out *
+NOTE PINS PWMOutN3 : C6 : out *
+NOTE PINS PWMOutN4 : A6 : out *
+NOTE PINS sinGen : F20 : out *
+NOTE PINS sin_out : G3 : out *
+NOTE PINS CIC_out_clkSin : B12 : out *
+NOTE PINS osc_clk : G2 : in *
+NOTE PINS i_Rx_Serial : M1 : in *
+NOTE PINS RFIn : H18 : in *
+NOTE PINS SYSCONFIG_PIN_D1 : V2 : inout *
+NOTE PINS SYSCONFIG_PIN_D0 : W2 : inout *
+NOTE PINS SYSCONFIG_PIN_HOLDN : R2 : inout *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: on *

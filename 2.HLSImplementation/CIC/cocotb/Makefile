@@ -14,7 +14,7 @@ VERILOG_SOURCES += CIC.v
 VHDL_SOURCES = 
 
 # Top-level module name
-TOPLEVEL = top
+TOPLEVEL = CIC
 
 # Python test module(s)
 MODULE = cic_tb
@@ -29,11 +29,12 @@ clean::
 	$(RM) *.vcd
 
 # Set default values for the environment variables
-INPUT_WIDTH ?= 12
-REGISTER_WIDTH ?= 32
-CLOCK_VALUE ?= 12.5
+DATA_WIDTH       ?= 12
+REGISTER_WIDTH   ?= 32
 DECIMATION_RATIO ?= 16
-ITERATIONS ?= 50
+GAIN_WIDTH       ?= 8
+CLOCK_VALUE      ?= 12.5
+ITERATIONS       ?= 50
 
 # Simulator and Parameter declaration
 SIMULATOR ?= icarus
@@ -41,15 +42,15 @@ SIMULATOR ?= icarus
 # Define the test target
 .PHONY: test
 test:
-	@INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
-	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) \
+	@DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
+	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) GAIN_WIDTH=$(GAIN_WIDTH)\ 
 	make SIM=$(SIMULATOR) TOPLEVEL_LANG=verilog TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Run the simulation
 .PHONY: run
 run:
-	INPUT_WIDTH=$(INPUT_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
-	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) $(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
+	DATA_WIDTH=$(DATA_WIDTH) CLOCK_VALUE=$(CLOCK_VALUE) DECIMATION_RATIO=$(DECIMATION_RATIO) \
+	ITERATIONS=$(ITERATIONS) REGISTER_WIDTH=$(REGISTER_WIDTH) GAIN_WIDTH=$(GAIN_WIDTH) $(MAKE) test SIMULATOR=$(SIMULATOR) TOPLEVEL=$(TOPLEVEL) MODULE=$(MODULE)
 
 # Define the help target
 .PHONY: help_tb
@@ -64,9 +65,10 @@ help_tb:
 	@echo "  help_tb     - Display this help message"
 	@echo ""
 	@echo "Variables:"
-	@echo "  INPUT_WIDH       - Number of input bits (default: 12)"
+	@echo "  DATA_WIDH        - Number of input bits (default: 12)"
 	@echo "  CLOCK_VALUE      - Clock value in ns (default: 12.5 or 80 MHz)"
 	@echo "  DECIMATION_RATIO - Decimation ratio (default: 16)"
+	@echo "  GAIN_WIDTH       - Number of bits for input gain (default: 8)"
 	@echo "  REGISTER_WIDTH   - Bit width for internal registers (default: 64)"
 	@echo "  ITERATIONS       - Number of iterations for the test (default: 50)"
 	@echo "  SIMULATOR        - Simulator to use (default: icarus)"

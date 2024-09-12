@@ -19,7 +19,7 @@ Output:
 */
 
 module AMDemodulator #( // TODO: Change name so it matches the file name
-  parameter int WIDTH = 12
+  parameter WIDTH = 12
 )(
   input                     clk,
   input  signed [WIDTH-1:0] I_in,

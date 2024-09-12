@@ -1,0 +1,15 @@
+if {![file exists "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/sim/sim.mpf"]} { 
+	project new "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/sim" sim
+	project addfile "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v"
+	vlib  work
+	vdel -lib work -all 
+	vlib work
+	vlog  +incdir+/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source  -work work  "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v"
+} else {
+	project open "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/sim/sim"
+	project compileoutofdate
+}
+vsim -L work -L pmi_work -L ovi_ecp5u  Multiplier
+view wave
+add wave /*
+run 1000ns

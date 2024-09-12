@@ -94,12 +94,12 @@ module AMDemodulator #(
   //=============================//
   //       For sim only          //
   //=============================//
-  //`ifdef SIMULATION
+  `ifdef SIMULATION
   initial begin
     $dumpfile("AMDemod_waves.vcd");
     $dumpvars;
   end
-//`endif
+ `endif
 endmodule
 
 /*

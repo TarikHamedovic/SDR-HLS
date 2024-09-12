@@ -6,47 +6,46 @@ Performance Grade:      6
 PACKAGE:          CABGA381
 Package Status:                     Final          Version 1.37
 
-Thu May 30 00:35:19 2024
+Sun Aug 25 17:36:58 2024
 
 Pinout by Port Name:
-+----------------+----------+--------------+--------+-----------+---------------------------------+
-| Port Name      | Pin/Bank | Buffer Type  | Site   | BC Enable | Properties                      |
-+----------------+----------+--------------+--------+-----------+---------------------------------+
-| CIC_out_clkSin | A12/1    | LVCMOS25_OUT | PT76A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-| DiffOut        | U18/3    | LVCMOS25_OUT | PR92A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-| PWMOut         | A4/7     | LVCMOS33_OUT | PL11A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutN1       | A7/0     | LVCMOS33_OUT | PT18A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutN2       | C8/0     | LVCMOS33_OUT | PT15A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutN3       | C6/0     | LVCMOS33_OUT | PT11A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutN4       | A6/0     | LVCMOS33_OUT | PT4A   |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutP1       | B11/0    | LVCMOS33_OUT | PT65A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutP2       | A10/0    | LVCMOS33_OUT | PT63A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutP3       | A9/0     | LVCMOS33_OUT | PT60A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| PWMOutP4       | B9/0     | LVCMOS33_OUT | PT58A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| RFIn           | H18/2    | LVDS_IN      | PR20A  |           | CLAMP:ON                        |
-| XOut           | N16/3    | LVCMOS25_OUT | PR53A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-| clk_25mhz      | G2/6     | LVCMOS33_IN  | PL47A  |           | CLAMP:ON HYSTERESIS:ON          |
-| i_Rx_Serial    | M1/6     | LVCMOS33_IN  | PL89B  |           | PULL:UP CLAMP:ON HYSTERESIS:ON  |
-| led[0]         | B2/7     | LVCMOS33_OUT | PL35C  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[1]         | C2/7     | LVCMOS33_OUT | PL35D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[2]         | C1/7     | LVCMOS33_OUT | PL38A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[3]         | D2/7     | LVCMOS33_OUT | PL38C  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[4]         | D1/7     | LVCMOS33_OUT | PL38B  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[5]         | E2/7     | LVCMOS33_OUT | PL44D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[6]         | E1/7     | LVCMOS33_OUT | PL38D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| led[7]         | H3/7     | LVCMOS33_OUT | PL41D  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
-| o_Tx_Serial    | D15/1    | LVCMOS25_OUT | PT107A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-| sinGen         | N17/3    | LVCMOS25_OUT | PR56A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-| sin_out        | G3/7     | LVCMOS33_OUT | PL44A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
-+----------------+----------+--------------+--------+-----------+---------------------------------+
++----------------+----------+--------------+-------+-----------+---------------------------------+
+| Port Name      | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                      |
++----------------+----------+--------------+-------+-----------+---------------------------------+
+| CIC_out_clkSin | E18/2    | LVCMOS25_OUT | PR14C |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| DiffOut        | U18/3    | LVCMOS25_OUT | PR92A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| PWMOut         | A4/7     | LVCMOS33_OUT | PL11A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutN1       | A7/0     | LVCMOS33_OUT | PT18A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutN2       | C8/0     | LVCMOS33_OUT | PT15A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutN3       | C6/0     | LVCMOS33_OUT | PT11A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutN4       | A6/0     | LVCMOS33_OUT | PT4A  |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutP1       | B11/0    | LVCMOS33_OUT | PT65A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutP2       | A10/0    | LVCMOS33_OUT | PT63A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutP3       | A9/0     | LVCMOS33_OUT | PT60A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| PWMOutP4       | B9/0     | LVCMOS33_OUT | PT58A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| RFIn           | H18/2    | LVDS_IN      | PR20A |           | CLAMP:ON                        |
+| XOut           | N16/3    | LVCMOS25_OUT | PR53A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| clk_25mhz      | G2/6     | LVCMOS33_IN  | PL47A |           | CLAMP:ON HYSTERESIS:ON          |
+| i_Rx_Serial    | M1/6     | LVCMOS33_IN  | PL89B |           | PULL:UP CLAMP:ON HYSTERESIS:ON  |
+| led[0]         | B2/7     | LVCMOS33_OUT | PL35C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[1]         | C2/7     | LVCMOS33_OUT | PL35D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[2]         | C1/7     | LVCMOS33_OUT | PL38A |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[3]         | D2/7     | LVCMOS33_OUT | PL38C |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[4]         | D1/7     | LVCMOS33_OUT | PL38B |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[5]         | E2/7     | LVCMOS33_OUT | PL44D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[6]         | E1/7     | LVCMOS33_OUT | PL38D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| led[7]         | H3/7     | LVCMOS33_OUT | PL41D |           | DRIVE:4mA CLAMP:ON SLEW:SLOW    |
+| o_Tx_Serial    | G20/2    | LVCMOS25_OUT | PR38D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| sinGen         | N17/3    | LVCMOS25_OUT | PR56A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
+| sin_out        | G3/7     | LVCMOS33_OUT | PL44A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW    |
++----------------+----------+--------------+-------+-----------+---------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
 | 0    | 3.3V  |
-| 1    | 2.5V  |
-| 2    | 1.2V  |
+| 2    | 2.5V  |
 | 3    | 2.5V  |
 | 6    | 3.3V  |
 | 7    | 3.3V  |
@@ -73,7 +72,7 @@ Pinout by Pin Number:
 | A9/0     | PWMOutP3              | LOCATED    | LVCMOS33_OUT  | PT60A  | GR_PCLK0_1               |           |
 | A10/0    | PWMOutP2              | LOCATED    | LVCMOS33_OUT  | PT63A  | PCLKT0_1                 |           |
 | A11/0    |     unused, PULL:DOWN |            |               | PT63B  |                          |           |
-| A12/1    | CIC_out_clkSin        |            | LVCMOS25_OUT  | PT76A  |                          |           |
+| A12/1    |     unused, PULL:DOWN |            |               | PT76A  |                          |           |
 | A13/1    |     unused, PULL:DOWN |            |               | PT76B  |                          |           |
 | A14/1    |     unused, PULL:DOWN |            |               | PT83A  |                          |           |
 | A15/1    |     unused, PULL:DOWN |            |               | PT103A |                          |           |
@@ -132,7 +131,7 @@ Pinout by Pin Number:
 | D12/1    |     unused, PULL:DOWN |            |               | PT74A  | GR_PCLK1_0               |           |
 | D13/1    |     unused, PULL:DOWN |            |               | PT80A  |                          |           |
 | D14/1    |     unused, PULL:DOWN |            |               | PT85A  |                          |           |
-| D15/1    | o_Tx_Serial           |            | LVCMOS25_OUT  | PT107A |                          |           |
+| D15/1    |     unused, PULL:DOWN |            |               | PT107A |                          |           |
 | D16/1    |     unused, PULL:DOWN |            |               | PT112B |                          |           |
 | D17/2    |     unused, PULL:DOWN |            |               | PR11B  | URC_GPLL0C_IN/RDQ17      |           |
 | D18/2    |     unused, PULL:DOWN |            |               | PR14A  | RDQ17                    |           |
@@ -155,7 +154,7 @@ Pinout by Pin Number:
 | E15/1    |     unused, PULL:DOWN |            |               | PT107B |                          |           |
 | E16/2    |     unused, PULL:DOWN |            |               | PR11C  | RDQ17                    |           |
 | E17/2    |     unused, PULL:DOWN |            |               | PR14B  | RDQ17                    |           |
-| E18/2    |     unused, PULL:DOWN |            |               | PR14C  | RDQ17                    |           |
+| E18/2    | CIC_out_clkSin        |            | LVCMOS25_OUT  | PR14C  | RDQ17                    |           |
 | E19/2    |     unused, PULL:DOWN |            |               | PR35D  | RDQ41                    |           |
 | E20/2    |     unused, PULL:DOWN |            |               | PR38A  | RDQ41                    |           |
 | F1/6     |     unused, PULL:DOWN |            |               | PL47B  | PCLKC6_1/LDQ53           |           |
@@ -175,7 +174,7 @@ Pinout by Pin Number:
 | G16/2    |     unused, PULL:DOWN |            |               | PR17C  | RDQ17                    |           |
 | G18/2    |     unused, PULL:DOWN |            |               | PR17B  | RDQSN17                  |           |
 | G19/2    |     unused, PULL:DOWN |            |               | PR41A  | GR_PCLK2_1/RDQS41        |           |
-| G20/2    |     unused, PULL:DOWN |            |               | PR38D  | RDQ41                    |           |
+| G20/2    | o_Tx_Serial           |            | LVCMOS25_OUT  | PR38D  | RDQ41                    |           |
 | H1/6     |     unused, PULL:DOWN |            |               | PL53C  | LDQ53                    |           |
 | H2/6     |     unused, PULL:DOWN |            |               | PL47C  | PCLKT6_0/LDQ53           |           |
 | H3/7     | led[7]                | LOCATED    | LVCMOS33_OUT  | PL41D  | LDQ41                    |           |
@@ -461,7 +460,7 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "CIC_out_clkSin"  SITE  "A12";
+LOCATE  COMP  "CIC_out_clkSin"  SITE  "E18";
 LOCATE  COMP  "DiffOut"  SITE  "U18";
 LOCATE  COMP  "PWMOut"  SITE  "A4";
 LOCATE  COMP  "PWMOutN1"  SITE  "A7";
@@ -484,7 +483,7 @@ LOCATE  COMP  "led[4]"  SITE  "D1";
 LOCATE  COMP  "led[5]"  SITE  "E2";
 LOCATE  COMP  "led[6]"  SITE  "E1";
 LOCATE  COMP  "led[7]"  SITE  "H3";
-LOCATE  COMP  "o_Tx_Serial"  SITE  "D15";
+LOCATE  COMP  "o_Tx_Serial"  SITE  "G20";
 LOCATE  COMP  "sinGen"  SITE  "N17";
 LOCATE  COMP  "sin_out"  SITE  "G3";
 
@@ -500,5 +499,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 00:35:19 2024
+Sun Aug 25 17:36:58 2024
 

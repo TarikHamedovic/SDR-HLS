@@ -14,6 +14,10 @@ STRATEGY   ?= $(SCRIPTS)/ulx3s.sty
 VHDL_FILES ?=
 SBX_FILES  ?=
 LOG_DIR    ?= log
+BUILD_DIR  ?= build
+
+# Ensure the build directory exists
+$(shell mkdir -p $(BUILD_DIR))
 
 #========================================================================================
 # Tools Installation
@@ -108,25 +112,24 @@ ECPPACK       ?= $(TRELLIS)/libtrellis/ecppack
 TRELLISDB     ?= $(TRELLIS)/database
 LIBTRELLIS    ?= $(TRELLIS)/libtrellis
 BIT2SVF       ?= $(TRELLIS)/tools/bit_to_svf.py
-YOSYS_OPTIONS ?=
 
 #========================================================================================
 # Clock Generator
 #========================================================================================
 CLK0_NAME      ?= clk0
-CLK0_FILE_NAME ?= clocks/$(CLK0_NAME).v
+CLK0_FILE_NAME ?= $(BUILD_DIR)/clocks/$(CLK0_NAME).v
 CLK0_OPTIONS   ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0
 
 CLK1_NAME      ?= clk1
-CLK1_FILE_NAME ?= clocks/$(CLK1_NAME).v
+CLK1_FILE_NAME ?= $(BUILD_DIR)/clocks/$(CLK1_NAME).v
 CLK1_OPTIONS   ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0
 
 CLK2_NAME      ?= clk2
-CLK2_FILE_NAME ?= clocks/$(CLK2_NAME).v
+CLK2_FILE_NAME ?= $(BUILD_DIR)/clocks/$(CLK2_NAME).v
 CLK2_OPTIONS   ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0
 
 CLK3_NAME      ?= clk3
-CLK3_FILE_NAME ?= clocks/$(CLK3_NAME).v
+CLK3_FILE_NAME ?= $(BUILD_DIR)/clocks/$(CLK3_NAME).v
 CLK3_OPTIONS   ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0
 
 #========================================================================================
@@ -164,10 +167,11 @@ FPGA_PACKAGE_UPPERCASE := $(shell echo $(FPGA_PACKAGE) | tr '[:lower:]' '[:upper
 # Toolchain Targets
 #========================================================================================
 
-BITSTREAM ?= $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+BITSTREAM ?= $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
 do_all: $(BITSTREAM)
 
 all: $(BITSTREAM) prog
+
 #-------------------------------
 # VHDL to Verilog Conversion
 #-------------------------------
@@ -177,14 +181,14 @@ all: $(BITSTREAM) prog
 #-------------------------------
 # Synthesis and Implementation
 #-------------------------------
-$(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)
+$(BUILD_DIR)/$(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)
 	$(YOSYS) \
 	-p "hierarchy -top ${TOP_MODULE}" \
-	-p "synth_ecp5 ${YOSYS_OPTIONS} -json ${PROJECT}.json" \
+	-p "synth_ecp5 ${YOSYS_OPTIONS} -json $(BUILD_DIR)/${PROJECT}.json" \
 	$(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)
 
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(PROJECT).json $(BASECFG)
-	$(NEXTPNR-ECP5) --$(FPGA_K)k --json $(PROJECT).json --lpf $(CONSTRAINTS) --basecfg $(BASECFG) --textcfg $@
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(BUILD_DIR)/$(PROJECT).json $(BASECFG)
+	$(NEXTPNR-ECP5) --$(FPGA_K)k --json $(BUILD_DIR)/$(PROJECT).json --lpf $(CONSTRAINTS) --basecfg $(BASECFG) --textcfg $@
 
 #-------------------------------
 # Clock File Generation
@@ -204,7 +208,7 @@ $(CLK3_FILE_NAME):
 #-------------------------------
 # Lattice Diamond Implementation
 #-------------------------------
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf: $(SCRIPTS)/project.ldf $(SCRIPTS)/ldf.xsl $(SCRIPTS)/$(BOARD)_sram.xcf
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf: $(SCRIPTS)/project.ldf $(SCRIPTS)/ldf.xsl $(SCRIPTS)/$(BOARD)_sram.xcf
 	xsltproc \
 	  --stringparam FPGA_DEVICE $(FPGA_CHIP_UPPERCASE)-$(FPGA_PACKAGE_UPPERCASE) \
 	  --stringparam CONSTRAINTS_FILE $(CONSTRAINTS) \
@@ -217,107 +221,87 @@ $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf: $(SCRIPTS)/project.ldf $(SCRIPTS)/ldf.xsl
 	  --stringparam SBX_FILES "$(SBX_FILES)" \
 	  $(SCRIPTS)/ldf.xsl $(SCRIPTS)/project.ldf > $@
 
-project/project_project.bit: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf $(VERILOG_FILES) $(VHDL_FILES)
-	echo prj_project open $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf \; prj_run Export -task Bitgen | ${DIAMONDC}
+$(BUILD_DIR)/$(PROJECT).bit: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf $(VERILOG_FILES) $(VHDL_FILES)
+	echo prj_project open $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf \; prj_run Export -task Bitgen | ${DIAMONDC}
 
-
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit: project/project_project.bit
-	ln -sf project/project_project.bit $@
+$(BITSTREAM): $(BUILD_DIR)/$(PROJECT).bit
+	ln -sf $(BUILD_DIR)/$(PROJECT).bit $@
 
 #-------------------------------
 # XCF and VME File Generation
 #-------------------------------
-$(BOARD)_$(FPGA_SIZE)f.xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)/$(BOARD)_sram.xcf $(SCRIPTS)/xcf.xsl
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.xcf: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)/$(BOARD)_sram.xcf $(SCRIPTS)/xcf.xsl
 	xsltproc \
 	  --stringparam FPGA_CHIP $(FPGA_CHIP_UPPERCASE) \
 	  --stringparam CHIP_ID $(CHIP_ID) \
-	  --stringparam BITSTREAM_FILE $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit \
+	  --stringparam BITSTREAM_FILE $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit \
 	  $(SCRIPTS)/xcf.xsl $(SCRIPTS)/$(BOARD)_sram.xcf > $@
 
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
-	LANG=C ${DDTCMD} -oft -fullvme -if $(BOARD)_$(FPGA_SIZE)f.xcf -nocompress -noheader -of $@
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.xcf $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+	LANG=C ${DDTCMD} -oft -fullvme -if $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.xcf -nocompress -noheader -of $@
 
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
-	LANG=C ${DDTCMD} -oft -svfsingle -revd -maxdata 8 -if $(BOARD)_$(FPGA_SIZE)f.xcf -of $@
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.xcf $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+	LANG=C ${DDTCMD} -oft -svfsingle -revd -maxdata 8 -if $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.xcf -of $@
 
 #-------------------------------
 # Flash Programming Files
 #-------------------------------
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
 	LANG=C ${DDTCMD} -dev $(FPGA_CHIP_UPPERCASE) \
 	-if $< -oft -int -quad $(FPGA_SPI) -of $@
 
-$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)/$(BOARD)_flash_$(FLASH_CHIP).xcf $(SCRIPTS)/xcf.xsl
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)/$(BOARD)_flash_$(FLASH_CHIP).xcf $(SCRIPTS)/xcf.xsl
 	xsltproc \
 	  --stringparam FPGA_CHIP $(FPGA_CHIP_UPPERCASE) \
 	  --stringparam CHIP_ID $(CHIP_ID) \
 	  --stringparam MASK_FILE $(MASK_PATH)/$(MASK_FILE) \
-	  --stringparam BITSTREAM_FILE $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs \
+	  --stringparam BITSTREAM_FILE $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs \
 	  $(SCRIPTS)/xcf.xsl $(SCRIPTS)/$(BOARD)_flash_$(FLASH_CHIP).xcf > $@
 
-$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme: $(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs
-	LANG=C ${DDTCMD} -oft -fullvme -if $(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf -nocompress -noheader -of $@
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs
+	LANG=C ${DDTCMD} -oft -fullvme -if $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf -nocompress -noheader -of $@
 
 #-------------------------------
 # Programming Targets
 #-------------------------------
 prog: program
-program: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+program: $(BITSTREAM)
 	$(UJPROG) $<
 
 prog_ofl: program_ofl
-program_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+program_ofl: $(BITSTREAM)
 	$(OPENFPGALOADER) $(OPENFPGALOADER_OPTIONS) $<
 
-program_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme
+program_flea: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme
 	$(FLEAFPGA_JTAG) $<
 
-flash: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+flash: $(BITSTREAM)
 	$(UJPROG) -j flash $<
 
-flash_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme
+flash_flea: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme
 	$(FLEAFPGA_JTAG) $<
 
-flash_dfu: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+flash_dfu: $(BITSTREAM)
 	$(DFU_UTIL) -a 0 -D $<
 	$(DFU_UTIL) -a 0 -e
 
-flash_tiny: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
+flash_tiny: $(BITSTREAM)
 	$(TINYFPGASP) -w $<
 
-$(BOARD)_$(FPGA_SIZE)f.ocd: $(SCRIPTS)/ecp5-ocd.sh
-	$(SCRIPTS)/ecp5-ocd.sh $(CHIP_ID) $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf > $@
+$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.ocd: $(SCRIPTS)/ecp5-ocd.sh
+	$(SCRIPTS)/ecp5-ocd.sh $(CHIP_ID) $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf > $@
 
 prog_ocd: program_ocd
-program_ocd: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BOARD)_$(FPGA_SIZE)f.ocd
-	$(OPENOCD) --file=$(OPENOCD_INTERFACE) --file=$(BOARD)_$(FPGA_SIZE)f.ocd
+program_ocd: $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.ocd
+	$(OPENOCD) --file=$(OPENOCD_INTERFACE) --file=$(BUILD_DIR)/$(BOARD)_$(FPGA_SIZE)f.ocd
 
 #========================================================================================
 # Clean Targets
 #========================================================================================
 JUNK = *~
-JUNK += $(PROJECT).json
-JUNK += $(VHDL_TO_VERILOG_FILES)
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf
-JUNK += $(BOARD)_$(FPGA_SIZE)f.xcf
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs
-JUNK += $(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf
-JUNK += $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme
-JUNK += $(BOARD)_$(FPGA_SIZE)f.ocd
-JUNK += $(CLK0_FILE_NAME) $(CLK1_FILE_NAME) $(CLK2_FILE_NAME) $(CLK3_FILE_NAME)
-JUNK += ${IMPL_DIR} .recovery ._Real_._Math_.vhd *.sty reportview.xml
-JUNK += dummy_sym.sort project_tcl.html promote.xml .run_manager.ini
-JUNK += generate_core.tcl generate_ngd.tcl msg_file.log
-
-JUNK_DIR = project
-JUNK_DIR += project_tcr.dir
+JUNK += $(BUILD_DIR)/*
 
 clean:
-	rm -rf $(JUNK_DIR)
-	rm -f $(JUNK)
+	rm -rf $(BUILD_DIR)
 	rm -rf $(LOG_DIR)
 

@@ -1,5 +1,5 @@
-[dumpfile] "/home/user/SDR-HLS/HLSImplementation/Examples/1.Blinky/Blinky.vcd"
-[dumpfile_size] 1347792
+[dumpfile] "/home/user/SDR-HLS/2.HLSImplementation/Examples/1.Blinky/Blinky.vcd"
+[dumpfile_size] 1655350
 [treeopen] top.
 @22
 bench.top.leds[7:0]

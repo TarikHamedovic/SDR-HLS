@@ -61,7 +61,7 @@ module top (
     wire clk_80mhz;
 
     // ------------- NCO Signals ---------------- //
-    reg signed [PHASE_WIDTH-1:0]     phase_increment[PHASE_ARRAY_SIZE];
+    reg signed [PHASE_WIDTH-1:0]     phase_increment[0:PHASE_ARRAY_SIZE-1];
     wire                             cos_output;
     wire                             sin_output;
     wire       [PHASE_WIDTH-1:0]     phase_accumulator;
@@ -90,7 +90,7 @@ module top (
     wire                             rx_data_valid1;
     wire        [7:0]                rx_byte1;
 
-    /*
+
     // NOTE: This is Lattice IP PLL
     //===========================//
     //          PLL IP           //
@@ -99,9 +99,9 @@ module top (
         .CLKI (clk_25mhz),
         .CLKOP(clk_80mhz)
     );
-    */
 
 
+    /*
     // NOTE: This is open-source PLL
     // I converted it to Verilog using sv2v tool
     //===========================//
@@ -124,6 +124,7 @@ module top (
         .clk_o(clocks),
         .reset()
     );
+    */
     /*
     //NOTE: If using SinCos IP uncomment
     //===========================//

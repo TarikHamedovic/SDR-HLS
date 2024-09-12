@@ -1,0 +1,111 @@
+/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Mixer.v 
+-- Compiling module Mixer
+
+Top level modules:
+	Mixer
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_generator.v 
+-- Compiling module quarterwave_generator
+
+Top level modules:
+	quarterwave_generator
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:39 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/UartRX.v 
+-- Compiling module uart_rx
+
+Top level modules:
+	uart_rx
+End time: 11:14:39 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/quarterwave_table.v 
+-- Compiling module quarterwave_table
+
+Top level modules:
+	quarterwave_table
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:41 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/Multiplier_tb.v 
+-- Compiling module Multiplier_tb
+
+Top level modules:
+	Multiplier_tb
+End time: 11:14:41 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/Multiplier.v 
+-- Compiling module Multiplier
+
+Top level modules:
+	Multiplier
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/AMDemod.v 
+-- Compiling module AMDemodulator
+
+Top level modules:
+	AMDemodulator
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/CIC.v 
+-- Compiling module CIC
+
+Top level modules:
+	CIC
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:41 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/top.v 
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 11:14:41 on Sep 10,2024, Elapsed time: 0:00:00
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:39 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PWM.v 
+-- Compiling module PWM
+
+Top level modules:
+	PWM
+End time: 11:14:40 on Sep 10,2024, Elapsed time: 0:00:01
+
+} {} {}} /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v {1 {vlog -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+Start time: 11:14:40 on Sep 10,2024
+vlog -reportprogress 300 -work work /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/impl1/source/PLL.v 
+-- Compiling module PLL
+
+Top level modules:
+	PLL
+End time: 11:14:41 on Sep 10,2024, Elapsed time: 0:00:01
+
+} {} {}}

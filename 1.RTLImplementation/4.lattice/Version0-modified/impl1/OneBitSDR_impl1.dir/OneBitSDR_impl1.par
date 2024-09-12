@@ -1,0 +1,28 @@
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Sep  6 10:54:43 2024
+
+/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f
+OneBitSDR_impl1.p2t OneBitSDR_impl1_map.ncd OneBitSDR_impl1.dir
+OneBitSDR_impl1.prf -gui -msgset
+/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0-modified/promote.xml
+
+
+Preference file: OneBitSDR_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            -3.132       10028042     -0.806       69866        02:32        Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 2 mins 32 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

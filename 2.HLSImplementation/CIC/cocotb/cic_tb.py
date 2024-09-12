@@ -14,7 +14,7 @@ import numpy as np
 signals = [
     'data_in', 'count', 'integrator1', 'integrator2', 'integrator3', 'integrator4', 'integrator5',
     'comb6', 'comb7', 'comb8', 'comb9', 'comb10', 'comb_d6', 'comb_d7', 'comb_d8', 'comb_d9',
-    'integrator_tmp', 'integrator_d_tmp', 'valid_comb', 'decimation_clk', 'scaled_output', 'data_out', 'gain'
+    'integrator_tmp', 'integrator_d_tmp', 'valid_comb', 'decimation_clk', 'data_out', 'gain'
 ]
 
 def initialize_dut(dut):
@@ -60,7 +60,6 @@ def print_vars(dut):
         ["integrator_d_tmp", str(dut.integrator_d_tmp.value)],
         ["valid_comb", str(dut.valid_comb.value)],
         ["decimation_clk", str(dut.decimation_clk.value)],
-        ["scaled_output", str(dut.scaled_output.value)],
         ["data_out", str(dut.data_out.value)],
         ["gain", str(dut.gain.value)]
     ]
@@ -123,10 +122,9 @@ def decimation_check(dut, count_e, valid_comb_e, integrator_tmp_e, decimation_cl
     cocotb.log.info("----------------Checking decimation signals---------------------")
     check_signals(dut, expected_values, signals_to_check, iteration)
 
-def comb(dut, valid_comb_e, integrator_tmp_e, decimation_clk_e, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim):
+def comb(dut, valid_comb_e, integrator_tmp_e, decimation_clk_e, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, data_out, valid_comb_sim):
     if valid_comb_sim:
         data_out = comb10 >> (64 - 12 - int(dut.gain.value))
-        scaled_output = comb10
 
         comb10 = comb9 - comb_d9
         comb_d9 = comb9
@@ -143,11 +141,11 @@ def comb(dut, valid_comb_e, integrator_tmp_e, decimation_clk_e, integrator_d_tmp
     if valid_comb_e:
         valid_comb_sim = 1
 
-    return integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim
+    return integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, data_out, valid_comb_sim
 
-def comb_check(dut, integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, scaled_output_e, data_out_e, iteration):
-    expected_values = [integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, scaled_output_e, data_out_e]
-    signals_to_check = ['integrator_d_tmp', 'comb6', 'comb_d6', 'comb7', 'comb_d7', 'comb8', 'comb_d8', 'comb9', 'comb_d9', 'comb10', 'scaled_output', 'data_out']
+def comb_check(dut, integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, data_out_e, iteration):
+    expected_values = [integrator_d_tmp_e, comb6_e, comb_d6_e, comb7_e, comb_d7_e, comb8_e, comb_d8_e, comb9_e, comb_d9_e, comb10_e, data_out_e]
+    signals_to_check = ['integrator_d_tmp', 'comb6', 'comb_d6', 'comb7', 'comb_d7', 'comb8', 'comb_d8', 'comb9', 'comb_d9', 'comb10', 'data_out']
     cocotb.log.info("----------------Checking comb signals---------------------")
     check_signals(dut, expected_values, signals_to_check, iteration)
 
@@ -186,8 +184,8 @@ async def decimation_process(dut, shared_state, decimation_ratio, number_of_iter
 async def comb_process(dut, shared_state, number_of_iterations):
     valid_comb_sim = 0
     for iteration in range(number_of_iterations):
-        integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, valid_comb_sim = comb(
-            dut, shared_state['valid_comb_e'], shared_state['integrator_tmp_e'], shared_state['decimation_clk_e'], shared_state['integrator_d_tmp_e'], shared_state['comb6_e'], shared_state['comb_d6_e'], shared_state['comb7_e'], shared_state['comb_d7_e'], shared_state['comb8_e'], shared_state['comb_d8_e'], shared_state['comb9_e'], shared_state['comb_d9_e'], shared_state['comb10_e'], shared_state['scaled_output_e'], shared_state['data_out_e'], valid_comb_sim)
+        integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, data_out, valid_comb_sim = comb(
+            dut, shared_state['valid_comb_e'], shared_state['integrator_tmp_e'], shared_state['decimation_clk_e'], shared_state['integrator_d_tmp_e'], shared_state['comb6_e'], shared_state['comb_d6_e'], shared_state['comb7_e'], shared_state['comb_d7_e'], shared_state['comb8_e'], shared_state['comb_d8_e'], shared_state['comb9_e'], shared_state['comb_d9_e'], shared_state['comb10_e'], shared_state['data_out_e'], valid_comb_sim)
         shared_state.update({
             'integrator_d_tmp_e': integrator_d_tmp,
             'comb6_e': comb6,
@@ -199,20 +197,24 @@ async def comb_process(dut, shared_state, number_of_iterations):
             'comb9_e': comb9,
             'comb_d9_e': comb_d9,
             'comb10_e': comb10,
-            'scaled_output_e': scaled_output,
             'data_out_e': data_out,
             'valid_comb_simulation': valid_comb_sim
         })
         await RisingEdge(dut.clk)
-        comb_check(dut, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, scaled_output, data_out, iteration + 1)
+        comb_check(dut, integrator_d_tmp, comb6, comb_d6, comb7, comb_d7, comb8, comb_d8, comb9, comb_d9, comb10, data_out, iteration + 1)
         cocotb.log.info("================================================================")
 
 @cocotb.test()
 async def CIC_test(dut):
     # Configuration from environment variables
-    input_bits = 12
-    register_width = 32
+    #data_width = dut.DATA_WIDTH.value
+    #register_width = dut.REGISTER_WIDTH.value
+    #decimation_ratio = dut.DECIMATION_RATIO.value
+    #gain_width = dut.GAIN_WIDTH.value
+    data_width = 12
+    register_width = 64
     decimation_ratio = 16
+    gain_width = 8
     number_of_iterations = int(os.environ.get("ITERATIONS", 50))
     clock_value = float(os.environ.get("CLOCK_VALUE", 12.5))
     cocotb.log.info(f"[Test Start] Starting CIC cocotb test with clock_value = {clock_value} ns")
@@ -247,7 +249,6 @@ async def CIC_test(dut):
         'comb9_e': 0,
         'comb_d9_e': 0,
         'comb10_e': 0,
-        'scaled_output_e': 0,
         'data_out_e': 0,
         'valid_comb_simulation': 0
     }
@@ -264,7 +265,7 @@ async def CIC_test(dut):
     # Summary Table
     summary_table = [
         ["Metric", "Value"],
-        ["Input Width", input_bits],
+        ["Data Width", data_width],
         ["Register Width", register_width],
         ["Decimation Ratio", decimation_ratio],
         ["Clock frequency (MHz)", f"{1/clock_value * 1000}"],

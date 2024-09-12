@@ -2,18 +2,22 @@ module sqrt_sequential #(
     // Parameter N must be an even number
     parameter int N = 16
 ) (
-    input logic clk,
-    input logic reset_n,
-    input logic [N-1:0] num,
-    output logic [N/2-1:0] res,
+    input  logic clk,
+    input  logic reset_n,
 
-    // TODO: Change names to num_vld, num_rdy res_vld, res_rdy
-    input  logic i_valid,
-    output logic o_ready,
+    input  logic num_vld,
+    output logic num_rdy,
+    input  logic [N-1:0] num,
 
-    output logic o_valid,
-    input  logic i_ready
+    output logic res_vld,
+    input  logic res_rdy,
+    output logic [N/2-1:0] res
 );
+
+  //(num_vld && res_vld) ----> && num_rdy ---> primi podatak
+
+  //res_vld && res_rdy ----> poslao
+
 
   typedef enum logic [1:0] {
     IDLE      = 2'b00,
@@ -32,8 +36,8 @@ module sqrt_sequential #(
 
   always_ff @(posedge clk) begin
     if (reset_n == 1'b0) begin
-      o_valid       <= 1'b0;
-      o_ready       <= 1'b0;
+      num_rdy       <= 1'b0;
+      res_vld       <= 1'b0;
       current_count <= '0;
       q             <= '0;
       r_reg         <= '0;
@@ -43,34 +47,34 @@ module sqrt_sequential #(
       unique case (sqrt_state)
 
         IDLE: begin
-          o_ready <= 1'b1;
-          if (i_valid == 1'b1) begin
-            a <= num;
-            sqrt_state <= COMP;
+          num_rdy <= 1'b1;
+          res_vld <= 1'b0;
+          current_count <= '0;
+          q             <= '0;
+          r_reg         <= '0;
+          if (num_vld == 1'b1) begin
+            a           <= num;
+            sqrt_state  <= COMP;
           end
         end
 
         COMP: begin
+          num_rdy       <= 1'b0;
           if (current_count == '1) begin
-            sqrt_state <= FINISH;
+            sqrt_state  <= FINISH;
           end
           current_count <= current_count + 1'b1;
           a             <= a << 2;
           q             <= {q[N/2-2:0], ~r[N/2+1]};
           r_reg         <= r;
-          o_ready       <= 1'b0;
         end
 
         FINISH: begin
-          if (i_ready == 1'b1) begin
-            res <= q;
+          res           <= q;
+          res_vld       <= 1'b1;
+          if (res_rdy == 1'b1) begin
+            sqrt_state  <= IDLE;
           end
-          o_valid       <= 1'b1;
-          current_count <= '0;
-          q             <= '0;
-          r_reg         <= '0;
-          a             <= '0;
-          sqrt_state    <= IDLE;
         end
         default: sqrt_state <= IDLE;
       endcase
