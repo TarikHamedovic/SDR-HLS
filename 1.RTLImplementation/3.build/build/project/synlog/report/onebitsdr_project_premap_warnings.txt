@@ -1,0 +1,3 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data cic_sine_inst.data_clk; this will likely lead to failure to convert
+@W: MT529 :|Found inferred clock PLL|CLKOP_inferred_clock which controls 2560 sequential elements including nco_inst.phase_accumulator[63:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

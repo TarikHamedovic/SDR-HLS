@@ -26,6 +26,46 @@ shared_vars = {
     'analog_value4': 0
 }
 
+async def generate_am_sine_wave(dut, carrier_frequency=1e6, modulation_frequency=5e3, modulation_index=1):
+    """Generate an amplitude-modulated sine wave as analog input with given carrier and modulation frequencies."""
+    
+    # Calculate the clock period in seconds
+    clock_period = clock_value * 1e-9  # Convert nanoseconds to seconds (40 ns)
+
+    # Calculate the phase step per clock cycle for carrier and modulation
+    carrier_step = 2 * np.pi * carrier_frequency * clock_period
+    modulation_step = 2 * np.pi * modulation_frequency * clock_period
+
+    carrier_phase = 0
+    modulation_phase = 0
+
+    while True:
+        await RisingEdge(dut.clk_in)
+
+        # Calculate the modulation signal (sinusoidal between 0 and 1)
+        modulation_signal = (1 + modulation_index * np.sin(modulation_phase)) / 2
+
+        # Calculate the AM sine wave (carrier * modulation)
+        shared_vars['analog_input'] = int(modulation_signal * (np.sin(carrier_phase) + 1) * (FULL_RANGE // 2))
+
+        # Clip the value if it goes beyond the allowable range
+        if shared_vars['analog_input'] > 2**FULL_RANGE_BITS - 1:
+            dut.analog_input.value = 2**FULL_RANGE_BITS - 1
+        else:
+            dut.analog_input.value = shared_vars['analog_input']
+
+        # Increment phases for carrier and modulation
+        carrier_phase += carrier_step
+        modulation_phase += modulation_step
+
+        # Reset phases if they exceed 2*pi
+        if carrier_phase >= 2 * np.pi:
+            carrier_phase -= 2 * np.pi
+        if modulation_phase >= 2 * np.pi:
+            modulation_phase -= 2 * np.pi
+
+        cocotb.log.info(f"COROUTINE generate_am_sine_wave: analog_input = {shared_vars['analog_input']}")
+
 async def generate_input_sine_wave(dut):
     """Generate a sine wave signal as analog input."""
     phase = 0
@@ -111,8 +151,9 @@ async def adc_tf(dut):
     await RisingEdge(dut.clk_in)
     
     # Start the sinewave generator
-    cocotb.start_soon(generate_input_sine_wave(dut))
+    #cocotb.start_soon(generate_input_sine_wave(dut))
     #dut.analog_input.value = 100
+    cocotb.start_soon(generate_am_sine_wave(dut))
 
     # Start the sawtooth generator
     #cocotb.start_soon(generate_input_sawtooth_ramp(dut))

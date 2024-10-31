@@ -1,0 +1,53 @@
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":687:4:687:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":696:4:696:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":705:4:705:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":714:4:714:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":723:4:723:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":732:4:732:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":741:4:741:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":750:4:750:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":759:4:759:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":768:4:768:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":777:4:777:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":786:4:786:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":795:4:795:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1075:4:1075:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1102:4:1102:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1326:4:1326:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1353:4:1353:5|Ignoring attribute full_case on statement
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1488:4:1488:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1497:4:1497:5|Ignoring attribute full_case on statement
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2316:28:2316:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2352:28:2352:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2502:4:2502:5|Ignoring attribute full_case on statement
+@W: CL271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2486:2:2486:7|Pruning unused bits 11 to 10 of data_in_reg[11:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CG532 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2538:2:2538:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2919:10:2919:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2935:10:2935:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2944:10:2944:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2951:10:2951:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2968:10:2968:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2971:12:2971:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2985:10:2985:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2992:10:2992:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2994:12:2994:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3004:10:3004:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3008:12:3008:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3016:10:3016:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3037:10:3037:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3073:10:3073:11|Ignoring attribute full_case on statement
+@W: CL169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2885:2:2885:7|Pruning unused register UartClk[7:0]. Make sure that there are no unused intermediate registers.
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input reset on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input standby on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasesel on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasedir on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasestep on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phaseloadreg on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":265:24:265:38|Removing instance pin_uart_0__rts because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":262:24:262:38|Removing instance pin_uart_0__dtr because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2474:15:2474:21|Input port bits 11 to 10 of data_in[11:0] are unused. Assign logic for all port bits or change the input port size.
+

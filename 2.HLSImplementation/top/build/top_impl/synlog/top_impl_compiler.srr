@@ -1,0 +1,638 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv" (library work)
+@I::"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v" (library work)
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":493:7:493:23|Synthesizing module \top.amdemod.sqrt  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":687:4:687:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":696:4:696:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":705:4:705:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":714:4:714:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":723:4:723:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":732:4:732:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":741:4:741:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":750:4:750:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":759:4:759:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":768:4:768:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":777:4:777:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":786:4:786:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":795:4:795:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.amdemod.sqrt  .......
+Finished optimization stage 1 on \top.amdemod.sqrt  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":392:7:392:18|Synthesizing module \top.amdemod  in library work.
+Running optimization stage 1 on \top.amdemod  .......
+Finished optimization stage 1 on \top.amdemod  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":146:7:146:13|Synthesizing module FD1S3AX in library work.
+Running optimization stage 1 on FD1S3AX .......
+Finished optimization stage 1 on FD1S3AX (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":753:7:753:10|Synthesizing module SGSR in library work.
+Running optimization stage 1 on SGSR .......
+Finished optimization stage 1 on SGSR (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":278:7:278:8|Synthesizing module IB in library work.
+Running optimization stage 1 on IB .......
+Finished optimization stage 1 on IB (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":934:7:934:30|Synthesizing module \top.cd_sync.clk_buf.buf  in library work.
+Running optimization stage 1 on \top.cd_sync.clk_buf.buf  .......
+Finished optimization stage 1 on \top.cd_sync.clk_buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":921:7:921:26|Synthesizing module \top.cd_sync.clk_buf  in library work.
+Running optimization stage 1 on \top.cd_sync.clk_buf  .......
+Finished optimization stage 1 on \top.cd_sync.clk_buf  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":886:7:886:18|Synthesizing module \top.cd_sync  in library work.
+Running optimization stage 1 on \top.cd_sync  .......
+Finished optimization stage 1 on \top.cd_sync  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":945:7:945:21|Synthesizing module \top.cic_cosine  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1075:4:1075:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1102:4:1102:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.cic_cosine  .......
+Finished optimization stage 1 on \top.cic_cosine  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1196:7:1196:19|Synthesizing module \top.cic_sine  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1326:4:1326:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1353:4:1353:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.cic_sine  .......
+Finished optimization stage 1 on \top.cic_sine  (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":11:7:11:13|Synthesizing module ecp5pll in library work.
+
+	in_hz=32'b00000001011111010111100001000000
+	out0_hz=32'b00000100110001001011010000000000
+	out0_deg=32'b00000000000000000000000000000000
+	out0_tol_hz=32'b00000000000000000000000000000000
+	out1_hz=32'b00000000000000000000000000000000
+	out1_deg=32'b00000000000000000000000000000000
+	out1_tol_hz=32'b00000000000000000000000000000000
+	out2_hz=32'b00000000000000000000000000000000
+	out2_deg=32'b00000000000000000000000000000000
+	out2_tol_hz=32'b00000000000000000000000000000000
+	out3_hz=32'b00000000000000000000000000000000
+	out3_deg=32'b00000000000000000000000000000000
+	out3_tol_hz=32'b00000000000000000000000000000000
+	reset_en=32'b00000000000000000000000000000000
+	standby_en=32'b00000000000000000000000000000000
+	dynamic_en=32'b00000000000000000000000000000000
+	PFD_MIN=32'b00000000001011111010111100001000
+	PFD_MAX=32'b00010111110101111000010000000000
+	VCO_MIN=32'b00010111110101111000010000000000
+	VCO_MAX=32'b00101111101011110000100000000000
+	VCO_OPTIMAL=32'b00100011110000110100011000000000
+	params_refclk_div=32'b00000000000000000000000000000101
+	params_feedback_div=32'b00000000000000000000000000010000
+	params_output_div=32'b00000000000000000000000000000111
+	params_fout=32'b00000100110001001011010000000000
+	params_fvco=32'b00100001011000001110110000000000
+	params_primary_phase_x8=32'b00000000000000000000000000000000
+	params_primary_cphase=32'b00000000000000000000000000000110
+	params_primary_fphase=32'b00000000000000000000000000000000
+	params_secondary1_div=32'b00000000000000000000000000000001
+	params_secondary1_cphase=32'b00000000000000000000000000000000
+	params_secondary1_fphase=32'b00000000000000000000000000000000
+	params_secondary2_div=32'b00000000000000000000000000000001
+	params_secondary2_cphase=32'b00000000000000000000000000000000
+	params_secondary2_fphase=32'b00000000000000000000000000000000
+	params_secondary3_div=32'b00000000000000000000000000000001
+	params_secondary3_cphase=32'b00000000000000000000000000000000
+	params_secondary3_fphase=32'b00000000000000000000000000000000
+	error_out0_hz=1'b0
+	error_out1_hz=32'b00000000000000000000000000000000
+	error_out2_hz=32'b00000000000000000000000000000000
+	error_out3_hz=32'b00000000000000000000000000000000
+	trig_out0_hz=32'b00000000000000000000000000000000
+	trig_out1_hz=32'b00000000000000000000000000000000
+	trig_out2_hz=32'b00000000000000000000000000000000
+	trig_out3_hz=32'b00000000000000000000000000000000
+   Generated name = ecp5pll_Z1
+Running optimization stage 1 on ecp5pll_Z1 .......
+Finished optimization stage 1 on ecp5pll_Z1 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1447:7:1447:16|Synthesizing module \top.mixer  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1488:4:1488:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1497:4:1497:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.mixer  .......
+Finished optimization stage 1 on \top.mixer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1535:7:1535:39|Synthesizing module \top.pin_antenna_0__rf_in.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in.buf.buf  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1522:7:1522:35|Synthesizing module \top.pin_antenna_0__rf_in.buf  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in.buf  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1509:7:1509:31|Synthesizing module \top.pin_antenna_0__rf_in  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":602:7:602:9|Synthesizing module OBZ in library work.
+Running optimization stage 1 on OBZ .......
+Finished optimization stage 1 on OBZ (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1577:7:1577:28|Synthesizing module \top.pin_led_0.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_0.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_0.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1559:7:1559:24|Synthesizing module \top.pin_led_0.buf  in library work.
+Running optimization stage 1 on \top.pin_led_0.buf  .......
+Finished optimization stage 1 on \top.pin_led_0.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1546:7:1546:20|Synthesizing module \top.pin_led_0  in library work.
+Running optimization stage 1 on \top.pin_led_0  .......
+Finished optimization stage 1 on \top.pin_led_0  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1622:7:1622:28|Synthesizing module \top.pin_led_1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1604:7:1604:24|Synthesizing module \top.pin_led_1.buf  in library work.
+Running optimization stage 1 on \top.pin_led_1.buf  .......
+Finished optimization stage 1 on \top.pin_led_1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1591:7:1591:20|Synthesizing module \top.pin_led_1  in library work.
+Running optimization stage 1 on \top.pin_led_1  .......
+Finished optimization stage 1 on \top.pin_led_1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1667:7:1667:28|Synthesizing module \top.pin_led_2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1649:7:1649:24|Synthesizing module \top.pin_led_2.buf  in library work.
+Running optimization stage 1 on \top.pin_led_2.buf  .......
+Finished optimization stage 1 on \top.pin_led_2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1636:7:1636:20|Synthesizing module \top.pin_led_2  in library work.
+Running optimization stage 1 on \top.pin_led_2  .......
+Finished optimization stage 1 on \top.pin_led_2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1712:7:1712:28|Synthesizing module \top.pin_led_3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1694:7:1694:24|Synthesizing module \top.pin_led_3.buf  in library work.
+Running optimization stage 1 on \top.pin_led_3.buf  .......
+Finished optimization stage 1 on \top.pin_led_3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1681:7:1681:20|Synthesizing module \top.pin_led_3  in library work.
+Running optimization stage 1 on \top.pin_led_3  .......
+Finished optimization stage 1 on \top.pin_led_3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1757:7:1757:28|Synthesizing module \top.pin_led_4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1739:7:1739:24|Synthesizing module \top.pin_led_4.buf  in library work.
+Running optimization stage 1 on \top.pin_led_4.buf  .......
+Finished optimization stage 1 on \top.pin_led_4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1726:7:1726:20|Synthesizing module \top.pin_led_4  in library work.
+Running optimization stage 1 on \top.pin_led_4  .......
+Finished optimization stage 1 on \top.pin_led_4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1802:7:1802:28|Synthesizing module \top.pin_led_5.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_5.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_5.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1784:7:1784:24|Synthesizing module \top.pin_led_5.buf  in library work.
+Running optimization stage 1 on \top.pin_led_5.buf  .......
+Finished optimization stage 1 on \top.pin_led_5.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1771:7:1771:20|Synthesizing module \top.pin_led_5  in library work.
+Running optimization stage 1 on \top.pin_led_5  .......
+Finished optimization stage 1 on \top.pin_led_5  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1847:7:1847:28|Synthesizing module \top.pin_led_6.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_6.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_6.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1829:7:1829:24|Synthesizing module \top.pin_led_6.buf  in library work.
+Running optimization stage 1 on \top.pin_led_6.buf  .......
+Finished optimization stage 1 on \top.pin_led_6.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1816:7:1816:20|Synthesizing module \top.pin_led_6  in library work.
+Running optimization stage 1 on \top.pin_led_6  .......
+Finished optimization stage 1 on \top.pin_led_6  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1892:7:1892:28|Synthesizing module \top.pin_led_7.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_7.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_7.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1874:7:1874:24|Synthesizing module \top.pin_led_7.buf  in library work.
+Running optimization stage 1 on \top.pin_led_7.buf  .......
+Finished optimization stage 1 on \top.pin_led_7.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1861:7:1861:20|Synthesizing module \top.pin_led_7  in library work.
+Running optimization stage 1 on \top.pin_led_7  .......
+Finished optimization stage 1 on \top.pin_led_7  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1937:7:1937:37|Synthesizing module \top.pin_pwm_0__pwm_out.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1919:7:1919:33|Synthesizing module \top.pin_pwm_0__pwm_out.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1906:7:1906:29|Synthesizing module \top.pin_pwm_0__pwm_out  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1982:7:1982:40|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1964:7:1964:36|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1951:7:1951:32|Synthesizing module \top.pin_pwm_0__pwm_out_n1  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2027:7:2027:40|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2009:7:2009:36|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1996:7:1996:32|Synthesizing module \top.pin_pwm_0__pwm_out_n2  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2072:7:2072:40|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2054:7:2054:36|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2041:7:2041:32|Synthesizing module \top.pin_pwm_0__pwm_out_n3  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2117:7:2117:40|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2099:7:2099:36|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2086:7:2086:32|Synthesizing module \top.pin_pwm_0__pwm_out_n4  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2162:7:2162:40|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2144:7:2144:36|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2131:7:2131:32|Synthesizing module \top.pin_pwm_0__pwm_out_p1  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2207:7:2207:40|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2189:7:2189:36|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2176:7:2176:32|Synthesizing module \top.pin_pwm_0__pwm_out_p2  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2252:7:2252:40|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2234:7:2234:36|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2221:7:2221:32|Synthesizing module \top.pin_pwm_0__pwm_out_p3  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2297:7:2297:40|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2279:7:2279:36|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2266:7:2266:32|Synthesizing module \top.pin_pwm_0__pwm_out_p4  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2336:7:2336:34|Synthesizing module \top.pin_uart_0__dtr.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__dtr.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2323:7:2323:30|Synthesizing module \top.pin_uart_0__dtr.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__dtr.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2311:7:2311:26|Synthesizing module \top.pin_uart_0__dtr  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr  .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2316:28:2316:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on \top.pin_uart_0__dtr  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2372:7:2372:34|Synthesizing module \top.pin_uart_0__rts.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rts.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2359:7:2359:30|Synthesizing module \top.pin_uart_0__rts.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rts.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2347:7:2347:26|Synthesizing module \top.pin_uart_0__rts  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts  .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2352:28:2352:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on \top.pin_uart_0__rts  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2409:7:2409:33|Synthesizing module \top.pin_uart_0__rx.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2396:7:2396:29|Synthesizing module \top.pin_uart_0__rx.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2383:7:2383:25|Synthesizing module \top.pin_uart_0__rx  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2450:7:2450:33|Synthesizing module \top.pin_uart_0__tx.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2432:7:2432:29|Synthesizing module \top.pin_uart_0__tx.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2420:7:2420:25|Synthesizing module \top.pin_uart_0__tx  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2464:7:2464:14|Synthesizing module \top.pwm  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2502:4:2502:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.pwm  .......
+@W: CL271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2486:2:2486:7|Pruning unused bits 11 to 10 of data_in_reg[11:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on \top.pwm  (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 139MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2512:7:2512:32|Synthesizing module \top.sine_cosine_generator  in library work.
+@W: CG532 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2538:2:2538:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on \top.sine_cosine_generator  .......
+Finished optimization stage 1 on \top.sine_cosine_generator  (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 139MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2828:7:2828:18|Synthesizing module \top.uart_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2919:10:2919:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2935:10:2935:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2944:10:2944:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2951:10:2951:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2968:10:2968:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2971:12:2971:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2985:10:2985:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2992:10:2992:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2994:12:2994:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3004:10:3004:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3008:12:3008:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3016:10:3016:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3037:10:3037:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3073:10:3073:11|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.uart_rx  .......
+@W: CL169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2885:2:2885:7|Pruning unused register UartClk[7:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on \top.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":4:7:4:9|Synthesizing module top in library work.
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input reset on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input standby on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasesel on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasedir on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasestep on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phaseloadreg on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on top .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":265:24:265:38|Removing instance pin_uart_0__rts because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":262:24:262:38|Removing instance pin_uart_0__dtr because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
+Running optimization stage 2 on top .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":128:8:128:22|Input uart_0__rts__io is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":126:8:126:22|Input uart_0__dtr__io is unused.
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.uart_rx  .......
+@N: CL201 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2901:2:2901:7|Trying to extract state machine for register r_SM_Main.
+Finished optimization stage 2 on \top.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.sine_cosine_generator  .......
+Finished optimization stage 2 on \top.sine_cosine_generator  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pwm  .......
+@W: CL246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2474:15:2474:21|Input port bits 11 to 10 of data_in[11:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on \top.pwm  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts  .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2350:8:2350:22|Input uart_0__rts__io is unused.
+Finished optimization stage 2 on \top.pin_uart_0__rts  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rts.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rts.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr  .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2314:8:2314:22|Input uart_0__dtr__io is unused.
+Finished optimization stage 2 on \top.pin_uart_0__dtr  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__dtr.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__dtr.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7  .......
+Finished optimization stage 2 on \top.pin_led_7  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7.buf  .......
+Finished optimization stage 2 on \top.pin_led_7.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_7.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6  .......
+Finished optimization stage 2 on \top.pin_led_6  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6.buf  .......
+Finished optimization stage 2 on \top.pin_led_6.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_6.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5  .......
+Finished optimization stage 2 on \top.pin_led_5  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5.buf  .......
+Finished optimization stage 2 on \top.pin_led_5.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_5.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4  .......
+Finished optimization stage 2 on \top.pin_led_4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4.buf  .......
+Finished optimization stage 2 on \top.pin_led_4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3  .......
+Finished optimization stage 2 on \top.pin_led_3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3.buf  .......
+Finished optimization stage 2 on \top.pin_led_3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2  .......
+Finished optimization stage 2 on \top.pin_led_2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2.buf  .......
+Finished optimization stage 2 on \top.pin_led_2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1  .......
+Finished optimization stage 2 on \top.pin_led_1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1.buf  .......
+Finished optimization stage 2 on \top.pin_led_1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0  .......
+Finished optimization stage 2 on \top.pin_led_0  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0.buf  .......
+Finished optimization stage 2 on \top.pin_led_0.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_0.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on OBZ .......
+Finished optimization stage 2 on OBZ (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in.buf  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in.buf.buf  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.mixer  .......
+Finished optimization stage 2 on \top.mixer  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on ecp5pll_Z1 .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":33:15:33:19|Input reset is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":34:15:34:21|Input standby is unused.
+Finished optimization stage 2 on ecp5pll_Z1 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on EHXPLLL .......
+Finished optimization stage 2 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.cic_sine  .......
+Finished optimization stage 2 on \top.cic_sine  (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 146MB)
+Running optimization stage 2 on \top.cic_cosine  .......
+Finished optimization stage 2 on \top.cic_cosine  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync  .......
+Finished optimization stage 2 on \top.cd_sync  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync.clk_buf  .......
+Finished optimization stage 2 on \top.cd_sync.clk_buf  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync.clk_buf.buf  .......
+Finished optimization stage 2 on \top.cd_sync.clk_buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on IB .......
+Finished optimization stage 2 on IB (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on SGSR .......
+Finished optimization stage 2 on SGSR (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on FD1S3AX .......
+Finished optimization stage 2 on FD1S3AX (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.amdemod  .......
+Finished optimization stage 2 on \top.amdemod  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.amdemod.sqrt  .......
+Finished optimization stage 2 on \top.amdemod.sqrt  (CPU Time 0h:00m:01s, Memory Used current: 157MB peak: 157MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 157MB peak: 157MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 138MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]

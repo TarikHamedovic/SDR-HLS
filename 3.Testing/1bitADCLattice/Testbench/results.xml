@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1725063848" />
-    <testcase name="adc_tf" classname="adc_tf" file="/home/user/SDR-HLS/3.Testing/1bitADCLattice/Testbench/adc_tf.py" lineno="93" time="206.3483293056488" sim_time_ns="4300007.001" ratio_time="20838.584036368484" />
-  </testsuite>
-</testsuites>

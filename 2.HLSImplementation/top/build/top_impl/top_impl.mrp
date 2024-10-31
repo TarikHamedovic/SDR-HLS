@@ -1,0 +1,1722 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial
+     top_impl.ngd -o top_impl_map.ncd -pr top_impl.prf -mp top_impl.mrp -lpf /ho
+     me/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/top_impl_synplify.lp
+     f -lpf /home/user/SDR-HLS/2.HLSImplementation/top/build/top.lpf 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-85FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  10/31/24  10:27:27
+
+Design Summary
+--------------
+
+   Number of registers:   2584 out of 84255 (3%)
+      PFU registers:         2582 out of 83640 (3%)
+      PIO registers:            2 out of   615 (0%)
+   Number of SLICEs:      1681 out of 41820 (4%)
+      SLICEs as Logic/ROM:   1681 out of 41820 (4%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:        973 out of 41820 (2%)
+   Number of LUT4s:        2305 out of 83640 (3%)
+      Number used as logic LUTs:        359
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      1946
+      Number used as shift registers:     0
+   Number of PIO sites used: 22 out of 205 (11%)
+      Number of PIO sites used for single ended IOs: 20
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
+     comps in NCD)
+   Number of block RAMs:  1 out of 208 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 4 (25%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          2
+   MULT9X9D            0
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Design Summary (cont)
+---------------------
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  4 out of 312 (1 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  2
+     Net clocks[0]: 1336 loads, 1336 rising, 0 falling (Driver: ecp5pll/pll_inst
+     )
+     Net clk: 3 loads, 3 rising, 0 falling (Driver: PIO clk25_0__io )
+   Number of Clock Enables:  13
+     Net rx_data_valid: 33 loads, 33 LSLICEs
+     Net uart_rx/r_SM_Main[2]: 9 loads, 9 LSLICEs
+     Net uart_rx/Z$22_2[2]: 4 loads, 4 LSLICEs
+     Net uart_rx/Z$1914: 2 loads, 2 LSLICEs
+     Net uart_rx/r_Rx_Bytece[4]: 1 loads, 1 LSLICEs
+     Net uart_rx/r_Rx_Bytece[5]: 1 loads, 1 LSLICEs
+     Net uart_rx/r_Rx_Bytece[6]: 1 loads, 1 LSLICEs
+     Net uart_rx/N_99: 1 loads, 1 LSLICEs
+     Net pwm.$2_i: 8 loads, 8 LSLICEs
+     Net cic_sine.$6: 74 loads, 74 LSLICEs
+     Net cic_sine.valid_comb_1: 343 loads, 343 LSLICEs
+     Net cic_sine.valid_comb: 341 loads, 341 LSLICEs
+     Net cic_sine_clk: 74 loads, 74 LSLICEs
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cic_sine.valid_comb_1: 343 loads
+     Net cic_sine.valid_comb: 341 loads
+     Net cic_sine.$6: 77 loads
+     Net cic_sine_clk: 74 loads
+     Net uart_rx/o_Rx_Byte_RNI240U5[2]: 64 loads
+     Net mix_cosinewave[11]: 61 loads
+     Net mix_sinewave[11]: 61 loads
+     Net rx_data_valid: 33 loads
+     Net amdemod/square_sum[24]: 32 loads
+     Net rx_byte[3]: 31 loads
+
+
+
+
+   Number of warnings:  6
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: /home/user/SDR-HLS/2.HLSImplementation/top/build/top.lpf(31):
+     Semantic error in "IOBUF PORT "uart_0__rts__io" IO_TYPE=LVCMOS33 ;": Port
+     "uart_0__rts__io" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/user/SDR-HLS/2.HLSImplementation/top/build/top.lpf(33):
+     Semantic error in "IOBUF PORT "uart_0__dtr__io" IO_TYPE=LVCMOS33 ;": Port
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Design Errors/Warnings (cont)
+-----------------------------
+     "uart_0__dtr__io" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: Input frequency for EHXPLLL component 'ecp5pll/pll_inst' not
+     specified. The EHXPLLL component should have the input frequency defined by
+     the FREQUENCY preference. Using the default of 100.00 Mhz in the absence of
+     specified value.
+WARNING - map: EHXPLLL 'ecp5pll/pll_inst' cannot obtain
+     FREQUENCY_PIN_CLKOP=-1.000 when FREQUENCY_PIN_CLKI=100.000, CLKI_DIV=5,
+     CLKFB_DIV=16, CLKOP_DIV=7.
+WARNING - map: IO buffer missing for top level port uart_0__rts__io...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port uart_0__dtr__io...logic will
+     be discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| uart_0__tx__io      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| uart_0__rx__io      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_p4__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_p3__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_p2__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_p1__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_n4__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_n3__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_n2__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out_n1__io| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| pwm_0__pwm_out__io  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_7__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_6__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_5__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_4__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_3__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_2__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led_1__io           | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| led_0__io           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| antenna_0__rf_in__io| INPUT     | LVDS      | IN         |
++---------------------+-----------+-----------+------------+
+| clk25_0__io         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block GND_0 undriven or does not drive anything - clipped.
+Block amdemod/sqrt/GND undriven or does not drive anything - clipped.
+Block cd_sync/GND undriven or does not drive anything - clipped.
+Block cd_sync/clk_buf/GND undriven or does not drive anything - clipped.
+Block cd_sync/clk_buf/VCC undriven or does not drive anything - clipped.
+Block cd_sync/clk_buf/buf/GND undriven or does not drive anything - clipped.
+Block cd_sync/clk_buf/buf/VCC undriven or does not drive anything - clipped.
+Block cic_cosine/GND undriven or does not drive anything - clipped.
+Block cic_sine/GND undriven or does not drive anything - clipped.
+Block mixer/GND undriven or does not drive anything - clipped.
+Block pin_antenna_0__rf_in/GND undriven or does not drive anything - clipped.
+Block pin_antenna_0__rf_in/VCC undriven or does not drive anything - clipped.
+Block pin_antenna_0__rf_in/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_antenna_0__rf_in/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_antenna_0__rf_in/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_antenna_0__rf_in/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_led_0/GND undriven or does not drive anything - clipped.
+Block pin_led_0/VCC undriven or does not drive anything - clipped.
+Block pin_led_0/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_0/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_0/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_1/GND undriven or does not drive anything - clipped.
+Block pin_led_1/VCC undriven or does not drive anything - clipped.
+Block pin_led_1/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_1/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_1/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_2/GND undriven or does not drive anything - clipped.
+Block pin_led_2/VCC undriven or does not drive anything - clipped.
+Block pin_led_2/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_2/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_2/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_3/GND undriven or does not drive anything - clipped.
+Block pin_led_3/VCC undriven or does not drive anything - clipped.
+Block pin_led_3/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_3/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_3/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_4/GND undriven or does not drive anything - clipped.
+Block pin_led_4/VCC undriven or does not drive anything - clipped.
+Block pin_led_4/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_4/buf/VCC undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Block pin_led_4/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_5/GND undriven or does not drive anything - clipped.
+Block pin_led_5/VCC undriven or does not drive anything - clipped.
+Block pin_led_5/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_5/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_5/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_6/GND undriven or does not drive anything - clipped.
+Block pin_led_6/VCC undriven or does not drive anything - clipped.
+Block pin_led_6/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_6/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_6/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_7/GND undriven or does not drive anything - clipped.
+Block pin_led_7/VCC undriven or does not drive anything - clipped.
+Block pin_led_7/buf/GND undriven or does not drive anything - clipped.
+Block pin_led_7/buf/VCC undriven or does not drive anything - clipped.
+Block pin_led_7/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out/buf/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out/buf/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n1/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n1/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n1/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n1/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n1/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n2/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n2/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n2/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n2/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n2/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n3/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n3/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n3/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n3/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n3/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n4/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n4/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_n4/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n4/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_n4/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p1/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p1/VCC undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Block pin_pwm_0__pwm_out_p1/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p1/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p1/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p2/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p2/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p2/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p2/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p2/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p3/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p3/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p3/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p3/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p3/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p4/GND undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p4/VCC undriven or does not drive anything - clipped.
+Block pin_pwm_0__pwm_out_p4/buf/GND undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p4/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_pwm_0__pwm_out_p4/buf/buf/VCC undriven or does not drive anything -
+     clipped.
+Block pin_uart_0__rx/GND undriven or does not drive anything - clipped.
+Block pin_uart_0__rx/VCC undriven or does not drive anything - clipped.
+Block pin_uart_0__rx/buf/GND undriven or does not drive anything - clipped.
+Block pin_uart_0__rx/buf/VCC undriven or does not drive anything - clipped.
+Block pin_uart_0__rx/buf/buf/GND undriven or does not drive anything - clipped.
+Block pin_uart_0__rx/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pin_uart_0__tx/GND undriven or does not drive anything - clipped.
+Block pin_uart_0__tx/VCC undriven or does not drive anything - clipped.
+Block pin_uart_0__tx/buf/GND undriven or does not drive anything - clipped.
+Block pin_uart_0__tx/buf/VCC undriven or does not drive anything - clipped.
+Block pin_uart_0__tx/buf/buf/VCC undriven or does not drive anything - clipped.
+Block pwm/GND undriven or does not drive anything - clipped.
+Block uart_rx/GND undriven or does not drive anything - clipped.
+Signal uart_rx/r_SM_Main_i[2] was merged into signal uart_rx/r_SM_Main[2]
+Signal VCC undriven or does not drive anything - clipped.
+Signal amdemod/GND undriven or does not drive anything - clipped.
+Signal amdemod/VCC undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/VCC undriven or does not drive anything - clipped.
+Signal cic_cosine/VCC undriven or does not drive anything - clipped.
+Signal cic_sine/VCC undriven or does not drive anything - clipped.
+Signal ecp5pll/VCC undriven or does not drive anything - clipped.
+Signal mixer/VCC undriven or does not drive anything - clipped.
+Signal pin_led_0/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_1/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_2/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_3/buf/buf/GND undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal pin_led_4/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_5/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_6/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_led_7/buf/buf/GND undriven or does not drive anything - clipped.
+Signal pin_pwm_0__pwm_out/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_n1/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_n2/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_n3/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_n4/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_p1/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_p2/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_p3/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_pwm_0__pwm_out_p4/buf/buf/GND undriven or does not drive anything -
+     clipped.
+Signal pin_uart_0__tx/buf/buf/GND undriven or does not drive anything - clipped.
+     
+Signal pwm/VCC undriven or does not drive anything - clipped.
+Signal sine_cosine_generator/GND undriven or does not drive anything - clipped.
+Signal sine_cosine_generator/VCC undriven or does not drive anything - clipped.
+Signal uart_rx/VCC undriven or does not drive anything - clipped.
+Signal GND undriven or does not drive anything - clipped.
+Signal un1_phase_increment_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_phase_increment_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROC17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB3 undriven or does not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal amdemod/Z$1_ROB4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROB17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_ROA17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROB17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA5 undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal amdemod/Z$1_SROA6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SROA17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P24 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P25 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P26 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P27 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P28 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P29 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P30 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P31 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P32 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P33 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P34 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_P35 undriven or does not drive anything - clipped.
+Signal amdemod/Z$1_SIGNEDP undriven or does not drive anything - clipped.
+Signal amdemod/Z$3_cry_23_0_COUT undriven or does not drive anything - clipped.
+Signal amdemod/Z$3_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$3_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal amdemod/N_1 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$27_cry_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$27_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$27_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[12] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$27_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_2 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$31_s_9_0_S1 undriven or does not drive anything - clipped.
+     
+Signal amdemod/sqrt/Z$31_s_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$31_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$31_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[10] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$31_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_3 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$35_cry_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$35_cry_1_0_S1 undriven or does not drive anything -
+
+                                    Page 9
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal amdemod/sqrt/Z$35_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[8] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$35_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_4 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$39_s_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$39_s_11_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$39_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$39_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[6] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$39_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_5 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$43_cry_11_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$43_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$43_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[4] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$43_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_6 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$47_cry_13_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$47_cry_13_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$47_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$47_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$47_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$47_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_7 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_13_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_13_0_COUT undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_11_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_11_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_9_0_S0 undriven or does not drive
+
+                                   Page 10
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_5_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_5_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_3_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_3_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/N_8 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_13_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_13_0_COUT undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_11_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_11_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_9_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_5_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_5_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_3_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_3_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/un1_port$400$0_1_d0_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal amdemod/sqrt/N_9 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$19_cry_5_0_COUT undriven or does not drive anything -
+
+                                   Page 11
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal amdemod/sqrt/Z$19_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$19_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/square_sum_i[16] undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$19_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_10 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$23_s_7_0_S1 undriven or does not drive anything - clipped.
+     
+Signal amdemod/sqrt/Z$23_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$23_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$23_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$23_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$23_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_12 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$42_cry_11_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$42_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$42_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_13 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$46_cry_13_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$46_cry_13_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$46_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$46_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_14 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$18_cry_5_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$18_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$18_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_15 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$22_s_7_0_S1 undriven or does not drive anything - clipped.
+     
+Signal amdemod/sqrt/Z$22_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$22_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$22_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_16 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$26_cry_7_0_COUT undriven or does not drive anything -
+
+                                   Page 12
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal amdemod/sqrt/Z$26_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$26_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_17 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$30_s_9_0_S1 undriven or does not drive anything - clipped.
+     
+Signal amdemod/sqrt/Z$30_s_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$30_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$30_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_18 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$34_cry_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$34_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$34_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_19 undriven or does not drive anything - clipped.
+Signal amdemod/sqrt/Z$38_s_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$38_s_11_0_COUT undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$38_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/Z$38_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal amdemod/sqrt/N_20 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROC17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB6 undriven or does not drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal amdemod/Z$2_ROB7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROB17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_ROA17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB8 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROB17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA0 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA1 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA2 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA3 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA4 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA5 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA6 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA7 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA8 undriven or does not drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal amdemod/Z$2_SROA9 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA10 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA11 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA12 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA13 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA14 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA15 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA16 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SROA17 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P24 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P25 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P26 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P27 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P28 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P29 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P30 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P31 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P32 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P33 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P34 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_P35 undriven or does not drive anything - clipped.
+Signal amdemod/Z$2_SIGNEDP undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$1_s_71_0_S1_0 undriven or does not drive anything - clipped.
+     
+Signal cic_cosine/Z$1_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$1_cry_0_0_S1_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$1_cry_0_0_S0_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_1 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$14_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_55_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_55_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_53_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_53_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_51_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_51_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_49_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_49_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_47_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_47_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_45_0_S1_0 undriven or does not drive anything -
+
+                                   Page 15
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal cic_cosine/Z$14_cry_45_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_43_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_43_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_41_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_41_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_39_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_39_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_37_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_37_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_35_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_35_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_33_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_33_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_31_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_31_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_29_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_29_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_27_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_27_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_25_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_25_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_23_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_23_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_21_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_21_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_19_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_19_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_17_0_S1_0 undriven or does not drive anything -
+
+                                   Page 16
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal cic_cosine/Z$14_cry_17_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_15_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_15_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_13_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_13_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_11_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_11_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_9_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_9_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_7_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_7_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_5_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_5_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_3_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_3_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_1_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_1_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$14_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_2 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$13_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$13_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$13_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$13_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_3 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$12_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$12_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$12_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$12_cry_0_0_S0_0 undriven or does not drive anything -
+
+                                   Page 17
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal cic_cosine/N_4 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$11_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$11_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$11_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$11_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_5 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$10_s_71_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$10_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$10_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$10_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_6 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$2_s_71_0_S1_0 undriven or does not drive anything - clipped.
+     
+Signal cic_cosine/Z$2_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$2_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$2_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_7 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$3_s_71_0_S1_0 undriven or does not drive anything - clipped.
+     
+Signal cic_cosine/Z$3_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$3_cry_0_0_S1_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$3_cry_0_0_S0_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_8 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$4_s_71_0_S1_0 undriven or does not drive anything - clipped.
+     
+Signal cic_cosine/Z$4_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$4_cry_0_0_S1_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$4_cry_0_0_S0_1 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_9 undriven or does not drive anything - clipped.
+Signal cic_cosine/Z$5_s_71_0_S1_0 undriven or does not drive anything - clipped.
+     
+Signal cic_cosine/Z$5_s_71_0_COUT_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$5_cry_0_0_S1_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/Z$5_cry_0_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_10 undriven or does not drive anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal cic_cosine/count_s_0_S1[11] undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/count_s_0_COUT[11] undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/count_cry_0_S0_0[0] undriven or does not drive anything -
+     clipped.
+Signal cic_cosine/N_11 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$1_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$1_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$1_cry_0_0_S1_0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$1_cry_0_0_S0_0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_55_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_55_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_53_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_53_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_51_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_51_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_49_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_49_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_47_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_47_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_45_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_45_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_43_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_43_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_41_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_41_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_39_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_39_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_37_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_37_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_35_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_35_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_33_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_33_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_31_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_31_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_29_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_29_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_27_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_27_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_25_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_25_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_23_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_23_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_21_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_21_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_19_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_19_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_17_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_17_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_15_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_15_0_S0 undriven or does not drive anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal cic_sine/Z$14_cry_13_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_13_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_11_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_11_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_9_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_9_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_7_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_7_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_5_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_5_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_3_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_3_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_1_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_1_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$14_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_2 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$13_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$13_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$13_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$13_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_3 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$12_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$12_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$12_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$12_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_4 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$11_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$11_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$11_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$11_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_5 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$10_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$10_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$10_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$10_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_6 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$2_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$2_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$2_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$2_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_7 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$3_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$3_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$3_cry_0_0_S1_0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$3_cry_0_0_S0_0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_8 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$4_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$4_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$4_cry_0_0_S1_0 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$4_cry_0_0_S0_0 undriven or does not drive anything - clipped.
+Signal cic_sine/N_9 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$5_s_71_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$5_s_71_0_COUT undriven or does not drive anything - clipped.
+Signal cic_sine/Z$5_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal cic_sine/Z$5_cry_0_0_S0 undriven or does not drive anything - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal cic_sine/N_10 undriven or does not drive anything - clipped.
+Signal ecp5pll/CLKINTFB undriven or does not drive anything - clipped.
+Signal ecp5pll/REFCLK undriven or does not drive anything - clipped.
+Signal ecp5pll/INTLOCK undriven or does not drive anything - clipped.
+Signal ecp5pll/locked undriven or does not drive anything - clipped.
+Signal ecp5pll/clk_o_1[3] undriven or does not drive anything - clipped.
+Signal ecp5pll/clk_o_1[2] undriven or does not drive anything - clipped.
+Signal ecp5pll/clk_o_1[1] undriven or does not drive anything - clipped.
+Signal mixer/Z$2_1_s_11_0_S1 undriven or does not drive anything - clipped.
+Signal mixer/Z$2_1_s_11_0_COUT undriven or does not drive anything - clipped.
+Signal mixer/Z$2_1_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal mixer/Z$2_1_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal mixer/N_1 undriven or does not drive anything - clipped.
+Signal mixer/Z$3_1_s_11_0_S1 undriven or does not drive anything - clipped.
+Signal mixer/Z$3_1_s_11_0_COUT undriven or does not drive anything - clipped.
+Signal mixer/Z$3_1_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal mixer/Z$3_1_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal mixer/N_2 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_9_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_9_0_COUT undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_7_0_S1 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_7_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_5_0_S1 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_5_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_3_0_S1 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_3_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_1_0_S1 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_1_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal pwm/Z$4_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal pwm/N_1 undriven or does not drive anything - clipped.
+Signal pwm/count_s_0_S1[9] undriven or does not drive anything - clipped.
+Signal pwm/count_s_0_COUT[9] undriven or does not drive anything - clipped.
+Signal pwm/count_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal pwm/N_2 undriven or does not drive anything - clipped.
+Signal sine_cosine_generator/Z$1_s_63_0_S1 undriven or does not drive anything -
+     clipped.
+Signal sine_cosine_generator/Z$1_s_63_0_COUT undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/Z$1_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/Z$1_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/N_1 undriven or does not drive anything - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO35 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO34 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO33 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO32 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO31 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO30 undriven or does not drive anything
+     - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Removed logic (cont)
+--------------------
+Signal sine_cosine_generator/_1__2_0_0_DO29 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO28 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO27 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO26 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO25 undriven or does not drive anything
+     - clipped.
+Signal sine_cosine_generator/_1__2_0_0_DO24 undriven or does not drive anything
+     - clipped.
+Signal uart_rx/Z$7_1_s_15_0_S1 undriven or does not drive anything - clipped.
+Signal uart_rx/Z$7_1_s_15_0_COUT undriven or does not drive anything - clipped.
+Signal uart_rx/Z$7_1_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal uart_rx/Z$7_1_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal uart_rx/N_6 undriven or does not drive anything - clipped.
+Signal un1_phase_increment_s_63_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_phase_increment_s_63_0_COUT undriven or does not drive anything -
+     clipped.
+Block uart_rx/r_SM_Main_RNIICAF[2] was optimized away.
+Block VCC_0 was optimized away.
+Block amdemod/GND_0 was optimized away.
+Block amdemod/VCC_0 was optimized away.
+Block amdemod/sqrt/VCC_0 was optimized away.
+Block cic_cosine/VCC_0 was optimized away.
+Block cic_sine/VCC_0 was optimized away.
+Block ecp5pll/VCC_0 was optimized away.
+Block mixer/VCC_0 was optimized away.
+Block pin_led_0/buf/buf/GND_0 was optimized away.
+Block pin_led_1/buf/buf/GND_0 was optimized away.
+Block pin_led_2/buf/buf/GND_0 was optimized away.
+Block pin_led_3/buf/buf/GND_0 was optimized away.
+Block pin_led_4/buf/buf/GND_0 was optimized away.
+Block pin_led_5/buf/buf/GND_0 was optimized away.
+Block pin_led_6/buf/buf/GND_0 was optimized away.
+Block pin_led_7/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_n1/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_n2/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_n3/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_n4/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_p1/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_p2/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_p3/buf/buf/GND_0 was optimized away.
+Block pin_pwm_0__pwm_out_p4/buf/buf/GND_0 was optimized away.
+Block pin_uart_0__tx/buf/buf/GND_0 was optimized away.
+Block pwm/VCC_0 was optimized away.
+Block sine_cosine_generator/GND_0 was optimized away.
+Block sine_cosine_generator/VCC_0 was optimized away.
+Block uart_rx/VCC_0 was optimized away.
+
+
+
+
+
+                                   Page 22
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+Memory Usage
+------------
+
+/sine_cosine_generator:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 34
+    PFU Registers: 64
+    -Contains EBR _1__2_0_0:  TYPE= PDPW16KD,  Width= 24,  Depth_R= 256,
+         REGMODE= OUTREG,  RESETMODE= SYNC,  GSR= DISABLED
+
+DSP Component Details
+---------------------
+
+
+     . MULT18X18D  amdemod/$2[23:0]:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+
+                                   Page 23
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+DSP Component Details (cont)
+----------------------------
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  amdemod/$1[23:0]:
+
+     Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                ecp5pll/pll_inst
+  PLL Type:                                         EHXPLLL
+  Input Clock:                             PIN      clk
+
+                                   Page 24
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+PLL/DLL Summary (cont)
+----------------------
+  Input Clock2:                                     NONE
+  Input Clock select:                               NONE
+  Output Clock(P):                         NODE     clocks[0]
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clocks[0]
+  Reset Signal:                                     NONE
+  Standby Signal:                          NODE     ecp5pll/GND
+  PLL LOCK signal:                                  NONE
+  PLL Internal LOCK Signal:                         NONE
+  Input Clock Frequency (MHz):                      100.0000
+  Output Clock(P) Frequency (MHz):                  NA
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     5
+  CLKFB Divider:                                    16
+  CLKOP Divider:                                    7
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 RISING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
+
+ASIC Components
+---------------
+
+Instance Name: sine_cosine_generator/_1__2_0_0
+         Type: PDPW16KD
+Instance Name: ecp5pll/pll_inst
+         Type: EHXPLLL
+Instance Name: amdemod/$2[23:0]
+         Type: MULT18X18D
+Instance Name: amdemod/$1[23:0]
+         Type: MULT18X18D
+
+                                   Page 25
+
+
+
+
+Design:  top                                           Date:  10/31/24  10:27:27
+
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'cd_sync/gsr1'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'cd_sync/gsr1' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 2 
+   PDPW16KD = 1, MULT18X18D = 2 
+
+     Type and instance name of component: 
+   Register : cd_sync/U$2
+   Register : cd_sync/U$1
+   PDPW16KD : sine_cosine_generator/_1__2_0_0
+   MULT18X18D : amdemod/$2[23:0]
+   MULT18X18D : amdemod/$1[23:0]
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 3 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 476 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 26
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

@@ -13,7 +13,7 @@ class UartHandler:
         self.data_bits           = []  # List to store binary representation
 
     async def init(self):
-        self.dut.rx_serial.value = 1  # Idle state for UART
+        self.dut.uart_rx_serial.value = 1  # Idle state for UART
 
     def set_data(self, data):
         """ Set the 8-bit value that will be sent over UART """
@@ -38,16 +38,16 @@ class UartHandler:
         if self.data_to_send is None:
             raise ValueError("No data set for UART transmission. Use set_data() to specify the 8-bit value.")
 
-        # Keep rx_serial value at 1 for init_cycles clocks
-        self.dut.rx_serial.value = 1
+        # Keep uart_rx_serial value at 1 for init_cycles clocks
+        self.dut.uart_rx_serial.value = 1
         init_cycles              = 3
-        cocotb.log.info(f"[UART] Keep rx_serial value at 1 for {init_cycles} clock cycles")
+        cocotb.log.info(f"[UART] Keep uart_rx_serial value at 1 for {init_cycles} clock cycles")
 
         for _ in range(init_cycles):
             await RisingEdge(self.clk)
 
         # Start bit = 0
-        self.dut.rx_serial.value = 0
+        self.dut.uart_rx_serial.value = 0
         clocks_per_bit_half = int((self.clocks_per_bit - 1) // 2)
         cocotb.log.info(f"[UART] Waiting for {clocks_per_bit_half + 2} clock cycles and checking if the start bit is really 0")
         for _ in range(clocks_per_bit_half + 2):
@@ -58,7 +58,7 @@ class UartHandler:
         for i in range(8):
             bit = self.data_bits[i]
             cocotb.log.info(f"i: {i} Bit value: {bit}")
-            self.dut.rx_serial.value = bit
+            self.dut.uart_rx_serial.value = bit
             receiving_data          |= bit << i
 
             # Wait for the duration of one bit period
@@ -66,11 +66,11 @@ class UartHandler:
                 await RisingEdge(self.clk)
 
         # Stop bit = 1
-        self.dut.rx_serial.value    = 1
+        self.dut.uart_rx_serial.value    = 1
         cocotb.log.info(f"[UART] Sending stop bit, value: 1")
 
         # Wait until the receiver indicates data is valid
-        while self.dut.rx_data_valid.value == 0:
+        while self.dut.uart_rx_data_valid.value == 0:
             await RisingEdge(self.clk)
 
         cocotb.log.info(f"[UART] Data transmission complete. Received data: {receiving_data}")

@@ -53,7 +53,8 @@ module CIC #(
 );
 
   typedef logic signed [REGISTER_WIDTH-1:0] s_register_t;
-  localparam COUNT_WIDTH = $clog2(DECIMATION_RATIO);
+  //localparam COUNT_WIDTH = $clog2(DECIMATION_RATIO);
+  localparam COUNT_WIDTH = 16;
 
   //=============================//
   //       Internal signals      //

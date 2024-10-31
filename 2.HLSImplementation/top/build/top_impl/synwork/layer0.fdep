@@ -1,0 +1,99 @@
+#OPTIONS:"|-layerid|0|-orig_srs|/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_comp.srs|-top|top|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-lattice|-I|/home/user/SDR-HLS/2.HLSImplementation/top/build|-I|/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/|-I|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib|-v2001|-devicelib|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v|-devicelib|/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-fsysv|-lib|work|-fv2001"
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/c_ver":1691686800
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1691686808
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v":1691686809
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v":1691686317
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v":1691686317
+#CUR:"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh":1691686317
+#CUR:"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":1730366793
+#CUR:"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1730366793
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv" verilog
+1			"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 0
+#Dependency Lists(Users Of)
+0 1
+1 -1
+#Design Unit to File Association
+module work ecp5pll 0
+module work top 1
+module work \top.amdemod 1
+module work \top.cd_sync 1
+module work \top.cic_cosine 1
+module work \top.cic_sine 1
+module work \top.mixer 1
+module work \top.pin_antenna_0__rf_in 1
+module work \top.pin_led_0 1
+module work \top.pin_led_1 1
+module work \top.pin_led_2 1
+module work \top.pin_led_3 1
+module work \top.pin_led_4 1
+module work \top.pin_led_5 1
+module work \top.pin_led_6 1
+module work \top.pin_led_7 1
+module work \top.pin_pwm_0__pwm_out 1
+module work \top.pin_pwm_0__pwm_out_n1 1
+module work \top.pin_pwm_0__pwm_out_n2 1
+module work \top.pin_pwm_0__pwm_out_n3 1
+module work \top.pin_pwm_0__pwm_out_n4 1
+module work \top.pin_pwm_0__pwm_out_p1 1
+module work \top.pin_pwm_0__pwm_out_p2 1
+module work \top.pin_pwm_0__pwm_out_p3 1
+module work \top.pin_pwm_0__pwm_out_p4 1
+module work \top.pin_uart_0__dtr 1
+module work \top.pin_uart_0__rts 1
+module work \top.pin_uart_0__rx 1
+module work \top.pin_uart_0__tx 1
+module work \top.pwm 1
+module work \top.sine_cosine_generator 1
+module work \top.uart_rx 1
+module work \top.amdemod.sqrt 1
+module work \top.cd_sync.clk_buf 1
+module work \top.cd_sync.clk_buf.buf 1
+module work \top.pin_antenna_0__rf_in.buf 1
+module work \top.pin_antenna_0__rf_in.buf.buf 1
+module work \top.pin_led_0.buf 1
+module work \top.pin_led_0.buf.buf 1
+module work \top.pin_led_1.buf 1
+module work \top.pin_led_1.buf.buf 1
+module work \top.pin_led_2.buf 1
+module work \top.pin_led_2.buf.buf 1
+module work \top.pin_led_3.buf 1
+module work \top.pin_led_3.buf.buf 1
+module work \top.pin_led_4.buf 1
+module work \top.pin_led_4.buf.buf 1
+module work \top.pin_led_5.buf 1
+module work \top.pin_led_5.buf.buf 1
+module work \top.pin_led_6.buf 1
+module work \top.pin_led_6.buf.buf 1
+module work \top.pin_led_7.buf 1
+module work \top.pin_led_7.buf.buf 1
+module work \top.pin_pwm_0__pwm_out.buf 1
+module work \top.pin_pwm_0__pwm_out.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_n1.buf 1
+module work \top.pin_pwm_0__pwm_out_n1.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_n2.buf 1
+module work \top.pin_pwm_0__pwm_out_n2.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_n3.buf 1
+module work \top.pin_pwm_0__pwm_out_n3.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_n4.buf 1
+module work \top.pin_pwm_0__pwm_out_n4.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_p1.buf 1
+module work \top.pin_pwm_0__pwm_out_p1.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_p2.buf 1
+module work \top.pin_pwm_0__pwm_out_p2.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_p3.buf 1
+module work \top.pin_pwm_0__pwm_out_p3.buf.buf 1
+module work \top.pin_pwm_0__pwm_out_p4.buf 1
+module work \top.pin_pwm_0__pwm_out_p4.buf.buf 1
+module work \top.pin_uart_0__dtr.buf 1
+module work \top.pin_uart_0__dtr.buf.buf 1
+module work \top.pin_uart_0__rts.buf 1
+module work \top.pin_uart_0__rts.buf.buf 1
+module work \top.pin_uart_0__rx.buf 1
+module work \top.pin_uart_0__rx.buf.buf 1
+module work \top.pin_uart_0__tx.buf 1
+module work \top.pin_uart_0__tx.buf.buf 1

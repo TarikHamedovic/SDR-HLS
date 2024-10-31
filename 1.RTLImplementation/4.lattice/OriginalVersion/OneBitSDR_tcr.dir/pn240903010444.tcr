@@ -1,0 +1,5 @@
+#Start recording tcl command: 9/3/2024 00:11:24
+#Project Location: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0; Project name: OneBitSDR
+prj_project open "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/OneBitSDR.ldf"
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 9/3/2024 01:04:44

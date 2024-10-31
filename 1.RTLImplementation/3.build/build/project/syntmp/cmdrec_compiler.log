@@ -1,0 +1,37 @@
+/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/c_hdl  -osyn  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/onebitsdr_project_comp.srs  -top  top  -hdllog  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synlog/onebitsdr_project_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver  -lattice   -I /home/user/SDR-HLS/1.RTLImplementation/3.build/build  -I /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/  -I /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib   -v2001  -devicelib  /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v  -devicelib  /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v  -encrypt  -pro  -dmgen  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -D_MULTIPLE_FILE_COMPILATION_UNIT_  -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/NCO.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_generator.sv -lib work -fsysv /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_table.sv -lib work -fv2001 /home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v -lib work -fv2001 /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v -lib work -fv2001 /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v -lib work -fv2001 /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v  -jobname  "compiler" 
+relcom:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/c_hdl -osyn ../synwork/onebitsdr_project_comp.srs -top top -hdllog ../synlog/onebitsdr_project_compiler.srr -encrypt -mp 4 -verification_mode 0 -verilog -prodtype synplify_pro -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver -lattice -I ../../../build -I ../ -I ../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib -v2001 -devicelib ../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v -devicelib ../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v -encrypt -pro -dmgen ../dm -ui -fid2 -ram -sharing on -ll 2000 -autosm -D_MULTIPLE_FILE_COMPILATION_UNIT_ -lib work -fsysv ../../../../1.hw/systemverilog/top.sv -lib work -fsysv ../../../../1.hw/systemverilog/NCO.sv -lib work -fsysv ../../../../1.hw/systemverilog/Mixer.sv -lib work -fsysv ../../../../1.hw/systemverilog/AMDemod.sv -lib work -fsysv ../../../../1.hw/systemverilog/PWM.sv -lib work -fsysv ../../../../1.hw/systemverilog/CIC.sv -lib work -fsysv ../../../../1.hw/systemverilog/sinewave_generator.sv -lib work -fsysv ../../../../1.hw/systemverilog/sinewave_table.sv -lib work -fsysv ../../../../1.hw/systemverilog/quarterwave_generator.sv -lib work -fsysv ../../../../1.hw/systemverilog/quarterwave_table.sv -lib work -fv2001 ../../../../1.hw/verilog/UartRX.v -lib work -fv2001 ../../../../1.hw/IP/PLL.v -lib work -fv2001 ../../../../1.hw/IP/VHI.v -lib work -fv2001 ../../../../1.hw/IP/VLO.v -jobname "compiler"
+rc:0 success:1 runtime:5
+file:../synwork/onebitsdr_project_comp.srs|io:o|time:1730370161|size:28704|exec:0|csum:
+file:../synlog/onebitsdr_project_compiler.srr|io:o|time:1730370161|size:13987|exec:0|csum:
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v|io:i|time:1691686808|size:87869|exec:0|csum:47AE03E6BBE19DB3AAEE31C380B909AC
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v|io:i|time:1691686809|size:39414|exec:0|csum:530CC5906D70AB3C6A4AA0861AC94BDF
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/top.sv|io:i|time:1730370146|size:10016|exec:0|csum:BEFCB41A244B61F39C872D47D25EB00B
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/NCO.sv|io:i|time:1730331411|size:1985|exec:0|csum:2DCE5F3B78CBEC4F7EEBA742AB857F51
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/Mixer.sv|io:i|time:1730365914|size:2717|exec:0|csum:0E3B7FB04C298A75BC38AC0D6ACA3C87
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/AMDemod.sv|io:i|time:1730369848|size:3620|exec:0|csum:18F2DED6451C0FFEC6E5D6ABDB6C415D
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/PWM.sv|io:i|time:1730365959|size:2523|exec:0|csum:968F983963FB288136792C1AED32AEC9
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/CIC.sv|io:i|time:1730365847|size:5212|exec:0|csum:7A8DA049C38EB070E0AD9AEF2410019F
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/sinewave_generator.sv|io:i|time:1724177286|size:1387|exec:0|csum:8E11B32B4B8A686D9519A8F2BF98F479
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/sinewave_table.sv|io:i|time:1724150155|size:9204|exec:0|csum:35D7807F6E5EDA08D005E6F61FEDD604
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/quarterwave_generator.sv|io:i|time:1730331411|size:2791|exec:0|csum:131C2BCADEBC8309D4090F0A3F83ED78
+file:./-fsysv|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/systemverilog/quarterwave_table.sv|io:i|time:1730331411|size:2670|exec:0|csum:4142287A5D975AFD66BE50F185069EEF
+file:./-fv2001|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/verilog/UartRX.v|io:i|time:1730331411|size:4109|exec:0|csum:E4EA96401DEB4F4CC437F870A67A5261
+file:./-fv2001|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/IP/PLL.v|io:i|time:1724784083|size:3206|exec:0|csum:02B0F7C5E38E5C2C37440D3F8BFF8EF5
+file:./-fv2001|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/IP/VHI.v|io:i|time:1695175566|size:1149|exec:0|csum:F757B68CA9426765427E0A5AA5A5B3DB
+file:./-fv2001|io:i|time:0|size:-1|exec:0|csum:
+file:../../../../1.hw/IP/VLO.v|io:i|time:1695175566|size:1148|exec:0|csum:06A91649502046568584FA9363EC5138
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/c_hdl|io:i|time:1691686799|size:10820456|exec:1|csum:294DA3FDD619E830FE9D36956B23B641
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/c_hdl|io:i|time:1691686326|size:367|exec:1|csum:E52A0D56112AD6C22F02B648B6F508CE

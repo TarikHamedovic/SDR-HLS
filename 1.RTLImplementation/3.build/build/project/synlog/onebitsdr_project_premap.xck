@@ -1,0 +1,2 @@
+ckid0_0:@|S:PLL_inst.PLLInst_0.CLKOP@|E:phase_increment[63:0]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_1:@|S:cic_sine_inst.data_clk.Q[0]@|E:AMDemodulator_inst.amdemod_out[12:0]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1

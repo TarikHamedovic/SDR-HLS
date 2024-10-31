@@ -1,0 +1,2 @@
+ckid0_0:@|S:ecp5pll.pll_inst.CLKOP@|E:gain[1]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_1:@|S:cd_sync.clk_buf.buf.buf0.O@|E:cd_sync.U\$1@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1

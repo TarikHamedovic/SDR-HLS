@@ -41,8 +41,7 @@ module top #(
   parameter int CIC_DECIMATION_RATIO = 4096,
   parameter int CIC_GAIN_WIDTH       = 2,
   parameter int PWM_COUNT_WIDTH      = 10,
-  parameter int PWM_OFFSET           = 512,
-  parameter int PHASE_ARRAY_SIZE     = 2
+  parameter int PWM_OFFSET           = 512
 )(
     input  logic       clk_25mhz,
     input  logic       uart_rx_serial,
@@ -62,7 +61,7 @@ module top #(
   logic               clk_80mhz;
   logic               pll_lock;
   // ---------------- NCO Signals ------------------- //
-  logic signed [PHASE_WIDTH-1:0] phase_increment[PHASE_ARRAY_SIZE];
+  logic signed [PHASE_WIDTH-1:0] phase_increment;
   //logic                           nco_cosinewave;
   //logic                           nco_sinewave;
   //logic        [PHASE_WIDTH-1:0] phase_accumulator;
@@ -83,13 +82,11 @@ module top #(
   logic    cic_cosine_clk;
 
   // --------------- AMDem Signals ------------------ //
-  s_data_t amdemod_out;
+  logic signed [DATA_WIDTH :0] amdemod_out;
 
   // ---------------- UART Signals ------------------ //
   logic       uart_rx_data_valid;
   logic [7:0] uart_rx_byte;
-  logic       uart_rx_data_valid1;
-  logic [7:0] uart_rx_byte1;
 
 
   // NOTE: This is Lattice IP PLL
@@ -155,25 +152,25 @@ module top #(
   );
   */
 
-  /*
+
   // NOTE: Written sinewave_generator module
   //===========================//
   //          NCO              //
   //===========================//
   sinewave_generator#(
-     .DATA_WIDTH (DATA_WIDTH),
-     .LUT_DEPTH  (LUT_DEPTH),
-     .PHASE_WIDTH(PHASE_WIDTH)
+     .DATA_WIDTH     (DATA_WIDTH),
+     .LUT_DEPTH      (LUT_DEPTH),
+     .PHASE_WIDTH    (PHASE_WIDTH)
   ) nco_inst (
      .clk            (clk_80mhz),
      .arst           (1'b0),
      .sample_clk_ce  (1'b1),
-     .phase_increment(phase_increment[1]),
+     .phase_increment(phase_increment),
      .sinewave       (lo_sinewave),
      .cosinewave     (lo_cosinewave)
   );
-  */
 
+  /*
   //===========================//
   //          NCO              //
   //===========================//
@@ -185,11 +182,11 @@ module top #(
      .clk            (clk_80mhz),
      .arst           (1'b0),
      .sample_clk_ce  (1'b1),
-     .phase_increment(phase_increment[1]),
+     .phase_increment(phase_increment),
      .sinewave       (lo_sinewave),
      .cosinewave     (lo_cosinewave)
   );
-
+  */
 
   //===========================//
   //          Mixer            //
@@ -209,7 +206,7 @@ module top #(
   //===========================//
   //       CIC (Sine)          //
   //===========================//
-  (* syn_preserve = "true" *) CIC #(
+  (* syn_preserve = 1 *) CIC #(
       .DATA_WIDTH      (DATA_WIDTH),
       .REGISTER_WIDTH  (CIC_REGISTER_WIDTH),
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
@@ -225,7 +222,7 @@ module top #(
   //===========================//
   //      CIC (Cosine)         //
   //===========================//
-  (* syn_preserve = "true" *) CIC #(
+  (* syn_preserve = 1 *) CIC #(
       .DATA_WIDTH      (DATA_WIDTH),
       .REGISTER_WIDTH  (CIC_REGISTER_WIDTH),
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
@@ -254,7 +251,7 @@ module top #(
   //          PWM              //
   //===========================//
   PWM #(
-      .DATA_WIDTH   (DATA_WIDTH),
+      .DATA_WIDTH   (DATA_WIDTH + 1),
       .COUNT_WIDTH  (PWM_COUNT_WIDTH),
       .OFFSET       (PWM_OFFSET)
   ) pwm_inst (
@@ -271,8 +268,8 @@ module top #(
   ) uart_rx_inst (
       .osc_clk    (clk_80mhz),
       .i_Rx_Serial(uart_rx_serial),
-      .o_Rx_DV    (uart_rx_data_valid1),
-      .o_Rx_Byte  (uart_rx_byte1)
+      .o_Rx_DV    (uart_rx_data_valid),
+      .o_Rx_Byte  (uart_rx_byte)
   );
 
   always_comb begin
@@ -283,9 +280,6 @@ module top #(
   end
 
   always_ff @(posedge clk_80mhz) begin
-    phase_increment[1] <= phase_increment[0];
-    uart_rx_data_valid <= uart_rx_data_valid1;
-    uart_rx_byte       <= uart_rx_byte1;
 
     if (uart_rx_data_valid) begin
       unique case (uart_rx_byte)
@@ -297,17 +291,17 @@ module top #(
       endcase
 
       unique case (uart_rx_byte)
-        97:     phase_increment[0] <= 64'h4CF41F212D77318;   // a Zavidovići 1503 kHz
-        98:     phase_increment[0] <= 64'h1aa60f8b8911654;   // b Kossuth Budapest 540 KHz
-        102:    phase_increment[0] <= 64'h1dc38c076704516d;  // f 9650 KHz
-        103:    phase_increment[0] <= 64'h1d60d923295482c6;  // g Radio China 9525 KHz
-        110:    phase_increment[0] <= phase_increment[0] - 64'h71b375868d170;  // n - 9KHz
-        109:    phase_increment[0] <= phase_increment[0] + 64'h71b375868d170;  // m + 9KHz
-        111:    phase_increment[0] <= phase_increment[0] - 64'h1436a8cdf6f3;  // o - 100 Hz
-        112:    phase_increment[0] <= phase_increment[0] + 64'h1436a8cdf6f3;  // p + 100 Hz
-        113:    phase_increment[0] <= phase_increment[0] - 64'hca22980ba57e;  // q - 1KHz
-        104:    phase_increment[0] <= phase_increment[0] + 64'hca22980ba57e;  // r + 1 KHz
-        default phase_increment[0] <= '0;
+        97:     phase_increment <= 64'h4CF41F212D77318;   // a Zavidovići 1503 kHz
+        98:     phase_increment <= 64'h1aa60f8b8911654;   // b Kossuth Budapest 540 KHz
+        102:    phase_increment <= 64'h1dc38c076704516d;  // f 9650 KHz
+        103:    phase_increment <= 64'h1d60d923295482c6;  // g Radio China 9525 KHz
+        110:    phase_increment <= phase_increment[0] - 64'h71b375868d170;  // n - 9KHz
+        109:    phase_increment <= phase_increment[0] + 64'h71b375868d170;  // m + 9KHz
+        111:    phase_increment <= phase_increment[0] - 64'h1436a8cdf6f3;  // o - 100 Hz
+        112:    phase_increment <= phase_increment[0] + 64'h1436a8cdf6f3;  // p + 100 Hz
+        113:    phase_increment <= phase_increment[0] - 64'hca22980ba57e;  // q - 1KHz
+        104:    phase_increment <= phase_increment[0] + 64'hca22980ba57e;  // r + 1 KHz
+        default phase_increment <= '0;
       endcase
     end
   end

@@ -1,0 +1,168 @@
+----------------------------------------------------------------------
+Report for cell top.verilog
+
+Register bits: 2541 of 83640 (3%)
+PIC Latch:       0
+I/O cells:       21
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                             ALU54B        2       100.0
+                              CCU2C      924       100.0
+                             DP16KD        1       100.0
+                            EHXPLLL        1       100.0
+                            FD1P3AX     1557       100.0
+                            FD1S3AX      975       100.0
+                            FD1S3AY        2       100.0
+                            FD1S3IX        5       100.0
+                                GSR        1       100.0
+                                 IB        3       100.0
+                           IFS1P3BX        2       100.0
+                                INV       16       100.0
+                         MULT18X18D        4       100.0
+                                 OB       18       100.0
+                           ORCALUT4      388       100.0
+                              PFUMX       12       100.0
+                                PUR        1       100.0
+                                VHI       10       100.0
+                                VLO       10       100.0
+SUB MODULES 
+              AMDemodulator_12s_26s        1       100.0
+          CIC_12s_72s_4096s_2s_16s_0        1       100.0
+          CIC_12s_72s_4096s_2s_16s_1        1       100.0
+                          Mixer_12s        1       100.0
+                                PLL        1       100.0
+                   PWM_13s_10s_512s        1       100.0
+          sinewave_generator_12s_8s_64s        1       100.0
+              sinewave_table_8s_12s        1       100.0
+             uart_rx_694s_0_1_2_3_4        1       100.0
+                            
+                         TOTAL          3941           
+----------------------------------------------------------------------
+Report for cell uart_rx_694s_0_1_2_3_4.netlist
+     Instance path:  uart_rx_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        9         1.0
+                            FD1P3AX       16         1.0
+                            FD1S3AX       24         2.5
+                            FD1S3AY        1        50.0
+                            FD1S3IX        1        20.0
+                                INV        2        12.5
+                           ORCALUT4      154        39.7
+                              PFUMX        2        16.7
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL           211           
+----------------------------------------------------------------------
+Report for cell PWM_13s_10s_512s.netlist
+     Instance path:  pwm_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       12         1.3
+                            FD1P3AX       10         0.6
+                            FD1S3AX       11         1.1
+                                INV        1         6.2
+                           ORCALUT4        3         0.8
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL            39           
+----------------------------------------------------------------------
+Report for cell AMDemodulator_12s_26s.netlist
+     Instance path:  AMDemodulator_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                             ALU54B        1        50.0
+                              CCU2C      112        12.1
+                            FD1S3AX       80         8.2
+                                INV       10        62.5
+                         MULT18X18D        2        50.0
+                           ORCALUT4      104        26.8
+                              PFUMX       10        83.3
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL           321           
+----------------------------------------------------------------------
+Report for cell CIC_12s_72s_4096s_2s_16s_0.netlist
+  Original Cell name CIC_12s_72s_4096s_2s_16s
+     Instance path:  cic_cosine_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      379        41.0
+                            FD1P3AX      735        47.2
+                            FD1S3AX      384        39.4
+                            FD1S3IX        1        20.0
+                                INV        1         6.2
+                           ORCALUT4       68        17.5
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL          1570           
+----------------------------------------------------------------------
+Report for cell CIC_12s_72s_4096s_2s_16s_1.netlist
+  Original Cell name CIC_12s_72s_4096s_2s_16s
+     Instance path:  cic_sine_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      379        41.0
+                            FD1P3AX      736        47.3
+                            FD1S3AX      385        39.5
+                            FD1S3IX        1        20.0
+                                INV        1         6.2
+                           ORCALUT4       23         5.9
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL          1527           
+----------------------------------------------------------------------
+Report for cell Mixer_12s.netlist
+     Instance path:  mixer_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3AX       27         2.8
+                            FD1S3AY        1        50.0
+                            FD1S3IX        2        40.0
+                                INV        1         6.2
+                           ORCALUT4       35         9.0
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL            68           
+----------------------------------------------------------------------
+Report for cell sinewave_generator_12s_8s_64s.netlist
+     Instance path:  nco_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       33         3.6
+                             DP16KD        1       100.0
+                            FD1S3AX       64         6.6
+                           ORCALUT4        1         0.3
+                                VHI        2        20.0
+                                VLO        2        20.0
+SUB MODULES 
+              sinewave_table_8s_12s        1       100.0
+                            
+                         TOTAL           104           
+----------------------------------------------------------------------
+Report for cell sinewave_table_8s_12s.netlist
+  Original Cell name sinewave_table_8s_12s
+     Instance path:  nco_inst.sinewave_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                             DP16KD        1       100.0
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell PLL.netlist
+     Instance path:  PLL_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLL        1       100.0
+                                VHI        1        10.0
+                                VLO        1        10.0
+                            
+                         TOTAL             3           

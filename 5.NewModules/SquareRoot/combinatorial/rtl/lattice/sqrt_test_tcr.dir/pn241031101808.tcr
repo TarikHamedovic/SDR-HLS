@@ -1,0 +1,4 @@
+#Start recording tcl command: 10/31/2024 10:17:40
+#Project Location: /home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/rtl/lattice; Project name: sqrt_test
+prj_project open "/home/user/SDR-HLS/5.NewModules/SquareRoot/combinatorial/rtl/lattice/sqrt_test.ldf"
+#Stop recording: 10/31/2024 10:18:08

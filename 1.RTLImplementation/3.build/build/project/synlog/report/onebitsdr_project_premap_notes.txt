@@ -1,0 +1,14 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "11" on instance rf_in_d[1:0].
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data_R.
+@N: FX493 |Applying initial value "00000000" on instance r_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "000" on instance r_SM_Main[2:0].
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV.
+@N: BN115 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v":21:8:21:21|Removing instance scuba_vlo_inst (in view: work.PLL(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv":102:2:102:10|Removing sequential instance data_clk (in view: work.CIC_12s_72s_4096s_2s_16s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv":72:2:72:10|Removing sequential instance decimation_clk (in view: work.CIC_12s_72s_4096s_2s_16s_0(verilog)) of type view:PrimLib.sdffse(prim) because it does not drive other instances.
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

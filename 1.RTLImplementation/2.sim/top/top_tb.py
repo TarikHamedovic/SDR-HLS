@@ -5,9 +5,9 @@ CocoTB Testbench for top module
 """
 
 import cocotb
-from cocotb.triggers import RisingEdge, Timer
+from cocotb.triggers import RisingEdge, FallingEdge
 from cocotb.clock import Clock
-import random
+import numpy as np
 import os
 
 from uart_handler import UartHandler
@@ -70,6 +70,99 @@ def format_table(title, table_data):
         table_str.append(border)
     return '\n'.join(table_str)
 
+# Constants
+FULL_RANGE_BITS = 12
+FULL_RANGE      = 2**FULL_RANGE_BITS
+
+shared_vars = {
+    'analog_input': 0,
+    'integrator': FULL_RANGE / 2,
+    'analog_value': 0,
+    'analog_value2': 0,
+    'analog_value3': 0,
+    'analog_value4': 0
+}
+
+async def generate_am_sine_wave(dut, carrier_frequency=1e6, modulation_frequency=5e3, modulation_index=1):
+    """Generate an amplitude-modulated sine wave as analog input with given carrier and modulation frequencies."""
+    
+    # Calculate the clock period in seconds
+    clock_period     = 12.5 * 1e-9  # Convert nanoseconds to seconds (12.5 ns)
+
+    # Calculate the phase step per clock cycle for carrier and modulation
+    carrier_step     = 2 * np.pi * carrier_frequency * clock_period
+    modulation_step  = 2 * np.pi * modulation_frequency * clock_period
+
+    carrier_phase    = 0
+    modulation_phase = 0
+
+    while True:
+        await RisingEdge(dut.clk_80mhz)
+
+        # Calculate the modulation signal (sinusoidal between 0 and 1)
+        modulation_signal = (1 + modulation_index * np.sin(modulation_phase)) / 2
+
+        # Calculate the AM sine wave (carrier * modulation)
+        shared_vars['analog_input'] = int(modulation_signal * (np.sin(carrier_phase) + 1) * (FULL_RANGE // 2))
+
+        # Clip the value if it goes beyond the allowable range
+        if shared_vars['analog_input'] > 2**FULL_RANGE_BITS - 1:
+            dut.analog_input.value = 2**FULL_RANGE_BITS - 1
+        else:
+            dut.analog_input.value = shared_vars['analog_input']
+
+        # Increment phases for carrier and modulation
+        carrier_phase += carrier_step
+        modulation_phase += modulation_step
+
+        # Reset phases if they exceed 2*pi
+        if carrier_phase >= 2 * np.pi:
+            carrier_phase -= 2 * np.pi
+        if modulation_phase >= 2 * np.pi:
+            modulation_phase -= 2 * np.pi
+
+        cocotb.log.info(f"COROUTINE generate_am_sine_wave: analog_input = {shared_vars['analog_input']}")
+
+async def integrate_feedback(dut):
+    while True:
+        await RisingEdge(dut.clk_80mhz)
+        increase = (FULL_RANGE - shared_vars['integrator']) // (2**(FULL_RANGE_BITS-5))
+        decrease = (shared_vars['integrator']) // (2**(FULL_RANGE_BITS-5))
+        
+        cocotb.log.info(f"COROUTINE integrate_feedback : increase = {increase}, decrease = {decrease}")
+
+        # Check if diff_out is valid
+        if dut.diff_out.value.is_resolvable:
+            cocotb.log.info(f"COROUTINE integrate_feedback: diff_out = {dut.diff_out.value}")
+            if dut.diff_out.value.integer == 1:
+                shared_vars['integrator'] += increase    
+                cocotb.log.info(f"COROUTINE integrate_feedback: integrator - increase = {shared_vars['integrator']}")
+            else:
+                shared_vars['integrator'] -= decrease
+                cocotb.log.info(f"COROUTINE integrate_feedback: integrator - decrease = {shared_vars['integrator']}")
+        else:
+            cocotb.log.info("COROUTINE integrate_feedback: diff_out is in high-impedance state ('z')")
+
+async def comparator(dut):
+    while True:
+        await FallingEdge(dut.clk_80mhz)
+        if shared_vars['analog_input'] > shared_vars['integrator']:
+            dut.rf_in.value = 1
+        else:
+            dut.rf_in.value = 0
+        cocotb.log.info(f"COROUTINE comparator: rf_in = {dut.rf_in.value}")
+
+async def analog_value_delay(dut):
+    while True:
+        await RisingEdge(dut.clk_80mhz)
+        if(shared_vars['analog_input'] == 512):
+           shared_vars['analog_value']  = shared_vars['analog_value2']
+           shared_vars['analog_value2'] = shared_vars['analog_value3']
+           shared_vars['analog_value3'] = shared_vars['analog_value4']
+           shared_vars['analog_value4'] = shared_vars['analog_input']
+           cocotb.log.info(f"COROUTINE analog_value_delay")
+
+
 
 @cocotb.test()
 async def top_test(dut):
@@ -118,6 +211,17 @@ async def top_test(dut):
 
     # Start the UART handling in the background
     cocotb.start_soon(uart_handler.run())
+
+    cocotb.start_soon(generate_am_sine_wave(dut))
+
+    # Start the integrate feedback
+    cocotb.start_soon(integrate_feedback(dut))
+
+    # Start the comparator
+    cocotb.start_soon(comparator(dut))
+
+    # Start the analog value delay
+    cocotb.start_soon(analog_value_delay(dut))
 
     # Continue with the rest of your testbench
     for _ in range(40000):

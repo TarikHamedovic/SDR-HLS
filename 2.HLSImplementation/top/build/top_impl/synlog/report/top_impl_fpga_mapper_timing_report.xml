@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synlog/top_impl_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>clk25_0__io</data>
+<data>25.0 MHz</data>
+<data>1102.5 MHz</data>
+<data>39.093</data>
+</row>
+<row>
+<data>ecp5pll_Z1|CLKOP_inferred_clock</data>
+<data>200.0 MHz</data>
+<data>59.5 MHz</data>
+<data>-11.815</data>
+</row>
+<row>
+<data>System</data>
+<data>200.0 MHz</data>
+<data>18518.5 MHz</data>
+<data>4.946</data>
+</row>
+</report_table>

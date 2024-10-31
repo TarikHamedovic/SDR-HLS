@@ -1,0 +1,96 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":493:7:493:23|Synthesizing module \top.amdemod.sqrt  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":392:7:392:18|Synthesizing module \top.amdemod  in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":146:7:146:13|Synthesizing module FD1S3AX in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":753:7:753:10|Synthesizing module SGSR in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":278:7:278:8|Synthesizing module IB in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":934:7:934:30|Synthesizing module \top.cd_sync.clk_buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":921:7:921:26|Synthesizing module \top.cd_sync.clk_buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":886:7:886:18|Synthesizing module \top.cd_sync  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":945:7:945:21|Synthesizing module \top.cic_cosine  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1196:7:1196:19|Synthesizing module \top.cic_sine  in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":11:7:11:13|Synthesizing module ecp5pll in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1447:7:1447:16|Synthesizing module \top.mixer  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1535:7:1535:39|Synthesizing module \top.pin_antenna_0__rf_in.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1522:7:1522:35|Synthesizing module \top.pin_antenna_0__rf_in.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1509:7:1509:31|Synthesizing module \top.pin_antenna_0__rf_in  in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":602:7:602:9|Synthesizing module OBZ in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1577:7:1577:28|Synthesizing module \top.pin_led_0.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1559:7:1559:24|Synthesizing module \top.pin_led_0.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1546:7:1546:20|Synthesizing module \top.pin_led_0  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1622:7:1622:28|Synthesizing module \top.pin_led_1.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1604:7:1604:24|Synthesizing module \top.pin_led_1.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1591:7:1591:20|Synthesizing module \top.pin_led_1  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1667:7:1667:28|Synthesizing module \top.pin_led_2.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1649:7:1649:24|Synthesizing module \top.pin_led_2.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1636:7:1636:20|Synthesizing module \top.pin_led_2  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1712:7:1712:28|Synthesizing module \top.pin_led_3.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1694:7:1694:24|Synthesizing module \top.pin_led_3.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1681:7:1681:20|Synthesizing module \top.pin_led_3  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1757:7:1757:28|Synthesizing module \top.pin_led_4.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1739:7:1739:24|Synthesizing module \top.pin_led_4.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1726:7:1726:20|Synthesizing module \top.pin_led_4  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1802:7:1802:28|Synthesizing module \top.pin_led_5.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1784:7:1784:24|Synthesizing module \top.pin_led_5.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1771:7:1771:20|Synthesizing module \top.pin_led_5  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1847:7:1847:28|Synthesizing module \top.pin_led_6.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1829:7:1829:24|Synthesizing module \top.pin_led_6.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1816:7:1816:20|Synthesizing module \top.pin_led_6  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1892:7:1892:28|Synthesizing module \top.pin_led_7.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1874:7:1874:24|Synthesizing module \top.pin_led_7.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1861:7:1861:20|Synthesizing module \top.pin_led_7  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1937:7:1937:37|Synthesizing module \top.pin_pwm_0__pwm_out.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1919:7:1919:33|Synthesizing module \top.pin_pwm_0__pwm_out.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1906:7:1906:29|Synthesizing module \top.pin_pwm_0__pwm_out  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1982:7:1982:40|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1964:7:1964:36|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1951:7:1951:32|Synthesizing module \top.pin_pwm_0__pwm_out_n1  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2027:7:2027:40|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2009:7:2009:36|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1996:7:1996:32|Synthesizing module \top.pin_pwm_0__pwm_out_n2  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2072:7:2072:40|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2054:7:2054:36|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2041:7:2041:32|Synthesizing module \top.pin_pwm_0__pwm_out_n3  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2117:7:2117:40|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2099:7:2099:36|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2086:7:2086:32|Synthesizing module \top.pin_pwm_0__pwm_out_n4  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2162:7:2162:40|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2144:7:2144:36|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2131:7:2131:32|Synthesizing module \top.pin_pwm_0__pwm_out_p1  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2207:7:2207:40|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2189:7:2189:36|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2176:7:2176:32|Synthesizing module \top.pin_pwm_0__pwm_out_p2  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2252:7:2252:40|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2234:7:2234:36|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2221:7:2221:32|Synthesizing module \top.pin_pwm_0__pwm_out_p3  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2297:7:2297:40|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2279:7:2279:36|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2266:7:2266:32|Synthesizing module \top.pin_pwm_0__pwm_out_p4  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2336:7:2336:34|Synthesizing module \top.pin_uart_0__dtr.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2323:7:2323:30|Synthesizing module \top.pin_uart_0__dtr.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2311:7:2311:26|Synthesizing module \top.pin_uart_0__dtr  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2372:7:2372:34|Synthesizing module \top.pin_uart_0__rts.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2359:7:2359:30|Synthesizing module \top.pin_uart_0__rts.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2347:7:2347:26|Synthesizing module \top.pin_uart_0__rts  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2409:7:2409:33|Synthesizing module \top.pin_uart_0__rx.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2396:7:2396:29|Synthesizing module \top.pin_uart_0__rx.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2383:7:2383:25|Synthesizing module \top.pin_uart_0__rx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2450:7:2450:33|Synthesizing module \top.pin_uart_0__tx.buf.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2432:7:2432:29|Synthesizing module \top.pin_uart_0__tx.buf  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2420:7:2420:25|Synthesizing module \top.pin_uart_0__tx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2464:7:2464:14|Synthesizing module \top.pwm  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2512:7:2512:32|Synthesizing module \top.sine_cosine_generator  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2828:7:2828:18|Synthesizing module \top.uart_rx  in library work.
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":4:7:4:9|Synthesizing module top in library work.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":128:8:128:22|Input uart_0__rts__io is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":126:8:126:22|Input uart_0__dtr__io is unused.
+@N: CL201 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2901:2:2901:7|Trying to extract state machine for register r_SM_Main.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2350:8:2350:22|Input uart_0__rts__io is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2314:8:2314:22|Input uart_0__dtr__io is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":33:15:33:19|Input reset is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":34:15:34:21|Input standby is unused.
+@N|Running in 64-bit mode
+

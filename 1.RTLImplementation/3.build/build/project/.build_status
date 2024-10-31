@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1730370325"/>
+            <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1730370199">
+            <Task name="Map" build_result="2" update_result="0" update_time="1730370199"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1730370295">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1730370295"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1730370301"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1730370192">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1730370192"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1730370194">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1730370194"/>
+        </Milestone>
+        <Report name="onebitsdr_project.bgn" last_build_time="1730370324" last_build_size="4530"/>
+        <Report name="onebitsdr_project.bit" last_build_time="1730370324" last_build_size="330335"/>
+        <Report name="onebitsdr_project.edi" last_build_time="1730370190" last_build_size="2587294"/>
+        <Report name="onebitsdr_project.ncd" last_build_time="1730370295" last_build_size="3080246"/>
+        <Report name="onebitsdr_project.ngd" last_build_time="1730370194" last_build_size="2340187"/>
+        <Report name="onebitsdr_project.twr" last_build_time="1730370301" last_build_size="151845"/>
+        <Report name="onebitsdr_project_map.ncd" last_build_time="1730370199" last_build_size="2238645"/>
+    </Strategy>
+</BuildStatus>

@@ -46,7 +46,7 @@ TOP_MODULE = top
 DESIGN_LANG ?= systemverilog# Options: verilog, systemverilog
 
 ifeq ($(DESIGN_LANG), systemverilog)
-    TOP_MODULE_FILE = $(HW_SRC)/verilog/top.sv
+    TOP_MODULE_FILE = $(HW_SRC)/systemverilog/top.sv
     VERILOG_FILES := $(shell cat $(HW_SRC)/filelists/rtl_systemverilog.filelist)
 else ifeq ($(DESIGN_LANG), verilog)
     TOP_MODULE_FILE = $(HW_SRC)/verilog/top.v

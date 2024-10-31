@@ -1,0 +1,15 @@
+i PLL_inst.CLKOP_i
+m 0 0
+u 67 2560
+p {t:PLL_inst.PLLInst_0.CLKOP}{t:PLL_inst.CLKOP_inferred_clock.I[0]}{t:PLL_inst.CLKOP_inferred_clock.OUT[0]}{p:PLL_inst.CLKOP}{t:PLL_inst.CLKOP}{t:phase_increment[63:0].C}
+e ckid0_0 {t:phase_increment[63:0].C} dffe
+c ckid0_0 {t:PLL_inst.PLLInst_0.CLKOP} EHXPLLL Clock source is constant
+i cic_sine_inst.data_clk_i
+m 0 0
+u 7 123
+n ckid0_1 {t:AMDemodulator_inst.amdemod_out[12:0].C} Derived clock on input (not legal for GCC)
+p {t:cic_sine_inst.data_clk_derived_clock.OUT[0]}{p:cic_sine_inst.data_clk}{t:cic_sine_inst.data_clk}{t:AMDemodulator_inst.clk}{p:AMDemodulator_inst.clk}{t:AMDemodulator_inst.amdemod_out[12:0].C}
+e ckid0_1 {t:AMDemodulator_inst.amdemod_out[12:0].C} dff
+d ckid0_1 {t:cic_sine_inst.data_clk.Q[0]} dff Derived clock on input (not legal for GCC)
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

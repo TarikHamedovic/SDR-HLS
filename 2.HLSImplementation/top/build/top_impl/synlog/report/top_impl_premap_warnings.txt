@@ -1,0 +1,2 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT529 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Found inferred clock ecp5pll_Z1|CLKOP_inferred_clock which controls 2683 sequential elements including amdemod.amdemod_d[9]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

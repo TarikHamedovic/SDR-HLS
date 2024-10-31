@@ -25,17 +25,25 @@ module AMDemodulator #(
     input  logic                         clk,
     input  logic signed [DATA_WIDTH-1:0] inphase,
     input  logic signed [DATA_WIDTH-1:0] quadrature,
-    output logic        [DATA_WIDTH-1:0] amdemod_out
+    output logic        [DATA_WIDTH:0]   amdemod_out
 );
 
 
-  // NOTE: 1 bit is added because the sqrt function only works with even numbers, that is why sqrt_sum
-  //       has 1 extra unused bit
-  localparam int N = 2 * DATA_WIDTH + 2; // NOTE:`int` may cause problems with Lattice Diamond
+  logic signed  [DATA_WIDTH-1 : 0] i_dataA;
+  logic signed  [DATA_WIDTH-1 : 0] i_dataB;
+  logic signed  [2*DATA_WIDTH-1:0] i_squared;
 
-  logic        [2*DATA_WIDTH  :0]   square_sum;
-  logic signed [2*DATA_WIDTH-1:0]   mult_result_i;
-  logic signed [2*DATA_WIDTH-1:0]   mult_result_q;
+  logic signed  [DATA_WIDTH-1 : 0] q_dataA;
+  logic signed  [DATA_WIDTH-1 : 0] q_dataB;
+  logic signed  [2*DATA_WIDTH-1:0] q_squared;
+
+  logic         [2*DATA_WIDTH : 0] square_sum;
+
+  logic signed  [  DATA_WIDTH : 0] amdemod_out_d;
+
+
+  // NOTE: 1 bit is added because the sqrt function only works with even numbers
+  localparam N = 2 * DATA_WIDTH + 2;
 
   //=============================//
   //       Sqrt function         //
@@ -77,27 +85,23 @@ module AMDemodulator #(
   endfunction
 
 
-  //=============================//
+ //=============================//
   //    Main processing block    //
   //=============================//
   always_ff @(posedge clk) begin
-
-    // Load multiplication results
-    mult_result_i <= inphase    * inphase;
-    mult_result_q <= quadrature * quadrature;
-
-    // Calculate I^2 + Q^2
-    square_sum <= {1'b0, mult_result_i + mult_result_q}; // TODO: Create Issue because it needs to be 1'b0
-
-  end
-
-  always_comb begin
-    // Compute the square root of the sum of squares
-    amdemod_out = DATA_WIDTH'(sqrt({1'b0, square_sum}));
+    i_dataA       <= inphase;
+    i_dataB       <= inphase;
+    q_dataA       <= quadrature;
+    q_dataB       <= quadrature;
+    i_squared     <= i_dataA * i_dataB;
+    q_squared     <= q_dataA * q_dataB;
+    square_sum    <= i_squared + q_squared;
+    amdemod_out_d <= sqrt({1'b0, square_sum});
+    amdemod_out   <= amdemod_out_d;
   end
 
   //=============================//
-  //       For sim only          //
+  //       For simulation only   //
   //=============================//
   `ifdef SIMULATION
   initial begin

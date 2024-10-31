@@ -30,21 +30,17 @@ module Mixer #(
     output logic signed [DATA_WIDTH-1:0] sinewave_out,
     output logic signed [DATA_WIDTH-1:0] cosinewave_out
 );
-
   //=============================//
   //       Internal signals      //
   //=============================//
   logic [1:0] rf_in_d = 2'b11;
-
   // Delay the rf_in signal by two clock cycles
   always_ff @(posedge clk) begin
     rf_in_d[0]    <= rf_in;
     rf_in_d[1]    <= rf_in_d[0];
   end
-
   // Assign the delayed rf_in signal to rf_out
   always_comb rf_out = rf_in_d[0];
-
   //=============================//
   //       Mixing process        //
   //=============================//

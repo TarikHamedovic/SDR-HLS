@@ -1,0 +1,2960 @@
+
+Loading design for application trce from file onebitsdr_project.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 11:24:59 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o onebitsdr_project.twr onebitsdr_project.ncd onebitsdr_project.prf 
+Design file:     onebitsdr_project.ncd
+Preference file: onebitsdr_project.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25mhz_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            4096 items scored, 37 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.880ns (weighted slack = -8.640ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_3  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.673ns  (57.4% logic, 42.6% route), 10 logic levels.
+
+ Constraint Details:
+
+      3.673ns physical path delay AMDemodulator_inst/SLICE_935 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.880ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_935 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R53C51C.CLK to     R53C51C.Q0 AMDemodulator_inst/SLICE_935 (from cic_sine_clk)
+ROUTE         1     0.969     R53C51C.Q0 to     R53C49A.A1 AMDemodulator_inst/square_sumf_0f[0]
+C1TOFCO_DE  ---     0.447     R53C49A.A1 to    R53C49A.FCO AMDemodulator_inst/SLICE_109
+ROUTE         1     0.000    R53C49A.FCO to    R53C49B.FCI AMDemodulator_inst/un1_square_sum_0_cry_0
+FCITOFCO_D  ---     0.071    R53C49B.FCI to    R53C49B.FCO AMDemodulator_inst/SLICE_110
+ROUTE         1     0.000    R53C49B.FCO to    R53C49C.FCI AMDemodulator_inst/un1_square_sum_0_cry_2
+FCITOFCO_D  ---     0.071    R53C49C.FCI to    R53C49C.FCO AMDemodulator_inst/SLICE_111
+ROUTE         1     0.000    R53C49C.FCO to    R53C49D.FCI AMDemodulator_inst/un1_square_sum_0_cry_4
+FCITOFCO_D  ---     0.071    R53C49D.FCI to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.673   (57.4% logic, 42.6% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_935:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R53C51C.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.853ns (weighted slack = -8.559ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_5  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.646ns  (55.9% logic, 44.1% route), 9 logic levels.
+
+ Constraint Details:
+
+      3.646ns physical path delay AMDemodulator_inst/SLICE_946 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.853ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_946 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R52C50C.CLK to     R52C50C.Q0 AMDemodulator_inst/SLICE_946 (from cic_sine_clk)
+ROUTE         1     1.013     R52C50C.Q0 to     R53C49B.B1 AMDemodulator_inst/un1_r_9_0f[0]
+C1TOFCO_DE  ---     0.447     R53C49B.B1 to    R53C49B.FCO AMDemodulator_inst/SLICE_110
+ROUTE         1     0.000    R53C49B.FCO to    R53C49C.FCI AMDemodulator_inst/un1_square_sum_0_cry_2
+FCITOFCO_D  ---     0.071    R53C49C.FCI to    R53C49C.FCO AMDemodulator_inst/SLICE_111
+ROUTE         1     0.000    R53C49C.FCO to    R53C49D.FCI AMDemodulator_inst/un1_square_sum_0_cry_4
+FCITOFCO_D  ---     0.071    R53C49D.FCI to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.646   (55.9% logic, 44.1% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_946:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R52C50C.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.790ns (weighted slack = -8.370ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_7  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.583ns  (54.9% logic, 45.1% route), 8 logic levels.
+
+ Constraint Details:
+
+      3.583ns physical path delay AMDemodulator_inst/SLICE_947 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.790ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_947 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R52C51B.CLK to     R52C51B.Q0 AMDemodulator_inst/SLICE_947 (from cic_sine_clk)
+ROUTE         1     1.021     R52C51B.Q0 to     R53C49C.A1 AMDemodulator_inst/un1_r_9_0f[2]
+C1TOFCO_DE  ---     0.447     R53C49C.A1 to    R53C49C.FCO AMDemodulator_inst/SLICE_111
+ROUTE         1     0.000    R53C49C.FCO to    R53C49D.FCI AMDemodulator_inst/un1_square_sum_0_cry_4
+FCITOFCO_D  ---     0.071    R53C49D.FCI to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.583   (54.9% logic, 45.1% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_947:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R52C51B.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.782ns (weighted slack = -8.346ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_19  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.575ns  (55.0% logic, 45.0% route), 8 logic levels.
+
+ Constraint Details:
+
+      3.575ns physical path delay AMDemodulator_inst/SLICE_944 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.782ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_944 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R54C49B.CLK to     R54C49B.Q0 AMDemodulator_inst/SLICE_944 (from cic_sine_clk)
+ROUTE         1     1.013     R54C49B.Q0 to     R53C49C.B1 AMDemodulator_inst/un1_r_7ff[11]
+C1TOFCO_DE  ---     0.447     R53C49C.B1 to    R53C49C.FCO AMDemodulator_inst/SLICE_111
+ROUTE         1     0.000    R53C49C.FCO to    R53C49D.FCI AMDemodulator_inst/un1_square_sum_0_cry_4
+FCITOFCO_D  ---     0.071    R53C49D.FCI to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.575   (55.0% logic, 45.0% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_944:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R54C49B.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.781ns (weighted slack = -8.343ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_13  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.574ns  (49.0% logic, 51.0% route), 5 logic levels.
+
+ Constraint Details:
+
+      3.574ns physical path delay AMDemodulator_inst/SLICE_950 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.781ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_950 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R54C53B.CLK to     R54C53B.Q0 AMDemodulator_inst/SLICE_950 (from cic_sine_clk)
+ROUTE         1     1.225     R54C53B.Q0 to     R53C50B.A1 AMDemodulator_inst/un1_r_9_0f[8]
+C1TOFCO_DE  ---     0.447     R53C50B.A1 to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.574   (49.0% logic, 51.0% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_950:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R54C53B.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.765ns (weighted slack = -8.295ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_6  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.558ns  (55.2% logic, 44.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      3.558ns physical path delay AMDemodulator_inst/SLICE_946 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.765ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_946 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C50C.CLK to     R52C50C.Q1 AMDemodulator_inst/SLICE_946 (from cic_sine_clk)
+ROUTE         1     0.999     R52C50C.Q1 to     R53C49C.B0 AMDemodulator_inst/un1_r_9_0f[1]
+C0TOFCO_DE  ---     0.447     R53C49C.B0 to    R53C49C.FCO AMDemodulator_inst/SLICE_111
+ROUTE         1     0.000    R53C49C.FCO to    R53C49D.FCI AMDemodulator_inst/un1_square_sum_0_cry_4
+FCITOFCO_D  ---     0.071    R53C49D.FCI to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.558   (55.2% logic, 44.8% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_946:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R52C50C.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.732ns (weighted slack = -8.196ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_21  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.525ns  (53.8% logic, 46.2% route), 7 logic levels.
+
+ Constraint Details:
+
+      3.525ns physical path delay AMDemodulator_inst/SLICE_942 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.732ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_942 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C47A.CLK to     R56C47A.Q0 AMDemodulator_inst/SLICE_942 (from cic_sine_clk)
+ROUTE         1     1.034     R56C47A.Q0 to     R53C49D.B1 AMDemodulator_inst/un1_r_5ff[9]
+C1TOFCO_DE  ---     0.447     R53C49D.B1 to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.525   (53.8% logic, 46.2% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_942:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R56C47A.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.711ns (weighted slack = -8.133ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_20  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.504ns  (54.1% logic, 45.9% route), 7 logic levels.
+
+ Constraint Details:
+
+      3.504ns physical path delay AMDemodulator_inst/SLICE_943 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.711ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_943 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R55C48A.CLK to     R55C48A.Q0 AMDemodulator_inst/SLICE_943 (from cic_sine_clk)
+ROUTE         1     1.013     R55C48A.Q0 to     R53C49D.B0 AMDemodulator_inst/un1_r_6ff[10]
+C0TOFCO_DE  ---     0.447     R53C49D.B0 to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.504   (54.1% logic, 45.9% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_943:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R55C48A.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.702ns (weighted slack = -8.106ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_8  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.495ns  (54.1% logic, 45.9% route), 7 logic levels.
+
+ Constraint Details:
+
+      3.495ns physical path delay AMDemodulator_inst/SLICE_947 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.702ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_947 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R52C51B.CLK to     R52C51B.Q1 AMDemodulator_inst/SLICE_947 (from cic_sine_clk)
+ROUTE         1     1.007     R52C51B.Q1 to     R53C49D.A0 AMDemodulator_inst/un1_r_9_0f[3]
+C0TOFCO_DE  ---     0.447     R53C49D.A0 to    R53C49D.FCO AMDemodulator_inst/SLICE_112
+ROUTE         1     0.000    R53C49D.FCO to    R53C50A.FCI AMDemodulator_inst/un1_square_sum_0_cry_6
+FCITOFCO_D  ---     0.071    R53C50A.FCI to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.495   (54.1% logic, 45.9% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_947:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R52C51B.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 2.669ns (weighted slack = -8.007ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_pipe_22  (from cic_sine_clk +)
+   Destination:    FF         Data in        pwm_inst/data_in_reg[0]  (to clk_80mhz +)
+
+   Delay:               3.462ns  (52.7% logic, 47.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.462ns physical path delay AMDemodulator_inst/SLICE_941 to SLICE_1496 exceeds
+      (delay constraint based on source clock period of 40.000ns and destination clock period of 12.000ns)
+      4.000ns delay constraint less
+      3.467ns skew and
+      0.000ns feedback compensation and
+     -0.260ns DIN_SET requirement (totaling 0.793ns) by 2.669ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_941 to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C48D.CLK to     R56C48D.Q0 AMDemodulator_inst/SLICE_941 (from cic_sine_clk)
+ROUTE         1     1.042     R56C48D.Q0 to     R53C50A.A0 AMDemodulator_inst/un1_r_4ff[8]
+C0TOFCO_DE  ---     0.447     R53C50A.A0 to    R53C50A.FCO AMDemodulator_inst/SLICE_113
+ROUTE         1     0.000    R53C50A.FCO to    R53C50B.FCI AMDemodulator_inst/un1_square_sum_0_cry_8
+FCITOFCO_D  ---     0.071    R53C50B.FCI to    R53C50B.FCO AMDemodulator_inst/SLICE_114
+ROUTE         1     0.000    R53C50B.FCO to    R53C50C.FCI AMDemodulator_inst/un1_square_sum_0_cry_10
+FCITOFCO_D  ---     0.071    R53C50C.FCI to    R53C50C.FCO AMDemodulator_inst/SLICE_115
+ROUTE         1     0.000    R53C50C.FCO to    R53C50D.FCI AMDemodulator_inst/un1_square_sum_0_cry_12
+FCITOF1_DE  ---     0.474    R53C50D.FCI to     R53C50D.F1 AMDemodulator_inst/SLICE_116
+ROUTE         1     0.596     R53C50D.F1 to     R54C50D.D0 AMDemodulator_inst/un1_square_sum0[14]
+CTOF_DEL    ---     0.236     R54C50D.D0 to     R54C50D.F0 SLICE_1496
+ROUTE         1     0.000     R54C50D.F0 to    R54C50D.DI0 AMDemodulator_inst.un1_square_sum_i[14] (to clk_80mhz)
+                  --------
+                    3.462   (52.7% logic, 47.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to AMDemodulator_inst/SLICE_941:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.525    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     2.942     R59C67A.Q0 to    R56C48D.CLK cic_sine_clk
+                  --------
+                    7.889   (21.1% logic, 78.9% route), 3 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to SLICE_1496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.140         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.592       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.690  PLL_BL0.CLKOP to    R54C50D.CLK clk_80mhz
+                  --------
+                    4.422   (25.8% logic, 74.2% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     2.790  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    2.790   (0.0% logic, 100.0% route), 1 logic levels.
+
+Warning:  48.450MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 16.454ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.812ns  (25.4% logic, 74.6% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.812ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.454ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF1_DEL   ---     0.714     R59C47D.B0 to     R59C47D.F1 AMDemodulator_inst/SLICE_86
+ROUTE         2     0.720     R59C47D.F1 to     R56C47B.D0 AMDemodulator_inst/un44_r[6]
+CTOOFX_DEL  ---     0.401     R56C47B.D0 to   R56C47B.OFX0 AMDemodulator_inst/un1_r_5[6]/SLICE_1532
+ROUTE         2     1.194   R56C47B.OFX0 to     R55C46A.B1 AMDemodulator_inst/un1_r_5[6]
+C1TOFCO_DE  ---     0.447     R55C46A.B1 to    R55C46A.FCO AMDemodulator_inst/SLICE_41
+ROUTE         1     0.000    R55C46A.FCO to    R55C46B.FCI AMDemodulator_inst/un48_r_cry_8
+FCITOF1_DE  ---     0.474    R55C46B.FCI to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.812   (25.4% logic, 74.6% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.454ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.812ns  (25.4% logic, 74.6% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.812ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.454ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF1_DEL   ---     0.714     R59C47D.B0 to     R59C47D.F1 AMDemodulator_inst/SLICE_86
+ROUTE         2     0.720     R59C47D.F1 to     R56C47B.D1 AMDemodulator_inst/un44_r[6]
+CTOOFX_DEL  ---     0.401     R56C47B.D1 to   R56C47B.OFX0 AMDemodulator_inst/un1_r_5[6]/SLICE_1532
+ROUTE         2     1.194   R56C47B.OFX0 to     R55C46A.B1 AMDemodulator_inst/un1_r_5[6]
+C1TOFCO_DE  ---     0.447     R55C46A.B1 to    R55C46A.FCO AMDemodulator_inst/SLICE_41
+ROUTE         1     0.000    R55C46A.FCO to    R55C46B.FCI AMDemodulator_inst/un48_r_cry_8
+FCITOF1_DE  ---     0.474    R55C46B.FCI to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.812   (25.4% logic, 74.6% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.464ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.802ns  (24.6% logic, 75.4% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.802ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.464ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+C0TOFCO_DE  ---     0.447     R59C47D.B0 to    R59C47D.FCO AMDemodulator_inst/SLICE_86
+ROUTE         1     0.000    R59C47D.FCO to    R59C48A.FCI AMDemodulator_inst/un44_r_cry_6
+FCITOF0_DE  ---     0.443    R59C48A.FCI to     R59C48A.F0 AMDemodulator_inst/SLICE_87
+ROUTE         1     1.081     R59C48A.F0 to     R56C48D.A1 AMDemodulator_inst/un44_r[7]
+CTOF_DEL    ---     0.236     R56C48D.A1 to     R56C48D.F1 AMDemodulator_inst/SLICE_941
+ROUTE         2     1.019     R56C48D.F1 to     R55C46B.A0 AMDemodulator_inst/un1_r_5[7]
+CTOF1_DEL   ---     0.714     R55C46B.A0 to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.802   (24.6% logic, 75.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.464ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.802ns  (24.6% logic, 75.4% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.802ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.464ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.665     R55C47B.F0 to     R60C48B.B0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48B.B0 to     R60C48B.F0 AMDemodulator_inst/SLICE_1633
+ROUTE         2     1.412     R60C48B.F0 to     R59C47D.A1 AMDemodulator_inst/un1_r_4[4]
+C1TOFCO_DE  ---     0.447     R59C47D.A1 to    R59C47D.FCO AMDemodulator_inst/SLICE_86
+ROUTE         1     0.000    R59C47D.FCO to    R59C48A.FCI AMDemodulator_inst/un44_r_cry_6
+FCITOF0_DE  ---     0.443    R59C48A.FCI to     R59C48A.F0 AMDemodulator_inst/SLICE_87
+ROUTE         1     1.081     R59C48A.F0 to     R56C48D.A1 AMDemodulator_inst/un44_r[7]
+CTOF_DEL    ---     0.236     R56C48D.A1 to     R56C48D.F1 AMDemodulator_inst/SLICE_941
+ROUTE         2     1.019     R56C48D.F1 to     R55C46B.A0 AMDemodulator_inst/un1_r_5[7]
+CTOF1_DEL   ---     0.714     R55C46B.A0 to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.802   (24.6% logic, 75.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.537ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.729ns  (23.5% logic, 76.5% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.729ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.537ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF_DEL    ---     0.236     R59C47D.B0 to     R59C47D.F0 AMDemodulator_inst/SLICE_86
+ROUTE         2     1.269     R59C47D.F0 to     R57C46B.B0 AMDemodulator_inst/un44_r[5]
+CTOOFX_DEL  ---     0.401     R57C46B.B0 to   R57C46B.OFX0 AMDemodulator_inst/un1_r_5[5]/SLICE_1531
+ROUTE         2     0.981   R57C46B.OFX0 to     R56C46A.A0 AMDemodulator_inst/un1_r_5[5]
+C0TOFCO_DE  ---     0.447     R56C46A.A0 to    R56C46A.FCO AMDemodulator_inst/SLICE_93
+ROUTE         1     0.000    R56C46A.FCO to    R56C46B.FCI AMDemodulator_inst/un50_r_cry_8
+FCITOF1_DE  ---     0.474    R56C46B.FCI to     R56C46B.F1 AMDemodulator_inst/SLICE_94
+ROUTE         2     0.849     R56C46B.F1 to     R55C48A.C0 AMDemodulator_inst/un50_r[10]
+CTOF_DEL    ---     0.236     R55C48A.C0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.729   (23.5% logic, 76.5% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.537ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.729ns  (23.5% logic, 76.5% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.729ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.537ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF_DEL    ---     0.236     R59C47D.B0 to     R59C47D.F0 AMDemodulator_inst/SLICE_86
+ROUTE         2     1.269     R59C47D.F0 to     R57C46B.B1 AMDemodulator_inst/un44_r[5]
+CTOOFX_DEL  ---     0.401     R57C46B.B1 to   R57C46B.OFX0 AMDemodulator_inst/un1_r_5[5]/SLICE_1531
+ROUTE         2     0.981   R57C46B.OFX0 to     R56C46A.A0 AMDemodulator_inst/un1_r_5[5]
+C0TOFCO_DE  ---     0.447     R56C46A.A0 to    R56C46A.FCO AMDemodulator_inst/SLICE_93
+ROUTE         1     0.000    R56C46A.FCO to    R56C46B.FCI AMDemodulator_inst/un50_r_cry_8
+FCITOF1_DE  ---     0.474    R56C46B.FCI to     R56C46B.F1 AMDemodulator_inst/SLICE_94
+ROUTE         2     0.849     R56C46B.F1 to     R55C48A.C0 AMDemodulator_inst/un50_r[10]
+CTOF_DEL    ---     0.236     R55C48A.C0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.729   (23.5% logic, 76.5% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.596ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.670ns  (23.5% logic, 76.5% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.670ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.596ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF_DEL    ---     0.236     R59C47D.B0 to     R59C47D.F0 AMDemodulator_inst/SLICE_86
+ROUTE         2     1.269     R59C47D.F0 to     R57C46B.B0 AMDemodulator_inst/un44_r[5]
+CTOOFX_DEL  ---     0.401     R57C46B.B0 to   R57C46B.OFX0 AMDemodulator_inst/un1_r_5[5]/SLICE_1531
+ROUTE         2     0.981   R57C46B.OFX0 to     R55C46A.A0 AMDemodulator_inst/un1_r_5[5]
+C0TOFCO_DE  ---     0.447     R55C46A.A0 to    R55C46A.FCO AMDemodulator_inst/SLICE_41
+ROUTE         1     0.000    R55C46A.FCO to    R55C46B.FCI AMDemodulator_inst/un48_r_cry_8
+FCITOF1_DE  ---     0.474    R55C46B.FCI to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.670   (23.5% logic, 76.5% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.596ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.670ns  (23.5% logic, 76.5% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.670ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.596ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF_DEL    ---     0.236     R59C47D.B0 to     R59C47D.F0 AMDemodulator_inst/SLICE_86
+ROUTE         2     1.269     R59C47D.F0 to     R57C46B.B1 AMDemodulator_inst/un44_r[5]
+CTOOFX_DEL  ---     0.401     R57C46B.B1 to   R57C46B.OFX0 AMDemodulator_inst/un1_r_5[5]/SLICE_1531
+ROUTE         2     0.981   R57C46B.OFX0 to     R55C46A.A0 AMDemodulator_inst/un1_r_5[5]
+C0TOFCO_DE  ---     0.447     R55C46A.A0 to    R55C46A.FCO AMDemodulator_inst/SLICE_41
+ROUTE         1     0.000    R55C46A.FCO to    R55C46B.FCI AMDemodulator_inst/un48_r_cry_8
+FCITOF1_DE  ---     0.474    R55C46B.FCI to     R55C46B.F1 AMDemodulator_inst/SLICE_42
+ROUTE         2     0.790     R55C46B.F1 to     R55C48A.B0 AMDemodulator_inst/un48_r[10]
+CTOF_DEL    ---     0.236     R55C48A.B0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.670   (23.5% logic, 76.5% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.616ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.650ns  (25.6% logic, 74.4% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.650ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.616ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF1_DEL   ---     0.714     R59C47D.B0 to     R59C47D.F1 AMDemodulator_inst/SLICE_86
+ROUTE         2     0.720     R59C47D.F1 to     R56C47B.D0 AMDemodulator_inst/un44_r[6]
+CTOOFX_DEL  ---     0.401     R56C47B.D0 to   R56C47B.OFX0 AMDemodulator_inst/un1_r_5[6]/SLICE_1532
+ROUTE         2     0.973   R56C47B.OFX0 to     R56C46A.B1 AMDemodulator_inst/un1_r_5[6]
+C1TOFCO_DE  ---     0.447     R56C46A.B1 to    R56C46A.FCO AMDemodulator_inst/SLICE_93
+ROUTE         1     0.000    R56C46A.FCO to    R56C46B.FCI AMDemodulator_inst/un50_r_cry_8
+FCITOF1_DE  ---     0.474    R56C46B.FCI to     R56C46B.F1 AMDemodulator_inst/SLICE_94
+ROUTE         2     0.849     R56C46B.F1 to     R55C48A.C0 AMDemodulator_inst/un50_r[10]
+CTOF_DEL    ---     0.236     R55C48A.C0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.650   (25.6% logic, 74.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 16.616ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              AMDemodulator_inst/amdemod_out_d_pipe_389  (from cic_sine_clk +)
+   Destination:    FF         Data in        AMDemodulator_inst/amdemod_out_pipe_1  (to cic_sine_clk +)
+
+   Delay:              23.650ns  (25.6% logic, 74.4% route), 16 logic levels.
+
+ Constraint Details:
+
+     23.650ns physical path delay AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132 meets
+     40.000ns delay constraint less
+      0.000ns skew and
+     -0.266ns DIN_SET requirement (totaling 40.266ns) by 16.616ns
+
+ Physical Path Details:
+
+      Data path AMDemodulator_inst/SLICE_29 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R60C54D.CLK to     R60C54D.Q1 AMDemodulator_inst/SLICE_29 (from cic_sine_clk)
+ROUTE         3     1.603     R60C54D.Q1 to     R55C50B.A0 AMDemodulator_inst/un24_rf[6]
+CTOF_DEL    ---     0.236     R55C50B.A0 to     R55C50B.F0 AMDemodulator_inst/SLICE_939
+ROUTE        26     1.770     R55C50B.F0 to     R55C47B.B0 AMDemodulator_inst/un1_r_2[6]
+CTOF_DEL    ---     0.236     R55C47B.B0 to     R55C47B.F0 AMDemodulator_inst/SLICE_940
+ROUTE        29     1.673     R55C47B.F0 to     R60C48D.A0 AMDemodulator_inst/un1_r_3[7]
+CTOF_DEL    ---     0.236     R60C48D.A0 to     R60C48D.F0 AMDemodulator_inst/SLICE_1634
+ROUTE         2     1.404     R60C48D.F0 to     R59C47D.B0 AMDemodulator_inst/un1_r_4[3]
+CTOF1_DEL   ---     0.714     R59C47D.B0 to     R59C47D.F1 AMDemodulator_inst/SLICE_86
+ROUTE         2     0.720     R59C47D.F1 to     R56C47B.D1 AMDemodulator_inst/un44_r[6]
+CTOOFX_DEL  ---     0.401     R56C47B.D1 to   R56C47B.OFX0 AMDemodulator_inst/un1_r_5[6]/SLICE_1532
+ROUTE         2     0.973   R56C47B.OFX0 to     R56C46A.B1 AMDemodulator_inst/un1_r_5[6]
+C1TOFCO_DE  ---     0.447     R56C46A.B1 to    R56C46A.FCO AMDemodulator_inst/SLICE_93
+ROUTE         1     0.000    R56C46A.FCO to    R56C46B.FCI AMDemodulator_inst/un50_r_cry_8
+FCITOF1_DE  ---     0.474    R56C46B.FCI to     R56C46B.F1 AMDemodulator_inst/SLICE_94
+ROUTE         2     0.849     R56C46B.F1 to     R55C48A.C0 AMDemodulator_inst/un50_r[10]
+CTOF_DEL    ---     0.236     R55C48A.C0 to     R55C48A.F0 AMDemodulator_inst/SLICE_943
+ROUTE        26     2.717     R55C48A.F0 to     R54C49A.B1 AMDemodulator_inst/un1_r_6[10]
+CTOF_DEL    ---     0.236     R54C49A.B1 to     R54C49A.F1 AMDemodulator_inst/SLICE_1593
+ROUTE         1     0.969     R54C49A.F1 to     R54C48A.A0 AMDemodulator_inst/un60_r_axb_7
+C0TOFCO_DE  ---     0.447     R54C48A.A0 to    R54C48A.FCO AMDemodulator_inst/SLICE_58
+ROUTE         1     0.000    R54C48A.FCO to    R54C48B.FCI AMDemodulator_inst/un60_r_cry_8
+FCITOF0_DE  ---     0.443    R54C48B.FCI to     R54C48B.F0 AMDemodulator_inst/SLICE_59
+ROUTE         1     1.021     R54C48B.F0 to     R52C48B.A0 AMDemodulator_inst/un60_r[9]
+CTOF_DEL    ---     0.236     R52C48B.A0 to     R52C48B.F0 AMDemodulator_inst/SLICE_1612
+ROUTE         2     1.865     R52C48B.F0 to     R53C53C.A0 AMDemodulator_inst/un1_r_8[9]
+CTOF_DEL    ---     0.236     R53C53C.A0 to     R53C53C.F0 AMDemodulator_inst/SLICE_123
+ROUTE         1     0.823     R53C53C.F0 to     R52C51A.C1 AMDemodulator_inst/un68_r[11]
+CTOF_DEL    ---     0.236     R52C51A.C1 to     R52C51A.F1 AMDemodulator_inst/SLICE_951
+ROUTE         2     1.213     R52C51A.F1 to     R54C52D.A0 AMDemodulator_inst/un1_r_9_0[11]
+CTOF1_DEL   ---     0.714     R54C52D.A0 to     R54C52D.F1 AMDemodulator_inst/SLICE_132
+ROUTE         1     0.000     R54C52D.F1 to    R54C52D.DI1 AMDemodulator_inst/un1_square_sum1[14] (to cic_sine_clk)
+                  --------
+                   23.650   (25.6% logic, 74.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R60C54D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path cic_sine_inst/SLICE_1209 to AMDemodulator_inst/SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        63     2.942     R59C67A.Q0 to    R54C52D.CLK cic_sine_clk
+                  --------
+                    2.942   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   42.470MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_25mhz_c" 25.000000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |   83.333 MHz|   48.450 MHz|  10 *
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |   25.000 MHz|   42.470 MHz|  16  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+AMDemodulator_inst.un1_square_sum_i[14] |       1|      28|     75.68%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum0[14]  |       1|      26|     70.27%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum_0_cry_|        |        |
+12                                      |       1|      23|     62.16%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum_0_cry_|        |        |
+10                                      |       1|      19|     51.35%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum_0_cry_|        |        |
+8                                       |       1|      15|     40.54%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum_0_cry_|        |        |
+6                                       |       1|      11|     29.73%
+                                        |        |        |
+AMDemodulator_inst/un1_square_sum_0_cry_|        |        |
+4                                       |       1|       7|     18.92%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: clk_80mhz   Source: PLL_inst/PLLInst_0.CLKOP   Loads: 1271
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1209.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 37
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1209.Q0   Loads: 63
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_80mhz   Source: PLL_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 32
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 37  Score: 221388
+Cumulative negative slack: 221388
+
+Constraints cover 27137421 paths, 3 nets, and 10616 connections (99.80% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 11:25:00 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o onebitsdr_project.twr onebitsdr_project.ncd onebitsdr_project.prf 
+Design file:     onebitsdr_project.ncd
+Preference file: onebitsdr_project.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25mhz_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              mixer_inst/cosinewave_out_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_cosine_inst/integrator1_pipe_72  (to clk_80mhz +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_1448 to SLICE_1448 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_1448 to SLICE_1448:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R45C73B.CLK to     R45C73B.Q0 SLICE_1448 (from clk_80mhz)
+ROUTE         1     0.129     R45C73B.Q0 to     R45C73B.M1 lo_cosinewavef[0] (to clk_80mhz)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to SLICE_1448:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R45C73B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to SLICE_1448:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R45C73B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              mixer_inst/sinewave_out_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_sine_inst/integrator1_pipe_72  (to clk_80mhz +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay SLICE_1449 to SLICE_1449 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path SLICE_1449 to SLICE_1449:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C65C.CLK to     R39C65C.Q0 SLICE_1449 (from clk_80mhz)
+ROUTE         1     0.129     R39C65C.Q0 to     R39C65C.M1 lo_sinewavef[0] (to clk_80mhz)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to SLICE_1449:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C65C.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to SLICE_1449:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C65C.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              mixer_inst/rf_in_d[1]  (from clk_80mhz +)
+   Destination:    FF         Data in        mixer_inst/cosinewave_out_pipe_2  (to clk_80mhz +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay mixer_inst/SLICE_1462 to mixer_inst/SLICE_1462 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path mixer_inst/SLICE_1462 to mixer_inst/SLICE_1462:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R47C67B.CLK to     R47C67B.Q1 mixer_inst/SLICE_1462 (from clk_80mhz)
+ROUTE         3     0.131     R47C67B.Q1 to     R47C67B.M0 mixer_inst/rf_in_d[1] (to clk_80mhz)
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to mixer_inst/SLICE_1462:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R47C67B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to mixer_inst/SLICE_1462:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R47C67B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx_inst/r_Clock_Count[0]  (from clk_80mhz +)
+   Destination:    FF         Data in        uart_rx_inst/r_Clock_Count[0]  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay uart_rx_inst/SLICE_1505 to uart_rx_inst/SLICE_1505 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path uart_rx_inst/SLICE_1505 to uart_rx_inst/SLICE_1505:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R56C54A.CLK to     R56C54A.Q0 uart_rx_inst/SLICE_1505 (from clk_80mhz)
+ROUTE         4     0.057     R56C54A.Q0 to     R56C54A.D0 uart_rx_inst/r_Clock_Count[0]
+CTOF_DEL    ---     0.076     R56C54A.D0 to     R56C54A.F0 uart_rx_inst/SLICE_1505
+ROUTE         1     0.000     R56C54A.F0 to    R56C54A.DI0 uart_rx_inst/r_Clock_Count_rst0 (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to uart_rx_inst/SLICE_1505:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R56C54A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to uart_rx_inst/SLICE_1505:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R56C54A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_cosine_inst/integrator4_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_cosine_inst/integrator4_pipe  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay cic_cosine_inst/SLICE_1128 to cic_cosine_inst/SLICE_1128 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path cic_cosine_inst/SLICE_1128 to cic_cosine_inst/SLICE_1128:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R37C88B.CLK to     R37C88B.Q0 cic_cosine_inst/SLICE_1128 (from clk_80mhz)
+ROUTE         4     0.057     R37C88B.Q0 to     R37C88B.D0 cic_cosine_inst/integrator4_1
+CTOF_DEL    ---     0.076     R37C88B.D0 to     R37C88B.F0 cic_cosine_inst/SLICE_1128
+ROUTE         1     0.000     R37C88B.F0 to    R37C88B.DI0 cic_cosine_inst/integrator4[0] (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1128:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R37C88B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1128:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R37C88B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_cosine_inst/integrator2_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_cosine_inst/integrator2_pipe  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay cic_cosine_inst/SLICE_1126 to cic_cosine_inst/SLICE_1126 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path cic_cosine_inst/SLICE_1126 to cic_cosine_inst/SLICE_1126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C78B.CLK to     R39C78B.Q0 cic_cosine_inst/SLICE_1126 (from clk_80mhz)
+ROUTE         4     0.057     R39C78B.Q0 to     R39C78B.D0 cic_cosine_inst/integrator2_1
+CTOF_DEL    ---     0.076     R39C78B.D0 to     R39C78B.F0 cic_cosine_inst/SLICE_1126
+ROUTE         1     0.000     R39C78B.F0 to    R39C78B.DI0 cic_cosine_inst/integrator2[0] (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C78B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C78B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart_rx_inst/r_Clock_Count[12]  (from clk_80mhz +)
+   Destination:    FF         Data in        uart_rx_inst/r_Clock_Count[12]  (to clk_80mhz +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay uart_rx_inst/SLICE_1511 to uart_rx_inst/SLICE_1511 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path uart_rx_inst/SLICE_1511 to uart_rx_inst/SLICE_1511:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R53C55B.CLK to     R53C55B.Q0 uart_rx_inst/SLICE_1511 (from clk_80mhz)
+ROUTE         4     0.057     R53C55B.Q0 to     R53C55B.D0 uart_rx_inst/r_Clock_Count[12]
+CTOF_DEL    ---     0.076     R53C55B.D0 to     R53C55B.F0 uart_rx_inst/SLICE_1511
+ROUTE         1     0.000     R53C55B.F0 to    R53C55B.DI0 uart_rx_inst/r_Clock_Count_rst12 (to clk_80mhz)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to uart_rx_inst/SLICE_1511:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R53C55B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to uart_rx_inst/SLICE_1511:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R53C55B.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_cosine_inst/integrator1_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_cosine_inst/integrator1_pipe  (to clk_80mhz +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay cic_cosine_inst/SLICE_1125 to cic_cosine_inst/SLICE_1125 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path cic_cosine_inst/SLICE_1125 to cic_cosine_inst/SLICE_1125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C78A.CLK to     R39C78A.Q0 cic_cosine_inst/SLICE_1125 (from clk_80mhz)
+ROUTE         4     0.058     R39C78A.Q0 to     R39C78A.D0 cic_cosine_inst/integrator1_1
+CTOF_DEL    ---     0.076     R39C78A.D0 to     R39C78A.F0 cic_cosine_inst/SLICE_1125
+ROUTE         1     0.000     R39C78A.F0 to    R39C78A.DI0 cic_cosine_inst/integrator1[0] (to clk_80mhz)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C78A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to cic_cosine_inst/SLICE_1125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C78A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine_inst/integrator3_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_sine_inst/integrator3_pipe  (to clk_80mhz +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay cic_sine_inst/SLICE_1363 to cic_sine_inst/SLICE_1363 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path cic_sine_inst/SLICE_1363 to cic_sine_inst/SLICE_1363:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C64A.CLK to     R39C64A.Q0 cic_sine_inst/SLICE_1363 (from clk_80mhz)
+ROUTE         4     0.058     R39C64A.Q0 to     R39C64A.D0 cic_sine_inst/integrator3_1
+CTOF_DEL    ---     0.076     R39C64A.D0 to     R39C64A.F0 cic_sine_inst/SLICE_1363
+ROUTE         1     0.000     R39C64A.F0 to    R39C64A.DI0 cic_sine_inst/integrator3[0] (to clk_80mhz)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to cic_sine_inst/SLICE_1363:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C64A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to cic_sine_inst/SLICE_1363:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C64A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine_inst/integrator1_pipe  (from clk_80mhz +)
+   Destination:    FF         Data in        cic_sine_inst/integrator1_pipe  (to clk_80mhz +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay cic_sine_inst/SLICE_1361 to cic_sine_inst/SLICE_1361 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path cic_sine_inst/SLICE_1361 to cic_sine_inst/SLICE_1361:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C65A.CLK to     R39C65A.Q0 cic_sine_inst/SLICE_1361 (from clk_80mhz)
+ROUTE         4     0.058     R39C65A.Q0 to     R39C65A.D0 cic_sine_inst/integrator1_1
+CTOF_DEL    ---     0.076     R39C65A.D0 to     R39C65A.F0 cic_sine_inst/SLICE_1361
+ROUTE         1     0.000     R39C65A.F0 to    R39C65A.DI0 cic_sine_inst/integrator1[0] (to clk_80mhz)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL_inst/PLLInst_0 to cic_sine_inst/SLICE_1361:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C65A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL_inst/PLLInst_0 to cic_sine_inst/SLICE_1361:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R39C65A.CLK clk_80mhz
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            4096 items scored, 255 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/q_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.747ns  (32.1% logic, 67.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.747ns physical path delay SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.511ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.146     R49C70B.Q0 to     R49C69C.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C69C.D0 to     R49C69C.F0 cic_cosine_inst/SLICE_1576
+ROUTE         2     0.361     R49C69C.F0 to *T18_R58C69.B5 N_109 (to cic_sine_clk)
+                  --------
+                    0.747   (32.1% logic, 67.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C69.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/q_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.747ns  (32.1% logic, 67.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.747ns physical path delay SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.511ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.146     R49C70B.Q0 to     R49C69D.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C69D.D0 to     R49C69D.F0 cic_cosine_inst/SLICE_1577
+ROUTE         2     0.361     R49C69D.F0 to *T18_R58C69.B4 N_110 (to cic_sine_clk)
+                  --------
+                    0.747   (32.1% logic, 67.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C69.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/q_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.747ns  (32.1% logic, 67.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.747ns physical path delay SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.511ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.146     R49C70B.Q0 to     R49C69D.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C69D.D0 to     R49C69D.F0 cic_cosine_inst/SLICE_1577
+ROUTE         2     0.361     R49C69D.F0 to *T18_R58C69.A4 N_110 (to cic_sine_clk)
+                  --------
+                    0.747   (32.1% logic, 67.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C69.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/q_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.747ns  (32.1% logic, 67.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.747ns physical path delay SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.511ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.146     R49C70B.Q0 to     R49C69C.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C69C.D0 to     R49C69C.F0 cic_cosine_inst/SLICE_1576
+ROUTE         2     0.361     R49C69C.F0 to *T18_R58C69.A5 N_109 (to cic_sine_clk)
+                  --------
+                    0.747   (32.1% logic, 67.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C69.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.507ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/i_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.751ns  (32.0% logic, 68.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.751ns physical path delay SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.507ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.150     R49C70B.Q0 to     R49C72C.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C72C.D0 to     R49C72C.F0 cic_cosine_inst/SLICE_1569
+ROUTE         2     0.361     R49C72C.F0 to *T18_R58C70.B8 N_96 (to cic_sine_clk)
+                  --------
+                    0.751   (32.0% logic, 68.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C70.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.507ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/i_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.751ns  (32.0% logic, 68.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.751ns physical path delay SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.507ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.150     R49C70B.Q0 to     R49C72C.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C72C.D0 to     R49C72C.F0 cic_cosine_inst/SLICE_1569
+ROUTE         2     0.361     R49C72C.F0 to *T18_R58C70.A8 N_96 (to cic_sine_clk)
+                  --------
+                    0.751   (32.0% logic, 68.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C70.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.504ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/i_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.754ns  (31.8% logic, 68.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.754ns physical path delay SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.504ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.163     R49C70B.Q0 to     R51C70D.C0 cic_gain[0]
+CTOF_DEL    ---     0.076     R51C70D.C0 to     R51C70D.F0 cic_cosine_inst/SLICE_1568
+ROUTE         2     0.351     R51C70D.F0 to *T18_R58C70.B5 N_99 (to cic_sine_clk)
+                  --------
+                    0.754   (31.8% logic, 68.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C70.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.488ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/i_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.770ns  (31.2% logic, 68.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.770ns physical path delay SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.488ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.250     R49C70B.Q0 to     R51C71D.C0 cic_gain[0]
+CTOF_DEL    ---     0.076     R51C71D.C0 to     R51C71D.F0 cic_cosine_inst/SLICE_1570
+ROUTE         2     0.280     R51C71D.F0 to *T18_R58C70.A3 N_101 (to cic_sine_clk)
+                  --------
+                    0.770   (31.2% logic, 68.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C70.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.488ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/i_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.770ns  (31.2% logic, 68.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.770ns physical path delay SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.488ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.250     R49C70B.Q0 to     R51C71D.C0 cic_gain[0]
+CTOF_DEL    ---     0.076     R51C71D.C0 to     R51C71D.F0 cic_cosine_inst/SLICE_1570
+ROUTE         2     0.280     R51C71D.F0 to *T18_R58C70.B3 N_101 (to cic_sine_clk)
+                  --------
+                    0.770   (31.2% logic, 68.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/i_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C70.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 0.487ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_gain[0]  (from clk_80mhz +)
+   Destination:    MULT18X18D Port           AMDemodulator_inst/q_squared_2[23:0](ASIC)  (to cic_sine_clk +)
+
+   Delay:               0.771ns  (31.1% logic, 68.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.771ns physical path delay SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0] exceeds
+      (delay constraint based on source clock period of 12.000ns and destination clock period of 40.000ns)
+      0.010ns MU_HLD and
+      0.000ns delay constraint less
+     -1.248ns skew less
+      0.000ns feedback compensation requirement (totaling 1.258ns) by 0.487ns
+
+ Physical Path Details:
+
+      Data path SLICE_1208 to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R49C70B.CLK to     R49C70B.Q0 SLICE_1208 (from clk_80mhz)
+ROUTE        28     0.150     R49C70B.Q0 to     R49C71A.D0 cic_gain[0]
+CTOF_DEL    ---     0.076     R49C71A.D0 to     R49C71A.F0 cic_cosine_inst/SLICE_1578
+ROUTE         2     0.381     R49C71A.F0 to *T18_R58C69.A3 N_111 (to cic_sine_clk)
+                  --------
+                    0.771   (31.1% logic, 68.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to SLICE_1208:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R49C70B.CLK clk_80mhz
+                  --------
+                    1.864   (39.7% logic, 60.3% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk_25mhz to AMDemodulator_inst/q_squared_2[23:0]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.740         G2.PAD to       G2.PADDI clk_25mhz
+ROUTE         1     0.232       G2.PADDI to   PLL_BL0.CLKI clk_25mhz_c
+CLKI2OP_DE  ---     0.000   PLL_BL0.CLKI to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.892  PLL_BL0.CLKOP to    R59C67A.CLK clk_80mhz
+REG_DEL     ---     0.194    R59C67A.CLK to     R59C67A.Q0 cic_sine_inst/SLICE_1209
+ROUTE        63     1.054     R59C67A.Q0 to *8_R58C69.CLK0 cic_sine_clk
+                  --------
+                    3.112   (30.0% logic, 70.0% route), 3 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000  PLL_BL0.CLKFB to  PLL_BL0.CLKOP PLL_inst/PLLInst_0
+ROUTE       999     0.936  PLL_BL0.CLKOP to  PLL_BL0.CLKFB clk_80mhz
+                  --------
+                    0.936   (0.0% logic, 100.0% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_25mhz_c" 25.000000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_80mhz" 83.333333 MHz |             |             |
+;                                       |     0.000 ns|     0.175 ns|   1  
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |            -|            -|   2 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+cic_gain[1]                             |      26|      92|     36.08%
+                                        |        |        |
+cic_gain[0]                             |      28|      88|     34.51%
+                                        |        |        |
+N_2196_i                                |      14|      56|     21.96%
+                                        |        |        |
+cic_cosine_inst/un8_data_out_212_i_0    |       1|      28|     10.98%
+                                        |        |        |
+N_4_i                                   |      14|      26|     10.20%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: clk_80mhz   Source: PLL_inst/PLLInst_0.CLKOP   Loads: 1271
+   Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;
+
+   Data transfers from:
+   Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1209.Q0
+      Covered under: FREQUENCY NET "clk_80mhz" 83.333333 MHz ;   Transfers: 37
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: cic_sine_clk   Source: cic_sine_inst/SLICE_1209.Q0   Loads: 63
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_80mhz   Source: PLL_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;   Transfers: 32
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 255  Score: 43434
+Cumulative negative slack: 43434
+
+Constraints cover 27137421 paths, 3 nets, and 10616 connections (99.80% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 37 (setup), 255 (hold)
+Score: 221388 (setup), 43434 (hold)
+Cumulative negative slack: 264822 (221388+43434)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,29 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Oct 31 10:29:07 2024 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LFE5U-85F-6CABGA381 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS uart_0__tx__io : L4 : out *
+NOTE PINS uart_0__rx__io : M1 : in *
+NOTE PINS pwm_0__pwm_out_p4__io : B9 : out *
+NOTE PINS pwm_0__pwm_out_p3__io : A9 : out *
+NOTE PINS pwm_0__pwm_out_p2__io : A10 : out *
+NOTE PINS pwm_0__pwm_out_p1__io : B11 : out *
+NOTE PINS pwm_0__pwm_out_n4__io : A6 : out *
+NOTE PINS pwm_0__pwm_out_n3__io : C6 : out *
+NOTE PINS pwm_0__pwm_out_n2__io : C8 : out *
+NOTE PINS pwm_0__pwm_out_n1__io : A7 : out *
+NOTE PINS pwm_0__pwm_out__io : A4 : out *
+NOTE PINS led_7__io : H3 : out *
+NOTE PINS led_6__io : E1 : out *
+NOTE PINS led_5__io : E2 : out *
+NOTE PINS led_4__io : D1 : out *
+NOTE PINS led_3__io : D2 : out *
+NOTE PINS led_2__io : C1 : out *
+NOTE PINS led_1__io : C2 : out *
+NOTE PINS led_0__io : B2 : out *
+NOTE PINS antenna_0__rf_in__io : H18 : in *
+NOTE PINS clk25_0__io : G2 : in *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *

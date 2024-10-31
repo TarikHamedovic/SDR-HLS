@@ -1,0 +1,7 @@
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v":19:8:19:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CS263 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv":29:14:29:107|Port-width mismatch for port address. The port definition is 8 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":91:2:91:10|Pruning unused register i_dataB[11:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":91:2:91:10|Pruning unused register q_dataB[11:0]. Make sure that there are no unused intermediate registers.
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":45:2:45:10|Pruning unused bits 12 to 10 of data_in_reg[12:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL246 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":38:35:38:41|Input port bits 12 to 10 of data_in[12:0] are unused. Assign logic for all port bits or change the input port size.
+

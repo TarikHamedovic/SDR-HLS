@@ -1,0 +1,43 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "000000000000" on instance amdemod_d[11:0].
+@N: FX493 |Applying initial value "0" on instance valid_comb.
+@N: FX493 |Applying initial value "0" on instance decimation_clk.
+@N: FX493 |Applying initial value "0" on instance data_clk.
+@N: FX493 |Applying initial value "000000000000" on instance data_out[11:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance integrator_d_tmp[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d6[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d7[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d8[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d9[71:0].
+@N: FX493 |Applying initial value "0" on instance valid_comb.
+@N: FX493 |Applying initial value "0" on instance decimation_clk.
+@N: FX493 |Applying initial value "0" on instance data_clk.
+@N: FX493 |Applying initial value "000000000000" on instance data_out[11:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance integrator_d_tmp[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d6[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d7[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d8[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d9[71:0].
+@N: FX493 |Applying initial value "0" on instance rf_in_d_1.
+@N: FX493 |Applying initial value "0" on instance rf_in_d_2.
+@N: FX493 |Applying initial value "000000000000" on instance sinewave_out[11:0].
+@N: FX493 |Applying initial value "000000000000" on instance cosinewave_out[11:0].
+@N: FX493 |Applying initial value "0000000000" on instance data_in_reg[9:0].
+@N: FX493 |Applying initial value "0" on instance pwm_out.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data_R.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data.
+@N: FX493 |Applying initial value "0" on instance o_Rx_DV.
+@N: FX493 |Applying initial value "00000000" on instance o_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "00000000" on instance r_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV.
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV_last.
+@N: FX493 |Applying initial value "000" on instance r_SM_Main[2:0].
+@N: FX493 |Applying initial value "00" on instance gain[1:0].
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Removing sequential instance amdemod_d[10] (in view: work.\\top\.amdemod\ (verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Removing sequential instance amdemod_d[11] (in view: work.\\top\.amdemod\ (verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1048:2:1048:7|Removing sequential instance data_clk (in view: work.\\top\.cic_cosine\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1044:2:1044:7|Removing sequential instance decimation_clk (in view: work.\\top\.cic_cosine\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

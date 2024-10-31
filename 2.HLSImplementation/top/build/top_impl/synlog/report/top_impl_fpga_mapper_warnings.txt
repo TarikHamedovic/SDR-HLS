@@ -1,0 +1,7 @@
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1272:16:1272:28|Removing user instance cic_sine.$8[11:0] because it is equivalent to instance cic_cosine.$8[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1291:2:1291:7|Removing sequential instance cic_sine.count[11:0] because it is equivalent to instance cic_cosine.count[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1297:2:1297:7|Removing sequential instance cic_sine.valid_comb because it is equivalent to instance cic_cosine.valid_comb. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":245:2:245:9|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":909:7:909:10|Blackbox SGSR is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock ecp5pll_Z1|CLKOP_inferred_clock with period 5.00ns. Please declare a user-defined clock on net ecp5pll.clocks[0].

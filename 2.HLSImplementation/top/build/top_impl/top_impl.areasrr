@@ -1,0 +1,963 @@
+----------------------------------------------------------------------
+Report for cell top.verilog
+
+Register bits: 2584 of 83640 (3%)
+PIC Latch:       0
+I/O cells:       21
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      973       100.0
+                            EHXPLLL        1       100.0
+                            FD1P3AX     1730       100.0
+                            FD1P3AY        4       100.0
+                            FD1S3AX      846       100.0
+                            FD1S3AY        2       100.0
+                                GSR        1       100.0
+                                 IB        3       100.0
+                           IFS1P3BX        1       100.0
+                           IFS1P3DX        1       100.0
+                                INV        5       100.0
+                         MULT18X18D        2       100.0
+                                OBZ       18       100.0
+                           ORCALUT4      353       100.0
+                           PDPW16KD        1       100.0
+                              PFUMX        1       100.0
+                                PUR        1       100.0
+                               SGSR        1       100.0
+                                VHI       73       100.0
+                                VLO       73       100.0
+SUB MODULES 
+                         ecp5pll_Z1        1       100.0
+                      \top.amdemod         1       100.0
+                 \top.amdemod.sqrt         1       100.0
+                      \top.cd_sync         1       100.0
+              \top.cd_sync.clk_buf         1       100.0
+          \top.cd_sync.clk_buf.buf         1       100.0
+                   \top.cic_cosine         1       100.0
+                     \top.cic_sine         1       100.0
+                        \top.mixer         1       100.0
+          \top.pin_antenna_0__rf_in         1       100.0
+          \top.pin_antenna_0__rf_in.buf         1       100.0
+          \top.pin_antenna_0__rf_in.buf.buf         1       100.0
+                    \top.pin_led_0         1       100.0
+                \top.pin_led_0.buf         1       100.0
+            \top.pin_led_0.buf.buf         1       100.0
+                    \top.pin_led_1         1       100.0
+                \top.pin_led_1.buf         1       100.0
+            \top.pin_led_1.buf.buf         1       100.0
+                    \top.pin_led_2         1       100.0
+                \top.pin_led_2.buf         1       100.0
+            \top.pin_led_2.buf.buf         1       100.0
+                    \top.pin_led_3         1       100.0
+                \top.pin_led_3.buf         1       100.0
+            \top.pin_led_3.buf.buf         1       100.0
+                    \top.pin_led_4         1       100.0
+                \top.pin_led_4.buf         1       100.0
+            \top.pin_led_4.buf.buf         1       100.0
+                    \top.pin_led_5         1       100.0
+                \top.pin_led_5.buf         1       100.0
+            \top.pin_led_5.buf.buf         1       100.0
+                    \top.pin_led_6         1       100.0
+                \top.pin_led_6.buf         1       100.0
+            \top.pin_led_6.buf.buf         1       100.0
+                    \top.pin_led_7         1       100.0
+                \top.pin_led_7.buf         1       100.0
+            \top.pin_led_7.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n1         1       100.0
+          \top.pin_pwm_0__pwm_out_n1.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n1.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n2         1       100.0
+          \top.pin_pwm_0__pwm_out_n2.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n2.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n3         1       100.0
+          \top.pin_pwm_0__pwm_out_n3.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n3.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n4         1       100.0
+          \top.pin_pwm_0__pwm_out_n4.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n4.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p1         1       100.0
+          \top.pin_pwm_0__pwm_out_p1.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p1.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p2         1       100.0
+          \top.pin_pwm_0__pwm_out_p2.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p2.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p3         1       100.0
+          \top.pin_pwm_0__pwm_out_p3.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p3.buf.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p4         1       100.0
+          \top.pin_pwm_0__pwm_out_p4.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p4.buf.buf         1       100.0
+           \top.pin_pwm_0__pwm_out         1       100.0
+          \top.pin_pwm_0__pwm_out.buf         1       100.0
+          \top.pin_pwm_0__pwm_out.buf.buf         1       100.0
+               \top.pin_uart_0__rx         1       100.0
+           \top.pin_uart_0__rx.buf         1       100.0
+          \top.pin_uart_0__rx.buf.buf         1       100.0
+               \top.pin_uart_0__tx         1       100.0
+           \top.pin_uart_0__tx.buf         1       100.0
+          \top.pin_uart_0__tx.buf.buf         1       100.0
+                          \top.pwm         1       100.0
+          \top.sine_cosine_generator         1       100.0
+                      \top.uart_rx         1       100.0
+                            
+                         TOTAL          4162           
+----------------------------------------------------------------------
+Report for cell \top.uart_rx .netlist
+     Instance path:  uart_rx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        9         0.9
+                            FD1P3AX       32         1.8
+                            FD1S3AX        9         1.1
+                            FD1S3AY        1        50.0
+                                INV        1        20.0
+                           ORCALUT4      152        43.1
+                              PFUMX        1       100.0
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL           207           
+----------------------------------------------------------------------
+Report for cell \top.sine_cosine_generator .netlist
+     Instance path:  sine_cosine_generator
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       33         3.4
+                            FD1S3AX       64         7.6
+                           ORCALUT4        1         0.3
+                           PDPW16KD        1       100.0
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL           101           
+----------------------------------------------------------------------
+Report for cell \top.pwm .netlist
+     Instance path:  pwm
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       12         1.2
+                            FD1P3AX        9         0.5
+                            FD1S3AX       10         1.2
+                            FD1S3AY        1        50.0
+                                INV        1        20.0
+                           ORCALUT4        3         0.8
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL            38           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__tx .netlist
+     Instance path:  pin_uart_0__tx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+           \top.pin_uart_0__tx.buf         1       100.0
+          \top.pin_uart_0__tx.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__tx.buf .netlist
+     Instance path:  pin_uart_0__tx.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_uart_0__tx.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__tx.buf.buf .netlist
+     Instance path:  pin_uart_0__tx.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__rx .netlist
+     Instance path:  pin_uart_0__rx
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+           \top.pin_uart_0__rx.buf         1       100.0
+          \top.pin_uart_0__rx.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__rx.buf .netlist
+     Instance path:  pin_uart_0__rx.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_uart_0__rx.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_uart_0__rx.buf.buf .netlist
+     Instance path:  pin_uart_0__rx.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p4 .netlist
+     Instance path:  pin_pwm_0__pwm_out_p4
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p4.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p4.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p4.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p4.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p4.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p4.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p4.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p3 .netlist
+     Instance path:  pin_pwm_0__pwm_out_p3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p3.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p3.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p3.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p3.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p3.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p3.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p3.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p2 .netlist
+     Instance path:  pin_pwm_0__pwm_out_p2
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p2.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p2.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p2.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p2.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p2.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p2.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p2.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p1 .netlist
+     Instance path:  pin_pwm_0__pwm_out_p1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p1.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_p1.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p1.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p1.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_p1.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_p1.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_p1.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n4 .netlist
+     Instance path:  pin_pwm_0__pwm_out_n4
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n4.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n4.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n4.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n4.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n4.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n4.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n4.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n3 .netlist
+     Instance path:  pin_pwm_0__pwm_out_n3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n3.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n3.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n3.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n3.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n3.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n3.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n3.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n2 .netlist
+     Instance path:  pin_pwm_0__pwm_out_n2
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n2.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n2.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n2.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n2.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n2.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n2.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n2.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n1 .netlist
+     Instance path:  pin_pwm_0__pwm_out_n1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n1.buf         1       100.0
+          \top.pin_pwm_0__pwm_out_n1.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n1.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n1.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out_n1.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out_n1.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out_n1.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out .netlist
+     Instance path:  pin_pwm_0__pwm_out
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out.buf         1       100.0
+          \top.pin_pwm_0__pwm_out.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_pwm_0__pwm_out.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_pwm_0__pwm_out.buf.buf .netlist
+     Instance path:  pin_pwm_0__pwm_out.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_7 .netlist
+     Instance path:  pin_led_7
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_7.buf         1       100.0
+            \top.pin_led_7.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_7.buf .netlist
+     Instance path:  pin_led_7.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_7.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_7.buf.buf .netlist
+     Instance path:  pin_led_7.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_6 .netlist
+     Instance path:  pin_led_6
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_6.buf         1       100.0
+            \top.pin_led_6.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_6.buf .netlist
+     Instance path:  pin_led_6.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_6.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_6.buf.buf .netlist
+     Instance path:  pin_led_6.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_5 .netlist
+     Instance path:  pin_led_5
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_5.buf         1       100.0
+            \top.pin_led_5.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_5.buf .netlist
+     Instance path:  pin_led_5.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_5.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_5.buf.buf .netlist
+     Instance path:  pin_led_5.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_4 .netlist
+     Instance path:  pin_led_4
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_4.buf         1       100.0
+            \top.pin_led_4.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_4.buf .netlist
+     Instance path:  pin_led_4.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_4.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_4.buf.buf .netlist
+     Instance path:  pin_led_4.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_3 .netlist
+     Instance path:  pin_led_3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_3.buf         1       100.0
+            \top.pin_led_3.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_3.buf .netlist
+     Instance path:  pin_led_3.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_3.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_3.buf.buf .netlist
+     Instance path:  pin_led_3.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_2 .netlist
+     Instance path:  pin_led_2
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_2.buf         1       100.0
+            \top.pin_led_2.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_2.buf .netlist
+     Instance path:  pin_led_2.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_2.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_2.buf.buf .netlist
+     Instance path:  pin_led_2.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_1 .netlist
+     Instance path:  pin_led_1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_1.buf         1       100.0
+            \top.pin_led_1.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_1.buf .netlist
+     Instance path:  pin_led_1.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_1.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_1.buf.buf .netlist
+     Instance path:  pin_led_1.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_0 .netlist
+     Instance path:  pin_led_0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+                \top.pin_led_0.buf         1       100.0
+            \top.pin_led_0.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_0.buf .netlist
+     Instance path:  pin_led_0.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+            \top.pin_led_0.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_led_0.buf.buf .netlist
+     Instance path:  pin_led_0.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                OBZ        1         5.6
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.pin_antenna_0__rf_in .netlist
+     Instance path:  pin_antenna_0__rf_in
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+          \top.pin_antenna_0__rf_in.buf         1       100.0
+          \top.pin_antenna_0__rf_in.buf.buf         1       100.0
+                            
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell \top.pin_antenna_0__rf_in.buf .netlist
+     Instance path:  pin_antenna_0__rf_in.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.pin_antenna_0__rf_in.buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.pin_antenna_0__rf_in.buf.buf .netlist
+     Instance path:  pin_antenna_0__rf_in.buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.mixer .netlist
+     Instance path:  mixer
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       14         1.4
+                            FD1S3AX       25         3.0
+                           ORCALUT4       22         6.2
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL            63           
+----------------------------------------------------------------------
+Report for cell ecp5pll_Z1.netlist
+     Instance path:  ecp5pll
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLL        1       100.0
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.cic_sine .netlist
+     Instance path:  cic_sine
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      370        38.0
+                            FD1P3AX      747        43.2
+                            FD1S3AX      362        42.8
+                           ORCALUT4       68        19.3
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL          1549           
+----------------------------------------------------------------------
+Report for cell \top.cic_cosine .netlist
+     Instance path:  cic_cosine
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      377        38.7
+                            FD1P3AX      747        43.2
+                            FD1S3AX      374        44.2
+                           ORCALUT4        9         2.5
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL          1509           
+----------------------------------------------------------------------
+Report for cell \top.cd_sync .netlist
+     Instance path:  cd_sync
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3AX        2         0.2
+                                 IB        1        33.3
+                               SGSR        1       100.0
+                                VHI        3         4.1
+                                VLO        3         4.1
+SUB MODULES 
+              \top.cd_sync.clk_buf         1       100.0
+          \top.cd_sync.clk_buf.buf         1       100.0
+                            
+                         TOTAL            12           
+----------------------------------------------------------------------
+Report for cell \top.cd_sync.clk_buf .netlist
+     Instance path:  cd_sync.clk_buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+          \top.cd_sync.clk_buf.buf         1       100.0
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell \top.cd_sync.clk_buf.buf .netlist
+     Instance path:  cd_sync.clk_buf.buf
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 IB        1        33.3
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell \top.amdemod .netlist
+     Instance path:  amdemod
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      125        12.8
+                            FD1P3AX      129         7.5
+                            FD1P3AY        4       100.0
+                                INV        3        60.0
+                         MULT18X18D        2       100.0
+                           ORCALUT4       98        27.8
+                                VHI        2         2.7
+                                VLO        2         2.7
+SUB MODULES 
+                 \top.amdemod.sqrt         1       100.0
+                            
+                         TOTAL           366           
+----------------------------------------------------------------------
+Report for cell \top.amdemod.sqrt .netlist
+     Instance path:  amdemod.sqrt
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C      112        11.5
+                            FD1P3AX       40         2.3
+                            FD1P3AY        4       100.0
+                                INV        2        40.0
+                           ORCALUT4       96        27.2
+                                VHI        1         1.4
+                                VLO        1         1.4
+                            
+                         TOTAL           256           

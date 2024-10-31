@@ -1,0 +1,142 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO231 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2484:2:2484:7|Found counter in view:work.top(verilog) instance pwm.count[9:0] 
+@N: MO231 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1040:2:1040:7|Found counter in view:work.top(verilog) instance cic_cosine.count[11:0] 
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[11] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[10] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[9] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[8] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[7] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[6] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[5] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[4] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[3] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[2] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[1] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[11] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[10] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[9] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[8] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[7] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[6] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[5] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[4] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[3] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[2] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[1] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[0].
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[1].
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[2].
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[56] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[56] (in view: work.top(verilog)) because it does not drive other instances.
+@N: FA113 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":434:39:434:63|Pipelining module \$3[24:0]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Pushed in register square_sum[24:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":437:2:437:7|Pushed in register mult_result_q[23:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":435:2:435:7|Pushed in register mult_result_i[23:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Pushed in register amdemod_d[11:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2486:2:2486:7|Pushed in register data_in_reg[9:0].
+@N: FX211 |Packed ROM sine_cosine_generator._1__2_0[23:0] (8 input, 24 output) to Block SelectRAM 
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[24] (in view: work.top(verilog)) with 41 loads 2 times to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[22] (in view: work.top(verilog)) with 12 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[20] (in view: work.top(verilog)) with 11 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[21] (in view: work.top(verilog)) with 8 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[23] (in view: work.top(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[18] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :|Replicating instance m4_i_m2_0 (in view: work.top(verilog)) with 2 loads 1 time(s) to improve timing.
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: FX1056 |Writing EDF file: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/top_impl.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT615 |Found clock clk25_0__io with period 40.00ns 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

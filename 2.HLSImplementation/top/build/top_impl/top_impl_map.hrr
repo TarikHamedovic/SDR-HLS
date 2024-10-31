@@ -1,0 +1,634 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1681.00        100.0
+                                 IOLGC	       2.00        100.0
+                                  LUT4	     359.00        100.0
+                                 IOREG	          2        100.0
+                                 IOBUF	         21        100.0
+                                PFUREG	       2582        100.0
+                                RIPPLE	        973        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                            ecp5pll_Z1	          1         0.1
+          Z_top_sine_cosine_generator_	          1         2.0
+                        Z_top_uart_rx_	          1         5.0
+                            Z_top_pwm_	          1         1.2
+                 Z_top_pin_uart_0__tx_	          1         0.0
+                 Z_top_pin_uart_0__rx_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_p4_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_p3_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_p2_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_p1_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_n4_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_n3_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_n2_	          1         0.0
+          Z_top_pin_pwm_0__pwm_out_n1_	          1         0.0
+             Z_top_pin_pwm_0__pwm_out_	          1         0.0
+                      Z_top_pin_led_7_	          1         0.0
+                      Z_top_pin_led_6_	          1         0.0
+                      Z_top_pin_led_5_	          1         0.0
+                      Z_top_pin_led_4_	          1         0.0
+                      Z_top_pin_led_3_	          1         0.0
+                      Z_top_pin_led_2_	          1         0.0
+                      Z_top_pin_led_1_	          1         0.0
+                      Z_top_pin_led_0_	          1         0.0
+                          Z_top_mixer_	          1         1.7
+           Z_top_pin_antenna_0__rf_in_	          1         0.0
+                       Z_top_cic_sine_	          1        37.8
+                     Z_top_cic_cosine_	          1        36.0
+                        Z_top_cd_sync_	          1         0.1
+                        Z_top_amdemod_	          1        13.2
+---------------------------------------------------
+Report for cell Z_top_uart_rx_
+   Instance path: top/uart_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      84.50         5.0
+                                  LUT4	     152.00        42.3
+                                PFUREG	         42         1.6
+                                RIPPLE	          9         0.9
+---------------------------------------------------
+Report for cell Z_top_sine_cosine_generator_
+   Instance path: top/sine_cosine_generator
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.00         2.0
+                                  LUT4	       1.00         0.3
+                                PFUREG	         64         2.5
+                                RIPPLE	         33         3.4
+                                   EBR	          1        100.0
+---------------------------------------------------
+Report for cell Z_top_pwm_
+   Instance path: top/pwm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      19.50         1.2
+                                  LUT4	       4.00         1.1
+                                PFUREG	         20         0.8
+                                RIPPLE	         12         1.2
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__tx_
+   Instance path: top/pin_uart_0__tx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+             Z_top_pin_uart_0__tx_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__tx_buf_
+   Instance path: top/pin_uart_0__tx/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+         Z_top_pin_uart_0__tx_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__tx_buf_buf_
+   Instance path: top/pin_uart_0__tx/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__rx_
+   Instance path: top/pin_uart_0__rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+             Z_top_pin_uart_0__rx_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__rx_buf_
+   Instance path: top/pin_uart_0__rx/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+         Z_top_pin_uart_0__rx_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_uart_0__rx_buf_buf_
+   Instance path: top/pin_uart_0__rx/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p4_
+   Instance path: top/pin_pwm_0__pwm_out_p4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_p4_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p4_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p4/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_p4_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p4_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p4/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p3_
+   Instance path: top/pin_pwm_0__pwm_out_p3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_p3_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p3_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p3/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_p3_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p3_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p3/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p2_
+   Instance path: top/pin_pwm_0__pwm_out_p2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_p2_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p2_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p2/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_p2_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p2_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p2/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p1_
+   Instance path: top/pin_pwm_0__pwm_out_p1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_p1_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p1_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p1/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_p1_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_p1_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_p1/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n4_
+   Instance path: top/pin_pwm_0__pwm_out_n4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_n4_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n4_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n4/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_n4_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n4_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n4/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n3_
+   Instance path: top/pin_pwm_0__pwm_out_n3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_n3_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n3_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n3/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_n3_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n3_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n3/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n2_
+   Instance path: top/pin_pwm_0__pwm_out_n2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_n2_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n2_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n2/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_n2_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n2_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n2/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n1_
+   Instance path: top/pin_pwm_0__pwm_out_n1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      Z_top_pin_pwm_0__pwm_out_n1_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n1_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n1/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+  Z_top_pin_pwm_0__pwm_out_n1_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_n1_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out_n1/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_
+   Instance path: top/pin_pwm_0__pwm_out
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+         Z_top_pin_pwm_0__pwm_out_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_buf_
+   Instance path: top/pin_pwm_0__pwm_out/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+     Z_top_pin_pwm_0__pwm_out_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_pwm_0__pwm_out_buf_buf_
+   Instance path: top/pin_pwm_0__pwm_out/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_7_
+   Instance path: top/pin_led_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_7_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_7_buf_
+   Instance path: top/pin_led_7/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_7_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_7_buf_buf_
+   Instance path: top/pin_led_7/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_6_
+   Instance path: top/pin_led_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_6_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_6_buf_
+   Instance path: top/pin_led_6/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_6_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_6_buf_buf_
+   Instance path: top/pin_led_6/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_5_
+   Instance path: top/pin_led_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_5_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_5_buf_
+   Instance path: top/pin_led_5/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_5_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_5_buf_buf_
+   Instance path: top/pin_led_5/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_4_
+   Instance path: top/pin_led_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_4_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_4_buf_
+   Instance path: top/pin_led_4/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_4_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_4_buf_buf_
+   Instance path: top/pin_led_4/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_3_
+   Instance path: top/pin_led_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_3_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_3_buf_
+   Instance path: top/pin_led_3/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_3_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_3_buf_buf_
+   Instance path: top/pin_led_3/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_2_
+   Instance path: top/pin_led_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_2_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_2_buf_
+   Instance path: top/pin_led_2/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_2_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_2_buf_buf_
+   Instance path: top/pin_led_2/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_1_
+   Instance path: top/pin_led_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_1_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_1_buf_
+   Instance path: top/pin_led_1/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_1_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_1_buf_buf_
+   Instance path: top/pin_led_1/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_led_0_
+   Instance path: top/pin_led_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                  Z_top_pin_led_0_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_0_buf_
+   Instance path: top/pin_led_0/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              Z_top_pin_led_0_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_led_0_buf_buf_
+   Instance path: top/pin_led_0/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_pin_antenna_0__rf_in_
+   Instance path: top/pin_antenna_0__rf_in
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+       Z_top_pin_antenna_0__rf_in_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_antenna_0__rf_in_buf_
+   Instance path: top/pin_antenna_0__rf_in/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+   Z_top_pin_antenna_0__rf_in_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_pin_antenna_0__rf_in_buf_buf_
+   Instance path: top/pin_antenna_0__rf_in/buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_mixer_
+   Instance path: top/mixer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      29.00         1.7
+                                  LUT4	      22.00         6.1
+                                PFUREG	         25         1.0
+                                RIPPLE	         14         1.4
+---------------------------------------------------
+Report for cell ecp5pll_Z1
+   Instance path: top/ecp5pll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                  LUT4	       1.00         0.3
+---------------------------------------------------
+Report for cell Z_top_cic_sine_
+   Instance path: top/cic_sine
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     634.67        37.8
+                                  LUT4	      68.00        18.9
+                                PFUREG	       1109        43.0
+                                RIPPLE	        370        38.0
+---------------------------------------------------
+Report for cell Z_top_cic_cosine_
+   Instance path: top/cic_cosine
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     605.33        36.0
+                                  LUT4	       9.00         2.5
+                                PFUREG	       1121        43.4
+                                RIPPLE	        377        38.7
+---------------------------------------------------
+Report for cell Z_top_cd_sync_
+   Instance path: top/cd_sync
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                  LUT4	       1.00         0.3
+                                 IOBUF	          1         4.8
+                                PFUREG	          2         0.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                Z_top_cd_sync_clk_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_cd_sync_clk_buf_
+   Instance path: top/cd_sync/clk_buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+            Z_top_cd_sync_clk_buf_buf_	          1         0.0
+---------------------------------------------------
+Report for cell Z_top_cd_sync_clk_buf_buf_
+   Instance path: top/cd_sync/clk_buf/buf
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          1         4.8
+---------------------------------------------------
+Report for cell Z_top_amdemod_
+   Instance path: top/amdemod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     222.50        13.2
+                                  LUT4	     101.00        28.1
+                                PFUREG	        133         5.2
+                                RIPPLE	        125        12.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                   Z_top_amdemod_sqrt_	          1        10.6
+---------------------------------------------------
+Report for cell Z_top_amdemod_sqrt_
+   Instance path: top/amdemod/sqrt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     177.58        10.6
+                                  LUT4	      98.00        27.3
+                                PFUREG	         44         1.7
+                                RIPPLE	        112        11.5

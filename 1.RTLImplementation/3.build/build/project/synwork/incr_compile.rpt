@@ -1,0 +1,94 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: unlimited (bytes)
+
+
+Implementation : project
+Synopsys HDL compiler and linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+Modified Files: 19
+FID:  path (prevtimestamp, timestamp)
+0        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v (N/A, 2023-08-10 19:00:08)
+1        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v (N/A, 2023-08-10 19:00:09)
+2        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v (N/A, 2023-08-10 18:51:57)
+3        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v (N/A, 2023-08-10 18:51:57)
+4        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh (N/A, 2023-08-10 18:51:57)
+5        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v (N/A, 2024-08-27 20:41:23)
+6        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v (N/A, 2023-09-20 04:06:06)
+7        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v (N/A, 2023-09-20 04:06:06)
+8        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv (N/A, 2024-10-31 11:17:28)
+9        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv (N/A, 2024-10-31 10:10:47)
+10       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv (N/A, 2024-10-31 10:11:54)
+11       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/NCO.sv (N/A, 2024-10-31 00:36:51)
+12       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv (N/A, 2024-10-31 10:12:39)
+13       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_generator.sv (N/A, 2024-10-31 00:36:51)
+14       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_table.sv (N/A, 2024-10-31 00:36:51)
+15       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv (N/A, 2024-08-20 20:08:06)
+16       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv (N/A, 2024-08-20 12:35:55)
+17       /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26)
+18       /home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v (N/A, 2024-10-31 00:36:51)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 14
+MID:  lib.cell.view
+0        work.AMDemodulator.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv (N/A, 2024-10-31 11:17:28) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+1        work.CIC.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv (N/A, 2024-10-31 10:10:47) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+2        work.Mixer.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv (N/A, 2024-10-31 10:11:54) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+3        work.PLL.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v (N/A, 2024-08-27 20:41:23) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+4        work.PWM.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv (N/A, 2024-10-31 10:12:39) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+5        work.VHI.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v (N/A, 2024-08-27 20:41:23) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v (N/A, 2023-09-20 04:06:06) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+6        work.VLO.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v (N/A, 2024-08-27 20:41:23) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v (N/A, 2023-09-20 04:06:06) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+7        work.nco_sig.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/NCO.sv (N/A, 2024-10-31 00:36:51) <-- (module definition)
+8        work.quarterwave_generator.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_generator.sv (N/A, 2024-10-31 00:36:51) <-- (module definition)
+9        work.quarterwave_table.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_generator.sv (N/A, 2024-10-31 00:36:51) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_table.sv (N/A, 2024-10-31 00:36:51) <-- (module definition)
+10       work.sinewave_generator.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv (N/A, 2024-08-20 20:08:06) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+11       work.sinewave_table.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv (N/A, 2024-08-20 20:08:06) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv (N/A, 2024-08-20 12:35:55) <-- (module definition)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+12       work.top.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (module definition)
+13       work.uart_rx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv (N/A, 2024-10-31 11:22:26) <-- (may instantiate this module)
+                        /home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v (N/A, 2024-10-31 00:36:51) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 0
+FID:  path (timestamp)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

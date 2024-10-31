@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "10:27:25    31-Oct-2024",
+	"Working Directory" : "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl",
+	"CDPL Log file" : "-",
+	"Install" : "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase"
+},
+"top_impl" :{
+   "Start Time" : "10:26:35",
+   "Runtime" : "50s",
+   "Executable Run Time" : "48s",
+   "synthesis" : {
+      "Start Time" : "10:26:35",
+      "Runtime" : "50s",
+      "Executable Run Time" : "48s",
+      "compile" : {
+         "Start Time" : "10:26:35",
+         "Runtime" : "07s",
+         "Executable Run Time" : "06s",
+         "compile_flow" : {
+            "Start Time" : "10:26:35",
+            "Runtime" : "05s",
+            "Executable Run Time" : "04s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "10:26:35",
+               "Run Time" : "05s",
+               "Exe Run Time" : "04s",
+               "Memory Usage" : "33.460000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "10:26:40",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "80.584000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "10:26:40",
+            "Run Time" : "02s",
+            "Exe Run Time" : "02s",
+            "Memory Usage" : "306.200000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Start Time" : "10:26:43",
+         "Runtime" : "42s",
+         "Executable Run Time" : "42s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "10:26:43",
+            "Run Time" : "42s",
+            "Exe Run Time" : "42s",
+            "Memory Usage" : "389.068000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

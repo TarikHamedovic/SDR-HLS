@@ -1,0 +1,1874 @@
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: user-HP-ProBook-450-G5
+
+# Thu Oct 31 10:26:35 2024
+
+#Implementation: top_impl
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv" (library work)
+@I::"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v" (library work)
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module top
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":493:7:493:23|Synthesizing module \top.amdemod.sqrt  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":687:4:687:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":696:4:696:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":705:4:705:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":714:4:714:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":723:4:723:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":732:4:732:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":741:4:741:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":750:4:750:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":759:4:759:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":768:4:768:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":777:4:777:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":786:4:786:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":795:4:795:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.amdemod.sqrt  .......
+Finished optimization stage 1 on \top.amdemod.sqrt  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":392:7:392:18|Synthesizing module \top.amdemod  in library work.
+Running optimization stage 1 on \top.amdemod  .......
+Finished optimization stage 1 on \top.amdemod  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":146:7:146:13|Synthesizing module FD1S3AX in library work.
+Running optimization stage 1 on FD1S3AX .......
+Finished optimization stage 1 on FD1S3AX (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":753:7:753:10|Synthesizing module SGSR in library work.
+Running optimization stage 1 on SGSR .......
+Finished optimization stage 1 on SGSR (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":278:7:278:8|Synthesizing module IB in library work.
+Running optimization stage 1 on IB .......
+Finished optimization stage 1 on IB (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":934:7:934:30|Synthesizing module \top.cd_sync.clk_buf.buf  in library work.
+Running optimization stage 1 on \top.cd_sync.clk_buf.buf  .......
+Finished optimization stage 1 on \top.cd_sync.clk_buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":921:7:921:26|Synthesizing module \top.cd_sync.clk_buf  in library work.
+Running optimization stage 1 on \top.cd_sync.clk_buf  .......
+Finished optimization stage 1 on \top.cd_sync.clk_buf  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":886:7:886:18|Synthesizing module \top.cd_sync  in library work.
+Running optimization stage 1 on \top.cd_sync  .......
+Finished optimization stage 1 on \top.cd_sync  (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":945:7:945:21|Synthesizing module \top.cic_cosine  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1075:4:1075:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1102:4:1102:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.cic_cosine  .......
+Finished optimization stage 1 on \top.cic_cosine  (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1196:7:1196:19|Synthesizing module \top.cic_sine  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1326:4:1326:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1353:4:1353:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.cic_sine  .......
+Finished optimization stage 1 on \top.cic_sine  (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@W: CG188 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":138:51:138:51|Function return value is unassigned - returning 0
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":11:7:11:13|Synthesizing module ecp5pll in library work.
+
+	in_hz=32'b00000001011111010111100001000000
+	out0_hz=32'b00000100110001001011010000000000
+	out0_deg=32'b00000000000000000000000000000000
+	out0_tol_hz=32'b00000000000000000000000000000000
+	out1_hz=32'b00000000000000000000000000000000
+	out1_deg=32'b00000000000000000000000000000000
+	out1_tol_hz=32'b00000000000000000000000000000000
+	out2_hz=32'b00000000000000000000000000000000
+	out2_deg=32'b00000000000000000000000000000000
+	out2_tol_hz=32'b00000000000000000000000000000000
+	out3_hz=32'b00000000000000000000000000000000
+	out3_deg=32'b00000000000000000000000000000000
+	out3_tol_hz=32'b00000000000000000000000000000000
+	reset_en=32'b00000000000000000000000000000000
+	standby_en=32'b00000000000000000000000000000000
+	dynamic_en=32'b00000000000000000000000000000000
+	PFD_MIN=32'b00000000001011111010111100001000
+	PFD_MAX=32'b00010111110101111000010000000000
+	VCO_MIN=32'b00010111110101111000010000000000
+	VCO_MAX=32'b00101111101011110000100000000000
+	VCO_OPTIMAL=32'b00100011110000110100011000000000
+	params_refclk_div=32'b00000000000000000000000000000101
+	params_feedback_div=32'b00000000000000000000000000010000
+	params_output_div=32'b00000000000000000000000000000111
+	params_fout=32'b00000100110001001011010000000000
+	params_fvco=32'b00100001011000001110110000000000
+	params_primary_phase_x8=32'b00000000000000000000000000000000
+	params_primary_cphase=32'b00000000000000000000000000000110
+	params_primary_fphase=32'b00000000000000000000000000000000
+	params_secondary1_div=32'b00000000000000000000000000000001
+	params_secondary1_cphase=32'b00000000000000000000000000000000
+	params_secondary1_fphase=32'b00000000000000000000000000000000
+	params_secondary2_div=32'b00000000000000000000000000000001
+	params_secondary2_cphase=32'b00000000000000000000000000000000
+	params_secondary2_fphase=32'b00000000000000000000000000000000
+	params_secondary3_div=32'b00000000000000000000000000000001
+	params_secondary3_cphase=32'b00000000000000000000000000000000
+	params_secondary3_fphase=32'b00000000000000000000000000000000
+	error_out0_hz=1'b0
+	error_out1_hz=32'b00000000000000000000000000000000
+	error_out2_hz=32'b00000000000000000000000000000000
+	error_out3_hz=32'b00000000000000000000000000000000
+	trig_out0_hz=32'b00000000000000000000000000000000
+	trig_out1_hz=32'b00000000000000000000000000000000
+	trig_out2_hz=32'b00000000000000000000000000000000
+	trig_out3_hz=32'b00000000000000000000000000000000
+   Generated name = ecp5pll_Z1
+Running optimization stage 1 on ecp5pll_Z1 .......
+Finished optimization stage 1 on ecp5pll_Z1 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1447:7:1447:16|Synthesizing module \top.mixer  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1488:4:1488:5|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1497:4:1497:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.mixer  .......
+Finished optimization stage 1 on \top.mixer  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1535:7:1535:39|Synthesizing module \top.pin_antenna_0__rf_in.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in.buf.buf  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1522:7:1522:35|Synthesizing module \top.pin_antenna_0__rf_in.buf  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in.buf  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1509:7:1509:31|Synthesizing module \top.pin_antenna_0__rf_in  in library work.
+Running optimization stage 1 on \top.pin_antenna_0__rf_in  .......
+Finished optimization stage 1 on \top.pin_antenna_0__rf_in  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":602:7:602:9|Synthesizing module OBZ in library work.
+Running optimization stage 1 on OBZ .......
+Finished optimization stage 1 on OBZ (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1577:7:1577:28|Synthesizing module \top.pin_led_0.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_0.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_0.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1559:7:1559:24|Synthesizing module \top.pin_led_0.buf  in library work.
+Running optimization stage 1 on \top.pin_led_0.buf  .......
+Finished optimization stage 1 on \top.pin_led_0.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1546:7:1546:20|Synthesizing module \top.pin_led_0  in library work.
+Running optimization stage 1 on \top.pin_led_0  .......
+Finished optimization stage 1 on \top.pin_led_0  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1622:7:1622:28|Synthesizing module \top.pin_led_1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1604:7:1604:24|Synthesizing module \top.pin_led_1.buf  in library work.
+Running optimization stage 1 on \top.pin_led_1.buf  .......
+Finished optimization stage 1 on \top.pin_led_1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1591:7:1591:20|Synthesizing module \top.pin_led_1  in library work.
+Running optimization stage 1 on \top.pin_led_1  .......
+Finished optimization stage 1 on \top.pin_led_1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1667:7:1667:28|Synthesizing module \top.pin_led_2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1649:7:1649:24|Synthesizing module \top.pin_led_2.buf  in library work.
+Running optimization stage 1 on \top.pin_led_2.buf  .......
+Finished optimization stage 1 on \top.pin_led_2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1636:7:1636:20|Synthesizing module \top.pin_led_2  in library work.
+Running optimization stage 1 on \top.pin_led_2  .......
+Finished optimization stage 1 on \top.pin_led_2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1712:7:1712:28|Synthesizing module \top.pin_led_3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1694:7:1694:24|Synthesizing module \top.pin_led_3.buf  in library work.
+Running optimization stage 1 on \top.pin_led_3.buf  .......
+Finished optimization stage 1 on \top.pin_led_3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1681:7:1681:20|Synthesizing module \top.pin_led_3  in library work.
+Running optimization stage 1 on \top.pin_led_3  .......
+Finished optimization stage 1 on \top.pin_led_3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1757:7:1757:28|Synthesizing module \top.pin_led_4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1739:7:1739:24|Synthesizing module \top.pin_led_4.buf  in library work.
+Running optimization stage 1 on \top.pin_led_4.buf  .......
+Finished optimization stage 1 on \top.pin_led_4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1726:7:1726:20|Synthesizing module \top.pin_led_4  in library work.
+Running optimization stage 1 on \top.pin_led_4  .......
+Finished optimization stage 1 on \top.pin_led_4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1802:7:1802:28|Synthesizing module \top.pin_led_5.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_5.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_5.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1784:7:1784:24|Synthesizing module \top.pin_led_5.buf  in library work.
+Running optimization stage 1 on \top.pin_led_5.buf  .......
+Finished optimization stage 1 on \top.pin_led_5.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1771:7:1771:20|Synthesizing module \top.pin_led_5  in library work.
+Running optimization stage 1 on \top.pin_led_5  .......
+Finished optimization stage 1 on \top.pin_led_5  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1847:7:1847:28|Synthesizing module \top.pin_led_6.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_6.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_6.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1829:7:1829:24|Synthesizing module \top.pin_led_6.buf  in library work.
+Running optimization stage 1 on \top.pin_led_6.buf  .......
+Finished optimization stage 1 on \top.pin_led_6.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1816:7:1816:20|Synthesizing module \top.pin_led_6  in library work.
+Running optimization stage 1 on \top.pin_led_6  .......
+Finished optimization stage 1 on \top.pin_led_6  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1892:7:1892:28|Synthesizing module \top.pin_led_7.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_led_7.buf.buf  .......
+Finished optimization stage 1 on \top.pin_led_7.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1874:7:1874:24|Synthesizing module \top.pin_led_7.buf  in library work.
+Running optimization stage 1 on \top.pin_led_7.buf  .......
+Finished optimization stage 1 on \top.pin_led_7.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1861:7:1861:20|Synthesizing module \top.pin_led_7  in library work.
+Running optimization stage 1 on \top.pin_led_7  .......
+Finished optimization stage 1 on \top.pin_led_7  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1937:7:1937:37|Synthesizing module \top.pin_pwm_0__pwm_out.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1919:7:1919:33|Synthesizing module \top.pin_pwm_0__pwm_out.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1906:7:1906:29|Synthesizing module \top.pin_pwm_0__pwm_out  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1982:7:1982:40|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1964:7:1964:36|Synthesizing module \top.pin_pwm_0__pwm_out_n1.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1951:7:1951:32|Synthesizing module \top.pin_pwm_0__pwm_out_n1  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n1  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2027:7:2027:40|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2009:7:2009:36|Synthesizing module \top.pin_pwm_0__pwm_out_n2.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1996:7:1996:32|Synthesizing module \top.pin_pwm_0__pwm_out_n2  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n2  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2072:7:2072:40|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2054:7:2054:36|Synthesizing module \top.pin_pwm_0__pwm_out_n3.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2041:7:2041:32|Synthesizing module \top.pin_pwm_0__pwm_out_n3  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n3  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2117:7:2117:40|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2099:7:2099:36|Synthesizing module \top.pin_pwm_0__pwm_out_n4.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2086:7:2086:32|Synthesizing module \top.pin_pwm_0__pwm_out_n4  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_n4  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_n4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2162:7:2162:40|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2144:7:2144:36|Synthesizing module \top.pin_pwm_0__pwm_out_p1.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2131:7:2131:32|Synthesizing module \top.pin_pwm_0__pwm_out_p1  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p1  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p1  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2207:7:2207:40|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2189:7:2189:36|Synthesizing module \top.pin_pwm_0__pwm_out_p2.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2176:7:2176:32|Synthesizing module \top.pin_pwm_0__pwm_out_p2  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p2  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p2  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2252:7:2252:40|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2234:7:2234:36|Synthesizing module \top.pin_pwm_0__pwm_out_p3.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2221:7:2221:32|Synthesizing module \top.pin_pwm_0__pwm_out_p3  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p3  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p3  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2297:7:2297:40|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2279:7:2279:36|Synthesizing module \top.pin_pwm_0__pwm_out_p4.buf  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2266:7:2266:32|Synthesizing module \top.pin_pwm_0__pwm_out_p4  in library work.
+Running optimization stage 1 on \top.pin_pwm_0__pwm_out_p4  .......
+Finished optimization stage 1 on \top.pin_pwm_0__pwm_out_p4  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2336:7:2336:34|Synthesizing module \top.pin_uart_0__dtr.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__dtr.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2323:7:2323:30|Synthesizing module \top.pin_uart_0__dtr.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__dtr.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2311:7:2311:26|Synthesizing module \top.pin_uart_0__dtr  in library work.
+Running optimization stage 1 on \top.pin_uart_0__dtr  .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2316:28:2316:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on \top.pin_uart_0__dtr  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2372:7:2372:34|Synthesizing module \top.pin_uart_0__rts.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rts.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2359:7:2359:30|Synthesizing module \top.pin_uart_0__rts.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rts.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2347:7:2347:26|Synthesizing module \top.pin_uart_0__rts  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rts  .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2352:28:2352:31|Removing instance buf because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on \top.pin_uart_0__rts  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2409:7:2409:33|Synthesizing module \top.pin_uart_0__rx.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2396:7:2396:29|Synthesizing module \top.pin_uart_0__rx.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2383:7:2383:25|Synthesizing module \top.pin_uart_0__rx  in library work.
+Running optimization stage 1 on \top.pin_uart_0__rx  .......
+Finished optimization stage 1 on \top.pin_uart_0__rx  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2450:7:2450:33|Synthesizing module \top.pin_uart_0__tx.buf.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx.buf.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2432:7:2432:29|Synthesizing module \top.pin_uart_0__tx.buf  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx.buf  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx.buf  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2420:7:2420:25|Synthesizing module \top.pin_uart_0__tx  in library work.
+Running optimization stage 1 on \top.pin_uart_0__tx  .......
+Finished optimization stage 1 on \top.pin_uart_0__tx  (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2464:7:2464:14|Synthesizing module \top.pwm  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2502:4:2502:5|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.pwm  .......
+@W: CL271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2486:2:2486:7|Pruning unused bits 11 to 10 of data_in_reg[11:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on \top.pwm  (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 139MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2512:7:2512:32|Synthesizing module \top.sine_cosine_generator  in library work.
+@W: CG532 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2538:2:2538:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on \top.sine_cosine_generator  .......
+Finished optimization stage 1 on \top.sine_cosine_generator  (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 139MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2828:7:2828:18|Synthesizing module \top.uart_rx  in library work.
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2919:10:2919:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2935:10:2935:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2944:10:2944:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2951:10:2951:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2968:10:2968:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2971:12:2971:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2985:10:2985:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2992:10:2992:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2994:12:2994:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3004:10:3004:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3008:12:3008:13|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3016:10:3016:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3037:10:3037:11|Ignoring attribute full_case on statement
+@W: CG216 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":3073:10:3073:11|Ignoring attribute full_case on statement
+Running optimization stage 1 on \top.uart_rx  .......
+@W: CL169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2885:2:2885:7|Pruning unused register UartClk[7:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on \top.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
+@N: CG364 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":4:7:4:9|Synthesizing module top in library work.
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input reset on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input standby on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasesel on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasedir on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phasestep on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":177:4:177:10|Input phaseloadreg on instance ecp5pll is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on top .......
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":265:24:265:38|Removing instance pin_uart_0__rts because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":262:24:262:38|Removing instance pin_uart_0__dtr because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
+Running optimization stage 2 on top .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":128:8:128:22|Input uart_0__rts__io is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":126:8:126:22|Input uart_0__dtr__io is unused.
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.uart_rx  .......
+@N: CL201 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2901:2:2901:7|Trying to extract state machine for register r_SM_Main.
+Finished optimization stage 2 on \top.uart_rx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.sine_cosine_generator  .......
+Finished optimization stage 2 on \top.sine_cosine_generator  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pwm  .......
+@W: CL246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2474:15:2474:21|Input port bits 11 to 10 of data_in[11:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on \top.pwm  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__tx.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__tx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rx.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rx.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts  .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2350:8:2350:22|Input uart_0__rts__io is unused.
+Finished optimization stage 2 on \top.pin_uart_0__rts  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rts.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__rts.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__rts.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr  .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2314:8:2314:22|Input uart_0__dtr__io is unused.
+Finished optimization stage 2 on \top.pin_uart_0__dtr  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__dtr.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_uart_0__dtr.buf.buf  .......
+Finished optimization stage 2 on \top.pin_uart_0__dtr.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_p1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out_n1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_pwm_0__pwm_out.buf.buf  .......
+Finished optimization stage 2 on \top.pin_pwm_0__pwm_out.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7  .......
+Finished optimization stage 2 on \top.pin_led_7  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7.buf  .......
+Finished optimization stage 2 on \top.pin_led_7.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_7.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_7.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6  .......
+Finished optimization stage 2 on \top.pin_led_6  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6.buf  .......
+Finished optimization stage 2 on \top.pin_led_6.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_6.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_6.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5  .......
+Finished optimization stage 2 on \top.pin_led_5  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5.buf  .......
+Finished optimization stage 2 on \top.pin_led_5.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_5.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_5.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4  .......
+Finished optimization stage 2 on \top.pin_led_4  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4.buf  .......
+Finished optimization stage 2 on \top.pin_led_4.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_4.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_4.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3  .......
+Finished optimization stage 2 on \top.pin_led_3  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3.buf  .......
+Finished optimization stage 2 on \top.pin_led_3.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_3.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_3.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2  .......
+Finished optimization stage 2 on \top.pin_led_2  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2.buf  .......
+Finished optimization stage 2 on \top.pin_led_2.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_2.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_2.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1  .......
+Finished optimization stage 2 on \top.pin_led_1  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1.buf  .......
+Finished optimization stage 2 on \top.pin_led_1.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_1.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_1.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0  .......
+Finished optimization stage 2 on \top.pin_led_0  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0.buf  .......
+Finished optimization stage 2 on \top.pin_led_0.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_led_0.buf.buf  .......
+Finished optimization stage 2 on \top.pin_led_0.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on OBZ .......
+Finished optimization stage 2 on OBZ (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in.buf  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.pin_antenna_0__rf_in.buf.buf  .......
+Finished optimization stage 2 on \top.pin_antenna_0__rf_in.buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.mixer  .......
+Finished optimization stage 2 on \top.mixer  (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on ecp5pll_Z1 .......
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":33:15:33:19|Input reset is unused.
+@N: CL159 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":34:15:34:21|Input standby is unused.
+Finished optimization stage 2 on ecp5pll_Z1 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on EHXPLLL .......
+Finished optimization stage 2 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on \top.cic_sine  .......
+Finished optimization stage 2 on \top.cic_sine  (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 146MB)
+Running optimization stage 2 on \top.cic_cosine  .......
+Finished optimization stage 2 on \top.cic_cosine  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync  .......
+Finished optimization stage 2 on \top.cd_sync  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync.clk_buf  .......
+Finished optimization stage 2 on \top.cd_sync.clk_buf  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.cd_sync.clk_buf.buf  .......
+Finished optimization stage 2 on \top.cd_sync.clk_buf.buf  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on IB .......
+Finished optimization stage 2 on IB (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on SGSR .......
+Finished optimization stage 2 on SGSR (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on FD1S3AX .......
+Finished optimization stage 2 on FD1S3AX (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.amdemod  .......
+Finished optimization stage 2 on \top.amdemod  (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 147MB)
+Running optimization stage 2 on \top.amdemod.sqrt  .......
+Finished optimization stage 2 on \top.amdemod.sqrt  (CPU Time 0h:00m:01s, Memory Used current: 157MB peak: 157MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 157MB peak: 157MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 138MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:39 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 139MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Oct 31 10:26:40 2024
+
+###########################################################]
+Premap Report
+
+# Thu Oct 31 10:26:40 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Lattice Technology Pre-mapping, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+Reading constraint file: /home/user/SDR-HLS/2.HLSImplementation/top/build/top.sdc
+@L: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/top_impl_scck.rpt 
+See clock summary report "/home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/top_impl_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 233MB peak: 233MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 243MB peak: 243MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 245MB peak: 245MB)
+
+NConnInternalConnection caching is on
+@N: FX493 |Applying initial value "000000000000" on instance amdemod_d[11:0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance valid_comb.
+@N: FX493 |Applying initial value "0" on instance decimation_clk.
+@N: FX493 |Applying initial value "0" on instance data_clk.
+@N: FX493 |Applying initial value "000000000000" on instance data_out[11:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance integrator_d_tmp[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d6[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d7[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d8[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d9[71:0].
+@N: FX493 |Applying initial value "0" on instance valid_comb.
+@N: FX493 |Applying initial value "0" on instance decimation_clk.
+@N: FX493 |Applying initial value "0" on instance data_clk.
+@N: FX493 |Applying initial value "000000000000" on instance data_out[11:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance integrator_d_tmp[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d6[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d7[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d8[71:0].
+@N: FX493 |Applying initial value "000000000000000000000000000000000000000000000000000000000000000000000000" on instance comb_d9[71:0].
+@N: FX493 |Applying initial value "0" on instance rf_in_d_1.
+@N: FX493 |Applying initial value "0" on instance rf_in_d_2.
+@N: FX493 |Applying initial value "000000000000" on instance sinewave_out[11:0].
+@N: FX493 |Applying initial value "000000000000" on instance cosinewave_out[11:0].
+@N: FX493 |Applying initial value "0000000000" on instance data_in_reg[9:0].
+@N: FX493 |Applying initial value "0" on instance pwm_out.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data_R.
+@N: FX493 |Applying initial value "1" on instance r_Rx_Data.
+@N: FX493 |Applying initial value "0" on instance o_Rx_DV.
+@N: FX493 |Applying initial value "00000000" on instance o_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "00000000" on instance r_Rx_Byte[7:0].
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV.
+@N: FX493 |Applying initial value "0" on instance r_Rx_DV_last.
+@N: FX493 |Applying initial value "000" on instance r_SM_Main[2:0].
+@N: FX493 |Applying initial value "00" on instance gain[1:0].
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 295MB peak: 295MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 295MB peak: 295MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 295MB peak: 295MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 295MB peak: 295MB)
+
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Removing sequential instance amdemod_d[10] (in view: work.\\top\.amdemod\ (verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Removing sequential instance amdemod_d[11] (in view: work.\\top\.amdemod\ (verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1048:2:1048:7|Removing sequential instance data_clk (in view: work.\\top\.cic_cosine\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1044:2:1044:7|Removing sequential instance decimation_clk (in view: work.\\top\.cic_cosine\ (verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 298MB peak: 298MB)
+
+
+mixed edge conversion for GCC is OFF
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 299MB peak: 299MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 299MB peak: 299MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 299MB peak: 299MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=208 on top level netlist top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 299MB peak: 299MB)
+
+
+
+Clock Summary
+******************
+
+          Start                               Requested     Requested     Clock        Clock                     Clock
+Level     Clock                               Frequency     Period        Type         Group                     Load 
+----------------------------------------------------------------------------------------------------------------------
+0 -       clk25_0__io                         25.0 MHz      40.000        declared     default_clkgroup          2    
+                                                                                                                      
+0 -       System                              200.0 MHz     5.000         system       system_clkgroup           0    
+                                                                                                                      
+0 -       ecp5pll_Z1|CLKOP_inferred_clock     200.0 MHz     5.000         inferred     Inferred_clkgroup_0_1     2683 
+======================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                    Clock     Source                              Clock Pin                   Non-clock Pin     Non-clock Pin                 
+Clock                               Load      Pin                                 Seq Example                 Seq Example       Comb Example                  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk25_0__io                         2         clk25_0__io(port)                   cd_sync.U\$2.CK             -                 cd_sync.clk_buf.buf.buf0.I(IB)
+                                                                                                                                                              
+System                              0         -                                   -                           -                 -                             
+                                                                                                                                                              
+ecp5pll_Z1|CLKOP_inferred_clock     2683      ecp5pll.pll_inst.CLKOP(EHXPLLL)     phase_increment[63:0].C     -                 -                             
+==============================================================================================================================================================
+
+@W: MT529 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Found inferred clock ecp5pll_Z1|CLKOP_inferred_clock which controls 2683 sequential elements including amdemod.amdemod_d[9]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 2685 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+================================= Non-Gated/Non-Generated Clocks =================================
+Clock Tree ID     Driving Element                Drive Element Type     Fanout     Sample Instance
+--------------------------------------------------------------------------------------------------
+@KP:ckid0_0       ecp5pll.pll_inst.CLKOP         EHXPLLL                2683       gain[1]        
+@KP:ckid0_1       cd_sync.clk_buf.buf.buf0.O     IB                     2          cd_sync.U\$1   
+==================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 299MB peak: 299MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 299MB peak: 299MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 299MB peak: 299MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 299MB peak: 299MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Thu Oct 31 10:26:42 2024
+
+###########################################################]
+Map & Optimize Report
+
+# Thu Oct 31 10:26:43 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: 8388608 (bytes)
+
+
+Implementation : top_impl
+Synopsys Lattice Technology Mapper, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 229MB peak: 229MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 239MB peak: 239MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 292MB peak: 292MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1272:16:1272:28|Removing user instance cic_sine.$8[11:0] because it is equivalent to instance cic_cosine.$8[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1291:2:1291:7|Removing sequential instance cic_sine.count[11:0] because it is equivalent to instance cic_cosine.count[11:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1297:2:1297:7|Removing sequential instance cic_sine.valid_comb because it is equivalent to instance cic_cosine.valid_comb. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 300MB peak: 300MB)
+
+@N: MO231 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2484:2:2484:7|Found counter in view:work.top(verilog) instance pwm.count[9:0] 
+@N: MO231 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1040:2:1040:7|Found counter in view:work.top(verilog) instance cic_cosine.count[11:0] 
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[11] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[10] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[9] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[8] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[7] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[6] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[5] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[4] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[3] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[2] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[1] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1068:2:1068:7|Removing sequential instance cic_cosine.comb10[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[55] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[54] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[53] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[52] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[51] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[50] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[49] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[48] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[47] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[46] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[45] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[44] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[43] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[42] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[41] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[40] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[39] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[38] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[37] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[36] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[35] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[34] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[33] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[32] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":1319:2:1319:7|Removing sequential instance cic_sine.comb10[12] (in view: work.top(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synlog/top_impl_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[0].
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[1].
+@N: FX493 |Applying initial value "0" on instance r_Bit_Index[2].
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 307MB peak: 307MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 307MB peak: 307MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 307MB peak: 307MB)
+
+@N: FA113 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":434:39:434:63|Pipelining module \$3[24:0]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Pushed in register square_sum[24:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":437:2:437:7|Pushed in register mult_result_q[23:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":435:2:435:7|Pushed in register mult_result_i[23:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":441:2:441:7|Pushed in register amdemod_d[11:0].
+@N: MF169 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":2486:2:2486:7|Pushed in register data_in_reg[9:0].
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:24s; Memory used current: 380MB peak: 380MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:26s; Memory used current: 380MB peak: 380MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:26s; Memory used current: 380MB peak: 380MB)
+
+@N: FX211 |Packed ROM sine_cosine_generator._1__2_0[23:0] (8 input, 24 output) to Block SelectRAM 
+
+Finished preparing to map (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:28s; Memory used current: 380MB peak: 380MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:29s; Memory used current: 380MB peak: 380MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:29s		   -11.68ns		 358 /      2574
+   2		0h:00m:29s		   -11.68ns		 358 /      2574
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[24] (in view: work.top(verilog)) with 41 loads 2 times to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[22] (in view: work.top(verilog)) with 12 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[20] (in view: work.top(verilog)) with 11 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[21] (in view: work.top(verilog)) with 8 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[23] (in view: work.top(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":439:2:439:7|Replicating instance amdemod.square_sum[18] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :|Replicating instance m4_i_m2_0 (in view: work.top(verilog)) with 2 loads 1 time(s) to improve timing.
+Timing driven replication report
+Added 7 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+   3		0h:00m:31s		   -11.14ns		 360 /      2581
+
+   4		0h:00m:32s		   -11.08ns		 363 /      2581
+   5		0h:00m:32s		   -11.02ns		 362 /      2581
+   6		0h:00m:32s		   -11.45ns		 363 /      2581
+Net buffering Report for view:work.top(verilog):
+Added 0 Buffers
+Added 1 Registers via replication
+Added 0 LUTs via replication
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:32s; CPU Time elapsed 0h:00m:32s; Memory used current: 380MB peak: 380MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:37s; Memory used current: 380MB peak: 380MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:37s; Memory used current: 380MB peak: 380MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:37s; Memory used current: 380MB peak: 380MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:37s; Memory used current: 380MB peak: 380MB)
+
+Writing Analyst data base /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:39s; Memory used current: 380MB peak: 380MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/top_impl.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:40s; CPU Time elapsed 0h:00m:40s; Memory used current: 380MB peak: 380MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:40s; CPU Time elapsed 0h:00m:40s; Memory used current: 380MB peak: 380MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:41s; Memory used current: 380MB peak: 380MB)
+
+@W: MT246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv":245:2:245:9|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/user/SDR-HLS/2.HLSImplementation/top/build/top.v":909:7:909:10|Blackbox SGSR is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@N: MT615 |Found clock clk25_0__io with period 40.00ns 
+@W: MT420 |Found inferred clock ecp5pll_Z1|CLKOP_inferred_clock with period 5.00ns. Please declare a user-defined clock on net ecp5pll.clocks[0].
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu Oct 31 10:27:24 2024
+#
+
+
+Top view:               top
+Requested Frequency:    25.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    /home/user/SDR-HLS/2.HLSImplementation/top/build/top.sdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -11.815
+
+                                    Requested     Estimated       Requested     Estimated                 Clock        Clock                
+Starting Clock                      Frequency     Frequency       Period        Period        Slack       Type         Group                
+--------------------------------------------------------------------------------------------------------------------------------------------
+clk25_0__io                         25.0 MHz      1102.5 MHz      40.000        0.907         39.093      declared     default_clkgroup     
+ecp5pll_Z1|CLKOP_inferred_clock     200.0 MHz     59.5 MHz        5.000         16.814        -11.815     inferred     Inferred_clkgroup_0_1
+System                              200.0 MHz     18518.5 MHz     5.000         0.054         4.946       system       system_clkgroup      
+============================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                            |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                         Ending                           |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+System                           ecp5pll_Z1|CLKOP_inferred_clock  |  5.000       4.946    |  No paths    -      |  No paths    -      |  No paths    -    
+clk25_0__io                      System                           |  40.000      39.147   |  No paths    -      |  No paths    -      |  No paths    -    
+clk25_0__io                      clk25_0__io                      |  40.000      39.093   |  No paths    -      |  No paths    -      |  No paths    -    
+ecp5pll_Z1|CLKOP_inferred_clock  System                           |  5.000       3.934    |  No paths    -      |  No paths    -      |  No paths    -    
+ecp5pll_Z1|CLKOP_inferred_clock  ecp5pll_Z1|CLKOP_inferred_clock  |  5.000       -11.815  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: clk25_0__io
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                 Starting                                     Arrival           
+Instance         Reference       Type        Pin     Net      Time        Slack 
+                 Clock                                                          
+--------------------------------------------------------------------------------
+cd_sync.U\$1     clk25_0__io     FD1S3AX     Q       gsr0     0.853       39.093
+cd_sync.U\$2     clk25_0__io     FD1S3AX     Q       gsr1     0.853       39.147
+================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                 Starting                                     Required           
+Instance         Reference       Type        Pin     Net      Time         Slack 
+                 Clock                                                           
+---------------------------------------------------------------------------------
+cd_sync.U\$2     clk25_0__io     FD1S3AX     D       gsr0     39.946       39.093
+cd_sync.U\$3     clk25_0__io     SGSR        GSR     gsr1     40.000       39.147
+=================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      40.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         39.946
+
+    - Propagation time:                      0.853
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 39.093
+
+    Number of logic level(s):                0
+    Starting point:                          cd_sync.U\$1 / Q
+    Ending point:                            cd_sync.U\$2 / D
+    The start point is clocked by            clk25_0__io [rising] (rise=0.000 fall=20.000 period=40.000) on pin CK
+    The end   point is clocked by            clk25_0__io [rising] (rise=0.000 fall=20.000 period=40.000) on pin CK
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+cd_sync.U\$1       FD1S3AX     Q        Out     0.853     0.853 r     -         
+gsr0               Net         -        -       -         -           1         
+cd_sync.U\$2       FD1S3AX     D        In      0.000     0.853 r     -         
+================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: ecp5pll_Z1|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                Starting                                                                        Arrival            
+Instance                        Reference                           Type        Pin     Net                     Time        Slack  
+                                Clock                                                                                              
+-----------------------------------------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_fast[22]     1.015       -11.815
+amdemod.square_sum_fast[23]     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_fast[23]     0.985       -11.784
+amdemod.square_sum_fast[24]     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_fast[24]     0.985       -11.784
+amdemod.square_sum_fast[20]     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_fast[20]     0.985       -11.745
+amdemod.square_sum[19]          ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum[19]          0.955       -11.716
+amdemod.square_sum_fast[21]     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_fast[21]     0.955       -11.716
+amdemod.square_sum[20]          ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum[20]          1.027       -11.685
+amdemod.square_sum[22]          ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum[22]          1.027       -11.685
+amdemod.square_sum_24_rep1      ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum_24_rep1      1.015       -11.674
+amdemod.square_sum[21]          ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     Q       square_sum[21]          1.009       -11.668
+===================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                                       Required            
+Instance                           Reference                           Type        Pin     Net                    Time         Slack  
+                                   Clock                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+amdemod.amdemod_d[1]               ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       un1_\$47_i_14_rep1     4.946        -11.815
+amdemod.sqrt.amdemod_d_pipe_1      ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AY     D       un1_\$47[14]           4.946        -11.815
+amdemod.sqrt.amdemod_d_pipe_28     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AY     D       un1_\$47_i[14]         4.946        -11.815
+amdemod.sqrt.amdemod_d_pipe_41     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$47[11]              4.946        -11.203
+amdemod.sqrt.amdemod_d_pipe_42     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$47[12]              4.946        -11.203
+amdemod.sqrt.amdemod_d_pipe_73     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$46[11]              4.946        -11.203
+amdemod.sqrt.amdemod_d_pipe_75     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$46[12]              4.946        -11.203
+amdemod.sqrt.amdemod_d_pipe_39     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$47[9]               4.946        -10.825
+amdemod.sqrt.amdemod_d_pipe_40     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$47[10]              4.946        -10.825
+amdemod.sqrt.amdemod_d_pipe_69     ecp5pll_Z1|CLKOP_inferred_clock     FD1P3AX     D       Z\$46[9]               4.946        -10.825
+======================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      16.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -11.815
+
+    Number of logic level(s):                21
+    Starting point:                          amdemod.square_sum_fast[22] / Q
+    Ending point:                            amdemod.amdemod_d[1] / D
+    The start point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival      No. of    
+Name                                 Type         Name     Dir     Delay     Time         Fan Out(s)
+----------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]          FD1P3AX      Q        Out     1.015     1.015 r      -         
+square_sum_fast[22]                  Net          -        -       -         -            6         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     A        In      0.000     1.015 r      -         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     Z        Out     0.801     1.816 f      -         
+N_11                                 Net          -        -       -         -            10        
+amdemod.sqrt.\$14_c4_0               ORCALUT4     A        In      0.000     1.816 f      -         
+amdemod.sqrt.\$14_c4_0               ORCALUT4     Z        Out     0.606     2.422 r      -         
+Z\$14_ac0_7                          Net          -        -       -         -            1         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     A        In      0.000     2.422 r      -         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     Z        Out     0.660     3.082 r      -         
+Z\$14[5]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     A        In      0.000     3.082 r      -         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     Z        Out     0.849     3.931 r      -         
+un1_\$15[5]                          Net          -        -       -         -            24        
+amdemod.sqrt.\$22_cry_5_0_RNO        ORCALUT4     D        In      0.000     3.931 r      -         
+amdemod.sqrt.\$22_cry_5_0_RNO        ORCALUT4     Z        Out     0.606     4.537 r      -         
+Z\$22_axb_5                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        A0       In      0.000     4.537 r      -         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        COUT     Out     0.900     5.437 r      -         
+Z\$22_cry_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_s_7_0              CCU2C        CIN      In      0.000     5.437 r      -         
+amdemod.sqrt.\$22_s_7_0              CCU2C        S0       Out     0.751     6.189 r      -         
+Z\$22[7]                             Net          -        -       -         -            2         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     A        In      0.000     6.189 r      -         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     Z        Out     0.828     7.016 r      -         
+un1_\$23[7]                          Net          -        -       -         -            17        
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     C        In      0.000     7.016 r      -         
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     Z        Out     0.660     7.676 r      -         
+un1_\$27[5]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        A0       In      0.000     7.676 r      -         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        COUT     Out     0.900     8.576 r      -         
+Z\$30_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$30_s_9_0              CCU2C        CIN      In      0.000     8.576 r      -         
+amdemod.sqrt.\$30_s_9_0              CCU2C        S0       Out     0.751     9.328 r      -         
+Z\$30[9]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     A        In      0.000     9.328 r      -         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     Z        Out     0.828     10.156 r     -         
+un1_\$31[9]                          Net          -        -       -         -            17        
+amdemod.sqrt.\$38_cry_3_0            CCU2C        B0       In      0.000     10.156 r     -         
+amdemod.sqrt.\$38_cry_3_0            CCU2C        COUT     Out     0.900     11.056 r     -         
+Z\$38_cry_4                          Net          -        -       -         -            1         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        CIN      In      0.000     11.056 r     -         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        S1       Out     0.698     11.754 r     -         
+Z\$38[6]                             Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     A        In      0.000     11.754 r     -         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     Z        Out     0.660     12.414 r     -         
+un1_\$39[6]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        A1       In      0.000     12.414 r     -         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        COUT     Out     0.900     13.313 r     -         
+Z\$42_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        CIN      In      0.000     13.313 r     -         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        S1       Out     0.698     14.011 r     -         
+Z\$42[10]                            Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     A        In      0.000     14.011 r     -         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     Z        Out     0.660     14.671 r     -         
+un1_\$43[10]                         Net          -        -       -         -            2         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        A1       In      0.000     14.671 r     -         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        COUT     Out     0.900     15.571 r     -         
+Z\$46_cry_12                         Net          -        -       -         -            1         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        CIN      In      0.000     15.571 r     -         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        S1       Out     0.799     16.370 r     -         
+Z\$46[14]                            Net          -        -       -         -            3         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     B        In      0.000     16.370 r     -         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     Z        Out     0.390     16.761 f     -         
+un1_\$47_i_14_rep1                   Net          -        -       -         -            1         
+amdemod.amdemod_d[1]                 FD1P3AX      D        In      0.000     16.761 f     -         
+====================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      16.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -11.815
+
+    Number of logic level(s):                21
+    Starting point:                          amdemod.square_sum_fast[22] / Q
+    Ending point:                            amdemod.amdemod_d[1] / D
+    The start point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival      No. of    
+Name                                 Type         Name     Dir     Delay     Time         Fan Out(s)
+----------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]          FD1P3AX      Q        Out     1.015     1.015 r      -         
+square_sum_fast[22]                  Net          -        -       -         -            6         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     A        In      0.000     1.015 r      -         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     Z        Out     0.801     1.816 f      -         
+N_11                                 Net          -        -       -         -            10        
+amdemod.sqrt.\$15_c4_0               ORCALUT4     A        In      0.000     1.816 f      -         
+amdemod.sqrt.\$15_c4_0               ORCALUT4     Z        Out     0.606     2.422 f      -         
+Z\$15_ac0_7                          Net          -        -       -         -            1         
+amdemod.sqrt.\$15_axbxc5             ORCALUT4     B        In      0.000     2.422 f      -         
+amdemod.sqrt.\$15_axbxc5             ORCALUT4     Z        Out     0.660     3.082 r      -         
+Z\$15[5]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     B        In      0.000     3.082 r      -         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     Z        Out     0.849     3.931 r      -         
+un1_\$15[5]                          Net          -        -       -         -            24        
+amdemod.sqrt.\$22_cry_5_0_RNO        ORCALUT4     D        In      0.000     3.931 r      -         
+amdemod.sqrt.\$22_cry_5_0_RNO        ORCALUT4     Z        Out     0.606     4.537 r      -         
+Z\$22_axb_5                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        A0       In      0.000     4.537 r      -         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        COUT     Out     0.900     5.437 r      -         
+Z\$22_cry_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_s_7_0              CCU2C        CIN      In      0.000     5.437 r      -         
+amdemod.sqrt.\$22_s_7_0              CCU2C        S0       Out     0.751     6.189 r      -         
+Z\$22[7]                             Net          -        -       -         -            2         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     A        In      0.000     6.189 r      -         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     Z        Out     0.828     7.016 r      -         
+un1_\$23[7]                          Net          -        -       -         -            17        
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     C        In      0.000     7.016 r      -         
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     Z        Out     0.660     7.676 r      -         
+un1_\$27[5]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        A0       In      0.000     7.676 r      -         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        COUT     Out     0.900     8.576 r      -         
+Z\$30_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$30_s_9_0              CCU2C        CIN      In      0.000     8.576 r      -         
+amdemod.sqrt.\$30_s_9_0              CCU2C        S0       Out     0.751     9.328 r      -         
+Z\$30[9]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     A        In      0.000     9.328 r      -         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     Z        Out     0.828     10.156 r     -         
+un1_\$31[9]                          Net          -        -       -         -            17        
+amdemod.sqrt.\$38_cry_3_0            CCU2C        B0       In      0.000     10.156 r     -         
+amdemod.sqrt.\$38_cry_3_0            CCU2C        COUT     Out     0.900     11.056 r     -         
+Z\$38_cry_4                          Net          -        -       -         -            1         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        CIN      In      0.000     11.056 r     -         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        S1       Out     0.698     11.754 r     -         
+Z\$38[6]                             Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     A        In      0.000     11.754 r     -         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     Z        Out     0.660     12.414 r     -         
+un1_\$39[6]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        A1       In      0.000     12.414 r     -         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        COUT     Out     0.900     13.313 r     -         
+Z\$42_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        CIN      In      0.000     13.313 r     -         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        S1       Out     0.698     14.011 r     -         
+Z\$42[10]                            Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     A        In      0.000     14.011 r     -         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     Z        Out     0.660     14.671 r     -         
+un1_\$43[10]                         Net          -        -       -         -            2         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        A1       In      0.000     14.671 r     -         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        COUT     Out     0.900     15.571 r     -         
+Z\$46_cry_12                         Net          -        -       -         -            1         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        CIN      In      0.000     15.571 r     -         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        S1       Out     0.799     16.370 r     -         
+Z\$46[14]                            Net          -        -       -         -            3         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     B        In      0.000     16.370 r     -         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     Z        Out     0.390     16.761 f     -         
+un1_\$47_i_14_rep1                   Net          -        -       -         -            1         
+amdemod.amdemod_d[1]                 FD1P3AX      D        In      0.000     16.761 f     -         
+====================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      16.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -11.815
+
+    Number of logic level(s):                21
+    Starting point:                          amdemod.square_sum_fast[22] / Q
+    Ending point:                            amdemod.amdemod_d[1] / D
+    The start point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival      No. of    
+Name                                 Type         Name     Dir     Delay     Time         Fan Out(s)
+----------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]          FD1P3AX      Q        Out     1.015     1.015 r      -         
+square_sum_fast[22]                  Net          -        -       -         -            6         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     A        In      0.000     1.015 r      -         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     Z        Out     0.801     1.816 f      -         
+N_11                                 Net          -        -       -         -            10        
+amdemod.sqrt.\$14_c4_0               ORCALUT4     A        In      0.000     1.816 f      -         
+amdemod.sqrt.\$14_c4_0               ORCALUT4     Z        Out     0.606     2.422 r      -         
+Z\$14_ac0_7                          Net          -        -       -         -            1         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     A        In      0.000     2.422 r      -         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     Z        Out     0.660     3.082 r      -         
+Z\$14[5]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     A        In      0.000     3.082 r      -         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     Z        Out     0.849     3.931 r      -         
+un1_\$15[5]                          Net          -        -       -         -            24        
+amdemod.sqrt.\$23_cry_5_0_RNO_0      ORCALUT4     C        In      0.000     3.931 r      -         
+amdemod.sqrt.\$23_cry_5_0_RNO_0      ORCALUT4     Z        Out     0.606     4.537 r      -         
+Z\$23_axb_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$23_cry_5_0            CCU2C        A1       In      0.000     4.537 r      -         
+amdemod.sqrt.\$23_cry_5_0            CCU2C        COUT     Out     0.900     5.437 r      -         
+Z\$23_cry_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$23_s_7_0              CCU2C        CIN      In      0.000     5.437 r      -         
+amdemod.sqrt.\$23_s_7_0              CCU2C        S0       Out     0.751     6.189 r      -         
+Z\$23[7]                             Net          -        -       -         -            2         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     B        In      0.000     6.189 r      -         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     Z        Out     0.828     7.016 r      -         
+un1_\$23[7]                          Net          -        -       -         -            17        
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     C        In      0.000     7.016 r      -         
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     Z        Out     0.660     7.676 r      -         
+un1_\$27[5]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        A0       In      0.000     7.676 r      -         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        COUT     Out     0.900     8.576 r      -         
+Z\$30_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$30_s_9_0              CCU2C        CIN      In      0.000     8.576 r      -         
+amdemod.sqrt.\$30_s_9_0              CCU2C        S0       Out     0.751     9.328 r      -         
+Z\$30[9]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     A        In      0.000     9.328 r      -         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     Z        Out     0.828     10.156 r     -         
+un1_\$31[9]                          Net          -        -       -         -            17        
+amdemod.sqrt.\$38_cry_3_0            CCU2C        B0       In      0.000     10.156 r     -         
+amdemod.sqrt.\$38_cry_3_0            CCU2C        COUT     Out     0.900     11.056 r     -         
+Z\$38_cry_4                          Net          -        -       -         -            1         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        CIN      In      0.000     11.056 r     -         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        S1       Out     0.698     11.754 r     -         
+Z\$38[6]                             Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     A        In      0.000     11.754 r     -         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     Z        Out     0.660     12.414 r     -         
+un1_\$39[6]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        A1       In      0.000     12.414 r     -         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        COUT     Out     0.900     13.313 r     -         
+Z\$42_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        CIN      In      0.000     13.313 r     -         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        S1       Out     0.698     14.011 r     -         
+Z\$42[10]                            Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     A        In      0.000     14.011 r     -         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     Z        Out     0.660     14.671 r     -         
+un1_\$43[10]                         Net          -        -       -         -            2         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        A1       In      0.000     14.671 r     -         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        COUT     Out     0.900     15.571 r     -         
+Z\$46_cry_12                         Net          -        -       -         -            1         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        CIN      In      0.000     15.571 r     -         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        S1       Out     0.799     16.370 r     -         
+Z\$46[14]                            Net          -        -       -         -            3         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     B        In      0.000     16.370 r     -         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     Z        Out     0.390     16.761 f     -         
+un1_\$47_i_14_rep1                   Net          -        -       -         -            1         
+amdemod.amdemod_d[1]                 FD1P3AX      D        In      0.000     16.761 f     -         
+====================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      16.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -11.815
+
+    Number of logic level(s):                21
+    Starting point:                          amdemod.square_sum_fast[22] / Q
+    Ending point:                            amdemod.amdemod_d[1] / D
+    The start point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival      No. of    
+Name                                 Type         Name     Dir     Delay     Time         Fan Out(s)
+----------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]          FD1P3AX      Q        Out     1.015     1.015 r      -         
+square_sum_fast[22]                  Net          -        -       -         -            6         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     A        In      0.000     1.015 r      -         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     Z        Out     0.801     1.816 f      -         
+N_11                                 Net          -        -       -         -            10        
+amdemod.sqrt.\$14_c4_0               ORCALUT4     A        In      0.000     1.816 f      -         
+amdemod.sqrt.\$14_c4_0               ORCALUT4     Z        Out     0.606     2.422 r      -         
+Z\$14_ac0_7                          Net          -        -       -         -            1         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     A        In      0.000     2.422 r      -         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     Z        Out     0.660     3.082 r      -         
+Z\$14[5]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     A        In      0.000     3.082 r      -         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     Z        Out     0.849     3.931 r      -         
+un1_\$15[5]                          Net          -        -       -         -            24        
+amdemod.sqrt.\$22_cry_5_0_RNO_0      ORCALUT4     C        In      0.000     3.931 r      -         
+amdemod.sqrt.\$22_cry_5_0_RNO_0      ORCALUT4     Z        Out     0.606     4.537 r      -         
+Z\$22_axb_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        A1       In      0.000     4.537 r      -         
+amdemod.sqrt.\$22_cry_5_0            CCU2C        COUT     Out     0.900     5.437 r      -         
+Z\$22_cry_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$22_s_7_0              CCU2C        CIN      In      0.000     5.437 r      -         
+amdemod.sqrt.\$22_s_7_0              CCU2C        S0       Out     0.751     6.189 r      -         
+Z\$22[7]                             Net          -        -       -         -            2         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     A        In      0.000     6.189 r      -         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     Z        Out     0.828     7.016 r      -         
+un1_\$23[7]                          Net          -        -       -         -            17        
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     C        In      0.000     7.016 r      -         
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     Z        Out     0.660     7.676 r      -         
+un1_\$27[5]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        A0       In      0.000     7.676 r      -         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        COUT     Out     0.900     8.576 r      -         
+Z\$30_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$30_s_9_0              CCU2C        CIN      In      0.000     8.576 r      -         
+amdemod.sqrt.\$30_s_9_0              CCU2C        S0       Out     0.751     9.328 r      -         
+Z\$30[9]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     A        In      0.000     9.328 r      -         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     Z        Out     0.828     10.156 r     -         
+un1_\$31[9]                          Net          -        -       -         -            17        
+amdemod.sqrt.\$38_cry_3_0            CCU2C        B0       In      0.000     10.156 r     -         
+amdemod.sqrt.\$38_cry_3_0            CCU2C        COUT     Out     0.900     11.056 r     -         
+Z\$38_cry_4                          Net          -        -       -         -            1         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        CIN      In      0.000     11.056 r     -         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        S1       Out     0.698     11.754 r     -         
+Z\$38[6]                             Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     A        In      0.000     11.754 r     -         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     Z        Out     0.660     12.414 r     -         
+un1_\$39[6]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        A1       In      0.000     12.414 r     -         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        COUT     Out     0.900     13.313 r     -         
+Z\$42_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        CIN      In      0.000     13.313 r     -         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        S1       Out     0.698     14.011 r     -         
+Z\$42[10]                            Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     A        In      0.000     14.011 r     -         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     Z        Out     0.660     14.671 r     -         
+un1_\$43[10]                         Net          -        -       -         -            2         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        A1       In      0.000     14.671 r     -         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        COUT     Out     0.900     15.571 r     -         
+Z\$46_cry_12                         Net          -        -       -         -            1         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        CIN      In      0.000     15.571 r     -         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        S1       Out     0.799     16.370 r     -         
+Z\$46[14]                            Net          -        -       -         -            3         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     B        In      0.000     16.370 r     -         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     Z        Out     0.390     16.761 f     -         
+un1_\$47_i_14_rep1                   Net          -        -       -         -            1         
+amdemod.amdemod_d[1]                 FD1P3AX      D        In      0.000     16.761 f     -         
+====================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      16.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -11.815
+
+    Number of logic level(s):                21
+    Starting point:                          amdemod.square_sum_fast[22] / Q
+    Ending point:                            amdemod.amdemod_d[1] / D
+    The start point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival      No. of    
+Name                                 Type         Name     Dir     Delay     Time         Fan Out(s)
+----------------------------------------------------------------------------------------------------
+amdemod.square_sum_fast[22]          FD1P3AX      Q        Out     1.015     1.015 r      -         
+square_sum_fast[22]                  Net          -        -       -         -            6         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     A        In      0.000     1.015 r      -         
+amdemod.sqrt.SUM4_i_a2               ORCALUT4     Z        Out     0.801     1.816 f      -         
+N_11                                 Net          -        -       -         -            10        
+amdemod.sqrt.\$14_c4_0               ORCALUT4     A        In      0.000     1.816 f      -         
+amdemod.sqrt.\$14_c4_0               ORCALUT4     Z        Out     0.606     2.422 r      -         
+Z\$14_ac0_7                          Net          -        -       -         -            1         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     A        In      0.000     2.422 r      -         
+amdemod.sqrt.\$14_axbxc5             ORCALUT4     Z        Out     0.660     3.082 r      -         
+Z\$14[5]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     A        In      0.000     3.082 r      -         
+amdemod.sqrt.un1_\$15[5]             ORCALUT4     Z        Out     0.849     3.931 r      -         
+un1_\$15[5]                          Net          -        -       -         -            24        
+amdemod.sqrt.\$23_cry_5_0_RNO        ORCALUT4     D        In      0.000     3.931 r      -         
+amdemod.sqrt.\$23_cry_5_0_RNO        ORCALUT4     Z        Out     0.606     4.537 r      -         
+Z\$23_axb_5                          Net          -        -       -         -            1         
+amdemod.sqrt.\$23_cry_5_0            CCU2C        A0       In      0.000     4.537 r      -         
+amdemod.sqrt.\$23_cry_5_0            CCU2C        COUT     Out     0.900     5.437 r      -         
+Z\$23_cry_6                          Net          -        -       -         -            1         
+amdemod.sqrt.\$23_s_7_0              CCU2C        CIN      In      0.000     5.437 r      -         
+amdemod.sqrt.\$23_s_7_0              CCU2C        S0       Out     0.751     6.189 r      -         
+Z\$23[7]                             Net          -        -       -         -            2         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     B        In      0.000     6.189 r      -         
+amdemod.sqrt.\$22_s_7_0_RNIJQV81     ORCALUT4     Z        Out     0.828     7.016 r      -         
+un1_\$23[7]                          Net          -        -       -         -            17        
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     C        In      0.000     7.016 r      -         
+amdemod.sqrt.un1_\$27[5]             ORCALUT4     Z        Out     0.660     7.676 r      -         
+un1_\$27[5]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        A0       In      0.000     7.676 r      -         
+amdemod.sqrt.\$30_cry_7_0            CCU2C        COUT     Out     0.900     8.576 r      -         
+Z\$30_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$30_s_9_0              CCU2C        CIN      In      0.000     8.576 r      -         
+amdemod.sqrt.\$30_s_9_0              CCU2C        S0       Out     0.751     9.328 r      -         
+Z\$30[9]                             Net          -        -       -         -            2         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     A        In      0.000     9.328 r      -         
+amdemod.sqrt.un1_\$31[9]             ORCALUT4     Z        Out     0.828     10.156 r     -         
+un1_\$31[9]                          Net          -        -       -         -            17        
+amdemod.sqrt.\$38_cry_3_0            CCU2C        B0       In      0.000     10.156 r     -         
+amdemod.sqrt.\$38_cry_3_0            CCU2C        COUT     Out     0.900     11.056 r     -         
+Z\$38_cry_4                          Net          -        -       -         -            1         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        CIN      In      0.000     11.056 r     -         
+amdemod.sqrt.\$38_cry_5_0            CCU2C        S1       Out     0.698     11.754 r     -         
+Z\$38[6]                             Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     A        In      0.000     11.754 r     -         
+amdemod.sqrt.un1_\$39[6]             ORCALUT4     Z        Out     0.660     12.414 r     -         
+un1_\$39[6]                          Net          -        -       -         -            2         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        A1       In      0.000     12.414 r     -         
+amdemod.sqrt.\$42_cry_7_0            CCU2C        COUT     Out     0.900     13.313 r     -         
+Z\$42_cry_8                          Net          -        -       -         -            1         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        CIN      In      0.000     13.313 r     -         
+amdemod.sqrt.\$42_cry_9_0            CCU2C        S1       Out     0.698     14.011 r     -         
+Z\$42[10]                            Net          -        -       -         -            1         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     A        In      0.000     14.011 r     -         
+amdemod.sqrt.un1_\$43[10]            ORCALUT4     Z        Out     0.660     14.671 r     -         
+un1_\$43[10]                         Net          -        -       -         -            2         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        A1       In      0.000     14.671 r     -         
+amdemod.sqrt.\$46_cry_11_0           CCU2C        COUT     Out     0.900     15.571 r     -         
+Z\$46_cry_12                         Net          -        -       -         -            1         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        CIN      In      0.000     15.571 r     -         
+amdemod.sqrt.\$46_cry_13_0           CCU2C        S1       Out     0.799     16.370 r     -         
+Z\$46[14]                            Net          -        -       -         -            3         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     B        In      0.000     16.370 r     -         
+amdemod.amdemod_d_RNO[1]             ORCALUT4     Z        Out     0.390     16.761 f     -         
+un1_\$47_i_14_rep1                   Net          -        -       -         -            1         
+amdemod.amdemod_d[1]                 FD1P3AX      D        In      0.000     16.761 f     -         
+====================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                      Starting                                         Arrival          
+Instance              Reference     Type           Pin     Net         Time        Slack
+                      Clock                                                             
+----------------------------------------------------------------------------------------
+amdemod.\$1[23:0]     System        MULT18X18D     P0      Z\$1[0]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P1      Z\$1[1]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P2      Z\$1[2]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P3      Z\$1[3]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P4      Z\$1[4]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P5      Z\$1[5]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P6      Z\$1[6]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P7      Z\$1[7]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P8      Z\$1[8]     0.000       4.946
+amdemod.\$1[23:0]     System        MULT18X18D     P9      Z\$1[9]     0.000       4.946
+========================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                             Starting                                      Required          
+Instance                     Reference     Type        Pin     Net         Time         Slack
+                             Clock                                                           
+---------------------------------------------------------------------------------------------
+amdemod.mult_result_i[0]     System        FD1P3AX     D       Z\$1[0]     4.946        4.946
+amdemod.mult_result_i[1]     System        FD1P3AX     D       Z\$1[1]     4.946        4.946
+amdemod.mult_result_i[2]     System        FD1P3AX     D       Z\$1[2]     4.946        4.946
+amdemod.mult_result_i[3]     System        FD1P3AX     D       Z\$1[3]     4.946        4.946
+amdemod.mult_result_i[4]     System        FD1P3AX     D       Z\$1[4]     4.946        4.946
+amdemod.mult_result_i[5]     System        FD1P3AX     D       Z\$1[5]     4.946        4.946
+amdemod.mult_result_i[6]     System        FD1P3AX     D       Z\$1[6]     4.946        4.946
+amdemod.mult_result_i[7]     System        FD1P3AX     D       Z\$1[7]     4.946        4.946
+amdemod.mult_result_i[8]     System        FD1P3AX     D       Z\$1[8]     4.946        4.946
+amdemod.mult_result_i[9]     System        FD1P3AX     D       Z\$1[9]     4.946        4.946
+=============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.946
+
+    - Propagation time:                      0.000
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 4.946
+
+    Number of logic level(s):                0
+    Starting point:                          amdemod.\$1[23:0] / P0
+    Ending point:                            amdemod.mult_result_i[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            ecp5pll_Z1|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                         Type           Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+amdemod.\$1[23:0]            MULT18X18D     P0       Out     0.000     0.000 r     -         
+Z\$1[0]                      Net            -        -       -         -           1         
+amdemod.mult_result_i[0]     FD1P3AX        D        In      0.000     0.000 r     -         
+=============================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:41s; Memory used current: 380MB peak: 380MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:41s; Memory used current: 380MB peak: 380MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe5u_85f-6
+
+Register bits: 2584 of 83640 (3%)
+PIC Latch:       0
+I/O cells:       21
+Block Rams : 1 of 208 (0%)
+
+DSP primitives:       2 of 234 (0%)
+
+Details:
+CCU2C:          973
+EHXPLLL:        1
+FD1P3AX:        1730
+FD1P3AY:        4
+FD1S3AX:        846
+FD1S3AY:        2
+GSR:            1
+IB:             3
+IFS1P3BX:       1
+IFS1P3DX:       1
+INV:            5
+MULT18X18D:     2
+OBZ:            18
+ORCALUT4:       353
+PDPW16KD:       1
+PFUMX:          1
+PUR:            1
+SGSR:           1
+VHI:            73
+VLO:            73
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:41s; Memory used current: 380MB peak: 380MB)
+
+Process took 0h:00m:41s realtime, 0h:00m:41s cputime
+# Thu Oct 31 10:27:24 2024
+
+###########################################################]

@@ -1,0 +1,1074 @@
+
+synthesis -f "OneBitSDR_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Oct 31 10:29:51 2024
+
+
+Command Line:  synthesis -f OneBitSDR_impl1_lattice.synproj -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/promote.xml 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion (searchpath added)
+-p /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1 (searchpath added)
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion (searchpath added)
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/top.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/AMDemod.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Mixer.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Multiplier.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/NCO.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PLL.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PWM.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/UartRX.v
+NGD file = OneBitSDR_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/top.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/AMDemod.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Mixer.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Multiplier.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/NCO.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PWM.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/UartRX.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): top
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/top.v(45): " arg1="top" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/top.v" arg3="45"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PLL.v(8): " arg1="PLL" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PLL.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): " arg1="VHI" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="757"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): " arg1="VLO" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="761"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): " arg1="EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,FEEDBK_PATH=&quot;INT_OP&quot;,CLKOP_TRIM_POL=&quot;FALLING&quot;,CLKOS_TRIM_POL=&quot;FALLING&quot;)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="1696"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(8): " arg1="SinCos" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(367): " arg1="INV" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="367"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(810): " arg1="XOR2" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="810"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(710): " arg1="ROM16X1A(initval=16&apos;b1111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="710"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(25): " arg1="AND2" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="25"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(119): " arg1="FD1P3DX" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="119"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(458): " arg1="MUX21" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="458"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(76): " arg1="CCU2C(INIT0=16&apos;b0110011010101010,INIT1=16&apos;b0110011010101010,INJECT1_0=&quot;NO&quot;,INJECT1_1=&quot;NO&quot;)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="76"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111111111111111111111111111111111111110000000000000000000000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111111111111111111111111100000000000001111111111100000000000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111111111111111100000000011111110000001111110000011111000000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111111111100000011111000011110001110001110001110011100111000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111111000011100011100110011001001101101101001001011010110100)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111111000110011011010010101010100101001001001101100110001100110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111100100101010110011000000000001110011011010110101010110101010)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1110010110011100010101001111111101101010110011100000000011110000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1101000010100011001111010111110011001100010101100000000011001100)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1111011011100010010110111011101001110011000000100111110010101010)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1000100101001010011001010111111001010010011110001001001001111000)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b01)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b01111111111111111111111111111111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b0111111111110000000000000111111111111111111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b011111000001111110000001111111000000000111111111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b011100111001110001110001110001111000011111000000111111111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b0101101011010010010110110110010011001100111000111000011111111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1100110001100110110010010010100101010101001011011001100011111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1010101101010101101011011001110000000000011001101010100100111110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b01111000000000111001101010110111111110010101000111001101001110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b0110011000000000110101000110011001111101011110011000101000010110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b1010101001111100100000011001110010111011101101001000111011011110)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(742): " arg1="ROM64X1A(initval=64&apos;b011110010010010001111001001010011111101010011001010010100100010)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="742"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="704"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="868"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="938"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/NCO.v(13): " arg1="nco_sig" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/NCO.v" arg3="13"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Mixer.v(2): " arg1="Mixer" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Mixer.v" arg3="2"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v(20): " arg1="CIC(width=72,decimation_ratio=4096)" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v" arg3="20"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v(119): " arg1="72" arg2="12" arg3="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/CIC.v" arg4="119"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PWM.v(1): " arg1="PWM" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/PWM.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/AMDemod.v(8): " arg1="AMDemodulator" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/AMDemod.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Multiplier.v(8): " arg1="Multiplier" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/Multiplier.v" arg3="8"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1184): " arg1="MULT18X18D(REG_INPUTA_CLK=&quot;CLK0&quot;,REG_INPUTB_CLK=&quot;CLK0&quot;,REG_PIPELINE_CLK=&quot;CLK0&quot;,REG_OUTPUT_CLK=&quot;CLK0&quot;,RESETMODE=&quot;ASYNC&quot;)" arg2="/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v" arg3="1184"  />
+Removed duplicate sequential element MultDataD(12 bit), because it is equivalent to MultDataC
+
+Removed duplicate sequential element MultDataA(12 bit), because it is equivalent to MultDataB
+
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/UartRX.v(19): " arg1="uart_rx(CLKS_PER_BIT=87)" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/UartRX.v" arg3="19"  />
+Last elaborated design is top()
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Top-level module name = top.
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(704): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="704"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(868): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="868"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v(938): " arg1="CIN" arg2="/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/source/SinCos.v" arg3="938"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="o_Tx_Serial"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="MYLED[7]"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="XOut"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="sin_out"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="CIC_out_clkSin"  />
+######## Missing driver on net o_Tx_Serial. Patching with GND.
+######## Missing driver on net MYLED[7]. Patching with GND.
+######## Missing driver on net XOut. Patching with GND.
+######## Missing driver on net sin_out. Patching with GND.
+######## Missing driver on net CIC_out_clkSin. Patching with GND.
+######## Missing driver on net n1156. Patching with GND.
+######## Missing driver on net n1155. Patching with GND.
+######## Missing driver on net n1154. Patching with GND.
+
+
+
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="7" arg1="CICGain"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="6" arg1="CICGain"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="5" arg1="CICGain"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="CICGain"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="CICGain"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="CICGain"  />
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+   5016 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file OneBitSDR_impl1.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 2704 of 84255 (3 % )
+AND2 => 1
+CCU2C => 1463
+EHXPLLL => 1
+FD1P3AX => 1590
+FD1P3DX => 61
+FD1P3IX => 16
+FD1S3AX => 996
+FD1S3AY => 4
+FD1S3IX => 36
+FD1S3JX => 1
+GSR => 1
+IB => 3
+INV => 33
+LUT4 => 685
+MULT18X18D => 2
+MUX21 => 54
+OB => 23
+PFUMX => 14
+ROM16X1A => 2
+ROM64X1A => 26
+XOR2 => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk_80mhz, loads : 2594
+  Net : CIC1Sin/CIC1_out_clkSin, loads : 71
+  Net : uart_rx1/UartClk_2, loads : 42
+  Net : osc_clk_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 50
+Top 10 highest fanout Clock Enables:
+  Net : CIC1Cos/clk_80mhz_enable_758, loads : 63
+  Net : CIC1Sin/clk_80mhz_enable_142, loads : 63
+  Net : CIC1Sin/clk_80mhz_enable_311, loads : 50
+  Net : CIC1Sin/clk_80mhz_enable_411, loads : 50
+  Net : clk_80mhz_enable_1460, loads : 50
+  Net : CIC1Sin/clk_80mhz_enable_461, loads : 50
+  Net : CIC1Sin/clk_80mhz_enable_711, loads : 50
+  Net : CIC1Cos/clk_80mhz_enable_798, loads : 50
+  Net : CIC1Sin/clk_80mhz_enable_65, loads : 50
+  Net : CIC1Cos/clk_80mhz_enable_848, loads : 50
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : CIC1Sin/clk_80mhz_enable_161, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_211, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_261, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_361, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_511, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_561, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_611, loads : 100
+  Net : CIC1Sin/clk_80mhz_enable_661, loads : 100
+  Net : CIC1Cos/clk_80mhz_enable_898, loads : 100
+  Net : CIC1Cos/clk_80mhz_enable_948, loads : 100
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets CIC1_out_clkSin]         |  200.000 MHz|   26.749 MHz|    76 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets \uart_rx1/UartClk[2]]    |  200.000 MHz|  113.058 MHz|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_80mhz]               |  200.000 MHz|   85.434 MHz|    37 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 332.621  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 20.545  secs
+--------------------------------------------------------------
+
+map -a "ECP5U" -p LFE5U-85F -t CABGA381 -s 6 -oc Commercial   "OneBitSDR_impl1.ngd" -o "OneBitSDR_impl1_map.ncd" -pr "OneBitSDR_impl1.prf" -mp "OneBitSDR_impl1.mrp" -lpf "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/impl1/OneBitSDR_impl1.lpf" -lpf "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/OneBitSDR.lpf"             
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: OneBitSDR_impl1.ngd
+   Picdevice="LFE5U-85F"
+
+   Pictype="CABGA381"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFE5U-85FCABGA381, Performance used: 6.
+
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+2728 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:   2704 out of 84255 (3%)
+      PFU registers:         2704 out of 83640 (3%)
+      PIO registers:            0 out of   615 (0%)
+   Number of SLICEs:      2689 out of 41820 (6%)
+      SLICEs as Logic/ROM:   2689 out of 41820 (6%)
+      SLICEs as RAM:            0 out of 31365 (0%)
+      SLICEs as Carry:       1463 out of 41820 (3%)
+   Number of LUT4s:        3769 out of 83640 (5%)
+      Number used as logic LUTs:        843
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      2926
+      Number used as shift registers:     0
+   Number of PIO sites used: 27 out of 205 (13%)
+      Number of PIO sites used for single ended IOs: 25
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO comps in NCD)
+   Number of block RAMs:  0 out of 208 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 4 (25%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          2
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  4 out of 312 (1 %)
+   Number of Used DSP ALU Sites:  0 out of 156 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 312 (0 %)
+   Number of clocks:  4
+     Net clk_80mhz: 1583 loads, 1583 rising, 0 falling (Driver: PLL1/PLLInst_0 )
+     Net CIC1_out_clkSin: 39 loads, 39 rising, 0 falling (Driver: CIC1Sin/d_clk_67 )
+     Net uart_rx1/UartClk[2]: 28 loads, 28 rising, 0 falling (Driver: uart_rx1/UartClk_1007_1031__i2 )
+     Net osc_clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO osc_clk )
+   Number of Clock Enables:  50
+     Net PWM1/clk_80mhz_enable_1407: 6 loads, 6 LSLICEs
+     Net clk_80mhz_enable_1408: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_1460: 25 loads, 25 LSLICEs
+     Net clk_80mhz_enable_45: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_17: 4 loads, 4 LSLICEs
+     Net uart_rx1/UartClk_2_enable_2: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_36: 2 loads, 2 LSLICEs
+     Net uart_rx1/UartClk_2_enable_9: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_4: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_5: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_6: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_7: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_8: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_10: 1 loads, 1 LSLICEs
+     Net uart_rx1/UartClk_2_enable_34: 9 loads, 9 LSLICEs
+     Net uart_rx1/UartClk_2_enable_25: 1 loads, 1 LSLICEs
+     Net clk_80mhz_enable_1471: 2 loads, 2 LSLICEs
+     Net clk_80mhz_enable_1470: 5 loads, 5 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_142: 24 loads, 24 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_65: 30 loads, 30 LSLICEs
+     Net CIC1Sin/v_comb: 18 loads, 18 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_161: 26 loads, 26 LSLICEs
+     Net CIC1Sin/d_clk_tmp_N_1831: 13 loads, 13 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_211: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_261: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_311: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_361: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_411: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_461: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_511: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_561: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_611: 26 loads, 26 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_661: 25 loads, 25 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_711: 26 loads, 26 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_758: 48 loads, 48 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_798: 50 loads, 50 LSLICEs
+     Net CIC1Cos/v_comb: 16 loads, 16 LSLICEs
+     Net CIC1Cos/count_15__N_1458: 24 loads, 24 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_848: 41 loads, 41 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_898: 26 loads, 26 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_948: 49 loads, 49 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_998: 37 loads, 37 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1048: 29 loads, 29 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1098: 50 loads, 50 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1148: 33 loads, 33 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1198: 32 loads, 32 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1248: 50 loads, 50 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1298: 29 loads, 29 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1348: 36 loads, 36 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_1398: 50 loads, 50 LSLICEs
+   Number of LSRs:  10
+     Net uart_rx1/r_SM_Main_2: 2 loads, 2 LSLICEs
+     Net uart_rx1/r_Rx_DV: 1 loads, 1 LSLICEs
+     Net uart_rx1/n16803: 1 loads, 1 LSLICEs
+     Net uart_rx1/n12564: 9 loads, 9 LSLICEs
+     Net CIC1Sin/clk_80mhz_enable_142: 2 loads, 2 LSLICEs
+     Net CIC1Sin/d_clk_tmp_N_1831: 1 loads, 1 LSLICEs
+     Net CIC1Sin/n12551: 8 loads, 8 LSLICEs
+     Net CIC1Cos/clk_80mhz_enable_758: 1 loads, 1 LSLICEs
+     Net CIC1Cos/count_15__N_1458: 1 loads, 1 LSLICEs
+     Net CIC1Cos/n12562: 8 loads, 8 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net MixerOutCos_11: 97 loads
+     Net MixerOutSin_11: 97 loads
+     Net SinCos1/rom_addr0_r_10: 86 loads
+     Net SinCos1/rom_addr0_r_8: 86 loads
+     Net SinCos1/rom_addr0_r_9: 86 loads
+     Net SinCos1/rom_addr0_r_7: 83 loads
+     Net n13169: 66 loads
+     Net CIC1Cos/clk_80mhz_enable_758: 63 loads
+     Net CICGain_0: 55 loads
+     Net n17625: 53 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+. MULT18X18D  AMDemodulator1/Multiplier2/dsp_mult_0:
+
+Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+
+	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK0	CE0	RST0	A Data In
+		B		CLK0	CE0	RST0	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		CLK0	CE0	RST0
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		CLK0	CE0	RST0
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+. MULT18X18D  AMDemodulator1/Multiplier1/dsp_mult_0:
+
+Multiplier
+	Operation A		Signed
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+
+	Operation B		Signed
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		CLK0	CE0	RST0
+		Pipeline	CLK0	CE0	RST0
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		CLK0	CE0	RST0	A Data In
+		B		CLK0	CE0	RST0	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		CLK0	CE0	RST0
+
+	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		CLK0	CE0	RST0
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+
+	C_PSE17		0b00000000000000000
+
+
+Total CPU Time: 4 secs  
+Total REAL Time: 4 secs  
+Peak Memory Usage: 484 MB
+
+Dumping design to file OneBitSDR_impl1_map.ncd.
+
+ncd2vdb "OneBitSDR_impl1_map.ncd" ".vdbs/OneBitSDR_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+
+mpartrce -p "OneBitSDR_impl1.p2t" -f "OneBitSDR_impl1.p3t" -tf "OneBitSDR_impl1.pt" "OneBitSDR_impl1_map.ncd" "OneBitSDR_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "OneBitSDR_impl1_map.ncd"
+Thu Oct 31 10:30:21 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/promote.xml -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1:par_low_skew_clock_net=0 OneBitSDR_impl1_map.ncd OneBitSDR_impl1.dir/5_1.ncd OneBitSDR_impl1.prf
+Preference file: OneBitSDR_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file OneBitSDR_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application par from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)      27/365           7% used
+                     27/205          13% bonded
+
+   SLICE           2689/41820         6% used
+
+   PLL                1/4            25% used
+   MULT18             2/156           1% used
+
+
+Number of Signals: 7500
+Number of Connections: 15908
+
+Pin Constraint Summary:
+   22 out of 26 pins locked (84% locked).
+
+
+The following 10 signals are selected to use the primary clock routing resources:
+    clk_80mhz (driver: PLL1/PLLInst_0, clk/ce/sr load #: 1583/0/0)
+    CIC1_out_clkSin (driver: CIC1Sin/SLICE_1523, clk/ce/sr load #: 39/0/0)
+    uart_rx1/UartClk[2] (driver: uart_rx1/SLICE_2329, clk/ce/sr load #: 28/0/0)
+    CIC1Cos/clk_80mhz_enable_798 (driver: CIC1Cos/SLICE_1480, clk/ce/sr load #: 0/50/0)
+    CIC1Cos/clk_80mhz_enable_1098 (driver: CIC1Cos/SLICE_1483, clk/ce/sr load #: 0/50/0)
+    CIC1Cos/clk_80mhz_enable_1248 (driver: CIC1Cos/SLICE_1484, clk/ce/sr load #: 0/50/0)
+    CIC1Cos/clk_80mhz_enable_1398 (driver: CIC1Cos/SLICE_1486, clk/ce/sr load #: 0/50/0)
+    CIC1Cos/clk_80mhz_enable_758 (driver: CIC1Cos/SLICE_1480, clk/ce/sr load #: 0/48/1)
+    CIC1Cos/clk_80mhz_enable_948 (driver: CIC1Cos/SLICE_1481, clk/ce/sr load #: 0/49/0)
+    CIC1Cos/clk_80mhz_enable_848 (driver: CIC1Cos/SLICE_1480, clk/ce/sr load #: 0/41/0)
+
+
+No signal is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+..............
+Finished Placer Phase 0.  REAL time: 39 secs 
+
+
+Starting Placer Phase 1.
+......................
+Placer score = 1328918.
+Finished Placer Phase 1.  REAL time: 56 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  1153048
+Finished Placer Phase 2.  REAL time: 58 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 12 (0%)
+  GR_PCLK    : 0 out of 12 (0%)
+  PLL        : 1 out of 4 (25%)
+  DCS        : 0 out of 2 (0%)
+  DCC        : 0 out of 60 (0%)
+  CLKDIV     : 0 out of 4 (0%)
+
+Quadrant TL Clocks:
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL1/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 1218
+  PRIMARY "CIC1_out_clkSin" from Q0 on comp "CIC1Sin/SLICE_1523" on site "R59C67A", CLK/CE/SR load = 39
+  PRIMARY "CIC1Cos/clk_80mhz_enable_798" from Q0 on comp "CIC1Cos/SLICE_1480" on site "R37C82B", CLK/CE/SR load = 50
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1098" from Q0 on comp "CIC1Cos/SLICE_1483" on site "R23C65A", CLK/CE/SR load = 30
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1248" from Q1 on comp "CIC1Cos/SLICE_1484" on site "R25C64C", CLK/CE/SR load = 29
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1398" from Q0 on comp "CIC1Cos/SLICE_1486" on site "R90C42D", CLK/CE/SR load = 37
+  PRIMARY "CIC1Cos/clk_80mhz_enable_758" from F0 on comp "CIC1Cos/SLICE_1480" on site "R37C82B", CLK/CE/SR load = 48
+  PRIMARY "CIC1Cos/clk_80mhz_enable_948" from Q1 on comp "CIC1Cos/SLICE_1481" on site "R26C53A", CLK/CE/SR load = 49
+  PRIMARY "CIC1Cos/clk_80mhz_enable_848" from Q1 on comp "CIC1Cos/SLICE_1480" on site "R37C82B", CLK/CE/SR load = 41
+
+  PRIMARY  : 9 out of 16 (56%)
+
+Quadrant TR Clocks:
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL1/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 223
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1098" from Q0 on comp "CIC1Cos/SLICE_1483" on site "R23C65A", CLK/CE/SR load = 20
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1248" from Q1 on comp "CIC1Cos/SLICE_1484" on site "R25C64C", CLK/CE/SR load = 21
+  PRIMARY "CIC1Cos/clk_80mhz_enable_1398" from Q0 on comp "CIC1Cos/SLICE_1486" on site "R90C42D", CLK/CE/SR load = 13
+  PRIMARY "CIC1Cos/clk_80mhz_enable_758" from F0 on comp "CIC1Cos/SLICE_1480" on site "R37C82B", CLK/CE/SR load = 1
+
+  PRIMARY  : 5 out of 16 (31%)
+
+Quadrant BL Clocks:
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL1/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 137
+
+  PRIMARY  : 1 out of 16 (6%)
+
+Quadrant BR Clocks:
+  PRIMARY "clk_80mhz" from CLKOP on comp "PLL1/PLLInst_0" on PLL site "PLL_BL0", CLK/CE/SR load = 5
+  PRIMARY "uart_rx1/UartClk[2]" from Q0 on comp "uart_rx1/SLICE_2329" on site "R59C68A", CLK/CE/SR load = 28
+
+  PRIMARY  : 2 out of 16 (12%)
+
+Edge Clocks:
+
+  No edge clock selected.
+
+
+--------------- End of Clock Report ---------------
+
+
++
+I/O Usage Summary (final):
+   27 out of 365 (7.4%) PIO sites used.
+   27 out of 205 (13.2%) bonded PIO sites used.
+   Number of PIO comps: 26; differential: 1.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 8 / 27 ( 29%)  | 3.3V       | -          | -          |
+| 1        | 3 / 33 (  9%)  | 2.5V       | -          | -          |
+| 2        | 3 / 34 (  8%)  | 2.5V       | -          | -          |
+| 3        | 1 / 33 (  3%)  | 3.3V       | -          | -          |
+| 6        | 2 / 33 (  6%)  | 3.3V       | -          | -          |
+| 7        | 10 / 32 ( 31%) | 3.3V       | -          | -          |
+| 8        | 0 / 13 (  0%)  | -          | -          | -          |
++----------+----------------+------------+------------+------------+
+
+---------------------------------- DSP Report ----------------------------------
+
+DSP Slice #:           1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+# of MULT9                                                                                         
+# of MULT18                                                                                        
+# of ALU24                                                                                         
+# of ALU54                                                                                         
+# of PRADD9                                                                                        
+# of PRADD18                                                                                       
+
+DSP Slice #:          27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
+# of MULT9                                                                                         
+# of MULT18                                    2                                                   
+# of ALU24                                                                                         
+# of ALU54                                                                                         
+# of PRADD9                                                                                        
+# of PRADD18                                                                                       
+
+DSP Slice #:          53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
+# of MULT9                                                                                         
+# of MULT18                                                                                        
+# of ALU24                                                                                         
+# of ALU54                                                                                         
+# of PRADD9                                                                                        
+# of PRADD18                                                                                       
+
+DSP Slice 35         Component_Type       Physical_Type                   Instance_Name                
+ MULT18_R34C40         MULT18X18D             MULT18          AMDemodulator1/Multiplier1/dsp_mult_0    
+ MULT18_R34C41         MULT18X18D             MULT18          AMDemodulator1/Multiplier2/dsp_mult_0    
+
+------------------------------ End of DSP Report -------------------------------
+Total placer CPU time: 58 secs 
+
+Dumping design to file OneBitSDR_impl1.dir/5_1.ncd.
+
+0 connections routed; 15908 unrouted.
+Starting router resource preassignment
+DSP info: No dsp pins have been swapped.
+
+Completed router resource preassignment. Real time: 1 mins 31 secs 
+
+Start NBR router at Thu Oct 31 10:31:52 CET 2024
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at Thu Oct 31 10:31:53 CET 2024
+
+Start NBR section for initial routing at Thu Oct 31 10:31:54 CET 2024
+Level 1, iteration 1
+2(0.00%) conflicts; 10814(67.98%) untouched conns; 61282 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.333ns/-61.283ns; real time: 1 mins 34 secs 
+Level 2, iteration 1
+1(0.00%) conflict; 10793(67.85%) untouched conns; 61292 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.333ns/-61.293ns; real time: 1 mins 35 secs 
+Level 3, iteration 1
+68(0.00%) conflicts; 8822(55.46%) untouched conns; 61668 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.522ns/-61.668ns; real time: 1 mins 36 secs 
+Level 4, iteration 1
+899(0.02%) conflicts; 0(0.00%) untouched conn; 61973 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-61.973ns; real time: 1 mins 40 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Oct 31 10:32:01 CET 2024
+Level 1, iteration 1
+14(0.00%) conflicts; 1156(7.27%) untouched conns; 61598 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.360ns/-61.598ns; real time: 1 mins 41 secs 
+Level 4, iteration 1
+601(0.02%) conflicts; 0(0.00%) untouched conn; 61631 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.360ns/-61.632ns; real time: 1 mins 43 secs 
+Level 4, iteration 2
+360(0.01%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 44 secs 
+Level 4, iteration 3
+191(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 45 secs 
+Level 4, iteration 4
+86(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 45 secs 
+Level 4, iteration 5
+49(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 46 secs 
+Level 4, iteration 6
+22(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 46 secs 
+Level 4, iteration 7
+13(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 47 secs 
+Level 4, iteration 8
+3(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 47 secs 
+Level 4, iteration 9
+2(0.00%) conflicts; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 48 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 48 secs 
+Level 4, iteration 11
+0(0.00%) conflict; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 48 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Oct 31 10:32:09 CET 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 49 secs 
+
+Start NBR section for re-routing at Thu Oct 31 10:32:10 CET 2024
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 62007 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.549ns/-62.007ns; real time: 1 mins 49 secs 
+
+Start NBR section for post-routing at Thu Oct 31 10:32:10 CET 2024
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 23 (0.14%)
+  Estimated worst slack<setup> : -3.549ns
+  Timing score<setup> : 59049
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 1 mins 55 secs 
+Total REAL time: 1 mins 56 secs 
+Completely routed.
+End of route.  15908 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 15, hold timing errors: 24
+
+Timing score: 59049 
+
+Dumping design to file OneBitSDR_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -3.549
+PAR_SUMMARY::Timing score<setup/<ns>> = 59.049
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.866
+PAR_SUMMARY::Timing score<hold /<ns>> = 15.564
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 1 mins 58 secs 
+Total REAL time to completion: 1 mins 58 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "OneBitSDR_impl1.pt" -o "OneBitSDR_impl1.twr" "OneBitSDR_impl1.ncd" "OneBitSDR_impl1.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file OneBitSDR_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 10:32:25 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_impl1.twr -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/promote.xml OneBitSDR_impl1.ncd OneBitSDR_impl1.prf 
+Design file:     OneBitSDR_impl1.ncd
+Preference file: OneBitSDR_impl1.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 22  Score: 59049
+Cumulative negative slack: 59049
+
+Constraints cover 2411330524 paths, 5 nets, and 15886 connections (99.86% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 10:32:26 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o OneBitSDR_impl1.twr -gui -msgset /home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/promote.xml OneBitSDR_impl1.ncd OneBitSDR_impl1.prf 
+Design file:     OneBitSDR_impl1.ncd
+Preference file: OneBitSDR_impl1.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 24  Score: 15564
+Cumulative negative slack: 15564
+
+Constraints cover 2411330524 paths, 5 nets, and 15886 connections (99.86% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 22 (setup), 24 (hold)
+Score: 59049 (setup), 15564 (hold)
+Cumulative negative slack: 74613 (59049+15564)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 5 secs 
+Total REAL Time: 6 secs 
+Peak Memory Usage: 516 MB
+
+
+tmcheck -par "OneBitSDR_impl1.par" 
+
+bitgen -w "OneBitSDR_impl1.ncd" -f "OneBitSDR_impl1.t2b" -e -s "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/OneBitSDR.sec" -k "/home/user/SDR-HLS/1.RTLImplementation/4.lattice/OriginalVersion/OneBitSDR.bek" "OneBitSDR_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file OneBitSDR_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application Bitgen from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from OneBitSDR_impl1.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by sa5p00.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        CfgMode  |                      Disable**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                             62  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                    CONFIG_MODE  |                         JTAG**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                             ON  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+|            SLAVE_PARALLEL_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                      DONE_PULL  |                           ON**  |
++---------------------------------+---------------------------------+
+|               CONFIG_IOVOLTAGE  |                            3.3  |
++---------------------------------+---------------------------------+
+|                        TRANSFR  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 10.27.
+ 
+Saving bit stream in "OneBitSDR_impl1.bit".
+Total CPU Time: 20 secs 
+Total REAL Time: 20 secs 
+Peak Memory Usage: 818 MB

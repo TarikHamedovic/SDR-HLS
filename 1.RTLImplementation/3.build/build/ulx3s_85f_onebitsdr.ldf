@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<BaliProject version="3.2" title="onebitsdr" device="LFE5U-85F-6BG381C" default_implementation="project">
+  <Options/>
+  <Implementation title="project" dir="project" description="project" synthesis="synplify" default_strategy="Strategy1">
+    <Options def_top="top" top="top"/>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/NCO.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_generator.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/quarterwave_table.sv" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="/home/user/SDR-HLS/1.RTLImplementation/3.build/../1.hw/constraints/OneBitSDR.lpf" type="Logic Preference" type_short="LPF">
+      <Options/>
+    </Source>
+    <Source name="scripts/ulx3s_sram.xcf" type="Programming Project File" type_short="Programming">
+      <Options/>
+    </Source>
+  </Implementation>
+  <Strategy name="Strategy1" file="scripts/ulx3s.sty"/>
+</BaliProject>

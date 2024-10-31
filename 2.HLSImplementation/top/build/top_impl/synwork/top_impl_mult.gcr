@@ -1,0 +1,17 @@
+i ecp5pll.CLKOP_i
+m 0 0
+u 855 2683
+p {t:ecp5pll.pll_inst.CLKOP}{t:ecp5pll.CLKOP_inferred_clock.I[0]}{t:ecp5pll.CLKOP_inferred_clock.OUT[0]}{p:ecp5pll.clk_o[0]}{t:ecp5pll.clk_o[0]}{t:gain[1].C}
+e ckid0_0 {t:gain[1].C} dffre
+c ckid0_0 {t:ecp5pll.pll_inst.CLKOP} EHXPLLL Clock source is constant
+i cd_sync.clk_buf.buf.i
+m 0 0
+u 2 2
+p {t:cd_sync.clk_buf.buf.buf0.O}{p:cd_sync.clk_buf.buf.i}{t:cd_sync.clk_buf.buf.i}{p:cd_sync.clk_buf.i}{t:cd_sync.clk_buf.i}{t:cd_sync.U\$1.CK}
+e ckid0_1 {t:cd_sync.U\$1.CK} FD1S3AX
+c ckid0_1 {t:cd_sync.clk_buf.buf.buf0.O} IB Unsupported/too complex instance on clock path
+i clk25_0__io
+m 0 0
+u 0 0
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

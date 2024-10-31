@@ -1,0 +1,1553 @@
+
+Loading design for application trce from file top_impl.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-85F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 10:28:48 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o top_impl.twr top_impl.ncd top_impl.prf 
+Design file:     top_impl.ncd
+Preference file: top_impl.prf
+Device,speed:    LFE5U-85F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+WARNING - trce: Input and feedback clock frequencies do not match their divider settings for ecp5pll/pll_inst. If you desire to change the PLL frequency settings, you can do so by regenerating your PLL module.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 100.000000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 12.670ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_1  (to clocks[0] +)
+
+   Delay:              22.930ns  (33.8% logic, 66.2% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.930ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.670ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.809     R57C71D.F1 to     R55C71B.A0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71B.A0 to     R55C71B.F0 amdemod/sqrt/SLICE_1015
+ROUTE         1     0.000     R55C71B.F0 to    R55C71B.DI0 amdemod/sqrt/un1_$47[14] (to clocks[0])
+                  --------
+                   22.930   (33.8% logic, 66.2% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71B.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.662ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_28  (to clocks[0] +)
+
+   Delay:              22.922ns  (33.8% logic, 66.2% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.922ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.662ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71D.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71D.B0 to     R55C71D.F0 amdemod/sqrt/SLICE_1014
+ROUTE         1     0.000     R55C71D.F0 to    R55C71D.DI0 amdemod/sqrt/un1_$47_i[14] (to clocks[0])
+                  --------
+                   22.922   (33.8% logic, 66.2% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71D.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.662ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/amdemod_d[1]  (to clocks[0] +)
+
+   Delay:              22.922ns  (33.8% logic, 66.2% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.922ns physical path delay amdemod/SLICE_1573 to amdemod/SLICE_1022 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.662ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71C.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71C.B0 to     R55C71C.F0 amdemod/SLICE_1022
+ROUTE         1     0.000     R55C71C.F0 to    R55C71C.DI0 amdemod/un1_$47_i_14_rep1 (to clocks[0])
+                  --------
+                   22.922   (33.8% logic, 66.2% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71C.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.539ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_1  (to clocks[0] +)
+
+   Delay:              22.799ns  (34.0% logic, 66.0% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.799ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.539ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.843     R57C73B.F0 to     R56C71B.C0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R56C71B.C0 to     R56C71B.F1 amdemod/sqrt/SLICE_902
+ROUTE         1     0.778     R56C71B.F1 to     R56C73C.B0 amdemod/sqrt/Z$43[10]
+CTOF_DEL    ---     0.236     R56C73C.B0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.809     R57C71D.F1 to     R55C71B.A0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71B.A0 to     R55C71B.F0 amdemod/sqrt/SLICE_1015
+ROUTE         1     0.000     R55C71B.F0 to    R55C71B.DI0 amdemod/sqrt/un1_$47[14] (to clocks[0])
+                  --------
+                   22.799   (34.0% logic, 66.0% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71B.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.531ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/amdemod_d[1]  (to clocks[0] +)
+
+   Delay:              22.791ns  (34.0% logic, 66.0% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.791ns physical path delay amdemod/SLICE_1573 to amdemod/SLICE_1022 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.531ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.843     R57C73B.F0 to     R56C71B.C0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R56C71B.C0 to     R56C71B.F1 amdemod/sqrt/SLICE_902
+ROUTE         1     0.778     R56C71B.F1 to     R56C73C.B0 amdemod/sqrt/Z$43[10]
+CTOF_DEL    ---     0.236     R56C73C.B0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71C.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71C.B0 to     R55C71C.F0 amdemod/SLICE_1022
+ROUTE         1     0.000     R55C71C.F0 to    R55C71C.DI0 amdemod/un1_$47_i_14_rep1 (to clocks[0])
+                  --------
+                   22.791   (34.0% logic, 66.0% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71C.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.531ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_28  (to clocks[0] +)
+
+   Delay:              22.791ns  (34.0% logic, 66.0% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.791ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.531ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.843     R57C73B.F0 to     R56C71B.C0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R56C71B.C0 to     R56C71B.F1 amdemod/sqrt/SLICE_902
+ROUTE         1     0.778     R56C71B.F1 to     R56C73C.B0 amdemod/sqrt/Z$43[10]
+CTOF_DEL    ---     0.236     R56C73C.B0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71D.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71D.B0 to     R55C71D.F0 amdemod/sqrt/SLICE_1014
+ROUTE         1     0.000     R55C71D.F0 to    R55C71D.DI0 amdemod/sqrt/un1_$47_i[14] (to clocks[0])
+                  --------
+                   22.791   (34.0% logic, 66.0% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71D.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.519ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_1  (to clocks[0] +)
+
+   Delay:              22.779ns  (34.1% logic, 65.9% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.779ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.519ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R54C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R54C76C.B0 to     R54C76C.F1 amdemod/sqrt/SLICE_825
+ROUTE         1     0.648     R54C76C.F1 to     R56C75D.D0 amdemod/sqrt/Z$34[4]
+CTOF_DEL    ---     0.236     R56C75D.D0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.809     R57C71D.F1 to     R55C71B.A0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71B.A0 to     R55C71B.F0 amdemod/sqrt/SLICE_1015
+ROUTE         1     0.000     R55C71B.F0 to    R55C71B.DI0 amdemod/sqrt/un1_$47[14] (to clocks[0])
+                  --------
+                   22.779   (34.1% logic, 65.9% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71B.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_28  (to clocks[0] +)
+
+   Delay:              22.771ns  (34.1% logic, 65.9% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.771ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.511ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R54C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R54C76C.B0 to     R54C76C.F1 amdemod/sqrt/SLICE_825
+ROUTE         1     0.648     R54C76C.F1 to     R56C75D.D0 amdemod/sqrt/Z$34[4]
+CTOF_DEL    ---     0.236     R56C75D.D0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71D.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71D.B0 to     R55C71D.F0 amdemod/sqrt/SLICE_1014
+ROUTE         1     0.000     R55C71D.F0 to    R55C71D.DI0 amdemod/sqrt/un1_$47_i[14] (to clocks[0])
+                  --------
+                   22.771   (34.1% logic, 65.9% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1014:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71D.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.511ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/amdemod_d[1]  (to clocks[0] +)
+
+   Delay:              22.771ns  (34.1% logic, 65.9% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.771ns physical path delay amdemod/SLICE_1573 to amdemod/SLICE_1022 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.511ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R54C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R54C76C.B0 to     R54C76C.F1 amdemod/sqrt/SLICE_825
+ROUTE         1     0.648     R54C76C.F1 to     R56C75D.D0 amdemod/sqrt/Z$34[4]
+CTOF_DEL    ---     0.236     R56C75D.D0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     1.027     R56C73C.F0 to     R57C71C.A1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R57C71C.A1 to    R57C71C.FCO amdemod/sqrt/SLICE_855
+ROUTE         1     0.000    R57C71C.FCO to    R57C71D.FCI amdemod/sqrt/Z$46_cry_12
+FCITOF1_DE  ---     0.474    R57C71D.FCI to     R57C71D.F1 amdemod/sqrt/SLICE_856
+ROUTE         3     0.801     R57C71D.F1 to     R55C71C.B0 amdemod/Z$46[14]
+CTOF_DEL    ---     0.236     R55C71C.B0 to     R55C71C.F0 amdemod/SLICE_1022
+ROUTE         1     0.000     R55C71C.F0 to    R55C71C.DI0 amdemod/un1_$47_i_14_rep1 (to clocks[0])
+                  --------
+                   22.771   (34.1% logic, 65.9% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/SLICE_1022:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71C.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 12.472ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum_fast[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_1  (to clocks[0] +)
+
+   Delay:              22.732ns  (34.1% logic, 65.9% route), 20 logic levels.
+
+ Constraint Details:
+
+     22.732ns physical path delay amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015 exceeds
+     10.000ns delay constraint less
+      0.000ns skew and
+     -0.260ns DIN_SET requirement (totaling 10.260ns) by 12.472ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1573 to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R56C80A.CLK to     R56C80A.Q0 amdemod/SLICE_1573 (from clocks[0])
+ROUTE         4     1.280     R56C80A.Q0 to     R54C87C.B0 amdemod/square_sum_fast[24]
+CTOF_DEL    ---     0.236     R54C87C.B0 to     R54C87C.F0 amdemod/sqrt/SLICE_1606
+ROUTE        18     0.900     R54C87C.F0 to     R56C81B.C0 amdemod/sqrt/un1_$11_a1[4]
+CTOF_DEL    ---     0.236     R56C81B.C0 to     R56C81B.F0 amdemod/sqrt/SLICE_1005
+ROUTE         6     0.214     R56C81B.F0 to     R56C81B.D1 amdemod/sqrt/un1_$11[4]
+CTOF_DEL    ---     0.236     R56C81B.D1 to     R56C81B.F1 amdemod/sqrt/SLICE_1005
+ROUTE         2     1.229     R56C81B.F1 to     R56C87D.B0 amdemod/sqrt/un1_$15[3]
+CTOF1_DEL   ---     0.714     R56C87D.B0 to     R56C87D.F1 amdemod/sqrt/SLICE_872
+ROUTE         2     1.008     R56C87D.F1 to     R55C89D.B1 amdemod/sqrt/Z$19[6]
+CTOF_DEL    ---     0.236     R55C89D.B1 to     R55C89D.F1 amdemod/SLICE_1025
+ROUTE         3     0.665     R55C89D.F1 to     R53C88C.D0 amdemod/un1_$19_i[6]
+CTOF_DEL    ---     0.236     R53C88C.D0 to     R53C88C.F0 amdemod/sqrt/SLICE_1681
+ROUTE         2     1.019     R53C88C.F0 to     R54C86D.B1 amdemod/sqrt/un1_$23[4]
+C1TOFCO_DE  ---     0.447     R54C86D.B1 to    R54C86D.FCO amdemod/sqrt/SLICE_838
+ROUTE         1     0.000    R54C86D.FCO to    R54C87A.FCI amdemod/sqrt/Z$26_cry_6
+FCITOF1_DE  ---     0.474    R54C87A.FCI to     R54C87A.F1 amdemod/sqrt/SLICE_839
+ROUTE         2     1.299     R54C87A.F1 to     R55C75D.B0 amdemod/sqrt/Z$26[8]
+CTOF_DEL    ---     0.236     R55C75D.B0 to     R55C75D.F0 amdemod/sqrt/SLICE_1009
+ROUTE        18     1.110     R55C75D.F0 to     R56C76C.B0 amdemod/sqrt/un1_$27[8]
+CTOF1_DEL   ---     0.714     R56C76C.B0 to     R56C76C.F1 amdemod/sqrt/SLICE_913
+ROUTE         1     0.799     R56C76C.F1 to     R56C75D.A0 amdemod/sqrt/Z$35[4]
+CTOF_DEL    ---     0.236     R56C75D.A0 to     R56C75D.F0 amdemod/sqrt/SLICE_1665
+ROUTE         2     1.026     R56C75D.F0 to     R57C76D.B1 amdemod/sqrt/un1_$35[4]
+C1TOFCO_DE  ---     0.447     R57C76D.B1 to    R57C76D.FCO amdemod/sqrt/SLICE_819
+ROUTE         1     0.000    R57C76D.FCO to    R57C77A.FCI amdemod/sqrt/Z$38_cry_6
+FCITOF0_DE  ---     0.443    R57C77A.FCI to     R57C77A.F0 amdemod/sqrt/SLICE_820
+ROUTE         1     1.034     R57C77A.F0 to     R57C73B.B0 amdemod/sqrt/Z$38[7]
+CTOF_DEL    ---     0.236     R57C73B.B0 to     R57C73B.F0 amdemod/sqrt/SLICE_1610
+ROUTE         2     0.967     R57C73B.F0 to     R55C73B.B0 amdemod/sqrt/un1_$39[7]
+CTOF1_DEL   ---     0.714     R55C73B.B0 to     R55C73B.F1 amdemod/sqrt/SLICE_862
+ROUTE         1     0.785     R55C73B.F1 to     R56C73C.C0 amdemod/sqrt/Z$42[10]
+CTOF_DEL    ---     0.236     R56C73C.C0 to     R56C73C.F0 amdemod/sqrt/SLICE_1654
+ROUTE         2     0.967     R56C73C.F0 to     R54C73C.B1 amdemod/sqrt/un1_$43[10]
+C1TOFCO_DE  ---     0.447     R54C73C.B1 to    R54C73C.FCO amdemod/sqrt/SLICE_895
+ROUTE         1     0.000    R54C73C.FCO to    R54C73D.FCI amdemod/sqrt/Z$47_cry_12
+FCITOF1_DE  ---     0.474    R54C73D.FCI to     R54C73D.F1 amdemod/sqrt/SLICE_896
+ROUTE         3     0.671     R54C73D.F1 to     R55C71B.D0 amdemod/Z$47[14]
+CTOF_DEL    ---     0.236     R55C71B.D0 to     R55C71B.F0 amdemod/sqrt/SLICE_1015
+ROUTE         1     0.000     R55C71B.F0 to    R55C71B.DI0 amdemod/sqrt/un1_$47[14] (to clocks[0])
+                  --------
+                   22.732   (34.1% logic, 65.9% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1573:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R56C80A.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/sqrt/SLICE_1015:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     2.690  PLL_TL0.CLKOP to    R55C71B.CLK clocks[0]
+                  --------
+                    2.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning:  44.111MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk25_0__io" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 35.000ns
+         The internal maximum frequency of the following component is 200.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            clk25_0__io
+
+   Delay:               5.000ns -- based on Minimum Pulse Width
+
+Report:  200.000MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk" 100.000000 MHz ;    |  100.000 MHz|   44.111 MHz|  20 *
+                                        |             |             |
+FREQUENCY PORT "clk25_0__io" 25.000000  |             |             |
+MHz ;                                   |   25.000 MHz|  200.000 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+amdemod/Z$46[14]                        |       3|    3413|     83.33%
+                                        |        |        |
+amdemod/sqrt/Z$46_cry_12                |       1|    3410|     83.25%
+                                        |        |        |
+amdemod/sqrt/un1_$11[4]                 |       6|    3068|     74.90%
+                                        |        |        |
+amdemod/sqrt/un1_$11_a1[4]              |      18|    3023|     73.80%
+                                        |        |        |
+amdemod/sqrt/un1_$15[3]                 |       2|    2701|     65.94%
+                                        |        |        |
+amdemod/sqrt/Z$19[6]                    |       2|    2643|     64.53%
+                                        |        |        |
+amdemod/sqrt/un1_$43[10]                |       2|    2607|     63.65%
+                                        |        |        |
+amdemod/square_sum_fast[24]             |       4|    2245|     54.81%
+                                        |        |        |
+amdemod/un1_$19_i[6]                    |       3|    2212|     54.00%
+                                        |        |        |
+amdemod/sqrt/un1_$39[7]                 |       2|    1902|     46.44%
+                                        |        |        |
+amdemod/sqrt/un1_$27[5]                 |       2|    1733|     42.31%
+                                        |        |        |
+amdemod/sqrt/Z$38[7]                    |       1|    1590|     38.82%
+                                        |        |        |
+amdemod/sqrt/Z$42[10]                   |       1|    1508|     36.82%
+                                        |        |        |
+amdemod/sqrt/un1_$47[14]                |       1|    1416|     34.57%
+                                        |        |        |
+amdemod/sqrt/un1_$23[3]                 |       2|    1394|     34.03%
+                                        |        |        |
+amdemod/sqrt/Z$38_cry_6                 |       1|    1387|     33.86%
+                                        |        |        |
+amdemod/sqrt/un1_$31[9]                 |      17|    1382|     33.74%
+                                        |        |        |
+amdemod/sqrt/un1_$15[5]                 |      24|    1378|     33.64%
+                                        |        |        |
+amdemod/sqrt/Z$34[10]                   |       2|    1363|     33.28%
+                                        |        |        |
+amdemod/un1_$47_i_14_rep1               |       1|    1341|     32.74%
+                                        |        |        |
+amdemod/sqrt/un1_$47_i[14]              |       1|    1339|     32.69%
+                                        |        |        |
+amdemod/sqrt/Z$30_cry_8                 |       1|    1277|     31.18%
+                                        |        |        |
+amdemod/sqrt/Z$30[9]                    |       2|    1277|     31.18%
+                                        |        |        |
+amdemod/sqrt/un1_$27[8]                 |      18|    1272|     31.05%
+                                        |        |        |
+amdemod/sqrt/un1_$35[4]                 |       2|    1244|     30.37%
+                                        |        |        |
+amdemod/sqrt/Z$26[8]                    |       2|    1206|     29.44%
+                                        |        |        |
+amdemod/sqrt/Z$26_cry_6                 |       1|    1194|     29.15%
+                                        |        |        |
+amdemod/sqrt/Z$22_cry_6                 |       1|    1165|     28.44%
+                                        |        |        |
+amdemod/sqrt/Z$22[7]                    |       2|    1165|     28.44%
+                                        |        |        |
+amdemod/sqrt/Z$43[10]                   |       1|    1099|     26.83%
+                                        |        |        |
+amdemod/sqrt/un1_$31[7]                 |       2|    1063|     25.95%
+                                        |        |        |
+amdemod/sqrt/Z$46_cry_10                |       1|    1044|     25.49%
+                                        |        |        |
+amdemod/sqrt/Z$30[7]                    |       1|    1044|     25.49%
+                                        |        |        |
+amdemod/sqrt/un1_$23[4]                 |       2|    1033|     25.22%
+                                        |        |        |
+amdemod/sqrt/Z$22_axb_6                 |       1|     880|     21.48%
+                                        |        |        |
+amdemod/sqrt/un1_$23[7]                 |      17|     861|     21.02%
+                                        |        |        |
+amdemod/sqrt/un1_$43[8]                 |       2|     845|     20.63%
+                                        |        |        |
+amdemod/un1_$35_i[10]                   |       3|     823|     20.09%
+                                        |        |        |
+amdemod/sqrt/un1_$35[10]                |      14|     801|     19.56%
+                                        |        |        |
+amdemod/sqrt/un1_$39[4]                 |       2|     780|     19.04%
+                                        |        |        |
+amdemod/sqrt/Z$43_cry_8                 |       1|     717|     17.50%
+                                        |        |        |
+amdemod/sqrt/Z$27[5]                    |       1|     709|     17.31%
+                                        |        |        |
+amdemod/Z$47[14]                        |       3|     683|     16.67%
+                                        |        |        |
+amdemod/square_sum_fast[22]             |       6|     665|     16.24%
+                                        |        |        |
+amdemod/sqrt/Z$47_cry_12                |       1|     631|     15.41%
+                                        |        |        |
+amdemod/sqrt/Z$10_c3                    |       1|     618|     15.09%
+                                        |        |        |
+amdemod/sqrt/Z$14_axb5                  |       2|     618|     15.09%
+                                        |        |        |
+amdemod/sqrt/Z$14[5]                    |       2|     535|     13.06%
+                                        |        |        |
+amdemod/square_sum_fast[21]             |       3|     513|     12.52%
+                                        |        |        |
+amdemod/sqrt/Z$42_cry_6                 |       1|     512|     12.50%
+                                        |        |        |
+amdemod/sqrt/un1_$35[3]                 |       2|     510|     12.45%
+                                        |        |        |
+amdemod/sqrt/Z$34_cry_8                 |       1|     499|     12.18%
+                                        |        |        |
+amdemod/sqrt/Z$43_cry_6                 |       1|     497|     12.13%
+                                        |        |        |
+amdemod/sqrt/un1_$19[6]                 |      18|     492|     12.01%
+                                        |        |        |
+amdemod/sqrt/Z$43[8]                    |       1|     480|     11.72%
+                                        |        |        |
+amdemod/sqrt/Z$15[5]                    |       2|     478|     11.67%
+                                        |        |        |
+amdemod/sqrt/Z$35[4]                    |       1|     477|     11.65%
+                                        |        |        |
+amdemod/sqrt/un1_$27[6]                 |       2|     449|     10.96%
+                                        |        |        |
+amdemod/sqrt/un1_$39[6]                 |       2|     446|     10.89%
+                                        |        |        |
+amdemod/sqrt/un1_$31[6]                 |       2|     413|     10.08%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clocks[0]   Source: ecp5pll/pll_inst.CLKOP   Loads: 1336
+   Covered under: FREQUENCY NET "clk" 100.000000 MHz ;
+
+Clock Domain: clk   Source: clk25_0__io.PAD   Loads: 3
+   Covered under: FREQUENCY NET "clk" 100.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4096  Score: 48582545
+Cumulative negative slack: 48582545
+
+Constraints cover 731413682 paths, 2 nets, and 10673 connections (99.81% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Thu Oct 31 10:28:49 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o top_impl.twr top_impl.ncd top_impl.prf 
+Design file:     top_impl.ncd
+Preference file: top_impl.prf
+Device,speed:    LFE5U-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk" 100.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.175ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cd_sync/U$1  (from clk +)
+   Destination:    FF         Data in        cd_sync/U$2  (to clk +)
+
+   Delay:               0.293ns  (56.0% logic, 44.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.293ns physical path delay cd_sync/SLICE_1026 to cd_sync/SLICE_1026 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.175ns
+
+ Physical Path Details:
+
+      Data path cd_sync/SLICE_1026 to cd_sync/SLICE_1026:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R93C4A.CLK to      R93C4A.Q0 cd_sync/SLICE_1026 (from clk)
+ROUTE         1     0.129      R93C4A.Q0 to      R93C4A.M1 cd_sync/gsr0 (to clk)
+                  --------
+                    0.293   (56.0% logic, 44.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk25_0__io to cd_sync/SLICE_1026:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     0.911       G2.PADDI to     R93C4A.CLK clk
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk25_0__io to cd_sync/SLICE_1026:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     0.911       G2.PADDI to     R93C4A.CLK clk
+                  --------
+                    0.911   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine/integrator_tmp[66]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_sine/integrator_d_tmp[66]  (to clocks[0] +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay cic_sine/SLICE_1474 to cic_sine/SLICE_1439 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path cic_sine/SLICE_1474 to cic_sine/SLICE_1439:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R38C58C.CLK to     R38C58C.Q1 cic_sine/SLICE_1474 (from clocks[0])
+ROUTE         2     0.131     R38C58C.Q1 to     R38C58A.M0 cic_sine/integrator_tmp[66] (to clocks[0])
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1474:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C58C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1439:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C58A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_cosine/integrator_tmp[6]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_cosine/integrator_d_tmp[6]  (to clocks[0] +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay cic_cosine/SLICE_1217 to cic_cosine/SLICE_1182 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path cic_cosine/SLICE_1217 to cic_cosine/SLICE_1182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R54C85A.CLK to     R54C85A.Q1 cic_cosine/SLICE_1217 (from clocks[0])
+ROUTE         2     0.131     R54C85A.Q1 to     R54C85D.M0 cic_cosine/integrator_tmp[6] (to clocks[0])
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_cosine/SLICE_1217:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R54C85A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_cosine/SLICE_1182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R54C85D.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.176ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine/integrator_tmp[48]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_sine/integrator_d_tmp[48]  (to clocks[0] +)
+
+   Delay:               0.294ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.294ns physical path delay cic_sine/SLICE_1465 to cic_sine/SLICE_1430 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.176ns
+
+ Physical Path Details:
+
+      Data path cic_sine/SLICE_1465 to cic_sine/SLICE_1430:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163    R38C56C.CLK to     R38C56C.Q1 cic_sine/SLICE_1465 (from clocks[0])
+ROUTE         2     0.131     R38C56C.Q1 to     R38C56B.M0 cic_sine/integrator_tmp[48] (to clocks[0])
+                  --------
+                    0.294   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1465:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C56C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1430:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C56B.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine/integrator_tmp[47]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_sine/integrator_d_tmp[47]  (to clocks[0] +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay cic_sine/SLICE_1465 to cic_sine/SLICE_1429 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path cic_sine/SLICE_1465 to cic_sine/SLICE_1429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R38C56C.CLK to     R38C56C.Q0 cic_sine/SLICE_1465 (from clocks[0])
+ROUTE         2     0.131     R38C56C.Q0 to     R38C56A.M1 cic_sine/integrator_tmp[47] (to clocks[0])
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1465:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C56C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R38C56A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine/integrator5[0]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_sine/integrator_tmp[0]  (to clocks[0] +)
+
+   Delay:               0.295ns  (55.6% logic, 44.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay cic_sine/SLICE_1405 to cic_sine/SLICE_1255 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path cic_sine/SLICE_1405 to cic_sine/SLICE_1255:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R41C53B.CLK to     R41C53B.Q0 cic_sine/SLICE_1405 (from clocks[0])
+ROUTE         3     0.131     R41C53B.Q0 to     R41C53A.M0 cic_sine/integrator5[0] (to clocks[0])
+                  --------
+                    0.295   (55.6% logic, 44.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1405:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R41C53B.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1255:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R41C53A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              amdemod/square_sum[24]  (from clocks[0] +)
+   Destination:    FF         Data in        amdemod/sqrt/amdemod_d_pipe_27  (to clocks[0] +)
+
+   Delay:               0.296ns  (55.4% logic, 44.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.296ns physical path delay amdemod/SLICE_1019 to amdemod/SLICE_1019 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path amdemod/SLICE_1019 to amdemod/SLICE_1019:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R57C87A.CLK to     R57C87A.Q0 amdemod/SLICE_1019 (from clocks[0])
+ROUTE        32     0.132     R57C87A.Q0 to     R57C87A.M1 amdemod/square_sum[24] (to clocks[0])
+                  --------
+                    0.296   (55.4% logic, 44.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to amdemod/SLICE_1019:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R57C87A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to amdemod/SLICE_1019:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R57C87A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.181ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_cosine/comb6[0]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_cosine/comb_d6[0]  (to clocks[0] +)
+
+   Delay:               0.299ns  (54.8% logic, 45.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.299ns physical path delay cic_cosine/SLICE_1030 to cic_cosine/SLICE_1034 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.181ns
+
+ Physical Path Details:
+
+      Data path cic_cosine/SLICE_1030 to cic_cosine/SLICE_1034:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R53C82C.CLK to     R53C82C.Q0 cic_cosine/SLICE_1030 (from clocks[0])
+ROUTE         3     0.135     R53C82C.Q0 to     R53C82B.M0 cic_cosine/Z$11 (to clocks[0])
+                  --------
+                    0.299   (54.8% logic, 45.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_cosine/SLICE_1030:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R53C82C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_cosine/SLICE_1034:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R53C82B.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.192ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sine_cosine_generator/phase_accumulator[0]  (from clocks[0] +)
+   Destination:    FF         Data in        sine_cosine_generator/phase_accumulator[0]  (to clocks[0] +)
+
+   Delay:               0.311ns  (77.2% logic, 22.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.311ns physical path delay sine_cosine_generator/SLICE_1549 to sine_cosine_generator/SLICE_1549 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.192ns
+
+ Physical Path Details:
+
+      Data path sine_cosine_generator/SLICE_1549 to sine_cosine_generator/SLICE_1549:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R39C42C.CLK to     R39C42C.Q0 sine_cosine_generator/SLICE_1549 (from clocks[0])
+ROUTE         2     0.071     R39C42C.Q0 to     R39C42C.C0 sine_cosine_generator/phase_accumulator[0]
+CTOF_DEL    ---     0.076     R39C42C.C0 to     R39C42C.F0 sine_cosine_generator/SLICE_1549
+ROUTE         1     0.000     R39C42C.F0 to    R39C42C.DI0 sine_cosine_generator/Z$1[0] (to clocks[0])
+                  --------
+                    0.311   (77.2% logic, 22.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to sine_cosine_generator/SLICE_1549:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R39C42C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to sine_cosine_generator/SLICE_1549:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R39C42C.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.193ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cic_sine/integrator_tmp[59]  (from clocks[0] +)
+   Destination:    FF         Data in        cic_sine/integrator_d_tmp[59]  (to clocks[0] +)
+
+   Delay:               0.311ns  (52.7% logic, 47.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.311ns physical path delay cic_sine/SLICE_1471 to cic_sine/SLICE_1435 meets
+      0.118ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.193ns
+
+ Physical Path Details:
+
+      Data path cic_sine/SLICE_1471 to cic_sine/SLICE_1435:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R40C58A.CLK to     R40C58A.Q0 cic_sine/SLICE_1471 (from clocks[0])
+ROUTE         2     0.147     R40C58A.Q0 to     R40C57A.M1 cic_sine/integrator_tmp[59] (to clocks[0])
+                  --------
+                    0.311   (52.7% logic, 47.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1471:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R40C58A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ecp5pll/pll_inst to cic_sine/SLICE_1435:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.892  PLL_TL0.CLKOP to    R40C57A.CLK clocks[0]
+                  --------
+                    0.892   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk25_0__io" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk" 100.000000 MHz ;    |     0.000 ns|     0.175 ns|   1  
+                                        |             |             |
+FREQUENCY PORT "clk25_0__io" 25.000000  |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: clocks[0]   Source: ecp5pll/pll_inst.CLKOP   Loads: 1336
+   Covered under: FREQUENCY NET "clk" 100.000000 MHz ;
+
+Clock Domain: clk   Source: clk25_0__io.PAD   Loads: 3
+   Covered under: FREQUENCY NET "clk" 100.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 731413682 paths, 2 nets, and 10673 connections (99.81% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 48582545 (setup), 0 (hold)
+Cumulative negative slack: 48582545 (48582545+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

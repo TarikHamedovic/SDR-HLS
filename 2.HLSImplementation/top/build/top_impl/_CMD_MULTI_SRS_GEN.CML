@@ -1,0 +1,1 @@
+ -link  -top  top  -multisrs  /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_comp.srs  -osyn  /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_mult.srs  -log  /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synlog/top_impl_multi_srs_gen.srr 

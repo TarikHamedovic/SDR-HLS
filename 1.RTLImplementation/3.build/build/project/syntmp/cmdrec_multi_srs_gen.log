@@ -1,0 +1,8 @@
+/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter  -link  -top  top  -multisrs  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/onebitsdr_project_comp.srs  -osyn  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/onebitsdr_project_mult.srs  -log  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synlog/onebitsdr_project_multi_srs_gen.srr 
+relcom:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter -link -top top -multisrs ../synwork/onebitsdr_project_comp.srs -osyn ../synwork/onebitsdr_project_mult.srs -log ../synlog/onebitsdr_project_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:../synwork/onebitsdr_project_comp.srs|io:i|time:1730370161|size:28704|exec:0|csum:EA9EE8A397FC3ABAF5518221F2D8147C
+file:../synwork/onebitsdr_project_mult.srs|io:o|time:1730370162|size:8521|exec:0|csum:
+file:../synlog/onebitsdr_project_multi_srs_gen.srr|io:o|time:1730370162|size:1167|exec:0|csum:
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/linux_a_64/syn_nfilter|io:i|time:1691686801|size:14307024|exec:1|csum:DCFFD1FC80E17949E93B27FFDE78343E
+file:../../../../../../FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/bin/syn_nfilter|io:i|time:1691686326|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

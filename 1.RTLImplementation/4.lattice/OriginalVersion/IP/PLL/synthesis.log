@@ -1,0 +1,133 @@
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Aug 26 01:04:54 2024
+
+
+Command Line:  /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/synthesis -f PLL.synproj -sdc /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ldc -gui 
+
+Synthesis options:
+The -a option is ecp5u.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-85F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-85F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = PLL.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = FALSE
+Use IO Reg = FALSE (implied)
+WARNING - synthesis: Cannot pack registers into I/Os because use_io_insertion is FALSE.
+WARNING - synthesis: Ignoring user setting of use_io_reg. Value is set to FALSE.
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL (searchpath added)
+Verilog design file = /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/ecp5u.v
+Verilog design file = /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.v
+NGO file = /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ngo
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+-sdc option: SDC file input is /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ldc.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/ecp5u.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.v. VERI-1482
+Analyzing Verilog file /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): PLL
+INFO - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.v(8): compiling module PLL. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+INFO - synthesis: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp5u.v(1696): compiling module EHXPLLL(CLKI_DIV=3,CLKFB_DIV=10,CLKOP_DIV=7,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOP_CPHASE=6,FEEDBK_PATH="INT_OP",CLKOP_TRIM_POL="FALLING",CLKOS_TRIM_POL="FALLING"). VERI-1018
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p85.nph' in environment: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.37.
+WARNING - synthesis: There are no design constraints in the file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ldc
+Top-level module name = PLL.
+WARNING - synthesis: /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.v(19): Removing unused instance scuba_vhi_inst. VDB-5034
+WARNING - synthesis: There are no design constraints in the file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ldc
+This ldc file was generated by Clarity Designer!
+
+
+
+
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: There are no design constraints in the file PLL_for_lpf.sdc
+Writing LPF file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.lpf.
+Results of NGD DRC are available in PLL_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.ngo.
+
+################### Begin Area Report (PLL)######################
+Number of register bits => 0 of 84255 (0 % )
+EHXPLLL => 1
+GSR => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : CLKFB_t, loads : 1
+  Net : CLKOP, loads : 0
+################### End Clock Report ##################
+
+Peak Memory Usage: 256.383  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.819  secs
+--------------------------------------------------------------

@@ -1,0 +1,26 @@
+SCUBA, Version Diamond (64-bit) 3.13.0.56.2
+Mon Aug 26 01:04:54 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/scuba -w -n PLL -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type pll -fin 25.00 -fclkop 80.00 -fclkop_tol 5.0 -phase_cntl STATIC -fb_mode 5 -fdc /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/PLL/PLL.fdc 
+    Circuit name     : PLL
+    Module type      : pll
+    Module Version   : 5.7
+    Ports            : 
+	Inputs       : CLKI
+	Outputs      : CLKOP
+    I/O buffer       : not inserted
+    EDIF output      : PLL.edn
+    Verilog output   : PLL.v
+    Verilog template : PLL_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : PLL.srp
+    Element Usage    :
+        EHXPLLL : 1
+    Estimated Resource Usage:

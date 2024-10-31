@@ -1,0 +1,905 @@
+(edif Multiplier
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2024 8 26 1 0 27)
+      (program "SCUBA" (version "Diamond (64-bit) 3.13.0.56.2"))))
+      (comment "/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/ispfpga/bin/lin64/scuba -w -n Multiplier -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type dspmult -simple_portname -widtha 12 -widthb 12 -widthp 24 -signed -PL_stages 1 -input_reg -output_reg -clk0 -ce0 -rst0 -fdc /home/user/SDR-HLS/1.RTLImplementation/4.lattice/Version0/IP/Multiplier/Multiplier.fdc ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell MULT18X18D
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port A17
+            (direction INPUT))
+          (port A16
+            (direction INPUT))
+          (port A15
+            (direction INPUT))
+          (port A14
+            (direction INPUT))
+          (port A13
+            (direction INPUT))
+          (port A12
+            (direction INPUT))
+          (port A11
+            (direction INPUT))
+          (port A10
+            (direction INPUT))
+          (port A9
+            (direction INPUT))
+          (port A8
+            (direction INPUT))
+          (port A7
+            (direction INPUT))
+          (port A6
+            (direction INPUT))
+          (port A5
+            (direction INPUT))
+          (port A4
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A0
+            (direction INPUT))
+          (port B17
+            (direction INPUT))
+          (port B16
+            (direction INPUT))
+          (port B15
+            (direction INPUT))
+          (port B14
+            (direction INPUT))
+          (port B13
+            (direction INPUT))
+          (port B12
+            (direction INPUT))
+          (port B11
+            (direction INPUT))
+          (port B10
+            (direction INPUT))
+          (port B9
+            (direction INPUT))
+          (port B8
+            (direction INPUT))
+          (port B7
+            (direction INPUT))
+          (port B6
+            (direction INPUT))
+          (port B5
+            (direction INPUT))
+          (port B4
+            (direction INPUT))
+          (port B3
+            (direction INPUT))
+          (port B2
+            (direction INPUT))
+          (port B1
+            (direction INPUT))
+          (port B0
+            (direction INPUT))
+          (port C17
+            (direction INPUT))
+          (port C16
+            (direction INPUT))
+          (port C15
+            (direction INPUT))
+          (port C14
+            (direction INPUT))
+          (port C13
+            (direction INPUT))
+          (port C12
+            (direction INPUT))
+          (port C11
+            (direction INPUT))
+          (port C10
+            (direction INPUT))
+          (port C9
+            (direction INPUT))
+          (port C8
+            (direction INPUT))
+          (port C7
+            (direction INPUT))
+          (port C6
+            (direction INPUT))
+          (port C5
+            (direction INPUT))
+          (port C4
+            (direction INPUT))
+          (port C3
+            (direction INPUT))
+          (port C2
+            (direction INPUT))
+          (port C1
+            (direction INPUT))
+          (port C0
+            (direction INPUT))
+          (port SIGNEDA
+            (direction INPUT))
+          (port SIGNEDB
+            (direction INPUT))
+          (port SOURCEA
+            (direction INPUT))
+          (port SOURCEB
+            (direction INPUT))
+          (port CE0
+            (direction INPUT))
+          (port CE1
+            (direction INPUT))
+          (port CE2
+            (direction INPUT))
+          (port CE3
+            (direction INPUT))
+          (port CLK0
+            (direction INPUT))
+          (port CLK1
+            (direction INPUT))
+          (port CLK2
+            (direction INPUT))
+          (port CLK3
+            (direction INPUT))
+          (port RST0
+            (direction INPUT))
+          (port RST1
+            (direction INPUT))
+          (port RST2
+            (direction INPUT))
+          (port RST3
+            (direction INPUT))
+          (port SRIA17
+            (direction INPUT))
+          (port SRIA16
+            (direction INPUT))
+          (port SRIA15
+            (direction INPUT))
+          (port SRIA14
+            (direction INPUT))
+          (port SRIA13
+            (direction INPUT))
+          (port SRIA12
+            (direction INPUT))
+          (port SRIA11
+            (direction INPUT))
+          (port SRIA10
+            (direction INPUT))
+          (port SRIA9
+            (direction INPUT))
+          (port SRIA8
+            (direction INPUT))
+          (port SRIA7
+            (direction INPUT))
+          (port SRIA6
+            (direction INPUT))
+          (port SRIA5
+            (direction INPUT))
+          (port SRIA4
+            (direction INPUT))
+          (port SRIA3
+            (direction INPUT))
+          (port SRIA2
+            (direction INPUT))
+          (port SRIA1
+            (direction INPUT))
+          (port SRIA0
+            (direction INPUT))
+          (port SRIB17
+            (direction INPUT))
+          (port SRIB16
+            (direction INPUT))
+          (port SRIB15
+            (direction INPUT))
+          (port SRIB14
+            (direction INPUT))
+          (port SRIB13
+            (direction INPUT))
+          (port SRIB12
+            (direction INPUT))
+          (port SRIB11
+            (direction INPUT))
+          (port SRIB10
+            (direction INPUT))
+          (port SRIB9
+            (direction INPUT))
+          (port SRIB8
+            (direction INPUT))
+          (port SRIB7
+            (direction INPUT))
+          (port SRIB6
+            (direction INPUT))
+          (port SRIB5
+            (direction INPUT))
+          (port SRIB4
+            (direction INPUT))
+          (port SRIB3
+            (direction INPUT))
+          (port SRIB2
+            (direction INPUT))
+          (port SRIB1
+            (direction INPUT))
+          (port SRIB0
+            (direction INPUT))
+          (port SROA17
+            (direction OUTPUT))
+          (port SROA16
+            (direction OUTPUT))
+          (port SROA15
+            (direction OUTPUT))
+          (port SROA14
+            (direction OUTPUT))
+          (port SROA13
+            (direction OUTPUT))
+          (port SROA12
+            (direction OUTPUT))
+          (port SROA11
+            (direction OUTPUT))
+          (port SROA10
+            (direction OUTPUT))
+          (port SROA9
+            (direction OUTPUT))
+          (port SROA8
+            (direction OUTPUT))
+          (port SROA7
+            (direction OUTPUT))
+          (port SROA6
+            (direction OUTPUT))
+          (port SROA5
+            (direction OUTPUT))
+          (port SROA4
+            (direction OUTPUT))
+          (port SROA3
+            (direction OUTPUT))
+          (port SROA2
+            (direction OUTPUT))
+          (port SROA1
+            (direction OUTPUT))
+          (port SROA0
+            (direction OUTPUT))
+          (port SROB17
+            (direction OUTPUT))
+          (port SROB16
+            (direction OUTPUT))
+          (port SROB15
+            (direction OUTPUT))
+          (port SROB14
+            (direction OUTPUT))
+          (port SROB13
+            (direction OUTPUT))
+          (port SROB12
+            (direction OUTPUT))
+          (port SROB11
+            (direction OUTPUT))
+          (port SROB10
+            (direction OUTPUT))
+          (port SROB9
+            (direction OUTPUT))
+          (port SROB8
+            (direction OUTPUT))
+          (port SROB7
+            (direction OUTPUT))
+          (port SROB6
+            (direction OUTPUT))
+          (port SROB5
+            (direction OUTPUT))
+          (port SROB4
+            (direction OUTPUT))
+          (port SROB3
+            (direction OUTPUT))
+          (port SROB2
+            (direction OUTPUT))
+          (port SROB1
+            (direction OUTPUT))
+          (port SROB0
+            (direction OUTPUT))
+          (port ROA17
+            (direction OUTPUT))
+          (port ROA16
+            (direction OUTPUT))
+          (port ROA15
+            (direction OUTPUT))
+          (port ROA14
+            (direction OUTPUT))
+          (port ROA13
+            (direction OUTPUT))
+          (port ROA12
+            (direction OUTPUT))
+          (port ROA11
+            (direction OUTPUT))
+          (port ROA10
+            (direction OUTPUT))
+          (port ROA9
+            (direction OUTPUT))
+          (port ROA8
+            (direction OUTPUT))
+          (port ROA7
+            (direction OUTPUT))
+          (port ROA6
+            (direction OUTPUT))
+          (port ROA5
+            (direction OUTPUT))
+          (port ROA4
+            (direction OUTPUT))
+          (port ROA3
+            (direction OUTPUT))
+          (port ROA2
+            (direction OUTPUT))
+          (port ROA1
+            (direction OUTPUT))
+          (port ROA0
+            (direction OUTPUT))
+          (port ROB17
+            (direction OUTPUT))
+          (port ROB16
+            (direction OUTPUT))
+          (port ROB15
+            (direction OUTPUT))
+          (port ROB14
+            (direction OUTPUT))
+          (port ROB13
+            (direction OUTPUT))
+          (port ROB12
+            (direction OUTPUT))
+          (port ROB11
+            (direction OUTPUT))
+          (port ROB10
+            (direction OUTPUT))
+          (port ROB9
+            (direction OUTPUT))
+          (port ROB8
+            (direction OUTPUT))
+          (port ROB7
+            (direction OUTPUT))
+          (port ROB6
+            (direction OUTPUT))
+          (port ROB5
+            (direction OUTPUT))
+          (port ROB4
+            (direction OUTPUT))
+          (port ROB3
+            (direction OUTPUT))
+          (port ROB2
+            (direction OUTPUT))
+          (port ROB1
+            (direction OUTPUT))
+          (port ROB0
+            (direction OUTPUT))
+          (port ROC17
+            (direction OUTPUT))
+          (port ROC16
+            (direction OUTPUT))
+          (port ROC15
+            (direction OUTPUT))
+          (port ROC14
+            (direction OUTPUT))
+          (port ROC13
+            (direction OUTPUT))
+          (port ROC12
+            (direction OUTPUT))
+          (port ROC11
+            (direction OUTPUT))
+          (port ROC10
+            (direction OUTPUT))
+          (port ROC9
+            (direction OUTPUT))
+          (port ROC8
+            (direction OUTPUT))
+          (port ROC7
+            (direction OUTPUT))
+          (port ROC6
+            (direction OUTPUT))
+          (port ROC5
+            (direction OUTPUT))
+          (port ROC4
+            (direction OUTPUT))
+          (port ROC3
+            (direction OUTPUT))
+          (port ROC2
+            (direction OUTPUT))
+          (port ROC1
+            (direction OUTPUT))
+          (port ROC0
+            (direction OUTPUT))
+          (port P35
+            (direction OUTPUT))
+          (port P34
+            (direction OUTPUT))
+          (port P33
+            (direction OUTPUT))
+          (port P32
+            (direction OUTPUT))
+          (port P31
+            (direction OUTPUT))
+          (port P30
+            (direction OUTPUT))
+          (port P29
+            (direction OUTPUT))
+          (port P28
+            (direction OUTPUT))
+          (port P27
+            (direction OUTPUT))
+          (port P26
+            (direction OUTPUT))
+          (port P25
+            (direction OUTPUT))
+          (port P24
+            (direction OUTPUT))
+          (port P23
+            (direction OUTPUT))
+          (port P22
+            (direction OUTPUT))
+          (port P21
+            (direction OUTPUT))
+          (port P20
+            (direction OUTPUT))
+          (port P19
+            (direction OUTPUT))
+          (port P18
+            (direction OUTPUT))
+          (port P17
+            (direction OUTPUT))
+          (port P16
+            (direction OUTPUT))
+          (port P15
+            (direction OUTPUT))
+          (port P14
+            (direction OUTPUT))
+          (port P13
+            (direction OUTPUT))
+          (port P12
+            (direction OUTPUT))
+          (port P11
+            (direction OUTPUT))
+          (port P10
+            (direction OUTPUT))
+          (port P9
+            (direction OUTPUT))
+          (port P8
+            (direction OUTPUT))
+          (port P7
+            (direction OUTPUT))
+          (port P6
+            (direction OUTPUT))
+          (port P5
+            (direction OUTPUT))
+          (port P4
+            (direction OUTPUT))
+          (port P3
+            (direction OUTPUT))
+          (port P2
+            (direction OUTPUT))
+          (port P1
+            (direction OUTPUT))
+          (port P0
+            (direction OUTPUT))
+          (port SIGNEDP
+            (direction OUTPUT)))))
+    (cell Multiplier
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Clock
+            (direction INPUT))
+          (port ClkEn
+            (direction INPUT))
+          (port Aclr
+            (direction INPUT))
+          (port (array (rename DataA "DataA(11:0)") 12)
+            (direction INPUT))
+          (port (array (rename DataB "DataB(11:0)") 12)
+            (direction INPUT))
+          (port (array (rename Result "Result(23:0)") 24)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance dsp_mult_0
+            (viewRef view1 
+              (cellRef MULT18X18D))
+            (property CLK3_DIV
+              (string "ENABLED"))
+            (property CLK2_DIV
+              (string "ENABLED"))
+            (property CLK1_DIV
+              (string "ENABLED"))
+            (property CLK0_DIV
+              (string "ENABLED"))
+            (property HIGHSPEED_CLK
+              (string "NONE"))
+            (property REG_INPUTC_RST
+              (string "RST0"))
+            (property REG_INPUTC_CE
+              (string "CE0"))
+            (property REG_INPUTC_CLK
+              (string "NONE"))
+            (property SOURCEB_MODE
+              (string "B_SHIFT"))
+            (property MULT_BYPASS
+              (string "DISABLED"))
+            (property CAS_MATCH_REG
+              (string "FALSE"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property GSR
+              (string "ENABLED"))
+            (property REG_OUTPUT_RST
+              (string "RST0"))
+            (property REG_OUTPUT_CE
+              (string "CE0"))
+            (property REG_OUTPUT_CLK
+              (string "CLK0"))
+            (property REG_PIPELINE_RST
+              (string "RST0"))
+            (property REG_PIPELINE_CE
+              (string "CE0"))
+            (property REG_PIPELINE_CLK
+              (string "CLK0"))
+            (property REG_INPUTB_RST
+              (string "RST0"))
+            (property REG_INPUTB_CE
+              (string "CE0"))
+            (property REG_INPUTB_CLK
+              (string "CLK0"))
+            (property REG_INPUTA_RST
+              (string "RST0"))
+            (property REG_INPUTA_CE
+              (string "CE0"))
+            (property REG_INPUTA_CLK
+              (string "CLK0")))
+          (net Multiplier_mult_direct_out_1_11
+            (joined
+              (portRef P11 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_10
+            (joined
+              (portRef P10 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_9
+            (joined
+              (portRef P9 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_8
+            (joined
+              (portRef P8 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_7
+            (joined
+              (portRef P7 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_6
+            (joined
+              (portRef P6 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_5
+            (joined
+              (portRef P5 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_4
+            (joined
+              (portRef P4 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_3
+            (joined
+              (portRef P3 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_2
+            (joined
+              (portRef P2 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_1
+            (joined
+              (portRef P1 (instanceRef dsp_mult_0))))
+          (net Multiplier_mult_direct_out_1_0
+            (joined
+              (portRef P0 (instanceRef dsp_mult_0))))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))
+              (portRef SIGNEDB (instanceRef dsp_mult_0))
+              (portRef SIGNEDA (instanceRef dsp_mult_0))
+              (portRef CE3 (instanceRef dsp_mult_0))
+              (portRef CE2 (instanceRef dsp_mult_0))
+              (portRef CE1 (instanceRef dsp_mult_0))))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef RST3 (instanceRef dsp_mult_0))
+              (portRef RST2 (instanceRef dsp_mult_0))
+              (portRef RST1 (instanceRef dsp_mult_0))
+              (portRef CLK3 (instanceRef dsp_mult_0))
+              (portRef CLK2 (instanceRef dsp_mult_0))
+              (portRef CLK1 (instanceRef dsp_mult_0))
+              (portRef SOURCEB (instanceRef dsp_mult_0))
+              (portRef SOURCEA (instanceRef dsp_mult_0))
+              (portRef SRIB17 (instanceRef dsp_mult_0))
+              (portRef SRIB16 (instanceRef dsp_mult_0))
+              (portRef SRIB15 (instanceRef dsp_mult_0))
+              (portRef SRIB14 (instanceRef dsp_mult_0))
+              (portRef SRIB13 (instanceRef dsp_mult_0))
+              (portRef SRIB12 (instanceRef dsp_mult_0))
+              (portRef SRIB11 (instanceRef dsp_mult_0))
+              (portRef SRIB10 (instanceRef dsp_mult_0))
+              (portRef SRIB9 (instanceRef dsp_mult_0))
+              (portRef SRIB8 (instanceRef dsp_mult_0))
+              (portRef SRIB7 (instanceRef dsp_mult_0))
+              (portRef SRIB6 (instanceRef dsp_mult_0))
+              (portRef SRIB5 (instanceRef dsp_mult_0))
+              (portRef SRIB4 (instanceRef dsp_mult_0))
+              (portRef SRIB3 (instanceRef dsp_mult_0))
+              (portRef SRIB2 (instanceRef dsp_mult_0))
+              (portRef SRIB1 (instanceRef dsp_mult_0))
+              (portRef SRIB0 (instanceRef dsp_mult_0))
+              (portRef SRIA17 (instanceRef dsp_mult_0))
+              (portRef SRIA16 (instanceRef dsp_mult_0))
+              (portRef SRIA15 (instanceRef dsp_mult_0))
+              (portRef SRIA14 (instanceRef dsp_mult_0))
+              (portRef SRIA13 (instanceRef dsp_mult_0))
+              (portRef SRIA12 (instanceRef dsp_mult_0))
+              (portRef SRIA11 (instanceRef dsp_mult_0))
+              (portRef SRIA10 (instanceRef dsp_mult_0))
+              (portRef SRIA9 (instanceRef dsp_mult_0))
+              (portRef SRIA8 (instanceRef dsp_mult_0))
+              (portRef SRIA7 (instanceRef dsp_mult_0))
+              (portRef SRIA6 (instanceRef dsp_mult_0))
+              (portRef SRIA5 (instanceRef dsp_mult_0))
+              (portRef SRIA4 (instanceRef dsp_mult_0))
+              (portRef SRIA3 (instanceRef dsp_mult_0))
+              (portRef SRIA2 (instanceRef dsp_mult_0))
+              (portRef SRIA1 (instanceRef dsp_mult_0))
+              (portRef SRIA0 (instanceRef dsp_mult_0))
+              (portRef C17 (instanceRef dsp_mult_0))
+              (portRef C16 (instanceRef dsp_mult_0))
+              (portRef C15 (instanceRef dsp_mult_0))
+              (portRef C14 (instanceRef dsp_mult_0))
+              (portRef C13 (instanceRef dsp_mult_0))
+              (portRef C12 (instanceRef dsp_mult_0))
+              (portRef C11 (instanceRef dsp_mult_0))
+              (portRef C10 (instanceRef dsp_mult_0))
+              (portRef C9 (instanceRef dsp_mult_0))
+              (portRef C8 (instanceRef dsp_mult_0))
+              (portRef C7 (instanceRef dsp_mult_0))
+              (portRef C6 (instanceRef dsp_mult_0))
+              (portRef C5 (instanceRef dsp_mult_0))
+              (portRef C4 (instanceRef dsp_mult_0))
+              (portRef C3 (instanceRef dsp_mult_0))
+              (portRef C2 (instanceRef dsp_mult_0))
+              (portRef C1 (instanceRef dsp_mult_0))
+              (portRef C0 (instanceRef dsp_mult_0))
+              (portRef B5 (instanceRef dsp_mult_0))
+              (portRef B4 (instanceRef dsp_mult_0))
+              (portRef B3 (instanceRef dsp_mult_0))
+              (portRef B2 (instanceRef dsp_mult_0))
+              (portRef B1 (instanceRef dsp_mult_0))
+              (portRef B0 (instanceRef dsp_mult_0))
+              (portRef A5 (instanceRef dsp_mult_0))
+              (portRef A4 (instanceRef dsp_mult_0))
+              (portRef A3 (instanceRef dsp_mult_0))
+              (portRef A2 (instanceRef dsp_mult_0))
+              (portRef A1 (instanceRef dsp_mult_0))
+              (portRef A0 (instanceRef dsp_mult_0))))
+          (net P23
+            (joined
+              (portRef (member Result 0))
+              (portRef P35 (instanceRef dsp_mult_0))))
+          (net P22
+            (joined
+              (portRef (member Result 1))
+              (portRef P34 (instanceRef dsp_mult_0))))
+          (net P21
+            (joined
+              (portRef (member Result 2))
+              (portRef P33 (instanceRef dsp_mult_0))))
+          (net P20
+            (joined
+              (portRef (member Result 3))
+              (portRef P32 (instanceRef dsp_mult_0))))
+          (net P19
+            (joined
+              (portRef (member Result 4))
+              (portRef P31 (instanceRef dsp_mult_0))))
+          (net P18
+            (joined
+              (portRef (member Result 5))
+              (portRef P30 (instanceRef dsp_mult_0))))
+          (net P17
+            (joined
+              (portRef (member Result 6))
+              (portRef P29 (instanceRef dsp_mult_0))))
+          (net P16
+            (joined
+              (portRef (member Result 7))
+              (portRef P28 (instanceRef dsp_mult_0))))
+          (net P15
+            (joined
+              (portRef (member Result 8))
+              (portRef P27 (instanceRef dsp_mult_0))))
+          (net P14
+            (joined
+              (portRef (member Result 9))
+              (portRef P26 (instanceRef dsp_mult_0))))
+          (net P13
+            (joined
+              (portRef (member Result 10))
+              (portRef P25 (instanceRef dsp_mult_0))))
+          (net P12
+            (joined
+              (portRef (member Result 11))
+              (portRef P24 (instanceRef dsp_mult_0))))
+          (net P11
+            (joined
+              (portRef (member Result 12))
+              (portRef P23 (instanceRef dsp_mult_0))))
+          (net P10
+            (joined
+              (portRef (member Result 13))
+              (portRef P22 (instanceRef dsp_mult_0))))
+          (net P9
+            (joined
+              (portRef (member Result 14))
+              (portRef P21 (instanceRef dsp_mult_0))))
+          (net P8
+            (joined
+              (portRef (member Result 15))
+              (portRef P20 (instanceRef dsp_mult_0))))
+          (net P7
+            (joined
+              (portRef (member Result 16))
+              (portRef P19 (instanceRef dsp_mult_0))))
+          (net P6
+            (joined
+              (portRef (member Result 17))
+              (portRef P18 (instanceRef dsp_mult_0))))
+          (net P5
+            (joined
+              (portRef (member Result 18))
+              (portRef P17 (instanceRef dsp_mult_0))))
+          (net P4
+            (joined
+              (portRef (member Result 19))
+              (portRef P16 (instanceRef dsp_mult_0))))
+          (net P3
+            (joined
+              (portRef (member Result 20))
+              (portRef P15 (instanceRef dsp_mult_0))))
+          (net P2
+            (joined
+              (portRef (member Result 21))
+              (portRef P14 (instanceRef dsp_mult_0))))
+          (net P1
+            (joined
+              (portRef (member Result 22))
+              (portRef P13 (instanceRef dsp_mult_0))))
+          (net P0
+            (joined
+              (portRef (member Result 23))
+              (portRef P12 (instanceRef dsp_mult_0))))
+          (net B_11
+            (joined
+              (portRef (member DataB 0))
+              (portRef B17 (instanceRef dsp_mult_0))))
+          (net B_10
+            (joined
+              (portRef (member DataB 1))
+              (portRef B16 (instanceRef dsp_mult_0))))
+          (net B_9
+            (joined
+              (portRef (member DataB 2))
+              (portRef B15 (instanceRef dsp_mult_0))))
+          (net B_8
+            (joined
+              (portRef (member DataB 3))
+              (portRef B14 (instanceRef dsp_mult_0))))
+          (net B_7
+            (joined
+              (portRef (member DataB 4))
+              (portRef B13 (instanceRef dsp_mult_0))))
+          (net B_6
+            (joined
+              (portRef (member DataB 5))
+              (portRef B12 (instanceRef dsp_mult_0))))
+          (net B_5
+            (joined
+              (portRef (member DataB 6))
+              (portRef B11 (instanceRef dsp_mult_0))))
+          (net B_4
+            (joined
+              (portRef (member DataB 7))
+              (portRef B10 (instanceRef dsp_mult_0))))
+          (net B_3
+            (joined
+              (portRef (member DataB 8))
+              (portRef B9 (instanceRef dsp_mult_0))))
+          (net B_2
+            (joined
+              (portRef (member DataB 9))
+              (portRef B8 (instanceRef dsp_mult_0))))
+          (net B_1
+            (joined
+              (portRef (member DataB 10))
+              (portRef B7 (instanceRef dsp_mult_0))))
+          (net B
+            (joined
+              (portRef (member DataB 11))
+              (portRef B6 (instanceRef dsp_mult_0))))
+          (net A_11
+            (joined
+              (portRef (member DataA 0))
+              (portRef A17 (instanceRef dsp_mult_0))))
+          (net A_10
+            (joined
+              (portRef (member DataA 1))
+              (portRef A16 (instanceRef dsp_mult_0))))
+          (net A_9
+            (joined
+              (portRef (member DataA 2))
+              (portRef A15 (instanceRef dsp_mult_0))))
+          (net A_8
+            (joined
+              (portRef (member DataA 3))
+              (portRef A14 (instanceRef dsp_mult_0))))
+          (net A_7
+            (joined
+              (portRef (member DataA 4))
+              (portRef A13 (instanceRef dsp_mult_0))))
+          (net A_6
+            (joined
+              (portRef (member DataA 5))
+              (portRef A12 (instanceRef dsp_mult_0))))
+          (net A_5
+            (joined
+              (portRef (member DataA 6))
+              (portRef A11 (instanceRef dsp_mult_0))))
+          (net A_4
+            (joined
+              (portRef (member DataA 7))
+              (portRef A10 (instanceRef dsp_mult_0))))
+          (net A_3
+            (joined
+              (portRef (member DataA 8))
+              (portRef A9 (instanceRef dsp_mult_0))))
+          (net A_2
+            (joined
+              (portRef (member DataA 9))
+              (portRef A8 (instanceRef dsp_mult_0))))
+          (net A_1
+            (joined
+              (portRef (member DataA 10))
+              (portRef A7 (instanceRef dsp_mult_0))))
+          (net A
+            (joined
+              (portRef (member DataA 11))
+              (portRef A6 (instanceRef dsp_mult_0))))
+          (net Aclr
+            (joined
+              (portRef Aclr)
+              (portRef RST0 (instanceRef dsp_mult_0))))
+          (net ClockEn
+            (joined
+              (portRef ClkEn)
+              (portRef CE0 (instanceRef dsp_mult_0))))
+          (net Clock
+            (joined
+              (portRef Clock)
+              (portRef CLK0 (instanceRef dsp_mult_0))))))))
+  (design Multiplier
+    (cellRef Multiplier
+      (libraryRef ORCLIB)))
+)

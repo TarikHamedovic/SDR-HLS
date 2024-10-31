@@ -1,0 +1,1 @@
+ -link  -top  top  -multisrs  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/onebitsdr_project_comp.srs  -osyn  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/onebitsdr_project_mult.srs  -log  /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synlog/onebitsdr_project_multi_srs_gen.srr 

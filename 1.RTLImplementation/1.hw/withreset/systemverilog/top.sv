@@ -41,13 +41,15 @@ module top #(
     parameter CIC_DECIMATION_RATIO = 4096,
     parameter CIC_GAIN_WIDTH       = 2,
     parameter PWM_COUNT_WIDTH      = 10,
-    parameter PWM_OFFSET           = 512,
-    parameter PHASE_ARRAY_SIZE     = 2
+    parameter PWM_OFFSET           = 512
 )(
     input  logic       clk_25mhz,
     input  logic       arst,
     input  logic       uart_rx_serial,
     input  logic       rf_in,
+
+    // For simulation only   //
+    input  logic signed [15:0] analog_input,
 
     output logic       diff_out,
     output logic       pwm_out,
@@ -63,7 +65,7 @@ module top #(
   logic                          clk_80mhz;
   logic                          pll_lock;
   // --------------- NCO Signals ---------------- //
-  logic signed [PHASE_WIDTH-1:0] phase_increment[PHASE_ARRAY_SIZE];
+  logic signed [PHASE_WIDTH-1:0] phase_increment;
   //logic                        nco_cosinewave;
   //logic                        nco_sinewave;
   //logic      [PHASE_WIDTH-1:0] phase_accumulator;
@@ -89,8 +91,6 @@ module top #(
   // -------------- UART Signals ---------------- //
   logic                          uart_rx_data_valid;
   logic [7:0]                    uart_rx_byte;
-  logic                          uart_rx_data_valid1;
-  logic [7:0]                    uart_rx_byte1;
 
 
   // NOTE: This is Lattice IP PLL
@@ -180,14 +180,14 @@ module top #(
   //          NCO              //
   //===========================//
   quarterwave_generator#(
-     .DATA_WIDTH (DATA_WIDTH),
-     .QLUT_DEPTH (LUT_DEPTH),
-     .PHASE_WIDTH(PHASE_WIDTH)
+     .DATA_WIDTH     (DATA_WIDTH),
+     .QLUT_DEPTH     (LUT_DEPTH),
+     .PHASE_WIDTH    (PHASE_WIDTH)
   ) nco_inst (
      .clk            (clk_80mhz),
      .arst           (arst),
      .sample_clk_ce  (1'b1),
-     .phase_increment(phase_increment[1]),
+     .phase_increment(phase_increment),
      .sinewave       (lo_sinewave),
      .cosinewave     (lo_cosinewave)
   );
@@ -197,7 +197,7 @@ module top #(
   //          Mixer            //
   //===========================//
   Mixer #(
-      .DATA_WIDTH(DATA_WIDTH)
+      .DATA_WIDTH    (DATA_WIDTH)
   ) mixer_inst (
       .clk           (clk_80mhz),
       .arst          (arst),
@@ -218,12 +218,12 @@ module top #(
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
       .GAIN_WIDTH      (CIC_GAIN_WIDTH)
   ) cic_sine_inst (
-      .clk     (clk_80mhz),
-      .arst    (arst),
-      .gain    (cic_gain),
-      .data_in (mix_sinewave),
-      .data_out(cic_sine_out),
-      .data_clk(cic_sine_clk)
+      .clk             (clk_80mhz),
+      .arst            (arst),
+      .gain            (cic_gain),
+      .data_in         (mix_sinewave),
+      .data_out        (cic_sine_out),
+      .data_clk        (cic_sine_clk)
   );
 
   //===========================//
@@ -235,19 +235,19 @@ module top #(
       .DECIMATION_RATIO(CIC_DECIMATION_RATIO),
       .GAIN_WIDTH      (CIC_GAIN_WIDTH)
   ) cic_cosine_inst (
-      .clk     (clk_80mhz),
-      .arst    (arst),
-      .gain    (cic_gain),
-      .data_in (mix_cosinewave),
-      .data_out(cic_cosine_out),
-      .data_clk(cic_cosine_clk)
+      .clk             (clk_80mhz),
+      .arst            (arst),
+      .gain            (cic_gain),
+      .data_in         (mix_cosinewave),
+      .data_out        (cic_cosine_out),
+      .data_clk        (cic_cosine_clk)
   );
 
   //===========================//
   //     AM Demodulator        //
   //===========================//
   AMDemodulator #(
-      .DATA_WIDTH(DATA_WIDTH)
+      .DATA_WIDTH (DATA_WIDTH)
   ) AMDemodulator_inst (
       .clk        (cic_sine_clk),
       .arst       (arst),
@@ -278,8 +278,8 @@ module top #(
   ) uart_rx_inst (
       .osc_clk    (clk_80mhz),
       .i_Rx_Serial(uart_rx_serial),
-      .o_Rx_DV    (uart_rx_data_valid1),
-      .o_Rx_Byte  (uart_rx_byte1)
+      .o_Rx_DV    (uart_rx_data_valid),
+      .o_Rx_Byte  (uart_rx_byte)
   );
 
   always_comb begin
@@ -291,16 +291,11 @@ module top #(
 
   always_ff @(posedge clk_80mhz or posedge arst) begin
     if(arst == 1'b1) begin
-      phase_increment[0] <= '0;
-      phase_increment[1] <= '0;
-      uart_rx_data_valid <= 1'b0;
-      uart_rx_byte       <= '0;
+      phase_increment    <= '0;
+      //uart_rx_data_valid <= 1'b0;
+      //uart_rx_byte       <= '0;
       cic_gain           <= '0;
     end else begin
-
-      phase_increment[1] <= phase_increment[0];
-      uart_rx_data_valid <= uart_rx_data_valid1;
-      uart_rx_byte       <= uart_rx_byte1;
 
       if (uart_rx_data_valid) begin
         unique case (uart_rx_byte)
@@ -308,23 +303,23 @@ module top #(
           8'd49:  cic_gain <= 2'b01;  // Keyboard 1
           8'd50:  cic_gain <= 2'b10;  // Keyboard 2
           8'd51:  cic_gain <= 2'b11;  // Keyboard 3
-          default cic_gain <= 8'd0;
+          default cic_gain <= 2'd0;
         endcase
 
         unique case (uart_rx_byte)
-          //97:     phase_increment[0] <= 64'h4CF41F212D77318;                  // Keyboard a --> Zavidovići 1503 kHz
-          //97:     phase_increment[0] <= 64'h0400000000000000;                 // Keyboard a --> 1.25 MHz for 80 MHz clock
-          97:     phase_increment[0] <= 64'h3dafcea68de1281;                    // Keyboard a --> 1.25 MHz for 83MHz clock
-          98:     phase_increment[0] <= 64'h1aa60f8b8911654;                    // Keyboard b --> Kossuth Budapest 540 KHz
-          102:    phase_increment[0] <= 64'h1dc38c076704516d;                   // Keyboard f --> 9650 KHz
-          103:    phase_increment[0] <= 64'h1d60d923295482c6;                   // Keyboard g --> Radio China 9525 KHz
-          110:    phase_increment[0] <= phase_increment[0] - 64'h71b375868d170; // Keyboard n --> - 9KHz
-          109:    phase_increment[0] <= phase_increment[0] + 64'h71b375868d170; // Keyboard m --> + 9KHz
-          111:    phase_increment[0] <= phase_increment[0] - 64'h1436a8cdf6f3;  // Keyboard o --> - 100 Hz
-          112:    phase_increment[0] <= phase_increment[0] + 64'h1436a8cdf6f3;  // Keyboard p --> + 100 Hz
-          113:    phase_increment[0] <= phase_increment[0] - 64'hca22980ba57e;  // Keyboard q --> - 1KHz
-          104:    phase_increment[0] <= phase_increment[0] + 64'hca22980ba57e;  // Keyboard r --> + 1 KHz
-          default phase_increment[0] <= '0;
+          //97:     phase_increment <= 64'h4CF41F212D77318;                  // Keyboard a --> Zavidovići 1503 kHz
+          //97:     phase_increment <= 64'h0400000000000000;                 // Keyboard a --> 1.25 MHz for 80 MHz clock
+          97:     phase_increment <= 64'h3dafcea68de1281;                    // Keyboard a --> 1.25 MHz for 83MHz clock
+          98:     phase_increment <= 64'h1aa60f8b8911654;                    // Keyboard b --> Kossuth Budapest 540 KHz
+          102:    phase_increment <= 64'h1dc38c076704516d;                   // Keyboard f --> 9650 KHz
+          103:    phase_increment <= 64'h1d60d923295482c6;                   // Keyboard g --> Radio China 9525 KHz
+          110:    phase_increment <= phase_increment - 64'h71b375868d170; // Keyboard n --> - 9KHz
+          109:    phase_increment <= phase_increment + 64'h71b375868d170; // Keyboard m --> + 9KHz
+          111:    phase_increment <= phase_increment - 64'h1436a8cdf6f3;  // Keyboard o --> - 100 Hz
+          112:    phase_increment <= phase_increment + 64'h1436a8cdf6f3;  // Keyboard p --> + 100 Hz
+          113:    phase_increment <= phase_increment - 64'hca22980ba57e;  // Keyboard q --> - 1KHz
+          104:    phase_increment <= phase_increment + 64'hca22980ba57e;  // Keyboard r --> + 1 KHz
+          default phase_increment <= '0;
         endcase
       end
     end

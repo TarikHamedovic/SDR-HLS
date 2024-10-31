@@ -1,0 +1,199 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase
+OS: Ubuntu 22.04.5 LTS
+Hostname: user-HP-ProBook-450-G5
+max virtual memory: unlimited (bytes)
+max user processes: 47101
+max stack size: unlimited (bytes)
+
+
+Implementation : top_impl
+Synopsys HDL compiler and linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+Modified Files: 7
+FID:  path (prevtimestamp, timestamp)
+0        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v (N/A, 2023-08-10 19:00:08)
+1        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v (N/A, 2023-08-10 19:00:09)
+2        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v (N/A, 2023-08-10 18:51:57)
+3        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v (N/A, 2023-08-10 18:51:57)
+4        /home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh (N/A, 2023-08-10 18:51:57)
+5        /home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv (N/A, 2024-10-31 10:26:33)
+6        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 79
+MID:  lib.cell.view
+0        work.\top.amdemod.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+1        work.\top.amdemod.sqrt.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+2        work.\top.cd_sync.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+3        work.\top.cd_sync.clk_buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+4        work.\top.cd_sync.clk_buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+5        work.\top.cic_cosine.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+6        work.\top.cic_sine.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+7        work.\top.mixer.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+8        work.\top.pin_antenna_0__rf_in.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+9        work.\top.pin_antenna_0__rf_in.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+10       work.\top.pin_antenna_0__rf_in.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+11       work.\top.pin_led_0.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+12       work.\top.pin_led_0.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+13       work.\top.pin_led_0.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+14       work.\top.pin_led_1.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+15       work.\top.pin_led_1.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+16       work.\top.pin_led_1.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+17       work.\top.pin_led_2.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+18       work.\top.pin_led_2.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+19       work.\top.pin_led_2.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+20       work.\top.pin_led_3.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+21       work.\top.pin_led_3.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+22       work.\top.pin_led_3.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+23       work.\top.pin_led_4.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+24       work.\top.pin_led_4.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+25       work.\top.pin_led_4.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+26       work.\top.pin_led_5.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+27       work.\top.pin_led_5.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+28       work.\top.pin_led_5.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+29       work.\top.pin_led_6.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+30       work.\top.pin_led_6.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+31       work.\top.pin_led_6.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+32       work.\top.pin_led_7.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+33       work.\top.pin_led_7.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+34       work.\top.pin_led_7.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+35       work.\top.pin_pwm_0__pwm_out.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+36       work.\top.pin_pwm_0__pwm_out.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+37       work.\top.pin_pwm_0__pwm_out.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+38       work.\top.pin_pwm_0__pwm_out_n1.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+39       work.\top.pin_pwm_0__pwm_out_n1.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+40       work.\top.pin_pwm_0__pwm_out_n1.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+41       work.\top.pin_pwm_0__pwm_out_n2.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+42       work.\top.pin_pwm_0__pwm_out_n2.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+43       work.\top.pin_pwm_0__pwm_out_n2.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+44       work.\top.pin_pwm_0__pwm_out_n3.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+45       work.\top.pin_pwm_0__pwm_out_n3.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+46       work.\top.pin_pwm_0__pwm_out_n3.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+47       work.\top.pin_pwm_0__pwm_out_n4.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+48       work.\top.pin_pwm_0__pwm_out_n4.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+49       work.\top.pin_pwm_0__pwm_out_n4.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+50       work.\top.pin_pwm_0__pwm_out_p1.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+51       work.\top.pin_pwm_0__pwm_out_p1.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+52       work.\top.pin_pwm_0__pwm_out_p1.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+53       work.\top.pin_pwm_0__pwm_out_p2.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+54       work.\top.pin_pwm_0__pwm_out_p2.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+55       work.\top.pin_pwm_0__pwm_out_p2.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+56       work.\top.pin_pwm_0__pwm_out_p3.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+57       work.\top.pin_pwm_0__pwm_out_p3.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+58       work.\top.pin_pwm_0__pwm_out_p3.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+59       work.\top.pin_pwm_0__pwm_out_p4.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+60       work.\top.pin_pwm_0__pwm_out_p4.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+61       work.\top.pin_pwm_0__pwm_out_p4.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+62       work.\top.pin_uart_0__dtr.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+63       work.\top.pin_uart_0__dtr.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+64       work.\top.pin_uart_0__dtr.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+65       work.\top.pin_uart_0__rts.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+66       work.\top.pin_uart_0__rts.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+67       work.\top.pin_uart_0__rts.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+68       work.\top.pin_uart_0__rx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+69       work.\top.pin_uart_0__rx.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+70       work.\top.pin_uart_0__rx.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+71       work.\top.pin_uart_0__tx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+72       work.\top.pin_uart_0__tx.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+73       work.\top.pin_uart_0__tx.buf.buf.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+74       work.\top.pwm.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+75       work.\top.sine_cosine_generator.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+76       work.\top.uart_rx.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+77       work.ecp5pll.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/ecp5pll.sv (N/A, 2024-10-31 10:26:33) <-- (module definition)
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (may instantiate this module)
+78       work.top.verilog may have changed because the following files changed:
+                        /home/user/SDR-HLS/2.HLSImplementation/top/build/top.v (N/A, 2024-10-31 10:26:33) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 0
+FID:  path (timestamp)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

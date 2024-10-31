@@ -60,7 +60,7 @@ module PWM #(
   end
 
   //=============================//
-  //       For sim only          //
+  //    For simulation only      //
   //=============================//
   `ifdef SIMULATION
   initial begin

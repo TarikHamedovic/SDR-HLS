@@ -1,0 +1,18 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v":28:7:28:9|Synthesizing module VHI in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v":28:7:28:9|Synthesizing module VLO in library work.
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v":8:7:8:9|Synthesizing module PLL in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv":2:7:2:20|Synthesizing module sinewave_table in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv":2:7:2:24|Synthesizing module sinewave_generator in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv":22:7:22:11|Synthesizing module Mixer in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv":42:7:42:9|Synthesizing module CIC in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":22:7:22:19|Synthesizing module AMDemodulator in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":32:7:32:9|Synthesizing module PWM in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v":18:7:18:13|Synthesizing module uart_rx in library work.
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv":36:7:36:9|Synthesizing module top in library work.
+@N: CL201 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v":64:2:64:7|Trying to extract state machine for register r_SM_Main.
+@N|Running in 64-bit mode
+

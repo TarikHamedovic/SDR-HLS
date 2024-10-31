@@ -1,0 +1,90 @@
+@P:  Worst Slack : -11.815
+@P:  clk25_0__io - Estimated Frequency : 1102.5 MHz
+@P:  clk25_0__io - Requested Frequency : 25.0 MHz
+@P:  clk25_0__io - Estimated Period : 0.907
+@P:  clk25_0__io - Requested Period : 40.000
+@P:  clk25_0__io - Slack : 39.093
+@P:  ecp5pll_Z1|CLKOP_inferred_clock - Estimated Frequency : 59.5 MHz
+@P:  ecp5pll_Z1|CLKOP_inferred_clock - Requested Frequency : 200.0 MHz
+@P:  ecp5pll_Z1|CLKOP_inferred_clock - Estimated Period : 16.814
+@P:  ecp5pll_Z1|CLKOP_inferred_clock - Requested Period : 5.000
+@P:  ecp5pll_Z1|CLKOP_inferred_clock - Slack : -11.815
+@P:  System - Estimated Frequency : 18518.5 MHz
+@P:  System - Requested Frequency : 200.0 MHz
+@P:  System - Estimated Period : 0.054
+@P:  System - Requested Period : 5.000
+@P:  System - Slack : 4.946
+@P:  Total Area : 358.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:41s

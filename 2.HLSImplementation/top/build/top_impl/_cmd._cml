@@ -1,0 +1,1 @@
+-link -encrypt -top top -osyn /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/top_impl_comp.srs /home/user/SDR-HLS/2.HLSImplementation/top/build/top_impl/synwork/layer0.srs  -jobname linker  

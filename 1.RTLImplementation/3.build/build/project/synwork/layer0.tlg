@@ -1,0 +1,110 @@
+Selecting top level module top
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VHI.v":28:7:28:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/VLO.v":28:7:28:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/FPGA/tools/diamond/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v":8:7:8:9|Synthesizing module PLL in library work.
+Running optimization stage 1 on PLL .......
+@W: CL168 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/IP/PLL.v":19:8:19:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on PLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_table.sv":2:7:2:20|Synthesizing module sinewave_table in library work.
+
+	LUT_DEPTH=32'b00000000000000000000000000001000
+	DATA_WIDTH=32'b00000000000000000000000000001100
+   Generated name = sinewave_table_8s_12s
+Running optimization stage 1 on sinewave_table_8s_12s .......
+Finished optimization stage 1 on sinewave_table_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv":2:7:2:24|Synthesizing module sinewave_generator in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000001100
+	LUT_DEPTH=32'b00000000000000000000000000001000
+	PHASE_WIDTH=32'b00000000000000000000000001000000
+   Generated name = sinewave_generator_12s_8s_64s
+@W: CS263 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/sinewave_generator.sv":29:14:29:107|Port-width mismatch for port address. The port definition is 8 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+Running optimization stage 1 on sinewave_generator_12s_8s_64s .......
+Finished optimization stage 1 on sinewave_generator_12s_8s_64s (CPU Time 0h:00m:00s, Memory Used current: 127MB peak: 127MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/Mixer.sv":22:7:22:11|Synthesizing module Mixer in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000001100
+   Generated name = Mixer_12s
+Running optimization stage 1 on Mixer_12s .......
+Finished optimization stage 1 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 128MB peak: 128MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/CIC.sv":42:7:42:9|Synthesizing module CIC in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000001100
+	REGISTER_WIDTH=32'b00000000000000000000000001001000
+	DECIMATION_RATIO=32'b00000000000000000001000000000000
+	GAIN_WIDTH=32'b00000000000000000000000000000010
+	COUNT_WIDTH=32'b00000000000000000000000000010000
+   Generated name = CIC_12s_72s_4096s_2s_16s
+Running optimization stage 1 on CIC_12s_72s_4096s_2s_16s .......
+Finished optimization stage 1 on CIC_12s_72s_4096s_2s_16s (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":22:7:22:19|Synthesizing module AMDemodulator in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000001100
+	N=32'b00000000000000000000000000011010
+   Generated name = AMDemodulator_12s_26s
+Running optimization stage 1 on AMDemodulator_12s_26s .......
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":91:2:91:10|Pruning unused register i_dataB[11:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/AMDemod.sv":91:2:91:10|Pruning unused register q_dataB[11:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on AMDemodulator_12s_26s (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":32:7:32:9|Synthesizing module PWM in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000001101
+	COUNT_WIDTH=32'b00000000000000000000000000001010
+	OFFSET=32'b00000000000000000000001000000000
+   Generated name = PWM_13s_10s_512s
+Running optimization stage 1 on PWM_13s_10s_512s .......
+@W: CL271 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":45:2:45:10|Pruning unused bits 12 to 10 of data_in_reg[12:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on PWM_13s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v":18:7:18:13|Synthesizing module uart_rx in library work.
+
+	CLKS_PER_BIT=32'b00000000000000000000001010110110
+	s_IDLE=3'b000
+	s_RX_START_BIT=3'b001
+	s_RX_DATA_BITS=3'b010
+	s_RX_STOP_BIT=3'b011
+	s_CLEANUP=3'b100
+   Generated name = uart_rx_694s_0_1_2_3_4
+Running optimization stage 1 on uart_rx_694s_0_1_2_3_4 .......
+Finished optimization stage 1 on uart_rx_694s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+@N: CG364 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/top.sv":36:7:36:9|Synthesizing module top in library work.
+Running optimization stage 1 on top .......
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+Running optimization stage 2 on top .......
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+Running optimization stage 2 on uart_rx_694s_0_1_2_3_4 .......
+@N: CL201 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/verilog/UartRX.v":64:2:64:7|Trying to extract state machine for register r_SM_Main.
+Finished optimization stage 2 on uart_rx_694s_0_1_2_3_4 (CPU Time 0h:00m:00s, Memory Used current: 136MB peak: 136MB)
+Running optimization stage 2 on PWM_13s_10s_512s .......
+@W: CL246 :"/home/user/SDR-HLS/1.RTLImplementation/1.hw/systemverilog/PWM.sv":38:35:38:41|Input port bits 12 to 10 of data_in[12:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on PWM_13s_10s_512s (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Running optimization stage 2 on AMDemodulator_12s_26s .......
+Finished optimization stage 2 on AMDemodulator_12s_26s (CPU Time 0h:00m:01s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on CIC_12s_72s_4096s_2s_16s .......
+Finished optimization stage 2 on CIC_12s_72s_4096s_2s_16s (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on Mixer_12s .......
+Finished optimization stage 2 on Mixer_12s (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on sinewave_generator_12s_8s_64s .......
+Finished optimization stage 2 on sinewave_generator_12s_8s_64s (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on sinewave_table_8s_12s .......
+Finished optimization stage 2 on sinewave_table_8s_12s (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on PLL .......
+Finished optimization stage 2 on PLL (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on EHXPLLL .......
+Finished optimization stage 2 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on VLO .......
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/user/SDR-HLS/1.RTLImplementation/3.build/build/project/synwork/layer0.duruntime
+
+
